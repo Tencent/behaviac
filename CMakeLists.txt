@@ -395,7 +395,6 @@ add_subdirectory ("${PROJECT_SOURCE_DIR}/test/usertest")
 
 if (MSVC)
 	add_subdirectory ("${PROJECT_SOURCE_DIR}/test/btperformance")
-	add_subdirectory ("${PROJECT_SOURCE_DIR}/example/spaceship")
 endif()
 
 #add_subdirectory ("${PROJECT_SOURCE_DIR}/example/airbattledemo")
