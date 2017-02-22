@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Behavior Version="5">
+  <Node Class="Behaviac.Design.Nodes.Behavior" AgentType="CBTPlayer" Domains="" Enable="true" HasOwnPrefabData="false" Id="-1" PrefabName="" PrefabNodeId="-1">
+    <Comment Background="NoColor" Text="" />
+    <Parameters>
+      <Parameter Name="CurStep" Type="System.Int32" DefaultValue="0" DisplayName="CurStep" Desc="速度" Display="true" />
+    </Parameters>
+    <DescriptorRefs value="0:" />
+    <Connector Identifier="GenericChildren">
+      <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="0" PrefabName="" PrefabNodeId="-1">
+        <Comment Background="NoColor" Text="" />
+        <Connector Identifier="GenericChildren">
+          <Node Class="PluginBehaviac.Nodes.Condition" Enable="false" HasOwnPrefabData="false" Id="2" Operator="Less" Opl="&quot;&quot;" Opr="const int 30" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.SelectorProbability" Enable="true" HasOwnPrefabData="false" Id="12" PrefabName="../prefabs/movectrl" PrefabNodeId="12" RandomGenerator="&quot;&quot;">
+            <Comment Background="Gray" Text="Prefab[movectrl]" />
+            <Connector Identifier="GenericChildren">
+              <Node Class="PluginBehaviac.Nodes.DecoratorWeight" DecorateWhenChildEnds="false" Enable="true" HasOwnPrefabData="false" Id="13" PrefabName="../prefabs/movectrl" PrefabNodeId="13" Weight="const int 60">
+                <Comment Background="NoColor" Text="" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="true" Id="1" PrefabName="../prefabs/movectrl" PrefabNodeId="1">
+                    <Comment Background="Gray" Text="走" />
+                    <Attachment Class="PluginBehaviac.Events.Precondition" BinaryOperator="And" Enable="true" Id="3" Operator="Invalid" Opl="Self.CBTPlayer::MoveAhead(0)" Opr1="&quot;&quot;" Opr2="&quot;&quot;" Phase="Enter" PrefabAttachmentId="-1" />
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="PluginBehaviac.Nodes.Selector" Enable="true" HasOwnPrefabData="false" Id="4" PrefabName="../prefabs/movectrl" PrefabNodeId="4">
+                        <Comment Background="NoColor" Text="" />
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="true" Id="6" Method="Self.CBTPlayer::MoveAhead(0)" PrefabName="../prefabs/movectrl" PrefabNodeId="6" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                            <Comment Background="NoColor" Text="" />
+                          </Node>
+                          <Node Class="PluginBehaviac.Nodes.Sequence" HasOwnPrefabData="false" Id="5" PrefabName="../prefabs/movectrl" PrefabNodeId="5">
+                            <Comment Background="NoColor" Text="" />
+                          </Node>
+                        </Connector>
+                      </Node>
+                    </Connector>
+                  </Node>
+                </Connector>
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.DecoratorWeight" HasOwnPrefabData="false" Id="14" PrefabName="../prefabs/movectrl" PrefabNodeId="14">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.DecoratorWeight" HasOwnPrefabData="false" Id="15" PrefabName="../prefabs/movectrl" PrefabNodeId="15">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.DecoratorWeight" HasOwnPrefabData="false" Id="16" PrefabName="../prefabs/movectrl" PrefabNodeId="16">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+            </Connector>
+          </Node>
+        </Connector>
+      </Node>
+    </Connector>
+  </Node>
+</Behavior>

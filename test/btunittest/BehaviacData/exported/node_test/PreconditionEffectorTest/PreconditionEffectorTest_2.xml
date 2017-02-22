@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\PreconditionEffectorTest\PreconditionEffectorTest_2.xml-->
+<behavior name="node_test/PreconditionEffectorTest/PreconditionEffectorTest_2" agenttype="PreconEffectorAgent" version="5">
+  <node class="DecoratorLoop" id="7">
+    <property Count="const int -1" />
+    <property DecorateWhenChildEnds="true" />
+    <property DoneWithinFrame="false" />
+    <node class="SelectorLoop" id="6">
+      <node class="WithPrecondition" id="5">
+        <node class="Condition" id="13">
+          <property Operator="Equal" />
+          <property Opl="int Self.PreconEffectorAgent::count_both" />
+          <property Opr="const int 0" />
+        </node>
+        <node class="Sequence" id="11">
+          <attachment class="Effector" id="16" flag="effector">
+            <property Operator="Add" />
+            <property Opl="int Self.PreconEffectorAgent::ret" />
+            <property Opr1="int Self.PreconEffectorAgent::ret" />
+            <property Opr2="const int 1" />
+            <property Phase="Failure" />
+          </attachment>
+          <node class="Action" id="4">
+            <property Method="Self.PreconEffectorAgent::action()" />
+            <property ResultOption="BT_SUCCESS" />
+            <attachment class="Effector" id="8" flag="effector">
+              <property Operator="Add" />
+              <property Opl="int Self.PreconEffectorAgent::count_success" />
+              <property Opr1="int Self.PreconEffectorAgent::count_success" />
+              <property Opr2="const int 1" />
+              <property Phase="Success" />
+            </attachment>
+            <attachment class="Effector" id="19" flag="effector">
+              <property Operator="Add" />
+              <property Opl="int Self.PreconEffectorAgent::count_failure" />
+              <property Opr1="int Self.PreconEffectorAgent::count_failure" />
+              <property Opr2="const int 1" />
+              <property Phase="Failure" />
+            </attachment>
+          </node>
+          <node class="Action" id="9">
+            <property Method="Self.PreconEffectorAgent::action()" />
+            <property ResultOption="BT_SUCCESS" />
+            <attachment class="Effector" id="2" flag="effector">
+              <property Operator="Add" />
+              <property Opl="int Self.PreconEffectorAgent::count_failure" />
+              <property Opr1="int Self.PreconEffectorAgent::count_failure" />
+              <property Opr2="const int 1" />
+              <property Phase="Failure" />
+            </attachment>
+            <attachment class="Effector" id="18" flag="effector">
+              <property Operator="Add" />
+              <property Opl="int Self.PreconEffectorAgent::count_success" />
+              <property Opr1="int Self.PreconEffectorAgent::count_success" />
+              <property Opr2="const int 1" />
+              <property Phase="Success" />
+            </attachment>
+          </node>
+        </node>
+      </node>
+      <node class="WithPrecondition" id="0">
+        <node class="Condition" id="12">
+          <property Operator="Equal" />
+          <property Opl="int Self.PreconEffectorAgent::count_both" />
+          <property Opr="const int 1" />
+        </node>
+        <node class="Sequence" id="14">
+          <attachment class="Effector" id="17" flag="effector">
+            <property Operator="Add" />
+            <property Opl="int Self.PreconEffectorAgent::ret" />
+            <property Opr1="int Self.PreconEffectorAgent::ret" />
+            <property Opr2="const int 2" />
+            <property Phase="Both" />
+          </attachment>
+          <node class="Action" id="10">
+            <property Method="Self.PreconEffectorAgent::action()" />
+            <property ResultOption="BT_SUCCESS" />
+            <attachment class="Effector" id="15" flag="effector">
+              <property Operator="Add" />
+              <property Opl="int Self.PreconEffectorAgent::count_success" />
+              <property Opr1="int Self.PreconEffectorAgent::count_success" />
+              <property Opr2="const int 1" />
+              <property Phase="Success" />
+            </attachment>
+            <attachment class="Effector" id="20" flag="effector">
+              <property Operator="Add" />
+              <property Opl="int Self.PreconEffectorAgent::count_failure" />
+              <property Opr1="int Self.PreconEffectorAgent::count_failure" />
+              <property Opr2="const int 1" />
+              <property Phase="Failure" />
+            </attachment>
+          </node>
+          <node class="Action" id="1">
+            <property Method="Self.PreconEffectorAgent::action()" />
+            <property ResultOption="BT_SUCCESS" />
+            <attachment class="Effector" id="21" flag="effector">
+              <property Operator="Add" />
+              <property Opl="int Self.PreconEffectorAgent::count_failure" />
+              <property Opr1="int Self.PreconEffectorAgent::count_failure" />
+              <property Opr2="const int 1" />
+              <property Phase="Failure" />
+            </attachment>
+            <attachment class="Effector" id="3" flag="effector">
+              <property Operator="Add" />
+              <property Opl="int Self.PreconEffectorAgent::count_success" />
+              <property Opr1="int Self.PreconEffectorAgent::count_success" />
+              <property Opr2="const int 1" />
+              <property Phase="Success" />
+            </attachment>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</behavior>

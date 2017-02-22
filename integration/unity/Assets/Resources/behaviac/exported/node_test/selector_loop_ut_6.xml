@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\selector_loop_ut_6.xml-->
+<behavior name="node_test/selector_loop_ut_6" agenttype="AgentNodeTest" version="5">
+  <node class="DecoratorLoop" id="9">
+    <property Count="const int 10" />
+    <property DecorateWhenChildEnds="false" />
+    <property DoneWithinFrame="false" />
+    <node class="SelectorLoop" id="0">
+      <node class="WithPrecondition" id="1">
+        <node class="Condition" id="4">
+          <property Operator="Equal" />
+          <property Opl="Self.AgentNodeTest::CanSeeEnemy()" />
+          <property Opr="const bool true" />
+        </node>
+        <node class="Action" id="5">
+          <property Method="Self.AgentNodeTest::Move()" />
+          <property ResultOption="BT_INVALID" />
+          <attachment class="Precondition" id="7" flag="precondition">
+            <property BinaryOperator="And" />
+            <property Operator="Assign" />
+            <property Opl="int Self.AgentNodeTest::testVar_0" />
+            <property Opr2="const int 1" />
+            <property Phase="Update" />
+          </attachment>
+        </node>
+      </node>
+      <node class="WithPrecondition" id="2">
+        <node class="True" id="3" />
+        <node class="Action" id="6">
+          <property Method="Self.AgentNodeTest::MoveToTarget()" />
+          <property ResultOption="BT_INVALID" />
+          <attachment class="Precondition" id="8" flag="precondition">
+            <property BinaryOperator="And" />
+            <property Operator="Assign" />
+            <property Opl="int Self.AgentNodeTest::testVar_0" />
+            <property Opr2="const int 2" />
+            <property Phase="Update" />
+          </attachment>
+        </node>
+      </node>
+    </node>
+  </node>
+</behavior>

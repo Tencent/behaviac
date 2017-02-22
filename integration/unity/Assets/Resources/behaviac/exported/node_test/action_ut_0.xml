@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\action_ut_0.xml-->
+<behavior name="node_test/action_ut_0" agenttype="AgentNodeTest" version="5">
+  <pars>
+    <par name="par_int_type_0" type="int" value="0" />
+    <par name="par_int_type_1" type="int" value="0" />
+    <par name="par_int_type_2" type="int" value="300" />
+    <par name="par_go" type="UnityEngine::GameObject" value="null" />
+  </pars>
+  <node class="Sequence" id="0">
+    <attachment class="Precondition" id="15" flag="precondition">
+      <property BinaryOperator="And" />
+      <property Operator="Equal" />
+      <property Opl="Self.AgentNodeTest::Move()" />
+      <property Opr2="const behaviac::EBTStatus BT_RUNNING" />
+      <property Phase="Enter" />
+    </attachment>
+    <node class="Action" id="14">
+      <property Method="Self.AgentNodeTest::initChildAgentTest()" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+    <node class="Assignment" id="12">
+      <property CastRight="false" />
+      <property Opl="int Self.AgentNodeTest::testVar_0" />
+      <property Opr="int par_child.AgentNodeTest::testVar_1" />
+    </node>
+    <node class="Condition" id="13">
+      <property Operator="Equal" />
+      <property Opl="int Self.AgentNodeTest::testVar_0" />
+      <property Opr="int par_child.AgentNodeTest::testVar_1" />
+    </node>
+    <node class="Assignment" id="10">
+      <property CastRight="false" />
+      <property Opl="int Self.AgentNodeTest::testVar_0" />
+      <property Opr="par_child.AgentNodeTest::getConstOne()" />
+    </node>
+    <node class="Condition" id="11">
+      <property Operator="Equal" />
+      <property Opl="int Self.AgentNodeTest::testVar_0" />
+      <property Opr="const int 1" />
+    </node>
+    <node class="Condition" id="8">
+      <property Operator="Greater" />
+      <property Opl="float par_child.AgentNodeTest::testVar_2" />
+      <property Opr="float Self.AgentNodeTest::testVar_3" />
+    </node>
+    <node class="Action" id="9">
+      <property Method="par_child.AgentNodeTest::SelectTarget()" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+    <node class="Compute" id="1">
+      <property Operator="Add" />
+      <property Opl="int Self.AgentNodeTest::par_int_type_0" />
+      <property Opr1="Self.AgentNodeTest::getConstThousand(600,400)" />
+      <property Opr2="const int 500" />
+    </node>
+    <node class="Action" id="2">
+      <property Method="Self.AgentNodeTest::setTestVar_0(int Self.AgentNodeTest::par_int_type_0)" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+    <node class="Assignment" id="3">
+      <property CastRight="false" />
+      <property Opl="int Self.AgentNodeTest::par_int_type_1" />
+      <property Opr="int Self.AgentNodeTest::testVar_0" />
+    </node>
+    <node class="Compute" id="4">
+      <property Operator="Add" />
+      <property Opl="int Self.AgentNodeTest::par_int_type_0" />
+      <property Opr1="int Self.AgentNodeTest::par_int_type_1" />
+      <property Opr2="int Self.AgentNodeTest::par_int_type_2" />
+    </node>
+    <node class="Action" id="5">
+      <property Method="Self.AgentNodeTest::setTestVar_1(int Self.AgentNodeTest::par_int_type_0)" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+    <node class="Action" id="7">
+      <property Method="Self.AgentNodeTest::testGameObject(null)" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+    <node class="Action" id="6">
+      <property Method="StaticAgent.StaticAgent::sAction()" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+    <node class="Action" id="16">
+      <property Method="Self.AgentNodeTest::testVectorStruct(1:{x=0.01;y=-0.01;})" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+    <node class="Assignment" id="18">
+      <property CastRight="false" />
+      <property Opl="string Self.AgentNodeTest::testVar_str_0" />
+      <property Opr="const string &quot;abcd&quot;" />
+    </node>
+    <node class="Action" id="17">
+      <property Method="Self.AgentNodeTest::transitPlanTactics({plan_ID=string Self.AgentNodeTest::testVar_str_0;plan_selection_precedence=0;transit_points=3:{coordX=0;coordY=0;}|{coordX=0;coordY=0;}|{coordX=0;coordY=0;};},EnumTest_OneAfterOne,&quot;&quot;)" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+  </node>
+</behavior>

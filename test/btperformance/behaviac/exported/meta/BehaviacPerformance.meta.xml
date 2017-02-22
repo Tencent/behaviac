@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<agents version="1" signature="2392260077">
+  <agent type="CPerformanceAgent" base="behaviac::Agent" signature="935575243">
+    <properties>
+      <property name="DistanceToEnemy" type="float" member="true" static="false" agent="CPerformanceAgent" />
+      <property name="Food" type="float" member="true" static="false" agent="CPerformanceAgent" />
+      <property name="HP" type="float" member="true" static="false" agent="CPerformanceAgent" />
+      <property name="Hungry" type="float" member="true" static="false" agent="CPerformanceAgent" />
+    </properties>
+  </agent>
+</agents>

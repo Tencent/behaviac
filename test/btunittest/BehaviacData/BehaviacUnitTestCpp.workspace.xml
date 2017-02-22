@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<workspace name="BehaviacUnitTestCpp" folder="..\..\..\integration\unity\Assets\behaviac\workspace\behaviors" export="exported" language="cpp" promptmergingmeta="true" version="3">
+  <export>
+    <cs>
+      <isexported>False</isexported>
+      <exportfilecount>1</exportfilecount>
+    </cs>
+    <cpp>
+      <isexported>True</isexported>
+      <exportfilecount>10</exportfilecount>
+      <folder>../..</folder>
+      <includedfilenames>
+        <includedfilename>Agent/AgentArrayAccessTest.h</includedfilename>
+        <includedfilename>Agent/AgentNodeTest.h</includedfilename>
+        <includedfilename>Agent/CustomPropertyAgent.h</includedfilename>
+        <includedfilename>Agent/EmployeeParTestAgent.h</includedfilename>
+        <includedfilename>Agent/FSMAgentTest.h</includedfilename>
+        <includedfilename>Agent/HTNAgentHouse.h</includedfilename>
+        <includedfilename>Agent/HTNAgentHouseBase.h</includedfilename>
+        <includedfilename>Agent/HTNAgentTravel.h</includedfilename>
+        <includedfilename>Agent/ParTestAgent.h</includedfilename>
+        <includedfilename>Agent/ParTestAgentBase.h</includedfilename>
+        <includedfilename>Agent/ParTestRegNameAgent.h</includedfilename>
+        <includedfilename>Agent/PreconEffectorAgent.h</includedfilename>
+        <includedfilename>Agent/PropertyReadonlyAgent.h</includedfilename>
+        <includedfilename>Agent/UnitTestTypes.h</includedfilename>
+      </includedfilenames>
+    </cpp>
+    <xml>
+      <isexported>True</isexported>
+    </xml>
+    <bson>
+      <isexported>True</isexported>
+    </bson>
+  </export>
+</workspace>

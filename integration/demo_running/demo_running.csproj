@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{43C0C23C-1D1F-40B0-BD08-0030B0EA3197}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>demo_running</RootNamespace>
+    <AssemblyName>demo_running</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;BEHAVIAC_NOT_USE_UNITY</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="behaviac\Agent\Agent.cs" />
+    <Compile Include="behaviac\Agent\Context.cs" />
+    <Compile Include="behaviac\Base\Attributs.cs" />
+    <Compile Include="behaviac\Base\CRC32.cs" />
+    <Compile Include="behaviac\Base\FileManager.cs" />
+    <Compile Include="behaviac\Base\LogManager.cs" />
+    <Compile Include="behaviac\Base\Member.cs" />
+    <Compile Include="behaviac\Base\Meta.cs" />
+    <Compile Include="behaviac\Base\MiniXml.cs" />
+    <Compile Include="behaviac\Base\Operation.cs" />
+    <Compile Include="behaviac\Base\Properties.cs" />
+    <Compile Include="behaviac\Base\RandomGenerator.cs" />
+    <Compile Include="behaviac\Base\socketconnect.cs" />
+    <Compile Include="behaviac\Base\socketconnect_base.cs" />
+    <Compile Include="behaviac\Base\Utils.cs" />
+    <Compile Include="behaviac\BehaviorTree\Attachments\AttachAction.cs" />
+    <Compile Include="behaviac\BehaviorTree\Attachments\Effector.cs" />
+    <Compile Include="behaviac\BehaviorTree\Attachments\Event.cs" />
+    <Compile Include="behaviac\BehaviorTree\Attachments\Precondition.cs" />
+    <Compile Include="behaviac\BehaviorTree\BehaviorTree.cs" />
+    <Compile Include="behaviac\BehaviorTree\BehaviorTree_task.cs" />
+    <Compile Include="behaviac\BehaviorTree\Nodes\Actions\Action.cs" />
+    <Compile Include="behaviac\BehaviorTree\Nodes\Actions\Assignment.cs" />
+    <Compile Include="behaviac\BehaviorTree\Nodes\Actions\Compute.cs" />
+    <Compile Include="behaviac\BehaviorTree\Nodes\Actions\Noop.cs" />
+    <Compile Include="behaviac\BehaviorTree\Nodes\Actions\Wait.cs" />
+    <Compile Include="behaviac\BehaviorTree\Nodes\Actions\Waitforsignal.cs" />
+    <Compile Include="behaviac\BehaviorTree\Nodes\Actions\Waitframes.cs" />
+    <Compile Include="behaviac\BehaviorTree\Nodes\Composites\Compositestochastic.cs" />
+    <Compile Include="behaviac\BehaviorTree\Nodes\Composites\Ifelse.cs" />
+    <Compile Include="behaviac\BehaviorTree\Nodes\Composites\Parallel.cs" />
+    <Compile Include="behaviac\BehaviorTree\Nodes\Composites\Referencebehavior.cs" />
+    <Compile Include="behaviac\BehaviorTree\Nodes\Composites\Selector.cs" />
+    <Compile Include="behaviac\BehaviorTree\Nodes\Composites\Selectorloop.cs" />
+    <Compile Include="behaviac\BehaviorTree\Nodes\Composites\Selectorprobability.cs" />
+    <Compile Include="behaviac\BehaviorTree\Nodes\Composites\Selectorstochastic.cs" />
+    <Compile Include="behaviac\BehaviorTree\Nodes\Composites\Sequence.cs" />
+    <Compile Include="behaviac\BehaviorTree\Nodes\Composites\Sequencestochastic.cs" />
+    <Compile Include="behaviac\BehaviorTree\Nodes\Composites\Withprecondition.cs" />
+    <Compile Include="behaviac\BehaviorTree\Nodes\Conditions\And.cs" />
+    <Compile Include="behaviac\BehaviorTree\Nodes\Conditions\Condition.cs" />
+    <Compile Include="behaviac\BehaviorTree\Nodes\Conditions\Conditionbase.cs" />
+    <Compile Include="behaviac\BehaviorTree\Nodes\Conditions\False.cs" />
+    <Compile Include="behaviac\BehaviorTree\Nodes\Conditions\Or.cs" />
+    <Compile Include="behaviac\BehaviorTree\Nodes\Conditions\True.cs" />
+    <Compile Include="behaviac\BehaviorTree\Nodes\Decorators\Decoratoralwaysfailure.cs" />
+    <Compile Include="behaviac\BehaviorTree\Nodes\Decorators\Decoratoralwaysrunning.cs" />
+    <Compile Include="behaviac\BehaviorTree\Nodes\Decorators\Decoratoralwayssuccess.cs" />
+    <Compile Include="behaviac\BehaviorTree\Nodes\Decorators\Decoratorcount.cs" />
+    <Compile Include="behaviac\BehaviorTree\Nodes\Decorators\Decoratorcountlimit.cs" />
+    <Compile Include="behaviac\BehaviorTree\Nodes\Decorators\Decoratorfailureuntil.cs" />
+    <Compile Include="behaviac\BehaviorTree\Nodes\Decorators\Decoratorframes.cs" />
+    <Compile Include="behaviac\BehaviorTree\Nodes\Decorators\DecoratorIterator.cs" />
+    <Compile Include="behaviac\BehaviorTree\Nodes\Decorators\Decoratorlog.cs" />
+    <Compile Include="behaviac\BehaviorTree\Nodes\Decorators\Decoratorloop.cs" />
+    <Compile Include="behaviac\BehaviorTree\Nodes\Decorators\Decoratorloopuntil.cs" />
+    <Compile Include="behaviac\BehaviorTree\Nodes\Decorators\Decoratornot.cs" />
+    <Compile Include="behaviac\BehaviorTree\Nodes\Decorators\Decoratorrepeat.cs" />
+    <Compile Include="behaviac\BehaviorTree\Nodes\Decorators\Decoratorsuccessuntil.cs" />
+    <Compile Include="behaviac\BehaviorTree\Nodes\Decorators\Decoratortime.cs" />
+    <Compile Include="behaviac\BehaviorTree\Nodes\Decorators\Decoratorweight.cs" />
+    <Compile Include="behaviac\FSM\AlwaysTransition.cs" />
+    <Compile Include="behaviac\FSM\FSM.cs" />
+    <Compile Include="behaviac\FSM\StartCondition.cs" />
+    <Compile Include="behaviac\FSM\State.cs" />
+    <Compile Include="behaviac\FSM\TransitionCondition.cs" />
+    <Compile Include="behaviac\FSM\WaitframesState.cs" />
+    <Compile Include="behaviac\FSM\WaitState.cs" />
+    <Compile Include="behaviac\FSM\WaitTransition.cs" />
+    <Compile Include="behaviac\HTN\AgentState.cs" />
+    <Compile Include="behaviac\HTN\Method.cs" />
+    <Compile Include="behaviac\HTN\Planner.cs" />
+    <Compile Include="behaviac\HTN\PlannerTask.cs" />
+    <Compile Include="behaviac\HTN\Task.cs" />
+    <Compile Include="behaviac\Workspace.cs" />
+    <Compile Include="CBTPlayer.cs" />
+    <Compile Include="exported\behaviac_generated\behaviors\generated_behaviors.cs" />
+    <Compile Include="exported\behaviac_generated\types\AgentProperties.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

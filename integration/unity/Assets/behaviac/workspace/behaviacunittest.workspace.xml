@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<workspace name="behaviac_unittest" folder="behaviors" export="..\..\Resources\behaviac\exported" language="cs" promptmergingmeta="true" version="3">
+  <export>
+    <bson>
+      <isexported>True</isexported>
+    </bson>
+    <cpp>
+      <isexported>False</isexported>
+      <exportfilecount>1</exportfilecount>
+      <folder>../../../../../../test</folder>
+    </cpp>
+    <cs>
+      <isexported>True</isexported>
+      <exportfilecount>1</exportfilecount>
+      <folder>../../../Scripts/behaviac/BehaviacUnitTest</folder>
+    </cs>
+    <xml>
+      <isexported>True</isexported>
+    </xml>
+  </export>
+</workspace>

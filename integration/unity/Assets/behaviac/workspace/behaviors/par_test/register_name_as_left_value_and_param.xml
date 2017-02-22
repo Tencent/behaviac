@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Behavior Version="5">
+  <Node Class="Behaviac.Design.Nodes.Behavior" AgentType="EmployeeParTestAgent" Domains="" Enable="true" HasOwnPrefabData="false" Id="-1" PrefabName="" PrefabNodeId="-1">
+    <Comment Background="NoColor" Text="" />
+    <DescriptorRefs value="0:" />
+    <Connector Identifier="GenericChildren">
+      <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="0" PrefabName="" PrefabNodeId="-1">
+        <Comment Background="NoColor" Text="" />
+        <Connector Identifier="GenericChildren">
+          <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="1" Opl="static TNS::ST::PER::WRK::kEmployee ParTestRegNameAgent.ParTestRegNameAgent::STV_KEMPLOYEE_0" Opr="ParTestRegNameAgent.ParTestRegNameAgent::Func_kEmployeeIR(static TNS::ST::PER::WRK::kEmployee ParTestRegNameAgent.ParTestRegNameAgent::STV_KEMPLOYEE_0)" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="4" Opl="static behaviac::vector&lt;TNS::ST::PER::WRK::kEmployee&gt; ParTestRegNameAgent.ParTestRegNameAgent::STV_LIST_KEMPLOYEE_0" Opr="ParTestRegNameAgent.ParTestRegNameAgent::Func_kEmployeeListIR(static behaviac::vector&lt;TNS::ST::PER::WRK::kEmployee&gt; ParTestRegNameAgent.ParTestRegNameAgent::STV_LIST_KEMPLOYEE_0)" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="5" Opl="static vector&lt;sbyte&gt; ParTestRegNameAgent.ParTestRegNameAgent::STV_LIST_SBYTE_0" Opr="ParTestRegNameAgent.ParTestRegNameAgent::Func_SByteListIR(static vector&lt;sbyte&gt; ParTestRegNameAgent.ParTestRegNameAgent::STV_LIST_SBYTE_0)" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="6" Opl="behaviac::Agent ParTestRegNameAgent.ParTestRegNameAgent::TV_AGENT_0" Opr="ParTestRegNameAgent.ParTestRegNameAgent::Func_AgentIR(behaviac::Agent ParTestRegNameAgent.ParTestRegNameAgent::TV_AGENT_0)" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="7" Opl="ubyte ParTestRegNameAgent.ParTestRegNameAgent::TV_BYTE_0" Opr="ParTestRegNameAgent.ParTestRegNameAgent::Func_ByteIR(ubyte ParTestRegNameAgent.ParTestRegNameAgent::TV_BYTE_0)" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="8" Opl="char ParTestRegNameAgent.ParTestRegNameAgent::TV_CHAR_0" Opr="ParTestRegNameAgent.ParTestRegNameAgent::Func_CharIR(char ParTestRegNameAgent.ParTestRegNameAgent::TV_CHAR_0)" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="9" Opl="TNS::ST::PER::WRK::kEmployee ParTestRegNameAgent.ParTestRegNameAgent::TV_KEMPLOYEE_0" Opr="ParTestRegNameAgent.ParTestRegNameAgent::Func_kEmployeeIR(TNS::ST::PER::WRK::kEmployee ParTestRegNameAgent.ParTestRegNameAgent::TV_KEMPLOYEE_0)" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="10" Opl="behaviac::vector&lt;TNS::ST::PER::WRK::kEmployee&gt; ParTestRegNameAgent.ParTestRegNameAgent::TV_LIST_KEMPLOYEE_0" Opr="ParTestRegNameAgent.ParTestRegNameAgent::Func_kEmployeeListIR(behaviac::vector&lt;TNS::ST::PER::WRK::kEmployee&gt; ParTestRegNameAgent.ParTestRegNameAgent::TV_LIST_KEMPLOYEE_0)" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="11" Opl="sbyte ParTestRegNameAgent.ParTestRegNameAgent::TV_SBYTE_0" Opr="ParTestRegNameAgent.ParTestRegNameAgent::Func_SByteIR(sbyte ParTestRegNameAgent.ParTestRegNameAgent::TV_SBYTE_0)" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="12" Opl="string ParTestRegNameAgent.ParTestRegNameAgent::TV_STR_0" Opr="ParTestRegNameAgent.ParTestRegNameAgent::Func_StringIR(string ParTestRegNameAgent.ParTestRegNameAgent::TV_STR_0)" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+          </Node>
+        </Connector>
+      </Node>
+    </Connector>
+  </Node>
+</Behavior>

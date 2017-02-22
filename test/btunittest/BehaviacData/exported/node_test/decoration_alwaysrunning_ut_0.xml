@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\decoration_alwaysrunning_ut_0.xml-->
+<behavior name="node_test/decoration_alwaysrunning_ut_0" agenttype="AgentNodeTest" version="5">
+  <node class="Parallel" id="0">
+    <property ChildFinishPolicy="CHILDFINISH_LOOP" />
+    <property ExitPolicy="EXIT_ABORT_RUNNINGSIBLINGS" />
+    <property FailurePolicy="FAIL_ON_ONE" />
+    <property SuccessPolicy="SUCCEED_ON_ALL" />
+    <node class="Selector" id="4">
+      <node class="DecoratorAlwaysRunning" id="1">
+        <property DecorateWhenChildEnds="false" />
+        <node class="Action" id="5">
+          <property Method="Self.AgentNodeTest::setTestVar_0(0)" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+      </node>
+      <node class="Action" id="6">
+        <property Method="Self.AgentNodeTest::setTestVar_0(1)" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+    </node>
+    <node class="Selector" id="2">
+      <node class="DecoratorAlwaysRunning" id="3">
+        <property DecorateWhenChildEnds="false" />
+        <node class="Action" id="7">
+          <property Method="Self.AgentNodeTest::setTestVar_1(0)" />
+          <property ResultOption="BT_FAILURE" />
+        </node>
+      </node>
+      <node class="Action" id="8">
+        <property Method="Self.AgentNodeTest::setTestVar_1(1)" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+    </node>
+    <node class="Selector" id="9">
+      <node class="DecoratorAlwaysRunning" id="10">
+        <property DecorateWhenChildEnds="false" />
+        <node class="Action" id="11">
+          <property Method="Self.AgentNodeTest::setTestVar_2(0)" />
+          <property ResultOption="BT_RUNNING" />
+        </node>
+      </node>
+      <node class="Action" id="12">
+        <property Method="Self.AgentNodeTest::setTestVar_2(1)" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+    </node>
+  </node>
+</behavior>

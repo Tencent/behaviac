@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\selector_probability_ut_1.xml-->
+<behavior name="node_test/selector_probability_ut_1" agenttype="AgentNodeTest" version="5">
+  <node class="SelectorProbability" id="0">
+    <node class="DecoratorWeight" id="4">
+      <property DecorateWhenChildEnds="false" />
+      <property Weight="const int 0" />
+      <node class="Action" id="1">
+        <property Method="Self.AgentNodeTest::setTestVar_0(0)" />
+        <property ResultOption="BT_FAILURE" />
+      </node>
+    </node>
+    <node class="DecoratorWeight" id="5">
+      <property DecorateWhenChildEnds="false" />
+      <property Weight="const int 1" />
+      <node class="Action" id="2">
+        <property Method="Self.AgentNodeTest::setTestVar_0(1)" />
+        <property ResultOption="BT_FAILURE" />
+      </node>
+    </node>
+    <node class="DecoratorWeight" id="6">
+      <property DecorateWhenChildEnds="false" />
+      <property Weight="const int 1" />
+      <node class="Action" id="3">
+        <property Method="Self.AgentNodeTest::setTestVar_0(2)" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+    </node>
+  </node>
+</behavior>

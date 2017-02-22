@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\wait_ut_2.xml-->
+<behavior name="node_test/wait_ut_2" agenttype="AgentNodeTest" version="5">
+  <pars>
+    <par name="l_IntVar" type="int" value="0" />
+  </pars>
+  <node class="Sequence" id="4">
+    <node class="Assignment" id="5">
+      <property CastRight="false" />
+      <property Opl="int Self.AgentNodeTest::l_IntVar" />
+      <property Opr="const int 1" />
+    </node>
+    <node class="Sequence" id="0">
+      <attachment class="Precondition" id="6" flag="precondition">
+        <property BinaryOperator="And" />
+        <property Operator="Equal" />
+        <property Opl="int Self.AgentNodeTest::l_IntVar" />
+        <property Opr2="const int 1" />
+        <property Phase="Both" />
+      </attachment>
+      <node class="Action" id="1">
+        <property Method="Self.AgentNodeTest::setTestVar_0(1)" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Wait" id="2">
+        <property Time="const float 1000" />
+      </node>
+      <node class="Assignment" id="8">
+        <property CastRight="false" />
+        <property Opl="int Self.AgentNodeTest::l_IntVar" />
+        <property Opr="const int 2" />
+      </node>
+      <node class="Wait" id="7">
+        <property Time="const float 1000" />
+      </node>
+      <node class="Action" id="3">
+        <property Method="Self.AgentNodeTest::setTestVar_0(2)" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+    </node>
+  </node>
+</behavior>

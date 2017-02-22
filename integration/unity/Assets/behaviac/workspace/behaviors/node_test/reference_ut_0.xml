@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Behavior Version="5">
+  <Node Class="Behaviac.Design.Nodes.Behavior" AgentType="AgentNodeTest" Domains="" Enable="true" HasOwnPrefabData="false" Id="-1" PrefabName="" PrefabNodeId="-1">
+    <Comment Background="NoColor" Text="" />
+    <DescriptorRefs value="0:" />
+    <Connector Identifier="GenericChildren">
+      <Node Class="Behaviac.Design.Nodes.ReferencedBehavior" Enable="true" HasOwnPrefabData="false" Id="1" PrefabName="" PrefabNodeId="-1" ReferenceBehavior="const string &quot;node_test/reference_sub_0&quot;" Task="Self.AgentNodeTest::task_test(1,1)">
+        <Comment Background="Gray" Text="" />
+      </Node>
+    </Connector>
+  </Node>
+</Behavior>

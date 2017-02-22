@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\event_subtree_3.xml-->
+<behavior name="node_test/event_subtree_3" agenttype="AgentNodeTest" version="5">
+  <pars>
+    <par name="_$local_task_param_$_0" type="int" value="0" />
+    <par name="_$local_task_param_$_1" type="bool" value="false" />
+    <par name="_$local_task_param_$_2" type="float" value="0" />
+  </pars>
+  <node class="Task" id="7">
+    <property Prototype="Self.AgentNodeTest::event_test_int_bool_float(0,false,0)" />
+    <property IsHTN="false" />
+    <node class="Sequence" id="0">
+      <node class="Action" id="1">
+        <property Method="Self.AgentNodeTest::setEventVarInt(int Self.AgentNodeTest::_$local_task_param_$_0)" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Action" id="2">
+        <property Method="Self.AgentNodeTest::setEventVarBool(bool Self.AgentNodeTest::_$local_task_param_$_1)" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Action" id="4">
+        <property Method="Self.AgentNodeTest::setEventVarFloat(float Self.AgentNodeTest::_$local_task_param_$_2)" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+    </node>
+  </node>
+</behavior>

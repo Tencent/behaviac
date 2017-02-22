@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<agents version="1" signature="2352269984">
+  <agent type="AgentNodeTest" base="behaviac::Agent" signature="1170745505">
+    <properties>
+      <property name="c_ReturnFloat2" type="TestNS::Float2" member="false" static="false" defaultvalue="{x=0;y=0;}" />
+      <property name="c_ReturnFloat2Const" type="TestNS::Float2" member="false" static="false" defaultvalue="{x=0;y=0;}" />
+      <property name="par_child" type="ChildNodeTest*" member="true" static="false" agent="AgentNodeTest" />
+      <property name="par_child_agent_1" type="ChildNodeTest" member="false" static="false" defaultvalue="null" />
+      <property name="redirectCount" type="uint" member="false" static="false" defaultvalue="0" />
+      <property name="redirectTime" type="uint" member="false" static="false" defaultvalue="0" />
+      <property name="test_int_array" type="vector&lt;int&gt;" member="false" static="false" defaultvalue="3:1|2|3" />
+      <property name="testColor" type="EnumTest" member="true" static="false" agent="AgentNodeTest" />
+      <property name="testFloat2" type="TestNS::Float2" member="false" static="false" defaultvalue="{x=0;y=0;}" />
+      <property name="testInt" type="int" member="false" static="false" defaultvalue="10" />
+      <property name="testVar_0" type="int" member="true" static="false" agent="AgentNodeTest" />
+      <property name="testVar_1" type="int" member="true" static="false" agent="AgentNodeTest" />
+      <property name="testVar_2" type="float" member="true" static="false" agent="AgentNodeTest" />
+      <property name="testVar_3" type="float" member="true" static="false" agent="AgentNodeTest" />
+      <property name="testVar_Act" type="Act*" member="true" static="false" agent="AgentNodeTest" />
+      <property name="testVar_str_0" type="string" member="true" static="false" agent="AgentNodeTest" />
+      <property name="testVar_str_1" type="string" member="true" static="false" agent="AgentNodeTest" />
+      <property name="waiting_timeout_interval" type="int" member="true" static="false" agent="AgentNodeTest" />
+    </properties>
+  </agent>
+  <agent type="ChildNodeTest" base="AgentNodeTest" signature="504541392">
+    <properties>
+      <property name="c_ReturnFloat2" type="TestNS::Float2" member="false" static="false" defaultvalue="{x=0;y=0;}" />
+      <property name="c_ReturnFloat2Const" type="TestNS::Float2" member="false" static="false" defaultvalue="{x=0;y=0;}" />
+      <property name="par_child" type="ChildNodeTest*" member="true" static="false" agent="AgentNodeTest" />
+      <property name="par_child_agent_1" type="ChildNodeTest" member="false" static="false" defaultvalue="null" />
+      <property name="redirectCount" type="uint" member="false" static="false" defaultvalue="0" />
+      <property name="redirectTime" type="uint" member="false" static="false" defaultvalue="0" />
+      <property name="test_int_array" type="vector&lt;int&gt;" member="false" static="false" defaultvalue="3:1|2|3" />
+      <property name="testColor" type="EnumTest" member="true" static="false" agent="AgentNodeTest" />
+      <property name="testFloat2" type="TestNS::Float2" member="false" static="false" defaultvalue="{x=0;y=0;}" />
+      <property name="testInt" type="int" member="false" static="false" defaultvalue="10" />
+      <property name="testVar_0" type="int" member="true" static="false" agent="AgentNodeTest" />
+      <property name="testVar_1" type="int" member="true" static="false" agent="AgentNodeTest" />
+      <property name="testVar_2" type="float" member="true" static="false" agent="AgentNodeTest" />
+      <property name="testVar_3" type="float" member="true" static="false" agent="AgentNodeTest" />
+      <property name="testVar_Act" type="Act*" member="true" static="false" agent="AgentNodeTest" />
+      <property name="testVar_str_0" type="string" member="true" static="false" agent="AgentNodeTest" />
+      <property name="testVar_str_1" type="string" member="true" static="false" agent="AgentNodeTest" />
+      <property name="waiting_timeout_interval" type="int" member="true" static="false" agent="AgentNodeTest" />
+    </properties>
+  </agent>
+  <agent type="ChildNodeTestSub" base="ChildNodeTest" signature="2943698288">
+    <properties>
+      <property name="c_ReturnFloat2" type="TestNS::Float2" member="false" static="false" defaultvalue="{x=0;y=0;}" />
+      <property name="c_ReturnFloat2Const" type="TestNS::Float2" member="false" static="false" defaultvalue="{x=0;y=0;}" />
+      <property name="IntValue" type="int" member="true" static="false" agent="ChildNodeTestSub" />
+      <property name="par_child" type="ChildNodeTest*" member="true" static="false" agent="AgentNodeTest" />
+      <property name="par_child_agent_1" type="ChildNodeTest" member="false" static="false" defaultvalue="null" />
+      <property name="redirectCount" type="uint" member="false" static="false" defaultvalue="0" />
+      <property name="redirectTime" type="uint" member="false" static="false" defaultvalue="0" />
+      <property name="test_int_array" type="vector&lt;int&gt;" member="false" static="false" defaultvalue="3:1|2|3" />
+      <property name="testColor" type="EnumTest" member="true" static="false" agent="AgentNodeTest" />
+      <property name="testFloat2" type="TestNS::Float2" member="false" static="false" defaultvalue="{x=0;y=0;}" />
+      <property name="testInt" type="int" member="false" static="false" defaultvalue="10" />
+      <property name="testVar_0" type="int" member="true" static="false" agent="AgentNodeTest" />
+      <property name="testVar_1" type="int" member="true" static="false" agent="AgentNodeTest" />
+      <property name="testVar_2" type="float" member="true" static="false" agent="AgentNodeTest" />
+      <property name="testVar_3" type="float" member="true" static="false" agent="AgentNodeTest" />
+      <property name="testVar_Act" type="Act*" member="true" static="false" agent="AgentNodeTest" />
+      <property name="testVar_str_0" type="string" member="true" static="false" agent="AgentNodeTest" />
+      <property name="testVar_str_1" type="string" member="true" static="false" agent="AgentNodeTest" />
+      <property name="waiting_timeout_interval" type="int" member="true" static="false" agent="AgentNodeTest" />
+    </properties>
+  </agent>
+  <agent type="CustomPropertyAgent" base="behaviac::Agent" signature="2989417953">
+    <properties>
+      <property name="BoolMemberReadonly" type="bool" member="true" static="false" agent="CustomPropertyAgent" />
+      <property name="c_Bool" type="bool" member="false" static="false" defaultvalue="false" />
+      <property name="c_Enum" type="TNS::NE::NAT::eColor" member="false" static="false" defaultvalue="RED" />
+      <property name="c_IntArray" type="vector&lt;int&gt;" member="false" static="false" defaultvalue="0:" />
+      <property name="c_Location" type="UnityEngine::Vector3" member="false" static="false" defaultvalue="{x=0;y=0;z=0;}" />
+      <property name="c_StaticString" type="string" member="false" static="true" defaultvalue="" />
+      <property name="FloatPropertyReadonly" type="float" member="true" static="false" agent="CustomPropertyAgent" />
+      <property name="IntMemberConst" type="int" member="true" static="true" agent="CustomPropertyAgent" />
+      <property name="IntProperty" type="int" member="true" static="false" agent="CustomPropertyAgent" />
+      <property name="Location" type="UnityEngine::Vector3" member="true" static="false" agent="CustomPropertyAgent" />
+      <property name="StringMemberReadonly" type="string" member="true" static="false" agent="CustomPropertyAgent" />
+      <property name="TestMember1" type="TestNamespace::ClassAsValueType" member="false" static="false" defaultvalue="{x=0;y=0;}" />
+      <property name="TestMember2" type="TestNamespace::Float2" member="false" static="false" defaultvalue="{x=0;y=0;}" />
+    </properties>
+  </agent>
+  <agent type="ParTestAgentBase" base="behaviac::Agent" signature="808252590">
+    <properties>
+      <property name="STV_BOOL_0" type="bool" member="true" static="true" agent="ParTestAgentBase" />
+      <property name="STV_CHAR_0" type="char" member="true" static="true" agent="ParTestAgentBase" />
+      <property name="STV_ECOLOR_0" type="TNS::NE::NAT::eColor" member="true" static="true" agent="ParTestAgentBase" />
+      <property name="STV_LIST_BOOL_0" type="vector&lt;bool&gt;" member="true" static="true" agent="ParTestAgentBase" />
+      <property name="STV_LIST_CHAR_0" type="vector&lt;char&gt;" member="true" static="true" agent="ParTestAgentBase" />
+      <property name="STV_LIST_ECOLOR_0" type="vector&lt;TNS::NE::NAT::eColor&gt;" member="true" static="true" agent="ParTestAgentBase" />
+      <property name="STV_LIST_SBYTE_0" type="vector&lt;sbyte&gt;" member="true" static="true" agent="ParTestAgentBase" />
+      <property name="TV_BOOL_0" type="bool" member="true" static="false" agent="ParTestAgentBase" />
+      <property name="TV_BYTE_0" type="ubyte" member="true" static="false" agent="ParTestAgentBase" />
+      <property name="TV_CHAR_0" type="char" member="true" static="false" agent="ParTestAgentBase" />
+      <property name="TV_ECOLOR_0" type="TNS::NE::NAT::eColor" member="true" static="false" agent="ParTestAgentBase" />
+      <property name="TV_LIST_BOOL_0" type="vector&lt;bool&gt;" member="true" static="false" agent="ParTestAgentBase" />
+      <property name="TV_LIST_BYTE_0" type="vector&lt;ubyte&gt;" member="true" static="false" agent="ParTestAgentBase" />
+      <property name="TV_LIST_CHAR_0" type="vector&lt;char&gt;" member="true" static="false" agent="ParTestAgentBase" />
+      <property name="TV_LIST_ECOLOR_0" type="vector&lt;TNS::NE::NAT::eColor&gt;" member="true" static="false" agent="ParTestAgentBase" />
+      <property name="TV_LIST_SBYTE_0" type="vector&lt;sbyte&gt;" member="true" static="false" agent="ParTestAgentBase" />
+      <property name="TV_SBYTE_0" type="sbyte" member="true" static="false" agent="ParTestAgentBase" />
+    </properties>
+  </agent>
+  <agent type="ParTestAgent" base="ParTestAgentBase" signature="1095947230">
+    <properties>
+      <property name="STV_BOOL_0" type="bool" member="true" static="true" agent="ParTestAgentBase" />
+      <property name="STV_CHAR_0" type="char" member="true" static="true" agent="ParTestAgentBase" />
+      <property name="STV_ECOLOR_0" type="TNS::NE::NAT::eColor" member="true" static="true" agent="ParTestAgentBase" />
+      <property name="STV_LIST_BOOL_0" type="vector&lt;bool&gt;" member="true" static="true" agent="ParTestAgentBase" />
+      <property name="STV_LIST_CHAR_0" type="vector&lt;char&gt;" member="true" static="true" agent="ParTestAgentBase" />
+      <property name="STV_LIST_ECOLOR_0" type="vector&lt;TNS::NE::NAT::eColor&gt;" member="true" static="true" agent="ParTestAgentBase" />
+      <property name="STV_LIST_SBYTE_0" type="vector&lt;sbyte&gt;" member="true" static="true" agent="ParTestAgentBase" />
+      <property name="TV_BOOL_0" type="bool" member="true" static="false" agent="ParTestAgentBase" />
+      <property name="TV_BYTE_0" type="ubyte" member="true" static="false" agent="ParTestAgentBase" />
+      <property name="TV_CHAR_0" type="char" member="true" static="false" agent="ParTestAgentBase" />
+      <property name="TV_ECOLOR_0" type="TNS::NE::NAT::eColor" member="true" static="false" agent="ParTestAgentBase" />
+      <property name="TV_LIST_BOOL_0" type="vector&lt;bool&gt;" member="true" static="false" agent="ParTestAgentBase" />
+      <property name="TV_LIST_BYTE_0" type="vector&lt;ubyte&gt;" member="true" static="false" agent="ParTestAgentBase" />
+      <property name="TV_LIST_CHAR_0" type="vector&lt;char&gt;" member="true" static="false" agent="ParTestAgentBase" />
+      <property name="TV_LIST_ECOLOR_0" type="vector&lt;TNS::NE::NAT::eColor&gt;" member="true" static="false" agent="ParTestAgentBase" />
+      <property name="TV_LIST_SBYTE_0" type="vector&lt;sbyte&gt;" member="true" static="false" agent="ParTestAgentBase" />
+      <property name="TV_SBYTE_0" type="sbyte" member="true" static="false" agent="ParTestAgentBase" />
+      <property name="STV_INT_0" type="int" member="true" static="true" agent="ParTestAgent" />
+      <property name="STV_KEMPLOYEE_0" type="TNS::ST::PER::WRK::kEmployee" member="true" static="true" agent="ParTestAgent" />
+      <property name="STV_LIST_INT_0" type="vector&lt;int&gt;" member="true" static="true" agent="ParTestAgent" />
+      <property name="STV_LIST_KEMPLOYEE_0" type="vector&lt;TNS::ST::PER::WRK::kEmployee&gt;" member="true" static="true" agent="ParTestAgent" />
+      <property name="TV_INT_0" type="int" member="true" static="false" agent="ParTestAgent" />
+      <property name="TV_KEMPLOYEE_0" type="TNS::ST::PER::WRK::kEmployee" member="true" static="false" agent="ParTestAgent" />
+      <property name="TV_LIST_INT_0" type="vector&lt;int&gt;" member="true" static="false" agent="ParTestAgent" />
+      <property name="TV_LIST_KEMPLOYEE_0" type="vector&lt;TNS::ST::PER::WRK::kEmployee&gt;" member="true" static="false" agent="ParTestAgent" />
+      <property name="TV_LONG_0" type="long" member="true" static="false" agent="ParTestAgent" />
+      <property name="TV_SHORT_0" type="short" member="true" static="false" agent="ParTestAgent" />
+      <property name="TV_USHORT_0" type="ushort" member="true" static="false" agent="ParTestAgent" />
+      <property name="C_Agent" type="ParTestAgent" member="false" static="false" defaultvalue="null" />
+      <property name="C_GameObject" type="UnityEngine::GameObject" member="false" static="false" defaultvalue="null" />
+    </properties>
+  </agent>
+  <agent type="EmployeeParTestAgent" base="ParTestAgent" signature="4248282271">
+    <properties>
+      <property name="STV_BOOL_0" type="bool" member="true" static="true" agent="ParTestAgentBase" />
+      <property name="STV_CHAR_0" type="char" member="true" static="true" agent="ParTestAgentBase" />
+      <property name="STV_ECOLOR_0" type="TNS::NE::NAT::eColor" member="true" static="true" agent="ParTestAgentBase" />
+      <property name="STV_LIST_BOOL_0" type="vector&lt;bool&gt;" member="true" static="true" agent="ParTestAgentBase" />
+      <property name="STV_LIST_CHAR_0" type="vector&lt;char&gt;" member="true" static="true" agent="ParTestAgentBase" />
+      <property name="STV_LIST_ECOLOR_0" type="vector&lt;TNS::NE::NAT::eColor&gt;" member="true" static="true" agent="ParTestAgentBase" />
+      <property name="STV_LIST_SBYTE_0" type="vector&lt;sbyte&gt;" member="true" static="true" agent="ParTestAgentBase" />
+      <property name="TV_BOOL_0" type="bool" member="true" static="false" agent="ParTestAgentBase" />
+      <property name="TV_BYTE_0" type="ubyte" member="true" static="false" agent="ParTestAgentBase" />
+      <property name="TV_CHAR_0" type="char" member="true" static="false" agent="ParTestAgentBase" />
+      <property name="TV_ECOLOR_0" type="TNS::NE::NAT::eColor" member="true" static="false" agent="ParTestAgentBase" />
+      <property name="TV_LIST_BOOL_0" type="vector&lt;bool&gt;" member="true" static="false" agent="ParTestAgentBase" />
+      <property name="TV_LIST_BYTE_0" type="vector&lt;ubyte&gt;" member="true" static="false" agent="ParTestAgentBase" />
+      <property name="TV_LIST_CHAR_0" type="vector&lt;char&gt;" member="true" static="false" agent="ParTestAgentBase" />
+      <property name="TV_LIST_ECOLOR_0" type="vector&lt;TNS::NE::NAT::eColor&gt;" member="true" static="false" agent="ParTestAgentBase" />
+      <property name="TV_LIST_SBYTE_0" type="vector&lt;sbyte&gt;" member="true" static="false" agent="ParTestAgentBase" />
+      <property name="TV_SBYTE_0" type="sbyte" member="true" static="false" agent="ParTestAgentBase" />
+      <property name="STV_INT_0" type="int" member="true" static="true" agent="ParTestAgent" />
+      <property name="STV_KEMPLOYEE_0" type="TNS::ST::PER::WRK::kEmployee" member="true" static="true" agent="ParTestAgent" />
+      <property name="STV_LIST_INT_0" type="vector&lt;int&gt;" member="true" static="true" agent="ParTestAgent" />
+      <property name="STV_LIST_KEMPLOYEE_0" type="vector&lt;TNS::ST::PER::WRK::kEmployee&gt;" member="true" static="true" agent="ParTestAgent" />
+      <property name="TV_INT_0" type="int" member="true" static="false" agent="ParTestAgent" />
+      <property name="TV_KEMPLOYEE_0" type="TNS::ST::PER::WRK::kEmployee" member="true" static="false" agent="ParTestAgent" />
+      <property name="TV_LIST_INT_0" type="vector&lt;int&gt;" member="true" static="false" agent="ParTestAgent" />
+      <property name="TV_LIST_KEMPLOYEE_0" type="vector&lt;TNS::ST::PER::WRK::kEmployee&gt;" member="true" static="false" agent="ParTestAgent" />
+      <property name="TV_LONG_0" type="long" member="true" static="false" agent="ParTestAgent" />
+      <property name="TV_SHORT_0" type="short" member="true" static="false" agent="ParTestAgent" />
+      <property name="TV_USHORT_0" type="ushort" member="true" static="false" agent="ParTestAgent" />
+      <property name="STV_AGENT_0" type="behaviac::Agent*" member="true" static="true" agent="EmployeeParTestAgent" />
+      <property name="STV_F_0" type="float" member="true" static="true" agent="EmployeeParTestAgent" />
+      <property name="STV_LIST_AGENT_0" type="vector&lt;behaviac::Agent*&gt;" member="true" static="true" agent="EmployeeParTestAgent" />
+      <property name="STV_LIST_F_0" type="vector&lt;float&gt;" member="true" static="true" agent="EmployeeParTestAgent" />
+      <property name="STV_LIST_STR_0" type="vector&lt;string&gt;" member="true" static="true" agent="EmployeeParTestAgent" />
+      <property name="STV_STR_0" type="string" member="true" static="true" agent="EmployeeParTestAgent" />
+      <property name="TV_AGENT_0" type="behaviac::Agent*" member="true" static="false" agent="EmployeeParTestAgent" />
+      <property name="TV_CSZSTR_0" type="string" member="true" static="false" agent="EmployeeParTestAgent" />
+      <property name="TV_D_0" type="double" member="true" static="false" agent="EmployeeParTestAgent" />
+      <property name="TV_F_0" type="float" member="true" static="false" agent="EmployeeParTestAgent" />
+      <property name="TV_LIST_AGENT_0" type="vector&lt;behaviac::Agent*&gt;" member="true" static="false" agent="EmployeeParTestAgent" />
+      <property name="TV_LIST_F_0" type="vector&lt;float&gt;" member="true" static="false" agent="EmployeeParTestAgent" />
+      <property name="TV_LIST_STR_0" type="vector&lt;string&gt;" member="true" static="false" agent="EmployeeParTestAgent" />
+      <property name="TV_LL_0" type="long" member="true" static="false" agent="EmployeeParTestAgent" />
+      <property name="TV_STR_0" type="string" member="true" static="false" agent="EmployeeParTestAgent" />
+      <property name="TV_UINT_0" type="uint" member="true" static="false" agent="EmployeeParTestAgent" />
+      <property name="TV_ULL_0" type="ulong" member="true" static="false" agent="EmployeeParTestAgent" />
+      <property name="TV_ULONG_0" type="ulong" member="true" static="false" agent="EmployeeParTestAgent" />
+      <property name="C_Agent" type="ParTestAgent" member="false" static="false" defaultvalue="null" />
+      <property name="C_GameObject" type="UnityEngine::GameObject" member="false" static="false" defaultvalue="null" />
+      <property name="target" type="ParTestAgent" member="false" static="false" defaultvalue="null" />
+    </properties>
+  </agent>
+  <agent type="FSMAgentTest" base="behaviac::Agent" signature="3125537989">
+    <properties>
+      <property name="ActiveCount" type="uint" member="false" static="false" defaultvalue="0" />
+      <property name="EnergyCount" type="int" member="false" static="false" defaultvalue="0" />
+      <property name="ExitCount" type="long" member="false" static="false" defaultvalue="0" />
+      <property name="FoodCount" type="int" member="false" static="false" defaultvalue="0" />
+      <property name="InactiveCount" type="int" member="false" static="false" defaultvalue="0" />
+      <property name="Message" type="FSMAgentTest::EMessage" member="true" static="false" agent="FSMAgentTest" />
+      <property name="PauseCount" type="short" member="false" static="false" defaultvalue="0" />
+    </properties>
+  </agent>
+  <agent type="HTNAgentHouseBase" base="behaviac::Agent" signature="1561560191">
+    <properties>
+      <property name="Money" type="int" member="false" static="false" defaultvalue="0" />
+    </properties>
+  </agent>
+  <agent type="HTNAgentHouse" base="HTNAgentHouseBase" signature="544358402">
+    <properties>
+      <property name="Contract" type="bool" member="false" static="false" defaultvalue="false" />
+      <property name="GoodCredit" type="bool" member="false" static="false" defaultvalue="true" />
+      <property name="House" type="bool" member="false" static="false" defaultvalue="false" />
+      <property name="HouseBuilt" type="bool" member="false" static="false" defaultvalue="false" />
+      <property name="Land" type="bool" member="false" static="false" defaultvalue="false" />
+      <property name="Money" type="int" member="false" static="false" defaultvalue="0" />
+      <property name="Mortgage" type="bool" member="false" static="false" defaultvalue="false" />
+      <property name="Permit" type="bool" member="false" static="false" defaultvalue="false" />
+    </properties>
+  </agent>
+  <agent type="ParTestRegNameAgent" base="behaviac::Agent" signature="2266381546">
+    <properties>
+      <property name="STV_KEMPLOYEE_0" type="TNS::ST::PER::WRK::kEmployee" member="true" static="true" agent="ParTestRegNameAgent" />
+      <property name="STV_LIST_KEMPLOYEE_0" type="vector&lt;TNS::ST::PER::WRK::kEmployee&gt;" member="true" static="true" agent="ParTestRegNameAgent" />
+      <property name="STV_LIST_SBYTE_0" type="vector&lt;sbyte&gt;" member="true" static="true" agent="ParTestRegNameAgent" />
+      <property name="TV_AGENT_0" type="behaviac::Agent*" member="true" static="false" agent="ParTestRegNameAgent" />
+      <property name="TV_BYTE_0" type="ubyte" member="true" static="false" agent="ParTestRegNameAgent" />
+      <property name="TV_CHAR_0" type="char" member="true" static="false" agent="ParTestRegNameAgent" />
+      <property name="TV_KEMPLOYEE_0" type="TNS::ST::PER::WRK::kEmployee" member="true" static="false" agent="ParTestRegNameAgent" />
+      <property name="TV_LIST_KEMPLOYEE_0" type="vector&lt;TNS::ST::PER::WRK::kEmployee&gt;" member="true" static="false" agent="ParTestRegNameAgent" />
+      <property name="TV_SBYTE_0" type="sbyte" member="true" static="false" agent="ParTestRegNameAgent" />
+      <property name="TV_STR_0" type="string" member="true" static="false" agent="ParTestRegNameAgent" />
+    </properties>
+  </agent>
+  <agent type="PreconEffectorAgent" base="behaviac::Agent" signature="901328667">
+    <properties>
+      <property name="count_both" type="int" member="true" static="false" agent="PreconEffectorAgent" />
+      <property name="count_failure" type="int" member="true" static="false" agent="PreconEffectorAgent" />
+      <property name="count_success" type="int" member="true" static="false" agent="PreconEffectorAgent" />
+      <property name="ret" type="int" member="true" static="false" agent="PreconEffectorAgent" />
+    </properties>
+  </agent>
+  <agent type="PropertyReadonlyAgent" base="behaviac::Agent" signature="990716541">
+    <properties>
+      <property name="c_Int" type="int" member="false" static="false" defaultvalue="1" />
+      <property name="c_IntReadonly" type="int" member="false" static="false" defaultvalue="10" />
+      <property name="c_ResultStatic" type="int" member="false" static="true" defaultvalue="0" />
+      <property name="MemberReadonly" type="int" member="true" static="false" agent="PropertyReadonlyAgent" />
+      <property name="MemberReadonlyAs" type="int" member="true" static="false" agent="PropertyReadonlyAgent" />
+      <property name="PropertyGetterOnly" type="int" member="true" static="false" agent="PropertyReadonlyAgent" />
+      <property name="PropertyGetterSetter" type="int" member="true" static="false" agent="PropertyReadonlyAgent" />
+    </properties>
+  </agent>
+  <agent type="StaticAgent" base="behaviac::Agent" signature="1433571509">
+    <properties>
+      <property name="sInt" type="int" member="true" static="true" agent="StaticAgent" />
+    </properties>
+  </agent>
+  <agent type="TestNS::AgentArrayAccessTest" base="behaviac::Agent" signature="3860100775">
+    <properties>
+      <property name="c_Count" type="int" member="false" static="false" defaultvalue="0" />
+      <property name="c_doubleVal" type="double" member="false" static="false" defaultvalue="0.05" />
+      <property name="c_doubleVec2" type="vector&lt;double&gt;" member="false" static="false" defaultvalue="3:0.01|0.02|0.03" />
+      <property name="c_douleVec" type="vector&lt;double&gt;" member="false" static="false" defaultvalue="3:0.01|0.02|0.03" />
+      <property name="c_Int" type="int" member="false" static="false" defaultvalue="0" />
+      <property name="c_ListInts" type="vector&lt;int&gt;" member="false" static="false" defaultvalue="5:10|20|30|40|50" />
+      <property name="Int" type="int" member="true" static="false" agent="TestNS::AgentArrayAccessTest" />
+      <property name="ListInts" type="vector&lt;int&gt;" member="true" static="false" agent="TestNS::AgentArrayAccessTest" />
+    </properties>
+  </agent>
+</agents>

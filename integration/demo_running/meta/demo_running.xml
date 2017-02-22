@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<metas version="5" language="cs">
+  <types>
+    <enumtype Type="behaviac::EBTStatus" DisplayName="" Desc="">
+      <enum NativeValue="behaviac::BT_INVALID" Value="BT_INVALID" DisplayName="BT_INVALID" Desc="BT_INVALID" />
+      <enum NativeValue="behaviac::BT_SUCCESS" Value="BT_SUCCESS" DisplayName="BT_SUCCESS" Desc="BT_SUCCESS" />
+      <enum NativeValue="behaviac::BT_FAILURE" Value="BT_FAILURE" DisplayName="BT_FAILURE" Desc="BT_FAILURE" />
+      <enum NativeValue="behaviac::BT_RUNNING" Value="BT_RUNNING" DisplayName="BT_RUNNING" Desc="BT_RUNNING" />
+    </enumtype>
+    <struct Type="System::Object" DisplayName="Object" Desc="Object" IsRefType="true" />
+  </types>
+  <agents>
+    <agent classfullname="behaviac::Agent" DisplayName="behaviac.Agent" Desc="behaviac.Agent" IsRefType="true" Namespace="behaviac">
+      <Method Name="LogMessage" DisplayName="" Desc="" ReturnType="void" Class="behaviac::Agent" Static="true" Public="true">
+        <Param DisplayName="message" Desc="message" Type="string" />
+      </Method>
+      <Method Name="VectorLength" DisplayName="" Desc="" ReturnType="int" Class="behaviac::Agent" Static="true" Public="true">
+        <Param DisplayName="vector" Desc="vector" Type="System.Collections.IList" />
+      </Method>
+      <Method Name="VectorAdd" DisplayName="" Desc="" ReturnType="void" Class="behaviac::Agent" Static="true" Public="true">
+        <Param DisplayName="vector" Desc="vector" Type="System.Collections.IList" />
+        <Param DisplayName="element" Desc="element" Type="System::Object*" />
+      </Method>
+      <Method Name="VectorRemove" DisplayName="" Desc="" ReturnType="void" Class="behaviac::Agent" Static="true" Public="true">
+        <Param DisplayName="vector" Desc="vector" Type="System.Collections.IList" />
+        <Param DisplayName="element" Desc="element" Type="System::Object*" />
+      </Method>
+      <Method Name="VectorContains" DisplayName="" Desc="" ReturnType="bool" Class="behaviac::Agent" Static="true" Public="true">
+        <Param DisplayName="vector" Desc="vector" Type="System.Collections.IList" />
+        <Param DisplayName="element" Desc="element" Type="System::Object*" />
+      </Method>
+      <Method Name="VectorClear" DisplayName="" Desc="" ReturnType="void" Class="behaviac::Agent" Static="true" Public="true">
+        <Param DisplayName="vector" Desc="vector" Type="System.Collections.IList" />
+      </Method>
+    </agent>
+    <agent classfullname="CBTPlayer" base="behaviac::Agent" DisplayName="CBTPlayer" Desc="CBTPlayer" IsRefType="true">
+      <Member Name="m_iBaseSpeed" DisplayName="" Desc="" Type="uint" Class="CBTPlayer" Public="true" />
+      <Member Name="m_Frames" DisplayName="" Desc="" Type="int" Class="CBTPlayer" Public="true" />
+      <Method Name="Condition" DisplayName="" Desc="" ReturnType="bool" Class="CBTPlayer" Public="true" />
+      <Method Name="Action1" DisplayName="" Desc="" ReturnType="behaviac::EBTStatus" Class="CBTPlayer" Public="true" />
+      <Method Name="Action3" DisplayName="" Desc="" ReturnType="behaviac::EBTStatus" Class="CBTPlayer" Public="true" />
+    </agent>
+  </agents>
+  <instances>
+    <instance name="CBTPlayer" class="CBTPlayer" DisplayName="CBTPlayer" Desc="CBTPlayer" />
+  </instances>
+</metas>

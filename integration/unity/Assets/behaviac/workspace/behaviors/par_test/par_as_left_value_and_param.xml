@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Behavior Version="5">
+  <Node Class="Behaviac.Design.Nodes.Behavior" AgentType="EmployeeParTestAgent" Domains="" Enable="true" HasOwnPrefabData="false" Id="-1" PrefabName="" PrefabNodeId="-1">
+    <Comment Background="NoColor" Text="" />
+    <Parameters>
+      <Parameter Name="par2_double_0" Type="System.Double" DefaultValue="5.7" DisplayName="par2_double_0" Desc="EmployeeParTestAgent::par2_double_0" Display="true" />
+      <Parameter Name="par2_single_0" Type="System.Single" DefaultValue="98.2" DisplayName="par2_single_0" Desc="EmployeeParTestAgent::par2_single_0" Display="true" />
+      <Parameter Name="par2_single_list_0" Type="System.Collections.Generic.List`1[[System.Single, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" DefaultValue="2:5.1|6.2" DisplayName="par2_single_list_0" Desc="EmployeeParTestAgent::par2_single_list_0" Display="true" />
+      <Parameter Name="par2_string_0" Type="System.String" DefaultValue="origin" DisplayName="par2_string_0" Desc="EmployeeParTestAgent::par2_string_0" Display="true" />
+      <Parameter Name="par2_string_list_0" Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" DefaultValue="4:&quot;string0&quot;|&quot;string1&quot;|&quot;string2&quot;|&quot;string3&quot;" DisplayName="par2_string_list_0" Desc="EmployeeParTestAgent::par2_string_list_0" Display="true" />
+      <Parameter Name="par2_uint_0" Type="System.UInt32" DefaultValue="9" DisplayName="par2_uint_0" Desc="EmployeeParTestAgent::par2_uint_0" Display="true" />
+      <Parameter Name="par2_ulong_0" Type="System.UInt64" DefaultValue="300" DisplayName="par2_ulong_0" Desc="EmployeeParTestAgent::par2_ulong_0" Display="true" />
+      <Parameter Name="par1_short_0" Type="System.Int16" DefaultValue="78" DisplayName="par1_short_0" Desc="EmployeeParTestAgent::par1_short_0" Display="true" />
+      <Parameter Name="par1_int_0" Type="System.Int32" DefaultValue="-3" DisplayName="par1_int_0" Desc="EmployeeParTestAgent::par1_int_0" Display="true" />
+      <Parameter Name="par1_int_list_0" Type="System.Collections.Generic.List`1[[System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" DefaultValue="3:9999|12345|0" DisplayName="par1_int_list_0" Desc="EmployeeParTestAgent::par1_int_list_0" Display="true" />
+      <Parameter Name="par1_long_0" Type="System.Int64" DefaultValue="1500" DisplayName="par1_long_0" Desc="EmployeeParTestAgent::par1_long_0" Display="true" />
+      <Parameter Name="par1_kemployee_list_0" Type="System.Collections.Generic.List`1[[XMLPluginBehaviac.TNS_ST_PER_WRK_kEmployee, XMLPluginBehaviac, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]" DefaultValue="1:{boss=null;car={brand=&quot;Lexus&quot;;color=BLUE;price=93840;};code=q;id=9;isMale=true;name=&quot;John&quot;;skinColor=GREEN;weight=110;}" DisplayName="par1_kemployee_list_0" Desc="EmployeeParTestAgent::par1_kemployee_list_0" Display="true" />
+      <Parameter Name="par1_ushort_0" Type="System.UInt16" DefaultValue="2001" DisplayName="par1_ushort_0" Desc="EmployeeParTestAgent::par1_ushort_0" Display="true" />
+      <Parameter Name="par0_boolean_0" Type="System.Boolean" DefaultValue="true" DisplayName="par0_boolean_0" Desc="EmployeeParTestAgent::par0_boolean_0" Display="true" />
+      <Parameter Name="par0_boolean_list_0" Type="System.Collections.Generic.List`1[[System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" DefaultValue="2:false|true" DisplayName="par0_boolean_list_0" Desc="EmployeeParTestAgent::par0_boolean_list_0" Display="true" />
+      <Parameter Name="par0_ecolor_0" Type="XMLPluginBehaviac.TNS_NE_NAT_eColor" DefaultValue="YELLOW" DisplayName="par0_ecolor_0" Desc="EmployeeParTestAgent::par0_ecolor_0" Display="true" />
+      <Parameter Name="par0_ecolor_list_0" Type="System.Collections.Generic.List`1[[XMLPluginBehaviac.TNS_NE_NAT_eColor, XMLPluginBehaviac, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]" DefaultValue="2:RED|GREEN" DisplayName="par0_ecolor_list_0" Desc="EmployeeParTestAgent::par0_ecolor_list_0" Display="true" />
+      <Parameter Name="par2_agent_0" Type="XMLPluginBehaviac.behaviac_Agent" DefaultValue="null" DisplayName="par2_agent_0" Desc="EmployeeParTestAgent::par2_agent_0" Display="true" />
+      <Parameter Name="par2_agent_list_0" Type="System.Collections.Generic.List`1[[XMLPluginBehaviac.behaviac_Agent, XMLPluginBehaviac, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]" DefaultValue="2:null|null" DisplayName="par2_agent_list_0" Desc="EmployeeParTestAgent::par2_agent_list_0" Display="true" />
+      <Parameter Name="par0_char_0" Type="System.Char" DefaultValue="A" DisplayName="par0_char_0" Desc="EmployeeParTestAgent::par0_char_0" Display="true" />
+      <Parameter Name="par1_kemployee_0" Type="XMLPluginBehaviac.TNS_ST_PER_WRK_kEmployee" DefaultValue="{boss=null;car={brand=&quot;Alpha&quot;;color=WHITE;price=5700;};code=A;id=83;isMale=false;name=&quot;Tom&quot;;skinColor=RED;weight=97.3;}" DisplayName="par1_kemployee_0" Desc="EmployeeParTestAgent::par1_kemployee_0" Display="true" />
+      <Parameter Name="par0_byte_0" Type="System.Byte" DefaultValue="197" DisplayName="par0_byte_0" Desc="EmployeeParTestAgent::par0_byte_0" Display="true" />
+      <Parameter Name="par0_sbyte_0" Type="System.SByte" DefaultValue="-60" DisplayName="par0_sbyte_0" Desc="EmployeeParTestAgent::par0_sbyte_0" Display="true" />
+      <Parameter Name="par0_char_list_0" Type="System.Collections.Generic.List`1[[System.Char, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" DefaultValue="4:d|j|F|A" DisplayName="par0_char_list_0" Desc="EmployeeParTestAgent::par0_char_list_0" Display="true" />
+      <Parameter Name="par0_sbyte_list_0" Type="System.Collections.Generic.List`1[[System.SByte, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" DefaultValue="3:127|-128|0" DisplayName="par0_sbyte_list_0" Desc="EmployeeParTestAgent::par0_sbyte_list_0" Display="true" />
+      <Parameter Name="par0_byte_list_0" Type="System.Collections.Generic.List`1[[System.Byte, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" DefaultValue="3:167|23|152" DisplayName="par0_byte_list_0" Desc="EmployeeParTestAgent::par0_byte_list_0" Display="true" />
+      <Parameter Name="par2_ParTestAgentBase_0" Type="XMLPluginBehaviac.ParTestAgentBase" DefaultValue="null" DisplayName="par2_ParTestAgentBase_0" Desc="EmployeeParTestAgent::par2_ParTestAgentBase_0" Display="true" />
+      <Parameter Name="par2_ParTestAgentBaseList_0" Type="System.Collections.Generic.List`1[[XMLPluginBehaviac.ParTestAgentBase, XMLPluginBehaviac, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]" DefaultValue="2:null|null" DisplayName="par2_ParTestAgentBaseList_0" Desc="EmployeeParTestAgent::par2_ParTestAgentBaseList_0" Display="true" />
+      <Parameter Name="par2_longlong_0" Type="Behaviac.Design.llong" DefaultValue="-666" DisplayName="par2_longlong_0" Desc="par2_longlong_0" Display="true" />
+      <Parameter Name="par2_ulonglong_0" Type="Behaviac.Design.ullong" DefaultValue="666" DisplayName="par2_ulonglong_0" Desc="par2_ulonglong_0" Display="true" />
+      <Parameter Name="par2_SzString_0" Type="System.String" DefaultValue="this is char* test" DisplayName="par2_SzString_0" Desc="par2_SzString_0" Display="true" />
+      <Parameter Name="par2_CSzString_0" Type="System.String" DefaultValue="this is const char* test" DisplayName="par2_CSzString_0" Desc="par2_CSzString_0" Display="true" />
+    </Parameters>
+    <DescriptorRefs value="0:" />
+    <Connector Identifier="GenericChildren">
+      <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="32" PrefabName="" PrefabNodeId="-1">
+        <Comment Background="NoColor" Text="" />
+        <Connector Identifier="GenericChildren">
+          <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="13" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+            <Connector Identifier="GenericChildren">
+              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="1" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="0" Opl="behaviac::Agent Self.EmployeeParTestAgent::par2_agent_0" Opr="Self.EmployeeParTestAgent::Func_AgentIR(behaviac::Agent Self.EmployeeParTestAgent::par2_agent_0)" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="30" Opl="ParTestAgentBase Self.EmployeeParTestAgent::par2_ParTestAgentBase_0" Opr="Self.EmployeeParTestAgent::Func_ParTestAgentBaseIR(ParTestAgentBase Self.EmployeeParTestAgent::par2_ParTestAgentBase_0)" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="15" Opl="vector&lt;behaviac::Agent&gt; Self.EmployeeParTestAgent::par2_agent_list_0" Opr="Self.EmployeeParTestAgent::Func_AgentListIR(vector&lt;behaviac::Agent&gt; Self.EmployeeParTestAgent::par2_agent_list_0)" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="31" Opl="vector&lt;ParTestAgentBase&gt; Self.EmployeeParTestAgent::par2_ParTestAgentBaseList_0" Opr="Self.EmployeeParTestAgent::Func_ParTestAgentBaseListIR(vector&lt;ParTestAgentBase&gt; Self.EmployeeParTestAgent::par2_ParTestAgentBaseList_0)" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="2" Opl="double Self.EmployeeParTestAgent::par2_double_0" Opr="Self.EmployeeParTestAgent::Func_DoubleIR(double Self.EmployeeParTestAgent::par2_double_0)" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="3" Opl="float Self.EmployeeParTestAgent::par2_single_0" Opr="Self.EmployeeParTestAgent::Func_SingleIR(float Self.EmployeeParTestAgent::par2_single_0)" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="4" Opl="vector&lt;float&gt; Self.EmployeeParTestAgent::par2_single_list_0" Opr="Self.EmployeeParTestAgent::Func_SingleListIR(vector&lt;float&gt; Self.EmployeeParTestAgent::par2_single_list_0)" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="5" Opl="string Self.EmployeeParTestAgent::par2_string_0" Opr="Self.EmployeeParTestAgent::Func_StringIR(string Self.EmployeeParTestAgent::par2_string_0)" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="6" Opl="vector&lt;string&gt; Self.EmployeeParTestAgent::par2_string_list_0" Opr="Self.EmployeeParTestAgent::Func_StringListIR(vector&lt;string&gt; Self.EmployeeParTestAgent::par2_string_list_0)" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="7" Opl="uint Self.EmployeeParTestAgent::par2_uint_0" Opr="Self.EmployeeParTestAgent::Func_UIntIR(uint Self.EmployeeParTestAgent::par2_uint_0)" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="8" Opl="ulong Self.EmployeeParTestAgent::par2_ulong_0" Opr="Self.EmployeeParTestAgent::Func_ULongIR(ulong Self.EmployeeParTestAgent::par2_ulong_0)" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="35" Opl="llong Self.EmployeeParTestAgent::par2_longlong_0" Opr="Self.EmployeeParTestAgent::Func_LongLongIR(llong Self.EmployeeParTestAgent::par2_longlong_0)" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="36" Opl="ullong Self.EmployeeParTestAgent::par2_ulonglong_0" Opr="Self.EmployeeParTestAgent::Func_ULongLongIR(ullong Self.EmployeeParTestAgent::par2_ulonglong_0)" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="37" Opl="string Self.EmployeeParTestAgent::par2_SzString_0" Opr="Self.EmployeeParTestAgent::Func_StringIR(string Self.EmployeeParTestAgent::par2_SzString_0)" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                </Connector>
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="14" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="9" Opl="short Self.EmployeeParTestAgent::par1_short_0" Opr="Self.ParTestAgent::Func_ShortIR(short Self.EmployeeParTestAgent::par1_short_0)" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="10" Opl="int Self.EmployeeParTestAgent::par1_int_0" Opr="Self.ParTestAgent::Func_IntIR(int Self.EmployeeParTestAgent::par1_int_0)" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="11" Opl="vector&lt;int&gt; Self.EmployeeParTestAgent::par1_int_list_0" Opr="Self.ParTestAgent::Func_IntListIR(vector&lt;int&gt; Self.EmployeeParTestAgent::par1_int_list_0)" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="12" Opl="long Self.EmployeeParTestAgent::par1_long_0" Opr="Self.ParTestAgent::Func_LongIR(long Self.EmployeeParTestAgent::par1_long_0)" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="17" Opl="TNS::ST::PER::WRK::kEmployee Self.EmployeeParTestAgent::par1_kemployee_0" Opr="Self.ParTestAgent::Func_kEmployeeIR(TNS::ST::PER::WRK::kEmployee Self.EmployeeParTestAgent::par1_kemployee_0)" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="19" Opl="vector&lt;TNS::ST::PER::WRK::kEmployee&gt; Self.EmployeeParTestAgent::par1_kemployee_list_0" Opr="Self.ParTestAgent::Func_kEmployeeListIR(vector&lt;TNS::ST::PER::WRK::kEmployee&gt; Self.EmployeeParTestAgent::par1_kemployee_list_0)" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="18" Opl="ushort Self.EmployeeParTestAgent::par1_ushort_0" Opr="Self.ParTestAgent::Func_UShortIR(ushort Self.EmployeeParTestAgent::par1_ushort_0)" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                </Connector>
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="22" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="16" Opl="bool Self.EmployeeParTestAgent::par0_boolean_0" Opr="Self.ParTestAgentBase::Func_BooleanIR(bool Self.EmployeeParTestAgent::par0_boolean_0)" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="20" Opl="vector&lt;bool&gt; Self.EmployeeParTestAgent::par0_boolean_list_0" Opr="Self.ParTestAgentBase::Func_BooleanListIR(vector&lt;bool&gt; Self.EmployeeParTestAgent::par0_boolean_list_0)" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="24" Opl="ubyte Self.EmployeeParTestAgent::par0_byte_0" Opr="Self.ParTestAgentBase::Func_ByteIR(ubyte Self.EmployeeParTestAgent::par0_byte_0)" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="25" Opl="vector&lt;ubyte&gt; Self.EmployeeParTestAgent::par0_byte_list_0" Opr="Self.ParTestAgentBase::Func_ByteListIR(vector&lt;ubyte&gt; Self.EmployeeParTestAgent::par0_byte_list_0)" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="26" Opl="char Self.EmployeeParTestAgent::par0_char_0" Opr="Self.ParTestAgentBase::Func_CharIR(char Self.EmployeeParTestAgent::par0_char_0)" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="27" Opl="vector&lt;char&gt; Self.EmployeeParTestAgent::par0_char_list_0" Opr="Self.ParTestAgentBase::Func_CharListIR(vector&lt;char&gt; Self.EmployeeParTestAgent::par0_char_list_0)" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="21" Opl="TNS::NE::NAT::eColor Self.EmployeeParTestAgent::par0_ecolor_0" Opr="Self.ParTestAgentBase::Func_eColorIR(TNS::NE::NAT::eColor Self.EmployeeParTestAgent::par0_ecolor_0)" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="23" Opl="vector&lt;TNS::NE::NAT::eColor&gt; Self.EmployeeParTestAgent::par0_ecolor_list_0" Opr="Self.ParTestAgentBase::Func_eColorListIR(vector&lt;TNS::NE::NAT::eColor&gt; Self.EmployeeParTestAgent::par0_ecolor_list_0)" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="28" Opl="sbyte Self.EmployeeParTestAgent::par0_sbyte_0" Opr="Self.ParTestAgentBase::Func_SByteIR(sbyte Self.EmployeeParTestAgent::par0_sbyte_0)" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="29" Opl="vector&lt;sbyte&gt; Self.EmployeeParTestAgent::par0_sbyte_list_0" Opr="Self.ParTestAgentBase::Func_SByteListIR(vector&lt;sbyte&gt; Self.EmployeeParTestAgent::par0_sbyte_list_0)" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                </Connector>
+              </Node>
+            </Connector>
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.DecoratorLoop" Count="const int -1" DecorateWhenChildEnds="true" DoneWithinFrame="false" Enable="true" HasOwnPrefabData="false" Id="33" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+            <Connector Identifier="GenericChildren">
+              <Node Class="PluginBehaviac.Nodes.Noop" Enable="true" HasOwnPrefabData="false" Id="34" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+            </Connector>
+          </Node>
+        </Connector>
+      </Node>
+    </Connector>
+  </Node>
+</Behavior>

@@ -1,0 +1,759 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="File_Delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\File-Delete.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HitCount" xml:space="preserve">
+    <value>Hit Count</value>
+  </data>
+  <data name="SaveAsReference" xml:space="preserve">
+    <value>Save as Reference</value>
+  </data>
+  <data name="OpenDumpFile" xml:space="preserve">
+    <value>Open Log or Dump File</value>
+  </data>
+  <data name="LanguageChangedWarning" xml:space="preserve">
+    <value>The language setting will take effect when the editor is launched next time.</value>
+  </data>
+  <data name="File_Open" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\File-Open.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EnableNode" xml:space="preserve">
+    <value>Enable</value>
+  </data>
+  <data name="Folder_Open" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Folder-Open.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Repeat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Repeat.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="document_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\document_new.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ExceptionCouldNotLoadPlugin" xml:space="preserve">
+    <value>Plugin could not be loaded as it does not contain the type {0}.</value>
+  </data>
+  <data name="ExceptionNodeCouldNotBeExtracted" xml:space="preserve">
+    <value>The node could not be extracted. Please check with Node.ParentCanAdoptChildren</value>
+  </data>
+  <data name="NewPrefab" xml:space="preserve">
+    <value>New Prefab</value>
+  </data>
+  <data name="NewBehavior" xml:space="preserve">
+    <value>New Behavior</value>
+  </data>
+  <data name="Skip_backward" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Skip-backward.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PrefabGroupName" xml:space="preserve">
+    <value>Prefabs</value>
+  </data>
+  <data name="ActionResult" xml:space="preserve">
+    <value>Action Result</value>
+  </data>
+  <data name="SaveReference" xml:space="preserve">
+    <value>Save as Reference</value>
+  </data>
+  <data name="disconnect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\disconnect.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="crashdump" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\crashdump.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NodeId" xml:space="preserve">
+    <value>Node Id</value>
+  </data>
+  <data name="SelectXMLPluginsFolder" xml:space="preserve">
+    <value>Select XML Plugins Folder</value>
+  </data>
+  <data name="ParsOf" xml:space="preserve">
+    <value>Pars of {0}</value>
+  </data>
+  <data name="Enable" xml:space="preserve">
+    <value>Enable</value>
+  </data>
+  <data name="Pause" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pause.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="folder_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\folder_new.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="saveall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\saveall.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SaveBehaviorAs" xml:space="preserve">
+    <value>Save Behavior as</value>
+  </data>
+  <data name="Stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stop.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NodeType" xml:space="preserve">
+    <value>Node Type</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="connect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\connect.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Play" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Play.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="export" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\export.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Properties" xml:space="preserve">
+    <value>Properties</value>
+  </data>
+  <data name="DisableNode" xml:space="preserve">
+    <value>Disable</value>
+  </data>
+  <data name="ConnectServer" xml:space="preserve">
+    <value>Connect Server</value>
+  </data>
+  <data name="ExceptionNoSuchFile" xml:space="preserve">
+    <value>The file {0} does not exist.</value>
+  </data>
+  <data name="OpenReference" xml:space="preserve">
+    <value>Open Reference</value>
+  </data>
+  <data name="DesignerTabName" xml:space="preserve">
+    <value>Design</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="SelectBehaviorFolder" xml:space="preserve">
+    <value>Select Behavior Folder</value>
+  </data>
+  <data name="Backward" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Backward.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SaveAsPrefab" xml:space="preserve">
+    <value>Save as Prefab</value>
+  </data>
+  <data name="SelectExportFolder" xml:space="preserve">
+    <value>Select Export Folder</value>
+  </data>
+  <data name="SelectWorkspaceFolder" xml:space="preserve">
+    <value>Select Workspace Folder</value>
+  </data>
+  <data name="StopAnalyzingDump" xml:space="preserve">
+    <value>Stop Analyzing</value>
+  </data>
+  <data name="prefab" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\prefab.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Search.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AnalyzeDump" xml:space="preserve">
+    <value>Analyze...</value>
+  </data>
+  <data name="PropertiesOf" xml:space="preserve">
+    <value>Properties of {0}</value>
+  </data>
+  <data name="Forward" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Forward.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DisconnectServer" xml:space="preserve">
+    <value>Disconnect Server</value>
+  </data>
+  <data name="BehaviorFilename" xml:space="preserve">
+    <value>Behavior Filename</value>
+  </data>
+  <data name="Pars" xml:space="preserve">
+    <value>Pars</value>
+  </data>
+  <data name="BehaviorGroupName" xml:space="preserve">
+    <value>Behaviors</value>
+  </data>
+  <data name="Skip_forward" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Skip-forward.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ActionName" xml:space="preserve">
+    <value>Action Name</value>
+  </data>
+  <data name="BehaviacDesigner" xml:space="preserve">
+    <value>Behaviac Designer</value>
+  </data>
+  <data name="BehaviorError" xml:space="preserve">
+    <value>Behavior Error</value>
+  </data>
+  <data name="DeleteAllBreakpoints" xml:space="preserve">
+    <value>Delete All Breakpoints</value>
+  </data>
+  <data name="DeleteAllBreakpointsWarning" xml:space="preserve">
+    <value>Are you sure to delete all breakpoints?</value>
+  </data>
+  <data name="DeleteBreakpointsWarning" xml:space="preserve">
+    <value>Are you sure to delete the selected breakpoints?</value>
+  </data>
+  <data name="DeleteSelectedBreakpoints" xml:space="preserve">
+    <value>Delete Selected Breakpoints</value>
+  </data>
+  <data name="ExportBehaviorError" xml:space="preserve">
+    <value>The {0} cannot be exported, because it contains some errors. Please check errors for this behavior firstly!</value>
+  </data>
+  <data name="ExportError" xml:space="preserve">
+    <value>Export Error</value>
+  </data>
+  <data name="ExportWarning" xml:space="preserve">
+    <value>Export Warning</value>
+  </data>
+  <data name="ExportWarningInfo" xml:space="preserve">
+    <value>There are some warnings in the current behavior file.
+
+Yes : Export it anyway.
+No : Check the warnings.</value>
+  </data>
+  <data name="FileError" xml:space="preserve">
+    <value>File Error</value>
+  </data>
+  <data name="LatestVersionInfo" xml:space="preserve">
+    <value>Your version {0} is the latest already.</value>
+  </data>
+  <data name="LoadError" xml:space="preserve">
+    <value>Load Error</value>
+  </data>
+  <data name="NewerVersionFound" xml:space="preserve">
+    <value>Newer Version Found</value>
+  </data>
+  <data name="NewerVersionInfo" xml:space="preserve">
+    <value>Newer Version {0} is available, download it?
+
+{1}</value>
+  </data>
+  <data name="NoBehaviorInfo" xml:space="preserve">
+    <value>No such behavior: {0} {1}</value>
+  </data>
+  <data name="ParErrorInfo" xml:space="preserve">
+    <value>Par {0} in {1} already exists in {2}. Please try another prefab file again!</value>
+  </data>
+  <data name="PluginError" xml:space="preserve">
+    <value>Plugin Error</value>
+  </data>
+  <data name="SaveError" xml:space="preserve">
+    <value>Save Error</value>
+  </data>
+  <data name="FileModified" xml:space="preserve">
+    <value>File Modified but not Exported</value>
+  </data>
+  <data name="FileModifiedInfo" xml:space="preserve">
+    <value>The behavior file {0} might be modified.
+Please reexport it and relaunch the game, otherwise it might be abnormal!</value>
+  </data>
+  <data name="IncompatibleWorkspace" xml:space="preserve">
+    <value>Incompatible Workspace</value>
+  </data>
+  <data name="ParWarning" xml:space="preserve">
+    <value>Par Warning</value>
+  </data>
+  <data name="ParWarningInfo" xml:space="preserve">
+    <value>The par name "{0}" already exists.
+Please input another one.</value>
+  </data>
+  <data name="WorkspaceChangedInfo" xml:space="preserve">
+    <value>The workspace is changed from {0} to {1}.</value>
+  </data>
+  <data name="WorkspaceWarningInfo" xml:space="preserve">
+    <value>The open workspace :
+'{0}'
+is not the right one used by game:
+'{1}'</value>
+  </data>
+  <data name="FileWarning" xml:space="preserve">
+    <value>File Warning</value>
+  </data>
+  <data name="LoadWorkspaceError" xml:space="preserve">
+    <value>Failed to load the workspace file {0}!</value>
+  </data>
+  <data name="Menu_CloseBehavior" xml:space="preserve">
+    <value>Close {0}</value>
+  </data>
+  <data name="Menu_CloseBehavior_Default" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Menu_ExportBehavior" xml:space="preserve">
+    <value>Export {0}...</value>
+  </data>
+  <data name="Menu_ExportBehavior_Default" xml:space="preserve">
+    <value>Export...</value>
+  </data>
+  <data name="Menu_SaveBehavior" xml:space="preserve">
+    <value>Save {0}</value>
+  </data>
+  <data name="Menu_SaveBehaviorAs" xml:space="preserve">
+    <value>Save {0} As...</value>
+  </data>
+  <data name="Menu_SaveBehaviorAs_Default" xml:space="preserve">
+    <value>Save As...</value>
+  </data>
+  <data name="Menu_SaveBehavior_Default" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="ErrorList" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="Output" xml:space="preserve">
+    <value>Output</value>
+  </data>
+  <data name="ErrorCheck" xml:space="preserve">
+    <value>Error Check</value>
+  </data>
+  <data name="all" xml:space="preserve">
+    <value>all</value>
+  </data>
+  <data name="enter" xml:space="preserve">
+    <value>enter</value>
+  </data>
+  <data name="exit" xml:space="preserve">
+    <value>exit</value>
+  </data>
+  <data name="failure" xml:space="preserve">
+    <value>failure</value>
+  </data>
+  <data name="success" xml:space="preserve">
+    <value>success</value>
+  </data>
+  <data name="DeleteWarning" xml:space="preserve">
+    <value>Delete Warning</value>
+  </data>
+  <data name="DeleteWarningInfo" xml:space="preserve">
+    <value>Are you sure delete the selected bevavior file "{0}"?</value>
+  </data>
+  <data name="DeleteFolderWarningInfo" xml:space="preserve">
+    <value>Are you sure delete the selected bevavior folder "{0}"?</value>
+  </data>
+  <data name="WorkspaceNameWarning" xml:space="preserve">
+    <value>Please set the name and location for the new workspace!</value>
+  </data>
+  <data name="WorkspaceSettingWarning" xml:space="preserve">
+    <value>Please set the name, workspace location and meta location of the new workspace!</value>
+  </data>
+  <data name="BreakpointsHide" xml:space="preserve">
+    <value>Hide all breakpoints in the view.</value>
+  </data>
+  <data name="BreakpointsShow" xml:space="preserve">
+    <value>Show all breakpoints in the view.</value>
+  </data>
+  <data name="FilenameWarningInfo" xml:space="preserve">
+    <value>The filename "{0}" has existed. Please input another name!</value>
+  </data>
+  <data name="DirectoryWarningInfo" xml:space="preserve">
+    <value>The folder "{0}" has existed. Please input another name!</value>
+  </data>
+  <data name="DebugOperation" xml:space="preserve">
+    <value>Double-click an Instance to Debug</value>
+  </data>
+  <data name="WorkspaceError" xml:space="preserve">
+    <value>Set Workspace Error</value>
+  </data>
+  <data name="FindWarning" xml:space="preserve">
+    <value>Find Result</value>
+  </data>
+  <data name="FindWarningInfo" xml:space="preserve">
+    <value>Not found!</value>
+  </data>
+  <data name="WorkspaceExportRootWarning" xml:space="preserve">
+    <value>the workspace and exported behaviors should be in the same drive.</value>
+  </data>
+  <data name="WorkspaceSourceRootWarning" xml:space="preserve">
+    <value>the workspace and source behaviors should be in the same drive.</value>
+  </data>
+  <data name="WorkspaceEditTiltle" xml:space="preserve">
+    <value>Edit Workspace</value>
+  </data>
+  <data name="WorkspaceXmlMetaRootWarning" xml:space="preserve">
+    <value>the workspace and xml meta should be in the same drive.</value>
+  </data>
+  <data name="Transform_move1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Transform-move1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Transform_move2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Transform-move2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NormalMode" xml:space="preserve">
+    <value>Normal Mode [Alt to Pan Mode] : Middle drag to pan, middle wheel to scale</value>
+  </data>
+  <data name="PanMode" xml:space="preserve">
+    <value>Pan Mode [Alt to Normal Mode] : Left drag to pan, right drag to scale</value>
+  </data>
+  <data name="FileCountInfo" xml:space="preserve">
+    <value> file(s)</value>
+  </data>
+  <data name="FindAll" xml:space="preserve">
+    <value>Find All</value>
+  </data>
+  <data name="FindNext" xml:space="preserve">
+    <value>Find Next</value>
+  </data>
+  <data name="FindResults" xml:space="preserve">
+    <value>Find Results</value>
+  </data>
+  <data name="FindResultsInfo" xml:space="preserve">
+    <value>Find all: "{0}",  Matching nodes: {1},  Matching files: {2},  Total files searched: {3}</value>
+  </data>
+  <data name="ExportFileCountInfo" xml:space="preserve">
+    <value>{0} exported file(s), {1} invalid file(s)</value>
+  </data>
+  <data name="CircularReferencedInfo" xml:space="preserve">
+    <value>The current added behavior will be circular referenced.
+Are your sure add it?</value>
+  </data>
+  <data name="Operand1" xml:space="preserve">
+    <value>Operand1</value>
+  </data>
+  <data name="Operand2" xml:space="preserve">
+    <value>Operand2</value>
+  </data>
+  <data name="OperandDesc1" xml:space="preserve">
+    <value>Operand1</value>
+  </data>
+  <data name="OperandDesc2" xml:space="preserve">
+    <value>Operand2</value>
+  </data>
+  <data name="ThisIsReferenceTree" xml:space="preserve">
+    <value>This is a referenced tree.</value>
+  </data>
+  <data name="AgentErrorInfo" xml:space="preserve">
+    <value>{0} in {1} is not derived from {2} in {3}. Please try another behavior file again!</value>
+  </data>
+  <data name="OpenPrefab" xml:space="preserve">
+    <value>Open Prefab</value>
+  </data>
+  <data name="SavePrefab" xml:space="preserve">
+    <value>Save as Prefab</value>
+  </data>
+  <data name="EditPar" xml:space="preserve">
+    <value>Edit Par</value>
+  </data>
+  <data name="NewPar" xml:space="preserve">
+    <value>New Par</value>
+  </data>
+  <data name="MetaStore" xml:space="preserve">
+    <value>Types Browser</value>
+  </data>
+  <data name="LayoutResetWarning" xml:space="preserve">
+    <value>The layout of the editor will be reset. Are you sure?</value>
+  </data>
+  <data name="ExpandAllInfo" xml:space="preserve">
+    <value>Hold Ctrl to click to expand/collapse all children of the current node.</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>About </value>
+  </data>
+  <data name="AddType" xml:space="preserve">
+    <value>Add Type</value>
+  </data>
+  <data name="AddEvent" xml:space="preserve">
+    <value>Add Event</value>
+  </data>
+  <data name="AddMethod" xml:space="preserve">
+    <value>Add Method</value>
+  </data>
+  <data name="AddProperty" xml:space="preserve">
+    <value>Add Property</value>
+  </data>
+  <data name="AddTask" xml:space="preserve">
+    <value>Add Task</value>
+  </data>
+  <data name="EditType" xml:space="preserve">
+    <value>Edit Type</value>
+  </data>
+  <data name="EditEvent" xml:space="preserve">
+    <value>Edit Event</value>
+  </data>
+  <data name="EditMethod" xml:space="preserve">
+    <value>Edit Method</value>
+  </data>
+  <data name="EditProperty" xml:space="preserve">
+    <value>Edit Cusom Property</value>
+  </data>
+  <data name="EditTask" xml:space="preserve">
+    <value>Edit Task</value>
+  </data>
+  <data name="MetaSaveInfo" xml:space="preserve">
+    <value>The meta data has been modified, so do you want to save it?</value>
+  </data>
+  <data name="RemoveParametersInfo" xml:space="preserve">
+    <value>Are you sure remove all selected parameters?</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="AddLocalProperty" xml:space="preserve">
+    <value>Add Local Variable</value>
+  </data>
+  <data name="EditLocalProperty" xml:space="preserve">
+    <value>Edit Local Variable</value>
+  </data>
+  <data name="ExpandConnectorInfo" xml:space="preserve">
+    <value>Interrupt Condition : Click here to expand or collapse the attached condition node.</value>
+  </data>
+  <data name="EventParametersInfo" xml:space="preserve">
+    <value>The count of the parameters of the event can not be more than 3.</value>
+  </data>
+  <data name="MethodParametersInfo" xml:space="preserve">
+    <value>The count of the parameters of the method can not be more than 8.</value>
+  </data>
+  <data name="SubTreeHasNoTaskError" xml:space="preserve">
+    <value>{0} can't be used as a referened behavior as it's root is not a Task node.</value>
+  </data>
+  <data name="DesignerError" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="ViewLocalProperty" xml:space="preserve">
+    <value>View Local Variable</value>
+  </data>
+  <data name="ViewProperty" xml:space="preserve">
+    <value>View Property</value>
+  </data>
+  <data name="ModifyMemberWarning" xml:space="preserve">
+    <value>This member has already been used.
+Are you sure to continue?</value>
+  </data>
+  <data name="Callstack" xml:space="preserve">
+    <value>Tree Exec Stack</value>
+  </data>
+  <data name="OpenLogFile" xml:space="preserve">
+    <value>Open Log File</value>
+  </data>
+  <data name="AnalyzeLog" xml:space="preserve">
+    <value>Analyze Log File...</value>
+  </data>
+  <data name="StopAnalyzingLog" xml:space="preserve">
+    <value>Stop Analyzing Log File</value>
+  </data>
+  <data name="EmptyMetaWarning" xml:space="preserve">
+    <value>The meta info may be not loaded. Please check it!</value>
+  </data>
+  <data name="FilenameWarning" xml:space="preserve">
+    <value>The behavior filename can only be ascii character with a-z, A-Z, 0-9 and _!</value>
+  </data>
+  <data name="AddEnum" xml:space="preserve">
+    <value>Add Enum</value>
+  </data>
+  <data name="AddEnumMember" xml:space="preserve">
+    <value>Add Enum Member</value>
+  </data>
+  <data name="AddStruct" xml:space="preserve">
+    <value>Add Struct</value>
+  </data>
+  <data name="AddStructMember" xml:space="preserve">
+    <value>Add Struct Member</value>
+  </data>
+  <data name="EditEnum" xml:space="preserve">
+    <value>Edit Enum</value>
+  </data>
+  <data name="EditEnumMember" xml:space="preserve">
+    <value>Edit Enum Member</value>
+  </data>
+  <data name="EditStruct" xml:space="preserve">
+    <value>Edit Struct</value>
+  </data>
+  <data name="EditStructMember" xml:space="preserve">
+    <value>Edit Struct Member</value>
+  </data>
+  <data name="PropertyVerifyWarning" xml:space="preserve">
+    <value>Please set the right name and type for the property.</value>
+  </data>
+  <data name="MethodVerifyWarning" xml:space="preserve">
+    <value>Please set the right name, return type and parameters for the method.</value>
+  </data>
+  <data name="EnumMemberVerifyWarning" xml:space="preserve">
+    <value>Please set the right name for the enum member.</value>
+  </data>
+  <data name="TypeRemoveWarning" xml:space="preserve">
+    <value>Are you sure remove the selected type?</value>
+  </data>
+  <data name="TypeVerifyWarning" xml:space="preserve">
+    <value>Please set the right name for the type.</value>
+  </data>
+  <data name="WorkspaceLoadError" xml:space="preserve">
+    <value>The workspace {0} can not be loaded!</value>
+  </data>
+  <data name="WorkspaceDebugErrorInfo" xml:space="preserve">
+    <value>The behavior file "{0}" can not be found.
+
+Please be sure to open the workspace which is used by the runtime!</value>
+  </data>
+  <data name="EnableDesc" xml:space="preserve">
+    <value>Enable or disable itself</value>
+  </data>
+  <data name="ExportBehaviors" xml:space="preserve">
+    <value>Behaviors to Export:</value>
+  </data>
+  <data name="FaultBehaviors" xml:space="preserve">
+    <value>Behaviors with Errors:</value>
+  </data>
+  <data name="InvalidExportedTypePath" xml:space="preserve">
+    <value>The path for the generated type is empty, so please go to the Edit Workspace dialog to set it.</value>
+  </data>
+  <data name="ExportMessages" xml:space="preserve">
+    <value>types are genereated at '{0}'</value>
+  </data>
+  <data name="MessageOutput" xml:space="preserve">
+    <value>Messages</value>
+  </data>
+  <data name="MessageBTExport" xml:space="preserve">
+    <value>Behavior Trees Exportd: {0}</value>
+  </data>
+  <data name="SetMetaFile" xml:space="preserve">
+    <value>Choose Meta File</value>
+  </data>
+  <data name="IsTypeImplemented" xml:space="preserve">
+    <value>will the class file be generated?
+    If so, the class files will be generated, please set the header files if the language is C++.
+    otherwise, the class file will not be generated.
+  </value>
+  </data>
+  <data name="SetHeaderFiles" xml:space="preserve">
+    <value>Set the C++ header files.</value>
+  </data>
+  <data name="LoadWarning" xml:space="preserve">
+    <value>Load Warning</value>
+  </data>
+  <data name="MetaWarning" xml:space="preserve">
+    <value>The workspace file will be updated and the meta file will not be used any longer.
+You should export all files with the latest designer.
+更多详情请参考：http://www.behaviac.com/language/zh/updatenotes/#36x</value>
+  </data>
+  <data name="PreviewCode" xml:space="preserve">
+    <value>Preview the prototype code without any tag comments  for the selected type.</value>
+  </data>
+  <data name="UseIntValueInfo" xml:space="preserve">
+    <value>If using the int value, the Wait node will use int value, else use the double value.</value>
+  </data>
+  <data name="ClearGeneratedCodesInfo" xml:space="preserve">
+    <value>Are you sure you want to clear all generated code files on the folder "{0}" ?</value>
+  </data>
+  <data name="ModifyTypeWarning" xml:space="preserve">
+    <value>This type has already been used.
+Are you sure to continue?</value>
+  </data>
+</root>

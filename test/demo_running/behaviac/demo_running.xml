@@ -1,0 +1,43 @@
+<metas version="5" language="cpp">
+	<types>
+		<enumtype Type="behaviac::EBTStatus" DisplayName="BT状态" Desc="BT状态">
+			<enum NativeValue="behaviac::BT_INVALID" Value="BT_INVALID" DisplayName="" Desc="" />
+			<enum NativeValue="behaviac::BT_SUCCESS" Value="BT_SUCCESS" DisplayName="" Desc="" />
+			<enum NativeValue="behaviac::BT_FAILURE" Value="BT_FAILURE" DisplayName="" Desc="" />
+			<enum NativeValue="behaviac::BT_RUNNING" Value="BT_RUNNING" DisplayName="" Desc="" />
+		</enumtype>
+		<struct Type="IList" DisplayName="" Desc="" IsRefType="false" />
+		<struct Type="System::Object" DisplayName="" Desc="" IsRefType="false" />
+	</types>
+	<agents>
+		<agent classfullname="behaviac::Agent" inherited="true" DisplayName="" Desc="" IsRefType="true">
+			<Method Name="VectorLength" DisplayName="" Desc="" Class="behaviac::Agent" Static="true" ReturnType="int">
+				<Param DisplayName="" Desc="" Type="const IList&amp;" />
+			</Method>
+			<Method Name="VectorAdd" DisplayName="" Desc="" Class="behaviac::Agent" Static="true" ReturnType="void">
+				<Param DisplayName="" Desc="" Type="IList&amp;" />
+				<Param DisplayName="" Desc="" Type="const System::Object&amp;" />
+			</Method>
+			<Method Name="VectorRemove" DisplayName="" Desc="" Class="behaviac::Agent" Static="true" ReturnType="void">
+				<Param DisplayName="" Desc="" Type="IList&amp;" />
+				<Param DisplayName="" Desc="" Type="const System::Object&amp;" />
+			</Method>
+			<Method Name="VectorContains" DisplayName="" Desc="" Class="behaviac::Agent" Static="true" ReturnType="bool">
+				<Param DisplayName="" Desc="" Type="IList&amp;" />
+				<Param DisplayName="" Desc="" Type="const System::Object&amp;" />
+			</Method>
+			<Method Name="VectorClear" DisplayName="" Desc="" Class="behaviac::Agent" Static="true" ReturnType="void">
+				<Param DisplayName="" Desc="" Type="IList&amp;" />
+			</Method>
+			<Method Name="LogMessage" DisplayName="" Desc="" Class="behaviac::Agent" Static="true" ReturnType="void">
+				<Param DisplayName="" Desc="" Type="const char*" />
+			</Method>
+		</agent>
+		<agent classfullname="CBTPlayer" base="behaviac::Agent" DisplayName="" Desc="" IsRefType="true">
+			<Member Name="m_iBaseSpeed" DisplayName="" Desc="" Type="uint" Class="CBTPlayer" />
+			<Method Name="Condition" DisplayName="" Desc="" Class="CBTPlayer" ReturnType="bool" />
+			<Method Name="Action1" DisplayName="" Desc="" Class="CBTPlayer" ReturnType="behaviac::EBTStatus" />
+			<Method Name="Action3" DisplayName="" Desc="" Class="CBTPlayer" ReturnType="behaviac::EBTStatus" />
+		</agent>
+	</agents>
+</metas>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\condition_ut_3.xml-->
+<behavior name="node_test/condition_ut_3" agenttype="AgentNodeTest" version="5">
+  <node class="Sequence" id="0">
+    <node class="And" id="9">
+      <node class="Or" id="13">
+        <node class="True" id="10" />
+        <node class="False" id="14" />
+      </node>
+      <node class="True" id="11" />
+    </node>
+    <node class="Action" id="2">
+      <property Method="Self.AgentNodeTest::setTestVar_0(0)" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+    <node class="Or" id="1">
+      <node class="And" id="15">
+        <node class="True" id="3" />
+        <node class="True" id="16" />
+      </node>
+      <node class="False" id="5" />
+    </node>
+    <node class="Action" id="8">
+      <property Method="Self.AgentNodeTest::setTestVar_0(1)" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+    <node class="And" id="4">
+      <node class="Or" id="18">
+        <node class="Or" id="19">
+          <node class="False" id="6" />
+          <node class="True" id="21" />
+        </node>
+        <node class="False" id="22" />
+      </node>
+      <node class="And" id="17">
+        <node class="True" id="7" />
+        <node class="And" id="20">
+          <node class="True" id="23" />
+          <node class="True" id="24" />
+        </node>
+      </node>
+    </node>
+    <node class="Action" id="12">
+      <property Method="Self.AgentNodeTest::setTestVar_0(2)" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+  </node>
+</behavior>

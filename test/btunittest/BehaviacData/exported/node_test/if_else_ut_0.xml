@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\if_else_ut_0.xml-->
+<behavior name="node_test/if_else_ut_0" agenttype="AgentNodeTest" version="5">
+  <node class="IfElse" id="0">
+    <node class="True" id="1" />
+    <node class="Action" id="2">
+      <property Method="Self.AgentNodeTest::setTestVar_0(1)" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+    <node class="Action" id="3">
+      <property Method="Self.AgentNodeTest::setTestVar_0(2)" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+  </node>
+</behavior>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: SelectBT.xml-->
+<behavior name="SelectBT" agenttype="FirstAgent" version="5">
+  <node class="Sequence" id="3">
+    <node class="Assignment" id="4">
+      <property CastRight="false" />
+      <property Opl="int Self.FirstAgent::p1" />
+      <property Opr="const int 6" />
+    </node>
+    <node class="Selector" id="1">
+      <node class="Condition" id="2">
+        <property Operator="Greater" />
+        <property Opl="int Self.FirstAgent::p1" />
+        <property Opr="const int 8" />
+      </node>
+      <node class="Action" id="0">
+        <property Method="Self.FirstAgent::SayHello()" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+    </node>
+  </node>
+</behavior>

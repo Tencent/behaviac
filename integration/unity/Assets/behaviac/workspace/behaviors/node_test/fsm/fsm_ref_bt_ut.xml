@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Behavior Version="5">
+  <Node Class="Behaviac.Design.Nodes.Behavior" AgentType="AgentNodeTest" Domains="" Enable="true" HasOwnPrefabData="false" Id="-1" PrefabName="" PrefabNodeId="-1">
+    <Comment Background="NoColor" Text="" />
+    <DescriptorRefs value="0:" />
+    <Attachment Class="PluginBehaviac.Events.StartCondition" Enable="true" Id="0" PrefabAttachmentId="-1" TargetFSMNodeId="1" />
+    <FSMNodes ScreenLocationX="0" ScreenLocationY="0">
+      <Node Class="PluginBehaviac.Nodes.State" Enable="true" HasOwnPrefabData="false" Id="1" IsEndState="false" Method="Self.AgentNodeTest::setTestVar_0(1)" Name="Init" PrefabName="" PrefabNodeId="-1" ScreenLocationX="315.6278" ScreenLocationY="-65.68605">
+        <Comment Background="NoColor" Text="" />
+        <Attachment Class="PluginBehaviac.Events.TransitionCondition" Effectors="0:" Enable="true" Id="4" Operator="Equal" Opl="int Self.AgentNodeTest::testVar_0" Opr1="&quot;&quot;" Opr2="const int 1" PrefabAttachmentId="-1" TargetFSMNodeId="6" />
+      </Node>
+      <Node Class="PluginBehaviac.Nodes.State" Enable="true" HasOwnPrefabData="false" Id="3" IsEndState="false" Method="&quot;&quot;" Name="Exit" PrefabName="" PrefabNodeId="-1" ScreenLocationX="273.7833" ScreenLocationY="124.2558">
+        <Comment Background="NoColor" Text="" />
+        <Attachment Class="PluginBehaviac.Events.Precondition" BinaryOperator="And" Enable="true" Id="2" Operator="Assign" Opl="int Self.AgentNodeTest::testVar_0" Opr1="&quot;&quot;" Opr2="const int 4" Phase="Enter" PrefabAttachmentId="-1" />
+      </Node>
+      <Node Class="PluginBehaviac.Nodes.FSMReferencedBehavior" Enable="true" HasOwnPrefabData="false" Id="6" PrefabName="" PrefabNodeId="-1" ReferenceBehavior="const string &quot;node_test/fsm/action_ut_1_2&quot;" ScreenLocationX="516.9096" ScreenLocationY="-22.90016" Task="&quot;&quot;">
+        <Comment Background="Gray" Text="" />
+        <Attachment Class="PluginBehaviac.Events.Precondition" BinaryOperator="And" Enable="true" Id="5" Operator="Add" Opl="int Self.AgentNodeTest::testVar_0" Opr1="int Self.AgentNodeTest::testVar_0" Opr2="const int 1" Phase="Update" PrefabAttachmentId="-1" />
+        <Attachment Class="PluginBehaviac.Events.TransitionCondition" Effectors="0:" Enable="true" Id="9" Operator="GreaterEqual" Opl="int Self.AgentNodeTest::testVar_0" Opr1="&quot;&quot;" Opr2="const int 3" PrefabAttachmentId="-1" TargetFSMNodeId="3" />
+      </Node>
+    </FSMNodes>
+  </Node>
+</Behavior>

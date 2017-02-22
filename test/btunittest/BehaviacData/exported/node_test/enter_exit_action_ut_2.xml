@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\enter_exit_action_ut_2.xml-->
+<behavior name="node_test/enter_exit_action_ut_2" agenttype="AgentNodeTest" version="5">
+  <node class="Parallel" id="0">
+    <property ChildFinishPolicy="CHILDFINISH_LOOP" />
+    <property ExitPolicy="EXIT_ABORT_RUNNINGSIBLINGS" />
+    <property FailurePolicy="FAIL_ON_ONE" />
+    <property SuccessPolicy="SUCCEED_ON_ALL" />
+    <attachment class="Precondition" id="1" flag="precondition">
+      <property BinaryOperator="And" />
+      <property Operator="Equal" />
+      <property Opl="Self.AgentNodeTest::enter_action_1(0)" />
+      <property Opr2="const bool true" />
+      <property Phase="Enter" />
+    </attachment>
+    <attachment class="Effector" id="2" flag="effector">
+      <property Operator="Invalid" />
+      <property Opl="Self.AgentNodeTest::exit_action_1(0)" />
+      <property Phase="Success" />
+    </attachment>
+    <node class="WaitforSignal" id="3">
+      <attachment class="Precondition" id="4" flag="precondition">
+        <property BinaryOperator="And" />
+        <property Operator="Equal" />
+        <property Opl="Self.AgentNodeTest::enter_action_2(3,&quot;hello&quot;)" />
+        <property Opr2="const bool true" />
+        <property Phase="Enter" />
+      </attachment>
+      <attachment class="Effector" id="5" flag="effector">
+        <property Operator="Invalid" />
+        <property Opl="Self.AgentNodeTest::exit_action_2(5,&quot;world&quot;)" />
+        <property Phase="Success" />
+      </attachment>
+      <custom>
+        <node class="Condition" id="8">
+          <property Operator="Equal" />
+          <property Opl="int Self.AgentNodeTest::testVar_0" />
+          <property Opr="const int 0" />
+        </node>
+      </custom>
+    </node>
+    <node class="Action" id="9">
+      <property Method="Self.AgentNodeTest::setTestVar_3(0)" />
+      <property ResultOption="BT_SUCCESS" />
+      <attachment class="Precondition" id="6" flag="precondition">
+        <property BinaryOperator="And" />
+        <property Operator="Equal" />
+        <property Opl="Self.AgentNodeTest::enter_action_0()" />
+        <property Opr2="const bool true" />
+        <property Phase="Enter" />
+      </attachment>
+      <attachment class="Effector" id="7" flag="effector">
+        <property Operator="Invalid" />
+        <property Opl="Self.AgentNodeTest::exit_action_0()" />
+        <property Phase="Success" />
+      </attachment>
+    </node>
+  </node>
+</behavior>

@@ -1,8 +1,3 @@
-# 在准备重大更新，敬请期待
- - 流程将被极大简化
- - 效率将有极大提升
-    
-
 ##[访问http://www.behaviac.com/获取文档，教程，API，FAQ，源码，下载等一切相关资料](http://www.behaviac.com/)
 
  - behaviac是游戏AI的开发框架组件，也是游戏原型的快速设计工具

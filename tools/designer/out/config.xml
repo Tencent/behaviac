@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Configuration>
+	<FilterNodes>
+		<node FullName="PluginBehaviac.Nodes.Query" />
+        
+		<!--node FullName="PluginBehaviac.Nodes.DecoratorLog" /-->
+		<!--node FullName="PluginBehaviac.Nodes.DecoratorAlwaysRunning" /-->
+		<!--node FullName="PluginBehaviac.Nodes.DecoratorAlwaysFailure" /-->
+		<!--node FullName="PluginBehaviac.Nodes.DecoratorAlwaysSuccess" /-->
+		
+		<!--node FullName="PluginBehaviac.Nodes.Task" /-->
+		<node FullName="PluginBehaviac.Nodes.DecoratorIterator" />
+		<node FullName="PluginBehaviac.Nodes.Method" />
+		
+        <node FullName="PluginBehaviac.Nodes.DecoratorRepeat" />
+        
+		<!--node FullName="PluginBehaviac.Nodes.State" /-->
+		<!--node FullName="PluginBehaviac.Events.TransitionCondition" /-->
+    </FilterNodes>
+	<Themes>
+		<theme Name="Modern">
+			<node FullName="Behaviac.Design.Nodes.Behavior" Color="22, 70, 84" />
+			<node FullName="Behaviac.Design.Nodes.ReferencedBehavior" Color="22, 70, 84" />
+			<node FullName="PluginBehaviac.Nodes.Action" Color="45, 146, 174" />
+			<node FullName="PluginBehaviac.Nodes.Assignment" Color="45, 146, 174" />
+			<node FullName="PluginBehaviac.Nodes.Compute" Color="45, 146, 174" />
+			<node FullName="PluginBehaviac.Nodes.Noop" Color="45, 146, 174" />
+			<node FullName="PluginBehaviac.Nodes.Wait" Color="45, 146, 174" />
+			<node FullName="PluginBehaviac.Nodes.WaitforSignal" Color="45, 146, 174" />
+			<node FullName="PluginBehaviac.Nodes.WaitFrames" Color="45, 146, 174" />
+			<node FullName="PluginBehaviac.Nodes.IfElse" Color="31, 100, 120" />
+			<node FullName="PluginBehaviac.Nodes.Parallel" Color="31, 100, 120" />
+			<node FullName="PluginBehaviac.Nodes.Query" Color="31, 100, 120" />
+			<node FullName="PluginBehaviac.Nodes.Selector" Color="31, 100, 120" />
+			<node FullName="PluginBehaviac.Nodes.SelectorLoop" Color="31, 100, 120" />
+			<node FullName="PluginBehaviac.Nodes.SelectorProbability" Color="31, 100, 120" />
+			<node FullName="PluginBehaviac.Nodes.SelectorStochastic" Color="31, 100, 120" />
+			<node FullName="PluginBehaviac.Nodes.Sequence" Color="31, 100, 120" />
+			<node FullName="PluginBehaviac.Nodes.SequenceStochastic" Color="31, 100, 120" />
+			<node FullName="PluginBehaviac.Nodes.WithPrecondition" Color="31, 100, 120" />
+			<node FullName="PluginBehaviac.Nodes.And" Color="38, 124, 149" />
+			<node FullName="PluginBehaviac.Nodes.Condition" Color="38, 124, 149" />
+			<node FullName="PluginBehaviac.Nodes.False" Color="38, 124, 149" />
+			<node FullName="PluginBehaviac.Nodes.OperatorCondition" Color="38, 124, 149" />
+			<node FullName="PluginBehaviac.Nodes.Or" Color="38, 124, 149" />
+			<node FullName="PluginBehaviac.Nodes.True" Color="38, 124, 149" />
+			<node FullName="PluginBehaviac.Nodes.DecoratorAlwaysFailure" Color="27, 86, 103" />
+			<node FullName="PluginBehaviac.Nodes.DecoratorAlwaysRunning" Color="27, 86, 103" />
+			<node FullName="PluginBehaviac.Nodes.DecoratorAlwaysSuccess" Color="27, 86, 103" />
+			<node FullName="PluginBehaviac.Nodes.DecoratorCount" Color="27, 86, 103" />
+			<node FullName="PluginBehaviac.Nodes.DecoratorCountLimit" Color="27, 86, 103" />
+			<node FullName="PluginBehaviac.Nodes.DecoratorFailureUntil" Color="27, 86, 103" />
+			<node FullName="PluginBehaviac.Nodes.DecoratorFrames" Color="27, 86, 103" />
+			<node FullName="PluginBehaviac.Nodes.DecoratorLog" Color="27, 86, 103" />
+			<node FullName="PluginBehaviac.Nodes.DecoratorLoop" Color="27, 86, 103" />
+			<node FullName="PluginBehaviac.Nodes.DecoratorLoopUntil" Color="27, 86, 103" />
+			<node FullName="PluginBehaviac.Nodes.DecoratorNot" Color="27, 86, 103" />
+			<node FullName="PluginBehaviac.Nodes.DecoratorSuccessUntil" Color="27, 86, 103" />
+			<node FullName="PluginBehaviac.Nodes.DecoratorTime" Color="27, 86, 103" />
+			<node FullName="PluginBehaviac.Nodes.DecoratorWeight" Color="27, 86, 103" />
+			<node FullName="PluginBehaviac.Nodes.Task" Color="15, 46, 55" />
+			<node FullName="PluginBehaviac.Nodes.Method" Color="31, 100, 120" />
+			<node FullName="PluginBehaviac.Nodes.Branch" Color="31, 100, 120" />
+			<node FullName="PluginBehaviac.Nodes.Proposition" Color="38, 124, 149" />
+			<node FullName="PluginBehaviac.Nodes.ForEach" Color="38, 124, 149" />
+			<node FullName="PluginBehaviac.Nodes.FSMReferencedBehavior" Color="22, 70, 84" />
+		</theme>
+    </Themes>
+</Configuration>

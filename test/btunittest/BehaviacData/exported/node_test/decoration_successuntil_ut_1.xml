@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\decoration_successuntil_ut_1.xml-->
+<behavior name="node_test/decoration_successuntil_ut_1" agenttype="AgentNodeTest" version="5">
+  <node class="DecoratorSuccessUntil" id="0">
+    <property Count="const int 5" />
+    <property DecorateWhenChildEnds="true" />
+    <node class="False" id="1" />
+  </node>
+</behavior>

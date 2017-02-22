@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Behavior Version="5">
+  <Node Class="Behaviac.Design.Nodes.Behavior" AgentType="AgentNodeTest" Domains="" Enable="true" HasOwnPrefabData="false" Id="-1" PrefabName="" PrefabNodeId="-1">
+    <Comment Background="NoColor" Text="" />
+    <DescriptorRefs value="0:" />
+    <Connector Identifier="GenericChildren">
+      <Node Class="PluginBehaviac.Nodes.DecoratorLoop" Count="const int -1" DecorateWhenChildEnds="true" DoneWithinFrame="false" Enable="true" HasOwnPrefabData="false" Id="0" PrefabName="" PrefabNodeId="-1">
+        <Comment Background="NoColor" Text="" />
+        <Attachment Class="Behaviac.Design.Attachments.Event" Enable="true" Id="1" PrefabAttachmentId="-1" ReferenceFilename="node_test/event_subtree_0" TriggeredOnce="false" TriggerMode="Transfer" />
+        <Connector Identifier="GenericChildren">
+          <Node Class="Behaviac.Design.Nodes.ReferencedBehavior" Enable="true" HasOwnPrefabData="false" Id="2" PrefabName="" PrefabNodeId="-1" ReferenceBehavior="const string &quot;node_test/if_else_ut_0&quot;" Task="&quot;&quot;">
+            <Comment Background="Gray" Text="" />
+          </Node>
+        </Connector>
+      </Node>
+    </Connector>
+  </Node>
+</Behavior>

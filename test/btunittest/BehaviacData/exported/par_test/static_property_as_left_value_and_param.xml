@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: par_test\static_property_as_left_value_and_param.xml-->
+<behavior name="par_test/static_property_as_left_value_and_param" agenttype="EmployeeParTestAgent" version="5">
+  <node class="Sequence" id="0">
+    <node class="Sequence" id="1">
+      <node class="Assignment" id="4">
+        <property CastRight="false" />
+        <property Opl="static TNS::NE::NAT::eColor Self.ParTestAgentBase::STV_ECOLOR_0" />
+        <property Opr="Self.ParTestAgentBase::Func_eColorIR(static TNS::NE::NAT::eColor Self.ParTestAgentBase::STV_ECOLOR_0)" />
+      </node>
+      <node class="Assignment" id="5">
+        <property CastRight="false" />
+        <property Opl="static bool Self.ParTestAgentBase::STV_BOOL_0" />
+        <property Opr="Self.ParTestAgentBase::Func_BooleanIR(static bool Self.ParTestAgentBase::STV_BOOL_0)" />
+      </node>
+      <node class="Assignment" id="6">
+        <property CastRight="false" />
+        <property Opl="static char Self.ParTestAgentBase::STV_CHAR_0" />
+        <property Opr="Self.ParTestAgentBase::Func_CharIR(static char Self.ParTestAgentBase::STV_CHAR_0)" />
+      </node>
+      <node class="Assignment" id="7">
+        <property CastRight="false" />
+        <property Opl="static vector&lt;TNS::NE::NAT::eColor&gt; Self.ParTestAgentBase::STV_LIST_ECOLOR_0" />
+        <property Opr="Self.ParTestAgentBase::Func_eColorListIR(static vector&lt;TNS::NE::NAT::eColor&gt; Self.ParTestAgentBase::STV_LIST_ECOLOR_0)" />
+      </node>
+      <node class="Assignment" id="8">
+        <property CastRight="false" />
+        <property Opl="static vector&lt;bool&gt; Self.ParTestAgentBase::STV_LIST_BOOL_0" />
+        <property Opr="Self.ParTestAgentBase::Func_BooleanListIR(static vector&lt;bool&gt; Self.ParTestAgentBase::STV_LIST_BOOL_0)" />
+      </node>
+      <node class="Assignment" id="9">
+        <property CastRight="false" />
+        <property Opl="static vector&lt;char&gt; Self.ParTestAgentBase::STV_LIST_CHAR_0" />
+        <property Opr="Self.ParTestAgentBase::Func_CharListIR(static vector&lt;char&gt; Self.ParTestAgentBase::STV_LIST_CHAR_0)" />
+      </node>
+      <node class="Assignment" id="10">
+        <property CastRight="false" />
+        <property Opl="static vector&lt;sbyte&gt; Self.ParTestAgentBase::STV_LIST_SBYTE_0" />
+        <property Opr="Self.ParTestAgentBase::Func_SByteListIR(static vector&lt;sbyte&gt; Self.ParTestAgentBase::STV_LIST_SBYTE_0)" />
+      </node>
+    </node>
+    <node class="Sequence" id="2">
+      <node class="Assignment" id="15">
+        <property CastRight="false" />
+        <property Opl="static int Self.ParTestAgent::STV_INT_0" />
+        <property Opr="Self.ParTestAgent::Func_IntIR(static int Self.ParTestAgent::STV_INT_0)" />
+      </node>
+      <node class="Assignment" id="12">
+        <property CastRight="false" />
+        <property Opl="static TNS::ST::PER::WRK::kEmployee Self.ParTestAgent::STV_KEMPLOYEE_0" />
+        <property Opr="Self.ParTestAgent::Func_kEmployeeIR(static TNS::ST::PER::WRK::kEmployee Self.ParTestAgent::STV_KEMPLOYEE_0)" />
+      </node>
+      <node class="Assignment" id="13">
+        <property CastRight="false" />
+        <property Opl="static vector&lt;int&gt; Self.ParTestAgent::STV_LIST_INT_0" />
+        <property Opr="Self.ParTestAgent::Func_IntListIR(static vector&lt;int&gt; Self.ParTestAgent::STV_LIST_INT_0)" />
+      </node>
+      <node class="Assignment" id="11">
+        <property CastRight="false" />
+        <property Opl="static vector&lt;TNS::ST::PER::WRK::kEmployee&gt; Self.ParTestAgent::STV_LIST_KEMPLOYEE_0" />
+        <property Opr="Self.ParTestAgent::Func_kEmployeeListIR(static vector&lt;TNS::ST::PER::WRK::kEmployee&gt; Self.ParTestAgent::STV_LIST_KEMPLOYEE_0)" />
+      </node>
+    </node>
+    <node class="Sequence" id="3">
+      <node class="Assignment" id="14">
+        <property CastRight="false" />
+        <property Opl="static float Self.EmployeeParTestAgent::STV_F_0" />
+        <property Opr="Self.EmployeeParTestAgent::Func_SingleIR(static float Self.EmployeeParTestAgent::STV_F_0)" />
+      </node>
+      <node class="Assignment" id="19">
+        <property CastRight="false" />
+        <property Opl="static string Self.EmployeeParTestAgent::STV_STR_0" />
+        <property Opr="Self.EmployeeParTestAgent::Func_StringIR(static string Self.EmployeeParTestAgent::STV_STR_0)" />
+      </node>
+      <node class="Assignment" id="17">
+        <property CastRight="false" />
+        <property Opl="static behaviac::Agent Self.EmployeeParTestAgent::STV_AGENT_0" />
+        <property Opr="Self.EmployeeParTestAgent::Func_AgentIR(static behaviac::Agent Self.EmployeeParTestAgent::STV_AGENT_0)" />
+      </node>
+      <node class="Assignment" id="18">
+        <property CastRight="false" />
+        <property Opl="static vector&lt;float&gt; Self.EmployeeParTestAgent::STV_LIST_F_0" />
+        <property Opr="Self.EmployeeParTestAgent::Func_SingleListIR(static vector&lt;float&gt; Self.EmployeeParTestAgent::STV_LIST_F_0)" />
+      </node>
+      <node class="Assignment" id="16">
+        <property CastRight="false" />
+        <property Opl="static vector&lt;string&gt; Self.EmployeeParTestAgent::STV_LIST_STR_0" />
+        <property Opr="Self.EmployeeParTestAgent::Func_StringListIR(static vector&lt;string&gt; Self.EmployeeParTestAgent::STV_LIST_STR_0)" />
+      </node>
+      <node class="Assignment" id="20">
+        <property CastRight="false" />
+        <property Opl="static vector&lt;behaviac::Agent&gt; Self.EmployeeParTestAgent::STV_LIST_AGENT_0" />
+        <property Opr="Self.EmployeeParTestAgent::Func_AgentListIR(static vector&lt;behaviac::Agent&gt; Self.EmployeeParTestAgent::STV_LIST_AGENT_0)" />
+      </node>
+    </node>
+  </node>
+</behavior>

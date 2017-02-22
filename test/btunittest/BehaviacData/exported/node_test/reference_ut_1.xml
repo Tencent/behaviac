@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\reference_ut_1.xml-->
+<behavior name="node_test/reference_ut_1" agenttype="AgentNodeTest" version="5">
+  <pars>
+    <par name="subTreePath" type="string" value="" />
+  </pars>
+  <node class="Sequence" id="0">
+    <node class="Assignment" id="2">
+      <property CastRight="false" />
+      <property Opl="string Self.AgentNodeTest::subTreePath" />
+      <property Opr="const string &quot;node_test/reference_sub_0&quot;" />
+    </node>
+    <node class="ReferencedBehavior" id="1">
+      <property ReferenceBehavior="string Self.AgentNodeTest::subTreePath" />
+    </node>
+  </node>
+</behavior>

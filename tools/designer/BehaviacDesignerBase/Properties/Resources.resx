@@ -1,0 +1,873 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BehaviorDesc" xml:space="preserve">
+    <value>This node represents the current behavior.</value>
+  </data>
+  <data name="BehaviorFilename" xml:space="preserve">
+    <value>Filename</value>
+  </data>
+  <data name="BehaviorFilenameDesc" xml:space="preserve">
+    <value>The file which holds this behaviour.</value>
+  </data>
+  <data name="BehaviorIsEmptyError" xml:space="preserve">
+    <value>Behavior is empty.</value>
+  </data>
+  <data name="CategoryBasic" xml:space="preserve">
+    <value>Basic</value>
+  </data>
+  <data name="CategoryComment" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="CategoryDesign" xml:space="preserve">
+    <value>Design</value>
+  </data>
+  <data name="ConditionConnectorsFalse" xml:space="preserve">
+    <value>False</value>
+  </data>
+  <data name="ConditionConnectorsTrue" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="DecoratorHasNoChildError" xml:space="preserve">
+    <value>Decorator has no child.</value>
+  </data>
+  <data name="EventBlockEvent" xml:space="preserve">
+    <value>Block Event</value>
+  </data>
+  <data name="EventBlockEventDesc" xml:space="preserve">
+    <value>If true the event is blocked.</value>
+  </data>
+  <data name="ExceptionBehaviorNodeTypeInvalid" xml:space="preserve">
+    <value>The used behaviour node type does not implement Nodes.Behavior or is abstract.</value>
+  </data>
+  <data name="ExceptionBothStylesNull" xml:space="preserve">
+    <value>Both styles may not be null.</value>
+  </data>
+  <data name="ExceptionCreateNodeViewDataFromNodeViewData" xml:space="preserve">
+    <value>It is not allowed to create a node view data from another one. Use the original node for this.</value>
+  </data>
+  <data name="ExceptionDefaultStyleNull" xml:space="preserve">
+    <value>Default style may not be null.</value>
+  </data>
+  <data name="ExceptionDesignerAttributeEnumCouldNotParseValue" xml:space="preserve">
+    <value>Could not parse value {0}</value>
+  </data>
+  <data name="ExceptionDesignerAttributeEnumCouldNotReadValue" xml:space="preserve">
+    <value>Could not read value {0}</value>
+  </data>
+  <data name="ExceptionDesignerAttributeEnumIllegalEnumIndex" xml:space="preserve">
+    <value>Invalid enum index found {0}</value>
+  </data>
+  <data name="ExceptionDesignerAttributeEnumValueIllegal" xml:space="preserve">
+    <value>Enum value {0} is illegal</value>
+  </data>
+  <data name="ExceptionDesignerAttributeExpectedEnum" xml:space="preserve">
+    <value>Enum expected {0}</value>
+  </data>
+  <data name="ExceptionDesignerAttributeIllegalBooleanValue" xml:space="preserve">
+    <value>Illegal boolean value {0}</value>
+  </data>
+  <data name="ExceptionDesignerAttributeIllegalFloatValue" xml:space="preserve">
+    <value>Illegal float value {0}</value>
+  </data>
+  <data name="ExceptionDesignerAttributeIllegalIntegerValue" xml:space="preserve">
+    <value>Illegal integer value {0}</value>
+  </data>
+  <data name="ExceptionDesignerAttributeInvalidType" xml:space="preserve">
+    <value>Invalid type</value>
+  </data>
+  <data name="ExceptionDuplicatedConnectorIdentifier" xml:space="preserve">
+    <value>A duplicated connector identifier was found. The identifier must be unique over the whole solution!</value>
+  </data>
+  <data name="ExceptionFileManagerXMLMissingAttribute" xml:space="preserve">
+    <value>Missing attribute "{0}"</value>
+  </data>
+  <data name="ExceptionInvalidDefinitionName" xml:space="preserve">
+    <value>The name of a definition may not contain any spaces.</value>
+  </data>
+  <data name="ExceptionIsNotNodeViewData" xml:space="preserve">
+    <value>This operation is only allowed on NodeViewData nodes.</value>
+  </data>
+  <data name="ExceptionMissingEventConstructor" xml:space="preserve">
+    <value>Could not create event of type {0}. Constructor may only require the node it is created for as a parameter.</value>
+  </data>
+  <data name="ExceptionMissingNodeConstructor" xml:space="preserve">
+    <value>Could not create node of type {0}. Constructor may not require any parameters.</value>
+  </data>
+  <data name="ExceptionMultipleBehaviorManagerInterfaces" xml:space="preserve">
+    <value>There can only be one BehaviorManagerInterface.</value>
+  </data>
+  <data name="ExceptionMultipleDesignerAttributes" xml:space="preserve">
+    <value>Only one loadable or savable attribute is allowed.</value>
+  </data>
+  <data name="ExceptionNodeHasTooManyChildren" xml:space="preserve">
+    <value>The node is not allowed to have more children.</value>
+  </data>
+  <data name="ExceptionNodeIsNoChild" xml:space="preserve">
+    <value>Node is not a child of this node.</value>
+  </data>
+  <data name="ExceptionNoSubItemForConnector" xml:space="preserve">
+    <value>No subitem for the connector could be found.</value>
+  </data>
+  <data name="ExceptionNotImplementDefaultObject" xml:space="preserve">
+    <value>The given type does not implement the DefaultObject interface.</value>
+  </data>
+  <data name="ExceptionPropertyCannotBeRead" xml:space="preserve">
+    <value>All designer properties must be readable.</value>
+  </data>
+  <data name="ExceptionPropertyCannotBeWritten" xml:space="preserve">
+    <value>All designer properties must be writable or flagged as read only and no save.</value>
+  </data>
+  <data name="ExceptionReferencedBehaviorNodeTypeInvalid" xml:space="preserve">
+    <value>The used referenced behaviour node type does not implement Nodes.ReferencedBehavior or is abstract.</value>
+  </data>
+  <data name="ExceptionSubItemIsNoChild" xml:space="preserve">
+    <value>The subitem does not belong to this node.</value>
+  </data>
+  <data name="ExceptionUnhandledCommentColor" xml:space="preserve">
+    <value>The given color is not handled.</value>
+  </data>
+  <data name="ExceptionUnhandledNodeShape" xml:space="preserve">
+    <value>Unhandled node shape.</value>
+  </data>
+  <data name="ExceptionUnknownEventType" xml:space="preserve">
+    <value>No such event type {0}.</value>
+  </data>
+  <data name="ExceptionUnknownNodeType" xml:space="preserve">
+    <value>No such node type {0}.</value>
+  </data>
+  <data name="ExceptionWrongNodeTagType" xml:space="preserve">
+    <value>The given node tag type cannot be used with the given type.</value>
+  </data>
+  <data name="ImpulseDelay" xml:space="preserve">
+    <value>Delay</value>
+  </data>
+  <data name="ImpulseDelayDesc" xml:space="preserve">
+    <value>The time which must have passed before the node can become active again.</value>
+  </data>
+  <data name="ImpulseDuration" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="ImpulseDurationDesc" xml:space="preserve">
+    <value>Determines how old the oldest event may be for this node to become valid.</value>
+  </data>
+  <data name="NodeCommentBackground" xml:space="preserve">
+    <value>Background</value>
+  </data>
+  <data name="NodeCommentBackgroundDesc" xml:space="preserve">
+    <value>The background color rendered behind the node and its children.</value>
+  </data>
+  <data name="NodeCommentText" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="NodeCommentTextDesc" xml:space="preserve">
+    <value>The comment shown for the node and its children.</value>
+  </data>
+  <data name="ParallelNoChildrenError" xml:space="preserve">
+    <value>Parallel has no children.</value>
+  </data>
+  <data name="ParallelOnlyOneChildError" xml:space="preserve">
+    <value>Parallel has only one child and could be removed.</value>
+  </data>
+  <data name="ReferencedBehaviorCircularReferenceError" xml:space="preserve">
+    <value>Found circular reference.</value>
+  </data>
+  <data name="ReferencedBehaviorDesc" xml:space="preserve">
+    <value>This node works like an action which calls the subtree.</value>
+  </data>
+  <data name="ReferencedBehaviorPath" xml:space="preserve">
+    <value>ReferencedBehaviorPath</value>
+  </data>
+  <data name="ReferencedBehaviorPathDesc" xml:space="preserve">
+    <value>SubTree RelativePath</value>
+  </data>
+  <data name="SelectorNoChildrenError" xml:space="preserve">
+    <value>Selector has no children.</value>
+  </data>
+  <data name="SelectorOnlyOneChildError" xml:space="preserve">
+    <value>Selector has only one child and could be removed.</value>
+  </data>
+  <data name="SequenceNoChildrenError" xml:space="preserve">
+    <value>Sequence has no children.</value>
+  </data>
+  <data name="SequenceOnlyOneChildError" xml:space="preserve">
+    <value>Sequence has only one child and could be removed.</value>
+  </data>
+  <data name="UnitsSeconds" xml:space="preserve">
+    <value>sec</value>
+  </data>
+  <data name="ExceptionAdditionalAssemblyNotLoaded" xml:space="preserve">
+    <value>The additional assembly {0} could not be loaded.</value>
+  </data>
+  <data name="CategoryVersion" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="NodeClassVersion" xml:space="preserve">
+    <value>Class Version</value>
+  </data>
+  <data name="NodeClassVersionDesc" xml:space="preserve">
+    <value>The version of the class. Node is updated when version is lower than class version.</value>
+  </data>
+  <data name="NodeVersion" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="NodeVersionDesc" xml:space="preserve">
+    <value>The version of the node. Used to update nodes when the structure changes.</value>
+  </data>
+  <data name="ExceptionMissingOverrideConstructor" xml:space="preserve">
+    <value>Could not create override of type {0}. Constructor may only require the node it is created for as a parameter.</value>
+  </data>
+  <data name="OverrideRandom" xml:space="preserve">
+    <value>Random</value>
+  </data>
+  <data name="OverrideRandomDesc" xml:space="preserve">
+    <value>Changes an attribute to return a random value.</value>
+  </data>
+  <data name="ExceptionDesignerAttributeUnsupportedType" xml:space="preserve">
+    <value>The given type is not allowed by this property.</value>
+  </data>
+  <data name="DesignerNodePropertyNone" xml:space="preserve">
+    <value>&lt;None&gt;</value>
+  </data>
+  <data name="ExceptionDesignerAttributeCouldNotRetrieveNode" xml:space="preserve">
+    <value>Could not retrieve the node of {0}.</value>
+  </data>
+  <data name="ExceptionLinkedPropertyNotFound" xml:space="preserve">
+    <value>The linked property {0} could not be found in {1}.</value>
+  </data>
+  <data name="OverrideProperty" xml:space="preserve">
+    <value>Override</value>
+  </data>
+  <data name="OverridePropertyDesc" xml:space="preserve">
+    <value>A property of the node attached to which will be overridden.</value>
+  </data>
+  <data name="RandomMax" xml:space="preserve">
+    <value>Max</value>
+  </data>
+  <data name="RandomMaxDesc" xml:space="preserve">
+    <value>The highest possible value.</value>
+  </data>
+  <data name="RandomMin" xml:space="preserve">
+    <value>Min</value>
+  </data>
+  <data name="RandomMinDesc" xml:space="preserve">
+    <value>The lowest possible value.</value>
+  </data>
+  <data name="BehaviorAgentType" xml:space="preserve">
+    <value>Agent Type</value>
+  </data>
+  <data name="BehaviorAgentTypeDesc" xml:space="preserve">
+    <value>the agent type controlling the behavior</value>
+  </data>
+  <data name="AgentEvent" xml:space="preserve">
+    <value>Event</value>
+  </data>
+  <data name="AgentEventDesc" xml:space="preserve">
+    <value>event</value>
+  </data>
+  <data name="AgentMethod" xml:space="preserve">
+    <value>Method</value>
+  </data>
+  <data name="AgentMethodDesc" xml:space="preserve">
+    <value>What to do when this node is updating. It can not be empty.</value>
+  </data>
+  <data name="ConditionNegate" xml:space="preserve">
+    <value>Not</value>
+  </data>
+  <data name="ConditionNegateDesc" xml:space="preserve">
+    <value>Not</value>
+  </data>
+  <data name="OperandLeft" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="OperandLeftDesc" xml:space="preserve">
+    <value>Left Operand</value>
+  </data>
+  <data name="OperandRight" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="OperandRightDesc" xml:space="preserve">
+    <value>Right Operand</value>
+  </data>
+  <data name="Operator" xml:space="preserve">
+    <value>Operator</value>
+  </data>
+  <data name="OperatorDesc" xml:space="preserve">
+    <value>Operator</value>
+  </data>
+  <data name="BehaviorEventName" xml:space="preserve">
+    <value>EventName</value>
+  </data>
+  <data name="BehaviorEventNameDesc" xml:space="preserve">
+    <value>EventName</value>
+  </data>
+  <data name="CategoryPar" xml:space="preserve">
+    <value>Par</value>
+  </data>
+  <data name="DescriptorDesc" xml:space="preserve">
+    <value>Descriptor</value>
+  </data>
+  <data name="BehaviorDomain" xml:space="preserve">
+    <value>Domain</value>
+  </data>
+  <data name="BehaviorDomainDesc" xml:space="preserve">
+    <value>a tag(like, attack, defence, etc.)</value>
+  </data>
+  <data name="BehaviorDomains" xml:space="preserve">
+    <value>Domains</value>
+  </data>
+  <data name="BehaviorDomainsDesc" xml:space="preserve">
+    <value>tags(like attack, defence, etc.) speparated by space</value>
+  </data>
+  <data name="DescriptorRefDesc" xml:space="preserve">
+    <value>DescriptorRef</value>
+  </data>
+  <data name="BinaryOperator" xml:space="preserve">
+    <value>Association</value>
+  </data>
+  <data name="BinaryOperatorDesc" xml:space="preserve">
+    <value>How to connect multiple conditions</value>
+  </data>
+  <data name="AgentEnter" xml:space="preserve">
+    <value>Enter</value>
+  </data>
+  <data name="AgentEnterDesc" xml:space="preserve">
+    <value>Enter</value>
+  </data>
+  <data name="AgentExit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="AgentExitDesc" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="DecorateWhenChildEnds" xml:space="preserve">
+    <value>DecorateChildEnds</value>
+  </data>
+  <data name="DecorateWhenChildEndsDesc" xml:space="preserve">
+    <value>if true, then the decorator only decorates the child when the child ends(success/failure)</value>
+  </data>
+  <data name="Event" xml:space="preserve">
+    <value>Event</value>
+  </data>
+  <data name="EventDesc" xml:space="preserve">
+    <value>Event</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="Attachments" xml:space="preserve">
+    <value>Attachments</value>
+  </data>
+  <data name="Composites" xml:space="preserve">
+    <value>Composites</value>
+  </data>
+  <data name="Conditions" xml:space="preserve">
+    <value>Conditions</value>
+  </data>
+  <data name="Decorators" xml:space="preserve">
+    <value>Decorators</value>
+  </data>
+  <data name="EventHandling" xml:space="preserve">
+    <value>EventHandling</value>
+  </data>
+  <data name="Leaf" xml:space="preserve">
+    <value>Leaf</value>
+  </data>
+  <data name="Selectors" xml:space="preserve">
+    <value>Selectors</value>
+  </data>
+  <data name="Sequences" xml:space="preserve">
+    <value>Sequences</value>
+  </data>
+  <data name="TriggeredOnce" xml:space="preserve">
+    <value>Trigged Once</value>
+  </data>
+  <data name="TriggeredOnceDesc" xml:space="preserve">
+    <value>Trigged Once, Stop Checking once triggered</value>
+  </data>
+  <data name="EventName" xml:space="preserve">
+    <value>Event</value>
+  </data>
+  <data name="ConnectError" xml:space="preserve">
+    <value>Connect Error</value>
+  </data>
+  <data name="ExportFileWarning" xml:space="preserve">
+    <value>Export File Warning</value>
+  </data>
+  <data name="FileWarning" xml:space="preserve">
+    <value>File Warning</value>
+  </data>
+  <data name="InvalidMeta" xml:space="preserve">
+    <value>The meta file is invalid</value>
+  </data>
+  <data name="LoadError" xml:space="preserve">
+    <value>Load Error</value>
+  </data>
+  <data name="LoadWarning" xml:space="preserve">
+    <value>Load Warning</value>
+  </data>
+  <data name="ReferencedBehaviorError" xml:space="preserve">
+    <value>The referenced behavior file "{0}" does not exist!</value>
+  </data>
+  <data name="SaveError" xml:space="preserve">
+    <value>Save Error</value>
+  </data>
+  <data name="SaveFileWarning" xml:space="preserve">
+    <value>Save File Warning</value>
+  </data>
+  <data name="SaveWarningInfo" xml:space="preserve">
+    <value>The {0} file is read only.
+
+Yes     : Overwrite it.
+No      : Don't overwrite it.
+Cancel : Abort all.</value>
+  </data>
+  <data name="LoadConfigureError" xml:space="preserve">
+    <value>Load configure data file {0} failed:
+
+{1}</value>
+  </data>
+  <data name="LoadDebugDataError" xml:space="preserve">
+    <value>Load debug data file {0} failed:
+
+{1}</value>
+  </data>
+  <data name="SaveFileError" xml:space="preserve">
+    <value>Save file {0} failed:
+
+{1}</value>
+  </data>
+  <data name="Const" xml:space="preserve">
+    <value>Const</value>
+  </data>
+  <data name="Par" xml:space="preserve">
+    <value>Par</value>
+  </data>
+  <data name="ParInfo" xml:space="preserve">
+    <value>User defined par</value>
+  </data>
+  <data name="PropertiesOf" xml:space="preserve">
+    <value>Properties of {0}</value>
+  </data>
+  <data name="Properties" xml:space="preserve">
+    <value>Properties</value>
+  </data>
+  <data name="AgentTypeError" xml:space="preserve">
+    <value>Agent Types are not compatible!</value>
+  </data>
+  <data name="Disabled" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
+  <data name="NoAgent" xml:space="preserve">
+    <value>No Agent</value>
+  </data>
+  <data name="NoMethod" xml:space="preserve">
+    <value>No method</value>
+  </data>
+  <data name="ParWarningInfo" xml:space="preserve">
+    <value>Par:'{0}' is defined but not used.</value>
+  </data>
+  <data name="ReferenceError" xml:space="preserve">
+    <value>Referenced behavior has errors!</value>
+  </data>
+  <data name="Prototype" xml:space="preserve">
+    <value>Prototype : </value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description : </value>
+  </data>
+  <data name="TriggerMode" xml:space="preserve">
+    <value>Trigger Mode</value>
+  </data>
+  <data name="TriggerModeDesc" xml:space="preserve">
+    <value>It determine how the triggered bt gives control back when it ends.</value>
+  </data>
+  <data name="EventNameDesc" xml:space="preserve">
+    <value>The event name registered by REGISTER_EVENT on c++ side</value>
+  </data>
+  <data name="EnterAction" xml:space="preserve">
+    <value>Enter Action</value>
+  </data>
+  <data name="EnterActionDesc" xml:space="preserve">
+    <value>What to do when this node is entered. It can be empty.</value>
+  </data>
+  <data name="ExitAction" xml:space="preserve">
+    <value>Exit Action</value>
+  </data>
+  <data name="ExitActionDesc" xml:space="preserve">
+    <value>What to do when this node is exited. It can be empty. behaviac::GetNodeExitStatus() can be used to query the exit status.</value>
+  </data>
+  <data name="NodeBasic" xml:space="preserve">
+    <value>Node</value>
+  </data>
+  <data name="NoResultFunctor" xml:space="preserve">
+    <value>ResultOption is Invalid and ResultFunctor is not set.</value>
+  </data>
+  <data name="WrongResultFunctor" xml:space="preserve">
+    <value>ResultFunctor has wrong result type, i.e. not EBTStatus type, or its parameter is not the same as the result of the action method.</value>
+  </data>
+  <data name="StatusFunctor" xml:space="preserve">
+    <value>Status Functor</value>
+  </data>
+  <data name="StatusFunctorDesc" xml:space="preserve">
+    <value>Select a method, and use its return value as the Status of updating the Action. StatusFunctor is a Functor returning EBTStatus with the Method's return value as the only parameter or without any parameter when the Method returns void.</value>
+  </data>
+  <data name="StatusOption" xml:space="preserve">
+    <value>Status Option</value>
+  </data>
+  <data name="StatusOptionDesc" xml:space="preserve">
+    <value>There are 3 cases to determine the Action's status(Success/Failure/Running) after a tick:
+1. if the Method returns 'EBTStatus', then it is used as this Action's status, the StatusOption and StatusFunction is disabled.
+2. otherwise the StatusOption is enabled and when others except Invalid is selected, it will be used as the Status directly, StatusFunctor is disabled.
+3. when Invalid is selected, StatusFunctor is enabled, it uses the StatusFunctor to return a EBTStatus. </value>
+  </data>
+  <data name="ReferenceWarning" xml:space="preserve">
+    <value>Referenced behavior has warnings!</value>
+  </data>
+  <data name="LoadWorkspaceError" xml:space="preserve">
+    <value>Failed to load the workspace file {0}!</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="UndoWarningInfo" xml:space="preserve">
+    <value>The referenced behavior "{0}" has been modified latterly not in the current behavior "{1}", so the undo/redo operation would get the undesired result.
+Are your sure continue the undo/redo operation?</value>
+  </data>
+  <data name="TriggerMode_Return" xml:space="preserve">
+    <value>Return</value>
+  </data>
+  <data name="TriggerMode_ReturnDesc" xml:space="preserve">
+    <value>When the child ends, it gives control back and the interupted node continues to execute.</value>
+  </data>
+  <data name="TriggerMode_Transfer" xml:space="preserve">
+    <value>Transfer</value>
+  </data>
+  <data name="TriggerMode_TransferDesc" xml:space="preserve">
+    <value>The original tree is aborted and reset. It gives control to the new tree.</value>
+  </data>
+  <data name="OperatorType" xml:space="preserve">
+    <value>Operator Type</value>
+  </data>
+  <data name="OperatorTypeDesc" xml:space="preserve">
+    <value>Operator Type Selection</value>
+  </data>
+  <data name="OperatorType_And" xml:space="preserve">
+    <value>And</value>
+  </data>
+  <data name="OperatorType_Equal" xml:space="preserve">
+    <value>Equal</value>
+  </data>
+  <data name="OperatorType_Greater" xml:space="preserve">
+    <value>Greater</value>
+  </data>
+  <data name="OperatorType_GreaterEqual" xml:space="preserve">
+    <value>GreaterEqual</value>
+  </data>
+  <data name="OperatorType_Less" xml:space="preserve">
+    <value>Less</value>
+  </data>
+  <data name="OperatorType_LessEqual" xml:space="preserve">
+    <value>LessEqual</value>
+  </data>
+  <data name="OperatorType_NonEqual" xml:space="preserve">
+    <value>Non Equal</value>
+  </data>
+  <data name="OperatorType_Or" xml:space="preserve">
+    <value>Or</value>
+  </data>
+  <data name="SaveWorkspaceError" xml:space="preserve">
+    <value>Failed to save the workspace file {0}!</value>
+  </data>
+  <data name="PreconditionFailResult" xml:space="preserve">
+    <value>PreconditionFailResult</value>
+  </data>
+  <data name="PreconditionFailResultDesc" xml:space="preserve">
+    <value>Action status if the precondition is false</value>
+  </data>
+  <data name="Prefab" xml:space="preserve">
+    <value>Prefab</value>
+  </data>
+  <data name="PrefabDirty" xml:space="preserve">
+    <value>Prefab Dirty</value>
+  </data>
+  <data name="PrefabName" xml:space="preserve">
+    <value>Prefab Name</value>
+  </data>
+  <data name="PrefabNodeId" xml:space="preserve">
+    <value>Prefab Node Id</value>
+  </data>
+  <data name="AddEnterBreakpoint" xml:space="preserve">
+    <value>Add Enter Breakpoint</value>
+  </data>
+  <data name="DisableEnterBreakpoint" xml:space="preserve">
+    <value>Disable Enter Breakpoint</value>
+  </data>
+  <data name="RemoveEnterBreakpoint" xml:space="preserve">
+    <value>Remove Enter Breakpoint</value>
+  </data>
+  <data name="AddExitBreakpoint" xml:space="preserve">
+    <value>Add Exit Breakpoint</value>
+  </data>
+  <data name="DisableExitBreakpoint" xml:space="preserve">
+    <value>Disable Exit Breakpoint</value>
+  </data>
+  <data name="RemoveExitBreakpoint" xml:space="preserve">
+    <value>Remove Exit Breakpoint</value>
+  </data>
+  <data name="NoParam" xml:space="preserve">
+    <value>The parameters are not completed.</value>
+  </data>
+  <data name="AgentTypeChangedWarning" xml:space="preserve">
+    <value>If the agent type is changed, the properties and methods in the leaf nodes may be reset. Are you sure change it?</value>
+  </data>
+  <data name="Enter" xml:space="preserve">
+    <value>Enter</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="Precondition" xml:space="preserve">
+    <value>Precondition</value>
+  </data>
+  <data name="Effector" xml:space="preserve">
+    <value>Effector</value>
+  </data>
+  <data name="EffectorDesc" xml:space="preserve">
+    <value>it takes effect when the node succeeds.</value>
+  </data>
+  <data name="EffectorPhase" xml:space="preserve">
+    <value>When</value>
+  </data>
+  <data name="EffectorPhaseDesc" xml:space="preserve">
+    <value>this determines when it takes effect, when successful or failed?</value>
+  </data>
+  <data name="InterruptIf" xml:space="preserve">
+    <value>InterruptIf</value>
+  </data>
+  <data name="Signal" xml:space="preserve">
+    <value>Signal</value>
+  </data>
+  <data name="TaskNoMethod" xml:space="preserve">
+    <value>Task has no children</value>
+  </data>
+  <data name="OperatorType_Assignment" xml:space="preserve">
+    <value>Assignment</value>
+  </data>
+  <data name="OperatorType_In" xml:space="preserve">
+    <value>iterator</value>
+  </data>
+  <data name="CustomizedMethodError" xml:space="preserve">
+    <value>Found the customized method : Please firstly integrate the generated source files of the customized method of the agent into your game project. Then export it as meta info into the editor, reload the current workspace. At last, export the behaviors.</value>
+  </data>
+  <data name="TaskMethodChildrenOrOne" xml:space="preserve">
+    <value>Task can only accept methods or only one child.</value>
+  </data>
+  <data name="Task" xml:space="preserve">
+    <value>Task</value>
+  </data>
+  <data name="Behavior" xml:space="preserve">
+    <value>Behavior</value>
+  </data>
+  <data name="ReferencedBehavior" xml:space="preserve">
+    <value>SubTree</value>
+  </data>
+  <data name="AddPlanningBreakpoint" xml:space="preserve">
+    <value>Add Planning Breakpoint</value>
+  </data>
+  <data name="DisablePlanningBreakpoint" xml:space="preserve">
+    <value>Disable Planning Breakpoint</value>
+  </data>
+  <data name="RemovePlanningBreakpoint" xml:space="preserve">
+    <value>Remove Planning Breakpoint</value>
+  </data>
+  <data name="FileVersionWarning" xml:space="preserve">
+    <value>Please install the latest designer to open the behaviors.</value>
+  </data>
+  <data name="Right" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="Mode" xml:space="preserve">
+    <value>Mode</value>
+  </data>
+  <data name="ModeDesc" xml:space="preserve">
+    <value>Mode</value>
+  </data>
+  <data name="Attachment" xml:space="preserve">
+    <value>Attachment</value>
+  </data>
+  <data name="AttachmentId" xml:space="preserve">
+    <value>Attachment Id</value>
+  </data>
+  <data name="AttachmentIdDesc" xml:space="preserve">
+    <value>Attachment Id</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="NameDesc" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="AttachBasic" xml:space="preserve">
+    <value>Attach</value>
+  </data>
+  <data name="Method" xml:space="preserve">
+    <value>Method</value>
+  </data>
+  <data name="FSM" xml:space="preserve">
+    <value>FSM</value>
+  </data>
+  <data name="HTN" xml:space="preserve">
+    <value>HTN</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="Transition" xml:space="preserve">
+    <value>Transition</value>
+  </data>
+  <data name="CustomizedAgentError" xml:space="preserve">
+    <value>Found the customized agent : Please firstly integrate the generated source files of the customized agent into your game project. Then export it as meta info into the editor, reload the current workspace. At last, export the behaviors.</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="MethodWithSameDisplayName" xml:space="preserve">
+    <value>The methods "{0}" and "{1}" have the same display name "{2}". Please modify their display name, and then export them as the meta info.</value>
+  </data>
+  <data name="PressF1" xml:space="preserve">
+    <value>Click F1 to check its document.</value>
+  </data>
+  <data name="ReferencedTreeOrMethodNeeded" xml:space="preserve">
+    <value>You need to specify the Referencd Tree or provide a method to return it.</value>
+  </data>
+  <data name="ReferenceGenerator" xml:space="preserve">
+    <value>A method returning a string as the referenced behavior's path</value>
+  </data>
+  <data name="ReferenceGeneratorDesc" xml:space="preserve">
+    <value>A method returning a string as the referenced behavior's path</value>
+  </data>
+  <data name="InvalidMetaInfo" xml:space="preserve">
+    <value>The meta file is invalid : {0}
+Please reexport the meta with the latest runtime!</value>
+  </data>
+  <data name="AutoMergeMetaFilesInfo" xml:space="preserve">
+    <value>All meta files will be merged, and the previous mete files will be removed. Are you sure?</value>
+  </data>
+</root>

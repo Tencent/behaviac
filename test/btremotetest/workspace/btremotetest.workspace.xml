@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<workspace name="btremotetest" folder="..\..\demo_running\behaviac\behaviors" export="exported" language="cpp" version="3">
+  <export>
+    <cpp>
+      <isexported>False</isexported>
+      <exportfilecount>1</exportfilecount>
+      <folder>../exported</folder>
+      <includedfilenames>
+        <includedfilename>../../BTPlayer.h</includedfilename>
+      </includedfilenames>
+    </cpp>
+  </export>
+</workspace>

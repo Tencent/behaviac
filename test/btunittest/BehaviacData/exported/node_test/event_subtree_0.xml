@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\event_subtree_0.xml-->
+<behavior name="node_test/event_subtree_0" agenttype="AgentNodeTest" version="5">
+  <node class="Task" id="6">
+    <property Prototype="Self.AgentNodeTest::event_test_void()" />
+    <property IsHTN="false" />
+    <node class="Sequence" id="0">
+      <node class="True" id="1" />
+      <node class="Action" id="2">
+        <property Method="Self.AgentNodeTest::setEventVarBool(true)" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Wait" id="3">
+        <property Time="const float 5000" />
+      </node>
+    </node>
+  </node>
+</behavior>

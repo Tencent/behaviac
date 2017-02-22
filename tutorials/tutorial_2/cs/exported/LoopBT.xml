@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: LoopBT.xml-->
+<behavior name="LoopBT" agenttype="FirstAgent" version="5">
+  <node class="DecoratorLoop" id="1">
+    <property Count="const int 3" />
+    <property DecorateWhenChildEnds="true" />
+    <property DoneWithinFrame="false" />
+    <node class="Action" id="0">
+      <property Method="Self.FirstAgent::SayHello()" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+  </node>
+</behavior>

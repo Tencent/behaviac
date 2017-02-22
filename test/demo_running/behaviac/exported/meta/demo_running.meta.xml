@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<agents version="1" signature="2970163408">
+  <agent type="CBTPlayer" base="behaviac::Agent" signature="2259110346">
+    <properties>
+      <property name="m_Frames" type="int" member="true" static="false" agent="CBTPlayer" />
+      <property name="m_iBaseSpeed" type="uint" member="true" static="false" agent="CBTPlayer" />
+    </properties>
+  </agent>
+</agents>

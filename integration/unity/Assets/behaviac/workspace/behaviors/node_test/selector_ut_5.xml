@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Behavior Version="5">
+  <Node Class="Behaviac.Design.Nodes.Behavior" AgentType="AgentNodeTest" Domains="" Enable="true" HasOwnPrefabData="false" Id="-1" PrefabName="" PrefabNodeId="-1">
+    <Comment Background="NoColor" Text="" />
+    <DescriptorRefs value="0:" />
+    <Connector Identifier="GenericChildren">
+      <Node Class="PluginBehaviac.Nodes.Selector" Enable="true" HasOwnPrefabData="false" Id="2" PrefabName="" PrefabNodeId="-1">
+        <Comment Background="NoColor" Text="" />
+        <Connector Identifier="GenericChildren">
+          <Node Class="PluginBehaviac.Nodes.Selector" HasOwnPrefabData="false" Id="0" PrefabName="../Prefabs/pf_SelectorTest" PrefabNodeId="0">
+            <Comment Background="Gray" Text="Prefab[pf_SelectorTest]" />
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Selector" HasOwnPrefabData="false" Id="9" PrefabName="../Prefabs/pf_SelectorTest" PrefabNodeId="0">
+            <Comment Background="Gray" Text="Prefab[pf_SelectorTest]" />
+          </Node>
+        </Connector>
+      </Node>
+    </Connector>
+  </Node>
+</Behavior>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\selector_probability_ut_3.xml-->
+<behavior name="node_test/selector_probability_ut_3" agenttype="AgentNodeTest" version="5">
+  <node class="DecoratorLoop" id="4">
+    <property Count="const int 1" />
+    <property DecorateWhenChildEnds="true" />
+    <property DoneWithinFrame="false" />
+    <node class="SelectorProbability" id="0">
+      <node class="DecoratorWeight" id="5">
+        <property DecorateWhenChildEnds="false" />
+        <property Weight="const int 10" />
+        <node class="Sequence" id="7">
+          <node class="Compute" id="2">
+            <property Operator="Add" />
+            <property Opl="int Self.AgentNodeTest::testVar_0" />
+            <property Opr1="int Self.AgentNodeTest::testVar_0" />
+            <property Opr2="const int 1" />
+          </node>
+          <node class="WaitFrames" id="10">
+            <property Frames="const int 3" />
+          </node>
+          <node class="Compute" id="11">
+            <property Operator="Sub" />
+            <property Opl="int Self.AgentNodeTest::testVar_0" />
+            <property Opr1="int Self.AgentNodeTest::testVar_0" />
+            <property Opr2="const int 1" />
+          </node>
+        </node>
+      </node>
+      <node class="DecoratorWeight" id="6">
+        <property DecorateWhenChildEnds="false" />
+        <property Weight="const int 10" />
+        <node class="Sequence" id="8">
+          <node class="Compute" id="3">
+            <property Operator="Add" />
+            <property Opl="int Self.AgentNodeTest::testVar_1" />
+            <property Opr1="int Self.AgentNodeTest::testVar_1" />
+            <property Opr2="const int 1" />
+          </node>
+          <node class="WaitFrames" id="9">
+            <property Frames="const int 3" />
+          </node>
+          <node class="Compute" id="1">
+            <property Operator="Sub" />
+            <property Opl="int Self.AgentNodeTest::testVar_1" />
+            <property Opr1="int Self.AgentNodeTest::testVar_1" />
+            <property Opr2="const int 1" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</behavior>

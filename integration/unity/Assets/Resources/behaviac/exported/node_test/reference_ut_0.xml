@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\reference_ut_0.xml-->
+<behavior name="node_test/reference_ut_0" agenttype="AgentNodeTest" version="5">
+  <node class="ReferencedBehavior" id="1">
+    <property ReferenceBehavior="const string &quot;node_test/reference_sub_0&quot;" />
+    <property Task="Self.AgentNodeTest::task_test(1,1)" />
+  </node>
+</behavior>

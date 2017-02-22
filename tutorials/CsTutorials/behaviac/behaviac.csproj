@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5BEB8AFF-BA10-48C0-8104-17BE6706D97B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>behaviac</RootNamespace>
+    <AssemblyName>behaviac</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;BEHAVIAC_NOT_USE_UNITY</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="runtime\Agent\Agent.cs" />
+    <Compile Include="runtime\Agent\Context.cs" />
+    <Compile Include="runtime\Base\Attributs.cs" />
+    <Compile Include="runtime\Base\CRC32.cs" />
+    <Compile Include="runtime\Base\FileManager.cs" />
+    <Compile Include="runtime\Base\LogManager.cs" />
+    <Compile Include="runtime\Base\Member.cs" />
+    <Compile Include="runtime\Base\Meta.cs" />
+    <Compile Include="runtime\Base\MiniXml.cs" />
+    <Compile Include="runtime\Base\Operation.cs" />
+    <Compile Include="runtime\Base\Properties.cs" />
+    <Compile Include="runtime\Base\RandomGenerator.cs" />
+    <Compile Include="runtime\Base\socketconnect.cs" />
+    <Compile Include="runtime\Base\socketconnect_base.cs" />
+    <Compile Include="runtime\Base\Utils.cs" />
+    <Compile Include="runtime\BehaviorTree\Attachments\AttachAction.cs" />
+    <Compile Include="runtime\BehaviorTree\Attachments\Effector.cs" />
+    <Compile Include="runtime\BehaviorTree\Attachments\Event.cs" />
+    <Compile Include="runtime\BehaviorTree\Attachments\Precondition.cs" />
+    <Compile Include="runtime\BehaviorTree\BehaviorTree.cs" />
+    <Compile Include="runtime\BehaviorTree\BehaviorTree_task.cs" />
+    <Compile Include="runtime\BehaviorTree\Nodes\Actions\Action.cs" />
+    <Compile Include="runtime\BehaviorTree\Nodes\Actions\Assignment.cs" />
+    <Compile Include="runtime\BehaviorTree\Nodes\Actions\Compute.cs" />
+    <Compile Include="runtime\BehaviorTree\Nodes\Actions\Noop.cs" />
+    <Compile Include="runtime\BehaviorTree\Nodes\Actions\Wait.cs" />
+    <Compile Include="runtime\BehaviorTree\Nodes\Actions\Waitforsignal.cs" />
+    <Compile Include="runtime\BehaviorTree\Nodes\Actions\Waitframes.cs" />
+    <Compile Include="runtime\BehaviorTree\Nodes\Composites\Compositestochastic.cs" />
+    <Compile Include="runtime\BehaviorTree\Nodes\Composites\Ifelse.cs" />
+    <Compile Include="runtime\BehaviorTree\Nodes\Composites\Parallel.cs" />
+    <Compile Include="runtime\BehaviorTree\Nodes\Composites\Referencebehavior.cs" />
+    <Compile Include="runtime\BehaviorTree\Nodes\Composites\Selector.cs" />
+    <Compile Include="runtime\BehaviorTree\Nodes\Composites\Selectorloop.cs" />
+    <Compile Include="runtime\BehaviorTree\Nodes\Composites\Selectorprobability.cs" />
+    <Compile Include="runtime\BehaviorTree\Nodes\Composites\Selectorstochastic.cs" />
+    <Compile Include="runtime\BehaviorTree\Nodes\Composites\Sequence.cs" />
+    <Compile Include="runtime\BehaviorTree\Nodes\Composites\Sequencestochastic.cs" />
+    <Compile Include="runtime\BehaviorTree\Nodes\Composites\Withprecondition.cs" />
+    <Compile Include="runtime\BehaviorTree\Nodes\Conditions\And.cs" />
+    <Compile Include="runtime\BehaviorTree\Nodes\Conditions\Condition.cs" />
+    <Compile Include="runtime\BehaviorTree\Nodes\Conditions\Conditionbase.cs" />
+    <Compile Include="runtime\BehaviorTree\Nodes\Conditions\False.cs" />
+    <Compile Include="runtime\BehaviorTree\Nodes\Conditions\Or.cs" />
+    <Compile Include="runtime\BehaviorTree\Nodes\Conditions\True.cs" />
+    <Compile Include="runtime\BehaviorTree\Nodes\Decorators\Decoratoralwaysfailure.cs" />
+    <Compile Include="runtime\BehaviorTree\Nodes\Decorators\Decoratoralwaysrunning.cs" />
+    <Compile Include="runtime\BehaviorTree\Nodes\Decorators\Decoratoralwayssuccess.cs" />
+    <Compile Include="runtime\BehaviorTree\Nodes\Decorators\Decoratorcount.cs" />
+    <Compile Include="runtime\BehaviorTree\Nodes\Decorators\Decoratorcountlimit.cs" />
+    <Compile Include="runtime\BehaviorTree\Nodes\Decorators\Decoratorfailureuntil.cs" />
+    <Compile Include="runtime\BehaviorTree\Nodes\Decorators\Decoratorframes.cs" />
+    <Compile Include="runtime\BehaviorTree\Nodes\Decorators\DecoratorIterator.cs" />
+    <Compile Include="runtime\BehaviorTree\Nodes\Decorators\Decoratorlog.cs" />
+    <Compile Include="runtime\BehaviorTree\Nodes\Decorators\Decoratorloop.cs" />
+    <Compile Include="runtime\BehaviorTree\Nodes\Decorators\Decoratorloopuntil.cs" />
+    <Compile Include="runtime\BehaviorTree\Nodes\Decorators\Decoratornot.cs" />
+    <Compile Include="runtime\BehaviorTree\Nodes\Decorators\Decoratorrepeat.cs" />
+    <Compile Include="runtime\BehaviorTree\Nodes\Decorators\Decoratorsuccessuntil.cs" />
+    <Compile Include="runtime\BehaviorTree\Nodes\Decorators\Decoratortime.cs" />
+    <Compile Include="runtime\BehaviorTree\Nodes\Decorators\Decoratorweight.cs" />
+    <Compile Include="runtime\FSM\AlwaysTransition.cs" />
+    <Compile Include="runtime\FSM\FSM.cs" />
+    <Compile Include="runtime\FSM\StartCondition.cs" />
+    <Compile Include="runtime\FSM\State.cs" />
+    <Compile Include="runtime\FSM\TransitionCondition.cs" />
+    <Compile Include="runtime\FSM\WaitframesState.cs" />
+    <Compile Include="runtime\FSM\WaitState.cs" />
+    <Compile Include="runtime\FSM\WaitTransition.cs" />
+    <Compile Include="runtime\HTN\AgentState.cs" />
+    <Compile Include="runtime\HTN\Method.cs" />
+    <Compile Include="runtime\HTN\Planner.cs" />
+    <Compile Include="runtime\HTN\PlannerTask.cs" />
+    <Compile Include="runtime\HTN\Task.cs" />
+    <Compile Include="runtime\Workspace.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="runtime\license.txt" />
+    <Content Include="runtime\readme.txt" />
+    <Content Include="runtime\version.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

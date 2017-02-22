@@ -1,0 +1,749 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BehaviorGroupName" xml:space="preserve">
+    <value>行为树文件集</value>
+  </data>
+  <data name="DesignerTabName" xml:space="preserve">
+    <value>设计</value>
+  </data>
+  <data name="ExceptionCouldNotLoadPlugin" xml:space="preserve">
+    <value>Plugin could not be loaded as it does not contain the type {0}.</value>
+  </data>
+  <data name="ExceptionNodeCouldNotBeExtracted" xml:space="preserve">
+    <value>The node could not be extracted. Please check with Node.ParentCanAdoptChildren</value>
+  </data>
+  <data name="ExceptionNoSuchFile" xml:space="preserve">
+    <value>The file {0} does not exist.</value>
+  </data>
+  <data name="NewBehavior" xml:space="preserve">
+    <value>新建行为树</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="connect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\connect.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="disconnect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\disconnect.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="crashdump" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\crashdump.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Backward" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Backward.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="document_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\document_new.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="folder_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\folder_new.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Folder_Open" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Folder-Open.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Forward" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Forward.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pause" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pause.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Play" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Play.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Repeat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Repeat.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Search.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Skip_backward" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Skip-backward.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Skip_forward" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Skip-forward.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stop.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="File_Delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\File-Delete.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="File_Open" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\File-Open.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PrefabGroupName" xml:space="preserve">
+    <value>预制文件集</value>
+  </data>
+  <data name="NewPrefab" xml:space="preserve">
+    <value>新建预制</value>
+  </data>
+  <data name="prefab" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\prefab.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AnalyzeDump" xml:space="preserve">
+    <value>分析文件</value>
+  </data>
+  <data name="ConnectServer" xml:space="preserve">
+    <value>连接游戏</value>
+  </data>
+  <data name="DisconnectServer" xml:space="preserve">
+    <value>断开游戏</value>
+  </data>
+  <data name="StopAnalyzingDump" xml:space="preserve">
+    <value>终止分析导出文件</value>
+  </data>
+  <data name="DisableNode" xml:space="preserve">
+    <value>禁用</value>
+  </data>
+  <data name="EnableNode" xml:space="preserve">
+    <value>激活</value>
+  </data>
+  <data name="OpenReference" xml:space="preserve">
+    <value>打开引用行为树</value>
+  </data>
+  <data name="Properties" xml:space="preserve">
+    <value>属性</value>
+  </data>
+  <data name="PropertiesOf" xml:space="preserve">
+    <value>{0}的属性</value>
+  </data>
+  <data name="SaveReference" xml:space="preserve">
+    <value>另存为引用行为树</value>
+  </data>
+  <data name="OpenDumpFile" xml:space="preserve">
+    <value>打开导出文件</value>
+  </data>
+  <data name="SelectBehaviorFolder" xml:space="preserve">
+    <value>选择行为树文件夹</value>
+  </data>
+  <data name="SelectExportFolder" xml:space="preserve">
+    <value>选择导出文件夹</value>
+  </data>
+  <data name="SelectWorkspaceFolder" xml:space="preserve">
+    <value>选择工作区文件夹</value>
+  </data>
+  <data name="SelectXMLPluginsFolder" xml:space="preserve">
+    <value>选择XML元数据文件夹</value>
+  </data>
+  <data name="LanguageChangedWarning" xml:space="preserve">
+    <value>语言设置将在下次打开编辑器时生效。</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>警告</value>
+  </data>
+  <data name="SaveAsPrefab" xml:space="preserve">
+    <value>另存为预制</value>
+  </data>
+  <data name="SaveAsReference" xml:space="preserve">
+    <value>另存为引用行为树</value>
+  </data>
+  <data name="SaveBehaviorAs" xml:space="preserve">
+    <value>行为树另存为</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="Pars" xml:space="preserve">
+    <value>变量</value>
+  </data>
+  <data name="ParsOf" xml:space="preserve">
+    <value>{0}的par</value>
+  </data>
+  <data name="ActionName" xml:space="preserve">
+    <value>操作名称</value>
+  </data>
+  <data name="ActionResult" xml:space="preserve">
+    <value>执行结果</value>
+  </data>
+  <data name="BehaviorFilename" xml:space="preserve">
+    <value>行为树文件名</value>
+  </data>
+  <data name="Enable" xml:space="preserve">
+    <value>激活</value>
+  </data>
+  <data name="HitCount" xml:space="preserve">
+    <value>触发次数</value>
+  </data>
+  <data name="NodeId" xml:space="preserve">
+    <value>节点ID</value>
+  </data>
+  <data name="NodeType" xml:space="preserve">
+    <value>节点类型</value>
+  </data>
+  <data name="BehaviacDesigner" xml:space="preserve">
+    <value>行为树编辑器</value>
+  </data>
+  <data name="BehaviorError" xml:space="preserve">
+    <value>行为树错误</value>
+  </data>
+  <data name="DeleteAllBreakpoints" xml:space="preserve">
+    <value>删除全部断点</value>
+  </data>
+  <data name="DeleteAllBreakpointsWarning" xml:space="preserve">
+    <value>确认删除全部断点吗？</value>
+  </data>
+  <data name="DeleteBreakpointsWarning" xml:space="preserve">
+    <value>确认删除选中的断点吗？</value>
+  </data>
+  <data name="DeleteSelectedBreakpoints" xml:space="preserve">
+    <value>删除选中的断点</value>
+  </data>
+  <data name="ExportBehaviorError" xml:space="preserve">
+    <value>不能导出{0}，因为该文件有错误。请先检查该行为树的错误！</value>
+  </data>
+  <data name="ExportError" xml:space="preserve">
+    <value>导出错误</value>
+  </data>
+  <data name="ExportWarning" xml:space="preserve">
+    <value>导出警告</value>
+  </data>
+  <data name="ExportWarningInfo" xml:space="preserve">
+    <value>当前行为树文件有一些警告信息。
+
+是：强制导出
+否：查看警告</value>
+  </data>
+  <data name="FileError" xml:space="preserve">
+    <value>文件错误</value>
+  </data>
+  <data name="LatestVersionInfo" xml:space="preserve">
+    <value>你的版本{0}已是最新的。</value>
+  </data>
+  <data name="LoadError" xml:space="preserve">
+    <value>加载错误</value>
+  </data>
+  <data name="NewerVersionFound" xml:space="preserve">
+    <value>发现更新版本</value>
+  </data>
+  <data name="NewerVersionInfo" xml:space="preserve">
+    <value>找到更新版本{0}，需要下载吗？
+
+{1}</value>
+  </data>
+  <data name="NoBehaviorInfo" xml:space="preserve">
+    <value>没有找到该文件： {0} {1}</value>
+  </data>
+  <data name="ParErrorInfo" xml:space="preserve">
+    <value>{1}中的par{0}已经存在于{2}中，请尝试其他预制文件！</value>
+  </data>
+  <data name="PluginError" xml:space="preserve">
+    <value>插件错误</value>
+  </data>
+  <data name="SaveError" xml:space="preserve">
+    <value>保存错误</value>
+  </data>
+  <data name="FileModified" xml:space="preserve">
+    <value>行为树文件修改后需要重新导出</value>
+  </data>
+  <data name="FileModifiedInfo" xml:space="preserve">
+    <value>行为树文件{0}可能已被修改。
+请重新导出该文件并重启游戏，否则可能会引起问题</value>
+  </data>
+  <data name="IncompatibleWorkspace" xml:space="preserve">
+    <value>不兼容的工作区</value>
+  </data>
+  <data name="ParWarning" xml:space="preserve">
+    <value>变量警告</value>
+  </data>
+  <data name="ParWarningInfo" xml:space="preserve">
+    <value>变量名"{0}"已经存在，请输入新的名字！</value>
+  </data>
+  <data name="WorkspaceChangedInfo" xml:space="preserve">
+    <value>工作区从"{0}"切换到"{1}"</value>
+  </data>
+  <data name="WorkspaceWarningInfo" xml:space="preserve">
+    <value>选择打开的工作区:
+'{0}'
+不是游戏所用的工作区:
+'{1}'</value>
+  </data>
+  <data name="FileWarning" xml:space="preserve">
+    <value>文件警告</value>
+  </data>
+  <data name="LoadWorkspaceError" xml:space="preserve">
+    <value>加载工作区文件{0}失败，请检查！</value>
+  </data>
+  <data name="Menu_CloseBehavior" xml:space="preserve">
+    <value>关闭{0}</value>
+  </data>
+  <data name="Menu_CloseBehavior_Default" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="Menu_ExportBehavior" xml:space="preserve">
+    <value>导出{0}...</value>
+  </data>
+  <data name="Menu_ExportBehavior_Default" xml:space="preserve">
+    <value>导出...</value>
+  </data>
+  <data name="Menu_SaveBehavior" xml:space="preserve">
+    <value>保存{0}</value>
+  </data>
+  <data name="Menu_SaveBehaviorAs" xml:space="preserve">
+    <value>另存为{0}...</value>
+  </data>
+  <data name="Menu_SaveBehaviorAs_Default" xml:space="preserve">
+    <value>另存为...</value>
+  </data>
+  <data name="Menu_SaveBehavior_Default" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="ErrorList" xml:space="preserve">
+    <value>信息</value>
+  </data>
+  <data name="Output" xml:space="preserve">
+    <value>输出</value>
+  </data>
+  <data name="ErrorCheck" xml:space="preserve">
+    <value>错误检查</value>
+  </data>
+  <data name="all" xml:space="preserve">
+    <value>全部</value>
+  </data>
+  <data name="enter" xml:space="preserve">
+    <value>进入</value>
+  </data>
+  <data name="exit" xml:space="preserve">
+    <value>离开</value>
+  </data>
+  <data name="failure" xml:space="preserve">
+    <value>失败</value>
+  </data>
+  <data name="success" xml:space="preserve">
+    <value>成功</value>
+  </data>
+  <data name="DeleteWarning" xml:space="preserve">
+    <value>删除警告</value>
+  </data>
+  <data name="DeleteWarningInfo" xml:space="preserve">
+    <value>确定删除行为树文件"{0}"吗？</value>
+  </data>
+  <data name="DeleteFolderWarningInfo" xml:space="preserve">
+    <value>确定删除文件夹"{0}"及其里面的所有行为树文件吗？</value>
+  </data>
+  <data name="WorkspaceNameWarning" xml:space="preserve">
+    <value>请先设置新工作区的名字和位置！</value>
+  </data>
+  <data name="WorkspaceSettingWarning" xml:space="preserve">
+    <value>请从上往下依次设置新工作区的名字、工作区位置和元数据位置！</value>
+  </data>
+  <data name="BreakpointsHide" xml:space="preserve">
+    <value>隐藏视口中的断点</value>
+  </data>
+  <data name="BreakpointsShow" xml:space="preserve">
+    <value>显示视口中的断点</value>
+  </data>
+  <data name="FilenameWarningInfo" xml:space="preserve">
+    <value>文件名"{0}"已经存在，请输入其他名字！</value>
+  </data>
+  <data name="DirectoryWarningInfo" xml:space="preserve">
+    <value>文件夹"{0}"已经存在，请输入其他名字！</value>
+  </data>
+  <data name="DebugOperation" xml:space="preserve">
+    <value>双击实例开始调试</value>
+  </data>
+  <data name="WorkspaceError" xml:space="preserve">
+    <value>工作区设置错误</value>
+  </data>
+  <data name="FindWarning" xml:space="preserve">
+    <value>查找结果</value>
+  </data>
+  <data name="FindWarningInfo" xml:space="preserve">
+    <value>没有找到符合条件的对象！</value>
+  </data>
+  <data name="WorkspaceExportRootWarning" xml:space="preserve">
+    <value>工作区和导出位置必须在同一个盘符下</value>
+  </data>
+  <data name="WorkspaceSourceRootWarning" xml:space="preserve">
+    <value>工作区和源位置必须在同一个盘符下</value>
+  </data>
+  <data name="WorkspaceEditTiltle" xml:space="preserve">
+    <value>编辑工作区</value>
+  </data>
+  <data name="WorkspaceXmlMetaRootWarning" xml:space="preserve">
+    <value>工作区和类型信息位置必须在同一个盘符下</value>
+  </data>
+  <data name="NormalMode" xml:space="preserve">
+    <value>Normal模式[Alt键切换到Pan模式]：鼠标中键拖拽为平移，中键滚动为缩放</value>
+  </data>
+  <data name="PanMode" xml:space="preserve">
+    <value>Pan模式[Alt键切换到Normal模式]：鼠标左键拖拽为平移，右键拖拽为缩放</value>
+  </data>
+  <data name="FileCountInfo" xml:space="preserve">
+    <value>个文件</value>
+  </data>
+  <data name="FindAll" xml:space="preserve">
+    <value>查找所有</value>
+  </data>
+  <data name="FindNext" xml:space="preserve">
+    <value>下一个</value>
+  </data>
+  <data name="FindResults" xml:space="preserve">
+    <value>查找结果</value>
+  </data>
+  <data name="FindResultsInfo" xml:space="preserve">
+    <value>查找所有: "{0}",  匹配的节点数: {1},  匹配的文件数: {2},  搜索的总文件数: {3}</value>
+  </data>
+  <data name="ExportFileCountInfo" xml:space="preserve">
+    <value>{0}个导出文件， {1}个无效文件</value>
+  </data>
+  <data name="CircularReferencedInfo" xml:space="preserve">
+    <value>当前添加的行为树节点将被循环引用，确定添加吗？</value>
+  </data>
+  <data name="Operand1" xml:space="preserve">
+    <value>参数1</value>
+  </data>
+  <data name="Operand2" xml:space="preserve">
+    <value>参数2</value>
+  </data>
+  <data name="OperandDesc1" xml:space="preserve">
+    <value>参数1</value>
+  </data>
+  <data name="OperandDesc2" xml:space="preserve">
+    <value>参数2</value>
+  </data>
+  <data name="ThisIsReferenceTree" xml:space="preserve">
+    <value>这是一棵子树</value>
+  </data>
+  <data name="AgentErrorInfo" xml:space="preserve">
+    <value>行为树{1}中的{0}类型不是从行为树{3}中的{2}类型继承出来， 请加载另一个行为树文件！</value>
+  </data>
+  <data name="OpenPrefab" xml:space="preserve">
+    <value>打开预制行为树</value>
+  </data>
+  <data name="SavePrefab" xml:space="preserve">
+    <value>另存为预制行为树</value>
+  </data>
+  <data name="EditPar" xml:space="preserve">
+    <value>编辑Par</value>
+  </data>
+  <data name="NewPar" xml:space="preserve">
+    <value>新建Par</value>
+  </data>
+  <data name="MetaStore" xml:space="preserve">
+    <value>类型信息</value>
+  </data>
+  <data name="LayoutResetWarning" xml:space="preserve">
+    <value>编辑器的窗口布局将被重置，确定吗？</value>
+  </data>
+  <data name="ExpandAllInfo" xml:space="preserve">
+    <value>按住Ctrl键并点击可以展开/收起当前节点的所有子节点</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>关于</value>
+  </data>
+  <data name="AddType" xml:space="preserve">
+    <value>新增类型</value>
+  </data>
+  <data name="AddEvent" xml:space="preserve">
+    <value>新增事件</value>
+  </data>
+  <data name="AddMethod" xml:space="preserve">
+    <value>新增方法</value>
+  </data>
+  <data name="AddProperty" xml:space="preserve">
+    <value>新增属性</value>
+  </data>
+  <data name="AddTask" xml:space="preserve">
+    <value>新增任务</value>
+  </data>
+  <data name="EditType" xml:space="preserve">
+    <value>编辑类型</value>
+  </data>
+  <data name="EditEvent" xml:space="preserve">
+    <value>编辑事件</value>
+  </data>
+  <data name="EditMethod" xml:space="preserve">
+    <value>编辑方法</value>
+  </data>
+  <data name="EditProperty" xml:space="preserve">
+    <value>编辑定制属性</value>
+  </data>
+  <data name="EditTask" xml:space="preserve">
+    <value>编辑任务</value>
+  </data>
+  <data name="MetaSaveInfo" xml:space="preserve">
+    <value>类型信息已被修改，需要保存吗？</value>
+  </data>
+  <data name="RemoveParametersInfo" xml:space="preserve">
+    <value>确定删除所有选中的参数吗？</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>编辑</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>查看</value>
+  </data>
+  <data name="AddLocalProperty" xml:space="preserve">
+    <value>新增局部变量</value>
+  </data>
+  <data name="EditLocalProperty" xml:space="preserve">
+    <value>编辑局部变量</value>
+  </data>
+  <data name="ExpandConnectorInfo" xml:space="preserve">
+    <value>中断条件：点击这里，来展开或收起附属的条件节点</value>
+  </data>
+  <data name="EventParametersInfo" xml:space="preserve">
+    <value>事件的参数个数不能多于3个</value>
+  </data>
+  <data name="MethodParametersInfo" xml:space="preserve">
+    <value>方法的参数个数不能多于8个</value>
+  </data>
+  <data name="SubTreeHasNoTaskError" xml:space="preserve">
+    <value>{0} 不能被用作子树，只有根节点是‘任务’节点的树才能作为子树。</value>
+  </data>
+  <data name="DesignerError" xml:space="preserve">
+    <value>错误</value>
+  </data>
+  <data name="ViewLocalProperty" xml:space="preserve">
+    <value>查看局部变量</value>
+  </data>
+  <data name="ViewProperty" xml:space="preserve">
+    <value>查看属性</value>
+  </data>
+  <data name="ModifyMemberWarning" xml:space="preserve">
+    <value>该成员已被使用中，确定继续吗？</value>
+  </data>
+  <data name="Callstack" xml:space="preserve">
+    <value>调用堆栈</value>
+  </data>
+  <data name="OpenLogFile" xml:space="preserve">
+    <value>打开日志文件</value>
+  </data>
+  <data name="AnalyzeLog" xml:space="preserve">
+    <value>分析日志文件</value>
+  </data>
+  <data name="StopAnalyzingLog" xml:space="preserve">
+    <value>终止分析日志文件</value>
+  </data>
+  <data name="EmptyMetaWarning" xml:space="preserve">
+    <value>可能没有加载类型信息，请检查！</value>
+  </data>
+  <data name="FilenameWarning" xml:space="preserve">
+    <value>行为树的名字只能是ascii字符，并且只能包括字母、数字或下划线。</value>
+  </data>
+  <data name="AddEnum" xml:space="preserve">
+    <value>新增枚举</value>
+  </data>
+  <data name="AddEnumMember" xml:space="preserve">
+    <value>新增枚举成员</value>
+  </data>
+  <data name="AddStruct" xml:space="preserve">
+    <value>新增结构体</value>
+  </data>
+  <data name="AddStructMember" xml:space="preserve">
+    <value>新增结构体成员</value>
+  </data>
+  <data name="EditEnum" xml:space="preserve">
+    <value>编辑枚举</value>
+  </data>
+  <data name="EditEnumMember" xml:space="preserve">
+    <value>编辑枚举成员</value>
+  </data>
+  <data name="EditStruct" xml:space="preserve">
+    <value>编辑结构体</value>
+  </data>
+  <data name="EditStructMember" xml:space="preserve">
+    <value>编辑结构体成员</value>
+  </data>
+  <data name="PropertyVerifyWarning" xml:space="preserve">
+    <value>请为属性设置正确的名字和类型。</value>
+  </data>
+  <data name="MethodVerifyWarning" xml:space="preserve">
+    <value>请为方法设置正确的名字、返回值类型和参数。</value>
+  </data>
+  <data name="EnumMemberVerifyWarning" xml:space="preserve">
+    <value>请问枚举变量设置正确的名字。</value>
+  </data>
+  <data name="TypeRemoveWarning" xml:space="preserve">
+    <value>确定删除该类型吗？</value>
+  </data>
+  <data name="TypeVerifyWarning" xml:space="preserve">
+    <value>请为类型设置正确的名字。</value>
+  </data>
+  <data name="WorkspaceLoadError" xml:space="preserve">
+    <value>工作区 {0}加载失败！</value>
+  </data>
+  <data name="WorkspaceDebugErrorInfo" xml:space="preserve">
+    <value>找不到行为树文件："{0}" 
+
+请确保提前打开运行时端所用的工作区。</value>
+  </data>
+  <data name="EnableDesc" xml:space="preserve">
+    <value>激活或者禁用自己</value>
+  </data>
+  <data name="ExportBehaviors" xml:space="preserve">
+    <value>选择需要导出的行为树:</value>
+  </data>
+  <data name="FaultBehaviors" xml:space="preserve">
+    <value>有错误的行为树:</value>
+  </data>
+  <data name="InvalidExportedTypePath" xml:space="preserve">
+    <value>还未设置类型导出的位置，请去"编辑工作区"窗口设置该路径！</value>
+  </data>
+  <data name="ExportMessages" xml:space="preserve">
+    <value>导出类型 '{0}'</value>
+  </data>
+  <data name="MessageOutput" xml:space="preserve">
+    <value>输出</value>
+  </data>
+  <data name="MessageBTExport" xml:space="preserve">
+    <value>导出行为树: {0}</value>
+  </data>
+  <data name="SetMetaFile" xml:space="preserve">
+    <value>选择类型信息文件</value>
+  </data>
+  <data name="IsTypeImplemented" xml:space="preserve">
+    <value>是否生成类型代码文件？
+    如果选择生成，则对应类型（class）文件将在配置的代码生成位置生成，程序员可能需要修改之。
+    如果选择不生成，则需要程序员自己维护该类型，可以使用‘预览代码’按钮来参考将要生成的代码。</value>
+  </data>
+  <data name="SetHeaderFiles" xml:space="preserve">
+    <value>如果有依赖来自程序端的类型，则在这里设置所需的C++头文件</value>
+  </data>
+  <data name="LoadWarning" xml:space="preserve">
+    <value>加载警告</value>
+  </data>
+  <data name="MetaWarning" xml:space="preserve">
+    <value>你的workspace文件将被更新：
+
+1. 原有的类型信息文件将不再使用，游戏端也不用需要导出类型信息。
+2. 需要在弹出的类型信息浏览器中点击“应用”，以便将类型信息生成代码文件。
+3. 在工作区配置的“代码生成位置”的目录中，将会生成所有的代码文件，包含‘胶水’代码。
+4. 请将这些代码文件添加到项目并且编译构建。如果有编译错误请直接注释掉出错的代码。请参考下面的链接获取详情。
+5. 重新导出所有的行为树。然后就可以运行程序了。
+
+更多详情请参考：http://www.behaviac.com/language/zh/updatenotes/#36x</value>
+  </data>
+  <data name="PreviewCode" xml:space="preserve">
+    <value>预览选中类型的原型代码，该代码内容不包含用于合并代码所需的标签注释。
+    当没有‘生成代码’的时候，程序员可以参考该代码来写自己维护的类型代码。</value>
+  </data>
+  <data name="UseIntValueInfo" xml:space="preserve">
+    <value>是否使用整数值，主要用于等待节点。如果勾选上该选项，则说明等待节点使用了整数值来表示等待的时间，否则使用浮点数值。</value>
+  </data>
+  <data name="ClearGeneratedCodesInfo" xml:space="preserve">
+    <value>确定删除目录"{0}"中生成的所有代码文件吗？</value>
+  </data>
+  <data name="ModifyTypeWarning" xml:space="preserve">
+    <value>该类型已被使用中，确定继续吗？</value>
+  </data>
+</root>

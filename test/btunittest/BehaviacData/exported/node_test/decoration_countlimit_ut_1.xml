@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\decoration_countlimit_ut_1.xml-->
+<behavior name="node_test/decoration_countlimit_ut_1" agenttype="AgentNodeTest" version="5">
+  <node class="Selector" id="0">
+    <node class="DecoratorCountLimit" id="1">
+      <property Count="const int 5" />
+      <property DecorateWhenChildEnds="true" />
+      <custom>
+        <node class="Condition" id="4">
+          <property Operator="Equal" />
+          <property Opl="int Self.AgentNodeTest::testVar_1" />
+          <property Opr="const int 0" />
+        </node>
+      </custom>
+      <node class="Action" id="2">
+        <property Method="Self.AgentNodeTest::setTestVar_0(0)" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+    </node>
+    <node class="Action" id="3">
+      <property Method="Self.AgentNodeTest::setTestVar_0(1)" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+  </node>
+</behavior>

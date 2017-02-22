@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\selector_loop_ut_7.xml-->
+<behavior name="node_test/selector_loop_ut_7" agenttype="AgentNodeTest" version="5">
+  <node class="Sequence" id="15">
+    <node class="Action" id="16">
+      <property Method="Self.AgentNodeTest::SelectTarget()" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+    <node class="Assignment" id="21">
+      <property CastRight="false" />
+      <property Opl="int Self.AgentNodeTest::testVar_1" />
+      <property Opr="const int 0" />
+    </node>
+    <node class="Selector" id="10">
+      <node class="DecoratorLoop" id="9">
+        <property Count="const int -1" />
+        <property DecorateWhenChildEnds="false" />
+        <property DoneWithinFrame="false" />
+        <attachment class="Precondition" id="14" flag="precondition">
+          <property BinaryOperator="And" />
+          <property Operator="Equal" />
+          <property Opl="Self.AgentNodeTest::IsTargetValid()" />
+          <property Opr2="const bool true" />
+          <property Phase="Both" />
+        </attachment>
+        <attachment class="Precondition" id="17" flag="precondition">
+          <property BinaryOperator="And" />
+          <property Operator="Add" />
+          <property Opl="int Self.AgentNodeTest::testVar_1" />
+          <property Opr1="int Self.AgentNodeTest::testVar_1" />
+          <property Opr2="const int 1" />
+          <property Phase="Update" />
+        </attachment>
+        <attachment class="Effector" id="18" flag="effector">
+          <property Operator="Assign" />
+          <property Opl="int Self.AgentNodeTest::testVar_1" />
+          <property Opr2="const int 0" />
+          <property Phase="Success" />
+        </attachment>
+        <node class="SelectorLoop" id="0">
+          <node class="WithPrecondition" id="1">
+            <node class="Condition" id="4">
+              <property Operator="Equal" />
+              <property Opl="Self.AgentNodeTest::CanSeeEnemy()" />
+              <property Opr="const bool true" />
+            </node>
+            <node class="Action" id="5">
+              <property Method="Self.AgentNodeTest::Move()" />
+              <property ResultOption="BT_INVALID" />
+              <attachment class="Precondition" id="7" flag="precondition">
+                <property BinaryOperator="And" />
+                <property Operator="Assign" />
+                <property Opl="int Self.AgentNodeTest::testVar_0" />
+                <property Opr2="const int 1" />
+                <property Phase="Update" />
+              </attachment>
+            </node>
+          </node>
+          <node class="WithPrecondition" id="2">
+            <node class="True" id="3" />
+            <node class="Action" id="6">
+              <property Method="Self.AgentNodeTest::MoveToTarget()" />
+              <property ResultOption="BT_INVALID" />
+              <attachment class="Precondition" id="8" flag="precondition">
+                <property BinaryOperator="And" />
+                <property Operator="Assign" />
+                <property Opl="int Self.AgentNodeTest::testVar_0" />
+                <property Opr2="const int 2" />
+                <property Phase="Update" />
+              </attachment>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node class="Sequence" id="11">
+        <attachment class="Precondition" id="19" flag="precondition">
+          <property BinaryOperator="And" />
+          <property Operator="Assign" />
+          <property Opl="int Self.AgentNodeTest::testVar_1" />
+          <property Opr2="const int 1" />
+          <property Phase="Enter" />
+        </attachment>
+        <node class="Action" id="12">
+          <property Method="Self.AgentNodeTest::Stop()" />
+          <property ResultOption="BT_SUCCESS" />
+          <attachment class="Precondition" id="20" flag="precondition">
+            <property BinaryOperator="And" />
+            <property Operator="Add" />
+            <property Opl="int Self.AgentNodeTest::testVar_1" />
+            <property Opr1="int Self.AgentNodeTest::testVar_1" />
+            <property Opr2="const int 1" />
+            <property Phase="Enter" />
+          </attachment>
+        </node>
+        <node class="Action" id="13">
+          <property Method="Self.AgentNodeTest::SelectTarget()" />
+          <property ResultOption="BT_SUCCESS" />
+          <attachment class="Precondition" id="22" flag="precondition">
+            <property BinaryOperator="And" />
+            <property Operator="Add" />
+            <property Opl="int Self.AgentNodeTest::testVar_1" />
+            <property Opr1="int Self.AgentNodeTest::testVar_1" />
+            <property Opr2="const int 1" />
+            <property Phase="Enter" />
+          </attachment>
+        </node>
+      </node>
+    </node>
+  </node>
+</behavior>

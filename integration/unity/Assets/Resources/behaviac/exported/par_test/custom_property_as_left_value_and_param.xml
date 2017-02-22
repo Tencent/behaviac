@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: par_test\custom_property_as_left_value_and_param.xml-->
+<behavior name="par_test/custom_property_as_left_value_and_param" agenttype="CustomPropertyAgent" version="5">
+  <pars>
+    <par name="l_Int" type="int" value="1" />
+    <par name="l_Location" type="UnityEngine::Vector3" value="{x=0;y=0;z=0;}" />
+  </pars>
+  <node class="Sequence" id="5">
+    <node class="Sequence" id="13">
+      <node class="Assignment" id="0">
+        <property CastRight="false" />
+        <property Opl="bool Self.CustomPropertyAgent::c_Bool" />
+        <property Opr="const bool true" />
+      </node>
+      <node class="Assignment" id="1">
+        <property CastRight="false" />
+        <property Opl="vector&lt;int&gt; Self.CustomPropertyAgent::c_IntArray" />
+        <property Opr="const vector&lt;int&gt; 2:1|2" />
+      </node>
+      <node class="Assignment" id="2">
+        <property CastRight="false" />
+        <property Opl="static string Self.CustomPropertyAgent::c_StaticString" />
+        <property Opr="const string &quot;test string&quot;" />
+      </node>
+      <node class="Assignment" id="3">
+        <property CastRight="false" />
+        <property Opl="TNS::NE::NAT::eColor Self.CustomPropertyAgent::c_Enum" />
+        <property Opr="const TNS::NE::NAT::eColor GREEN" />
+      </node>
+      <node class="Assignment" id="4">
+        <property CastRight="false" />
+        <property Opl="int Self.CustomPropertyAgent::l_Int" />
+        <property Opr="const int 2" />
+      </node>
+      <node class="Assignment" id="11">
+        <property CastRight="false" />
+        <property Opl="UnityEngine::Vector3 Self.CustomPropertyAgent::Location" />
+        <property Opr="const UnityEngine::Vector3 {x=1;y=1;z=1;}" />
+      </node>
+      <node class="Assignment" id="8">
+        <property CastRight="false" />
+        <property Opl="UnityEngine::Vector3 Self.CustomPropertyAgent::c_Location" />
+        <property Opr="UnityEngine::Vector3 Self.CustomPropertyAgent::Location" />
+      </node>
+      <node class="Assignment" id="9">
+        <property CastRight="false" />
+        <property Opl="UnityEngine::Vector3 Self.CustomPropertyAgent::l_Location" />
+        <property Opr="const UnityEngine::Vector3 {x=2;y=2;z=2;}" />
+      </node>
+      <node class="Assignment" id="10">
+        <property CastRight="false" />
+        <property Opl="UnityEngine::Vector3 Self.CustomPropertyAgent::Location" />
+        <property Opr="UnityEngine::Vector3 Self.CustomPropertyAgent::l_Location" />
+      </node>
+    </node>
+    <node class="DecoratorLoop" id="6">
+      <property Count="const int -1" />
+      <property DecorateWhenChildEnds="true" />
+      <property DoneWithinFrame="false" />
+      <node class="Noop" id="7" />
+    </node>
+  </node>
+</behavior>

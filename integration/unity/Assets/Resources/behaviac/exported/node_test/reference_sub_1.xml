@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\reference_sub_1.xml-->
+<behavior name="node_test/reference_sub_1" agenttype="AgentNodeTest" version="5">
+  <pars>
+    <par name="_$local_task_param_$_0" type="int" value="0" />
+    <par name="_$local_task_param_$_1" type="float" value="0" />
+  </pars>
+  <node class="False" id="0" />
+</behavior>

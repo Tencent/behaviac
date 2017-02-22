@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: par_test\register_name_as_left_value_and_param.xml-->
+<behavior name="par_test/register_name_as_left_value_and_param" agenttype="EmployeeParTestAgent" version="5">
+  <node class="Sequence" id="0">
+    <node class="Assignment" id="1">
+      <property CastRight="false" />
+      <property Opl="static TNS::ST::PER::WRK::kEmployee ParTestRegNameAgent.ParTestRegNameAgent::STV_KEMPLOYEE_0" />
+      <property Opr="ParTestRegNameAgent.ParTestRegNameAgent::Func_kEmployeeIR(static TNS::ST::PER::WRK::kEmployee ParTestRegNameAgent.ParTestRegNameAgent::STV_KEMPLOYEE_0)" />
+    </node>
+    <node class="Assignment" id="4">
+      <property CastRight="false" />
+      <property Opl="static vector&lt;TNS::ST::PER::WRK::kEmployee&gt; ParTestRegNameAgent.ParTestRegNameAgent::STV_LIST_KEMPLOYEE_0" />
+      <property Opr="ParTestRegNameAgent.ParTestRegNameAgent::Func_kEmployeeListIR(static vector&lt;TNS::ST::PER::WRK::kEmployee&gt; ParTestRegNameAgent.ParTestRegNameAgent::STV_LIST_KEMPLOYEE_0)" />
+    </node>
+    <node class="Assignment" id="5">
+      <property CastRight="false" />
+      <property Opl="static vector&lt;sbyte&gt; ParTestRegNameAgent.ParTestRegNameAgent::STV_LIST_SBYTE_0" />
+      <property Opr="ParTestRegNameAgent.ParTestRegNameAgent::Func_SByteListIR(static vector&lt;sbyte&gt; ParTestRegNameAgent.ParTestRegNameAgent::STV_LIST_SBYTE_0)" />
+    </node>
+    <node class="Assignment" id="6">
+      <property CastRight="false" />
+      <property Opl="behaviac::Agent ParTestRegNameAgent.ParTestRegNameAgent::TV_AGENT_0" />
+      <property Opr="ParTestRegNameAgent.ParTestRegNameAgent::Func_AgentIR(behaviac::Agent ParTestRegNameAgent.ParTestRegNameAgent::TV_AGENT_0)" />
+    </node>
+    <node class="Assignment" id="7">
+      <property CastRight="false" />
+      <property Opl="ubyte ParTestRegNameAgent.ParTestRegNameAgent::TV_BYTE_0" />
+      <property Opr="ParTestRegNameAgent.ParTestRegNameAgent::Func_ByteIR(ubyte ParTestRegNameAgent.ParTestRegNameAgent::TV_BYTE_0)" />
+    </node>
+    <node class="Assignment" id="8">
+      <property CastRight="false" />
+      <property Opl="char ParTestRegNameAgent.ParTestRegNameAgent::TV_CHAR_0" />
+      <property Opr="ParTestRegNameAgent.ParTestRegNameAgent::Func_CharIR(char ParTestRegNameAgent.ParTestRegNameAgent::TV_CHAR_0)" />
+    </node>
+    <node class="Assignment" id="9">
+      <property CastRight="false" />
+      <property Opl="TNS::ST::PER::WRK::kEmployee ParTestRegNameAgent.ParTestRegNameAgent::TV_KEMPLOYEE_0" />
+      <property Opr="ParTestRegNameAgent.ParTestRegNameAgent::Func_kEmployeeIR(TNS::ST::PER::WRK::kEmployee ParTestRegNameAgent.ParTestRegNameAgent::TV_KEMPLOYEE_0)" />
+    </node>
+    <node class="Assignment" id="10">
+      <property CastRight="false" />
+      <property Opl="vector&lt;TNS::ST::PER::WRK::kEmployee&gt; ParTestRegNameAgent.ParTestRegNameAgent::TV_LIST_KEMPLOYEE_0" />
+      <property Opr="ParTestRegNameAgent.ParTestRegNameAgent::Func_kEmployeeListIR(vector&lt;TNS::ST::PER::WRK::kEmployee&gt; ParTestRegNameAgent.ParTestRegNameAgent::TV_LIST_KEMPLOYEE_0)" />
+    </node>
+    <node class="Assignment" id="11">
+      <property CastRight="false" />
+      <property Opl="sbyte ParTestRegNameAgent.ParTestRegNameAgent::TV_SBYTE_0" />
+      <property Opr="ParTestRegNameAgent.ParTestRegNameAgent::Func_SByteIR(sbyte ParTestRegNameAgent.ParTestRegNameAgent::TV_SBYTE_0)" />
+    </node>
+    <node class="Assignment" id="12">
+      <property CastRight="false" />
+      <property Opl="string ParTestRegNameAgent.ParTestRegNameAgent::TV_STR_0" />
+      <property Opr="ParTestRegNameAgent.ParTestRegNameAgent::Func_StringIR(string ParTestRegNameAgent.ParTestRegNameAgent::TV_STR_0)" />
+    </node>
+  </node>
+</behavior>

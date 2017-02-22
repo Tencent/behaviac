@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Behavior Version="5">
+  <Node Class="Behaviac.Design.Nodes.Behavior" AgentType="AgentNodeTest" Domains="" Enable="true" HasOwnPrefabData="false" Id="-1" PrefabName="" PrefabNodeId="-1">
+    <Comment Background="NoColor" Text="" />
+    <DescriptorRefs value="0:" />
+    <Connector Identifier="GenericChildren">
+      <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="0" PrefabName="" PrefabNodeId="-1">
+        <Comment Background="NoColor" Text="" />
+        <Attachment Class="Behaviac.Design.Attachments.Event" Enable="true" Id="1" PrefabAttachmentId="-1" ReferenceFilename="node_test/event_subtree_0" TriggeredOnce="false" TriggerMode="Return" />
+        <Attachment Class="Behaviac.Design.Attachments.Event" Enable="true" Id="2" PrefabAttachmentId="-1" ReferenceFilename="node_test/event_subtree_1" TriggeredOnce="false" TriggerMode="Return" />
+        <Attachment Class="Behaviac.Design.Attachments.Event" Enable="true" Id="3" PrefabAttachmentId="-1" ReferenceFilename="node_test/event_subtree_2" TriggeredOnce="false" TriggerMode="Return" />
+        <Attachment Class="Behaviac.Design.Attachments.Event" Enable="true" Id="4" PrefabAttachmentId="-1" ReferenceFilename="node_test/event_subtree_3" TriggeredOnce="false" TriggerMode="Return" />
+        <Attachment Class="Behaviac.Design.Attachments.Event" Enable="true" Id="8" PrefabAttachmentId="-1" ReferenceFilename="node_test/event_subtree_4" TriggeredOnce="false" TriggerMode="Transfer" />
+        <Connector Identifier="GenericChildren">
+          <Node Class="PluginBehaviac.Nodes.WaitforSignal" Enable="true" HasOwnPrefabData="false" Id="5" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+            <Connector Identifier="_custom_condition">
+              <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="6" Operator="Equal" Opl="int Self.AgentNodeTest::testVar_0" Opr="const int 0" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+            </Connector>
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="7" Method="Self.AgentNodeTest::setTestVar_1(0)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+            <Comment Background="NoColor" Text="" />
+          </Node>
+        </Connector>
+      </Node>
+    </Connector>
+  </Node>
+</Behavior>

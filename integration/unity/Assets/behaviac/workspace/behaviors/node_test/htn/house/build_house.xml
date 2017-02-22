@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Behavior Version="5">
+  <Node Class="Behaviac.Design.Nodes.Behavior" AgentType="HTNAgentHouse" Domains="" Enable="true" HasOwnPrefabData="false" Id="-1" PrefabName="" PrefabNodeId="-1">
+    <Comment Background="NoColor" Text="" />
+    <DescriptorRefs value="0:" />
+    <Connector Identifier="GenericChildren">
+      <Node Class="PluginBehaviac.Nodes.Task" Enable="true" HasOwnPrefabData="false" Id="7" PrefabName="" PrefabNodeId="-1" Prototype="Self.HTNAgentHouse::build_house()">
+        <Comment Background="NoColor" Text="" />
+        <Attachment Class="PluginBehaviac.Events.Precondition" BinaryOperator="And" Enable="true" Id="0" Operator="Equal" Opl="bool Self.HTNAgentHouse::Land" Opr1="&quot;&quot;" Opr2="const bool true" Phase="Enter" PrefabAttachmentId="-1" />
+        <Attachment Class="PluginBehaviac.Events.Effector" Enable="true" Id="1" Operator="Assign" Opl="bool Self.HTNAgentHouse::House" Opr1="const bool true" Opr2="const bool true" Phase="Success" PrefabAttachmentId="-1" />
+        <Connector Identifier="GenericChildren">
+          <Node Class="PluginBehaviac.Nodes.Method" Enable="true" HasOwnPrefabData="false" Id="2" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+            <Connector Identifier="Tasks">
+              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="17" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.Parallel" ChildFinishPolicy="CHILDFINISH_LOOP" Enable="true" ExitPolicy="EXIT_ABORT_RUNNINGSIBLINGS" FailurePolicy="FAIL_ON_ONE" HasOwnPrefabData="false" Id="4" PrefabName="" PrefabNodeId="-1" SuccessPolicy="SUCCEED_ON_ALL">
+                    <Comment Background="NoColor" Text="" />
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="5" Method="Self.HTNAgentHouseBase::ObtainPermit()" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                        <Comment Background="NoColor" Text="" />
+                        <Attachment Class="PluginBehaviac.Events.Precondition" BinaryOperator="And" Enable="true" Id="3" Operator="Equal" Opl="bool Self.HTNAgentHouse::Land" Opr1="&quot;&quot;" Opr2="const bool true" Phase="Enter" PrefabAttachmentId="-1" />
+                        <Attachment Class="PluginBehaviac.Events.Effector" Enable="true" Id="6" Operator="Assign" Opl="bool Self.HTNAgentHouse::Permit" Opr1="const bool true" Opr2="const bool true" Phase="Success" PrefabAttachmentId="-1" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="18" Method="Self.HTNAgentHouse::HireBuilder()" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                        <Comment Background="NoColor" Text="" />
+                        <Attachment Class="PluginBehaviac.Events.Effector" Enable="true" Id="8" Operator="Assign" Opl="bool Self.HTNAgentHouse::Contract" Opr1="const bool true" Opr2="const bool true" Phase="Success" PrefabAttachmentId="-1" />
+                      </Node>
+                    </Connector>
+                  </Node>
+                  <Node Class="Behaviac.Design.Nodes.ReferencedBehavior" Enable="true" HasOwnPrefabData="false" Id="20" PrefabName="" PrefabNodeId="-1" ReferenceBehavior="const string &quot;node_test/htn/house/construct&quot;" Task="Self.HTNAgentHouse::construct()">
+                    <Comment Background="Gray" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="19" Method="Self.HTNAgentHouse::PayBuilder()" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                    <Comment Background="NoColor" Text="" />
+                    <Attachment Class="PluginBehaviac.Events.Precondition" BinaryOperator="And" Enable="true" Id="27" Operator="GreaterEqual" Opl="int Self.HTNAgentHouseBase::Money" Opr1="&quot;&quot;" Opr2="const int 50" Phase="Enter" PrefabAttachmentId="-1" />
+                    <Attachment Class="PluginBehaviac.Events.Precondition" BinaryOperator="And" Enable="true" Id="9" Operator="Equal" Opl="bool Self.HTNAgentHouse::HouseBuilt" Opr1="&quot;&quot;" Opr2="const bool true" Phase="Enter" PrefabAttachmentId="-1" />
+                    <Attachment Class="PluginBehaviac.Events.Effector" Enable="true" Id="10" Operator="Sub" Opl="int Self.HTNAgentHouseBase::Money" Opr1="int Self.HTNAgentHouseBase::Money" Opr2="const int 50" Phase="Success" PrefabAttachmentId="-1" />
+                    <Attachment Class="PluginBehaviac.Events.Effector" Enable="true" Id="11" Operator="Assign" Opl="bool Self.HTNAgentHouse::House" Opr1="const bool true" Opr2="const bool true" Phase="Success" PrefabAttachmentId="-1" />
+                    <Attachment Class="PluginBehaviac.Events.Effector" Enable="true" Id="12" Operator="Assign" Opl="bool Self.HTNAgentHouse::Contract" Opr1="const bool false" Opr2="const bool false" Phase="Success" PrefabAttachmentId="-1" />
+                  </Node>
+                </Connector>
+              </Node>
+            </Connector>
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Method" Enable="true" HasOwnPrefabData="false" Id="21" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+            <Connector Identifier="Tasks">
+              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="22" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.Parallel" ChildFinishPolicy="CHILDFINISH_LOOP" Enable="true" ExitPolicy="EXIT_ABORT_RUNNINGSIBLINGS" FailurePolicy="FAIL_ON_ONE" HasOwnPrefabData="false" Id="23" PrefabName="" PrefabNodeId="-1" SuccessPolicy="SUCCEED_ON_ALL">
+                    <Comment Background="NoColor" Text="" />
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="14" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="28" Method="Self.HTNAgentHouseBase::ObtainPermit()" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                            <Comment Background="NoColor" Text="" />
+                            <Attachment Class="PluginBehaviac.Events.Precondition" BinaryOperator="And" Enable="true" Id="15" Operator="Equal" Opl="bool Self.HTNAgentHouse::Land" Opr1="&quot;&quot;" Opr2="const bool true" Phase="Enter" PrefabAttachmentId="-1" />
+                            <Attachment Class="PluginBehaviac.Events.Effector" Enable="true" Id="16" Operator="Assign" Opl="bool Self.HTNAgentHouse::Permit" Opr1="const bool true" Opr2="const bool true" Phase="Success" PrefabAttachmentId="-1" />
+                          </Node>
+                          <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="24" Method="Self.HTNAgentHouse::CutLogs()" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                            <Comment Background="NoColor" Text="" />
+                          </Node>
+                        </Connector>
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="25" Method="Self.HTNAgentHouse::GetFriend()" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                    </Connector>
+                  </Node>
+                  <Node Class="Behaviac.Design.Nodes.ReferencedBehavior" Enable="true" HasOwnPrefabData="false" Id="26" PrefabName="" PrefabNodeId="-1" ReferenceBehavior="const string &quot;node_test/htn/house/construct&quot;" Task="Self.HTNAgentHouse::construct()">
+                    <Comment Background="Gray" Text="" />
+                  </Node>
+                </Connector>
+              </Node>
+            </Connector>
+          </Node>
+        </Connector>
+      </Node>
+    </Connector>
+  </Node>
+</Behavior>

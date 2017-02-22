@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\action_child_agent_0.xml-->
+<behavior name="node_test/action_child_agent_0" agenttype="AgentNodeTest" version="5">
+  <pars>
+    <par name="par_child_agent" type="AgentNodeTest" value="null" />
+  </pars>
+  <node class="Sequence" id="0">
+    <node class="Action" id="3">
+      <property Method="Self.AgentNodeTest::initChildAgent()" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+    <node class="Assignment" id="2">
+      <property CastRight="false" />
+      <property Opl="int par_child_agent_1.AgentNodeTest::testVar_0" />
+      <property Opr="const int 666" />
+    </node>
+    <node class="Action" id="1">
+      <property Method="par_child_agent_1.AgentNodeTest::setTestVar_2(999)" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+  </node>
+</behavior>
