@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: par_test\property_as_left_value_and_param.xml-->
+<behavior name="par_test/property_as_left_value_and_param" agenttype="EmployeeParTestAgent" version="5">
+  <node class="Sequence" id="13">
+    <node class="Sequence" id="1">
+      <node class="Assignment" id="0">
+        <property CastRight="false" />
+        <property Opl="behaviac::Agent Self.EmployeeParTestAgent::TV_AGENT_0" />
+        <property Opr="Self.EmployeeParTestAgent::Func_AgentIR(behaviac::Agent Self.EmployeeParTestAgent::TV_AGENT_0)" />
+      </node>
+      <node class="Assignment" id="15">
+        <property CastRight="false" />
+        <property Opl="vector&lt;behaviac::Agent&gt; Self.EmployeeParTestAgent::TV_LIST_AGENT_0" />
+        <property Opr="Self.EmployeeParTestAgent::Func_AgentListIR(vector&lt;behaviac::Agent&gt; Self.EmployeeParTestAgent::TV_LIST_AGENT_0)" />
+      </node>
+      <node class="Assignment" id="2">
+        <property CastRight="false" />
+        <property Opl="double Self.EmployeeParTestAgent::TV_D_0" />
+        <property Opr="Self.EmployeeParTestAgent::Func_DoubleIR(double Self.EmployeeParTestAgent::TV_D_0)" />
+      </node>
+      <node class="Assignment" id="3">
+        <property CastRight="false" />
+        <property Opl="float Self.EmployeeParTestAgent::TV_F_0" />
+        <property Opr="Self.EmployeeParTestAgent::Func_SingleIR(float Self.EmployeeParTestAgent::TV_F_0)" />
+      </node>
+      <node class="Assignment" id="4">
+        <property CastRight="false" />
+        <property Opl="vector&lt;float&gt; Self.EmployeeParTestAgent::TV_LIST_F_0" />
+        <property Opr="Self.EmployeeParTestAgent::Func_SingleListIR(vector&lt;float&gt; Self.EmployeeParTestAgent::TV_LIST_F_0)" />
+      </node>
+      <node class="Assignment" id="5">
+        <property CastRight="false" />
+        <property Opl="string Self.EmployeeParTestAgent::TV_STR_0" />
+        <property Opr="Self.EmployeeParTestAgent::Func_StringIR(string Self.EmployeeParTestAgent::TV_STR_0)" />
+      </node>
+      <node class="Assignment" id="6">
+        <property CastRight="false" />
+        <property Opl="vector&lt;string&gt; Self.EmployeeParTestAgent::TV_LIST_STR_0" />
+        <property Opr="Self.EmployeeParTestAgent::Func_StringListIR(vector&lt;string&gt; Self.EmployeeParTestAgent::TV_LIST_STR_0)" />
+      </node>
+      <node class="Assignment" id="7">
+        <property CastRight="false" />
+        <property Opl="uint Self.EmployeeParTestAgent::TV_UINT_0" />
+        <property Opr="Self.EmployeeParTestAgent::Func_UIntIR(uint Self.EmployeeParTestAgent::TV_UINT_0)" />
+      </node>
+      <node class="Assignment" id="8">
+        <property CastRight="false" />
+        <property Opl="ulong Self.EmployeeParTestAgent::TV_ULONG_0" />
+        <property Opr="Self.EmployeeParTestAgent::Func_ULongIR(ulong Self.EmployeeParTestAgent::TV_ULONG_0)" />
+      </node>
+      <node class="Assignment" id="30">
+        <property CastRight="false" />
+        <property Opl="llong Self.EmployeeParTestAgent::TV_LL_0" />
+        <property Opr="Self.EmployeeParTestAgent::Func_LongLongIR(llong Self.EmployeeParTestAgent::TV_LL_0)" />
+      </node>
+      <node class="Assignment" id="31">
+        <property CastRight="false" />
+        <property Opl="ullong Self.EmployeeParTestAgent::TV_ULL_0" />
+        <property Opr="Self.EmployeeParTestAgent::Func_ULongLongIR(ullong Self.EmployeeParTestAgent::TV_ULL_0)" />
+      </node>
+    </node>
+    <node class="Sequence" id="14">
+      <node class="Assignment" id="9">
+        <property CastRight="false" />
+        <property Opl="short Self.ParTestAgent::TV_SHORT_0" />
+        <property Opr="Self.ParTestAgent::Func_ShortIR(short Self.ParTestAgent::TV_SHORT_0)" />
+      </node>
+      <node class="Assignment" id="10">
+        <property CastRight="false" />
+        <property Opl="int Self.ParTestAgent::TV_INT_0" />
+        <property Opr="Self.ParTestAgent::Func_IntIR(int Self.ParTestAgent::TV_INT_0)" />
+      </node>
+      <node class="Assignment" id="11">
+        <property CastRight="false" />
+        <property Opl="vector&lt;int&gt; Self.ParTestAgent::TV_LIST_INT_0" />
+        <property Opr="Self.ParTestAgent::Func_IntListIR(vector&lt;int&gt; Self.ParTestAgent::TV_LIST_INT_0)" />
+      </node>
+      <node class="Assignment" id="12">
+        <property CastRight="false" />
+        <property Opl="long Self.ParTestAgent::TV_LONG_0" />
+        <property Opr="Self.ParTestAgent::Func_LongIR(long Self.ParTestAgent::TV_LONG_0)" />
+      </node>
+      <node class="Assignment" id="17">
+        <property CastRight="false" />
+        <property Opl="TNS::ST::PER::WRK::kEmployee Self.ParTestAgent::TV_KEMPLOYEE_0" />
+        <property Opr="Self.ParTestAgent::Func_kEmployeeIR(TNS::ST::PER::WRK::kEmployee Self.ParTestAgent::TV_KEMPLOYEE_0)" />
+      </node>
+      <node class="Assignment" id="19">
+        <property CastRight="false" />
+        <property Opl="vector&lt;TNS::ST::PER::WRK::kEmployee&gt; Self.ParTestAgent::TV_LIST_KEMPLOYEE_0" />
+        <property Opr="Self.ParTestAgent::Func_kEmployeeListIR(vector&lt;TNS::ST::PER::WRK::kEmployee&gt; Self.ParTestAgent::TV_LIST_KEMPLOYEE_0)" />
+      </node>
+      <node class="Assignment" id="18">
+        <property CastRight="false" />
+        <property Opl="ushort Self.ParTestAgent::TV_USHORT_0" />
+        <property Opr="Self.ParTestAgent::Func_UShortIR(ushort Self.ParTestAgent::TV_USHORT_0)" />
+      </node>
+    </node>
+    <node class="Sequence" id="22">
+      <node class="Assignment" id="16">
+        <property CastRight="false" />
+        <property Opl="bool Self.ParTestAgentBase::TV_BOOL_0" />
+        <property Opr="Self.ParTestAgentBase::Func_BooleanIR(bool Self.ParTestAgentBase::TV_BOOL_0)" />
+      </node>
+      <node class="Assignment" id="20">
+        <property CastRight="false" />
+        <property Opl="vector&lt;bool&gt; Self.ParTestAgentBase::TV_LIST_BOOL_0" />
+        <property Opr="Self.ParTestAgentBase::Func_BooleanListIR(vector&lt;bool&gt; Self.ParTestAgentBase::TV_LIST_BOOL_0)" />
+      </node>
+      <node class="Assignment" id="24">
+        <property CastRight="false" />
+        <property Opl="ubyte Self.ParTestAgentBase::TV_BYTE_0" />
+        <property Opr="Self.ParTestAgentBase::Func_ByteIR(ubyte Self.ParTestAgentBase::TV_BYTE_0)" />
+      </node>
+      <node class="Assignment" id="25">
+        <property CastRight="false" />
+        <property Opl="vector&lt;ubyte&gt; Self.ParTestAgentBase::TV_LIST_BYTE_0" />
+        <property Opr="Self.ParTestAgentBase::Func_ByteListIR(vector&lt;ubyte&gt; Self.ParTestAgentBase::TV_LIST_BYTE_0)" />
+      </node>
+      <node class="Assignment" id="26">
+        <property CastRight="false" />
+        <property Opl="char Self.ParTestAgentBase::TV_CHAR_0" />
+        <property Opr="Self.ParTestAgentBase::Func_CharIR(char Self.ParTestAgentBase::TV_CHAR_0)" />
+      </node>
+      <node class="Assignment" id="27">
+        <property CastRight="false" />
+        <property Opl="vector&lt;char&gt; Self.ParTestAgentBase::TV_LIST_CHAR_0" />
+        <property Opr="Self.ParTestAgentBase::Func_CharListIR(vector&lt;char&gt; Self.ParTestAgentBase::TV_LIST_CHAR_0)" />
+      </node>
+      <node class="Assignment" id="21">
+        <property CastRight="false" />
+        <property Opl="TNS::NE::NAT::eColor Self.ParTestAgentBase::TV_ECOLOR_0" />
+        <property Opr="Self.ParTestAgentBase::Func_eColorIR(TNS::NE::NAT::eColor Self.ParTestAgentBase::TV_ECOLOR_0)" />
+      </node>
+      <node class="Assignment" id="23">
+        <property CastRight="false" />
+        <property Opl="vector&lt;TNS::NE::NAT::eColor&gt; Self.ParTestAgentBase::TV_LIST_ECOLOR_0" />
+        <property Opr="Self.ParTestAgentBase::Func_eColorListIR(vector&lt;TNS::NE::NAT::eColor&gt; Self.ParTestAgentBase::TV_LIST_ECOLOR_0)" />
+      </node>
+      <node class="Assignment" id="28">
+        <property CastRight="false" />
+        <property Opl="sbyte Self.ParTestAgentBase::TV_SBYTE_0" />
+        <property Opr="Self.ParTestAgentBase::Func_SByteIR(sbyte Self.ParTestAgentBase::TV_SBYTE_0)" />
+      </node>
+      <node class="Assignment" id="29">
+        <property CastRight="false" />
+        <property Opl="vector&lt;sbyte&gt; Self.ParTestAgentBase::TV_LIST_SBYTE_0" />
+        <property Opr="Self.ParTestAgentBase::Func_SByteListIR(vector&lt;sbyte&gt; Self.ParTestAgentBase::TV_LIST_SBYTE_0)" />
+      </node>
+    </node>
+  </node>
+</behavior>

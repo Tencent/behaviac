@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Behavior Version="5">
+  <Node Class="Behaviac.Design.Nodes.Behavior" AgentType="HTNAgentTravel" Domains="" Enable="true" HasOwnPrefabData="false" Id="-1" PrefabName="" PrefabNodeId="-1">
+    <Comment Background="NoColor" Text="" />
+    <Parameters>
+      <Parameter Name="start" Type="System.Int32" DefaultValue="0" DisplayName="start" Desc="HTNAgentTravel::start" Display="true" />
+      <Parameter Name="finish" Type="System.Int32" DefaultValue="0" DisplayName="finish" Desc="HTNAgentTravel::finish" Display="true" />
+    </Parameters>
+    <DescriptorRefs value="0:" />
+    <Connector Identifier="GenericChildren">
+      <Node Class="PluginBehaviac.Nodes.Task" Enable="true" HasOwnPrefabData="false" Id="1" PrefabName="" PrefabNodeId="-1" Prototype="Self.HTNAgentTravel::root()">
+        <Comment Background="NoColor" Text="" />
+        <Connector Identifier="GenericChildren">
+          <Node Class="PluginBehaviac.Nodes.Method" Enable="true" HasOwnPrefabData="false" Id="2" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+            <Attachment Class="PluginBehaviac.Events.Precondition" BinaryOperator="And" Enable="true" Id="0" Operator="Equal" Opl="Self.HTNAgentTravel::exist_start(int Self.HTNAgentTravel::start)" Opr1="&quot;&quot;" Opr2="const bool true" Phase="Enter" PrefabAttachmentId="-1" />
+            <Attachment Class="PluginBehaviac.Events.Precondition" BinaryOperator="And" Enable="true" Id="3" Operator="Equal" Opl="Self.HTNAgentTravel::exist_finish(int Self.HTNAgentTravel::finish)" Opr1="&quot;&quot;" Opr2="const bool true" Phase="Enter" PrefabAttachmentId="-1" />
+            <Connector Identifier="Tasks">
+              <Node Class="Behaviac.Design.Nodes.ReferencedBehavior" Enable="true" HasOwnPrefabData="false" Id="4" PrefabName="" PrefabNodeId="-1" ReferenceBehavior="const string &quot;node_test/htn/travel/travel&quot;" Task="Self.HTNAgentTravel::travel(int Self.HTNAgentTravel::start,int Self.HTNAgentTravel::finish)">
+                <Comment Background="Gray" Text="" />
+              </Node>
+            </Connector>
+          </Node>
+        </Connector>
+      </Node>
+    </Connector>
+  </Node>
+</Behavior>

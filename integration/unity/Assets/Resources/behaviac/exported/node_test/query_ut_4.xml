@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\query_ut_4.xml-->
+<behavior name="node_test/query_ut_4" agenttype="AgentBehaviacNode" version="1">
+  <node class="Sequence" version="1" id="0">
+    <property EnterAction="Self.AgentBehaviacNode::enter_action_1(0)" />
+    <property ExitAction="Self.AgentBehaviacNode::exit_action_2(0,&quot;&quot;)" />
+    <node class="Query" version="1" id="1">
+      <property Descriptors="1:{Attribute=int Self.AgentBehaviacNode::testVar_1;Reference=const int 0;Weight=100;}" />
+      <property Domain="test" />
+    </node>
+    <node class="Sequence" version="1" id="2">
+      <node class="Query" version="1" id="3">
+        <property Descriptors="1:{Attribute=int Self.AgentBehaviacNode::testVar_1;Reference=const int 0;Weight=100;}" />
+        <property Domain="test" />
+      </node>
+      <node class="Query" version="1" id="4">
+        <property Descriptors="1:{Attribute=int Self.AgentBehaviacNode::testVar_1;Reference=const int 0;Weight=100;}" />
+        <property Domain="test" />
+      </node>
+    </node>
+  </node>
+</behavior>

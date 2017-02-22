@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: par_test\static_member_function_test_0.xml-->
+<behavior name="par_test/static_member_function_test_0" agenttype="EmployeeParTestAgent" version="5">
+  <node class="Sequence" id="0">
+    <node class="Sequence" id="1">
+      <node class="Assignment" id="4">
+        <property CastRight="false" />
+        <property Opl="char Self.ParTestAgentBase::TV_CHAR_0" />
+        <property Opr="Self.ParTestAgentBase::Func_CharSMF(char Self.ParTestAgentBase::TV_CHAR_0)" />
+      </node>
+      <node class="Assignment" id="5">
+        <property CastRight="false" />
+        <property Opl="ubyte Self.ParTestAgentBase::TV_BYTE_0" />
+        <property Opr="Self.ParTestAgentBase::Func_ByteSMF(ubyte Self.ParTestAgentBase::TV_BYTE_0)" />
+      </node>
+      <node class="Assignment" id="6">
+        <property CastRight="false" />
+        <property Opl="sbyte Self.ParTestAgentBase::TV_SBYTE_0" />
+        <property Opr="Self.ParTestAgentBase::Func_SByteSMF(sbyte Self.ParTestAgentBase::TV_SBYTE_0)" />
+      </node>
+      <node class="Assignment" id="7">
+        <property CastRight="false" />
+        <property Opl="vector&lt;char&gt; Self.ParTestAgentBase::TV_LIST_CHAR_0" />
+        <property Opr="Self.ParTestAgentBase::Func_CharListSMF(vector&lt;char&gt; Self.ParTestAgentBase::TV_LIST_CHAR_0)" />
+      </node>
+      <node class="Assignment" id="8">
+        <property CastRight="false" />
+        <property Opl="vector&lt;sbyte&gt; Self.ParTestAgentBase::TV_LIST_SBYTE_0" />
+        <property Opr="Self.ParTestAgentBase::Func_SByteListSMF(vector&lt;sbyte&gt; Self.ParTestAgentBase::TV_LIST_SBYTE_0)" />
+      </node>
+    </node>
+    <node class="Sequence" id="2">
+      <node class="Assignment" id="9">
+        <property CastRight="false" />
+        <property Opl="TNS::ST::PER::WRK::kEmployee Self.ParTestAgent::TV_KEMPLOYEE_0" />
+        <property Opr="Self.ParTestAgent::Func_kEmployeeSMF(TNS::ST::PER::WRK::kEmployee Self.ParTestAgent::TV_KEMPLOYEE_0)" />
+      </node>
+      <node class="Assignment" id="10">
+        <property CastRight="false" />
+        <property Opl="vector&lt;TNS::ST::PER::WRK::kEmployee&gt; Self.ParTestAgent::TV_LIST_KEMPLOYEE_0" />
+        <property Opr="Self.ParTestAgent::Func_kEmployeeListSMF(vector&lt;TNS::ST::PER::WRK::kEmployee&gt; Self.ParTestAgent::TV_LIST_KEMPLOYEE_0)" />
+      </node>
+    </node>
+    <node class="Sequence" id="3">
+      <node class="Assignment" id="11">
+        <property CastRight="false" />
+        <property Opl="ulong Self.EmployeeParTestAgent::TV_ULONG_0" />
+        <property Opr="Self.EmployeeParTestAgent::Func_ULongSMF(0)" />
+      </node>
+      <node class="Assignment" id="12">
+        <property CastRight="false" />
+        <property Opl="string Self.EmployeeParTestAgent::TV_STR_0" />
+        <property Opr="Self.EmployeeParTestAgent::Func_StringSMF(string Self.EmployeeParTestAgent::TV_STR_0)" />
+      </node>
+      <node class="Assignment" id="13">
+        <property CastRight="false" />
+        <property Opl="vector&lt;string&gt; Self.EmployeeParTestAgent::TV_LIST_STR_0" />
+        <property Opr="Self.EmployeeParTestAgent::Func_StringListSMF(vector&lt;string&gt; Self.EmployeeParTestAgent::TV_LIST_STR_0)" />
+      </node>
+      <node class="Assignment" id="14">
+        <property CastRight="false" />
+        <property Opl="behaviac::Agent Self.EmployeeParTestAgent::TV_AGENT_0" />
+        <property Opr="Self.EmployeeParTestAgent::Func_AgentSMF(behaviac::Agent Self.EmployeeParTestAgent::TV_AGENT_0)" />
+      </node>
+      <node class="Assignment" id="15">
+        <property CastRight="false" />
+        <property Opl="vector&lt;behaviac::Agent&gt; Self.EmployeeParTestAgent::TV_LIST_AGENT_0" />
+        <property Opr="Self.EmployeeParTestAgent::Func_AgentListSMF(vector&lt;behaviac::Agent&gt; Self.EmployeeParTestAgent::TV_LIST_AGENT_0)" />
+      </node>
+    </node>
+  </node>
+</behavior>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\query_subtree_0.xml-->
+<behavior name="node_test/query_subtree_0" agenttype="AgentNodeTest" version="4">
+  <property DescriptorRefs="1:{Descriptor=int Self.AgentNodeTest::testVar_1;Reference=const int 20;}" />
+  <property Domains="test subtree0" />
+  <node class="Sequence" id="0">
+    <node class="Action" id="3">
+      <property Method="Self.AgentNodeTest::setTestVar_0(0)" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+    <node class="True" id="2" />
+  </node>
+</behavior>

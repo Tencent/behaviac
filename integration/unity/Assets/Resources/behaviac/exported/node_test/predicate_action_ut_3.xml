@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\predicate_action_ut_3.xml-->
+<behavior name="node_test/predicate_action_ut_3" agenttype="AgentNodeTest" version="5">
+  <node class="Action" id="0">
+    <property Method="Self.AgentNodeTest::setTestVar_0(0)" />
+    <property ResultOption="BT_RUNNING" />
+    <attachment class="Precondition" id="1" flag="precondition">
+      <property BinaryOperator="And" />
+      <property Operator="Equal" />
+      <property Opl="int Self.AgentNodeTest::testVar_0" />
+      <property Opr2="const int -1" />
+      <property Phase="Both" />
+    </attachment>
+  </node>
+</behavior>

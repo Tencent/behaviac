@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<workspace name="tutorial_1_unity" folder="behaviors" export="..\unity\Assets\Resources\behaviac\exported" language="cs" promptmergingmeta="true" version="3">
+  <export>
+    <cs>
+      <isexported>False</isexported>
+      <exportfilecount>1</exportfilecount>
+      <folder>../../unity/Assets/Scripts/behaviac</folder>
+    </cs>
+  </export>
+</workspace>

@@ -1,0 +1,824 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Action" xml:space="preserve">
+    <value>动作</value>
+  </data>
+  <data name="ActionDesc" xml:space="preserve">
+    <value>动作，可以用来绑定Agent的方法</value>
+  </data>
+  <data name="And" xml:space="preserve">
+    <value>与</value>
+  </data>
+  <data name="AndDesc" xml:space="preserve">
+    <value>如果所有子节点返回真，那么该节点也返回真</value>
+  </data>
+  <data name="Condition" xml:space="preserve">
+    <value>条件</value>
+  </data>
+  <data name="ConditionDesc" xml:space="preserve">
+    <value>条件，比较左参数与右参数</value>
+  </data>
+  <data name="DecoratorFailureUntil" xml:space="preserve">
+    <value>返回失败直到</value>
+  </data>
+  <data name="DecoratorFailureUntilDesc" xml:space="preserve">
+    <value>返回失败直到指定的次数后就返回成功</value>
+  </data>
+  <data name="DecoratorLog" xml:space="preserve">
+    <value>输出消息</value>
+  </data>
+  <data name="DecoratorLogDesc" xml:space="preserve">
+    <value>输出消息到_behaviac_$_$_.log或Console</value>
+  </data>
+  <data name="DecoratorLoop" xml:space="preserve">
+    <value>循环</value>
+  </data>
+  <data name="DecoratorLoopCount" xml:space="preserve">
+    <value>次数</value>
+  </data>
+  <data name="DecoratorLoopCountDesc" xml:space="preserve">
+    <value>决定调用子节点的频率。如果子节点失败，循环则失败</value>
+  </data>
+  <data name="DecoratorLoopDesc" xml:space="preserve">
+    <value>该装饰器调用其子节点指定次数,-1代表无限循环</value>
+  </data>
+  <data name="DecoratorNot" xml:space="preserve">
+    <value>非</value>
+  </data>
+  <data name="DecoratorNotDesc" xml:space="preserve">
+    <value>该装饰器将子节点的返回值取反。如果子节点失败，那么此节点返回成功。如果子节点成功，那么此节点返回失败。</value>
+  </data>
+  <data name="DecoratorSuccessUntil" xml:space="preserve">
+    <value>返回成功直到</value>
+  </data>
+  <data name="DecoratorSuccessUntilDesc" xml:space="preserve">
+    <value>返回成功直到指定的次数后就返回失败</value>
+  </data>
+  <data name="DecoratorTime" xml:space="preserve">
+    <value>时间</value>
+  </data>
+  <data name="DecoratorTimeDesc" xml:space="preserve">
+    <value>在指定时间内，持续调用其子节点（毫秒）</value>
+  </data>
+  <data name="DecoratorAlwaysSuccess" xml:space="preserve">
+    <value>总是成功</value>
+  </data>
+  <data name="DecoratorAlwaysSuccessDesc" xml:space="preserve">
+    <value>无论子节点的结果是什么总是返回成功</value>
+  </data>
+  <data name="CompareGetter" xml:space="preserve">
+    <value>比较获取函数</value>
+  </data>
+  <data name="CompareGetterDesc" xml:space="preserve">
+    <value>调用获取函数，并对比其返回值与右参数</value>
+  </data>
+  <data name="IfElse" xml:space="preserve">
+    <value>条件执行</value>
+  </data>
+  <data name="IfElseDesc" xml:space="preserve">
+    <value>如果条件为真，那么执行“If”分支；否则，执行“Else”分支</value>
+  </data>
+  <data name="Impulse" xml:space="preserve">
+    <value>Impulse</value>
+  </data>
+  <data name="ImpulseDesc" xml:space="preserve">
+    <value>仅当附加的事件被触发才可见</value>
+  </data>
+  <data name="NodeGroupLeaves" xml:space="preserve">
+    <value>Leaves</value>
+  </data>
+  <data name="NodeGroupActions" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="NodeGroupBranches" xml:space="preserve">
+    <value>Branches</value>
+  </data>
+  <data name="NodeGroupComposites" xml:space="preserve">
+    <value>Composites</value>
+  </data>
+  <data name="NodeGroupConditions" xml:space="preserve">
+    <value>Conditions</value>
+  </data>
+  <data name="NodeGroupDecorators" xml:space="preserve">
+    <value>Decorators</value>
+  </data>
+  <data name="NodeGroupImpulses" xml:space="preserve">
+    <value>Impulses</value>
+  </data>
+  <data name="NodeGroupAttachments" xml:space="preserve">
+    <value>Attachments</value>
+  </data>
+  <data name="NodeGroupEvents" xml:space="preserve">
+    <value>Events</value>
+  </data>
+  <data name="Noop" xml:space="preserve">
+    <value>空操作</value>
+  </data>
+  <data name="NoopDesc" xml:space="preserve">
+    <value>空操作</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>或</value>
+  </data>
+  <data name="OrDesc" xml:space="preserve">
+    <value>如果有任何一个子节点为真，则返回真</value>
+  </data>
+  <data name="Parallel" xml:space="preserve">
+    <value>并行</value>
+  </data>
+  <data name="ParallelDesc" xml:space="preserve">
+    <value>所有子节点并行更新</value>
+  </data>
+  <data name="PreAction" xml:space="preserve">
+    <value>PreAction</value>
+  </data>
+  <data name="PreActionDesc" xml:space="preserve">
+    <value>to check a precondition before taking action</value>
+  </data>
+  <data name="Query" xml:space="preserve">
+    <value>查询</value>
+  </data>
+  <data name="QueryDesc" xml:space="preserve">
+    <value>查询子树</value>
+  </data>
+  <data name="Selector" xml:space="preserve">
+    <value>选择</value>
+  </data>
+  <data name="SelectorDesc" xml:space="preserve">
+    <value>该节点以给定的顺序依次调用其子节点，直到其中一个成功返回，那么该节点也返回成功。如果所有的子节点都失败，那么该节点也失败。</value>
+  </data>
+  <data name="SelectorStochastic" xml:space="preserve">
+    <value>随机选择</value>
+  </data>
+  <data name="SelectorStochasticDesc" xml:space="preserve">
+    <value>随机选择</value>
+  </data>
+  <data name="Sequence" xml:space="preserve">
+    <value>序列</value>
+  </data>
+  <data name="SequenceDesc" xml:space="preserve">
+    <value>该节点以给定的顺序依次调用其子节点，直到所有子节点成功返回，该节点也返回成功。只要其中某个子节点失败，那么该节点也失败。</value>
+  </data>
+  <data name="SequenceStochastic" xml:space="preserve">
+    <value>随机序列</value>
+  </data>
+  <data name="SequenceStochasticDesc" xml:space="preserve">
+    <value>随机序列</value>
+  </data>
+  <data name="DecoratorAlwaysFailure" xml:space="preserve">
+    <value>总是失败</value>
+  </data>
+  <data name="DecoratorAlwaysFailureDesc" xml:space="preserve">
+    <value>无论子节点的结果是什么总是返回失败</value>
+  </data>
+  <data name="DecoratorAlwaysRunning" xml:space="preserve">
+    <value>总是运行</value>
+  </data>
+  <data name="DecoratorAlwaysRunningDesc" xml:space="preserve">
+    <value>无论子节点的结果是什么总是返回运行</value>
+  </data>
+  <data name="DecoratorFailureAfter" xml:space="preserve">
+    <value>FailureAfter</value>
+  </data>
+  <data name="DecoratorFailureAfterDesc" xml:space="preserve">
+    <value>指定次数达到后返回失败</value>
+  </data>
+  <data name="DecoratorSuccessAfter" xml:space="preserve">
+    <value>SuccessAfter</value>
+  </data>
+  <data name="DecoratorSuccessAfterDesc" xml:space="preserve">
+    <value>在指定次数后，返回成功</value>
+  </data>
+  <data name="DecoratorWait" xml:space="preserve">
+    <value>Wait</value>
+  </data>
+  <data name="DecoratorWaitDesc" xml:space="preserve">
+    <value>等待指定时间后，才开始执行子节点</value>
+  </data>
+  <data name="DecoratorDelay" xml:space="preserve">
+    <value>延迟</value>
+  </data>
+  <data name="DecoratorDelayDesc" xml:space="preserve">
+    <value>延迟</value>
+  </data>
+  <data name="Wait" xml:space="preserve">
+    <value>等待</value>
+  </data>
+  <data name="WaitDesc" xml:space="preserve">
+    <value>等待指定的毫秒</value>
+  </data>
+  <data name="SelectorProbability" xml:space="preserve">
+    <value>概率选择</value>
+  </data>
+  <data name="SelectorProbabilityDesc" xml:space="preserve">
+    <value>按子节点的概率选择</value>
+  </data>
+  <data name="DecoratorLogMessage" xml:space="preserve">
+    <value>输出消息</value>
+  </data>
+  <data name="DecoratorLogMessageDesc" xml:space="preserve">
+    <value>输出消息</value>
+  </data>
+  <data name="DecoratorWeight" xml:space="preserve">
+    <value>权值</value>
+  </data>
+  <data name="DecoratorWeightDesc" xml:space="preserve">
+    <value>权值</value>
+  </data>
+  <data name="SelectorLoop" xml:space="preserve">
+    <value>选择监测</value>
+  </data>
+  <data name="SelectorLoopDesc" xml:space="preserve">
+    <value>在子节点中动态选择，只接受“监测分支”作为子节点</value>
+  </data>
+  <data name="False" xml:space="preserve">
+    <value>假</value>
+  </data>
+  <data name="FalseDesc" xml:space="preserve">
+    <value>假</value>
+  </data>
+  <data name="True" xml:space="preserve">
+    <value>真</value>
+  </data>
+  <data name="TrueDesc" xml:space="preserve">
+    <value>真</value>
+  </data>
+  <data name="DecoratorLoopUntil" xml:space="preserve">
+    <value>循环直到</value>
+  </data>
+  <data name="DecoratorLoopUntilDesc" xml:space="preserve">
+    <value>循环执行直到子节点返回成功或失败，或者循环执行指定的次数。</value>
+  </data>
+  <data name="DecoratorUntil" xml:space="preserve">
+    <value>直到子树</value>
+  </data>
+  <data name="DecoratorUntilDesc" xml:space="preserve">
+    <value>装饰器循环执行直到这个‘直到条件’。如果直到条件是True，装饰器循环执行直到子节点返回Success；如果直到条件是False，装饰器循环执行直到子节点返回Failure。</value>
+  </data>
+  <data name="WithPrecondition" xml:space="preserve">
+    <value>监测分支</value>
+  </data>
+  <data name="WithPreconditionDesc" xml:space="preserve">
+    <value>监测分支，只能作为“选择监测”的子节点</value>
+  </data>
+  <data name="SelectorLoopChildChildError" xml:space="preserve">
+    <value>“选择监测”节点只接受“监测分支”作为子节点</value>
+  </data>
+  <data name="WithPreconditionAction" xml:space="preserve">
+    <value>动作分支</value>
+  </data>
+  <data name="NoActionError" xml:space="preserve">
+    <value>没有动作分支</value>
+  </data>
+  <data name="NoPreconditionError" xml:space="preserve">
+    <value>没有条件分支</value>
+  </data>
+  <data name="WithPreconditionPrecondition" xml:space="preserve">
+    <value>条件分支</value>
+  </data>
+  <data name="ImpulseWithoutEventError" xml:space="preserve">
+    <value>没有指定信号</value>
+  </data>
+  <data name="Blocked" xml:space="preserve">
+    <value>阻塞</value>
+  </data>
+  <data name="BlockedDesc" xml:space="preserve">
+    <value>阻塞执行并等待事件的来临</value>
+  </data>
+  <data name="ImpulseParentError" xml:space="preserve">
+    <value>Impulse can only be children of Selector</value>
+  </data>
+  <data name="ConditionGetter" xml:space="preserve">
+    <value>条件获取函数</value>
+  </data>
+  <data name="ConditionGetterDesc" xml:space="preserve">
+    <value>调用获取函数，并对比其返回值与右参数</value>
+  </data>
+  <data name="Predicate" xml:space="preserve">
+    <value>判断</value>
+  </data>
+  <data name="PredicateDesc" xml:space="preserve">
+    <value>就像条件一样进行某个判断，但这个是作为附件附加到节点的</value>
+  </data>
+  <data name="BehaviorDomain" xml:space="preserve">
+    <value>域</value>
+  </data>
+  <data name="BehaviorDomainDesc" xml:space="preserve">
+    <value>关键字，用来描述某些特征，例如种类，目的等</value>
+  </data>
+  <data name="DescriptorWeightDesc" xml:space="preserve">
+    <value>描述器权值</value>
+  </data>
+  <data name="Getter" xml:space="preserve">
+    <value>获取函数</value>
+  </data>
+  <data name="GetterDesc" xml:space="preserve">
+    <value>获取函数</value>
+  </data>
+  <data name="ExitPolicy" xml:space="preserve">
+    <value>退出行为</value>
+  </data>
+  <data name="ExitPolicyDesc" xml:space="preserve">
+    <value>退出时要做些什么</value>
+  </data>
+  <data name="DecoratorCountLimit" xml:space="preserve">
+    <value>计数限制</value>
+  </data>
+  <data name="DecoratorCountLimitDesc" xml:space="preserve">
+    <value>计数限制</value>
+  </data>
+  <data name="Assignment" xml:space="preserve">
+    <value>赋值</value>
+  </data>
+  <data name="AssignmentDesc" xml:space="preserve">
+    <value>赋值， 右边的参数赋值给左边</value>
+  </data>
+  <data name="WaitforSignal" xml:space="preserve">
+    <value>等待信号</value>
+  </data>
+  <data name="WaitforSignalDesc" xml:space="preserve">
+    <value>阻塞状态，一直到等待的信号为真</value>
+  </data>
+  <data name="WithPreconditionParentError" xml:space="preserve">
+    <value>“监测分支”节点只能作为“选择监测”的子节点</value>
+  </data>
+  <data name="Descriptors" xml:space="preserve">
+    <value>描述器</value>
+  </data>
+  <data name="DescriptorsDesc" xml:space="preserve">
+    <value>描述器</value>
+  </data>
+  <data name="Descriptor" xml:space="preserve">
+    <value>描述器</value>
+  </data>
+  <data name="DescriptorDesc" xml:space="preserve">
+    <value>描述器</value>
+  </data>
+  <data name="Reference" xml:space="preserve">
+    <value>引用</value>
+  </data>
+  <data name="ReferenceDesc" xml:space="preserve">
+    <value>引用</value>
+  </data>
+  <data name="Weight" xml:space="preserve">
+    <value>权重</value>
+  </data>
+  <data name="WeightDesc" xml:space="preserve">
+    <value>权值</value>
+  </data>
+  <data name="Attribute" xml:space="preserve">
+    <value>属性</value>
+  </data>
+  <data name="AttributeDesc" xml:space="preserve">
+    <value>属性</value>
+  </data>
+  <data name="Event" xml:space="preserve">
+    <value>事件</value>
+  </data>
+  <data name="EventDesc" xml:space="preserve">
+    <value>事件</value>
+  </data>
+  <data name="Duration" xml:space="preserve">
+    <value>持续时间</value>
+  </data>
+  <data name="DurationDesc" xml:space="preserve">
+    <value>持续的时间</value>
+  </data>
+  <data name="IfElseCondition" xml:space="preserve">
+    <value>条件</value>
+  </data>
+  <data name="IfElseElse" xml:space="preserve">
+    <value>假时执行</value>
+  </data>
+  <data name="IfElseIf" xml:space="preserve">
+    <value>真时执行</value>
+  </data>
+  <data name="FailurePolicy" xml:space="preserve">
+    <value>失败条件</value>
+  </data>
+  <data name="FailurePolicyDesc" xml:space="preserve">
+    <value>在什么条件下返回失败</value>
+  </data>
+  <data name="SuccessPolicy" xml:space="preserve">
+    <value>成功条件</value>
+  </data>
+  <data name="SuccessPolicyDesc" xml:space="preserve">
+    <value>在什么条件下返回成功</value>
+  </data>
+  <data name="WaitFrames" xml:space="preserve">
+    <value>等待帧数</value>
+  </data>
+  <data name="WaitFramesDesc" xml:space="preserve">
+    <value>等待指定的帧数</value>
+  </data>
+  <data name="RandomGenerator" xml:space="preserve">
+    <value>随机数</value>
+  </data>
+  <data name="RandomGeneratorDesc" xml:space="preserve">
+    <value>随机数产生器,该随机数产生器需要是一个返回0.0到1.0的float值的函数</value>
+  </data>
+  <data name="DecoratorFrames" xml:space="preserve">
+    <value>帧数</value>
+  </data>
+  <data name="DecoratorFramesDesc" xml:space="preserve">
+    <value>在指定的帧数内调用子节点</value>
+  </data>
+  <data name="Frames" xml:space="preserve">
+    <value>帧数</value>
+  </data>
+  <data name="FramesDesc" xml:space="preserve">
+    <value>帧数</value>
+  </data>
+  <data name="WeightParentError" xml:space="preserve">
+    <value>父节点不是几率选择节点</value>
+  </data>
+  <data name="OperandError" xml:space="preserve">
+    <value>参数错误</value>
+  </data>
+  <data name="RandomGeneratorNotSpecified" xml:space="preserve">
+    <value>没有指定'随机数产生器'，系统缺省实现将被使用。</value>
+  </data>
+  <data name="ChildFinishPolicy" xml:space="preserve">
+    <value>子节点结束继续条件</value>
+  </data>
+  <data name="ChildFinishPolicyDesc" xml:space="preserve">
+    <value>子节点结束后该子节点如何继续？是循环继续还是结束后不再运行</value>
+  </data>
+  <data name="ExportFileWarning" xml:space="preserve">
+    <value>导出文件警告</value>
+  </data>
+  <data name="DecorateWhenChildEnds" xml:space="preserve">
+    <value>子节点结束时作用</value>
+  </data>
+  <data name="DecorateWhenChildEndsDesc" xml:space="preserve">
+    <value>仅当子节点结束时作用</value>
+  </data>
+  <data name="Compute" xml:space="preserve">
+    <value>计算</value>
+  </data>
+  <data name="ComputeDesc" xml:space="preserve">
+    <value>计算参数1和参数2的结果，把结果赋值给左参数</value>
+  </data>
+  <data name="Task" xml:space="preserve">
+    <value>任务</value>
+  </data>
+  <data name="TaskDesc" xml:space="preserve">
+    <value>任务在运行时可以‘扩展’为其他任务或动作。</value>
+  </data>
+  <data name="Method" xml:space="preserve">
+    <value>方法</value>
+  </data>
+  <data name="MethodDesc" xml:space="preserve">
+    <value>方法节点只能作为任务节点的子节点，用了表示实现该任务的一种方法。</value>
+  </data>
+  <data name="MethodEffectors" xml:space="preserve">
+    <value>效果</value>
+  </data>
+  <data name="NoEffectorError" xml:space="preserve">
+    <value>没有效果分支</value>
+  </data>
+  <data name="AndOrOnlyValidForBool" xml:space="preserve">
+    <value>and/or只能用作bool变量</value>
+  </data>
+  <data name="OperatandIsNotComplete" xml:space="preserve">
+    <value>没有提供完整的操作数</value>
+  </data>
+  <data name="MethodTasks" xml:space="preserve">
+    <value>任务</value>
+  </data>
+  <data name="MethodPreconditions" xml:space="preserve">
+    <value>条件</value>
+  </data>
+  <data name="Precondition" xml:space="preserve">
+    <value>前置</value>
+  </data>
+  <data name="PreconditionDesc" xml:space="preserve">
+    <value>进入节点前需要执行前置的操作或条件，如果是条件则需满足后，才会执行所在的节点。</value>
+  </data>
+  <data name="TaskNoChildrenError" xml:space="preserve">
+    <value>任务没有任何方法子节点。</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="StateDesc" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="EndTransition" xml:space="preserve">
+    <value>终止转换</value>
+  </data>
+  <data name="EndTransitionDesc" xml:space="preserve">
+    <value>终止转换</value>
+  </data>
+  <data name="Enter" xml:space="preserve">
+    <value>进入</value>
+  </data>
+  <data name="EnterTo" xml:space="preserve">
+    <value>进入</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>退出</value>
+  </data>
+  <data name="ExitFrom" xml:space="preserve">
+    <value>退出</value>
+  </data>
+  <data name="NoConditionError" xml:space="preserve">
+    <value>没有指定条件</value>
+  </data>
+  <data name="TransitionParentError" xml:space="preserve">
+    <value>转换节点只能连接状态节点</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="TransitionCondition" xml:space="preserve">
+    <value>条件转换</value>
+  </data>
+  <data name="TransitionConditionDesc" xml:space="preserve">
+    <value>当条件为真时，跳转到指定的状态</value>
+  </data>
+  <data name="TaskPrototype" xml:space="preserve">
+    <value>任务</value>
+  </data>
+  <data name="TaskPrototypeDesc" xml:space="preserve">
+    <value>任务</value>
+  </data>
+  <data name="NoParam" xml:space="preserve">
+    <value>没有指定任务的参数</value>
+  </data>
+  <data name="NoTask" xml:space="preserve">
+    <value>没有指定任务</value>
+  </data>
+  <data name="Branch" xml:space="preserve">
+    <value>分支</value>
+  </data>
+  <data name="BranchDesc" xml:space="preserve">
+    <value>分支</value>
+  </data>
+  <data name="MethodParentError" xml:space="preserve">
+    <value>方法只能是任务的子节点</value>
+  </data>
+  <data name="BranchPreconditions" xml:space="preserve">
+    <value>条件</value>
+  </data>
+  <data name="BranchTasks" xml:space="preserve">
+    <value>任务</value>
+  </data>
+  <data name="MethodChildChildError" xml:space="preserve">
+    <value>方法的子节点必须是分支节点</value>
+  </data>
+  <data name="MethodNoChildrenError" xml:space="preserve">
+    <value>方法节点最少要有一个子节点</value>
+  </data>
+  <data name="TaskNoMethod" xml:space="preserve">
+    <value>没有指定任务</value>
+  </data>
+  <data name="NoMethosError" xml:space="preserve">
+    <value>没有指定子节点</value>
+  </data>
+  <data name="Proposition" xml:space="preserve">
+    <value>命题</value>
+  </data>
+  <data name="PropositionDesc" xml:space="preserve">
+    <value>命题</value>
+  </data>
+  <data name="Effector" xml:space="preserve">
+    <value>后置</value>
+  </data>
+  <data name="EffectorDesc" xml:space="preserve">
+    <value>节点结束时执行</value>
+  </data>
+  <data name="Reinit" xml:space="preserve">
+    <value>重新开始</value>
+  </data>
+  <data name="Requery" xml:space="preserve">
+    <value>重新查询</value>
+  </data>
+  <data name="PreconditionPhase" xml:space="preserve">
+    <value>执行时机</value>
+  </data>
+  <data name="PreconditionPhaseDesc" xml:space="preserve">
+    <value>什么时候起作用</value>
+  </data>
+  <data name="CustomizedMethodError" xml:space="preserve">
+    <value>发现自定义的方法：请先将该方法所在Agent类的导出源码文件整合到自己的游戏项目中，并导出类型信息文件，然后回到编辑器中重新加载当前工作区后，再导出行为树。</value>
+  </data>
+  <data name="DecoratorIterator" xml:space="preserve">
+    <value>尝试</value>
+  </data>
+  <data name="DecoratorIteratorDesc" xml:space="preserve">
+    <value>尝试数组中直到第一个满足子树的元素</value>
+  </data>
+  <data name="DecoratorRepeat" xml:space="preserve">
+    <value>重复</value>
+  </data>
+  <data name="DecoratorRepeatDesc" xml:space="preserve">
+    <value>根据指定的次数，重复执行子节点然后返回。如果子节点失败了，则返回失败。
+如果子节点一直运行，则本节点一直阻塞。但如果‘子节点结束时作用’设置不为真，则不会阻塞。
+其他情况，则返回成功。本节点只能成功或失败，不会返回运行。</value>
+  </data>
+  <data name="StartCondition" xml:space="preserve">
+    <value>开始</value>
+  </data>
+  <data name="StartConditionDesc" xml:space="preserve">
+    <value>开始</value>
+  </data>
+  <data name="Effectors" xml:space="preserve">
+    <value>效果</value>
+  </data>
+  <data name="EffectorsDesc" xml:space="preserve">
+    <value>效果</value>
+  </data>
+  <data name="TargetId" xml:space="preserve">
+    <value>转换节点ID</value>
+  </data>
+  <data name="TargetIdDesc" xml:space="preserve">
+    <value>转换节点ID</value>
+  </data>
+  <data name="Right" xml:space="preserve">
+    <value>右值</value>
+  </data>
+  <data name="TransitionMode" xml:space="preserve">
+    <value>转换模式</value>
+  </data>
+  <data name="TransitionModeDesc" xml:space="preserve">
+    <value>控制如何转换：当条件为真时转换，或者当配置的方法成功/失败/结束时转换。</value>
+  </data>
+  <data name="Transition" xml:space="preserve">
+    <value>转换</value>
+  </data>
+  <data name="FSM" xml:space="preserve">
+    <value>状态机</value>
+  </data>
+  <data name="IsEndState" xml:space="preserve">
+    <value>结束状态</value>
+  </data>
+  <data name="IsEndStateDesc" xml:space="preserve">
+    <value>当到达‘结束状态’的时候，状态机结束。</value>
+  </data>
+  <data name="WaitFramesState" xml:space="preserve">
+    <value>等待帧数状态</value>
+  </data>
+  <data name="WaitFramesStateDesc" xml:space="preserve">
+    <value>等待帧数状态</value>
+  </data>
+  <data name="WaitState" xml:space="preserve">
+    <value>等待状态</value>
+  </data>
+  <data name="WaitStateDesc" xml:space="preserve">
+    <value>等待状态</value>
+  </data>
+  <data name="AlwaysTransition" xml:space="preserve">
+    <value>总是转换</value>
+  </data>
+  <data name="AlwaysTransitionDesc" xml:space="preserve">
+    <value>总是转换</value>
+  </data>
+  <data name="WaitTransition" xml:space="preserve">
+    <value>等待转换</value>
+  </data>
+  <data name="WaitTransitionDesc" xml:space="preserve">
+    <value>等待转换</value>
+  </data>
+  <data name="DoneWithinFrame" xml:space="preserve">
+    <value>一帧内结束</value>
+  </data>
+  <data name="DoneWithinFrameDesc" xml:space="preserve">
+    <value>如果被选中，该循环被阻塞，循环在一帧内结束。否则该循环在该帧只是返回‘running’，直到循环结束才返回‘成功’</value>
+  </data>
+  <data name="StatusTransition" xml:space="preserve">
+    <value>状态转换</value>
+  </data>
+  <data name="StatusTransitionDesc" xml:space="preserve">
+    <value>当状态节点是子树时，可以添加状态转换附件，根据子树的返回状态决定是否转换</value>
+  </data>
+  <data name="TransitionPhase" xml:space="preserve">
+    <value>转换时机</value>
+  </data>
+  <data name="TransitionPhaseDesc" xml:space="preserve">
+    <value>转换时机</value>
+  </data>
+  <data name="CastRight" xml:space="preserve">
+    <value>类型转换</value>
+  </data>
+  <data name="CastRightDesc" xml:space="preserve">
+    <value>右值被转换到左值的类型</value>
+  </data>
+</root>

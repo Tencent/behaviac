@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Behavior Version="5">
+  <Node Class="Behaviac.Design.Nodes.Behavior" AgentType="PreconEffectorAgent" Domains="" Enable="true" HasOwnPrefabData="false" Id="-1" PrefabName="" PrefabNodeId="-1">
+    <Comment Background="NoColor" Text="" />
+    <DescriptorRefs value="0:" />
+    <Connector Identifier="GenericChildren">
+      <Node Class="PluginBehaviac.Nodes.DecoratorLoop" Count="const int -1" DecorateWhenChildEnds="true" DoneWithinFrame="false" Enable="true" HasOwnPrefabData="false" Id="7" PrefabName="" PrefabNodeId="-1">
+        <Comment Background="NoColor" Text="" />
+        <Connector Identifier="GenericChildren">
+          <Node Class="PluginBehaviac.Nodes.SelectorLoop" Enable="true" HasOwnPrefabData="false" Id="6" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+            <Connector Identifier="GenericChildren">
+              <Node Class="PluginBehaviac.Nodes.WithPrecondition" Enable="true" HasOwnPrefabData="false" Id="5" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+                <Connector Identifier="Precondition">
+                  <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="13" Operator="Equal" Opl="int Self.PreconEffectorAgent::count_both" Opr="const int 0" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                </Connector>
+                <Connector Identifier="Action">
+                  <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="11" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                    <Attachment Class="PluginBehaviac.Events.Effector" Enable="true" Id="16" Operator="Add" Opl="int Self.PreconEffectorAgent::ret" Opr1="int Self.PreconEffectorAgent::ret" Opr2="const int 1" Phase="Failure" PrefabAttachmentId="-1" />
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="4" Method="Self.PreconEffectorAgent::action()" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                        <Comment Background="NoColor" Text="" />
+                        <Attachment Class="PluginBehaviac.Events.Effector" Enable="true" Id="8" Operator="Add" Opl="int Self.PreconEffectorAgent::count_success" Opr1="int Self.PreconEffectorAgent::count_success" Opr2="const int 1" Phase="Success" PrefabAttachmentId="-1" />
+                        <Attachment Class="PluginBehaviac.Events.Effector" Enable="true" Id="19" Operator="Add" Opl="int Self.PreconEffectorAgent::count_failure" Opr1="int Self.PreconEffectorAgent::count_failure" Opr2="const int 1" Phase="Failure" PrefabAttachmentId="-1" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="9" Method="Self.PreconEffectorAgent::action()" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_RUNNING">
+                        <Comment Background="NoColor" Text="" />
+                        <Attachment Class="PluginBehaviac.Events.Effector" Enable="true" Id="2" Operator="Add" Opl="int Self.PreconEffectorAgent::count_failure" Opr1="int Self.PreconEffectorAgent::count_failure" Opr2="const int 1" Phase="Failure" PrefabAttachmentId="-1" />
+                        <Attachment Class="PluginBehaviac.Events.Effector" Enable="true" Id="18" Operator="Add" Opl="int Self.PreconEffectorAgent::count_success" Opr1="int Self.PreconEffectorAgent::count_success" Opr2="const int 1" Phase="Success" PrefabAttachmentId="-1" />
+                      </Node>
+                    </Connector>
+                  </Node>
+                </Connector>
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.WithPrecondition" Enable="true" HasOwnPrefabData="false" Id="0" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+                <Connector Identifier="Precondition">
+                  <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="12" Operator="Equal" Opl="int Self.PreconEffectorAgent::count_both" Opr="const int 1" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                </Connector>
+                <Connector Identifier="Action">
+                  <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="14" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                    <Attachment Class="PluginBehaviac.Events.Effector" Enable="true" Id="17" Operator="Add" Opl="int Self.PreconEffectorAgent::ret" Opr1="int Self.PreconEffectorAgent::ret" Opr2="const int 2" Phase="Both" PrefabAttachmentId="-1" />
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="10" Method="Self.PreconEffectorAgent::action()" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_RUNNING">
+                        <Comment Background="NoColor" Text="" />
+                        <Attachment Class="PluginBehaviac.Events.Effector" Enable="true" Id="15" Operator="Add" Opl="int Self.PreconEffectorAgent::count_success" Opr1="int Self.PreconEffectorAgent::count_success" Opr2="const int 1" Phase="Success" PrefabAttachmentId="-1" />
+                        <Attachment Class="PluginBehaviac.Events.Effector" Enable="true" Id="20" Operator="Add" Opl="int Self.PreconEffectorAgent::count_failure" Opr1="int Self.PreconEffectorAgent::count_failure" Opr2="const int 1" Phase="Failure" PrefabAttachmentId="-1" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="1" Method="Self.PreconEffectorAgent::action()" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                        <Comment Background="NoColor" Text="" />
+                        <Attachment Class="PluginBehaviac.Events.Effector" Enable="true" Id="21" Operator="Add" Opl="int Self.PreconEffectorAgent::count_failure" Opr1="int Self.PreconEffectorAgent::count_failure" Opr2="const int 1" Phase="Failure" PrefabAttachmentId="-1" />
+                        <Attachment Class="PluginBehaviac.Events.Effector" Enable="true" Id="3" Operator="Add" Opl="int Self.PreconEffectorAgent::count_success" Opr1="int Self.PreconEffectorAgent::count_success" Opr2="const int 1" Phase="Success" PrefabAttachmentId="-1" />
+                      </Node>
+                    </Connector>
+                  </Node>
+                </Connector>
+              </Node>
+            </Connector>
+          </Node>
+        </Connector>
+      </Node>
+    </Connector>
+  </Node>
+</Behavior>

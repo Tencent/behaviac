@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: par_test\vector_test.xml-->
+<behavior name="par_test/vector_test" agenttype="TestNS::AgentArrayAccessTest" version="5">
+  <pars>
+    <par name="l_index" type="int" value="0" />
+    <par name="l_ListInts" type="vector&lt;int&gt;" value="5:100|200|300|400|500" />
+    <par name="l_Int" type="int" value="0" />
+  </pars>
+  <node class="Sequence" id="22">
+    <node class="Assignment" id="0">
+      <property CastRight="false" />
+      <property Opl="int Self.TestNS::AgentArrayAccessTest::Int" />
+      <property Opr="int Self.TestNS::AgentArrayAccessTest::ListInts[0]" />
+    </node>
+    <node class="Assignment" id="1">
+      <property CastRight="false" />
+      <property Opl="int Self.TestNS::AgentArrayAccessTest::c_Int" />
+      <property Opr="int Self.TestNS::AgentArrayAccessTest::c_ListInts[0]" />
+    </node>
+    <node class="Assignment" id="16">
+      <property CastRight="false" />
+      <property Opl="int Self.TestNS::AgentArrayAccessTest::l_ListInts[0]" />
+      <property Opr="const int 100" />
+    </node>
+    <node class="Assignment" id="2">
+      <property CastRight="false" />
+      <property Opl="int Self.TestNS::AgentArrayAccessTest::l_Int" />
+      <property Opr="int Self.TestNS::AgentArrayAccessTest::l_ListInts[0]" />
+    </node>
+    <node class="Assignment" id="4">
+      <property CastRight="false" />
+      <property Opl="int Self.TestNS::AgentArrayAccessTest::l_index" />
+      <property Opr="const int 0" />
+    </node>
+    <node class="Compute" id="3">
+      <property Operator="Add" />
+      <property Opl="int Self.TestNS::AgentArrayAccessTest::ListInts[int Self.TestNS::AgentArrayAccessTest::l_index]" />
+      <property Opr1="int Self.TestNS::AgentArrayAccessTest::c_Int" />
+      <property Opr2="int Self.TestNS::AgentArrayAccessTest::l_Int" />
+    </node>
+    <node class="Assignment" id="5">
+      <property CastRight="false" />
+      <property Opl="int Self.TestNS::AgentArrayAccessTest::c_Count" />
+      <property Opr="Self.behaviac::Agent::VectorLength(vector&lt;int&gt; Self.TestNS::AgentArrayAccessTest::l_ListInts)" />
+    </node>
+    <node class="Action" id="6">
+      <property Method="Self.behaviac::Agent::VectorAdd(vector&lt;int&gt; Self.TestNS::AgentArrayAccessTest::c_ListInts,int Self.TestNS::AgentArrayAccessTest::Int)" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+    <node class="Action" id="7">
+      <property Method="Self.behaviac::Agent::VectorRemove(vector&lt;int&gt; Self.TestNS::AgentArrayAccessTest::c_ListInts,int Self.TestNS::AgentArrayAccessTest::c_Int)" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+    <node class="DecoratorLoop" id="8">
+      <property Count="const int 100" />
+      <property DecorateWhenChildEnds="true" />
+      <property DoneWithinFrame="true" />
+      <node class="Sequence" id="12">
+        <node class="Assignment" id="14">
+          <property CastRight="false" />
+          <property Opl="double Self.TestNS::AgentArrayAccessTest::c_douleVec[2]" />
+          <property Opr="const double 0.03" />
+        </node>
+        <node class="Action" id="9">
+          <property Method="Self.behaviac::Agent::VectorAdd(vector&lt;double&gt; Self.TestNS::AgentArrayAccessTest::c_douleVec,double Self.TestNS::AgentArrayAccessTest::c_douleVec[2])" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+      </node>
+    </node>
+    <node class="DecoratorLoop" id="10">
+      <property Count="const int 100" />
+      <property DecorateWhenChildEnds="true" />
+      <property DoneWithinFrame="true" />
+      <node class="Sequence" id="13">
+        <node class="Assignment" id="15">
+          <property CastRight="false" />
+          <property Opl="double Self.TestNS::AgentArrayAccessTest::c_doubleVal" />
+          <property Opr="const double 0.05" />
+        </node>
+        <node class="Action" id="11">
+          <property Method="Self.behaviac::Agent::VectorAdd(vector&lt;double&gt; Self.TestNS::AgentArrayAccessTest::c_doubleVec2,double Self.TestNS::AgentArrayAccessTest::c_doubleVal)" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+      </node>
+    </node>
+  </node>
+</behavior>

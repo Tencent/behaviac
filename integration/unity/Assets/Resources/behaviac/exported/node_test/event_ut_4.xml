@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\event_ut_4.xml-->
+<behavior name="node_test/event_ut_4" agenttype="AgentNodeTest" version="5">
+  <node class="DecoratorLoop" id="0">
+    <property Count="const int -1" />
+    <property DecorateWhenChildEnds="true" />
+    <property DoneWithinFrame="false" />
+    <attachment class="Event" id="1" flag="event">
+      <property ReferenceFilename="node_test/event_subtree_5" />
+      <property Task="Self.AgentNodeTest::event_test_a(0)" />
+      <property TriggeredOnce="false" />
+      <property TriggerMode="Transfer" />
+    </attachment>
+    <node class="ReferencedBehavior" id="2">
+      <property ReferenceBehavior="const string &quot;node_test/if_else_ut_0&quot;" />
+    </node>
+  </node>
+</behavior>

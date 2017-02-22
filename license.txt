@@ -1,0 +1,69 @@
+Tencent is pleased to support the open source community by making Behaviac available.  
+Copyright (C) 2015-2017 THL A29 Limited, a Tencent company.  All rights reserved.
+If you have downloaded a copy of the Behaviac binary from Tencent, please note that the Behaviac binary is licensed under the BSD 3-Clause License.
+If you have downloaded a copy of the Behaviac source code from Tencent, please note that Behaviac source code is licensed under the BSD 3-Clause License, except for the third-party components listed below which are subject to different license terms.  Your integration of Behaviac into your own projects may require compliance with the BSD 3-Clause License, as well as the other licenses applicable to the third-party components included within Behaviac.
+A copy of the BSD 3-Clause License is included in this file.
+
+Other dependencies and licenses:
+
+Open Source Software Licensed Under the University of Illinois/NCSA Open Source License: The below software in this distribution may have been modified by THL A29 Limited (¡°Tencent Modifications¡±). All Tencent Modifications are Copyright (C) 2015-2017 THL A29 Limited.
+--------------------------------------------------------------------
+1.  LLVM - ConvertUTF.c  3.9.1
+Copyright 2001-2004 Unicode, Inc.
+
+
+Terms of the University of Illinois/NCSA Open Source License:
+---------------------------------------------------
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal with the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+?	Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimers.
+?	Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimers in the documentation and/or other materials provided with the distribution.
+?	Neither the names of <Name of Development Group, Name of Institution>, nor the names of its contributors may be used to endorse or promote products derived from this Software without specific prior written permission.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE CONTRIBUTORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS WITH THE SOFTWARE.
+
+
+Open Source Software Licensed Under the MIT License: The below software in this distribution may have been modified by THL A29 Limited (¡°Tencent Modifications¡±). All Tencent Modifications are Copyright (C) 2015-2017 THL A29 Limited.
+--------------------------------------------------------------------
+1. RapidXml  V 1.13 
+Copyright (c) 2006, 2007 Marcin Kalicinski
+All Rights Reserved.
+
+2. DockPanel  V 2.0.0
+Copyright (c) 2007 Weifen Luo
+All Rights Reserved.
+
+3. nunit-framework  V 3.0.0
+Copyright (c) 2014 Charlie Poole
+All Rights Reserved.
+
+
+Terms of the MIT License:
+---------------------------------------------------
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+Open Source Software Licensed Under the BSD 3-Clause License: The below software in this distribution may have been modified by THL A29 Limited (¡°Tencent Modifications¡±). All Tencent Modifications are Copyright (C) 2015-2017 THL A29 Limited. 
+--------------------------------------------------------------------
+1. Brainiac Designer  V 2.1
+Copyright (c) 2008, Daniel Kollmann
+All rights reserved.
+
+2. Nsubstitute  V 1.7.1
+Copyright (c) 2009 Anthony Egerton (nsubstitute@delfish.com) and David Tchepak (dave@davesquared.net)
+All rights reserved.
+
+
+Terms of the BSD 3-Clause License:
+--------------------------------------------------------------------
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+3. Neither the name of THL A29 Limited nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.

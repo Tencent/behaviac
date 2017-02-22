@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Behavior Version="5">
+  <Node Class="Behaviac.Design.Nodes.Behavior" AgentType="HTNAgentHouse" Domains="" Enable="true" HasOwnPrefabData="false" Id="-1" PrefabName="" PrefabNodeId="-1">
+    <Comment Background="NoColor" Text="" />
+    <DescriptorRefs value="0:" />
+    <Connector Identifier="GenericChildren">
+      <Node Class="PluginBehaviac.Nodes.Task" Enable="true" HasOwnPrefabData="false" Id="1" PrefabName="" PrefabNodeId="-1" Prototype="Self.HTNAgentHouse::root()">
+        <Comment Background="NoColor" Text="" />
+        <Connector Identifier="GenericChildren">
+          <Node Class="PluginBehaviac.Nodes.Method" Enable="true" HasOwnPrefabData="false" Id="0" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+            <Connector Identifier="Tasks">
+              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="2" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.Parallel" ChildFinishPolicy="CHILDFINISH_LOOP" Enable="true" ExitPolicy="EXIT_ABORT_RUNNINGSIBLINGS" FailurePolicy="FAIL_ON_ONE" HasOwnPrefabData="false" Id="12" PrefabName="" PrefabNodeId="-1" SuccessPolicy="SUCCEED_ON_ALL">
+                    <Comment Background="NoColor" Text="" />
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="4" Method="Self.HTNAgentHouse::BuyLand()" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                        <Comment Background="NoColor" Text="" />
+                        <Attachment Class="PluginBehaviac.Events.Precondition" BinaryOperator="And" Enable="true" Id="3" Operator="Greater" Opl="int Self.HTNAgentHouseBase::Money" Opr1="&quot;&quot;" Opr2="const int 100" Phase="Enter" PrefabAttachmentId="-1" />
+                        <Attachment Class="PluginBehaviac.Events.Effector" Enable="true" Id="5" Operator="Sub" Opl="int Self.HTNAgentHouseBase::Money" Opr1="int Self.HTNAgentHouseBase::Money" Opr2="const int 100" Phase="Success" PrefabAttachmentId="-1" />
+                        <Attachment Class="PluginBehaviac.Events.Effector" Enable="true" Id="6" Operator="Assign" Opl="bool Self.HTNAgentHouse::Land" Opr1="const bool true" Opr2="const bool true" Phase="Success" PrefabAttachmentId="-1" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="8" Method="Self.HTNAgentHouse::GetLoan()" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                        <Comment Background="NoColor" Text="" />
+                        <Attachment Class="PluginBehaviac.Events.Precondition" BinaryOperator="And" Enable="true" Id="7" Operator="Equal" Opl="bool Self.HTNAgentHouse::GoodCredit" Opr1="&quot;&quot;" Opr2="const bool true" Phase="Enter" PrefabAttachmentId="-1" />
+                        <Attachment Class="PluginBehaviac.Events.Effector" Enable="true" Id="9" Operator="Add" Opl="int Self.HTNAgentHouseBase::Money" Opr1="int Self.HTNAgentHouseBase::Money" Opr2="const int 50" Phase="Success" PrefabAttachmentId="-1" />
+                        <Attachment Class="PluginBehaviac.Events.Effector" Enable="true" Id="10" Operator="Assign" Opl="bool Self.HTNAgentHouse::Mortgage" Opr1="const bool true" Opr2="const bool true" Phase="Success" PrefabAttachmentId="-1" />
+                      </Node>
+                    </Connector>
+                  </Node>
+                  <Node Class="Behaviac.Design.Nodes.ReferencedBehavior" Enable="true" HasOwnPrefabData="false" Id="11" PrefabName="" PrefabNodeId="-1" ReferenceBehavior="const string &quot;node_test/htn/house/build_house&quot;" Task="Self.HTNAgentHouse::build_house()">
+                    <Comment Background="Gray" Text="" />
+                  </Node>
+                </Connector>
+              </Node>
+            </Connector>
+          </Node>
+        </Connector>
+      </Node>
+    </Connector>
+  </Node>
+</Behavior>

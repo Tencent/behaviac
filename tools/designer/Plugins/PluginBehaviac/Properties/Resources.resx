@@ -1,0 +1,881 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Action" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="ActionDesc" xml:space="preserve">
+    <value>Primitive action</value>
+  </data>
+  <data name="And" xml:space="preserve">
+    <value>And</value>
+  </data>
+  <data name="AndDesc" xml:space="preserve">
+    <value>true if all children are true</value>
+  </data>
+  <data name="Condition" xml:space="preserve">
+    <value>Condition</value>
+  </data>
+  <data name="ConditionDesc" xml:space="preserve">
+    <value>condition is usually represented by the agent's properties, pars, etc.</value>
+  </data>
+  <data name="DecoratorFailureUntil" xml:space="preserve">
+    <value>FailureUntil</value>
+  </data>
+  <data name="DecoratorFailureUntilDesc" xml:space="preserve">
+    <value>Failure until the specified count</value>
+  </data>
+  <data name="DecoratorLog" xml:space="preserve">
+    <value>Log</value>
+  </data>
+  <data name="DecoratorLogDesc" xml:space="preserve">
+    <value>Logging</value>
+  </data>
+  <data name="DecoratorLoop" xml:space="preserve">
+    <value>Loop</value>
+  </data>
+  <data name="DecoratorLoopCount" xml:space="preserve">
+    <value>Count</value>
+  </data>
+  <data name="DecoratorLoopCountDesc" xml:space="preserve">
+    <value>Determines how often the child will be called. If the child fails, the loop is aborted and fails.</value>
+  </data>
+  <data name="DecoratorLoopDesc" xml:space="preserve">
+    <value>This decorator calls its child n times. -1 is for endless.</value>
+  </data>
+  <data name="DecoratorNot" xml:space="preserve">
+    <value>Not</value>
+  </data>
+  <data name="DecoratorNotDesc" xml:space="preserve">
+    <value>This decorator inverts the return value of the attached node. If the attached node fails, it will appear as it has succedded and vice versa.</value>
+  </data>
+  <data name="DecoratorSuccessUntil" xml:space="preserve">
+    <value>SuccessUntil</value>
+  </data>
+  <data name="DecoratorSuccessUntilDesc" xml:space="preserve">
+    <value>Succeed until the specified count</value>
+  </data>
+  <data name="DecoratorTime" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="DecoratorTimeDesc" xml:space="preserve">
+    <value>This decorator calls its child within the specified time(milliseconds).</value>
+  </data>
+  <data name="DecoratorAlwaysSuccess" xml:space="preserve">
+    <value>AlwaysSuccess</value>
+  </data>
+  <data name="DecoratorAlwaysSuccessDesc" xml:space="preserve">
+    <value>it always returns success no matter what result the child returns</value>
+  </data>
+  <data name="CompareGetter" xml:space="preserve">
+    <value>CompareGetter</value>
+  </data>
+  <data name="CompareGetterDesc" xml:space="preserve">
+    <value>call a getter and compare its return value to the right operand</value>
+  </data>
+  <data name="IfElse" xml:space="preserve">
+    <value>IfElse</value>
+  </data>
+  <data name="IfElseDesc" xml:space="preserve">
+    <value>if condition is true, the 'If' is ticked, if condition is false, the 'Else' is ticked</value>
+  </data>
+  <data name="Impulse" xml:space="preserve">
+    <value>Impulse</value>
+  </data>
+  <data name="ImpulseDesc" xml:space="preserve">
+    <value>This node is only visible when one of the associated events were fired.</value>
+  </data>
+  <data name="NodeGroupLeaves" xml:space="preserve">
+    <value>Leaves</value>
+  </data>
+  <data name="NodeGroupActions" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="NodeGroupBranches" xml:space="preserve">
+    <value>Branches</value>
+  </data>
+  <data name="NodeGroupComposites" xml:space="preserve">
+    <value>Composites</value>
+  </data>
+  <data name="NodeGroupConditions" xml:space="preserve">
+    <value>Conditions</value>
+  </data>
+  <data name="NodeGroupDecorators" xml:space="preserve">
+    <value>Decorators</value>
+  </data>
+  <data name="NodeGroupImpulses" xml:space="preserve">
+    <value>Impulses</value>
+  </data>
+  <data name="NodeGroupAttachments" xml:space="preserve">
+    <value>Attachments</value>
+  </data>
+  <data name="NodeGroupEvents" xml:space="preserve">
+    <value>Events</value>
+  </data>
+  <data name="Noop" xml:space="preserve">
+    <value>Noop</value>
+  </data>
+  <data name="NoopDesc" xml:space="preserve">
+    <value>no operation</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>Or</value>
+  </data>
+  <data name="OrDesc" xml:space="preserve">
+    <value>true if any one of the children is true</value>
+  </data>
+  <data name="Parallel" xml:space="preserve">
+    <value>Parallel</value>
+  </data>
+  <data name="ParallelDesc" xml:space="preserve">
+    <value>all the children are updated in parallel</value>
+  </data>
+  <data name="PreAction" xml:space="preserve">
+    <value>PreAction</value>
+  </data>
+  <data name="PreActionDesc" xml:space="preserve">
+    <value>to check a precondition before taking action</value>
+  </data>
+  <data name="Query" xml:space="preserve">
+    <value>Query</value>
+  </data>
+  <data name="QueryDesc" xml:space="preserve">
+    <value>sub trees are queried</value>
+  </data>
+  <data name="Selector" xml:space="preserve">
+    <value>Selector</value>
+  </data>
+  <data name="SelectorDesc" xml:space="preserve">
+    <value>This node will call its attached nodes in the given order until one succeeds. If all attached nodes fail, this node fails, too.</value>
+  </data>
+  <data name="SelectorStochastic" xml:space="preserve">
+    <value>SelectorStochastic</value>
+  </data>
+  <data name="SelectorStochasticDesc" xml:space="preserve">
+    <value>Selector Stochastic</value>
+  </data>
+  <data name="Sequence" xml:space="preserve">
+    <value>Sequence</value>
+  </data>
+  <data name="SequenceDesc" xml:space="preserve">
+    <value>This node will call its attached nodes in the given order. If any of the attached nodes fails, this node fails as well.</value>
+  </data>
+  <data name="SequenceStochastic" xml:space="preserve">
+    <value>SequenceStochastic</value>
+  </data>
+  <data name="SequenceStochasticDesc" xml:space="preserve">
+    <value>Sequence Stochastic</value>
+  </data>
+  <data name="DecoratorAlwaysFailure" xml:space="preserve">
+    <value>AlwaysFailure</value>
+  </data>
+  <data name="DecoratorAlwaysFailureDesc" xml:space="preserve">
+    <value>it always returns failure no matter what result the child returns</value>
+  </data>
+  <data name="DecoratorAlwaysRunning" xml:space="preserve">
+    <value>AlwaysRunning</value>
+  </data>
+  <data name="DecoratorAlwaysRunningDesc" xml:space="preserve">
+    <value>it always returns running no matter what result the child returns</value>
+  </data>
+  <data name="DecoratorFailureAfter" xml:space="preserve">
+    <value>FailureAfter</value>
+  </data>
+  <data name="DecoratorFailureAfterDesc" xml:space="preserve">
+    <value>Failue After the specified count</value>
+  </data>
+  <data name="DecoratorSuccessAfter" xml:space="preserve">
+    <value>SuccessAfter</value>
+  </data>
+  <data name="DecoratorSuccessAfterDesc" xml:space="preserve">
+    <value>Success After the specified count</value>
+  </data>
+  <data name="DecoratorWait" xml:space="preserve">
+    <value>Wait</value>
+  </data>
+  <data name="DecoratorWaitDesc" xml:space="preserve">
+    <value>It will wait for a given time to execute the child</value>
+  </data>
+  <data name="DecoratorDelay" xml:space="preserve">
+    <value>Delay</value>
+  </data>
+  <data name="DecoratorDelayDesc" xml:space="preserve">
+    <value>Delay</value>
+  </data>
+  <data name="Wait" xml:space="preserve">
+    <value>Wait</value>
+  </data>
+  <data name="WaitDesc" xml:space="preserve">
+    <value>Wait for the specified miliseconds</value>
+  </data>
+  <data name="SelectorProbability" xml:space="preserve">
+    <value>SelectorProbability</value>
+  </data>
+  <data name="SelectorProbabilityDesc" xml:space="preserve">
+    <value>Selector by probability</value>
+  </data>
+  <data name="DecoratorLogMessage" xml:space="preserve">
+    <value>Log Message</value>
+  </data>
+  <data name="DecoratorLogMessageDesc" xml:space="preserve">
+    <value>Log message</value>
+  </data>
+  <data name="DecoratorWeight" xml:space="preserve">
+    <value>Weight</value>
+  </data>
+  <data name="DecoratorWeightDesc" xml:space="preserve">
+    <value>Weight</value>
+  </data>
+  <data name="SelectorLoop" xml:space="preserve">
+    <value>SelectorMonitor</value>
+  </data>
+  <data name="SelectorLoopDesc" xml:space="preserve">
+    <value>Dynamic Selector, it keep selecting from the children nodes until one succeeds.</value>
+  </data>
+  <data name="False" xml:space="preserve">
+    <value>False</value>
+  </data>
+  <data name="FalseDesc" xml:space="preserve">
+    <value>False</value>
+  </data>
+  <data name="True" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="TrueDesc" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="DecoratorLoopUntil" xml:space="preserve">
+    <value>LoopUntil</value>
+  </data>
+  <data name="DecoratorLoopUntilDesc" xml:space="preserve">
+    <value>loop until the child returns success/failure or loop for the specified count.</value>
+  </data>
+  <data name="DecoratorUntil" xml:space="preserve">
+    <value>Until</value>
+  </data>
+  <data name="DecoratorUntilDesc" xml:space="preserve">
+    <value>by default, the decorator loops until the child returns success. if 'until' is false, the decorator loops until the child returns failure.</value>
+  </data>
+  <data name="WithPrecondition" xml:space="preserve">
+    <value>WithPrecondition</value>
+  </data>
+  <data name="WithPreconditionDesc" xml:space="preserve">
+    <value>it has two branches:precondition and action. action branch can only be called if the precondition branch returns success.</value>
+  </data>
+  <data name="SelectorLoopChildChildError" xml:space="preserve">
+    <value>Children are not WithPrecondition</value>
+  </data>
+  <data name="WithPreconditionAction" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="NoActionError" xml:space="preserve">
+    <value>No action branch is specified</value>
+  </data>
+  <data name="NoPreconditionError" xml:space="preserve">
+    <value>No Precondition branch is specified</value>
+  </data>
+  <data name="WithPreconditionPrecondition" xml:space="preserve">
+    <value>Precondition</value>
+  </data>
+  <data name="ImpulseWithoutEventError" xml:space="preserve">
+    <value>no signal specified</value>
+  </data>
+  <data name="Blocked" xml:space="preserve">
+    <value>Blocked</value>
+  </data>
+  <data name="BlockedDesc" xml:space="preserve">
+    <value>the impulse blocks the execution and waits for all the events</value>
+  </data>
+  <data name="ImpulseParentError" xml:space="preserve">
+    <value>Impulse can only be children of Selector</value>
+  </data>
+  <data name="ConditionGetter" xml:space="preserve">
+    <value>ConditionGetter</value>
+  </data>
+  <data name="ConditionGetterDesc" xml:space="preserve">
+    <value>call a getter function and compare the return value to the right operand</value>
+  </data>
+  <data name="Predicate" xml:space="preserve">
+    <value>Predicate</value>
+  </data>
+  <data name="PredicateDesc" xml:space="preserve">
+    <value>compare properties/pars with the right operand</value>
+  </data>
+  <data name="BehaviorDomain" xml:space="preserve">
+    <value>Domain</value>
+  </data>
+  <data name="BehaviorDomainDesc" xml:space="preserve">
+    <value>tag to indicate the type, purpose, etc.</value>
+  </data>
+  <data name="DescriptorWeightDesc" xml:space="preserve">
+    <value>DescriptorWeight</value>
+  </data>
+  <data name="Getter" xml:space="preserve">
+    <value>Getter</value>
+  </data>
+  <data name="GetterDesc" xml:space="preserve">
+    <value>Gettter</value>
+  </data>
+  <data name="ExitPolicy" xml:space="preserve">
+    <value>ExitPolicy</value>
+  </data>
+  <data name="ExitPolicyDesc" xml:space="preserve">
+    <value>ExitPolicy, to determine what to do when exiting</value>
+  </data>
+  <data name="DecoratorCountLimit" xml:space="preserve">
+    <value>CountLimit</value>
+  </data>
+  <data name="DecoratorCountLimitDesc" xml:space="preserve">
+    <value>limit the count of the exucution</value>
+  </data>
+  <data name="Assignment" xml:space="preserve">
+    <value>Assignment</value>
+  </data>
+  <data name="AssignmentDesc" xml:space="preserve">
+    <value>assign the right to the left</value>
+  </data>
+  <data name="WaitforSignal" xml:space="preserve">
+    <value>WaitforSignal</value>
+  </data>
+  <data name="WaitforSignalDesc" xml:space="preserve">
+    <value>blocked until the predicates are true</value>
+  </data>
+  <data name="WithPreconditionParentError" xml:space="preserve">
+    <value>WithPrecondition can only be inserted to SelectorLoop.</value>
+  </data>
+  <data name="Descriptors" xml:space="preserve">
+    <value>Descriptors</value>
+  </data>
+  <data name="DescriptorsDesc" xml:space="preserve">
+    <value>Descriptors</value>
+  </data>
+  <data name="Descriptor" xml:space="preserve">
+    <value>Descriptor</value>
+  </data>
+  <data name="DescriptorDesc" xml:space="preserve">
+    <value>Descriptor</value>
+  </data>
+  <data name="Reference" xml:space="preserve">
+    <value>Reference</value>
+  </data>
+  <data name="ReferenceDesc" xml:space="preserve">
+    <value>Reference</value>
+  </data>
+  <data name="Weight" xml:space="preserve">
+    <value>Weight</value>
+  </data>
+  <data name="WeightDesc" xml:space="preserve">
+    <value>Weight</value>
+  </data>
+  <data name="Attribute" xml:space="preserve">
+    <value>Attribute</value>
+  </data>
+  <data name="AttributeDesc" xml:space="preserve">
+    <value>Attribute</value>
+  </data>
+  <data name="Event" xml:space="preserve">
+    <value>Event</value>
+  </data>
+  <data name="EventDesc" xml:space="preserve">
+    <value>Event</value>
+  </data>
+  <data name="Duration" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="DurationDesc" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="IfElseCondition" xml:space="preserve">
+    <value>Condition</value>
+  </data>
+  <data name="IfElseElse" xml:space="preserve">
+    <value>Else</value>
+  </data>
+  <data name="IfElseIf" xml:space="preserve">
+    <value>If</value>
+  </data>
+  <data name="FailurePolicy" xml:space="preserve">
+    <value>FailurePolicy</value>
+  </data>
+  <data name="FailurePolicyDesc" xml:space="preserve">
+    <value>the policy to return FAILURE</value>
+  </data>
+  <data name="SuccessPolicy" xml:space="preserve">
+    <value>SuccessPolicy</value>
+  </data>
+  <data name="SuccessPolicyDesc" xml:space="preserve">
+    <value>the policy to return SUCESS</value>
+  </data>
+  <data name="WaitFrames" xml:space="preserve">
+    <value>WaitFrames</value>
+  </data>
+  <data name="WaitFramesDesc" xml:space="preserve">
+    <value>Wait for the specified frames</value>
+  </data>
+  <data name="RandomGenerator" xml:space="preserve">
+    <value>RandomGenerator</value>
+  </data>
+  <data name="RandomGeneratorDesc" xml:space="preserve">
+    <value>You can specify a method to return a float value between 0.0 and 1.0 as the random number.</value>
+  </data>
+  <data name="DecoratorFrames" xml:space="preserve">
+    <value>Frames</value>
+  </data>
+  <data name="DecoratorFramesDesc" xml:space="preserve">
+    <value>This decorator calls its child within the specified Frames.</value>
+  </data>
+  <data name="Frames" xml:space="preserve">
+    <value>Frames</value>
+  </data>
+  <data name="FramesDesc" xml:space="preserve">
+    <value>Frames</value>
+  </data>
+  <data name="WeightParentError" xml:space="preserve">
+    <value>Its parent node is not SelectorProbability.</value>
+  </data>
+  <data name="OperandError" xml:space="preserve">
+    <value>Operand is not complete!</value>
+  </data>
+  <data name="RandomGeneratorNotSpecified" xml:space="preserve">
+    <value>RandomGenerator is not specified， the default one is used!</value>
+  </data>
+  <data name="ChildFinishPolicy" xml:space="preserve">
+    <value>ChildFinishPolicy</value>
+  </data>
+  <data name="ChildFinishPolicyDesc" xml:space="preserve">
+    <value>how to continue if a child node finishes.</value>
+  </data>
+  <data name="ExportFileWarning" xml:space="preserve">
+    <value>Export File Warning</value>
+  </data>
+  <data name="Compute" xml:space="preserve">
+    <value>Compute</value>
+  </data>
+  <data name="ComputeDesc" xml:space="preserve">
+    <value>Compute the result of Operand1 and Operand2 and assign it to the Left Operand</value>
+  </data>
+  <data name="Task" xml:space="preserve">
+    <value>Task</value>
+  </data>
+  <data name="TaskDesc" xml:space="preserve">
+    <value>A Task can be expanded into other tasks or actions on the runtime.</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="method_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\method.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Method" xml:space="preserve">
+    <value>Method</value>
+  </data>
+  <data name="MethodDesc" xml:space="preserve">
+    <value>Methods can only be Tasks' sub nodes.</value>
+  </data>
+  <data name="MethodTasks" xml:space="preserve">
+    <value>Tasks</value>
+  </data>
+  <data name="MethodParentError" xml:space="preserve">
+    <value>Method's parent must be a Task.</value>
+  </data>
+  <data name="MethodPreconditions" xml:space="preserve">
+    <value>Preconditions</value>
+  </data>
+  <data name="TaskChildChildError" xml:space="preserve">
+    <value>Children are not Method</value>
+  </data>
+  <data name="MethodEffectors" xml:space="preserve">
+    <value>Effectors</value>
+  </data>
+  <data name="NoEffectorError" xml:space="preserve">
+    <value>No effector branch is specified</value>
+  </data>
+  <data name="AndOrOnlyValidForBool" xml:space="preserve">
+    <value>And and Or are only valid for bool!</value>
+  </data>
+  <data name="OperatandIsNotComplete" xml:space="preserve">
+    <value>Operand is not complete!</value>
+  </data>
+  <data name="alwaysFailure_ico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ICON__0003_43.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="alwaysSuccess_ico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ICON__0004_42.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="compute_ico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ICON__0024_22.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="failureUntil_ico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ICON__0000_46.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="successUntil_ico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ICON__0001_45.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="selectorLoop_ico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ICON__0007_39.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="selectorProbability_ico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ICON__0019_27.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="selectorStochastic_ico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ICON__0018_28.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sequenceStochastic_ico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ICON__0016_30.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waitforSignal_ico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ICON__0008_38.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Precondition" xml:space="preserve">
+    <value>PreAction</value>
+  </data>
+  <data name="PreconditionDesc" xml:space="preserve">
+    <value>PreAction is an action or precondition which is executed/evaluated before 'entering' a node. </value>
+  </data>
+  <data name="TaskNoChildrenError" xml:space="preserve">
+    <value>task has no children.</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="StateDesc" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="EndTransition" xml:space="preserve">
+    <value>EndTransition</value>
+  </data>
+  <data name="EndTransitionDesc" xml:space="preserve">
+    <value>EndTransition</value>
+  </data>
+  <data name="Enter" xml:space="preserve">
+    <value>Enter</value>
+  </data>
+  <data name="EnterTo" xml:space="preserve">
+    <value>EnterTo</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="ExitFrom" xml:space="preserve">
+    <value>ExitFrom</value>
+  </data>
+  <data name="NoConditionError" xml:space="preserve">
+    <value>no condition specified!</value>
+  </data>
+  <data name="TransitionParentError" xml:space="preserve">
+    <value>transition can only link from a state to another state.</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="TransitionCondition" xml:space="preserve">
+    <value>Transition</value>
+  </data>
+  <data name="TransitionConditionDesc" xml:space="preserve">
+    <value>Transition</value>
+  </data>
+  <data name="TaskPrototype" xml:space="preserve">
+    <value>Task</value>
+  </data>
+  <data name="TaskPrototypeDesc" xml:space="preserve">
+    <value>Task</value>
+  </data>
+  <data name="NoParam" xml:space="preserve">
+    <value>Task's param not specified</value>
+  </data>
+  <data name="NoTask" xml:space="preserve">
+    <value>No task specified</value>
+  </data>
+  <data name="Branch" xml:space="preserve">
+    <value>Branch</value>
+  </data>
+  <data name="BranchDesc" xml:space="preserve">
+    <value>Branch</value>
+  </data>
+  <data name="BranchPreconditions" xml:space="preserve">
+    <value>Preconditions</value>
+  </data>
+  <data name="BranchTasks" xml:space="preserve">
+    <value>Tasks</value>
+  </data>
+  <data name="MethodChildChildError" xml:space="preserve">
+    <value>Method's child can only be Branch node</value>
+  </data>
+  <data name="MethodNoChildrenError" xml:space="preserve">
+    <value>Method has no children</value>
+  </data>
+  <data name="TaskNoMethod" xml:space="preserve">
+    <value>Task is not specified</value>
+  </data>
+  <data name="NoMethosError" xml:space="preserve">
+    <value>no child specified</value>
+  </data>
+  <data name="Proposition" xml:space="preserve">
+    <value>Proposition</value>
+  </data>
+  <data name="PropositionDesc" xml:space="preserve">
+    <value>Proposition</value>
+  </data>
+  <data name="Effector" xml:space="preserve">
+    <value>PostAction</value>
+  </data>
+  <data name="EffectorDesc" xml:space="preserve">
+    <value>it takes effect when the Node ends.</value>
+  </data>
+  <data name="Reinit" xml:space="preserve">
+    <value>Reinit</value>
+  </data>
+  <data name="Requery" xml:space="preserve">
+    <value>Requery</value>
+  </data>
+  <data name="PreconditionPhase" xml:space="preserve">
+    <value>When</value>
+  </data>
+  <data name="PreconditionPhaseDesc" xml:space="preserve">
+    <value>when to evalute the precondition</value>
+  </data>
+  <data name="CustomizedMethodError" xml:space="preserve">
+    <value>Found the customized method : Please firstly integrate the generated source files of the customized method of the agent into your game project. Then export it as meta info into the editor, reload the current workspace. At last, export the behaviors.</value>
+  </data>
+  <data name="DecoratorIterator" xml:space="preserve">
+    <value>Try</value>
+  </data>
+  <data name="DecoratorIteratorDesc" xml:space="preserve">
+    <value>try each element in the specified array</value>
+  </data>
+  <data name="DecoratorRepeat" xml:space="preserve">
+    <value>Repeat</value>
+  </data>
+  <data name="DecoratorRepeatDesc" xml:space="preserve">
+    <value>repeat the child node for the specified count to return success, 
+or return failure until the child node fails. if the child node keeps running, 
+it keeps blocked. but, if the 'DecorateChildEnds' is false, it is not blocked.
+it only returns success or failure and never returns running. 
+</value>
+  </data>
+  <data name="StartCondition" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="StartConditionDesc" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="Effectors" xml:space="preserve">
+    <value>Effectors</value>
+  </data>
+  <data name="EffectorsDesc" xml:space="preserve">
+    <value>Effectors</value>
+  </data>
+  <data name="TargetId" xml:space="preserve">
+    <value>Target Id</value>
+  </data>
+  <data name="TargetIdDesc" xml:space="preserve">
+    <value>Target Id</value>
+  </data>
+  <data name="Right" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="TransitionMode" xml:space="preserve">
+    <value>Transition Mode</value>
+  </data>
+  <data name="TransitionModeDesc" xml:space="preserve">
+    <value>it determines how the transition works: 1. when the condition is true, it transitions. 2. when the method succeeds/fails/ends it transitions.</value>
+  </data>
+  <data name="effector_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\postaction.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="precondition_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\preaction.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="query_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ICON__0028_18.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="repeat_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\repeat.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="state_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\state.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="task_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ICON__0026_20.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="transition_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\transition.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="try_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\try.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Transition" xml:space="preserve">
+    <value>Transition</value>
+  </data>
+  <data name="FSM" xml:space="preserve">
+    <value>FSM</value>
+  </data>
+  <data name="IsEndState" xml:space="preserve">
+    <value>IsEndState</value>
+  </data>
+  <data name="IsEndStateDesc" xml:space="preserve">
+    <value>when an 'End State' is entered, the FSM is ended.</value>
+  </data>
+  <data name="WaitFramesState" xml:space="preserve">
+    <value>WaitFramesState</value>
+  </data>
+  <data name="WaitFramesStateDesc" xml:space="preserve">
+    <value>WaitFramesState</value>
+  </data>
+  <data name="WaitState" xml:space="preserve">
+    <value>WaitState</value>
+  </data>
+  <data name="WaitStateDesc" xml:space="preserve">
+    <value>WaitState</value>
+  </data>
+  <data name="AlwaysTransition" xml:space="preserve">
+    <value>AlwaysTransition</value>
+  </data>
+  <data name="AlwaysTransitionDesc" xml:space="preserve">
+    <value>Always Transition</value>
+  </data>
+  <data name="WaitTransition" xml:space="preserve">
+    <value>WaitTransition</value>
+  </data>
+  <data name="WaitTransitionDesc" xml:space="preserve">
+    <value>WaitTransition can only be appended to WaitState or WaitFramesState</value>
+  </data>
+  <data name="DoneWithinFrame" xml:space="preserve">
+    <value>DoneWithinFrame</value>
+  </data>
+  <data name="DoneWithinFrameDesc" xml:space="preserve">
+    <value>if true, the whole Loop will be blocked until the loop is done within a frame</value>
+  </data>
+  <data name="StatusTransition" xml:space="preserve">
+    <value>StatusTransition</value>
+  </data>
+  <data name="StatusTransitionDesc" xml:space="preserve">
+    <value>for a subtree state, to transition or not based on its returnning status </value>
+  </data>
+  <data name="TransitionPhase" xml:space="preserve">
+    <value>TransitionPhase</value>
+  </data>
+  <data name="TransitionPhaseDesc" xml:space="preserve">
+    <value>in which case to transition</value>
+  </data>
+  <data name="CastRight" xml:space="preserve">
+    <value>Cast</value>
+  </data>
+  <data name="CastRightDesc" xml:space="preserve">
+    <value>the right operand is cast to the left type</value>
+  </data>
+</root>

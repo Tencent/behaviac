@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: par_test\custom_property_reset.xml-->
+<behavior name="par_test/custom_property_reset" agenttype="AgentNodeTest" version="5">
+  <pars>
+    <par name="l_Int" type="int" value="1" />
+    <par name="l_Location" type="UnityEngine::Vector3" value="{x=0;y=0;z=0;}" />
+  </pars>
+  <node class="Sequence" id="5">
+    <node class="Action" id="1">
+      <property Method="Self.AgentNodeTest::setTestVar_1(int Self.AgentNodeTest::testInt)" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+    <node class="Assignment" id="0">
+      <property CastRight="false" />
+      <property Opl="int Self.AgentNodeTest::testInt" />
+      <property Opr="const int 20" />
+    </node>
+  </node>
+</behavior>

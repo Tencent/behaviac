@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\action_ut_1.xml-->
+<behavior name="node_test/action_ut_1" agenttype="AgentNodeTest" version="5">
+  <pars>
+    <par name="par_go" type="UnityEngine::GameObject" value="null" />
+    <par name="par_float_type_0" type="float" value="0" />
+    <par name="par_float_type_1" type="float" value="0" />
+    <par name="par_float_type_2" type="float" value="2.7" />
+    <par name="local_node" type="TestNS::Node" value="null" />
+  </pars>
+  <node class="Sequence" id="0">
+    <node class="Compute" id="3">
+      <property Operator="Add" />
+      <property Opl="float Self.AgentNodeTest::par_float_type_0" />
+      <property Opr1="const float 0.5" />
+      <property Opr2="const float 1.3" />
+    </node>
+    <node class="Action" id="2">
+      <property Method="Self.AgentNodeTest::setTestVar_2(float Self.AgentNodeTest::par_float_type_0)" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+    <node class="Assignment" id="1">
+      <property CastRight="false" />
+      <property Opl="float Self.AgentNodeTest::par_float_type_1" />
+      <property Opr="float Self.AgentNodeTest::testVar_2" />
+    </node>
+    <node class="Compute" id="4">
+      <property Operator="Add" />
+      <property Opl="float Self.AgentNodeTest::par_float_type_0" />
+      <property Opr1="float Self.AgentNodeTest::par_float_type_1" />
+      <property Opr2="float Self.AgentNodeTest::par_float_type_2" />
+    </node>
+    <node class="Action" id="5">
+      <property Method="Self.AgentNodeTest::setTestVar_3(float Self.AgentNodeTest::par_float_type_0)" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+    <node class="Assignment" id="7">
+      <property CastRight="false" />
+      <property Opl="UnityEngine::GameObject Self.AgentNodeTest::par_go" />
+      <property Opr="Self.AgentNodeTest::createGameObject()" />
+    </node>
+    <node class="Action" id="6">
+      <property Method="Self.AgentNodeTest::testGameObject(UnityEngine::GameObject Self.AgentNodeTest::par_go)" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+    <node class="Assignment" id="8">
+      <property CastRight="false" />
+      <property Opl="TestNS::Node Self.AgentNodeTest::local_node" />
+      <property Opr="Self.AgentNodeTest::createExtendedNode()" />
+    </node>
+    <node class="Action" id="10">
+      <property Method="Self.AgentNodeTest::testExtendedRefType(TestNS::Node Self.AgentNodeTest::local_node)" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+    <node class="Action" id="9">
+      <property Method="Self.AgentNodeTest::testExtendedStruct(TestNS::Float2 Self.AgentNodeTest::testFloat2)" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+    <node class="Assignment" id="11">
+      <property CastRight="false" />
+      <property Opl="TestNS::Float2 Self.AgentNodeTest::c_ReturnFloat2" />
+      <property Opr="Self.AgentNodeTest::getExtendedStruct()" />
+    </node>
+    <node class="Assignment" id="12">
+      <property CastRight="false" />
+      <property Opl="TestNS::Float2 Self.AgentNodeTest::c_ReturnFloat2Const" />
+      <property Opr="Self.AgentNodeTest::getConstExtendedStruct()" />
+    </node>
+    <node class="Action" id="13">
+      <property Method="Self.AgentNodeTest::getConstExtendedStruct()" />
+      <property ResultFunctor="Self.AgentNodeTest::return_status({x=0;y=0;})" />
+      <property ResultOption="BT_INVALID" />
+    </node>
+    <node class="Action" id="14">
+      <property Method="Self.AgentNodeTest::TestFunC()" />
+      <property ResultFunctor="Self.AgentNodeTest::TestFuncD(null)" />
+      <property ResultOption="BT_INVALID" />
+    </node>
+  </node>
+</behavior>

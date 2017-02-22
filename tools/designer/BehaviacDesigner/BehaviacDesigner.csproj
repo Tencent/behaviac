@@ -1,0 +1,671 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DE22E2F7-F314-458E-8D17-223CD099B2F0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Behaviac.Design</RootNamespace>
+    <AssemblyName>BehaviacDesigner</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <ApplicationIcon>BT.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\out\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\out\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BehaviacTableLayoutPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BehaviorTreeList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BehaviorTreeList.designer.cs">
+      <DependentUpon>BehaviorTreeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BehaviorTreeListDock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BehaviorTreeListDock.Designer.cs">
+      <DependentUpon>BehaviorTreeListDock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BehaviorTreeView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BehaviorTreeView.designer.cs">
+      <DependentUpon>BehaviorTreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BehaviorTreeViewDock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BehaviorTreeViewDock.Designer.cs">
+      <DependentUpon>BehaviorTreeViewDock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConnectDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConnectDialog.Designer.cs">
+      <DependentUpon>ConnectDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlsDialog.Designer.cs">
+      <DependentUpon>ControlsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsoleDock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsoleDock.Designer.cs">
+      <DependentUpon>ConsoleDock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BreakPointsDock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BreakPointsDock.Designer.cs">
+      <DependentUpon>BreakPointsDock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CallStackDock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CallStackDock.Designer.cs">
+      <DependentUpon>CallStackDock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MetaInstanceDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MetaInstanceDialog.Designer.cs">
+      <DependentUpon>MetaInstanceDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MetaTypePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MetaTypePanel.Designer.cs">
+      <DependentUpon>MetaTypePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\EditEnumMemberPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\EditEnumMemberPanel.Designer.cs">
+      <DependentUpon>EditEnumMemberPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MetaPropertyPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MetaPropertyPanel.Designer.cs">
+      <DependentUpon>MetaPropertyPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MetaMethodPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MetaMethodPanel.Designer.cs">
+      <DependentUpon>MetaMethodPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MetaTypeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MetaTypeDialog.Designer.cs">
+      <DependentUpon>MetaTypeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\EditEnumMemberDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\EditEnumMemberDialog.Designer.cs">
+      <DependentUpon>EditEnumMemberDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrequentlyUsedNodesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrequentlyUsedNodesDialog.Designer.cs">
+      <DependentUpon>FrequentlyUsedNodesDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MetaPropertyDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MetaPropertyDialog.Designer.cs">
+      <DependentUpon>MetaPropertyDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MetaMethodDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MetaMethodDialog.Designer.cs">
+      <DependentUpon>MetaMethodDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MetaStoreDock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MetaStoreDock.Designer.cs">
+      <DependentUpon>MetaStoreDock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindFileDock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindFileDock.Designer.cs">
+      <DependentUpon>FindFileDock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindFileDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindFileDialog.Designer.cs">
+      <DependentUpon>FindFileDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExportSettingDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExportSettingDialog.Designer.cs">
+      <DependentUpon>ExportSettingDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindDock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindDock.Designer.cs">
+      <DependentUpon>FindDock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorInfoDock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ErrorInfoDock.Designer.cs">
+      <DependentUpon>ErrorInfoDock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageHandler.cs" />
+    <Compile Include="MruMenu.cs" />
+    <Compile Include="ParSettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParSettingsDialog.Designer.cs">
+      <DependentUpon>ParSettingsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimelineDock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimelineDock.Designer.cs">
+      <DependentUpon>TimelineDock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParametersPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ParametersPanel.Designer.cs">
+      <DependentUpon>ParametersPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SaveAsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaveAsDialog.Designer.cs">
+      <DependentUpon>SaveAsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParametersDock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParametersDock.Designer.cs">
+      <DependentUpon>ParametersDock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditWorkspaceDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditWorkspaceDialog.Designer.cs">
+      <DependentUpon>EditWorkspaceDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorCheckDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ErrorCheckDialog.Designer.cs">
+      <DependentUpon>ErrorCheckDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExportDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExportDialog.Designer.cs">
+      <DependentUpon>ExportDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindowCloseDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindowCloseDialog.Designer.cs">
+      <DependentUpon>MainWindowCloseDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NodeLayoutManager.cs" />
+    <Compile Include="NodeTreeList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NodeTreeList.Designer.cs">
+      <DependentUpon>NodeTreeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="PropertiesDock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PropertiesDock.Designer.cs">
+      <DependentUpon>PropertiesDock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AboutBox.zh-CN.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BehaviorTreeList.resx">
+      <DependentUpon>BehaviorTreeList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BehaviorTreeList.zh-CN.resx">
+      <DependentUpon>BehaviorTreeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BehaviorTreeListDock.resx">
+      <DependentUpon>BehaviorTreeListDock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BehaviorTreeListDock.zh-CN.resx">
+      <DependentUpon>BehaviorTreeListDock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BehaviorTreeView.resx">
+      <DependentUpon>BehaviorTreeView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BehaviorTreeView.zh-CN.resx">
+      <DependentUpon>BehaviorTreeView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BehaviorTreeViewDock.resx">
+      <DependentUpon>BehaviorTreeViewDock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BehaviorTreeViewDock.zh-CN.resx">
+      <DependentUpon>BehaviorTreeViewDock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BreakPointsDock.zh-CN.resx">
+      <DependentUpon>BreakPointsDock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConnectDialog.resx">
+      <DependentUpon>ConnectDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConnectDialog.zh-CN.resx">
+      <DependentUpon>ConnectDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsoleDock.zh-CN.resx">
+      <DependentUpon>ConsoleDock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlsDialog.resx">
+      <DependentUpon>ControlsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsoleDock.resx">
+      <DependentUpon>ConsoleDock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BreakPointsDock.resx">
+      <DependentUpon>BreakPointsDock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlsDialog.zh-CN.resx">
+      <DependentUpon>ControlsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CallStackDock.resx">
+      <DependentUpon>CallStackDock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CallStackDock.zh-CN.resx">
+      <DependentUpon>CallStackDock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MetaInstanceDialog.resx">
+      <DependentUpon>MetaInstanceDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MetaInstanceDialog.zh-CN.resx">
+      <DependentUpon>MetaInstanceDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MetaTypePanel.resx">
+      <DependentUpon>MetaTypePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MetaTypePanel.zh-CN.resx">
+      <DependentUpon>MetaTypePanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditEnumMemberPanel.resx">
+      <DependentUpon>EditEnumMemberPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditEnumMemberPanel.zh-CN.resx">
+      <DependentUpon>EditEnumMemberPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MetaMethodPanel.zh-CN.resx">
+      <DependentUpon>MetaMethodPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MetaPropertyPanel.resx">
+      <DependentUpon>MetaPropertyPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MetaMethodPanel.resx">
+      <DependentUpon>MetaMethodPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MetaPropertyPanel.zh-CN.resx">
+      <DependentUpon>MetaPropertyPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MetaTypeDialog.resx">
+      <DependentUpon>MetaTypeDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MetaTypeDialog.zh-CN.resx">
+      <DependentUpon>MetaTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditEnumMemberDialog.resx">
+      <DependentUpon>EditEnumMemberDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditEnumMemberDialog.zh-CN.resx">
+      <DependentUpon>EditEnumMemberDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrequentlyUsedNodesDialog.resx">
+      <DependentUpon>FrequentlyUsedNodesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrequentlyUsedNodesDialog.zh-CN.resx">
+      <DependentUpon>FrequentlyUsedNodesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MetaMethodDialog.zh-CN.resx">
+      <DependentUpon>MetaMethodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MetaPropertyDialog.resx">
+      <DependentUpon>MetaPropertyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MetaPropertyDialog.zh-CN.resx">
+      <DependentUpon>MetaPropertyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MetaMethodDialog.resx">
+      <DependentUpon>MetaMethodDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MetaStoreDock.resx">
+      <DependentUpon>MetaStoreDock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MetaStoreDock.zh-CN.resx">
+      <DependentUpon>MetaStoreDock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindFileDock.resx">
+      <DependentUpon>FindFileDock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindFileDock.zh-CN.resx">
+      <DependentUpon>FindFileDock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindFileDialog.resx">
+      <DependentUpon>FindFileDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindFileDialog.zh-CN.resx">
+      <DependentUpon>FindFileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExportSettingDialog.resx">
+      <DependentUpon>ExportSettingDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExportSettingDialog.zh-CN.resx">
+      <DependentUpon>ExportSettingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindDock.resx">
+      <DependentUpon>FindDock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindDock.zh-CN.resx">
+      <DependentUpon>FindDock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ErrorCheckDialog.zh-CN.resx">
+      <DependentUpon>ErrorCheckDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ErrorInfoDock.resx">
+      <DependentUpon>ErrorInfoDock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditWorkspaceDialog.zh-CN.resx">
+      <DependentUpon>EditWorkspaceDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ErrorInfoDock.zh-CN.resx">
+      <DependentUpon>ErrorInfoDock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExportDialog.zh-CN.resx">
+      <DependentUpon>ExportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWindow.zh-CN.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWindowCloseDialog.zh-CN.resx">
+      <DependentUpon>MainWindowCloseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NodeTreeList.zh-CN.resx">
+      <DependentUpon>NodeTreeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParSettingsDialog.resx">
+      <DependentUpon>ParSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParSettingsDialog.zh-CN.resx">
+      <DependentUpon>ParSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.zh-CN.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaveAsDialog.zh-CN.resx">
+      <DependentUpon>SaveAsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsDialog.zh-CN.resx">
+      <DependentUpon>SettingsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimelineDock.resx">
+      <DependentUpon>TimelineDock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParametersPanel.resx">
+      <DependentUpon>ParametersPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaveAsDialog.resx">
+      <DependentUpon>SaveAsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParametersDock.resx">
+      <DependentUpon>ParametersDock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditWorkspaceDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EditWorkspaceDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ErrorCheckDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ErrorCheckDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExportDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ExportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWindow.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWindowCloseDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainWindowCloseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NodeTreeList.resx">
+      <DependentUpon>NodeTreeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PropertiesDock.resx">
+      <DependentUpon>PropertiesDock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsDialog.Designer.cs">
+      <DependentUpon>SettingsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIUtilities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BehaviacDesignerBase\BehaviacDesignerBase.csproj">
+      <Project>{7A8F9AC6-44AD-40F3-BBA7-88D9603F7030}</Project>
+      <Name>BehaviacDesignerBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\External\DockPanel\WinFormsUI\WinFormsUI.csproj">
+      <Project>{C75532C4-765B-418E-B09B-46D36B2ABDB1}</Project>
+      <Name>WinFormsUI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BT.ico" />
+    <Content Include="Resources\Backward.png" />
+    <Content Include="Resources\BT.ico" />
+    <Content Include="Resources\document_new.png" />
+    <None Include="Resources\File-Delete.png" />
+    <None Include="Resources\File-Open.png" />
+    <Content Include="Resources\Folder-Open.png" />
+    <Content Include="Resources\folder_new.png" />
+    <Content Include="Resources\Forward.png" />
+    <Content Include="Resources\Pause.png" />
+    <Content Include="Resources\Play.png" />
+    <None Include="Resources\prefab.ico" />
+    <Content Include="Resources\Repeat.png" />
+    <Content Include="Resources\Search.png" />
+    <Content Include="Resources\Skip-backward.png" />
+    <Content Include="Resources\Skip-forward.png" />
+    <Content Include="Resources\Stop.png" />
+    <None Include="Resources\Transform-move1.png" />
+    <None Include="Resources\Transform-move2.png" />
+    <Content Include="Resources\Zoom-In.ico" />
+    <Content Include="Resources\Zoom-Out.ico" />
+    <None Include="Resources\crashdump.ico" />
+    <None Include="Resources\disconnect.png" />
+    <None Include="Resources\connect.png" />
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

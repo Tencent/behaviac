@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7A8F9AC6-44AD-40F3-BBA7-88D9603F7030}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Behaviac.Design</RootNamespace>
+    <AssemblyName>BehaviacDesignerBase</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\out\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;QUERY_EANBLED</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\out\</OutputPath>
+    <DefineConstants>TRACE;QUERY_EANBLED</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Agent.cs" />
+    <Compile Include="Attachments\Attachment.cs" />
+    <Compile Include="Attachments\Events\AttachAction.cs" />
+    <Compile Include="Attachments\Events\Attach.cs" />
+    <Compile Include="Attachments\Events\Predicate.cs" />
+    <Compile Include="Attributes\DesignerParamEnumEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Attributes\DesignerParamEnumEditor.Designer.cs">
+      <DependentUpon>DesignerParamEnumEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attributes\DesignerPropertyUtility.cs" />
+    <Compile Include="CRC32.cs" />
+    <Compile Include="Data\CsExporter.cs" />
+    <Compile Include="Data\ExpandedNodeData.cs" />
+    <Compile Include="Data\DataType.cs" />
+    <Compile Include="Data\Lockfree\LockFreeQueue.cs" />
+    <Compile Include="Data\Lockfree\ThreadSafeQueue.cs" />
+    <Compile Include="Dialogs\CompositeEditorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\CompositeEditorDialog.Designer.cs">
+      <DependentUpon>CompositeEditorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attributes\DesignerArrayStruct.cs" />
+    <Compile Include="Attributes\DesignerArray.cs" />
+    <Compile Include="Attributes\DesignerStruct.cs" />
+    <Compile Include="Attributes\DesignerArrayEnum.cs" />
+    <Compile Include="Attributes\DesignerArrayFloat.cs" />
+    <Compile Include="Attributes\DesignerArrayInteger.cs" />
+    <Compile Include="Attributes\DesignerArrayBoolean.cs" />
+    <Compile Include="Attributes\DesignerArrayString.cs" />
+    <Compile Include="Attributes\DesignerCompositeEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Attributes\DesignerCompositeEditor.Designer.cs">
+      <DependentUpon>DesignerCompositeEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attributes\DesignerParameterComboEnumEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Attributes\DesignerParameterComboEnumEditor.Designer.cs">
+      <DependentUpon>DesignerParameterComboEnumEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attributes\DesignerParEnumEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Attributes\DesignerParEnumEditor.Designer.cs">
+      <DependentUpon>DesignerParEnumEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attributes\DesignerEnumVariableEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Attributes\DesignerEnumVariableEditor.Designer.cs">
+      <DependentUpon>DesignerEnumVariableEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attributes\DesignerPropertyComboEnumEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Attributes\DesignerPropertyComboEnumEditor.Designer.cs">
+      <DependentUpon>DesignerPropertyComboEnumEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attributes\DesignerMethodComboEnumEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Attributes\DesignerMethodComboEnumEditor.Designer.cs">
+      <DependentUpon>DesignerMethodComboEnumEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attributes\DesignerPropertyEnum.cs" />
+    <Compile Include="Attributes\DesignerPropertyEnumEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Attributes\DesignerPropertyEnumEditor.Designer.cs">
+      <DependentUpon>DesignerPropertyEnumEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attributes\DesignerMethodEnumEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Attributes\DesignerMethodEnumEditor.Designer.cs">
+      <DependentUpon>DesignerMethodEnumEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attributes\DesignerMethodEnum.cs" />
+    <Compile Include="Attributes\DesignerRightValueEnum.cs" />
+    <Compile Include="Attributes\DesignerTypeEnumEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Attributes\DesignerTypeEnumEditor.Designer.cs">
+      <DependentUpon>DesignerTypeEnumEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attributes\DesignerNodePropertyEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Attributes\DesignerNodePropertyEditor.Designer.cs">
+      <DependentUpon>DesignerNodePropertyEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attributes\DesignerNodeProperty.cs" />
+    <Compile Include="Attributes\DesignerProperty.cs" />
+    <Compile Include="Attributes\DesignerTypeEnum.cs" />
+    <Compile Include="Attributes\DynamicPropertyGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Attributes\DynamicPropertyGrid.designer.cs">
+      <DependentUpon>DynamicPropertyGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BehaviorManager.cs" />
+    <Compile Include="Data\AgentData.cs" />
+    <Compile Include="Data\DebugData.cs" />
+    <Compile Include="Data\FrameState.cs" />
+    <Compile Include="Data\MessageQueue.cs" />
+    <Compile Include="Data\Undo.cs" />
+    <Compile Include="Exporters\bsondeserializer.cs" />
+    <Compile Include="Exporters\bsonserializer.cs" />
+    <Compile Include="Exporters\ExporterBson.cs" />
+    <Compile Include="Exporters\ExporterXml.cs" />
+    <Compile Include="Importers\ImporterXML.cs" />
+    <Compile Include="Network\MsgReceiver.cs" />
+    <Compile Include="Network\NetworkManager.cs" />
+    <Compile Include="Nodes\BaseNode.cs" />
+    <Compile Include="Nodes\Method.cs" />
+    <Compile Include="Nodes\Task.cs" />
+    <Compile Include="NodeUI\ActionUIPolicy.cs" />
+    <Compile Include="NodeUI\BehaviorUIPolicy.cs" />
+    <Compile Include="NodeUI\AttachActionUIPolicy.cs" />
+    <Compile Include="NodeUI\ObjectUIPolicy.cs" />
+    <Compile Include="NodeUI\TransitionEffectorUIPolicy.cs" />
+    <Compile Include="NodeViewData\NodeViewData.SubItemAttachAction.cs" />
+    <Compile Include="NodeViewData\NodeViewData.SubItemAttachment.cs" />
+    <Compile Include="Debug.cs" />
+    <Compile Include="Attachments\Events\Event.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exporters\Exporter.cs" />
+    <Compile Include="External\ExtendedGraphics.cs" />
+    <Compile Include="FileManagers\FileManager.cs" />
+    <Compile Include="FileManagers\FileManagerXML.cs" />
+    <Compile Include="Nodes\Action.cs" />
+    <Compile Include="Nodes\ReferencedBehavior.cs" />
+    <Compile Include="Nodes\Behavior.cs" />
+    <Compile Include="Nodes\Condition.cs" />
+    <Compile Include="Nodes\Decorator.cs" />
+    <Compile Include="Nodes\Impulse.cs" />
+    <Compile Include="Nodes\Node.cs" />
+    <Compile Include="Nodes\Selector.cs" />
+    <Compile Include="Nodes\Sequence.cs" />
+    <Compile Include="NodeViewData\NodeViewData.cs" />
+    <Compile Include="NodeViewData\NodeViewData.SubItemEffector.cs" />
+    <Compile Include="NodeViewData\NodeViewData.SubItemEvent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NodeViewData\NodeViewData.SubItemOverride.cs" />
+    <Compile Include="Attachments\Overrides\Override.cs" />
+    <Compile Include="Attachments\Overrides\OverrideRandom.cs" />
+    <Compile Include="Plugin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities.cs" />
+    <Compile Include="Workspace.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Attributes\DesignerParamEnumEditor.resx">
+      <DependentUpon>DesignerParamEnumEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CompositeEditorDialog.resx">
+      <DependentUpon>CompositeEditorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attributes\DesignerCompositeEditor.resx">
+      <DependentUpon>DesignerCompositeEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attributes\DesignerParameterComboEnumEditor.resx">
+      <DependentUpon>DesignerParameterComboEnumEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attributes\DesignerParEnumEditor.resx">
+      <DependentUpon>DesignerParEnumEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attributes\DesignerEnumVariableEditor.resx">
+      <DependentUpon>DesignerEnumVariableEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attributes\DesignerPropertyComboEnumEditor.resx">
+      <DependentUpon>DesignerPropertyComboEnumEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attributes\DesignerMethodComboEnumEditor.resx">
+      <DependentUpon>DesignerMethodComboEnumEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attributes\DesignerPropertyEnumEditor.resx">
+      <DependentUpon>DesignerPropertyEnumEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attributes\DesignerMethodEnumEditor.resx">
+      <DependentUpon>DesignerMethodEnumEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attributes\DesignerTypeEnumEditor.resx">
+      <DependentUpon>DesignerTypeEnumEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attributes\DesignerNodePropertyEditor.resx">
+      <DependentUpon>DesignerNodePropertyEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attributes\DesignerBooleanEditor.resx">
+      <DependentUpon>DesignerBooleanEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attributes\DesignerEnumEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DesignerEnumEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attributes\DesignerNumberEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DesignerNumberEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attributes\DesignerPropertyEditor.resx">
+      <DependentUpon>DesignerPropertyEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attributes\DesignerStringEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DesignerStringEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attributes\DynamicPropertyGrid.resx">
+      <DependentUpon>DynamicPropertyGrid.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CompositeEditorDialog.zh-CN.resx">
+      <DependentUpon>CompositeEditorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.zh-CN.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <Compile Include="Attributes\DesignerBooleanEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Attributes\DesignerBooleanEditor.Designer.cs">
+      <DependentUpon>DesignerBooleanEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attributes\DesignerBoolean.cs" />
+    <Compile Include="Attributes\DesignerEnum.cs" />
+    <Compile Include="Attributes\DesignerEnumEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Attributes\DesignerEnumEditor.Designer.cs">
+      <DependentUpon>DesignerEnumEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attributes\DesignerFloat.cs" />
+    <Compile Include="Attributes\DesignerNumberEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Attributes\DesignerNumberEditor.Designer.cs">
+      <DependentUpon>DesignerNumberEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attributes\DesignerInteger.cs" />
+    <Compile Include="Attributes\DesignerString.cs" />
+    <Compile Include="Attributes\DesignerPropertyEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Attributes\DesignerPropertyEditor.Designer.cs">
+      <DependentUpon>DesignerPropertyEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attributes\DesignerStringEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Attributes\DesignerStringEditor.Designer.cs">
+      <DependentUpon>DesignerStringEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="External\HSBColor.cs" />
+    <Compile Include="Nodes\ConditionConnectors.cs" />
+    <Compile Include="Nodes\Node.Comment.cs" />
+    <Compile Include="NodeViewData\NodeViewData.Style.cs" />
+    <Compile Include="NodeViewData\NodeViewData.SubItemConnector.cs" />
+    <Compile Include="NodeViewData\NodeViewData.SubItemProperty.cs" />
+    <Compile Include="NodeViewData\NodeViewData.SubItemText.cs" />
+    <Compile Include="Nodes\BaseNode.ConnectedChildren.cs" />
+    <Compile Include="Nodes\BaseNode.Connector.cs" />
+    <Compile Include="Nodes\BaseNode.ConnectorMultiple.cs" />
+    <Compile Include="Nodes\BaseNode.ConnectorSingle.cs" />
+    <Compile Include="Nodes\Node.ErrorCheck.cs" />
+    <Compile Include="NodeViewData\NodeViewData.SubItem.cs" />
+    <Compile Include="NodeViewData\NodeViewDataStyled.cs" />
+    <Compile Include="ProcessedBehaviors.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

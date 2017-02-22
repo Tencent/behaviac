@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\action_ut_3.xml-->
+<behavior name="node_test/action_ut_3" agenttype="AgentNodeTest" version="5">
+  <pars>
+    <par name="par_float_type_0" type="float" value="0" />
+    <par name="par_float_type_1" type="float" value="0" />
+    <par name="par_float_type_2" type="float" value="0.6" />
+  </pars>
+  <node class="Sequence" id="0">
+    <node class="Action" id="14">
+      <property Method="Self.AgentNodeTest::initChildAgentTest()" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+    <node class="Assignment" id="7">
+      <property CastRight="false" />
+      <property Opl="int par_child_agent_1.AgentNodeTest::testInt" />
+      <property Opr="int Self.AgentNodeTest::testVar_0" />
+    </node>
+    <node class="Condition" id="8">
+      <property Operator="Equal" />
+      <property Opl="int par_child_agent_1.AgentNodeTest::testInt" />
+      <property Opr="int Self.AgentNodeTest::testVar_0" />
+    </node>
+    <node class="Compute" id="3">
+      <property Operator="Mul" />
+      <property Opl="float Self.AgentNodeTest::par_float_type_0" />
+      <property Opr1="const float 0.5" />
+      <property Opr2="const float 4.8" />
+    </node>
+    <node class="Action" id="2">
+      <property Method="Self.AgentNodeTest::setTestVar_2(float Self.AgentNodeTest::par_float_type_0)" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+    <node class="Assignment" id="1">
+      <property CastRight="false" />
+      <property Opl="float Self.AgentNodeTest::par_float_type_1" />
+      <property Opr="float Self.AgentNodeTest::testVar_2" />
+    </node>
+    <node class="Compute" id="4">
+      <property Operator="Div" />
+      <property Opl="float Self.AgentNodeTest::par_float_type_0" />
+      <property Opr1="float Self.AgentNodeTest::par_float_type_1" />
+      <property Opr2="float Self.AgentNodeTest::par_float_type_2" />
+    </node>
+    <node class="Action" id="5">
+      <property Method="Self.AgentNodeTest::setTestVar_3(float Self.AgentNodeTest::par_float_type_0)" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+    <node class="Condition" id="6">
+      <property Operator="GreaterEqual" />
+      <property Opl="uint Self.AgentNodeTest::redirectCount" />
+      <property Opr="uint Self.AgentNodeTest::redirectTime" />
+    </node>
+    <node class="Assignment" id="9">
+      <property CastRight="false" />
+      <property Opl="Act Self.AgentNodeTest::testVar_Act" />
+      <property Opr="const Act {Var_B_Loop=true;Var_List_EnumTest=2:EnumTest_OneAfterOne|EnumTest_One;}" />
+    </node>
+  </node>
+</behavior>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: par_test\par_as_ref_param.xml-->
+<behavior name="par_test/par_as_ref_param" agenttype="EmployeeParTestAgent" version="5">
+  <pars>
+    <par name="par0_boolean_0" type="bool" value="false" />
+    <par name="par0_boolean_list_0" type="vector&lt;bool&gt;" value="0:" />
+    <par name="par0_byte_0" type="ubyte" value="0" />
+    <par name="par0_byte_list_0" type="vector&lt;ubyte&gt;" value="0:" />
+    <par name="par0_char_0" type="char" value="A" />
+    <par name="par0_char_list_0" type="vector&lt;char&gt;" value="0:" />
+    <par name="par0_ecolor_0" type="TNS::NE::NAT::eColor" value="WHITE" />
+    <par name="par0_ecolor_list_0" type="vector&lt;TNS::NE::NAT::eColor&gt;" value="0:" />
+    <par name="par0_sbyte_0" type="sbyte" value="0" />
+    <par name="par0_sbyte_list_0" type="vector&lt;sbyte&gt;" value="0:" />
+    <par name="par1_short_0" type="short" value="0" />
+    <par name="par1_int_0" type="int" value="0" />
+    <par name="par1_int_list_0" type="vector&lt;int&gt;" value="0:" />
+    <par name="par1_long_0" type="long" value="0" />
+    <par name="par1_kemployee_0" type="TNS::ST::PER::WRK::kEmployee" value="{id=0;name=&quot;tomlp&quot;;code=c;weight=0;isMale=false;skinColor=RED;car={brand=&quot;&quot;;price=0;color=RED;};boss=null;}" />
+    <par name="par1_kemployee_list_0" type="vector&lt;TNS::ST::PER::WRK::kEmployee&gt;" value="0:" />
+    <par name="par1_ushort_0" type="ushort" value="0" />
+    <par name="par2_agent_0" type="behaviac::Agent" value="null" />
+    <par name="par2_agent_list_0" type="vector&lt;behaviac::Agent&gt;" value="0:" />
+    <par name="par2_double_0" type="double" value="0" />
+    <par name="par2_single_0" type="float" value="0" />
+    <par name="par2_single_list_0" type="vector&lt;float&gt;" value="0:" />
+    <par name="par2_string_0" type="string" value="" />
+    <par name="par2_string_list_0" type="vector&lt;string&gt;" value="0:" />
+    <par name="par2_uint_0" type="uint" value="0" />
+    <par name="par2_ulong_0" type="ulong" value="0" />
+    <par name="par2_SzString_0" type="string" value="this is char* test" />
+    <par name="par2_CSzStrng_0" type="string" value="this is const char* test" />
+    <par name="par2_longlong_0" type="llong" value="-666" />
+    <par name="par2_ulonglong_0" type="ullong" value="666" />
+  </pars>
+  <node class="Sequence" id="13">
+    <node class="Sequence" id="30">
+      <node class="Sequence" id="1">
+        <node class="Action" id="0">
+          <property Method="Self.EmployeeParTestAgent::Func_AgentRef(behaviac::Agent Self.EmployeeParTestAgent::par2_agent_0)" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+        <node class="Action" id="17">
+          <property Method="Self.EmployeeParTestAgent::Func_AgentListRef(vector&lt;behaviac::Agent&gt; Self.EmployeeParTestAgent::par2_agent_list_0)" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+        <node class="Action" id="2">
+          <property Method="Self.EmployeeParTestAgent::Func_DoubleRef(double Self.EmployeeParTestAgent::par2_double_0)" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+        <node class="Action" id="3">
+          <property Method="Self.EmployeeParTestAgent::Func_SingleRef(float Self.EmployeeParTestAgent::par2_single_0)" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+        <node class="Action" id="4">
+          <property Method="Self.EmployeeParTestAgent::Func_SingleListRef(vector&lt;float&gt; Self.EmployeeParTestAgent::par2_single_list_0)" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+        <node class="Action" id="5">
+          <property Method="Self.EmployeeParTestAgent::Func_StringRef(string Self.EmployeeParTestAgent::par2_string_0)" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+        <node class="Action" id="6">
+          <property Method="Self.EmployeeParTestAgent::Func_StringListRef(vector&lt;string&gt; Self.EmployeeParTestAgent::par2_string_list_0)" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+        <node class="Action" id="7">
+          <property Method="Self.EmployeeParTestAgent::Func_UIntRef(uint Self.EmployeeParTestAgent::par2_uint_0)" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+        <node class="Action" id="8">
+          <property Method="Self.EmployeeParTestAgent::Func_ULongRef(ulong Self.EmployeeParTestAgent::par2_ulong_0)" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+        <node class="Action" id="35">
+          <property Method="Self.EmployeeParTestAgent::Func_LongLongRef(llong Self.EmployeeParTestAgent::par2_longlong_0)" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+        <node class="Action" id="36">
+          <property Method="Self.EmployeeParTestAgent::Func_ULongLongRef(ullong Self.EmployeeParTestAgent::par2_ulonglong_0)" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+        <node class="Action" id="31">
+          <property Method="Self.EmployeeParTestAgent::Func_SzStringRef(string Self.EmployeeParTestAgent::par2_SzString_0)" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+        <node class="Action" id="32">
+          <property Method="Self.EmployeeParTestAgent::Func_CSzStringRef(string Self.EmployeeParTestAgent::par2_CSzStrng_0)" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+      </node>
+      <node class="Sequence" id="14">
+        <node class="Action" id="9">
+          <property Method="Self.ParTestAgent::Func_ShortRef(short Self.EmployeeParTestAgent::par1_short_0)" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+        <node class="Action" id="10">
+          <property Method="Self.ParTestAgent::Func_IntRef(int Self.EmployeeParTestAgent::par1_int_0)" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+        <node class="Action" id="11">
+          <property Method="Self.ParTestAgent::Func_IntListRef(vector&lt;int&gt; Self.EmployeeParTestAgent::par1_int_list_0)" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+        <node class="Action" id="12">
+          <property Method="Self.ParTestAgent::Func_LongRef(long Self.EmployeeParTestAgent::par1_long_0)" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+        <node class="Action" id="18">
+          <property Method="Self.ParTestAgent::Func_kEmployeeRef(TNS::ST::PER::WRK::kEmployee Self.EmployeeParTestAgent::par1_kemployee_0)" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+        <node class="Action" id="19">
+          <property Method="Self.ParTestAgent::Func_kEmployeeListRef(vector&lt;TNS::ST::PER::WRK::kEmployee&gt; Self.EmployeeParTestAgent::par1_kemployee_list_0)" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+        <node class="Action" id="20">
+          <property Method="Self.ParTestAgent::Func_UShortRef(ushort Self.EmployeeParTestAgent::par1_ushort_0)" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+      </node>
+      <node class="Sequence" id="22">
+        <node class="Action" id="16">
+          <property Method="Self.ParTestAgentBase::Func_BooleanRef(bool Self.EmployeeParTestAgent::par0_boolean_0)" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+        <node class="Action" id="21">
+          <property Method="Self.ParTestAgentBase::Func_BooleanListRef(vector&lt;bool&gt; Self.EmployeeParTestAgent::par0_boolean_list_0)" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+        <node class="Action" id="15">
+          <property Method="Self.ParTestAgentBase::Func_ByteRef(ubyte Self.EmployeeParTestAgent::par0_byte_0)" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+        <node class="Action" id="29">
+          <property Method="Self.ParTestAgentBase::Func_ByteListRef(vector&lt;ubyte&gt; Self.EmployeeParTestAgent::par0_byte_list_0)" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+        <node class="Action" id="26">
+          <property Method="Self.ParTestAgentBase::Func_CharRef(char Self.EmployeeParTestAgent::par0_char_0)" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+        <node class="Action" id="27">
+          <property Method="Self.ParTestAgentBase::Func_CharListRef(vector&lt;char&gt; Self.EmployeeParTestAgent::par0_char_list_0)" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+        <node class="Action" id="24">
+          <property Method="Self.ParTestAgentBase::Func_eColorRef(TNS::NE::NAT::eColor Self.EmployeeParTestAgent::par0_ecolor_0)" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+        <node class="Action" id="25">
+          <property Method="Self.ParTestAgentBase::Func_eColorListRef(vector&lt;TNS::NE::NAT::eColor&gt; Self.EmployeeParTestAgent::par0_ecolor_list_0)" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+        <node class="Action" id="23">
+          <property Method="Self.ParTestAgentBase::Func_SByteRef(sbyte Self.EmployeeParTestAgent::par0_sbyte_0)" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+        <node class="Action" id="28">
+          <property Method="Self.ParTestAgentBase::Func_SByteListRef(vector&lt;sbyte&gt; Self.EmployeeParTestAgent::par0_sbyte_list_0)" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+      </node>
+    </node>
+    <node class="DecoratorLoop" id="33">
+      <property Count="const int -1" />
+      <property DecorateWhenChildEnds="true" />
+      <property DoneWithinFrame="false" />
+      <node class="Noop" id="34" />
+    </node>
+  </node>
+</behavior>

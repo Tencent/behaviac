@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<workspace name="bttest" folder="behaviors" export="exported" language="cpp" version="3">
+  <export>
+    <cs>
+      <isexported>False</isexported>
+      <exportfilecount>1</exportfilecount>
+    </cs>
+    <bson>
+      <isexported>False</isexported>
+    </bson>
+    <cpp>
+      <isexported>True</isexported>
+      <exportfilecount>1</exportfilecount>
+      <folder>../exported</folder>
+      <includedfilenames>
+        <includedfilename>../../BTPlayer.h</includedfilename>
+      </includedfilenames>
+    </cpp>
+  </export>
+</workspace>

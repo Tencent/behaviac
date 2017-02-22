@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: player.xml-->
+<behavior name="player" agenttype="CBTPlayer" version="5">
+  <pars>
+    <par name="CurStep" type="int" value="0" />
+  </pars>
+  <node class="Sequence" id="0">
+    <node class="SelectorProbability" id="12">
+      <node class="DecoratorWeight" id="13">
+        <property DecorateWhenChildEnds="false" />
+        <property Weight="const int 60" />
+        <node class="Sequence" id="1">
+          <attachment class="Precondition" id="3" flag="precondition">
+            <property BinaryOperator="And" />
+            <property Operator="Invalid" />
+            <property Opl="Self.CBTPlayer::MoveAhead(0)" />
+            <property Phase="Enter" />
+          </attachment>
+          <node class="Selector" id="4">
+            <node class="Action" id="6">
+              <property Method="Self.CBTPlayer::MoveAhead(0)" />
+              <property ResultOption="BT_SUCCESS" />
+            </node>
+            <node class="Sequence" id="5">
+              <node class="Wait" id="8">
+                <property Time="const float 10" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node class="DecoratorWeight" id="14">
+        <property DecorateWhenChildEnds="false" />
+        <property Weight="const int 10" />
+        <node class="Sequence" id="19">
+          <node class="Action" id="10">
+            <property Method="Self.CBTPlayer::MoveAhead(1)" />
+            <property ResultOption="BT_SUCCESS" />
+          </node>
+        </node>
+      </node>
+      <node class="DecoratorWeight" id="15">
+        <property DecorateWhenChildEnds="false" />
+        <property Weight="const int 30" />
+        <node class="Sequence" id="7">
+          <node class="Action" id="11">
+            <property Method="Self.CBTPlayer::MoveAhead(3)" />
+            <property ResultOption="BT_SUCCESS" />
+          </node>
+        </node>
+      </node>
+      <node class="DecoratorWeight" id="16">
+        <property DecorateWhenChildEnds="false" />
+        <property Weight="const int 10" />
+        <node class="Sequence" id="17">
+          <node class="Action" id="18">
+            <property Method="Self.CBTPlayer::MoveBack(2)" />
+            <property ResultOption="BT_SUCCESS" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</behavior>

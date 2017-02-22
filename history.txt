@@ -1,0 +1,929 @@
+2017-2-22  3.6.18
+    Update the license and header information.
+
+2017-2-16  3.6.17
+    Fix a bug for the struct as the parameters of the method.
+    Fix a bug for setting the name for the property and method.
+    Fix a bug for creating a new tree and setting its name.
+
+2017-2-13  3.6.16
+    Fix a bug for exporting the codes for getting the instance.
+
+2017-2-8  3.6.15
+    Improve the meta browser.
+    Save the flag for checking error.
+    Add the workspaces for the tutorials.
+
+2017-2-5  3.6.14
+    Fix a bug for the std::string and wstring.
+    Fix a bug for the relative header path for the generated C++ codes.
+    Preload for the referenced true and task.
+    Remove all source code files from the install package.
+
+2017-1-10  3.6.13
+    Add tutorial_0/unity project.
+    Improve creating and using the property.
+	
+2016-12-21  3.6.12
+    Support the multiply meta files.
+    Improve the codes for the TScan.
+    Do not create the Prefabs folder if empty.
+
+2016-12-16  3.6.11
+    Add the IsRef for the type.
+    Fix a bug for the child struct.
+    Improve the codes for the Coverity.
+
+2016-12-14  3.6.10
+    Add MetaFile method for the Workspace.
+    Fix a bug for loading the properties and methods.
+    Rename "Prefabs".
+    Support 14 parameters at most for the method of C++.
+    Refine extending the existing struct.
+
+2016-12-06  3.6.9
+    Fix a bug for the ref type of the parameter.
+    Support 14 parameters at most for the method of C#.
+
+2016-12-02  3.6.8
+    fix bug of possible no agents list when connecting
+    fix no variables value update bug when connecting
+    fix possible crash when editing value in editor when connecting
+    int and double time refined
+    BEHAVIAC_NOT_USE_UNITY added
+    BEHAVIAC_NOT_USE_MONOBEHAVIOUR added
+    improve the meta editting
+    fix various bugs
+
+2016-11-30  3.6.7
+    refine mete handling
+
+2016-11-28  3.6.6
+    fix a bug when compare agent with null
+    add more begin/end comment block for code generation
+    agent/enum/struct can be configured to generate at different path
+
+2016-11-25  3.6.5
+    Support multi meta files.
+
+2016-11-24  3.6.4
+    Fix a bug for merging the meta to bb.
+
+2016-11-23  3.6.3
+    Continue fixing bugs for types generation.
+
+2016-11-21  3.6.2
+    Fix bugs for types generation.
+
+2016-11-18  3.6.1
+    Improve the Agent types generation.
+    Refactor the C++ runtime.
+    Fix the GC problem for the enum and struct comparation.
+
+2016-11-10  3.6.0
+    Improve the Agent types generation.
+    Refactor the C++ runtime.
+    Fix the GC problem for the enum and struct comparation.
+    adjust files structure for the next release
+
+2016-11-3  3.5.18
+    Fix a bug for replacing the node on the Prefab.
+    Do not export the SetVariable() for the assignment of the property.
+    Add the filename for the loading error.
+    Fix a bug for setting the ID.
+
+2016-10-21  3.5.17
+    Fix a bug for setting the agent of the Assignment node and Precondition attachment.
+
+2016-10-17  3.5.16
+    Fix a bug for selecting the agent type.
+    Fix a bug for setting the parameters of the method for the Effector.
+
+2016-09-26  3.5.15
+    Fix a bug for checking the Selector node.
+    Fix a bug for the type exported path.
+    Fix a bug for the string value with space.
+    Fix a bug for the default value of the ExportFileCount.
+
+2016-09-20  3.5.14
+    Support splitting the generated_behaviors.cpp file.
+    Add the BEHAVIAC_CS_ONLY to use the behaviac lib without UnityEngine.
+    Fix a bug for the type sbyte.
+    Fix a bug for the ref type of the parameter of the customized method.
+
+2016-08-31  3.5.13
+    Fix a bug for sending data when the network is disconnected.
+    Fix a bug for generating the return type for the customized method.
+    Sort the meta types before exporting types.
+    export base agent types content when it is not decorated by type attribute
+    
+2016-08-24  3.5.12
+    fix a bug when there is a ResultStatus
+    Fix a bug for using the customized types    
+    Fix a bug for the StatusResult method
+    Equanl renamed to _Object_Equal_
+    operator== and operator!= removed for TagObject
+
+2016-08-18  3.5.11
+    Fix a bug for saving the Language of the workspace.
+
+2016-08-16  3.5.10
+    assignment supports cast
+    fix bug when creating an Agent custom variable
+
+2016-08-08  3.5.9
+    fix a bug in c# about member field logging
+    log the current variables, otherwise, its value is not the latest
+    fix a bug when buffer is reallcated
+    fix a bug when double is used
+    fix compiling errors on linux
+    fix a bug for setting the relative path for the generating the types
+    add logging of export info
+
+2016-08-01  3.5.8
+    fix possible memory leak when subtree
+    fix a bug in Vector to setList when returning from the pool
+    fix a possible crash in FSM due to negative nextStateId
+    fix a possible crash for vector usage
+    socket connection restored for mac
+    
+2016-07-12  3.5.7
+    fix a bug for the array member of the struct.
+    fix a bug for generating the type files when the language is null.
+    fix a bug when a struct has a vector member of a struct
+    fix compiling error on iOS
+
+2016-07-07  3.5.6
+    fix a bug(file path) in HotReload of unity version
+    add prompt messages if not adding generated cs into the project
+    fix a bug in ullong
+    fix a bug in editor when the same property is used with different instance name
+    fix a bug for selecting a parameter with the list type
+    ListParam added to restrict item type for List
+    fix bug in edtior for VectorAdd, etc.
+    fix a bug for the instance of the property
+
+2016-06-30  3.5.5
+    refactor Compare and Compute to avoid Expression Lamda for bugs on iOS
+    refine referencebehavior to avoid possible memory leak
+    fix bug in compute when right side is function 
+    FireEvent can't be called when btexec
+    transition refined to support transition when success/failure/exit
+    add BEHAVIAC_ prefix for macros and add in behaviac namespace 
+
+2016-06-23  3.5.4
+    DoneWithinFrame added to replace repeat
+    fix bug in DecoratorLoop for cpp/c# format
+    ShowProfilingInfo false by default
+    fix bugs in DesignerFloat to support double
+    fix bugs when a struct has an array member
+    fix bugs in socket connect on linux
+    fix a bug for the Local Var when debugging
+    fix bug when no xml meta file when creating agent
+
+2016-06-14  3.5.3
+    don't export behaviac.bb for cs
+    property refactored for c#
+    opt struct and vector equals
+    fix bug in EBTStatus
+
+2016-06-07  3.5.1
+    fix bug in profile display
+    Fix a bug for generating codes for the C# structs
+    destructor commented in C#
+    class can be configured as a value type
+    Add the generated type ui on the Meta Browser.
+
+2016-05-31  3.5.0
+    to handle the case of no meta xml files
+    csharp GC free even on xml/bson
+
+2016-05-20  3.4.4
+    to include version number for unitypackage 
+    enable memory_leak_test for all platforms
+    add SetBehaviorNodeLoader
+    rapidxml added to namespace of behaviac
+    detect dead loop in the fsm updating
+    fix compiling warnings in vs2015 64
+
+2016-05-11  3.4.3
+    fix cmake xcode _DEBUG
+    fix cmake debug config with the wrong BEHAVIAC_RELEASE
+    fix bug that property is not updated in the connected designer   
+
+2016-05-05  3.4.2
+    fix bug in task due to a ended running sub node
+    fix bug when sub tree reenter
+
+2016-04-27  3.4.1
+    DecoratorLog, DecoratorAwaysRunning, DecoratorAwaysSuccess, DecoratorAwaysFailure reshown in the node list
+    update cmake scripts to handle LTO, esp. for gcc
+    fix bug in FireEvent, passing param by reference
+
+2016-04-21  3.4.0
+    subtree refactored to support variable/method to allow dynamic tree
+
+2016-04-13  3.3.16
+    64 bit supported, esp. in CMakelists.txt fro win
+
+2016-04-06  3.3.15
+    Set the ShowNodeId be to true by default.
+    Add the GetRunningNodes() method of the class BehaviorTask.
+    Set the UTF-8 format for the control doc.
+
+2016-03-31  3.3.14
+    Fix a bug for adding or removing agents when updating all agents.
+    Show the behaviac::EBTStatus by default.
+    Set the type of the id to int16_t.
+    Add F1 for the documents of all nodes.
+
+2016-03-23  3.3.13
+    Fix a bug for the readonly property as the attachment.
+
+2016-03-22  3.3.12
+    Send the platform info of the runtime part.
+    Add the QA menu item for the editor.
+    Fix some bugs for the editor.
+
+2016-03-14  3.3.11
+    define _DEBUG when debug configuration
+
+2016-03-08  3.3.10
+    behaviors.dbg.xml is not used any more
+
+2016-03-02  3.3.9
+    The C++/C# export path shoule be the same drive as the workspace.
+    Change the web link for stats.
+
+2016-02-29  3.3.8
+    Add the automatic signature for the setup package.
+
+2016-02-25  3.3.7
+    Fix a bug for the parameters of method generation.
+
+2016-02-24  3.3.6
+    Fix a bug for resetting the node id when replacing the node.
+    Report the username and mac address to the TQOS.
+
+2016-02-23  3.3.5
+    Fix a bug for updating the local vars for the Task node.
+    Filter the IListy type when adding a property or method.
+    Fix some bugs for the editor.
+
+2016-02-17  3.3.4
+    android_2015 added to test android
+
+2016-02-15  3.3.3
+    add the updated CMakeLists.txt and build scripts
+
+2016-02-03  3.3.2
+    Fix a bug for the Frames of the DecoratorFrames and WaitFrames nodes.
+    Fix a bug for generating the C++ codes for the methods.
+
+2016-02-01  3.3.1
+    Fix a bug for the connect debugging.
+
+2016-01-28  3.3.0
+    Improve registering types.
+    Remove the foreach for the Unity.
+    Modify the type of TimeSinceStartup to double.
+    premake is replaced with cmake, please check BUILD.md
+
+2016-01-20  3.2.22
+    Fix a bug for const reference type for the return type of the method.
+    Fix a bug for CountLimit node.
+
+2016-01-15  3.2.21
+    Fix a bug for the behavior task.
+    Fix a bug for the DecoratorTime node.
+
+2016-01-12  3.2.20
+    Fix a bug for the array item as the parameter of the method.
+
+2016-01-08  3.2.19
+    Fix a bug for debug connection.
+    Fix a bug for the GetCpuId() method.
+
+2016-01-07  3.2.18
+    Improve the BEHAVIAC_RELEASE for C++.
+
+2016-01-04  3.2.17
+    Add the FrameSinceStartup for the workspace.
+    Fix a bug for the agent instance as a member.
+
+2015-12-29  3.2.16
+    Fix a bug for the events fromt the sub tree.
+    Fix a bug for generating the behaviors with C++ format.
+
+2015-12-25  3.2.15
+    Fix a bug for setting the parameters of the method.
+
+2015-12-24  3.2.14
+    Fix some bugs for the editor.
+
+2015-12-23  3.2.13
+    Fix a bug for selecting the method from the instances.
+    Add a bClearResource parameter for the Agent::btunload() method.
+
+2015-12-22  3.2.12
+    Support the local agent var to select its members.
+    Fix a bug for the events of the base classes.
+
+2015-12-16  3.2.11
+    Generate the RegisterTypes/UnRegisterTypes for C# codes.
+    fix EnumTest_OneAfterOne
+    fix compiling warnings/errors on linux
+    Fix a bug for selecting properties for the parameter of the method.
+    Add the unit test for the property of an instance as a parameter.
+    fix logmanager instance problem
+    
+2015-12-14  3.2.10
+    fix a possible bug when checking the parent update preconditions
+    fix the bug when if a function  as precondition return EBTStatus
+    The workspace can have no meta
+    documents points to http://tencentopen.github.io/behaviac/
+            
+2015-12-08  3.2.9
+    Add the BEHAVIAC_DECLARE_TYPE_VECTOR_HANDLER for the generated agent types.
+    Add the TQOS for reporting the logs.
+    using http://tencentopen.github.io/behaviac/ for the documents
+    
+2015-12-02  3.2.8
+    Check the preconditions of the ancestors to handle updating the preconditions.
+    Export codes for the customized agents.
+    Export the customized types and members according to the export format settings.
+    Add the UnitPackage into the setup package.
+    -Wno-invalid-offsetof and -Wno-array-bounds removed, esp. for linux/mac version
+
+2015-11-27  3.2.7
+    remove -Wno-maybe-uninitialized, -Wno-unused-local-typedefs, -Wno-array-bounds, -Wno-strict-aliasing
+    Fix a bug for sending a property to the runtime.
+    MSG_NOSIGNAL added to socket send
+    fix a serious bug when back tracking
+
+2015-11-26  3.2.6
+    LogManager::Output virtual
+    EndState shape
+    Fix a bug for selecting the methods after changing the instance
+    
+2015-11-25  3.2.5
+    Support extra parameters of the Agent::Create() method for the constructor of the Agent subclasses.
+    add DebugUpdate to simplify api
+    fix a bug in the SelectorLoop and WithPrecondition
+    hot reload only valid for win and linux
+    Property clone removed
+
+2015-11-23  3.2.4
+    Fix bugs for the Event 
+
+2015-11-20  3.2.3
+    fix bugs in the connecting debugging
+    fix compiling errors on linux
+    fix bugs in WaitState 
+
+2015-11-19  3.2.2
+    Fix a bug for setting the file version.
+    Fix a bug for creating a workspace.
+    waitstate/waitframesstate/waittransition/alwaystransition added
+
+2015-11-18  3.2.0
+    Fix a bug for generating C++ and C# behavior codes.
+
+2015-11-17  3.1.9
+    Close the meta file after loading.
+    Improve the export options for the cmd mode.
+    Fix a bug for adding a node on the right of the root behavior.
+    Improve the workspace process for the debug.
+    fix bugs in meta browser
+    fix bug when not setup caused by BEHAVIAC_ROOT
+    update setup to exclude rubbish
+    fix bug in hot reload
+    Fix a bug for updating the properties when debugging.
+
+
+2015-11-07  3.1.7
+    add cocos demo
+    fix bugs when connecting
+    
+2015-11-06  3.1.6
+    behaviac::Start/Stop is not needed to call
+    FSM and BT can be called each other
+    various bug fixes and impromvents in the designer
+
+2015-10-29  3.1.5
+    setup package is reduced not to contain libs and dlls.
+    RegisterName renamed to RegisterInstanceName
+    Get/SetExportPath, Get/SetFileFormat,don't need to subclass Workspace
+    Config::IsSocketBlocking/SocketPort added
+    SetupConnecting/ShutdownConnecting private
+
+2015-10-27  3.1.4
+    rtti enabled by default
+    fix warnings/errors due to virtual dtor and float equal
+    GetFileFormat bug
+    an error dialog to show all loading errors
+    fix other bugs
+
+2015-10-23  3.1.3
+    Workspace API refactored by removiong Init, etc.
+    IsRefType added to support a type to be used as a pointer
+    back compatibility for 1.x and 2.x
+    other bug fixes
+    this is a very big udpate compared to 2.x. please be careful!
+
+2015-10-19  3.1.1
+    vs2008/vs2010/cygwin/linux supported for the latest
+    icons updated
+    other many bug fixes and improvements
+    
+2015-10-10  3.1.0
+    Supports the long long and unsigned long long types.
+    Supports the FSM debugging.
+    Improve the demo codes.
+    Improve the Meta Browser.
+    Load comparable for the previous behaviors.
+
+2015-8-21   3.0.4
+    costomized type
+    BEHAVIAC_USE_SYSTEM_XML
+    c# to cpp
+
+2015-8-5        3.0.3
+    fsm added
+    preaction/postaction refactored
+
+2015-7-9        3.0.2
+    c# format generated
+    repeat added
+
+2015-7-2        3.0.1
+    CurrentTask refined, etc.
+
+
+2015-6-25   3.0.0
+    precondition/effector refined
+    custom property/local var added to replace par
+    HTN debugger nearly done
+
+2015-3-6    2.0.7
+    Fix a bug for resigtering metas.
+    Update readme.txt file.
+
+2015-3-5    2.0.6
+    Update the license.txt file.
+    Add the license header info for all source files.
+
+2015-3-3    2.0.5
+    Set the mask and flag to -1 for the agent by default.
+    Remove some unused code files.
+
+2015-2-27   2.0.4
+    Remove the unused files for the C++ runtime.
+    Navigation for the attachments.
+    Fix bugs for the editor.
+
+2015-2-13   2.0.3
+    Support Tranditional and Modern themes for the editor.
+    Update icons.
+    Support Up/Down/Left/Right keys to navigate on the behavior tree.
+    Support Ctrl+Up/Down keys to swap two nodes.
+    Improve the node shapes.
+    Improve the Meta Browser.
+    Fix connection bugs for the linux.
+    Fix some bugs for the editor.
+
+2015-1-20   2.0.2
+    Integrate Mono.Xml instead of System.Xml.
+
+2015-1-19   2.0.1
+    Fix a bug for selecting the Event.
+    Fix a bug for showing the Find dialog.
+
+2015-1-12   2.0.0
+    Fix a bug for the SelectorProbability node.
+    Fix a bug for the breakpoint.
+    Abandon the DecoratorLog node.
+
+2015-1-8    1.9.21
+    Add the methods and properties filter.
+    Add the meta store for the selection of methods and properties.
+
+2015-1-6    1.9.20
+    Fix bugs for the breakpoints.
+    Fix bugs for the properties and methods selection.
+
+2015-1-5    1.9.19
+    Improve the update efficiency of the properties window.
+    Fix a bug for selecting the node.
+
+2014-12-31  1.9.18
+    Remove the messagebox when the breakpoint is active.
+
+2014-12-30  1.9.17
+    Improve breakpoints related stuff.
+
+2014-12-26  1.9.16
+    Don't use DeepCopy for the Par.
+    Fix the bug for the SelectorProbability node.
+    Update the readme and docs.
+    Fix some bugs for the designer.
+
+2014-12-8   1.9.15
+    add the method filter function for the editor.
+    add the GetRunningNodes() method for the Agent class to debug.
+
+2014-11-25  1.9.14
+    improve the breakpoint related feature.
+
+2014-11-15  1.9.13
+    add the limit log count for the designer.
+    add the export menu for the unit test on Unity.
+
+2014-10-31  1.9.12
+    improve the example plugin project.
+    add IgnoreTimeScale for the Wait node, and make its time value be float.
+    update the documents.
+    fix some bugs for the designer.
+
+2014-10-15  1.9.11
+    change the icon for the designer.
+    use SDL lib for the Ship game.
+    reorganize the structure of the workspace of the unit test.
+    fix some bugs for the designer.
+
+2014-09-18  1.9.10
+    fix bugs for the breakpoint and improve the par settings.
+
+2014-08-29  1.9.9
+    fix various bugs and improvements in designer
+
+2014-08-25  1.9.8
+    works perfectly for all the platforms with the new full unittest
+    prefab almost perfect
+
+2014-08-14  1.9.7
+    prefab almost works
+
+2014-08-04  1.9.6
+    prefab
+
+2014-07-28  1.9.5
+    fix a bug caused by btsetcurrent/btexec
+    bug fixes and improvements in the designer
+
+2014-07-25  1.9.4
+    expand/collapse refined
+    unit test refined
+    selectorloop refined to handle failed action
+    2013 lib/dll included
+
+2014-07-21  1.9.3
+    more opts
+    expand/collapse refined
+
+2014-07-16  1.9.2
+    designer style changed again to be more like unity
+    menu moved to the mainwindow
+    tooltips has some delay
+    new icons for Pan/Fit
+    tank demo bt simplified
+    GetVaraible by id
+    dodge in tank demo
+
+2014-07-09  1.9.1
+    various opt
+
+2014-07-09  1.9.0
+    designer UI style changed to be modern
+    tank demo
+    don't UpdateVariableRegistry for opt
+
+2014-07-04  1.8.5
+    Action now can accepts Predicates as preconditions
+    allow to not export non-public members
+    BEHAVIAC_RELEASE for c++
+    bug fixes
+
+2014-07-01  1.8.4
+    add one extra blank line at the end of header fiel to fix warnings on linux
+    various bugs fix for c#
+        export the outer class as the namespace
+        export class when it is recursive
+        referenced tree as a block
+        fix bugs when epporting c#
+        fix bugs in undo and export path
+
+2014-06-27  1.8.3
+    BEHAVIAC_RELEASE added to config debug version
+    waitforsignal reset when enter
+    other bug fix
+
+2014-06-25  1.0.8.2
+    fix bugs in android version due to workspace path
+
+2014-06-25  1.0.8.01
+    filemanager.cs rename to FileManager.cs
+    logging.cs rename to LogManager.cs
+    remove possible GC allocs
+    tank demo updated
+
+2014-06-23  1.0.8.00
+    dll not used, instead of using c# directly
+    Time.deltaTime used
+    fixing a bug when result functor has no params
+    fixing a bug when agent used for par and null value
+    fixing bugs in stochastic nodes
+    fixing bugs when accessing property as param 
+    etc.
+
+2014-06-16  1.0.7.05
+    bugs in copy/paste fixed and improved
+    meta xml format modified to have types section
+
+2014-06-10  1.0.7.04
+    hot reload done for c#
+    SetLogFilePath added
+    Config added
+    BEHAVIAC_SOCKETCONNECT_ENABLED removed
+    workspace and bt can be opend by a cmdline
+
+
+2014-06-03  1.0.7.03
+    hot reload done for c++
+
+2014-05-16  1.0.7.02
+    .bson renamed to .bson.bytes for unity
+    many other designer and documents improvements
+
+2014-05-13  1.0.7.01
+    fix connecting problems in unity
+    Compute node added
+    update documents about spaceship, etc.
+
+2014-05-09  1.0.7.00
+    update documents by adding node descriptions
+
+2014-05-06  1.0.6.06
+    update documents
+    'inside behaviac' can be accessed by help menu
+    node descriptions added
+
+2014-05-06  1.0.6.05
+    unify the example and unity workspace
+    workspace not derived from monobehavior
+    filesystem added
+    SetWorspaceSetttings accepts exported path
+
+2014-05-05  1.0.6.03
+    c# source code included
+
+2014-04-30  1.0.6.02
+    documents updated
+    subtree can be recursively added
+    recent files added
+
+2014-04-23  1.0.6.01
+    fix commpiling errors on cygwin, etc.
+    fix bugs on unity script
+
+2014-04-18  1.0.6.00
+    ExportMetas moved to Workspace
+    SetWorkspaceSettings moved to Workspace
+    and the first param is now the Workspace file
+    EFF_cpp/EFF_xml moved to Workspace
+    register_method, check result deprecated
+    workspace added
+    before bttick, btsetcurrent
+    bttick->btexec
+    tick->exec
+    Interval_t removed and added to Workspace
+    Open File in Workspace, Alt+Shift+O
+    Find All
+    namespace supported
+    cpp file exported
+    unity supported
+
+
+2014-03-21  1.0.5.01
+    cpp exporter
+    cs exporter
+    unity support
+
+2014-01-13  1.0.4.01
+    Node Id refined
+
+2014-01-09  1.0.4.00
+    license added
+    Alt + Mouse added to support alternative way to pan/scale
+    Shortcut info added to tooltips
+    fix the size bug in Find dialog so that it can keep the old location, etc.
+
+2014-01-06  1.0.3.19
+    Enter/Exit action description added to doc
+    handle null ptr
+    setup doesn't include 'block mode' shortcut for the spaceship example
+    fix bug in level-9 of DecorateWhenChildEnds property parsing
+    profiler toggle
+    node id instead of version info
+
+2013-12-20  1.0.3.18
+    handle space in a string when split string by ' '
+    fix bugs on cygwin and linux
+    make it more handy to extend an existing type
+
+2013-12-20  1.0.3.17
+    ToString added in ext/types.h
+    property/condition register
+    std::string/vector, etc.
+    declare type members for existing types
+    Find Dialog centered
+    more docs
+
+2013-12-04  1.0.3.16
+    linux support xml export
+    update docs
+    IsTickAgents added
+
+2013-11-29  1.0.3.15
+    fix a bug of std::string paring
+    don't allow the action only method being used as getters
+    docs updated for method register
+
+2013-11-22  1.0.3.14
+    use int instead of ushort for bson document size to fix the problem of big bt file
+    fix a bug when integrating into unreal caused by pack/alignment
+    update documents about register name, etc.
+
+2013-11-18  1.0.3.13
+    fix a bug when creating a workspace
+    update docs about event
+    more descrptions about parallel node
+    fix a bug due to bt's name
+
+2013-11-12  1.0.3.12
+    show the node id
+    reset node id if duplicated
+    replace the string with stringid
+    etc.
+
+2013-10-30  1.0.3.11
+    cmd line export
+    detect source BT modification and reload it
+
+2013-10-28  1.0.3.10
+    bson export format supported
+
+2013-09-26  1.0.3.9
+    vs2010 lib/dll included in the setup
+
+2013-09-13  1.0.3.8
+    socket connection refined
+    fix more bugs
+
+2013-09-06  1.0.3.7
+    enteraction/exitaction added
+
+2013-08-27  1.0.3.6
+    struct param can accept par and properties
+    bug fixes
+
+2013-08-15  1.0.3.5
+    pars can be updated when debugging
+    show the detail tooltip for the action, condition and assignment
+    show the details for the structs 
+    the focus gets lost for the pars/property 'watch'
+    the layout file can be deleted when it is corrupt
+    agent types can be used for par
+
+2013-08-05  1.0.3.4
+    fix a bug in tickCurrentNode and refine BEHAVIAC_SOCKETCONNECT_ENABLED
+    documents updated for breakpoints and id flag/mask
+
+2013-07-11  1.0.3.3
+    mbstowcs added, refine display info
+    more tutorials added for the basic operation in designer
+
+2013-07-08  1.0.3.2
+     fix bug when modifing var on designer
+
+2013-07-05  1.0.3.1
+    linux support(btunittest can run)
+    output and timeline update frequency tweaked and refined
+    other refinements
+
+2013-06-28  1.0.3.0
+    event param passed to par
+    user struct can be used without property dependency
+    param range spcecified by PARAM_INFO for number type
+    more tutorials added
+    Tag renamed to behaviac
+    other bugs fixes
+
+2013-06-25  1.0.2.18
+    android/ios supported
+    setup refined
+    other bugs fixes
+
+2013-05-23  1.0.2.17
+    find added
+    gcc/acc supported
+    bug fixes and refinements   
+
+2013-05-09  1.0.2.16
+    bttick optmized
+    bug fixes and refinements   
+
+2013-05-03  1.0.2.15
+    context added
+    setup update for msvc redist
+
+2013-04-28  1.0.2.14
+    loop until refined
+    bt's root node id bug fixed
+    bug fixes and refinements
+
+2013-04-24  1.0.2.13
+    bug fixes and refinements
+
+2013-04-22  1.0.2.12
+    tutorial added
+    decorator weight refined
+    bug fixes and refinements
+
+2013-04-17  1.0.2.11
+    method/propert's owner handling refined
+    bug fixes and refinements
+
+2013-04-15  1.0.2.10
+    sharded node integrated from branch
+    bug fixes and refinements
+
+2013-04-11  1.0.2.9
+    a name can be bound to an instance
+
+2013-04-09  1.0.2.8
+    more bug fixes and refinements
+
+2013-04-08  1.0.2.7
+    more bug fixes
+
+2013-03-28  1.0.2.6
+    Designer moved to extension/tools
+
+2013-03-28  1.0.2.5
+    Interval_t added to replace deltaTime
+    RanderGenerator added to allow the user to provide the random generator.
+    other refinements
+
+2013-03-26  1.0.2.3
+    "property/method/param/agent/struct/enum" have DiplayName and Desc
+
+2013-03-20  1.0.2.2
+    continute adding more chinese translation
+    fix bugs
+    remove dependency to tag(1st version)
+
+2013-03-14  1.0.2.1
+    add more chinese translation
+    fix bugs
+
+2013-03-13  1.0.2.0
+    chinese supported
+
+2013-02-26  1.0.1.4
+    a bt can be attached to any node to be triggered for an event
+
+2013-02-18  1.0.1.3
+    network supported for method and property
+    .workspace file added
+
+2013-01-04  1.0.1.2
+    prefabs added
+    undo/redo
+    struct/array supported
+    icons updated
+
+2012-11-23  1.0.1.1
+    applog added
+    enum added to par
+    etc.
+
+2012-11-12  1.0.1.0
+    break points added and worked properly
+    property/par can be edited
+
+2012-10-09  1.0.0.3
+    timeline added
+    various fixes and refinements
+
+2012-09-18  1.0.0.2
+    the basic debugging
+    connect to the designer
+    update the properties
+
+2012-08-03  1.0.0.1
+    parameter, etc.
+
+2012-07-19  1.0.0.0
+    the basic feature
+    setup and version checking

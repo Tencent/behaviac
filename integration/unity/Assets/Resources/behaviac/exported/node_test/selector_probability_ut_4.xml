@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\selector_probability_ut_4.xml-->
+<behavior name="node_test/selector_probability_ut_4" agenttype="AgentNodeTest" version="5">
+  <node class="DecoratorLoop" id="15">
+    <property Count="const int 1" />
+    <property DecorateWhenChildEnds="true" />
+    <property DoneWithinFrame="false" />
+    <node class="SelectorProbability" id="0">
+      <node class="DecoratorWeight" id="5">
+        <property DecorateWhenChildEnds="false" />
+        <property Weight="const int 10" />
+        <node class="Sequence" id="7">
+          <node class="Parallel" id="10">
+            <property ChildFinishPolicy="CHILDFINISH_LOOP" />
+            <property ExitPolicy="EXIT_ABORT_RUNNINGSIBLINGS" />
+            <property FailurePolicy="FAIL_ON_ONE" />
+            <property SuccessPolicy="SUCCEED_ON_ALL" />
+            <node class="Compute" id="2">
+              <property Operator="Add" />
+              <property Opl="int Self.AgentNodeTest::testVar_0" />
+              <property Opr1="int Self.AgentNodeTest::testVar_0" />
+              <property Opr2="const int 1" />
+            </node>
+            <node class="Compute" id="13">
+              <property Operator="Add" />
+              <property Opl="float Self.AgentNodeTest::testVar_2" />
+              <property Opr1="float Self.AgentNodeTest::testVar_2" />
+              <property Opr2="const float 1" />
+            </node>
+          </node>
+          <node class="Wait" id="4">
+            <property Time="const float 1000" />
+          </node>
+          <node class="Compute" id="11">
+            <property Operator="Sub" />
+            <property Opl="int Self.AgentNodeTest::testVar_0" />
+            <property Opr1="int Self.AgentNodeTest::testVar_0" />
+            <property Opr2="const int 1" />
+          </node>
+        </node>
+      </node>
+      <node class="DecoratorWeight" id="6">
+        <property DecorateWhenChildEnds="false" />
+        <property Weight="const int 10" />
+        <node class="Sequence" id="8">
+          <node class="Parallel" id="12">
+            <property ChildFinishPolicy="CHILDFINISH_LOOP" />
+            <property ExitPolicy="EXIT_ABORT_RUNNINGSIBLINGS" />
+            <property FailurePolicy="FAIL_ON_ONE" />
+            <property SuccessPolicy="SUCCEED_ON_ALL" />
+            <node class="Compute" id="3">
+              <property Operator="Add" />
+              <property Opl="int Self.AgentNodeTest::testVar_1" />
+              <property Opr1="int Self.AgentNodeTest::testVar_1" />
+              <property Opr2="const int 1" />
+            </node>
+            <node class="Compute" id="14">
+              <property Operator="Add" />
+              <property Opl="float Self.AgentNodeTest::testVar_3" />
+              <property Opr1="float Self.AgentNodeTest::testVar_3" />
+              <property Opr2="const float 1" />
+            </node>
+          </node>
+          <node class="Wait" id="9">
+            <property Time="const float 1000" />
+          </node>
+          <node class="Compute" id="1">
+            <property Operator="Sub" />
+            <property Opl="int Self.AgentNodeTest::testVar_1" />
+            <property Opr1="int Self.AgentNodeTest::testVar_1" />
+            <property Opr2="const int 1" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</behavior>

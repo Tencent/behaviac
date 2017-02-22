@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\frames_ut_0.xml-->
+<behavior name="node_test/frames_ut_0" agenttype="AgentNodeTest" version="5">
+  <node class="Sequence" id="1">
+    <node class="DecoratorFrames" id="23">
+      <property DecorateWhenChildEnds="false" />
+      <property Frames="const int 5" />
+      <node class="Sequence" id="15">
+        <node class="Action" id="16">
+          <property Method="Self.AgentNodeTest::SelectTarget()" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+        <node class="Assignment" id="21">
+          <property CastRight="false" />
+          <property Opl="int Self.AgentNodeTest::testVar_0" />
+          <property Opr="const int 0" />
+        </node>
+        <node class="Action" id="5">
+          <property Method="Self.AgentNodeTest::Move()" />
+          <property ResultOption="BT_INVALID" />
+          <attachment class="Precondition" id="7" flag="precondition">
+            <property BinaryOperator="And" />
+            <property Operator="Assign" />
+            <property Opl="int Self.AgentNodeTest::testVar_0" />
+            <property Opr2="const int 0" />
+            <property Phase="Update" />
+          </attachment>
+        </node>
+        <node class="Assignment" id="0">
+          <property CastRight="false" />
+          <property Opl="int Self.AgentNodeTest::testVar_0" />
+          <property Opr="const int 2" />
+        </node>
+      </node>
+    </node>
+    <node class="Assignment" id="2">
+      <property CastRight="false" />
+      <property Opl="int Self.AgentNodeTest::testVar_0" />
+      <property Opr="const int 3" />
+    </node>
+  </node>
+</behavior>

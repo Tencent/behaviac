@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\predicate_sequence_ut_3.xml-->
+<behavior name="node_test/predicate_sequence_ut_3" agenttype="AgentNodeTest" version="5">
+  <node class="Sequence" id="0">
+    <custom>
+      <node class="DecoratorNot" id="1">
+        <property DecorateWhenChildEnds="false" />
+        <node class="Sequence" id="3">
+          <node class="Condition" id="6">
+            <property Operator="Equal" />
+            <property Opl="int Self.AgentNodeTest::testVar_1" />
+            <property Opr="const int -1" />
+          </node>
+          <node class="Condition" id="7">
+            <property Operator="Equal" />
+            <property Opl="int Self.AgentNodeTest::testVar_0" />
+            <property Opr="const int -1" />
+          </node>
+        </node>
+      </node>
+    </custom>
+    <node class="Action" id="5">
+      <property Method="Self.AgentNodeTest::setTestVar_0(0)" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+    <node class="Action" id="4">
+      <property Method="Self.AgentNodeTest::setTestVar_1(0)" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+    <node class="Action" id="2">
+      <property Method="Self.AgentNodeTest::setTestVar_2(0)" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+  </node>
+</behavior>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\action_noop_ut_0.xml-->
+<behavior name="node_test/action_noop_ut_0" agenttype="AgentNodeTest" version="5">
+  <node class="Sequence" id="0">
+    <node class="Noop" id="2" />
+    <node class="Noop" id="1" />
+    <node class="Assignment" id="4">
+      <property CastRight="false" />
+      <property Opl="int Self.AgentNodeTest::testVar_0" />
+      <property Opr="const int 2" />
+    </node>
+    <node class="Noop" id="3" />
+  </node>
+</behavior>

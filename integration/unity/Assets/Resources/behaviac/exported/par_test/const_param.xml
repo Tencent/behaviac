@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: par_test\const_param.xml-->
+<behavior name="par_test/const_param" agenttype="EmployeeParTestAgent" version="5">
+  <node class="Sequence" id="22">
+    <node class="Assignment" id="0">
+      <property CastRight="false" />
+      <property Opl="bool Self.ParTestAgentBase::TV_BOOL_0" />
+      <property Opr="Self.ParTestAgentBase::Func_BooleanIR(true)" />
+    </node>
+    <node class="Assignment" id="1">
+      <property CastRight="false" />
+      <property Opl="ubyte Self.ParTestAgentBase::TV_BYTE_0" />
+      <property Opr="Self.ParTestAgentBase::Func_ByteIR(1)" />
+    </node>
+    <node class="Assignment" id="2">
+      <property CastRight="false" />
+      <property Opl="vector&lt;bool&gt; Self.ParTestAgentBase::TV_LIST_BOOL_0" />
+      <property Opr="Self.ParTestAgentBase::Func_BooleanListIR(2:true|true)" />
+    </node>
+  </node>
+</behavior>

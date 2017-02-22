@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: par_test\cast_param.xml-->
+<behavior name="par_test/cast_param" agenttype="EmployeeParTestAgent" version="5">
+  <node class="Sequence" id="22">
+    <node class="Assignment" id="1">
+      <property CastRight="true" />
+      <property Opl="ubyte Self.ParTestAgentBase::TV_BYTE_0" />
+      <property Opr="Self.EmployeeParTestAgent::Func_SingleIR(0)" />
+    </node>
+    <node class="Assignment" id="0">
+      <property CastRight="true" />
+      <property Opl="short Self.ParTestAgent::TV_SHORT_0" />
+      <property Opr="uint Self.EmployeeParTestAgent::TV_UINT_0" />
+    </node>
+    <node class="Assignment" id="2">
+      <property CastRight="true" />
+      <property Opl="behaviac::Agent Self.EmployeeParTestAgent::TV_AGENT_0" />
+      <property Opr="ParTestAgent Self.ParTestAgent::C_Agent" />
+    </node>
+  </node>
+</behavior>

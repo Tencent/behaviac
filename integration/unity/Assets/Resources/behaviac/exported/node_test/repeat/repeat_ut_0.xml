@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\repeat\repeat_ut_0.xml-->
+<behavior name="node_test/repeat/repeat_ut_0" agenttype="AgentNodeTest" version="5">
+  <node class="Sequence" id="2">
+    <node class="Assignment" id="3">
+      <property CastRight="false" />
+      <property Opl="int Self.AgentNodeTest::testVar_0" />
+      <property Opr="const int 0" />
+    </node>
+    <node class="DecoratorRepeat" id="0">
+      <property Count="const int 5" />
+      <property DecorateWhenChildEnds="true" />
+      <node class="Compute" id="1">
+        <property Operator="Add" />
+        <property Opl="int Self.AgentNodeTest::testVar_0" />
+        <property Opr1="int Self.AgentNodeTest::testVar_0" />
+        <property Opr2="const int 1" />
+      </node>
+    </node>
+  </node>
+</behavior>

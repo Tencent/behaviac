@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Behavior Version="5">
+  <Node Class="Behaviac.Design.Nodes.Behavior" AgentType="HTNAgentTravel" Domains="" Enable="true" HasOwnPrefabData="false" Id="-1" PrefabName="" PrefabNodeId="-1">
+    <Comment Background="NoColor" Text="" />
+    <Parameters>
+      <Parameter Name="_$local_task_param_$_0" Type="System.Int32" DefaultValue="0" DisplayName="x" Desc="HTNAgentTravel::_$local_task_param_$_0" Display="false" />
+      <Parameter Name="_$local_task_param_$_1" Type="System.Int32" DefaultValue="0" DisplayName="y" Desc="HTNAgentTravel::_$local_task_param_$_1" Display="false" />
+    </Parameters>
+    <DescriptorRefs value="0:" />
+    <Connector Identifier="GenericChildren">
+      <Node Class="PluginBehaviac.Nodes.Task" Enable="true" HasOwnPrefabData="false" Id="0" PrefabName="" PrefabNodeId="-1" Prototype="Self.HTNAgentTravel::travel(0,0)">
+        <Comment Background="NoColor" Text="" />
+        <Connector Identifier="GenericChildren">
+          <Node Class="PluginBehaviac.Nodes.Method" Enable="true" HasOwnPrefabData="false" Id="2" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+            <Attachment Class="PluginBehaviac.Events.Precondition" BinaryOperator="And" Enable="true" Id="1" Operator="Equal" Opl="Self.HTNAgentTravel::short_distance(int Self.HTNAgentTravel::_$local_task_param_$_0,int Self.HTNAgentTravel::_$local_task_param_$_1)" Opr1="&quot;&quot;" Opr2="const bool true" Phase="Enter" PrefabAttachmentId="-1" />
+            <Connector Identifier="Tasks">
+              <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="3" Method="Self.HTNAgentTravel::ride_taxi(int Self.HTNAgentTravel::_$local_task_param_$_0,int Self.HTNAgentTravel::_$local_task_param_$_1)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+            </Connector>
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Method" Enable="true" HasOwnPrefabData="false" Id="5" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+            <Attachment Class="PluginBehaviac.Events.Precondition" BinaryOperator="And" Enable="true" Id="4" Operator="Equal" Opl="Self.HTNAgentTravel::long_distance(int Self.HTNAgentTravel::_$local_task_param_$_0,int Self.HTNAgentTravel::_$local_task_param_$_1)" Opr1="&quot;&quot;" Opr2="const bool true" Phase="Enter" PrefabAttachmentId="-1" />
+            <Connector Identifier="Tasks">
+              <Node Class="Behaviac.Design.Nodes.ReferencedBehavior" Enable="true" HasOwnPrefabData="false" Id="6" PrefabName="" PrefabNodeId="-1" ReferenceBehavior="const string &quot;node_test/htn/travel/travel_by_air&quot;" Task="Self.HTNAgentTravel::travel_by_air(int Self.HTNAgentTravel::_$local_task_param_$_0,int Self.HTNAgentTravel::_$local_task_param_$_1)">
+                <Comment Background="Gray" Text="" />
+              </Node>
+            </Connector>
+          </Node>
+        </Connector>
+      </Node>
+    </Connector>
+  </Node>
+</Behavior>

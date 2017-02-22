@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\condition_ut_1.xml-->
+<behavior name="node_test/condition_ut_1" agenttype="AgentNodeTest" version="5">
+  <pars>
+    <par name="par_agent" type="ParTestAgent" value="null" />
+  </pars>
+  <node class="Sequence" id="0">
+    <node class="Or" id="9">
+      <node class="Condition" id="10">
+        <property Operator="Equal" />
+        <property Opl="ParTestAgent Self.AgentNodeTest::par_agent" />
+        <property Opr="const ParTestAgent null" />
+      </node>
+      <node class="True" id="11" />
+    </node>
+    <node class="Or" id="1">
+      <node class="True" id="3" />
+      <node class="False" id="5" />
+    </node>
+    <node class="Action" id="2">
+      <property Method="Self.AgentNodeTest::setTestVar_0(0)" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+    <node class="Or" id="4">
+      <node class="False" id="6" />
+      <node class="False" id="7" />
+    </node>
+    <node class="Action" id="8">
+      <property Method="Self.AgentNodeTest::setTestVar_0(1)" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+  </node>
+</behavior>

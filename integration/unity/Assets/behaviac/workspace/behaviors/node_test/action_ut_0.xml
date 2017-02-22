@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Behavior Version="5" NoError="true">
+  <Node Class="Behaviac.Design.Nodes.Behavior" AgentType="AgentNodeTest" Domains="" Enable="true" HasOwnPrefabData="false" Id="-1" PrefabName="" PrefabNodeId="-1">
+    <Comment Background="NoColor" Text="" />
+    <Parameters>
+      <Parameter Name="par_int_type_0" Type="System.Int32" DefaultValue="0" DisplayName="par_int_type_0" Desc="AgentNodeTest::par_int_type_0" Display="true" />
+      <Parameter Name="par_int_type_1" Type="System.Int32" DefaultValue="0" DisplayName="par_int_type_1" Desc="AgentNodeTest::par_int_type_1" Display="true" />
+      <Parameter Name="par_int_type_2" Type="System.Int32" DefaultValue="300" DisplayName="par_int_type_2" Desc="AgentNodeTest::par_int_type_2" Display="true" />
+      <Parameter Name="par_go" Type="XMLPluginBehaviac.UnityEngine_GameObject" DefaultValue="null" DisplayName="par_go" Desc="par_go" Display="true" />
+    </Parameters>
+    <DescriptorRefs value="0:" />
+    <Connector Identifier="GenericChildren">
+      <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="0" PrefabName="" PrefabNodeId="-1">
+        <Comment Background="NoColor" Text="" />
+        <Attachment Class="PluginBehaviac.Events.Precondition" BinaryOperator="And" Enable="true" Id="15" Operator="Equal" Opl="Self.AgentNodeTest::Move()" Opr1="&quot;&quot;" Opr2="const behaviac::EBTStatus BT_RUNNING" Phase="Enter" PrefabAttachmentId="-1" />
+        <Connector Identifier="GenericChildren">
+          <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="14" Method="Self.AgentNodeTest::initChildAgentTest()" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+            <Comment Background="NoColor" Text="" />
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="12" Opl="int Self.AgentNodeTest::testVar_0" Opr="int par_child.AgentNodeTest::testVar_1" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="13" Operator="Equal" Opl="int Self.AgentNodeTest::testVar_0" Opr="int par_child.AgentNodeTest::testVar_1" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="10" Opl="int Self.AgentNodeTest::testVar_0" Opr="par_child.AgentNodeTest::getConstOne()" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="11" Operator="Equal" Opl="int Self.AgentNodeTest::testVar_0" Opr="const int 1" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="8" Operator="Greater" Opl="float par_child.AgentNodeTest::testVar_2" Opr="float Self.AgentNodeTest::testVar_3" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="9" Method="par_child.AgentNodeTest::SelectTarget()" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+            <Comment Background="NoColor" Text="" />
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="1" Operator="Add" Opl="int Self.AgentNodeTest::par_int_type_0" Opr1="Self.AgentNodeTest::getConstThousand(600,400)" Opr2="const int 500" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="2" Method="Self.AgentNodeTest::setTestVar_0(int Self.AgentNodeTest::par_int_type_0)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+            <Comment Background="NoColor" Text="" />
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="3" Opl="int Self.AgentNodeTest::par_int_type_1" Opr="int Self.AgentNodeTest::testVar_0" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="4" Operator="Add" Opl="int Self.AgentNodeTest::par_int_type_0" Opr1="int Self.AgentNodeTest::par_int_type_1" Opr2="int Self.AgentNodeTest::par_int_type_2" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="5" Method="Self.AgentNodeTest::setTestVar_1(int Self.AgentNodeTest::par_int_type_0)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+            <Comment Background="NoColor" Text="" />
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="7" Method="Self.AgentNodeTest::testGameObject(null)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+            <Comment Background="NoColor" Text="" />
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="6" Method="StaticAgent.StaticAgent::sAction()" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+            <Comment Background="NoColor" Text="" />
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="16" Method="Self.AgentNodeTest::testVectorStruct(1:{x=0.01;y=-0.01;})" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+            <Comment Background="NoColor" Text="" />
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="18" Opl="string Self.AgentNodeTest::testVar_str_0" Opr="const string &quot;abcd&quot;" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="17" Method="Self.AgentNodeTest::transitPlanTactics({plan_ID=string Self.AgentNodeTest::testVar_str_0;plan_selection_precedence=0;transit_points=3:{coordX=0;coordY=0;}|{coordX=0;coordY=0;}|{coordX=0;coordY=0;};},EnumTest_OneAfterOne,&quot;&quot;)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+            <Comment Background="NoColor" Text="" />
+          </Node>
+        </Connector>
+      </Node>
+    </Connector>
+  </Node>
+</Behavior>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\fsm\fsm_ut_0.xml-->
+<behavior name="node_test/fsm/fsm_ut_0" agenttype="FSMAgentTest" fsm="true" version="5">
+  <node class="FSM" id="-1">
+    <property initialid="3" />
+    <node class="State" id="3">
+      <property IsEndState="false" />
+      <property Method="Self.FSMAgentTest::inactive_update()" />
+      <attachment class="Precondition" id="10" flag="precondition">
+        <property BinaryOperator="And" />
+        <property Operator="Assign" />
+        <property Opl="int Self.FSMAgentTest::FoodCount" />
+        <property Opr2="const int 0" />
+        <property Phase="Enter" />
+      </attachment>
+      <attachment class="Precondition" id="2" flag="precondition">
+        <property BinaryOperator="And" />
+        <property Operator="Add" />
+        <property Opl="int Self.FSMAgentTest::FoodCount" />
+        <property Opr1="int Self.FSMAgentTest::FoodCount" />
+        <property Opr2="const int 1" />
+        <property Phase="Update" />
+      </attachment>
+      <attachment class="Transition" id="5" flag="transition">
+        <property Operator="GreaterEqual" />
+        <property Opl="int Self.FSMAgentTest::FoodCount" />
+        <property Opr1="int Self.FSMAgentTest::FoodCount" />
+        <property Opr2="const int 10" />
+        <property TargetFSMNodeId="1" />
+        <attachment>
+          <property Operator="Add" />
+          <property Opr2="const ubyte 1" />
+        </attachment>
+      </attachment>
+    </node>
+    <node class="State" id="1">
+      <property IsEndState="false" />
+      <property Method="Self.FSMAgentTest::active_update()" />
+      <attachment class="Precondition" id="6" flag="precondition">
+        <property BinaryOperator="And" />
+        <property Operator="Sub" />
+        <property Opl="int Self.FSMAgentTest::FoodCount" />
+        <property Opr1="int Self.FSMAgentTest::FoodCount" />
+        <property Opr2="const int 2" />
+        <property Phase="Update" />
+      </attachment>
+      <attachment class="Precondition" id="11" flag="precondition">
+        <property BinaryOperator="And" />
+        <property Operator="Add" />
+        <property Opl="int Self.FSMAgentTest::EnergyCount" />
+        <property Opr1="int Self.FSMAgentTest::EnergyCount" />
+        <property Opr2="const int 1" />
+        <property Phase="Update" />
+      </attachment>
+      <attachment class="Transition" id="7" flag="transition">
+        <property Operator="LessEqual" />
+        <property Opl="int Self.FSMAgentTest::FoodCount" />
+        <property Opr1="int Self.FSMAgentTest::FoodCount" />
+        <property Opr2="const int 0" />
+        <property TargetFSMNodeId="3" />
+        <attachment>
+          <property Operator="Add" />
+          <property Opr2="const ubyte 1" />
+        </attachment>
+      </attachment>
+      <attachment class="Transition" id="12" flag="transition">
+        <property Operator="GreaterEqual" />
+        <property Opl="int Self.FSMAgentTest::EnergyCount" />
+        <property Opr2="const int 5" />
+        <property TargetFSMNodeId="4" />
+      </attachment>
+    </node>
+    <node class="State" id="4">
+      <property IsEndState="false" />
+      <property Method="Self.FSMAgentTest::pause_update()" />
+      <attachment class="Precondition" id="9" flag="precondition">
+        <property BinaryOperator="And" />
+        <property Operator="Sub" />
+        <property Opl="int Self.FSMAgentTest::FoodCount" />
+        <property Opr1="int Self.FSMAgentTest::FoodCount" />
+        <property Opr2="const int 1" />
+        <property Phase="Enter" />
+      </attachment>
+      <attachment class="Transition" id="8" flag="transition">
+        <property Operator="LessEqual" />
+        <property Opl="int Self.FSMAgentTest::FoodCount" />
+        <property Opr1="int Self.FSMAgentTest::FoodCount" />
+        <property Opr2="const int 0" />
+        <property TargetFSMNodeId="3" />
+        <attachment>
+          <property Operator="Add" />
+          <property Opr2="const ubyte 1" />
+        </attachment>
+      </attachment>
+    </node>
+  </node>
+</behavior>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\decoration_loopuntil_ut_1.xml-->
+<behavior name="node_test/decoration_loopuntil_ut_1" agenttype="AgentNodeTest" version="5">
+  <node class="Sequence" id="0">
+    <node class="Action" id="4">
+      <property Method="Self.AgentNodeTest::setTestVar_0(0)" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+    <node class="DecoratorLoopUntil" id="1">
+      <property Count="const int 5" />
+      <property DecorateWhenChildEnds="true" />
+      <property Until="false" />
+      <node class="DecoratorLoop" id="2">
+        <property Count="const int 10" />
+        <property DecorateWhenChildEnds="true" />
+        <property DoneWithinFrame="false" />
+        <node class="True" id="5" />
+      </node>
+    </node>
+    <node class="Action" id="3">
+      <property Method="Self.AgentNodeTest::setTestVar_0(1)" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+  </node>
+</behavior>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Behavior Version="5">
+  <Node Class="Behaviac.Design.Nodes.Behavior" AgentType="AgentNodeTest" Domains="" Enable="true" HasOwnPrefabData="false" Id="-1" PrefabName="" PrefabNodeId="-1">
+    <Comment Background="NoColor" Text="" />
+    <Parameters>
+      <Parameter Name="par_go" Type="XMLPluginBehaviac.UnityEngine_GameObject" DefaultValue="null" DisplayName="par_go" Desc="par_go" Display="true" />
+      <Parameter Name="par_float_type_0" Type="System.Single" DefaultValue="0" DisplayName="par_float_type_0" Desc="AgentNodeTest::par_float_type_0" Display="true" />
+      <Parameter Name="par_float_type_1" Type="System.Single" DefaultValue="0" DisplayName="par_float_type_1" Desc="AgentNodeTest::par_float_type_1" Display="true" />
+      <Parameter Name="par_float_type_2" Type="System.Single" DefaultValue="2.7" DisplayName="par_float_type_2" Desc="AgentNodeTest::par_float_type_2" Display="true" />
+    </Parameters>
+    <DescriptorRefs value="0:" />
+    <Connector Identifier="GenericChildren">
+      <Node Class="PluginBehaviac.Nodes.DecoratorLoop" Count="const int -1" DecorateWhenChildEnds="true" DoneWithinFrame="false" Enable="true" HasOwnPrefabData="false" Id="8" PrefabName="" PrefabNodeId="-1">
+        <Comment Background="NoColor" Text="" />
+        <Connector Identifier="GenericChildren">
+          <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="0" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+            <Connector Identifier="GenericChildren">
+              <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="3" Operator="Add" Opl="float Self.AgentNodeTest::par_float_type_0" Opr1="const float 0.5" Opr2="const float 1.3" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="2" Method="Self.AgentNodeTest::setTestVar_2(float Self.AgentNodeTest::par_float_type_0)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="1" Opl="float Self.AgentNodeTest::par_float_type_1" Opr="float Self.AgentNodeTest::testVar_2" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="4" Operator="Add" Opl="float Self.AgentNodeTest::par_float_type_0" Opr1="float Self.AgentNodeTest::par_float_type_1" Opr2="float Self.AgentNodeTest::par_float_type_2" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="5" Method="Self.AgentNodeTest::setTestVar_3(float Self.AgentNodeTest::par_float_type_0)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="7" Opl="UnityEngine::GameObject Self.AgentNodeTest::par_go" Opr="Self.AgentNodeTest::createGameObject()" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="6" Method="Self.AgentNodeTest::testGameObject(UnityEngine::GameObject Self.AgentNodeTest::par_go)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+            </Connector>
+          </Node>
+        </Connector>
+      </Node>
+    </Connector>
+  </Node>
+</Behavior>

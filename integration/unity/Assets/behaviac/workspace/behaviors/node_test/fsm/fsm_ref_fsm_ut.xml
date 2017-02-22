@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Behavior Version="5">
+  <Node Class="Behaviac.Design.Nodes.Behavior" AgentType="FSMAgentTest" Domains="" Enable="true" HasOwnPrefabData="false" Id="-1" PrefabName="" PrefabNodeId="-1">
+    <Comment Background="NoColor" Text="" />
+    <DescriptorRefs value="0:" />
+    <Attachment Class="PluginBehaviac.Events.StartCondition" Enable="true" Id="0" PrefabAttachmentId="-1" TargetFSMNodeId="3" />
+    <FSMNodes ScreenLocationX="-622.7067" ScreenLocationY="-212.2075">
+      <Node Class="PluginBehaviac.Nodes.State" Enable="true" HasOwnPrefabData="false" Id="3" IsEndState="false" Method="Self.FSMAgentTest::inactive_update()" Name="Inactive" PrefabName="" PrefabNodeId="-1" ScreenLocationX="-405.4023" ScreenLocationY="-169.7725">
+        <Comment Background="NoColor" Text="" />
+        <Attachment Class="PluginBehaviac.Events.Precondition" BinaryOperator="And" Enable="true" Id="10" Operator="Assign" Opl="int Self.FSMAgentTest::InactiveCount" Opr1="&quot;&quot;" Opr2="const int 0" Phase="Enter" PrefabAttachmentId="-1" />
+        <Attachment Class="PluginBehaviac.Events.TransitionCondition" Effectors="1:{Operator=Add;Opl=&quot;&quot;;Opr1=&quot;&quot;;Opr2=const ubyte 1;}" Enable="true" Id="5" Operator="Equal" Opl="FSMAgentTest::EMessage Self.FSMAgentTest::Message" Opr1="const FSMAgentTest::EMessage Invalid" Opr2="const FSMAgentTest::EMessage Begin" PrefabAttachmentId="-1" TargetFSMNodeId="18" />
+        <Attachment Class="PluginBehaviac.Events.Effector" Enable="true" Id="14" Operator="Add" Opl="int Self.FSMAgentTest::InactiveCount" Opr1="int Self.FSMAgentTest::InactiveCount" Opr2="const int 1" Phase="Success" PrefabAttachmentId="-1" />
+        <Attachment Class="PluginBehaviac.Events.TransitionCondition" Effectors="1:{Operator=Add;Opl=&quot;&quot;;Opr1=&quot;&quot;;Opr2=const ubyte 1;}" Enable="true" Id="6" Operator="Equal" Opl="FSMAgentTest::EMessage Self.FSMAgentTest::Message" Opr1="const FSMAgentTest::EMessage Invalid" Opr2="const FSMAgentTest::EMessage Exit" PrefabAttachmentId="-1" TargetFSMNodeId="2" />
+      </Node>
+      <Node Class="PluginBehaviac.Nodes.State" Enable="true" HasOwnPrefabData="false" Id="2" IsEndState="true" Method="&quot;&quot;" Name="Exit" PrefabName="" PrefabNodeId="-1" ScreenLocationX="-593.3265" ScreenLocationY="-101.125">
+        <Comment Background="NoColor" Text="" />
+        <Attachment Class="PluginBehaviac.Events.Precondition" BinaryOperator="And" Enable="true" Id="12" Operator="Assign" Opl="long Self.FSMAgentTest::ExitCount" Opr1="&quot;&quot;" Opr2="const long 0" Phase="Enter" PrefabAttachmentId="-1" />
+        <Attachment Class="PluginBehaviac.Events.Effector" Enable="true" Id="15" Operator="Add" Opl="long Self.FSMAgentTest::ExitCount" Opr1="long Self.FSMAgentTest::ExitCount" Opr2="const long 1" Phase="Success" PrefabAttachmentId="-1" />
+      </Node>
+      <Node Class="PluginBehaviac.Nodes.State" Enable="true" HasOwnPrefabData="false" Id="4" IsEndState="false" Method="Self.FSMAgentTest::pause_update()" Name="Paused" PrefabName="" PrefabNodeId="-1" ScreenLocationX="-133.813" ScreenLocationY="-98.88432">
+        <Comment Background="NoColor" Text="" />
+        <Attachment Class="PluginBehaviac.Events.Precondition" BinaryOperator="And" Enable="true" Id="13" Operator="Assign" Opl="short Self.FSMAgentTest::PauseCount" Opr1="&quot;&quot;" Opr2="const short 0" Phase="Enter" PrefabAttachmentId="-1" />
+        <Attachment Class="PluginBehaviac.Events.TransitionCondition" Effectors="1:{Operator=Add;Opl=&quot;&quot;;Opr1=&quot;&quot;;Opr2=const ubyte 1;}" Enable="true" Id="8" Operator="Equal" Opl="FSMAgentTest::EMessage Self.FSMAgentTest::Message" Opr1="const FSMAgentTest::EMessage Invalid" Opr2="const FSMAgentTest::EMessage End" PrefabAttachmentId="-1" TargetFSMNodeId="3" />
+        <Attachment Class="PluginBehaviac.Events.TransitionCondition" Effectors="1:{Operator=Add;Opl=&quot;&quot;;Opr1=&quot;&quot;;Opr2=const ubyte 1;}" Enable="true" Id="9" Operator="Equal" Opl="FSMAgentTest::EMessage Self.FSMAgentTest::Message" Opr1="const FSMAgentTest::EMessage Invalid" Opr2="const FSMAgentTest::EMessage Resume" PrefabAttachmentId="-1" TargetFSMNodeId="1" />
+        <Attachment Class="PluginBehaviac.Events.Effector" Enable="true" Id="16" Operator="Add" Opl="short Self.FSMAgentTest::PauseCount" Opr1="short Self.FSMAgentTest::PauseCount" Opr2="const short 1" Phase="Success" PrefabAttachmentId="-1" />
+      </Node>
+      <Node Class="PluginBehaviac.Nodes.FSMReferencedBehavior" Enable="true" HasOwnPrefabData="false" Id="18" PrefabName="" PrefabNodeId="-1" ReferenceBehavior="const string &quot;node_test/fsm/fsm_ut_0&quot;" ScreenLocationX="-194.6883" ScreenLocationY="-286.2703" Task="&quot;&quot;">
+        <Comment Background="Gray" Text="" />
+        <Attachment Class="PluginBehaviac.Events.Precondition" BinaryOperator="And" Enable="true" Id="11" Operator="Assign" Opl="uint Self.FSMAgentTest::ActiveCount" Opr1="&quot;&quot;" Opr2="const uint 0" Phase="Enter" PrefabAttachmentId="-1" />
+        <Attachment Class="PluginBehaviac.Events.TransitionCondition" Effectors="1:{Operator=Add;Opl=&quot;&quot;;Opr1=&quot;&quot;;Opr2=const ubyte 1;}" Enable="true" Id="7" Operator="Equal" Opl="FSMAgentTest::EMessage Self.FSMAgentTest::Message" Opr1="const FSMAgentTest::EMessage Invalid" Opr2="const FSMAgentTest::EMessage Pause" PrefabAttachmentId="-1" TargetFSMNodeId="4" />
+        <Attachment Class="PluginBehaviac.Events.Effector" Enable="true" Id="17" Operator="Add" Opl="uint Self.FSMAgentTest::ActiveCount" Opr1="uint Self.FSMAgentTest::ActiveCount" Opr2="const uint 1" Phase="Success" PrefabAttachmentId="-1" />
+      </Node>
+    </FSMNodes>
+  </Node>
+</Behavior>

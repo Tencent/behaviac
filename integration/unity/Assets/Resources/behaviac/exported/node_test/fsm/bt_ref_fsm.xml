@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\fsm\bt_ref_fsm.xml-->
+<behavior name="node_test/fsm/bt_ref_fsm" agenttype="FSMAgentTest" version="5">
+  <node class="Sequence" id="0">
+    <node class="Assignment" id="2">
+      <property CastRight="false" />
+      <property Opl="int Self.FSMAgentTest::FoodCount" />
+      <property Opr="const int -1" />
+    </node>
+    <node class="ReferencedBehavior" id="1">
+      <property ReferenceBehavior="const string &quot;node_test/fsm/fsm_ut_0&quot;" />
+    </node>
+  </node>
+</behavior>

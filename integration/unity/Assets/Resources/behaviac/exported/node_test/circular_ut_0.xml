@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\circular_ut_0.xml-->
+<behavior name="node_test/circular_ut_0" agenttype="AgentNodeTest" version="5">
+  <node class="Selector" id="0">
+    <node class="Sequence" id="2">
+      <node class="Condition" id="5">
+        <property Operator="Equal" />
+        <property Opl="int Self.AgentNodeTest::testVar_0" />
+        <property Opr="const int 0" />
+      </node>
+      <node class="Sequence" id="4">
+        <node class="Assignment" id="3">
+          <property CastRight="false" />
+          <property Opl="int Self.AgentNodeTest::testVar_0" />
+          <property Opr="const int 1" />
+        </node>
+        <node class="ReferencedBehavior" id="6">
+          <property ReferenceBehavior="const string &quot;node_test/circular_ut_0&quot;" />
+        </node>
+      </node>
+    </node>
+    <node class="Compute" id="1">
+      <property Operator="Add" />
+      <property Opl="int Self.AgentNodeTest::testVar_1" />
+      <property Opr1="int Self.AgentNodeTest::testVar_1" />
+      <property Opr2="const int 1" />
+    </node>
+  </node>
+</behavior>

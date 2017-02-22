@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\wait_ut_1.xml-->
+<behavior name="node_test/wait_ut_1" agenttype="AgentNodeTest" version="5">
+  <node class="Sequence" id="0">
+    <node class="Action" id="1">
+      <property Method="Self.AgentNodeTest::setTestVar_0(1)" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+    <node class="Wait" id="2">
+      <property Time="const float 1000" />
+    </node>
+    <node class="Action" id="3">
+      <property Method="Self.AgentNodeTest::setTestVar_0(2)" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+  </node>
+</behavior>

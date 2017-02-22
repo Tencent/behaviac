@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\event_ut_1.xml-->
+<behavior name="node_test/event_ut_1" agenttype="AgentNodeTest" version="5">
+  <node class="Sequence" id="0">
+    <node class="ReferencedBehavior" id="2">
+      <property ReferenceBehavior="const string &quot;node_test/event_ut_0&quot;" />
+    </node>
+    <node class="Action" id="7">
+      <property Method="Self.AgentNodeTest::setTestVar_1(0)" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+  </node>
+</behavior>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\event_ut_0.xml-->
+<behavior name="node_test/event_ut_0" agenttype="AgentNodeTest" version="5">
+  <node class="Sequence" id="0">
+    <attachment class="Event" id="1" flag="event">
+      <property ReferenceFilename="node_test/event_subtree_0" />
+      <property Task="Self.AgentNodeTest::event_test_void()" />
+      <property TriggeredOnce="false" />
+      <property TriggerMode="Return" />
+    </attachment>
+    <attachment class="Event" id="2" flag="event">
+      <property ReferenceFilename="node_test/event_subtree_1" />
+      <property Task="Self.AgentNodeTest::event_test_int(0)" />
+      <property TriggeredOnce="false" />
+      <property TriggerMode="Return" />
+    </attachment>
+    <attachment class="Event" id="3" flag="event">
+      <property ReferenceFilename="node_test/event_subtree_2" />
+      <property Task="Self.AgentNodeTest::event_test_int_bool(0,false)" />
+      <property TriggeredOnce="false" />
+      <property TriggerMode="Return" />
+    </attachment>
+    <attachment class="Event" id="4" flag="event">
+      <property ReferenceFilename="node_test/event_subtree_3" />
+      <property Task="Self.AgentNodeTest::event_test_int_bool_float(0,false,0)" />
+      <property TriggeredOnce="false" />
+      <property TriggerMode="Return" />
+    </attachment>
+    <attachment class="Event" id="8" flag="event">
+      <property ReferenceFilename="node_test/event_subtree_4" />
+      <property Task="Self.AgentNodeTest::event_test_agent(null)" />
+      <property TriggeredOnce="false" />
+      <property TriggerMode="Transfer" />
+    </attachment>
+    <node class="WaitforSignal" id="5">
+      <custom>
+        <node class="Condition" id="6">
+          <property Operator="Equal" />
+          <property Opl="int Self.AgentNodeTest::testVar_0" />
+          <property Opr="const int 0" />
+        </node>
+      </custom>
+    </node>
+    <node class="Action" id="7">
+      <property Method="Self.AgentNodeTest::setTestVar_1(0)" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+  </node>
+</behavior>

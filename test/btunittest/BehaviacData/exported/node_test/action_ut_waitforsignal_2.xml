@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\action_ut_waitforsignal_2.xml-->
+<behavior name="node_test/action_ut_waitforsignal_2" agenttype="AgentNodeTest" version="5">
+  <node class="Sequence" id="0">
+    <node class="WaitforSignal" id="1">
+      <custom>
+        <node class="Or" id="2">
+          <node class="And" id="3">
+            <node class="Condition" id="5">
+              <property Operator="Equal" />
+              <property Opl="int Self.AgentNodeTest::testVar_1" />
+              <property Opr="const int 0" />
+            </node>
+            <node class="Condition" id="6">
+              <property Operator="Equal" />
+              <property Opl="int Self.AgentNodeTest::testVar_0" />
+              <property Opr="const int 0" />
+            </node>
+          </node>
+          <node class="Condition" id="7">
+            <property Operator="Equal" />
+            <property Opl="float Self.AgentNodeTest::testVar_2" />
+            <property Opr="const float 0" />
+          </node>
+        </node>
+      </custom>
+    </node>
+    <node class="Assignment" id="4">
+      <property CastRight="false" />
+      <property Opl="float Self.AgentNodeTest::testVar_2" />
+      <property Opr="const float 2.3" />
+    </node>
+  </node>
+</behavior>

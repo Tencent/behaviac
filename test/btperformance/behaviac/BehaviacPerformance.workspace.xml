@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<workspace name="BehaviacPerformance" folder="..\..\..\integration\unity_performance\Assets\behaviac\workspace\behaviors" export="exported" language="cpp" version="3">
+  <export>
+    <bson>
+      <isexported>True</isexported>
+    </bson>
+    <cpp>
+      <isexported>True</isexported>
+      <exportfilecount>1</exportfilecount>
+      <folder>../..</folder>
+      <includedfilenames>
+        <includedfilename>btperformance.h</includedfilename>
+      </includedfilenames>
+    </cpp>
+  </export>
+</workspace>

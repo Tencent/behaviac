@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<workspace name="tutorial_3_cpp" metafilename="." folder="behaviors" export="..\cpp\exported" language="cpp" version="3">
+  <export>
+    <cpp>
+      <isexported>False</isexported>
+      <exportfilecount>1</exportfilecount>
+      <folder>../../cpp</folder>
+    </cpp>
+    <bson>
+      <isexported>False</isexported>
+    </bson>
+  </export>
+</workspace>

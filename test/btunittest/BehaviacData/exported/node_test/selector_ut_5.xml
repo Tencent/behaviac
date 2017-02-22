@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\selector_ut_5.xml-->
+<behavior name="node_test/selector_ut_5" agenttype="AgentNodeTest" version="5">
+  <node class="Selector" id="2">
+    <node class="Selector" id="0">
+      <node class="Sequence" id="4">
+        <node class="Condition" id="5">
+          <property Operator="Equal" />
+          <property Opl="EnumTest Self.AgentNodeTest::testColor" />
+          <property Opr="const EnumTest EnumTest_One" />
+        </node>
+        <node class="Action" id="1">
+          <property Method="Self.AgentNodeTest::setTestVar_0(0)" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+      </node>
+      <node class="Sequence" id="6">
+        <node class="Condition" id="7">
+          <property Operator="Equal" />
+          <property Opl="EnumTest Self.AgentNodeTest::testColor" />
+          <property Opr="const EnumTest EnumTest_OneAfterOne" />
+        </node>
+        <node class="Action" id="8">
+          <property Method="Self.AgentNodeTest::setTestVar_0(1)" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+      </node>
+      <node class="Action" id="3">
+        <property Method="Self.AgentNodeTest::setTestVar_0(2)" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+    </node>
+    <node class="Selector" id="9">
+      <node class="Sequence" id="10">
+        <node class="Condition" id="11">
+          <property Operator="Equal" />
+          <property Opl="EnumTest Self.AgentNodeTest::testColor" />
+          <property Opr="const EnumTest EnumTest_One" />
+        </node>
+        <node class="Action" id="12">
+          <property Method="Self.AgentNodeTest::setTestVar_0(0)" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+      </node>
+      <node class="Sequence" id="13">
+        <node class="Condition" id="14">
+          <property Operator="Equal" />
+          <property Opl="EnumTest Self.AgentNodeTest::testColor" />
+          <property Opr="const EnumTest EnumTest_OneAfterOne" />
+        </node>
+        <node class="Action" id="15">
+          <property Method="Self.AgentNodeTest::setTestVar_0(1)" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+      </node>
+      <node class="Action" id="16">
+        <property Method="Self.AgentNodeTest::setTestVar_0(2)" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+    </node>
+  </node>
+</behavior>

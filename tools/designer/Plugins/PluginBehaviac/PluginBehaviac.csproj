@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{326CC795-9695-4B8E-9EB4-5C7EA28B0344}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PluginBehaviac</RootNamespace>
+    <AssemblyName>PluginBehaviac</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\out\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\out\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Agent.cs" />
+    <Compile Include="DataExporters\Cs\ArrayCsExporter.cs" />
+    <Compile Include="DataExporters\Cs\DataCsExporter.cs" />
+    <Compile Include="DataExporters\Cs\EnumCsExporter.cs" />
+    <Compile Include="DataExporters\Cs\MethodCsExporter.cs" />
+    <Compile Include="DataExporters\Cs\ParameterCsExporter.cs" />
+    <Compile Include="DataExporters\Cs\ParInfoCsExporter.cs" />
+    <Compile Include="DataExporters\Cs\PropertyCsExporter.cs" />
+    <Compile Include="DataExporters\Cs\RightValueCsExporter.cs" />
+    <Compile Include="DataExporters\Cs\StructCsExporter.cs" />
+    <Compile Include="DataExporters\Cs\VariableCsExporter.cs" />
+    <Compile Include="DataExporters\Cpp\ArrayCppExporter.cs" />
+    <Compile Include="DataExporters\Cpp\EnumCppExporter.cs" />
+    <Compile Include="DataExporters\Cpp\DataCppExporter.cs" />
+    <Compile Include="DataExporters\Cpp\StructCppExporter.cs" />
+    <Compile Include="DataExporters\Cpp\ParInfoCppExporter.cs" />
+    <Compile Include="DataExporters\Cpp\RightValueCppExporter.cs" />
+    <Compile Include="DataExporters\Cpp\VariableCppExporter.cs" />
+    <Compile Include="DataExporters\Cpp\MethodCppExporter.cs" />
+    <Compile Include="DataExporters\Cpp\ParameterCppExporter.cs" />
+    <Compile Include="DataExporters\Cpp\PropertyCppExporter.cs" />
+    <Compile Include="Exporters\ExporterCs.cs" />
+    <Compile Include="NodeExporters\AttachmentExporter.cs" />
+    <Compile Include="Exporters\ExporterCpp.cs" />
+    <Compile Include="NodeExporters\Cpp\Actions\ComputeCppExporter.cs" />
+    <Compile Include="NodeExporters\Cpp\Attachments\AttachActionCppExporter.cs" />
+    <Compile Include="NodeExporters\Cpp\Attachments\EffectorCppExporter.cs" />
+    <Compile Include="NodeExporters\Cpp\Attachments\PreconditionCppExporter.cs" />
+    <Compile Include="NodeExporters\Cpp\Decorators\DecoratorIteratorCppExporter.cs" />
+    <Compile Include="NodeExporters\Cpp\Decorators\DecoratorLoopCppExporter.cs" />
+    <Compile Include="NodeExporters\Cpp\FSM\AlwaysTransitionCppExporter.cs" />
+    <Compile Include="NodeExporters\Cpp\FSM\WaitTransitionCppExporter.cs" />
+    <Compile Include="NodeExporters\Cpp\FSM\StateCppExporter.cs" />
+    <Compile Include="NodeExporters\Cpp\FSM\TransitionConditionCppExporter.cs" />
+    <Compile Include="NodeExporters\Cpp\FSM\WaitFramesStateCppExporter.cs" />
+    <Compile Include="NodeExporters\Cpp\FSM\WaitStateCppExporter.cs" />
+    <Compile Include="NodeExporters\Cpp\HTN\TaskCppExporter.cs" />
+    <Compile Include="NodeExporters\Cs\Actions\ActionCsExporter.cs" />
+    <Compile Include="NodeExporters\Cs\Actions\AssignmentCsExporter.cs" />
+    <Compile Include="NodeExporters\Cs\Actions\ComputeCsExporter.cs" />
+    <Compile Include="NodeExporters\Cs\Actions\WaitCsExporter.cs" />
+    <Compile Include="NodeExporters\Cs\Actions\WaitFramesCsExporter.cs" />
+    <Compile Include="NodeExporters\Cs\AttachmentCsExporter.cs" />
+    <Compile Include="NodeExporters\Cs\Attachments\AttachActionCsExporter.cs" />
+    <Compile Include="NodeExporters\Cs\Attachments\PreconditionCsExporter.cs" />
+    <Compile Include="NodeExporters\Cs\Attachments\EffectorCsExporter.cs" />
+    <Compile Include="NodeExporters\Cs\Attachments\EventCsExporter.cs" />
+    <Compile Include="NodeExporters\Cs\Composites\ParallelCsExporter.cs" />
+    <Compile Include="NodeExporters\Cs\Composites\QueryCsExporter.cs" />
+    <Compile Include="NodeExporters\Cs\Composites\ReferencedBehaviorCsExporter.cs" />
+    <Compile Include="NodeExporters\Cs\Composites\SelectorProbabilityCsExporter.cs" />
+    <Compile Include="NodeExporters\Cs\Composites\SelectorStochasticCsExporter.cs" />
+    <Compile Include="NodeExporters\Cs\Composites\SequenceStochasticCsExporter.cs" />
+    <Compile Include="NodeExporters\Cs\Conditions\ConditionCsExporter.cs" />
+    <Compile Include="NodeExporters\Cs\Decorators\DecoratorIteratorCsExporter.cs" />
+    <Compile Include="NodeExporters\Cs\Decorators\DecoratorCountCsExporter.cs" />
+    <Compile Include="NodeExporters\Cs\Decorators\DecoratorCsExporter.cs" />
+    <Compile Include="NodeExporters\Cs\Decorators\DecoratorFramesCsExporter.cs" />
+    <Compile Include="NodeExporters\Cs\Decorators\DecoratorLogCsExporter.cs" />
+    <Compile Include="NodeExporters\Cs\Decorators\DecoratorLoopCsExporter.cs" />
+    <Compile Include="NodeExporters\Cs\Decorators\DecoratorLoopUntilCsExporter.cs" />
+    <Compile Include="NodeExporters\Cs\Decorators\DecoratorTimeCsExporter.cs" />
+    <Compile Include="NodeExporters\Cs\Decorators\DecoratorWeightCsExporter.cs" />
+    <Compile Include="NodeExporters\Cs\FSM\AlwaysTransitionCsExporter.cs" />
+    <Compile Include="NodeExporters\Cs\FSM\WaitTransitionCsExporter.cs" />
+    <Compile Include="NodeExporters\Cs\FSM\StateCsExporter.cs" />
+    <Compile Include="NodeExporters\Cs\FSM\TransitionConditionCsExporter.cs" />
+    <Compile Include="NodeExporters\Cs\FSM\WaitStateCsExporter.cs" />
+    <Compile Include="NodeExporters\Cs\FSM\WaitFramesStateCsExporter.cs" />
+    <Compile Include="NodeExporters\Cs\HTN\TaskCsExporter.cs" />
+    <Compile Include="NodeExporters\Cs\NodeCsExporter.cs" />
+    <Compile Include="NodeExporters\Cpp\Actions\ActionCppExporter.cs" />
+    <Compile Include="NodeExporters\Cpp\Actions\AssignmentCppExporter.cs" />
+    <Compile Include="NodeExporters\Cpp\Attachments\EventCppExporter.cs" />
+    <Compile Include="NodeExporters\Cpp\Conditions\ConditionCppExporter.cs" />
+    <Compile Include="NodeExporters\Cpp\AttachmentCppExporter.cs" />
+    <Compile Include="NodeExporters\Cpp\Composites\ReferencedBehaviorCppExporter.cs" />
+    <Compile Include="NodeExporters\Cpp\Decorators\DecoratorCppExporter.cs" />
+    <Compile Include="NodeExporters\Cpp\Decorators\DecoratorWeightCppExporter.cs" />
+    <Compile Include="NodeExporters\Cpp\Decorators\DecoratorTimeCppExporter.cs" />
+    <Compile Include="NodeExporters\Cpp\Decorators\DecoratorLoopUntilCppExporter.cs" />
+    <Compile Include="NodeExporters\Cpp\Decorators\DecoratorLogCppExporter.cs" />
+    <Compile Include="NodeExporters\Cpp\Decorators\DecoratorFramesCppExporter.cs" />
+    <Compile Include="NodeExporters\Cpp\Decorators\DecoratorCountCppExporter.cs" />
+    <Compile Include="NodeExporters\Cpp\Composites\SequenceStochasticCppExporter.cs" />
+    <Compile Include="NodeExporters\Cpp\Composites\SelectorStochasticCppExporter.cs" />
+    <Compile Include="NodeExporters\Cpp\Composites\SelectorProbabilityCppExporter.cs" />
+    <Compile Include="NodeExporters\Cpp\Composites\QueryCppExporter.cs" />
+    <Compile Include="NodeExporters\Cpp\Composites\ParallelCppExporter.cs" />
+    <Compile Include="NodeExporters\Cpp\Actions\WaitFramesCppExporter.cs" />
+    <Compile Include="NodeExporters\Cpp\NodeCppExporter.cs" />
+    <Compile Include="NodeExporters\Cpp\Actions\WaitCppExporter.cs" />
+    <Compile Include="NodeExporters\NodeExporter.cs" />
+    <Compile Include="Nodes\Actions\Compute.cs" />
+    <Compile Include="Nodes\Actions\ConnectorCondition.cs" />
+    <Compile Include="Nodes\Actions\Noop.cs" />
+    <Compile Include="Nodes\Actions\Action.cs" />
+    <Compile Include="Nodes\Actions\Assignment.cs" />
+    <Compile Include="Nodes\Actions\Wait.cs" />
+    <Compile Include="Nodes\Actions\WaitforSignal.cs" />
+    <Compile Include="Nodes\Actions\WaitFrames.cs" />
+    <Compile Include="Nodes\Attachments\Effector.cs" />
+    <Compile Include="Nodes\Attachments\Event.cs" />
+    <Compile Include="Nodes\Attachments\Precondition.cs" />
+    <Compile Include="Nodes\Attachments\Predicate.cs" />
+    <Compile Include="Nodes\Composites\IfElse.cs" />
+    <Compile Include="Nodes\Composites\Parallel.cs" />
+    <Compile Include="Nodes\Composites\Query.cs" />
+    <Compile Include="Nodes\Composites\Selector.cs" />
+    <Compile Include="Nodes\Composites\SelectorLoop.cs" />
+    <Compile Include="Nodes\Composites\SelectorProbability.cs" />
+    <Compile Include="Nodes\Composites\SelectorStochastic.cs" />
+    <Compile Include="Nodes\Composites\Sequence.cs" />
+    <Compile Include="Nodes\Composites\SequenceStochastic.cs" />
+    <Compile Include="Nodes\Composites\WithPrecondition.cs" />
+    <Compile Include="Nodes\Conditions\And.cs" />
+    <Compile Include="Nodes\Conditions\Condition.cs" />
+    <Compile Include="Nodes\Conditions\False.cs" />
+    <Compile Include="Nodes\Conditions\OperatorCondition.cs" />
+    <Compile Include="Nodes\Conditions\Or.cs" />
+    <Compile Include="Nodes\Conditions\True.cs" />
+    <Compile Include="Nodes\Decorators\DecoratorCount.cs" />
+    <Compile Include="Nodes\Decorators\DecoratorCountLimit.cs" />
+    <Compile Include="Nodes\Decorators\DecoratorFrames.cs" />
+    <Compile Include="Nodes\Decorators\DecoratorIterator.cs" />
+    <Compile Include="Nodes\Decorators\DecoratorRepeat.cs" />
+    <Compile Include="Nodes\Decorators\DecoratorWeight.cs" />
+    <Compile Include="Nodes\Decorators\DecoratorAlwaysFailure.cs" />
+    <Compile Include="Nodes\Decorators\DecoratorAlwaysRunning.cs" />
+    <Compile Include="Nodes\Decorators\DecoratorFailureUntil.cs" />
+    <Compile Include="Nodes\Decorators\DecoratorLog.cs" />
+    <Compile Include="Nodes\Decorators\DecoratorLoop.cs" />
+    <Compile Include="Nodes\Decorators\DecoratorNot.cs" />
+    <Compile Include="Nodes\Decorators\DecoratorLoopUntil.cs" />
+    <Compile Include="Nodes\Decorators\DecoratorSuccessUntil.cs" />
+    <Compile Include="Nodes\Decorators\DecoratorAlwaysSuccess.cs" />
+    <Compile Include="Nodes\Decorators\DecoratorTime.cs" />
+    <Compile Include="Nodes\FSM\AlwaysTransition.cs" />
+    <Compile Include="Nodes\FSM\FSMReferencedBehavior.cs" />
+    <Compile Include="Nodes\FSM\StartCondition.cs" />
+    <Compile Include="Nodes\FSM\State.cs" />
+    <Compile Include="Nodes\FSM\StateBase.cs" />
+    <Compile Include="Nodes\FSM\TransitionCondition.cs" />
+    <Compile Include="Nodes\FSM\WaitFramesState.cs" />
+    <Compile Include="Nodes\FSM\WaitState.cs" />
+    <Compile Include="Nodes\FSM\WaitTransition.cs" />
+    <Compile Include="Nodes\HTN\Method.cs" />
+    <Compile Include="Nodes\HTN\Task.cs" />
+    <Compile Include="NodeUI\AlwaysTransitionUIPolicy.cs" />
+    <Compile Include="NodeUI\ComputeUIPolicy.cs" />
+    <Compile Include="NodeUI\EffectorUIPolicy.cs" />
+    <Compile Include="NodeUI\AssignmentUIPolicy.cs" />
+    <Compile Include="NodeUI\TransitionUIPolicy.cs" />
+    <Compile Include="NodeUI\ParallelUIPolicy.cs" />
+    <Compile Include="NodeUI\PreconditionUIPolicy.cs" />
+    <Compile Include="PluginBehaviac.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.zh-CN.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BehaviacDesignerBase\BehaviacDesignerBase.csproj">
+      <Project>{7A8F9AC6-44AD-40F3-BBA7-88D9603F7030}</Project>
+      <Name>BehaviacDesignerBase</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compute.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\goal_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON__0024_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON__0004_42.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON__0003_43.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON__0000_46.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON__0001_45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON__0018_28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON__0019_27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON__0016_30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON__0007_39.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON__0008_38.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preaction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\postaction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\try.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\state.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\task.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transition.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON__0028_18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON__0026_20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\repeat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\method.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\htn\travel\travel.xml-->
+<behavior name="node_test/htn/travel/travel" agenttype="HTNAgentTravel" version="5">
+  <pars>
+    <par name="_$local_task_param_$_0" type="int" value="0" />
+    <par name="_$local_task_param_$_1" type="int" value="0" />
+  </pars>
+  <node class="Task" id="0">
+    <property Prototype="Self.HTNAgentTravel::travel(0,0)" />
+    <property IsHTN="true" />
+    <node class="Method" id="2">
+      <attachment class="Precondition" id="1" flag="precondition">
+        <property BinaryOperator="And" />
+        <property Operator="Equal" />
+        <property Opl="Self.HTNAgentTravel::short_distance(int Self.HTNAgentTravel::_$local_task_param_$_0,int Self.HTNAgentTravel::_$local_task_param_$_1)" />
+        <property Opr2="const bool true" />
+        <property Phase="Enter" />
+      </attachment>
+      <node class="Action" id="3">
+        <property Method="Self.HTNAgentTravel::ride_taxi(int Self.HTNAgentTravel::_$local_task_param_$_0,int Self.HTNAgentTravel::_$local_task_param_$_1)" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+    </node>
+    <node class="Method" id="5">
+      <attachment class="Precondition" id="4" flag="precondition">
+        <property BinaryOperator="And" />
+        <property Operator="Equal" />
+        <property Opl="Self.HTNAgentTravel::long_distance(int Self.HTNAgentTravel::_$local_task_param_$_0,int Self.HTNAgentTravel::_$local_task_param_$_1)" />
+        <property Opr2="const bool true" />
+        <property Phase="Enter" />
+      </attachment>
+      <node class="ReferencedBehavior" id="6">
+        <property ReferenceBehavior="const string &quot;node_test/htn/travel/travel_by_air&quot;" />
+        <property Task="Self.HTNAgentTravel::travel_by_air(int Self.HTNAgentTravel::_$local_task_param_$_0,int Self.HTNAgentTravel::_$local_task_param_$_1)" />
+      </node>
+    </node>
+  </node>
+</behavior>

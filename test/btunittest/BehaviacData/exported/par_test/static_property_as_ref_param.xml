@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: par_test\static_property_as_ref_param.xml-->
+<behavior name="par_test/static_property_as_ref_param" agenttype="EmployeeParTestAgent" version="5">
+  <node class="Sequence" id="0">
+    <node class="Sequence" id="1">
+      <node class="Action" id="4">
+        <property Method="Self.ParTestAgentBase::Func_eColorRef(static TNS::NE::NAT::eColor Self.ParTestAgentBase::STV_ECOLOR_0)" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Action" id="5">
+        <property Method="Self.ParTestAgentBase::Func_BooleanRef(static bool Self.ParTestAgentBase::STV_BOOL_0)" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Action" id="6">
+        <property Method="Self.ParTestAgentBase::Func_CharRef(static char Self.ParTestAgentBase::STV_CHAR_0)" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Action" id="7">
+        <property Method="Self.ParTestAgentBase::Func_eColorListRef(static vector&lt;TNS::NE::NAT::eColor&gt; Self.ParTestAgentBase::STV_LIST_ECOLOR_0)" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Action" id="8">
+        <property Method="Self.ParTestAgentBase::Func_BooleanListRef(static vector&lt;bool&gt; Self.ParTestAgentBase::STV_LIST_BOOL_0)" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Action" id="9">
+        <property Method="Self.ParTestAgentBase::Func_CharListRef(static vector&lt;char&gt; Self.ParTestAgentBase::STV_LIST_CHAR_0)" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Action" id="10">
+        <property Method="Self.ParTestAgentBase::Func_SByteListRef(static vector&lt;sbyte&gt; Self.ParTestAgentBase::STV_LIST_SBYTE_0)" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+    </node>
+    <node class="Sequence" id="2">
+      <node class="Action" id="15">
+        <property Method="Self.ParTestAgent::Func_IntRef(static int Self.ParTestAgent::STV_INT_0)" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Action" id="12">
+        <property Method="Self.ParTestAgent::Func_kEmployeeRef(static TNS::ST::PER::WRK::kEmployee Self.ParTestAgent::STV_KEMPLOYEE_0)" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Action" id="13">
+        <property Method="Self.ParTestAgent::Func_IntListRef(static vector&lt;int&gt; Self.ParTestAgent::STV_LIST_INT_0)" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Action" id="11">
+        <property Method="Self.ParTestAgent::Func_kEmployeeListRef(static vector&lt;TNS::ST::PER::WRK::kEmployee&gt; Self.ParTestAgent::STV_LIST_KEMPLOYEE_0)" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+    </node>
+    <node class="Sequence" id="3">
+      <node class="Action" id="14">
+        <property Method="Self.EmployeeParTestAgent::Func_SingleRef(static float Self.EmployeeParTestAgent::STV_F_0)" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Action" id="16">
+        <property Method="Self.EmployeeParTestAgent::Func_StringRef(static string Self.EmployeeParTestAgent::STV_STR_0)" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Action" id="17">
+        <property Method="Self.EmployeeParTestAgent::Func_AgentRef(static behaviac::Agent Self.EmployeeParTestAgent::STV_AGENT_0)" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Action" id="18">
+        <property Method="Self.EmployeeParTestAgent::Func_SingleListRef(static vector&lt;float&gt; Self.EmployeeParTestAgent::STV_LIST_F_0)" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Action" id="19">
+        <property Method="Self.EmployeeParTestAgent::Func_StringListRef(static vector&lt;string&gt; Self.EmployeeParTestAgent::STV_LIST_STR_0)" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Action" id="20">
+        <property Method="Self.EmployeeParTestAgent::Func_AgentListRef(static vector&lt;behaviac::Agent&gt; Self.EmployeeParTestAgent::STV_LIST_AGENT_0)" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+    </node>
+  </node>
+</behavior>

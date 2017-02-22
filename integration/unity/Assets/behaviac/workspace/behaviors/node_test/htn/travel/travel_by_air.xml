@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Behavior Version="5">
+  <Node Class="Behaviac.Design.Nodes.Behavior" AgentType="HTNAgentTravel" Domains="" Enable="true" HasOwnPrefabData="false" Id="-1" PrefabName="" PrefabNodeId="-1">
+    <Comment Background="NoColor" Text="" />
+    <Parameters>
+      <Parameter Name="ax" Type="System.Int32" DefaultValue="0" DisplayName="ax" Desc="HTNAgentTravel::ax" Display="true" />
+      <Parameter Name="ay" Type="System.Int32" DefaultValue="0" DisplayName="ay" Desc="HTNAgentTravel::ay" Display="true" />
+      <Parameter Name="as" Type="System.Collections.Generic.List`1[[System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" DefaultValue="0:" DisplayName="as" Desc="HTNAgentTravel::as" Display="true" />
+      <Parameter Name="_$local_task_param_$_0" Type="System.Int32" DefaultValue="0" DisplayName="x" Desc="HTNAgentTravel::_$local_task_param_$_0" Display="false" />
+      <Parameter Name="_$local_task_param_$_1" Type="System.Int32" DefaultValue="0" DisplayName="y" Desc="HTNAgentTravel::_$local_task_param_$_1" Display="false" />
+    </Parameters>
+    <DescriptorRefs value="0:" />
+    <Connector Identifier="GenericChildren">
+      <Node Class="PluginBehaviac.Nodes.Task" Enable="true" HasOwnPrefabData="false" Id="0" PrefabName="" PrefabNodeId="-1" Prototype="Self.HTNAgentTravel::travel_by_air(0,0)">
+        <Comment Background="NoColor" Text="" />
+        <Connector Identifier="GenericChildren">
+          <Node Class="PluginBehaviac.Nodes.Method" Enable="true" HasOwnPrefabData="false" Id="1" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+            <Attachment Class="PluginBehaviac.Events.Precondition" BinaryOperator="And" Enable="true" Id="2" Operator="Equal" Opl="Self.HTNAgentTravel::exist_airports(int Self.HTNAgentTravel::_$local_task_param_$_0,vector&lt;int&gt; Self.HTNAgentTravel::as)" Opr1="&quot;&quot;" Opr2="const bool true" Phase="Enter" PrefabAttachmentId="-1" />
+            <Attachment Class="PluginBehaviac.Events.Precondition" BinaryOperator="And" Enable="true" Id="3" Operator="Equal" Opl="Self.HTNAgentTravel::exist_airport(int Self.HTNAgentTravel::_$local_task_param_$_1,int Self.HTNAgentTravel::ay)" Opr1="&quot;&quot;" Opr2="const bool true" Phase="Enter" PrefabAttachmentId="-1" />
+            <Connector Identifier="Tasks">
+              <Node Class="PluginBehaviac.Nodes.DecoratorIterator" DecorateWhenChildEnds="false" Enable="true" HasOwnPrefabData="false" Id="5" Opl="int Self.HTNAgentTravel::ax" Opr="vector&lt;int&gt; Self.HTNAgentTravel::as" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="6" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="Behaviac.Design.Nodes.ReferencedBehavior" Enable="true" HasOwnPrefabData="false" Id="8" PrefabName="" PrefabNodeId="-1" ReferenceBehavior="const string &quot;node_test/htn/travel/travel&quot;" Task="Self.HTNAgentTravel::travel(int Self.HTNAgentTravel::_$local_task_param_$_0,int Self.HTNAgentTravel::ax)">
+                        <Comment Background="Gray" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="7" Method="Self.HTNAgentTravel::fly(int Self.HTNAgentTravel::ax,int Self.HTNAgentTravel::ay)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="Behaviac.Design.Nodes.ReferencedBehavior" Enable="true" HasOwnPrefabData="false" Id="4" PrefabName="" PrefabNodeId="-1" ReferenceBehavior="const string &quot;node_test/htn/travel/travel&quot;" Task="Self.HTNAgentTravel::travel(int Self.HTNAgentTravel::ay,int Self.HTNAgentTravel::_$local_task_param_$_1)">
+                        <Comment Background="Gray" Text="" />
+                      </Node>
+                    </Connector>
+                  </Node>
+                </Connector>
+              </Node>
+            </Connector>
+          </Node>
+        </Connector>
+      </Node>
+    </Connector>
+  </Node>
+</Behavior>

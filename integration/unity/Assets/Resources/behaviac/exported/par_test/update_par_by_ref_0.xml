@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: par_test\update_par_by_ref_0.xml-->
+<behavior name="par_test/update_par_by_ref_0" agenttype="EmployeeParTestAgent" version="1">
+  <pars>
+    <par name="par0_boolean_0" type="bool" value="false" />
+    <par name="par0_boolean_list_0" type="vector&lt;bool&gt;" value="0:" />
+    <par name="par0_byte_0" type="uchar" value="0" />
+    <par name="par0_byte_list_0" type="vector&lt;uchar&gt;" value="0:" />
+    <par name="par0_char_0" type="Char" value="A" />
+    <par name="par0_char_list_0" type="vector&lt;Char&gt;" value="0:" />
+    <par name="par0_ecolor_0" type="TNS::NE::NAT::eColor" value="WHITE" />
+    <par name="par0_ecolor_list_0" type="vector&lt;TNS::NE::NAT::eColor&gt;" value="0:" />
+    <par name="par0_sbyte_0" type="char" value="0" />
+    <par name="par0_sbyte_list_0" type="vector&lt;char&gt;" value="0:" />
+    <par name="par1_short_0" type="short" value="0" />
+    <par name="par1_int_0" type="int" value="0" />
+    <par name="par1_int_list_0" type="vector&lt;int&gt;" value="0:" />
+    <par name="par1_long_0" type="long" value="0" />
+    <par name="par1_kemployee_0" type="TNS::ST::PER::WRK::kEmployee" value="{boss=null;car={brand=&quot;&quot;;color=RED;price=0;};code=c;id=0;isMale=false;name=&quot;tomlp&quot;;skinColor=RED;weight=0;}" />
+    <par name="par1_kemployee_list_0" type="vector&lt;TNS::ST::PER::WRK::kEmployee&gt;" value="0:" />
+    <par name="par1_ushort_0" type="ushort" value="0" />
+    <par name="par2_agent_0" type="behaviac::Agent" value="null" />
+    <par name="par2_agent_list_0" type="vector&lt;behaviac::Agent&gt;" value="0:" />
+    <par name="par2_double_0" type="double" value="0" />
+    <par name="par2_single_0" type="float" value="0" />
+    <par name="par2_single_list_0" type="vector&lt;float&gt;" value="0:" />
+    <par name="par2_string_0" type="string" value="" />
+    <par name="par2_string_list_0" type="vector&lt;string&gt;" value="0:" />
+    <par name="par2_uint_0" type="uint" value="0" />
+    <par name="par2_ulong_0" type="ulong" value="0" />
+  </pars>
+  <node class="Sequence" version="1" id="13">
+    <node class="Sequence" version="1" id="1">
+      <node class="Action" version="1" id="0">
+        <property Method="Self.EmployeeParTestAgent::Func_AgentRef(behaviac::Agent par2_agent_0)" />
+        <property PreconditionFailResult="BT_FAILURE" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Action" version="1" id="17">
+        <property Method="Self.EmployeeParTestAgent::Func_AgentListRef(vector&lt;behaviac::Agent&gt; par2_agent_list_0)" />
+        <property PreconditionFailResult="BT_FAILURE" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Action" version="1" id="2">
+        <property Method="Self.EmployeeParTestAgent::Func_DoubleRef(double par2_double_0)" />
+        <property PreconditionFailResult="BT_FAILURE" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Action" version="1" id="3">
+        <property Method="Self.EmployeeParTestAgent::Func_SingleRef(float par2_single_0)" />
+        <property PreconditionFailResult="BT_FAILURE" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Action" version="1" id="4">
+        <property Method="Self.EmployeeParTestAgent::Func_SingleListRef(vector&lt;float&gt; par2_single_list_0)" />
+        <property PreconditionFailResult="BT_FAILURE" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Action" version="1" id="5">
+        <property Method="Self.EmployeeParTestAgent::Func_StringRef(string par2_string_0)" />
+        <property PreconditionFailResult="BT_FAILURE" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Action" version="1" id="6">
+        <property Method="Self.EmployeeParTestAgent::Func_StringListRef(vector&lt;string&gt; par2_string_list_0)" />
+        <property PreconditionFailResult="BT_FAILURE" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Action" version="1" id="7">
+        <property Method="Self.EmployeeParTestAgent::Func_UIntRef(uint par2_uint_0)" />
+        <property PreconditionFailResult="BT_FAILURE" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Action" version="1" id="8">
+        <property Method="Self.EmployeeParTestAgent::Func_ULongRef(ulong par2_ulong_0)" />
+        <property PreconditionFailResult="BT_FAILURE" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+    </node>
+    <node class="Sequence" version="1" id="14">
+      <node class="Action" version="1" id="9">
+        <property Method="Self.ParTestAgent::Func_ShortRef(short par1_short_0)" />
+        <property PreconditionFailResult="BT_FAILURE" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Action" version="1" id="10">
+        <property Method="Self.ParTestAgent::Func_IntRef(int par1_int_0)" />
+        <property PreconditionFailResult="BT_FAILURE" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Action" version="1" id="11">
+        <property Method="Self.ParTestAgent::Func_IntListRef(vector&lt;int&gt; par1_int_list_0)" />
+        <property PreconditionFailResult="BT_FAILURE" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Action" version="1" id="12">
+        <property Method="Self.ParTestAgent::Func_LongRef(long par1_long_0)" />
+        <property PreconditionFailResult="BT_FAILURE" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Action" version="1" id="18">
+        <property Method="Self.ParTestAgent::Func_kEmployeeRef(TNS::ST::PER::WRK::kEmployee par1_kemployee_0)" />
+        <property PreconditionFailResult="BT_FAILURE" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Action" version="1" id="19">
+        <property Method="Self.ParTestAgent::Func_kEmployeeListRef(vector&lt;TNS::ST::PER::WRK::kEmployee&gt; par1_kemployee_list_0)" />
+        <property PreconditionFailResult="BT_FAILURE" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Action" version="1" id="20">
+        <property Method="Self.ParTestAgent::Func_UShortRef(ushort par1_ushort_0)" />
+        <property PreconditionFailResult="BT_FAILURE" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+    </node>
+    <node class="Sequence" version="1" id="22">
+      <node class="Action" version="1" id="16">
+        <property Method="Self.ParTestAgentBase::Func_BooleanRef(bool par0_boolean_0)" />
+        <property PreconditionFailResult="BT_FAILURE" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Action" version="1" id="21">
+        <property Method="Self.ParTestAgentBase::Func_BooleanListRef(vector&lt;bool&gt; par0_boolean_list_0)" />
+        <property PreconditionFailResult="BT_FAILURE" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Action" version="1" id="15">
+        <property Method="Self.ParTestAgentBase::Func_ByteRef(uchar par0_byte_0)" />
+        <property PreconditionFailResult="BT_FAILURE" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Action" version="1" id="29">
+        <property Method="Self.ParTestAgentBase::Func_ByteListRef(vector&lt;uchar&gt; par0_byte_list_0)" />
+        <property PreconditionFailResult="BT_FAILURE" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Action" version="1" id="26">
+        <property Method="Self.ParTestAgentBase::Func_CharRef(Char par0_char_0)" />
+        <property PreconditionFailResult="BT_FAILURE" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Action" version="1" id="27">
+        <property Method="Self.ParTestAgentBase::Func_CharListRef(vector&lt;Char&gt; par0_char_list_0)" />
+        <property PreconditionFailResult="BT_FAILURE" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Action" version="1" id="24">
+        <property Method="Self.ParTestAgentBase::Func_eColorRef(TNS::NE::NAT::eColor par0_ecolor_0)" />
+        <property PreconditionFailResult="BT_FAILURE" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Action" version="1" id="25">
+        <property Method="Self.ParTestAgentBase::Func_eColorListRef(vector&lt;TNS::NE::NAT::eColor&gt; par0_ecolor_list_0)" />
+        <property PreconditionFailResult="BT_FAILURE" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Action" version="1" id="23">
+        <property Method="Self.ParTestAgentBase::Func_SByteRef(char par0_sbyte_0)" />
+        <property PreconditionFailResult="BT_FAILURE" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+    </node>
+  </node>
+</behavior>

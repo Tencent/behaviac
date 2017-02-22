@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: performance\Performance.xml-->
+<behavior name="performance/Performance" agenttype="CPerformanceAgent" version="5">
+  <pars>
+    <par name="par_HungryThreshold" type="float" value="60" />
+    <par name="par_BigDistance" type="float" value="30" />
+    <par name="par_SmallDisance" type="float" value="10" />
+    <par name="par_HealthThreshold" type="float" value="20" />
+  </pars>
+  <node class="DecoratorLoop" id="1">
+    <property Count="const int 10" />
+    <property DecorateWhenChildEnds="true" />
+    <property DoneWithinFrame="false" />
+    <node class="Selector" id="21">
+      <node class="Sequence" id="0">
+        <node class="Condition" id="5">
+          <property Operator="LessEqual" />
+          <property Opl="float Self.CPerformanceAgent::DistanceToEnemy" />
+          <property Opr="float Self.CPerformanceAgent::par_SmallDisance" />
+        </node>
+        <node class="Selector" id="11">
+          <node class="Sequence" id="2">
+            <node class="Condition" id="6">
+              <property Operator="LessEqual" />
+              <property Opl="float Self.CPerformanceAgent::HP" />
+              <property Opr="float Self.CPerformanceAgent::par_HealthThreshold" />
+            </node>
+            <node class="Action" id="7">
+              <property Method="Self.CPerformanceAgent::RunAway()" />
+              <property ResultOption="BT_INVALID" />
+              <attachment class="Precondition" id="3" flag="precondition">
+                <property BinaryOperator="And" />
+                <property Operator="Greater" />
+                <property Opl="float Self.CPerformanceAgent::DistanceToEnemy" />
+                <property Opr2="float Self.CPerformanceAgent::par_BigDistance" />
+                <property Phase="Enter" />
+              </attachment>
+            </node>
+          </node>
+          <node class="Action" id="19">
+            <property Method="Self.CPerformanceAgent::Fire()" />
+            <property ResultOption="BT_SUCCESS" />
+          </node>
+        </node>
+      </node>
+      <node class="Parallel" id="22">
+        <property ChildFinishPolicy="CHILDFINISH_LOOP" />
+        <property ExitPolicy="EXIT_ABORT_RUNNINGSIBLINGS" />
+        <property FailurePolicy="FAIL_ON_ONE" />
+        <property SuccessPolicy="SUCCEED_ON_ALL" />
+        <node class="Condition" id="16">
+          <property Operator="Greater" />
+          <property Opl="float Self.CPerformanceAgent::DistanceToEnemy" />
+          <property Opr="float Self.CPerformanceAgent::par_SmallDisance" />
+        </node>
+        <node class="Sequence" id="23">
+          <node class="Condition" id="9">
+            <property Operator="GreaterEqual" />
+            <property Opl="float Self.CPerformanceAgent::Hungry" />
+            <property Opr="float Self.CPerformanceAgent::par_HungryThreshold" />
+          </node>
+          <node class="Selector" id="10">
+            <node class="Sequence" id="12">
+              <node class="Condition" id="13">
+                <property Operator="Equal" />
+                <property Opl="float Self.CPerformanceAgent::Food" />
+                <property Opr="const float 0" />
+              </node>
+              <node class="Action" id="14">
+                <property Method="Self.CPerformanceAgent::SearchForFood()" />
+                <property ResultOption="BT_INVALID" />
+              </node>
+            </node>
+            <node class="Action" id="15">
+              <property Method="Self.CPerformanceAgent::Eat()" />
+              <property ResultOption="BT_INVALID" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node class="Parallel" id="20">
+        <property ChildFinishPolicy="CHILDFINISH_LOOP" />
+        <property ExitPolicy="EXIT_ABORT_RUNNINGSIBLINGS" />
+        <property FailurePolicy="FAIL_ON_ONE" />
+        <property SuccessPolicy="SUCCEED_ON_ALL" />
+        <node class="Condition" id="8">
+          <property Operator="Greater" />
+          <property Opl="float Self.CPerformanceAgent::DistanceToEnemy" />
+          <property Opr="float Self.CPerformanceAgent::par_SmallDisance" />
+        </node>
+        <node class="Sequence" id="17">
+          <node class="Action" id="18">
+            <property Method="Self.CPerformanceAgent::Wander()" />
+            <property ResultOption="BT_INVALID" />
+          </node>
+          <node class="Action" id="4">
+            <property Method="Self.CPerformanceAgent::Fidget()" />
+            <property ResultOption="BT_INVALID" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</behavior>

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Behavior Version="5">
+  <Node Class="Behaviac.Design.Nodes.Behavior" AgentType="EmployeeParTestAgent" Domains="" Enable="true" HasOwnPrefabData="false" Id="-1" PrefabName="" PrefabNodeId="-1">
+    <Comment Background="NoColor" Text="" />
+    <DescriptorRefs value="0:" />
+    <Connector Identifier="GenericChildren">
+      <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="0" PrefabName="" PrefabNodeId="-1">
+        <Comment Background="NoColor" Text="" />
+        <Connector Identifier="GenericChildren">
+          <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="1" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+            <Connector Identifier="GenericChildren">
+              <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="4" Opl="static TNS::NE::NAT::eColor Self.ParTestAgentBase::STV_ECOLOR_0" Opr="Self.ParTestAgentBase::Func_eColorIR(static TNS::NE::NAT::eColor Self.ParTestAgentBase::STV_ECOLOR_0)" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="5" Opl="static bool Self.ParTestAgentBase::STV_BOOL_0" Opr="Self.ParTestAgentBase::Func_BooleanIR(static bool Self.ParTestAgentBase::STV_BOOL_0)" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="6" Opl="static char Self.ParTestAgentBase::STV_CHAR_0" Opr="Self.ParTestAgentBase::Func_CharIR(static char Self.ParTestAgentBase::STV_CHAR_0)" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="7" Opl="static vector&lt;TNS::NE::NAT::eColor&gt; Self.ParTestAgentBase::STV_LIST_ECOLOR_0" Opr="Self.ParTestAgentBase::Func_eColorListIR(static vector&lt;TNS::NE::NAT::eColor&gt; Self.ParTestAgentBase::STV_LIST_ECOLOR_0)" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="8" Opl="static vector&lt;bool&gt; Self.ParTestAgentBase::STV_LIST_BOOL_0" Opr="Self.ParTestAgentBase::Func_BooleanListIR(static vector&lt;bool&gt; Self.ParTestAgentBase::STV_LIST_BOOL_0)" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="9" Opl="static vector&lt;char&gt; Self.ParTestAgentBase::STV_LIST_CHAR_0" Opr="Self.ParTestAgentBase::Func_CharListIR(static vector&lt;char&gt; Self.ParTestAgentBase::STV_LIST_CHAR_0)" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="10" Opl="static vector&lt;sbyte&gt; Self.ParTestAgentBase::STV_LIST_SBYTE_0" Opr="Self.ParTestAgentBase::Func_SByteListIR(static vector&lt;sbyte&gt; Self.ParTestAgentBase::STV_LIST_SBYTE_0)" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+            </Connector>
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="2" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+            <Connector Identifier="GenericChildren">
+              <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="15" Opl="static int Self.ParTestAgent::STV_INT_0" Opr="Self.ParTestAgent::Func_IntIR(static int Self.ParTestAgent::STV_INT_0)" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="12" Opl="static TNS::ST::PER::WRK::kEmployee Self.ParTestAgent::STV_KEMPLOYEE_0" Opr="Self.ParTestAgent::Func_kEmployeeIR(static TNS::ST::PER::WRK::kEmployee Self.ParTestAgent::STV_KEMPLOYEE_0)" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="13" Opl="static vector&lt;int&gt; Self.ParTestAgent::STV_LIST_INT_0" Opr="Self.ParTestAgent::Func_IntListIR(static vector&lt;int&gt; Self.ParTestAgent::STV_LIST_INT_0)" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="11" Opl="static behaviac::vector&lt;TNS::ST::PER::WRK::kEmployee&gt; Self.ParTestAgent::STV_LIST_KEMPLOYEE_0" Opr="Self.ParTestAgent::Func_kEmployeeListIR(static behaviac::vector&lt;TNS::ST::PER::WRK::kEmployee&gt; Self.ParTestAgent::STV_LIST_KEMPLOYEE_0)" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+            </Connector>
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="3" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+            <Connector Identifier="GenericChildren">
+              <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="14" Opl="static float Self.EmployeeParTestAgent::STV_F_0" Opr="Self.EmployeeParTestAgent::Func_SingleIR(static float Self.EmployeeParTestAgent::STV_F_0)" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="19" Opl="static string Self.EmployeeParTestAgent::STV_STR_0" Opr="Self.EmployeeParTestAgent::Func_StringIR(static string Self.EmployeeParTestAgent::STV_STR_0)" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="17" Opl="static behaviac::Agent Self.EmployeeParTestAgent::STV_AGENT_0" Opr="Self.EmployeeParTestAgent::Func_AgentIR(static behaviac::Agent Self.EmployeeParTestAgent::STV_AGENT_0)" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="18" Opl="static vector&lt;float&gt; Self.EmployeeParTestAgent::STV_LIST_F_0" Opr="Self.EmployeeParTestAgent::Func_SingleListIR(static vector&lt;float&gt; Self.EmployeeParTestAgent::STV_LIST_F_0)" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="16" Opl="static vector&lt;string&gt; Self.EmployeeParTestAgent::STV_LIST_STR_0" Opr="Self.EmployeeParTestAgent::Func_StringListIR(static vector&lt;string&gt; Self.EmployeeParTestAgent::STV_LIST_STR_0)" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Assignment" Enable="true" HasOwnPrefabData="false" Id="20" Opl="static behaviac::vector&lt;behaviac::Agent&gt; Self.EmployeeParTestAgent::STV_LIST_AGENT_0" Opr="Self.EmployeeParTestAgent::Func_AgentListIR(static behaviac::vector&lt;behaviac::Agent&gt; Self.EmployeeParTestAgent::STV_LIST_AGENT_0)" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+            </Connector>
+          </Node>
+        </Connector>
+      </Node>
+    </Connector>
+  </Node>
+</Behavior>

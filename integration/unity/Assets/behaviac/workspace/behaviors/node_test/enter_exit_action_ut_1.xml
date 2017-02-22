@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Behavior Version="5">
+  <Node Class="Behaviac.Design.Nodes.Behavior" AgentType="AgentNodeTest" Domains="" Enable="true" HasOwnPrefabData="false" Id="-1" PrefabName="" PrefabNodeId="-1">
+    <Comment Background="NoColor" Text="" />
+    <DescriptorRefs value="0:" />
+    <Connector Identifier="GenericChildren">
+      <Node Class="PluginBehaviac.Nodes.Parallel" ChildFinishPolicy="CHILDFINISH_LOOP" Enable="true" ExitPolicy="EXIT_ABORT_RUNNINGSIBLINGS" FailurePolicy="FAIL_ON_ONE" HasOwnPrefabData="false" Id="0" PrefabName="" PrefabNodeId="-1" SuccessPolicy="SUCCEED_ON_ALL">
+        <Comment Background="NoColor" Text="" />
+        <Attachment Class="PluginBehaviac.Events.Precondition" BinaryOperator="And" Enable="true" Id="1" Operator="Equal" Opl="Self.AgentNodeTest::enter_action_1(0)" Opr1="&quot;&quot;" Opr2="const bool true" Phase="Enter" PrefabAttachmentId="-1" />
+        <Attachment Class="PluginBehaviac.Events.Effector" Enable="true" Id="2" Operator="Invalid" Opl="Self.AgentNodeTest::exit_action_1(0)" Opr1="&quot;&quot;" Opr2="&quot;&quot;" Phase="Success" PrefabAttachmentId="-1" />
+        <Connector Identifier="GenericChildren">
+          <Node Class="PluginBehaviac.Nodes.WaitforSignal" Enable="true" HasOwnPrefabData="false" Id="3" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+            <Attachment Class="PluginBehaviac.Events.Precondition" BinaryOperator="And" Enable="true" Id="4" Operator="Equal" Opl="Self.AgentNodeTest::enter_action_2(3,&quot;hello&quot;)" Opr1="&quot;&quot;" Opr2="const bool true" Phase="Enter" PrefabAttachmentId="-1" />
+            <Attachment Class="PluginBehaviac.Events.Effector" Enable="true" Id="5" Operator="Invalid" Opl="Self.AgentNodeTest::exit_action_2(5,&quot;world&quot;)" Opr1="&quot;&quot;" Opr2="&quot;&quot;" Phase="Success" PrefabAttachmentId="-1" />
+            <Connector Identifier="_custom_condition">
+              <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="6" Operator="Equal" Opl="int Self.AgentNodeTest::testVar_0" Opr="const int 0" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+            </Connector>
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.True" Enable="true" HasOwnPrefabData="false" Id="7" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+          </Node>
+        </Connector>
+      </Node>
+    </Connector>
+  </Node>
+</Behavior>
