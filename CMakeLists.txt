@@ -31,7 +31,7 @@ cmake_minimum_required (VERSION 2.8)
 # set(CMAKE_CONFIGURATION_TYPES "Debug;Release;Profile" CACHE STRING "" FORCE) 
 set(CMAKE_CONFIGURATION_TYPES "Debug;Release" CACHE STRING "" FORCE) 
 
-set (BEHAVIAC_PACKAGE_VERSION 3.6.18)
+set (BEHAVIAC_PACKAGE_VERSION 3.6.19)
 
 #option( BUILD_SHARED_LIBS "set to OFF to build static libraries" ON )
 SET(BUILD_SHARED_LIBS ON CACHE BOOL "set to OFF to build static libraries")
@@ -395,7 +395,9 @@ add_subdirectory ("${PROJECT_SOURCE_DIR}/test/usertest")
 
 if (MSVC)
 	add_subdirectory ("${PROJECT_SOURCE_DIR}/test/btperformance")
-	add_subdirectory ("${PROJECT_SOURCE_DIR}/example/spaceship")
+    if (EXISTS "${PROJECT_SOURCE_DIR}/example/spaceship")
+        add_subdirectory ("${PROJECT_SOURCE_DIR}/example/spaceship")
+    endif()
 endif()
 
 #add_subdirectory ("${PROJECT_SOURCE_DIR}/example/airbattledemo")
