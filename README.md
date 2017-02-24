@@ -1,6 +1,6 @@
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://github.com/Tencent/behaviac/blob/master/license.txt)
 [![Release Version](https://img.shields.io/badge/release-3.6.20-red.svg)](https://github.com/Tencent/behaviac/releases)
-[![Updates](https://img.shields.io/badge/Platform-iOS | Android | Windows | Linux | Unity -brightgreen.svg)](https://github.com/Tencent/behaviac/history)
+[![Updates](https://img.shields.io/badge/Platform-iOS | Android | Windows | Linux | Unity -brightgreen.svg)](https://github.com/Tencent/behaviac/history.txt)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Tencent/behaviac/pulls)
 
 ##[访问http://www.behaviac.com/获取文档，教程，API，FAQ，源码，下载等一切相关资料](http://www.behaviac.com/)
