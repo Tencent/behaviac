@@ -63,7 +63,7 @@ namespace behaviac {
         //////////////////////////////////////////////////
 
         inline void StringCopySafe(int destMax, char* dest, const char* src) {
-            int len = ::strlen(src);
+			int len = (int)::strlen(src);
             BEHAVIAC_ASSERT(len < destMax);
             strncpy(dest, src, len);
             dest[len] = 0;
@@ -348,9 +348,9 @@ namespace behaviac {
             }
 
             if (bArrayType) {
-                int bracket0 = typeName.find('<');
-                int bracket1 = typeName.find('>');
-                int len = bracket1 - bracket0 - 1;
+				size_t bracket0 = typeName.find('<');
+				size_t bracket1 = typeName.find('>');
+				size_t len = bracket1 - bracket0 - 1;
 
                 string elementTypeName = typeName.substr(bracket0 + 1, len);
 
@@ -365,7 +365,7 @@ namespace behaviac {
             behaviac::string strFullPath;
 
             //if path hava / or \ in the end
-            int len = ::strlen(path);
+			size_t len = ::strlen(path);
 
             if (path[len - 1] == '/' || path[len - 1] == '\\') {
                 strFullPath = path;
@@ -526,13 +526,13 @@ namespace behaviac {
 
 		//it returns true if 'str' starts with a count followed by ':'
 		//3:{....}
-		inline bool IsArrayString(const behaviac::string& str, int posStart, behaviac::string::size_type& posEnd) {
+		inline bool IsArrayString(const behaviac::string& str, size_t posStart, behaviac::string::size_type& posEnd) {
 			//begin of the count of an array?
 			//int posStartOld = posStart;
 
 			bool bIsDigit = false;
 
-			int strLen = (int)str.size();
+			size_t strLen = str.size();
 
 			while (posStart < strLen) {
 				char c = str[posStart++];
@@ -545,7 +545,7 @@ namespace behaviac {
 					//skip array item which is possible a struct
 					int depth = 0;
 
-					for (int posStart2 = posStart; posStart2 < strLen; posStart2++) {
+					for (size_t posStart2 = posStart; posStart2 < strLen; posStart2++) {
 						char c1 = str[posStart2];
 
 						if (c1 == ';' && depth == 0) {
@@ -657,7 +657,7 @@ namespace behaviac {
 
             bool bBeginIndex = false;
 
-            int strLen = ::strlen(str);
+			int strLen = (int)::strlen(str);
 
             while (i < strLen) {
                 bool bFound = false;

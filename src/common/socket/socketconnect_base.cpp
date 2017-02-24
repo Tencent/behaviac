@@ -482,7 +482,7 @@ namespace behaviac {
 
             if (retIndex > 0) {
 #if BEHAVIAC_CCDEFINE_MSVC
-                TlsSetValue(t_packetBufferIndex, (PVOID)retIndex);
+                TlsSetValue(t_packetBufferIndex, (PVOID)(size_t)retIndex);
 #else
                 t_packetBufferIndex = retIndex;
 #endif

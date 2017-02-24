@@ -1,3 +1,6 @@
+2017-2-24  3.6.20
+    Fix a bug for renaming the agent and setting its base class.
+
 2017-2-23  3.6.19
     Fix a bug for the CMakeList.
     Add the vcxproj.filters files for the C++ projects.

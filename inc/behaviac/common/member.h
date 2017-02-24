@@ -755,7 +755,7 @@ namespace behaviac {
 
             const behaviac::vector<ElementType>& vec = *(const behaviac::vector<ElementType>*)pData;
 
-            return vec.size();
+            return (int)vec.size();
         }
 
         CInstanceMember(CInstanceMember& rhs) {
@@ -1482,7 +1482,7 @@ namespace behaviac {
 
         virtual const void* GetValueElement(const behaviac::Agent* self, int index) const {
             const behaviac::vector<T>& arrayValue = self->GetVariable<behaviac::vector<T> >(_parentId);
-            int len = arrayValue.size();
+			int len = (int)arrayValue.size();
             BEHAVIAC_UNUSED_VAR(len);
 
             BEHAVIAC_ASSERT(len != 0);
@@ -1533,7 +1533,7 @@ namespace behaviac {
 
         virtual const void* GetValueElement(const behaviac::Agent* self, int index) const {
             const behaviac::vector<bool>& arrayValue = self->GetVariable<behaviac::vector<bool> >(_parentId);
-            int len = arrayValue.size();
+			int len = (int)arrayValue.size();
             BEHAVIAC_UNUSED_VAR(len);
 
             BEHAVIAC_ASSERT(len != 0);

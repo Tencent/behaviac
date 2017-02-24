@@ -29,16 +29,16 @@ static void _listfiles_get_ext(listfiles_file_t* pFile);
 #define _LISTFILES_FREE(_ptr)    BEHAVIAC_FREE(_ptr)
 
 
-int listfiles_open(listfiles_dir_t* pDir, const _listfiles_char_t* szPath) {
+int listfiles_open(listfiles_dir_t* pDir, const char* szPath) {
 #ifndef _MSC_VER
 #ifndef _LISTFILES_USE_READDIR
     int error;
     int size;
 #endif
 #else
-    _listfiles_char_t path_buf[_LISTFILES_PATH_MAX];
+    char path_buf[_LISTFILES_PATH_MAX];
 #endif
-    _listfiles_char_t* pathp;
+    char* pathp;
 
     if (pDir == NULL || szPath == NULL || _listfiles_strlen(szPath) == 0) {
         errno = EINVAL;
@@ -259,12 +259,7 @@ int listfiles_readfile(const listfiles_dir_t* pDir, listfiles_file_t* pFile) {
                      );
     _listfiles_strcat(pFile->path, pFile->name);
 #ifndef _MSC_VER
-#ifdef __MINGW32__
-
-    if (_tstat(
-#else
     if (stat(
-#endif
             pFile->path, &pFile->_s) == -1) {
         return -1;
     }
@@ -297,7 +292,7 @@ int listfiles_readfile(const listfiles_dir_t* pDir, listfiles_file_t* pFile) {
 
 
 void _listfiles_get_ext(listfiles_file_t* pFile) {
-    _listfiles_char_t* period = _listfiles_strrchr(pFile->name, _LISTFILES_STRING('.'));
+    char* period = _listfiles_strrchr(pFile->name, _LISTFILES_STRING('.'));
 
     if (period == NULL) {
         pFile->extension = &(pFile->name[_listfiles_strlen(pFile->name)]);

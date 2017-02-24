@@ -499,7 +499,7 @@ namespace behaviac {
 
             propStr = propStr.substr(pointIndex + 1);
 
-            int lastIndex = propStr.rfind("::");
+			size_t lastIndex = propStr.rfind("::");
             BEHAVIAC_ASSERT(lastIndex > 0);
 
             behaviac::string className = propStr.substr(0, lastIndex);
@@ -624,9 +624,9 @@ namespace behaviac {
     }
 
     behaviac::vector<behaviac::string> AgentMeta::ParseForParams(const char* tsrc) {
-        int tsrcLen = strlen(tsrc);
-        int startIndex = 0;
-        int index = 0;
+		size_t tsrcLen = strlen(tsrc);
+		size_t startIndex = 0;
+		size_t index = 0;
         int quoteDepth = 0;
 
         behaviac::vector<behaviac::string> params_;
@@ -642,7 +642,7 @@ namespace behaviac {
                 }
             } else if (quoteDepth == 0 && tsrc[index] == ',') {
                 //skip ',' inside quotes, like "count, count"
-                int lengthTemp = index - startIndex;
+				size_t lengthTemp = index - startIndex;
                 //const char* strTemp = tsrc.Substring(startIndex, lengthTemp);
                 char strTemp[1024] = { 0 };
                 strncpy(strTemp, tsrc + startIndex, lengthTemp);
@@ -652,7 +652,7 @@ namespace behaviac {
         }//end for
 
         // the last param
-        int lengthTemp0 = index - startIndex;
+		size_t lengthTemp0 = index - startIndex;
 
         if (lengthTemp0 > 0) {
             //const char* strTemp = tsrc.Substring(startIndex, lengthTemp0)
@@ -773,7 +773,7 @@ namespace behaviac {
 
         if (index == 0) { // array type
             // Get item type, i.e. vector<int>
-            const int kVecLen = ::strlen("vector<");
+            const size_t kVecLen = ::strlen("vector<");
             typeNameStr = typeNameStr.substr(kVecLen, typeNameStr.length() - kVecLen - 1); // item type
             IProperty* arrayItemProp = AgentMeta::CreateCustomizedArrayItemProperty(typeNameStr, nameId, propName);
             string araryItemPropName = propName;

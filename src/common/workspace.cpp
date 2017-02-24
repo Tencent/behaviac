@@ -588,7 +588,7 @@ namespace behaviac {
 
             if (pBuffer >= fileBuffer.start && pBuffer < end) {
                 BEHAVIAC_ASSERT(bufferSize < fileBuffer.length);
-                fileBuffer.offset = pBuffer - fileBuffer.start;
+                fileBuffer.offset = (int)(pBuffer - fileBuffer.start);
                 //BEHAVIAC_ASSERT(fileBuffer.offset >= 0);
 
                 return;

@@ -375,7 +375,7 @@ namespace Behaviac.Design
                         {
                             this.resetMembersInWorkspace(MetaOperations.RenameAgentType, agentType, null, null, null);
 
-                            save();
+                            //save();
                         }
                         else
                         {
@@ -396,7 +396,7 @@ namespace Behaviac.Design
                         {
                             this.resetMembersInWorkspace(MetaOperations.RenameEnumType, null, enumType, null, null);
 
-                            save();
+                            //save();
                         }
                         else
                         {
@@ -417,7 +417,7 @@ namespace Behaviac.Design
                         {
                             this.resetMembersInWorkspace(MetaOperations.RenameStructType, null, structType, null, null);
 
-                            save();
+                            //save();
                         }
                         else
                         {
@@ -1239,6 +1239,9 @@ namespace Behaviac.Design
                     resetAllTypes(agentType.Name);
 
                     _lastSelectedType = agentType.Name;
+
+                    // refresh the workspace to load the type
+                    save(true);
                 }
                 else if (metaType == MetaTypePanel.MetaTypes.Enum)
                 {
@@ -1329,7 +1332,7 @@ namespace Behaviac.Design
                 CheckTypeName();
 
                 // refresh the workspace to load the type
-                //save(true);
+                save(true);
             }
         }
 
