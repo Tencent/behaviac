@@ -59,8 +59,6 @@ namespace Behaviac.Design
             checkButtons();
 
             setMetaVisible(false);
-
-            this.MaximumSize = new System.Drawing.Size(int.MaxValue, 272);
         }
 
         private string _filename = string.Empty;
