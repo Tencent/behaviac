@@ -104,7 +104,7 @@ namespace behaviac
                     s = pBehavior.exec(pAgent);
                 }
 
-                // If the child fails, or keeps running, do the same.
+                // If the child succeeds, or keeps running, do the same.
                 if (s != EBTStatus.BT_FAILURE)
                 {
                     return s;
