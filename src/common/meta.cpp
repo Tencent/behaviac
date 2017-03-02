@@ -374,15 +374,15 @@ namespace behaviac {
         Register<unsigned long>("ulong");
         Register<unsigned long long>("ullong");
         Register<float>("Single");
+		Register<char*>("char*");
+		Register<const char*>("const char*");
 #if BEHAVIAC_USE_CUSTOMSTRING
         Register<behaviac::string>("string");
         Register<behaviac::string>("String");
 #else
 		Register<std::string>("string");
 		Register<std::string>("String");
-
 		Register<std::string>("std::string");
-
 #endif
         Register<behaviac::Agent>("behaviac::Agent");
         Register<behaviac::EBTStatus>("behaviac::EBTStatus");
@@ -421,13 +421,14 @@ namespace behaviac {
         UnRegister<unsigned long>("ulong");
         UnRegister<unsigned long long>("ullong");
         UnRegister<float>("Single");
+		UnRegister<char*>("char*");
+		UnRegister<const char*>("const char*");
 #if BEHAVIAC_USE_CUSTOMSTRING
         UnRegister<behaviac::string>("string");
         UnRegister<behaviac::string>("String");
 #else
 		UnRegister<std::string>("string");
 		UnRegister<std::string>("String");
-
 		UnRegister<std::string>("std::string");
 #endif
         UnRegister<behaviac::Agent>("behaviac::Agent");

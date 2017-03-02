@@ -301,25 +301,28 @@ namespace PluginBehaviac.Exporters
         private List<string> GetNamespaces(string ns)
         {
             List<string> namespaces = new List<string>();
-            int startIndex = 0;
-
-            for (int i = 0; i < ns.Length; ++i)
-            {
-                if (ns[i] == ':')
-                {
-                    Debug.Check(ns[i + 1] == ':');
-
-                    namespaces.Add(ns.Substring(startIndex, i - startIndex));
-                    startIndex = i + 2;
-                    ++i;
-                }
-            }
-
-            ns = ns.Substring(startIndex, ns.Length - startIndex);
-
             if (!string.IsNullOrEmpty(ns))
             {
-                namespaces.Add(ns);
+                int startIndex = 0;
+
+                for (int i = 0; i < ns.Length; ++i)
+                {
+                    if (ns[i] == ':')
+                    {
+                        Debug.Check(ns[i + 1] == ':');
+
+                        namespaces.Add(ns.Substring(startIndex, i - startIndex));
+                        startIndex = i + 2;
+                        ++i;
+                    }
+                }
+
+                ns = ns.Substring(startIndex, ns.Length - startIndex);
+
+                if (!string.IsNullOrEmpty(ns))
+                {
+                    namespaces.Add(ns);
+                }
             }
 
             return namespaces;
@@ -1948,13 +1951,12 @@ namespace PluginBehaviac.Exporters
                 }
 
                 string indent = "";
+                List<string> namespaces = new List<string>();
 
                 if (!string.IsNullOrEmpty(agent.Namespace))
                 {
-                    indent = "\t";
-
-                    file.WriteLine("namespace {0}", agent.Namespace);
-                    file.WriteLine("{");
+                    namespaces = GetNamespaces(agent.Namespace);
+                    indent = WriteNamespacesHead(file, namespaces);
 
                     if (!preview)
                     {
@@ -1982,7 +1984,7 @@ namespace PluginBehaviac.Exporters
 
                 if (agent.Base != null)
                 {
-                    file.WriteLine("{0}\tBEHAVIAC_DECLARE_AGENTTYPE({1}, {2})", indent, agent.BasicName, agent.Base.Name);
+                    file.WriteLine("{0}\tBEHAVIAC_DECLARE_AGENTTYPE({1}, {2})", indent, agent.Name, agent.Base.Name);
                     file.WriteLine();
                 }
 
@@ -2048,7 +2050,7 @@ namespace PluginBehaviac.Exporters
                     }
 
                     //end of namespace
-                    file.WriteLine("}");
+                    WriteNamespacesTail(file, namespaces);
                 }
 
                 file.WriteLine();
@@ -2152,13 +2154,12 @@ namespace PluginBehaviac.Exporters
                     file.WriteLine();
 
                     string indent = "";
+                    List<string> namespaces = new List<string>();
 
                     if (!string.IsNullOrEmpty(agent.Namespace))
                     {
-                        indent = "\t";
-
-                        file.WriteLine("namespace {0}", agent.Namespace);
-                        file.WriteLine("{");
+                        namespaces = GetNamespaces(agent.Namespace);
+                        indent = WriteNamespacesHead(file, namespaces);
 
                         ExportBeginComment(file, "", Behaviac.Design.Exporters.Exporter.namespace_init_part);
                         file.WriteLine();
@@ -2285,7 +2286,7 @@ namespace PluginBehaviac.Exporters
                         ExportEndComment(file, indent);
 
                         //end of namespace
-                        file.WriteLine("}");
+                        WriteNamespacesTail(file, namespaces);
                     }
 
                     file.WriteLine();

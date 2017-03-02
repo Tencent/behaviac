@@ -1289,7 +1289,8 @@ namespace behaviac
             LogError(msg);
 
 #if !BEHAVIAC_NOT_USE_UNITY
-            UnityEngine.Debug.Break();
+            //UnityEngine.Debug.Break();
+            System.Diagnostics.Debug.Assert(false);
 #else
             //throw new Exception();
             System.Diagnostics.Debug.Assert(false);
@@ -1792,7 +1793,7 @@ namespace behaviac
             return -1;
         }
 
-        private static string RemoveQuot(string str)
+        public static string RemoveQuot(string str)
         {
             const string kQuotStr = "&quot;";
             string ret = str;

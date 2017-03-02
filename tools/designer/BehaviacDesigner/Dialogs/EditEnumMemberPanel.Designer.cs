@@ -55,9 +55,9 @@ namespace Behaviac.Design
             this.descGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.valueNumericUpDown)).BeginInit();
             this.SuspendLayout();
-            //
+            // 
             // descGroupBox
-            //
+            // 
             resources.ApplyResources(this.descGroupBox, "descGroupBox");
             this.descGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.descGroupBox.Controls.Add(this.valueNumericUpDown);
@@ -71,86 +71,80 @@ namespace Behaviac.Design
             this.descGroupBox.ForeColor = System.Drawing.Color.LightGray;
             this.descGroupBox.Name = "descGroupBox";
             this.descGroupBox.TabStop = false;
-            //
+            // 
             // valueNumericUpDown
-            //
+            // 
             resources.ApplyResources(this.valueNumericUpDown, "valueNumericUpDown");
             this.valueNumericUpDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.valueNumericUpDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.valueNumericUpDown.ForeColor = System.Drawing.Color.LightGray;
-            this.valueNumericUpDown.Maximum = new decimal(new int[]
-            {
-                65536,
-                0,
-                0,
-                0
-            });
-            this.valueNumericUpDown.Minimum = new decimal(new int[]
-            {
-                1,
-                0,
-                0,
-                -2147483648
-            });
+            this.valueNumericUpDown.Maximum = new decimal(new int[] {
+            65536,
+            0,
+            0,
+            0});
+            this.valueNumericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
             this.valueNumericUpDown.Name = "valueNumericUpDown";
-            this.valueNumericUpDown.Value = new decimal(new int[]
-            {
-                1,
-                0,
-                0,
-                -2147483648
-            });
-            //
+            this.valueNumericUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            // 
             // valueLabel
-            //
+            // 
             resources.ApplyResources(this.valueLabel, "valueLabel");
             this.valueLabel.Name = "valueLabel";
-            //
+            // 
             // dispTextBox
-            //
+            // 
             resources.ApplyResources(this.dispTextBox, "dispTextBox");
             this.dispTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.dispTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.dispTextBox.ForeColor = System.Drawing.Color.LightGray;
             this.dispTextBox.Name = "dispTextBox";
             this.dispTextBox.TextChanged += new System.EventHandler(this.dispTextBox_TextChanged);
-            //
+            // 
             // dispLabel
-            //
+            // 
             resources.ApplyResources(this.dispLabel, "dispLabel");
             this.dispLabel.Name = "dispLabel";
-            //
+            // 
             // descTextBox
-            //
+            // 
             resources.ApplyResources(this.descTextBox, "descTextBox");
             this.descTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.descTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.descTextBox.ForeColor = System.Drawing.Color.LightGray;
             this.descTextBox.Name = "descTextBox";
-            //
+            // 
             // descLabel
-            //
+            // 
             resources.ApplyResources(this.descLabel, "descLabel");
             this.descLabel.ForeColor = System.Drawing.Color.LightGray;
             this.descLabel.Name = "descLabel";
-            //
+            // 
             // nameTextBox
-            //
+            // 
             resources.ApplyResources(this.nameTextBox, "nameTextBox");
             this.nameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.nameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nameTextBox.ForeColor = System.Drawing.Color.LightGray;
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.TextChanged += new System.EventHandler(this.nameTextBox_TextChanged);
-            //
+            // 
             // nameLabel
-            //
+            // 
             resources.ApplyResources(this.nameLabel, "nameLabel");
             this.nameLabel.ForeColor = System.Drawing.Color.LightGray;
             this.nameLabel.Name = "nameLabel";
-            //
+            // 
             // EditEnumMemberPanel
-            //
+            // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));

@@ -114,7 +114,7 @@ namespace behaviac {
 
     IInstantiatedVariable* AgentState::GetVariable(uint32_t varId) const {
         if (this->state_stack.size() > 0) {
-            for (size_t i = this->state_stack.size() - 1; i >= 0; --i) {
+			for (int i = (int)this->state_stack.size() - 1; i >= 0; --i) {
                 AgentState* t = this->state_stack[i];
 
                 IInstantiatedVariable* pVar = t->GetVariable(varId);

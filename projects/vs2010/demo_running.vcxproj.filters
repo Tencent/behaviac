@@ -2,28 +2,28 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="test">
-      <UniqueIdentifier>{3558510A-D1CF-B840-A66F-717CEB0B753D}</UniqueIdentifier>
+      <UniqueIdentifier>{64E84904-3EB5-2B4C-9A96-2F478BFAE16B}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running">
-      <UniqueIdentifier>{D1EF0F7B-5716-4A40-915C-A12D5B5BA6B2}</UniqueIdentifier>
+      <UniqueIdentifier>{DB99725D-9AAC-B547-9EA2-A38BAD9AD668}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac">
-      <UniqueIdentifier>{E6173B10-6C8A-1241-BCCB-457CC9F6FC76}</UniqueIdentifier>
+      <UniqueIdentifier>{9CFFA8F0-1DEF-D348-9442-9EDFB6AD7822}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac\exported">
-      <UniqueIdentifier>{A818D02A-71A3-E246-B448-43F6334D035B}</UniqueIdentifier>
+      <UniqueIdentifier>{A8D1E663-070D-F742-B856-4E69C3D26F32}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac\exported\behaviac_generated">
-      <UniqueIdentifier>{4E3B9D9B-929E-F042-89B9-CD24B88B72E8}</UniqueIdentifier>
+      <UniqueIdentifier>{9E8D74B6-92A2-6643-A273-132BF148D580}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac\exported\behaviac_generated\behaviors">
-      <UniqueIdentifier>{435E9C5B-0800-E045-B10A-565E3DEBF6E4}</UniqueIdentifier>
+      <UniqueIdentifier>{9F6CE4DB-CC88-0D49-8222-42B1038A2FFA}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac\exported\behaviac_generated\types">
-      <UniqueIdentifier>{90E46E67-CC69-CC4A-B0D9-91A7B90AC656}</UniqueIdentifier>
+      <UniqueIdentifier>{9144CDD1-9732-5547-A71F-8CFFA53A27E3}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac\exported\behaviac_generated\types\internal">
-      <UniqueIdentifier>{F2DB770A-D498-BA42-9286-395A73E67610}</UniqueIdentifier>
+      <UniqueIdentifier>{A51401FA-CA15-E040-A3DF-2098ED516AFF}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

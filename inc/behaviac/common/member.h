@@ -1612,7 +1612,8 @@ namespace behaviac {
 
     public:
         T _value;
-        CInstanceConstBase(T& value) {
+        CInstanceConstBase(T& value, int dummy) {
+			BEHAVIAC_UNUSED_VAR(dummy);
             _value = value;
         }
 
@@ -1632,19 +1633,26 @@ namespace behaviac {
     };
 
     template<typename T>
-    class CInstanceConst : public CInstanceConstBase<T> {
+	class CInstanceConst : public CInstanceConstBase<T> {
     public:
-        CInstanceConst(T& value) : CInstanceConstBase<T>(value) {
+		CInstanceConst(T& value) : CInstanceConstBase<T>(value, 0) {
         }
 
-        CInstanceConst(const char* valueStr) : CInstanceConstBase<T>(valueStr) {
-        }
+		CInstanceConst(const char* valueStr) : CInstanceConstBase<T>(valueStr) {
+		}
     };
+
+	template<>
+	class CInstanceConst<const char*> : public CInstanceConstBase<const char*>{
+	public:
+		CInstanceConst(const char* valueStr) : CInstanceConstBase<const char*>(valueStr) {
+		}
+	};
 
     template<>
     class CInstanceConst<behaviac::string> : public CInstanceConstBase<behaviac::string> {
     public:
-        CInstanceConst(behaviac::string& value) : CInstanceConstBase<behaviac::string>(value) {
+        CInstanceConst(behaviac::string& value) : CInstanceConstBase<behaviac::string>(value, 0) {
         }
 
         CInstanceConst(const char* valueStr) : CInstanceConstBase<behaviac::string>(valueStr) {

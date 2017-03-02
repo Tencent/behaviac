@@ -11,5 +11,5 @@
 	#define BEHAVIAC_RELEASE 		0
 #endif
 
-#define BEHAVIAC_VERSION_STRING 	"3.6.21"
+#define BEHAVIAC_VERSION_STRING 	"3.6.22"
 
