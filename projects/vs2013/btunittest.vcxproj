@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{00FC0174-E8DE-5345-BBEA-50887AEBAF4F}</ProjectGuid>
+    <ProjectGuid>{5A440007-50AF-DC44-A027-532C03232CF2}</ProjectGuid>
     <RootNamespace>btunittest</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>

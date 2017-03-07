@@ -180,7 +180,7 @@ namespace behaviac {
             template <typename T> behaviac::string ToString(const behaviac::list<T>& contVal) {
                 return ContainerToString(contVal);
             }
-            template <typename T> behaviac::string ToString(const behaviac::set_t<T>& contVal) {
+            template <typename T> behaviac::string ToString(const behaviac::set<T>& contVal) {
                 return ContainerToString(contVal);
             }
         }//namespace internal

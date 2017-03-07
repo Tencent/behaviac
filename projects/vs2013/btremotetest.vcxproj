@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{267758F0-920B-DD4D-A210-6085A423AE00}</ProjectGuid>
+    <ProjectGuid>{1628EA87-EABA-BD46-A99A-C951D79A512C}</ProjectGuid>
     <RootNamespace>btremotetest</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>

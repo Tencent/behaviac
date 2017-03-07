@@ -1392,13 +1392,18 @@ namespace PluginBehaviac.Exporters
                                 file.WriteLine();
                             }
 
-                            string instanceName = method.IsStatic ? agentTypeName : string.Format("(({0})agent)", agentTypeName);
-
                             if (methodReturnType == "void")
                             {
                                 if (method.IsPublic)
                                 {
-                                    file.WriteLine("\t\t\t\t\t{0}::{1}({2});", instanceName, method.BasicName, paramValues);
+                                    if (method.IsStatic)
+                                    {
+                                        file.WriteLine("\t\t\t\t\t{0}::{1}({2});", agentTypeName, method.BasicName, paramValues);
+                                    }
+                                    else
+                                    {
+                                        file.WriteLine("\t\t\t\t\t(({0}*)self)->{1}({2});", agentTypeName, method.BasicName, paramValues);
+                                    }
                                 }
                                 else
                                 {
@@ -1421,7 +1426,14 @@ namespace PluginBehaviac.Exporters
                             {
                                 if (method.IsPublic)
                                 {
-                                    file.WriteLine("\t\t\t\t\t_returnValue->value = {0}::{1}({2});", instanceName, method.BasicName, paramValues);
+                                    if (method.IsStatic)
+                                    {
+                                        file.WriteLine("\t\t\t\t\t_returnValue->value = {0}::{1}({2});", agentTypeName, method.BasicName, paramValues);
+                                    }
+                                    else
+                                    {
+                                        file.WriteLine("\t\t\t\t\t_returnValue->value = (({0}*)self)->{1}({2});", agentTypeName, method.BasicName, paramValues);
+                                    }
                                 }
                                 else
                                 {

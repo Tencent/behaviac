@@ -3427,8 +3427,23 @@ namespace Behaviac.Design
 
     public class TypeManager
     {
-        public List<EnumType> Enums = new List<EnumType>();
-        public List<StructType> Structs = new List<StructType>();
+        private List<EnumType> _enums = new List<EnumType>();
+        public List<EnumType> Enums
+        {
+            get
+            {
+                return _enums;
+            }
+        }
+
+        private List<StructType> _structs = new List<StructType>();
+        public List<StructType> Structs
+        {
+            get
+            {
+                return _structs;
+            }
+        }
 
         private Dictionary<string, string> _names = new Dictionary<string, string>();
 

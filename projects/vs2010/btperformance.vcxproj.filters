@@ -2,22 +2,22 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="test">
-      <UniqueIdentifier>{BF4FF23C-18F4-BD47-AFFD-61865DD52B72}</UniqueIdentifier>
+      <UniqueIdentifier>{FB032C66-8F7A-0B4B-8B82-11B24D1A162D}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\btperformance">
-      <UniqueIdentifier>{7B53D828-CAA4-304C-A791-5821F1C03E9E}</UniqueIdentifier>
+      <UniqueIdentifier>{7C61EEF3-0E75-6F46-9306-3FBA7D2DAEF2}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\btperformance\behaviac_generated">
-      <UniqueIdentifier>{B2194CFD-0AA5-924C-A015-97FED9A65BEE}</UniqueIdentifier>
+      <UniqueIdentifier>{07920BAE-7A7F-744C-98D8-90F879E54962}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\btperformance\behaviac_generated\behaviors">
-      <UniqueIdentifier>{C0CB0AEF-0D31-244E-A1DF-A2B631C534D3}</UniqueIdentifier>
+      <UniqueIdentifier>{8D27D4A7-A5A0-F044-8E45-D5AD55593E0E}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\btperformance\behaviac_generated\types">
-      <UniqueIdentifier>{DBA42268-ED8E-3244-B443-FF95017F9D38}</UniqueIdentifier>
+      <UniqueIdentifier>{11B7E4E1-2D07-5742-B3B3-350890DEDFDF}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\btperformance\behaviac_generated\types\internal">
-      <UniqueIdentifier>{EC64279F-5142-DB41-B01C-75D7C6CDAE3E}</UniqueIdentifier>
+      <UniqueIdentifier>{2C244A49-D9AF-A645-822A-5A27E1757C9D}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

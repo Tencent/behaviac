@@ -1828,7 +1828,7 @@ namespace Behaviac.Design
 
                         paramEle.SetAttribute("Name", param.Name);
                         paramEle.SetAttribute("Type", param.NativeType);
-                        paramEle.SetAttribute("TypeFullName", param.Type.FullName);
+                        paramEle.SetAttribute("TypeFullName", (param.Type != null) ? param.Type.FullName : param.NativeType);
 
                         if (param.IsOut)
                         {

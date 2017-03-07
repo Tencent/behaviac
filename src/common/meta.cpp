@@ -686,7 +686,7 @@ namespace behaviac {
             for (unsigned int i = 0; i < allFiles.size(); ++i) {
                 size_t index = allFiles[i].find(ext);
 
-                if (index > 0) {
+				if (index != (size_t)-1) {
                     index = allFiles[i].find(".meta");
                     BEHAVIAC_ASSERT(index > 0);
                     string filename = allFiles[i].substr(0, index + 5);

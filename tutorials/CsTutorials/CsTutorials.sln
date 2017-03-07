@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "behaviac", "behaviac\behavi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tutorial_1_1", "..\tutorial_1_1\cs\tutorial_1_1.csproj", "{6E5A0873-1D82-41BB-A01A-8179219F3129}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tutorial_4", "..\tutorial_4\cs\tutorial_4.csproj", "{4216B6A7-1410-4527-A97A-8180F682849E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +87,16 @@ Global
 		{6E5A0873-1D82-41BB-A01A-8179219F3129}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{6E5A0873-1D82-41BB-A01A-8179219F3129}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{6E5A0873-1D82-41BB-A01A-8179219F3129}.Release|Win32.ActiveCfg = Release|Any CPU
+		{4216B6A7-1410-4527-A97A-8180F682849E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4216B6A7-1410-4527-A97A-8180F682849E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4216B6A7-1410-4527-A97A-8180F682849E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{4216B6A7-1410-4527-A97A-8180F682849E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{4216B6A7-1410-4527-A97A-8180F682849E}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{4216B6A7-1410-4527-A97A-8180F682849E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4216B6A7-1410-4527-A97A-8180F682849E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4216B6A7-1410-4527-A97A-8180F682849E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{4216B6A7-1410-4527-A97A-8180F682849E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{4216B6A7-1410-4527-A97A-8180F682849E}.Release|Win32.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
