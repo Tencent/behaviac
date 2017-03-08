@@ -1118,14 +1118,17 @@ namespace Behaviac.Design.Nodes
                 {
                     Node child = this.Children[i] as Node;
 
-                    if (child != null && child.checkPrefab(prefabName, prefabNode))
+                    if (child != null)
                     {
-                        if (child.GetType() != prefabNode.GetType())   // replace
+                        if (child.checkPrefab(prefabName, prefabNode))
                         {
-                            Node newNode = prefabNode.Clone() as Node;
-                            newNode.ReplaceNode(child);
+                            if (child.GetType() != prefabNode.GetType())   // replace
+                            {
+                                Node newNode = prefabNode.Clone() as Node;
+                                newNode.ReplaceNode(child);
 
-                            child = newNode;
+                                child = newNode;
+                            }
                         }
 
                         reset |= child.ResetByPrefab(prefabName, prefabNode);

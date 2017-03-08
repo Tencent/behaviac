@@ -886,6 +886,11 @@ namespace Behaviac.Design
                 metaFile = this.FileName.Replace(".workspace.xml", ".meta.xml");
 
                 string metaDir = Path.Combine(this.SourceFolder, "behaviac_meta");
+                if (!File.Exists(metaFile) && !Directory.Exists(metaDir))
+                {
+                    Directory.CreateDirectory(metaDir);
+                }
+
                 string tmpMetaFile = Path.GetFileName(metaFile);
                 tmpMetaFile = Path.Combine(metaDir, tmpMetaFile);
 
@@ -905,10 +910,16 @@ namespace Behaviac.Design
                 }
                 else if (!File.Exists(metaFile))
                 {
-                    metaFile = Path.Combine(this.SourceFolder, "behaviac.bb.xml");
+                    string bbFile = Path.Combine(this.SourceFolder, "behaviac.bb.xml");
+                    if (File.Exists(bbFile))
+                    {
+                        metaFile = bbFile;
+                    }
+                    else
+                    {
+                        metaFile = tmpMetaFile;
+                    }
                 }
-
-                Debug.Check(isSaving || File.Exists(metaFile));
             }
             catch (Exception e)
             {
@@ -1817,7 +1828,7 @@ namespace Behaviac.Design
 
                         paramEle.SetAttribute("Name", param.Name);
                         paramEle.SetAttribute("Type", param.NativeType);
-                        paramEle.SetAttribute("TypeFullName", param.Type.FullName);
+                        paramEle.SetAttribute("TypeFullName", (param.Type != null) ? param.Type.FullName : param.NativeType);
 
                         if (param.IsOut)
                         {

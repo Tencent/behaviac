@@ -169,11 +169,14 @@ namespace Behaviac.Design.Attributes
                     }
 
                     _property.SetValue(obj, c, null);
-
                 }
                 else
                 {
-                    _property.SetValue(obj, FromStringValue(result, node, obj, _property.PropertyType, valueString), null);
+                    object v = FromStringValue(result, node, obj, _property.PropertyType, valueString);
+
+                    
+
+                    _property.SetValue(obj, v, null);
                 }
             }
         }

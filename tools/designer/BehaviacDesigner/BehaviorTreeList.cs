@@ -1221,6 +1221,9 @@ namespace Behaviac.Design
         {
             if (Workspace.Current != null)
             {
+                // Save the debug info.
+                DebugDataPool.Save(Workspace.Current.FileName);
+
                 MainWindow.Instance.SetWorkspace(Workspace.Current.FileName, false);
             }
         }

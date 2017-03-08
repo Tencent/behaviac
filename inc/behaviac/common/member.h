@@ -755,7 +755,7 @@ namespace behaviac {
 
             const behaviac::vector<ElementType>& vec = *(const behaviac::vector<ElementType>*)pData;
 
-            return vec.size();
+            return (int)vec.size();
         }
 
         CInstanceMember(CInstanceMember& rhs) {
@@ -1482,7 +1482,7 @@ namespace behaviac {
 
         virtual const void* GetValueElement(const behaviac::Agent* self, int index) const {
             const behaviac::vector<T>& arrayValue = self->GetVariable<behaviac::vector<T> >(_parentId);
-            int len = arrayValue.size();
+			int len = (int)arrayValue.size();
             BEHAVIAC_UNUSED_VAR(len);
 
             BEHAVIAC_ASSERT(len != 0);
@@ -1533,7 +1533,7 @@ namespace behaviac {
 
         virtual const void* GetValueElement(const behaviac::Agent* self, int index) const {
             const behaviac::vector<bool>& arrayValue = self->GetVariable<behaviac::vector<bool> >(_parentId);
-            int len = arrayValue.size();
+			int len = (int)arrayValue.size();
             BEHAVIAC_UNUSED_VAR(len);
 
             BEHAVIAC_ASSERT(len != 0);
@@ -1612,7 +1612,8 @@ namespace behaviac {
 
     public:
         T _value;
-        CInstanceConstBase(T& value) {
+        CInstanceConstBase(T& value, int dummy) {
+			BEHAVIAC_UNUSED_VAR(dummy);
             _value = value;
         }
 
@@ -1632,19 +1633,26 @@ namespace behaviac {
     };
 
     template<typename T>
-    class CInstanceConst : public CInstanceConstBase<T> {
+	class CInstanceConst : public CInstanceConstBase<T> {
     public:
-        CInstanceConst(T& value) : CInstanceConstBase<T>(value) {
+		CInstanceConst(T& value) : CInstanceConstBase<T>(value, 0) {
         }
 
-        CInstanceConst(const char* valueStr) : CInstanceConstBase<T>(valueStr) {
-        }
+		CInstanceConst(const char* valueStr) : CInstanceConstBase<T>(valueStr) {
+		}
     };
+
+	template<>
+	class CInstanceConst<const char*> : public CInstanceConstBase<const char*>{
+	public:
+		CInstanceConst(const char* valueStr) : CInstanceConstBase<const char*>(valueStr) {
+		}
+	};
 
     template<>
     class CInstanceConst<behaviac::string> : public CInstanceConstBase<behaviac::string> {
     public:
-        CInstanceConst(behaviac::string& value) : CInstanceConstBase<behaviac::string>(value) {
+        CInstanceConst(behaviac::string& value) : CInstanceConstBase<behaviac::string>(value, 0) {
         }
 
         CInstanceConst(const char* valueStr) : CInstanceConstBase<behaviac::string>(valueStr) {

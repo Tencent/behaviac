@@ -2,52 +2,52 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="test">
-      <UniqueIdentifier>{A8B0C25A-1CBF-4C45-80F1-722E8DFF131C}</UniqueIdentifier>
+      <UniqueIdentifier>{B4A1998D-8BFE-3F46-84C2-D784D8B27897}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\btunittest">
-      <UniqueIdentifier>{6354AA40-8919-AE4F-90AB-A6B1791AD3A2}</UniqueIdentifier>
+      <UniqueIdentifier>{91FDB197-9A4D-5342-904F-89271D82ADE5}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\btunittest\Agent">
-      <UniqueIdentifier>{B2664F84-F538-7A47-822D-079CE7AC86D8}</UniqueIdentifier>
+      <UniqueIdentifier>{817F2D85-8850-7F4D-9D32-192E5B20CA48}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\btunittest\behaviac_generated">
-      <UniqueIdentifier>{4D601B44-1280-0443-A708-D264DF9FDACD}</UniqueIdentifier>
+      <UniqueIdentifier>{8B3A88A6-46D3-1344-8219-84C89122DE0C}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\btunittest\behaviac_generated\behaviors">
-      <UniqueIdentifier>{D031976A-E96E-5F45-BAB6-E6ABEBC7282D}</UniqueIdentifier>
+      <UniqueIdentifier>{3B4D4821-B643-344E-B345-D71592B63C78}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\btunittest\behaviac_generated\types">
-      <UniqueIdentifier>{80C4362A-B50A-F348-934D-604EAB379E0D}</UniqueIdentifier>
+      <UniqueIdentifier>{677CBFFE-35C8-B445-ADFF-ABFA2623572D}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\btunittest\behaviac_generated\types\internal">
-      <UniqueIdentifier>{9C026E70-FA29-594C-B4AC-015B721CACBD}</UniqueIdentifier>
+      <UniqueIdentifier>{3DC9B315-C64A-C44A-8F57-62ED55F03E54}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\btunittest\ext">
-      <UniqueIdentifier>{74EE489C-5873-324A-AD23-C10128BA96F9}</UniqueIdentifier>
+      <UniqueIdentifier>{CFFBF180-50AD-924D-AA6C-2E872EF57C74}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\btunittest\ArrayAccessTest">
-      <UniqueIdentifier>{9585AC08-591B-2D40-8BD0-FA71921E7D1D}</UniqueIdentifier>
+      <UniqueIdentifier>{B32F749D-B6DC-F340-A148-508AF5E632F4}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\btunittest\attachments">
-      <UniqueIdentifier>{272E8D69-1385-6C4F-8AB0-3DECE06A51B5}</UniqueIdentifier>
+      <UniqueIdentifier>{D62F52BC-596D-D44A-ABEE-DD8B524EF2B7}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\btunittest\FSMTest">
-      <UniqueIdentifier>{DAE0FB76-9FBD-104F-8B8C-3593EC764BFD}</UniqueIdentifier>
+      <UniqueIdentifier>{EFA8D252-6174-9347-81E7-7F4C652D53FC}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\btunittest\HTNTest">
-      <UniqueIdentifier>{84CA65DF-F209-8443-80E2-114996C4DAAD}</UniqueIdentifier>
+      <UniqueIdentifier>{FF6F4832-A3B6-994A-888D-14DABE97D143}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\btunittest\Meta">
-      <UniqueIdentifier>{193EEE95-B2FD-F047-8F0B-21F3C6FAFA69}</UniqueIdentifier>
+      <UniqueIdentifier>{227D8DE7-D5CE-564F-A8DE-408298957F62}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\btunittest\NodeTest">
-      <UniqueIdentifier>{C7EC56CC-9BF6-774F-8A2B-E9D34A01BDA8}</UniqueIdentifier>
+      <UniqueIdentifier>{05A94134-A963-8341-BD62-E371D2498995}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\btunittest\Others">
-      <UniqueIdentifier>{BE03A374-D366-1E47-BD29-879D1316005E}</UniqueIdentifier>
+      <UniqueIdentifier>{C6DE721D-6DEA-5742-A8E8-C21D1B18F0DE}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\btunittest\ParPropertyTest">
-      <UniqueIdentifier>{86770776-2F29-034E-9A10-4041B94441D0}</UniqueIdentifier>
+      <UniqueIdentifier>{B6344194-E948-1E4C-BBCE-41864BFF4BFA}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

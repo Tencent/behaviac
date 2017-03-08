@@ -416,11 +416,11 @@ namespace behaviac
 			public CInstanceConst_UnityEngine_Vector3(string typeName, string valueStr) : base(typeName, valueStr)
 			{
 				List<string> paramStrs = behaviac.StringUtils.SplitTokensForStruct(valueStr);
-				Debug.Check(paramStrs.Count == 4);
+				Debug.Check(paramStrs.Count == 3);
 
-				_x = (CInstanceMember<float>)AgentMeta.ParseProperty<float>(paramStrs[1]);
-				_y = (CInstanceMember<float>)AgentMeta.ParseProperty<float>(paramStrs[2]);
-				_z = (CInstanceMember<float>)AgentMeta.ParseProperty<float>(paramStrs[3]);
+				_x = (CInstanceMember<float>)AgentMeta.ParseProperty<float>(paramStrs[0]);
+				_y = (CInstanceMember<float>)AgentMeta.ParseProperty<float>(paramStrs[1]);
+				_z = (CInstanceMember<float>)AgentMeta.ParseProperty<float>(paramStrs[2]);
 			}
 
 			public override void Run(Agent self)

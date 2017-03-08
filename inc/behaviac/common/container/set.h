@@ -24,7 +24,7 @@ namespace behaviac {
     template < class _Kty,
              class _Pr = std::less<_Kty>,
              class _Alloc = behaviac::stl_allocator<_Kty> >
-    class set_t : public std::set<_Kty, _Pr, _Alloc> {
+    class set : public std::set<_Kty, _Pr, _Alloc> {
     };
 }//namespace behaviac
 

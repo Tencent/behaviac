@@ -1269,17 +1269,29 @@ namespace PluginBehaviac.Exporters
                 file.WriteLine("\t\t\t{");
 
                 file.WriteLine("\t\t\t\tList<string> paramStrs = behaviac.StringUtils.SplitTokensForStruct(valueStr);");
-                file.WriteLine("\t\t\t\tDebug.Check(paramStrs.Count == {0});", structType.Properties.Count);
+                
+                int validPropCount = 0;
+                foreach (PropertyDef prop in structType.Properties)
+                {
+                    if (!prop.IsReadonly)
+                    {
+                        validPropCount++;
+                    }
+                }
+
+                file.WriteLine("\t\t\t\tDebug.Check(paramStrs.Count == {0});", validPropCount);
                 file.WriteLine();
 
-                for (int i = 0; i < structType.Properties.Count; ++i)
+                validPropCount = 0;
+                foreach (PropertyDef prop in structType.Properties)
                 {
-                    PropertyDef prop = structType.Properties[i];
                     if (!prop.IsReadonly)
                     {
                         string propType = DataCsExporter.GetGeneratedNativeType(prop.NativeType);
 
-                        file.WriteLine("\t\t\t\t_{0} = (CInstanceMember<{1}>)AgentMeta.ParseProperty<{1}>(paramStrs[{2}]);", prop.BasicName, propType, i);
+                        file.WriteLine("\t\t\t\t_{0} = (CInstanceMember<{1}>)AgentMeta.ParseProperty<{1}>(paramStrs[{2}]);", prop.BasicName, propType, validPropCount);
+
+                        validPropCount++;
                     }
                 }
 

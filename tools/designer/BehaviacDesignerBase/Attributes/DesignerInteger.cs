@@ -142,6 +142,41 @@ namespace Behaviac.Design.Attributes
 
             if (int.TryParse(str, NumberStyles.Any, CultureInfo.InvariantCulture.NumberFormat, out resultValue))
             {
+                if (type == typeof(uint))
+                {
+                    return (uint)resultValue;
+                }
+
+                if (type == typeof(short))
+                {
+                    return (short)resultValue;
+                }
+
+                if (type == typeof(ushort))
+                {
+                    return (ushort)resultValue;
+                }
+
+                if (type == typeof(sbyte))
+                {
+                    return (sbyte)resultValue;
+                }
+
+                if (type == typeof(byte))
+                {
+                    return (byte)resultValue;
+                }
+
+                if (type == typeof(long))
+                {
+                    return (long)resultValue;
+                }
+
+                if (type == typeof(ulong))
+                {
+                    return (ulong)resultValue;
+                }
+
                 return resultValue;
             }
 

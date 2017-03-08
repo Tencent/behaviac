@@ -101,7 +101,7 @@ namespace behaviac {
     }
 
     void AgentState::AddVariable(uint32_t varId, IInstantiatedVariable* pVar, int stackIndex) {
-        int array_len = this->state_stack.size();
+		int array_len = (int)this->state_stack.size();
 
         if (array_len > 0 &&
             stackIndex > 0 && stackIndex < array_len) {
@@ -114,7 +114,7 @@ namespace behaviac {
 
     IInstantiatedVariable* AgentState::GetVariable(uint32_t varId) const {
         if (this->state_stack.size() > 0) {
-            for (int i = this->state_stack.size() - 1; i >= 0; --i) {
+			for (int i = (int)this->state_stack.size() - 1; i >= 0; --i) {
                 AgentState* t = this->state_stack[i];
 
                 IInstantiatedVariable* pVar = t->GetVariable(varId);

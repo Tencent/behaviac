@@ -374,15 +374,15 @@ namespace behaviac {
         Register<unsigned long>("ulong");
         Register<unsigned long long>("ullong");
         Register<float>("Single");
+		Register<char*>("char*");
+		Register<const char*>("const char*");
 #if BEHAVIAC_USE_CUSTOMSTRING
         Register<behaviac::string>("string");
         Register<behaviac::string>("String");
 #else
 		Register<std::string>("string");
 		Register<std::string>("String");
-
 		Register<std::string>("std::string");
-
 #endif
         Register<behaviac::Agent>("behaviac::Agent");
         Register<behaviac::EBTStatus>("behaviac::EBTStatus");
@@ -421,13 +421,14 @@ namespace behaviac {
         UnRegister<unsigned long>("ulong");
         UnRegister<unsigned long long>("ullong");
         UnRegister<float>("Single");
+		UnRegister<char*>("char*");
+		UnRegister<const char*>("const char*");
 #if BEHAVIAC_USE_CUSTOMSTRING
         UnRegister<behaviac::string>("string");
         UnRegister<behaviac::string>("String");
 #else
 		UnRegister<std::string>("string");
 		UnRegister<std::string>("String");
-
 		UnRegister<std::string>("std::string");
 #endif
         UnRegister<behaviac::Agent>("behaviac::Agent");
@@ -499,7 +500,7 @@ namespace behaviac {
 
             propStr = propStr.substr(pointIndex + 1);
 
-            int lastIndex = propStr.rfind("::");
+			size_t lastIndex = propStr.rfind("::");
             BEHAVIAC_ASSERT(lastIndex > 0);
 
             behaviac::string className = propStr.substr(0, lastIndex);
@@ -624,9 +625,9 @@ namespace behaviac {
     }
 
     behaviac::vector<behaviac::string> AgentMeta::ParseForParams(const char* tsrc) {
-        int tsrcLen = strlen(tsrc);
-        int startIndex = 0;
-        int index = 0;
+		size_t tsrcLen = strlen(tsrc);
+		size_t startIndex = 0;
+		size_t index = 0;
         int quoteDepth = 0;
 
         behaviac::vector<behaviac::string> params_;
@@ -642,7 +643,7 @@ namespace behaviac {
                 }
             } else if (quoteDepth == 0 && tsrc[index] == ',') {
                 //skip ',' inside quotes, like "count, count"
-                int lengthTemp = index - startIndex;
+				size_t lengthTemp = index - startIndex;
                 //const char* strTemp = tsrc.Substring(startIndex, lengthTemp);
                 char strTemp[1024] = { 0 };
                 strncpy(strTemp, tsrc + startIndex, lengthTemp);
@@ -652,7 +653,7 @@ namespace behaviac {
         }//end for
 
         // the last param
-        int lengthTemp0 = index - startIndex;
+		size_t lengthTemp0 = index - startIndex;
 
         if (lengthTemp0 > 0) {
             //const char* strTemp = tsrc.Substring(startIndex, lengthTemp0)
@@ -685,7 +686,7 @@ namespace behaviac {
             for (unsigned int i = 0; i < allFiles.size(); ++i) {
                 size_t index = allFiles[i].find(ext);
 
-                if (index > 0) {
+				if (index != (size_t)-1) {
                     index = allFiles[i].find(".meta");
                     BEHAVIAC_ASSERT(index > 0);
                     string filename = allFiles[i].substr(0, index + 5);
@@ -773,7 +774,7 @@ namespace behaviac {
 
         if (index == 0) { // array type
             // Get item type, i.e. vector<int>
-            const int kVecLen = ::strlen("vector<");
+            const size_t kVecLen = ::strlen("vector<");
             typeNameStr = typeNameStr.substr(kVecLen, typeNameStr.length() - kVecLen - 1); // item type
             IProperty* arrayItemProp = AgentMeta::CreateCustomizedArrayItemProperty(typeNameStr, nameId, propName);
             string araryItemPropName = propName;

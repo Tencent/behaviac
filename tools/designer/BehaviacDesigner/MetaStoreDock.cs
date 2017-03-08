@@ -375,7 +375,7 @@ namespace Behaviac.Design
                         {
                             this.resetMembersInWorkspace(MetaOperations.RenameAgentType, agentType, null, null, null);
 
-                            save();
+                            //save();
                         }
                         else
                         {
@@ -396,7 +396,7 @@ namespace Behaviac.Design
                         {
                             this.resetMembersInWorkspace(MetaOperations.RenameEnumType, null, enumType, null, null);
 
-                            save();
+                            //save();
                         }
                         else
                         {
@@ -417,7 +417,7 @@ namespace Behaviac.Design
                         {
                             this.resetMembersInWorkspace(MetaOperations.RenameStructType, null, structType, null, null);
 
-                            save();
+                            //save();
                         }
                         else
                         {
@@ -1239,6 +1239,9 @@ namespace Behaviac.Design
                     resetAllTypes(agentType.Name);
 
                     _lastSelectedType = agentType.Name;
+
+                    // refresh the workspace to load the type
+                    save(true);
                 }
                 else if (metaType == MetaTypePanel.MetaTypes.Enum)
                 {
@@ -1329,7 +1332,7 @@ namespace Behaviac.Design
                 CheckTypeName();
 
                 // refresh the workspace to load the type
-                //save(true);
+                save(true);
             }
         }
 
@@ -1524,7 +1527,7 @@ namespace Behaviac.Design
 
                                 if (prop != null)
                                 {
-                                    structType.Properties.Add(prop);
+                                    structType.AddProperty(prop);
 
                                     this.memberListBox.Items.Add(Member_Str + prop.DisplayName);
                                     this.memberListBox.SelectedIndex = this.memberListBox.Items.Count - 1;
@@ -2135,7 +2138,7 @@ namespace Behaviac.Design
 
                             if (structType.CanBeRemoved())
                             {
-                                structType.Properties.RemoveAt(memberIndex);
+                                structType.RemoveProperty(structType.Properties[memberIndex].BasicName);
 
                                 _lastSelectedType = structType.Name;
                             }

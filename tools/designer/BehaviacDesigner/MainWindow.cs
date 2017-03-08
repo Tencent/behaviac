@@ -1014,6 +1014,8 @@ namespace Behaviac.Design
 
             if (bWorkspaceChanged)
             {
+                BehaviorTreeViewDock.LastOpenedBehaviors.Clear();
+
                 bOk = this.SetWorkspace(workspacePath, bNew);
             }
 

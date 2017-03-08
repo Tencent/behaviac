@@ -837,6 +837,8 @@ namespace behaviac
         //suppose params are seprated by ','
         private static List<string> ParseForParams(string tsrc)
         {
+            tsrc = StringUtils.RemoveQuot(tsrc);
+
             int tsrcLen = tsrc.Length;
             int startIndex = 0;
             int index = 0;
