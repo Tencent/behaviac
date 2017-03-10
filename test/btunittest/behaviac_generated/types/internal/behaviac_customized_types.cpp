@@ -19,7 +19,3 @@ BEHAVIAC_BEGIN_ENUM(ETest, ETest)
 }
 BEHAVIAC_END_ENUM()
 
-// -------------------
-// Customized structs
-// -------------------
-

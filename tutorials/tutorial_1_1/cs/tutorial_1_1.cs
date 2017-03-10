@@ -8,7 +8,7 @@ namespace tutorial_1_1
 {
     class Program
     {
-        static SecondAgent g_SecondAgent;
+        static FirstAgent g_FirstAgent;
 
         static bool InitBehavic()
         {
@@ -24,12 +24,12 @@ namespace tutorial_1_1
         {
             Console.WriteLine("InitPlayer");
 
-            g_SecondAgent = new SecondAgent();
+            g_FirstAgent = new FirstAgent();
 
-            bool bRet = g_SecondAgent.btload("SecondBT");
+            bool bRet = g_FirstAgent.btload("FirstBT");
             Debug.Assert(bRet);
 
-            g_SecondAgent.btsetcurrent("SecondBT");
+            g_FirstAgent.btsetcurrent("FirstBT");
 
             return bRet;
         }
@@ -45,7 +45,7 @@ namespace tutorial_1_1
             {
                 Console.WriteLine("frame {0}", ++frames);
 
-                status = g_SecondAgent.btexec();
+                status = g_FirstAgent.btexec();
             }
         }
 
@@ -53,7 +53,7 @@ namespace tutorial_1_1
         {
             Console.WriteLine("CleanupPlayer");
 
-            g_SecondAgent = null;
+            g_FirstAgent = null;
         }
 
         static void CleanupBehaviac()

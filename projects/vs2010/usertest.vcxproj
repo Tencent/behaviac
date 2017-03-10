@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{2FBD6621-EE11-234C-B4B3-A9BB71E3F862}</ProjectGuid>
+    <ProjectGuid>{E29F6B3D-D6EA-9A44-B868-4014DB71FEBF}</ProjectGuid>
     <RootNamespace>usertest</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>

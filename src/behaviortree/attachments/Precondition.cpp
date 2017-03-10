@@ -84,7 +84,7 @@ namespace behaviac {
     }
 
     bool Precondition::IsValid(Agent* pAgent, BehaviorTask* pTask) const {
-        if (Precondition::DynamicCast(pTask->GetNode()) != 0) {
+        if (Precondition::DynamicCast(pTask->GetNode()) == 0) {
             return false;
         }
 

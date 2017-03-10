@@ -16,9 +16,7 @@ namespace behaviac
 struct PROPERTY_TYPE_FirstAgent_p1 { };
 template<> inline int& FirstAgent::_Get_Property_<PROPERTY_TYPE_FirstAgent_p1>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(FirstAgent, FirstAgent::p1);
-	return *(reinterpret_cast<int*>(pc));
+	return this->p1;
 }
 
 

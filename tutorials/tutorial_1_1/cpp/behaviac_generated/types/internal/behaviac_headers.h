@@ -8,7 +8,6 @@
 #include "behaviac/behaviac.h"
 
 // YOU SHOULD SET THE HEADER FILES OF YOUR GAME WHEN EXPORTING CPP FILES ON THE BEHAVIAC EDITOR:
-#include "../../../SecondAgent.h"
 
 
 #endif // _BEHAVIAC_HEADERS_H_

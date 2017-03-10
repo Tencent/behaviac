@@ -23,7 +23,9 @@ public:
 
 	BEHAVIAC_DECLARE_AGENTTYPE(FirstAgent, behaviac::Agent)
 
-	public: void SayHello();
+	private: int p1;
+
+	private: void m1(behaviac::string& value);
 
 ///<<< BEGIN WRITING YOUR CODE CLASS_PART
 

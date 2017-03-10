@@ -5,9 +5,6 @@
       <isexported>False</isexported>
       <exportfilecount>1</exportfilecount>
       <folder>../../cpp</folder>
-      <includedfilenames>
-        <includedfilename>SecondAgent.h</includedfilename>
-      </includedfilenames>
     </cpp>
   </export>
 </workspace>

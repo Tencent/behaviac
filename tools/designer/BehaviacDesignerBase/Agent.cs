@@ -51,43 +51,43 @@ namespace Behaviac.Design
 
         [Behaviac.Design.MethodDesc("behaviac::Agent", false, true, true, false, false, "int", "VectorLength", "VectorLength")]
         public delegate int VectorLength(
-            [Behaviac.Design.ParamDesc("const IList&", "param0", "param0", "param0", "", false, false)]
+            [Behaviac.Design.ParamDesc("const IList&", "param0", "param0", "param0", "", false, false, false)]
             IList param0
         );
 
         [Behaviac.Design.MethodDesc("behaviac::Agent", false, true, true, false, false, "void", "VectorAdd", "VectorAdd")]
         public delegate void VectorAdd(
-            [Behaviac.Design.ParamDesc("IList&", "param0", "param0", "param0", "", false, false)]
+            [Behaviac.Design.ParamDesc("IList&", "param0", "param0", "param0", "", false, false, false)]
             IList param0,
-            [Behaviac.Design.ParamDesc("const System::Object&", "param1", "param1", "param1", "", false, false)]
+            [Behaviac.Design.ParamDesc("const System::Object&", "param1", "param1", "param1", "", false, false, false)]
             System.Object param1
         );
 
         [Behaviac.Design.MethodDesc("behaviac::Agent", false, true, true, false, false, "void", "VectorRemove", "VectorRemove")]
         public delegate void VectorRemove(
-            [Behaviac.Design.ParamDesc("IList&", "param0", "param0", "param0", "", false, false)]
+            [Behaviac.Design.ParamDesc("IList&", "param0", "param0", "param0", "", false, false, false)]
             IList param0,
-            [Behaviac.Design.ParamDesc("const System::Object&", "param1", "param1", "param1", "", false, false)]
+            [Behaviac.Design.ParamDesc("const System::Object&", "param1", "param1", "param1", "", false, false, false)]
             System.Object param1
         );
 
         [Behaviac.Design.MethodDesc("behaviac::Agent", false, true, true, false, false, "bool", "VectorContains", "VectorContains")]
         public delegate bool VectorContains(
-            [Behaviac.Design.ParamDesc("IList&", "param0", "param0", "param0", "", false, false)]
+            [Behaviac.Design.ParamDesc("IList&", "param0", "param0", "param0", "", false, false, false)]
             IList param0,
-            [Behaviac.Design.ParamDesc("const System::Object&", "param1", "param1", "param1", "", false, false)]
+            [Behaviac.Design.ParamDesc("const System::Object&", "param1", "param1", "param1", "", false, false, false)]
             System.Object param1
         );
 
         [Behaviac.Design.MethodDesc("behaviac::Agent", false, true, true, false, false, "void", "VectorClear", "VectorClear")]
         public delegate void VectorClear(
-            [Behaviac.Design.ParamDesc("IList&", "param0", "param0", "param0", "", false, false)]
+            [Behaviac.Design.ParamDesc("IList&", "param0", "param0", "param0", "", false, false, false)]
             IList param0
         );
 
         [Behaviac.Design.MethodDesc("behaviac::Agent", false, true, true, false, false, "void", "LogMessage", "LogMessage")]
         public delegate void LogMessage(
-            [Behaviac.Design.ParamDesc("const char*", "param0", "param0", "param0", "", false, false)]
+            [Behaviac.Design.ParamDesc("const char*", "param0", "param0", "param0", "", false, false, false)]
             string param0
         );
     }
@@ -1168,6 +1168,7 @@ namespace Behaviac.Design
                     string defaultValue = "";
                     bool isOut = false;
                     bool isRef = false;
+                    bool isConst = false;
                     float rangeMin = float.MinValue;
                     float rangeMax = float.MaxValue;
 
@@ -1181,13 +1182,14 @@ namespace Behaviac.Design
                         defaultValue = paramDescAttr.DefaultValue;
                         isOut = paramDescAttr.IsOut;
                         isRef = paramDescAttr.IsRef;
+                        isConst = paramDescAttr.IsConst;
                         rangeMin = paramDescAttr.RangeMin;
                         rangeMax = paramDescAttr.RangeMax;
                     }
 
                     //object value = par.ParameterType.InvokeMember(string.Empty, BindingFlags.CreateInstance, null, null, null);
                     object value = Plugin.DefaultValue(par.ParameterType, defaultValue);
-                    MethodDef.Param p = new MethodDef.Param(category, par, value, paramNativeType, paramName, paramDisplayName, paramDescription, isOut, isRef, rangeMin, rangeMax);
+                    MethodDef.Param p = new MethodDef.Param(category, par, value, paramNativeType, paramName, paramDisplayName, paramDescription, isOut, isRef, isConst, rangeMin, rangeMax);
                     methodDef.Params.Add(p);
                 }
 
@@ -1606,7 +1608,7 @@ namespace Behaviac.Design
     [AttributeUsage(AttributeTargets.Parameter, AllowMultiple = false, Inherited = false)]
     public class ParamDescAttribute : Attribute
     {
-        public ParamDescAttribute(string nativeType, string name, string displayName, string description, string defaultValue, bool isOut, bool isRef)
+        public ParamDescAttribute(string nativeType, string name, string displayName, string description, string defaultValue, bool isOut, bool isRef, bool isConst)
         {
             _nativeType = nativeType;
             _name = name;
@@ -1615,11 +1617,12 @@ namespace Behaviac.Design
             _defaultValue = defaultValue;
             _isOut = isOut;
             _isRef = isRef;
+            _isConst = isConst;
             _rangeMin = float.MinValue;
             _rangeMax = float.MaxValue;
         }
 
-        public ParamDescAttribute(string nativeType, string name, string displayName, string description, string defaultValue, bool isOut, bool isRef, float rangeMin, float rangeMax)
+        public ParamDescAttribute(string nativeType, string name, string displayName, string description, string defaultValue, bool isOut, bool isRef, bool isConst, float rangeMin, float rangeMax)
         {
             _nativeType = nativeType;
             _name = name;
@@ -1628,6 +1631,7 @@ namespace Behaviac.Design
             _defaultValue = defaultValue;
             _isOut = isOut;
             _isRef = isRef;
+            _isConst = isConst;
             _rangeMin = rangeMin;
             _rangeMax = rangeMax;
         }
@@ -1665,6 +1669,15 @@ namespace Behaviac.Design
             get
             {
                 return _isRef;
+            }
+        }
+
+        private bool _isConst;
+        public bool IsConst
+        {
+            get
+            {
+                return _isConst;
             }
         }
 

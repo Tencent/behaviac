@@ -12,6 +12,7 @@
 
 FirstAgent::FirstAgent()
 {
+	p1 = 0;
 ///<<< BEGIN WRITING YOUR CODE CONSTRUCTOR
 
 ///<<< END WRITING YOUR CODE
@@ -24,10 +25,10 @@ FirstAgent::~FirstAgent()
 ///<<< END WRITING YOUR CODE
 }
 
-void FirstAgent::SayHello()
+void FirstAgent::m1(behaviac::string& value)
 {
-///<<< BEGIN WRITING YOUR CODE SayHello
-	printf("\nHello Behaviac!\n\n");
+///<<< BEGIN WRITING YOUR CODE m1
+	printf("\n%s\n\n", value.c_str());
 ///<<< END WRITING YOUR CODE
 }
 

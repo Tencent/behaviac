@@ -949,10 +949,11 @@ namespace behaviac {
         while (type != BsonDeserizer::BT_None) {
             if (type == BsonDeserizer::BT_PropertiesElement) {
                 d->OpenDocument();
-                type = d->ReadType();
 
-                while (type != BsonDeserizer::BT_None) {
-                    if (type == BsonDeserizer::BT_PropertyElement) {
+				BsonDeserizer::BsonTypes internalType = d->ReadType();
+
+				while (internalType != BsonDeserizer::BT_None) {
+					if (internalType == BsonDeserizer::BT_PropertyElement) {
                         d->OpenDocument();
                         const char* propName = d->ReadString();
                         const char* propType = d->ReadString();
@@ -982,7 +983,7 @@ namespace behaviac {
                         BEHAVIAC_ASSERT(false);
                     }
 
-                    type = d->ReadType();
+					internalType = d->ReadType();
                 }//end of while
 
                 d->CloseDocument(false);

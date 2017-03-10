@@ -15,12 +15,10 @@ namespace behaviac
 	// ---------------------------------------------------------------------
 
 	inline void FunctionPointer_behaviac_Agent_LogMessage(char* param0) { behaviac::Agent::LogMessage(param0); }
+
+	inline void Set_FirstAgent_p1(Agent* self, int value) { ((FirstAgent*)self)->_Get_Property_<PROPERTY_TYPE_FirstAgent_p1, int >() = value; };
+	inline const void* Get_FirstAgent_p1(Agent* self) { return &((FirstAgent*)self)->_Get_Property_<PROPERTY_TYPE_FirstAgent_p1, int >(); };
+
 	inline void FunctionPointer_FirstAgent_LogMessage(char* param0) { FirstAgent::LogMessage(param0); }
-	inline void FunctionPointer_FirstAgent_SayHello(Agent* self) { ((FirstAgent*)self)->SayHello(); }
-
-	inline void Set_SecondAgent_p1(Agent* self, int value) { ((SecondAgent*)self)->_Get_Property_<PROPERTY_TYPE_SecondAgent_p1, int >() = value; };
-	inline const void* Get_SecondAgent_p1(Agent* self) { return &((SecondAgent*)self)->_Get_Property_<PROPERTY_TYPE_SecondAgent_p1, int >(); };
-
-	inline void FunctionPointer_SecondAgent_LogMessage(char* param0) { SecondAgent::LogMessage(param0); }
 }
 #endif // _BEHAVIAC_AGENT_PROPERTIES_H_

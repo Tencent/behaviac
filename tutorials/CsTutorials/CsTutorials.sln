@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tutorial_1_1", "..\tutorial
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tutorial_4", "..\tutorial_4\cs\tutorial_4.csproj", "{4216B6A7-1410-4527-A97A-8180F682849E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tutorial_1_2", "..\tutorial_1_2\cs\tutorial_1_2.csproj", "{5989203F-A9DE-48C4-B7F5-A4D8DB252C44}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -97,6 +99,16 @@ Global
 		{4216B6A7-1410-4527-A97A-8180F682849E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{4216B6A7-1410-4527-A97A-8180F682849E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{4216B6A7-1410-4527-A97A-8180F682849E}.Release|Win32.ActiveCfg = Release|Any CPU
+		{5989203F-A9DE-48C4-B7F5-A4D8DB252C44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5989203F-A9DE-48C4-B7F5-A4D8DB252C44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5989203F-A9DE-48C4-B7F5-A4D8DB252C44}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{5989203F-A9DE-48C4-B7F5-A4D8DB252C44}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{5989203F-A9DE-48C4-B7F5-A4D8DB252C44}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{5989203F-A9DE-48C4-B7F5-A4D8DB252C44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5989203F-A9DE-48C4-B7F5-A4D8DB252C44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5989203F-A9DE-48C4-B7F5-A4D8DB252C44}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{5989203F-A9DE-48C4-B7F5-A4D8DB252C44}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{5989203F-A9DE-48C4-B7F5-A4D8DB252C44}.Release|Win32.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

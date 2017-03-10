@@ -2,28 +2,25 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="tutorials">
-      <UniqueIdentifier>{E2E0506E-15CD-6C44-A66A-FDFBD94915F8}</UniqueIdentifier>
+      <UniqueIdentifier>{6C076EDF-E888-3B48-B2A0-1BE68AC77DE2}</UniqueIdentifier>
     </Filter>
     <Filter Include="tutorials\tutorial_1_1">
-      <UniqueIdentifier>{98B8945B-008A-8443-BF0B-603054CCC488}</UniqueIdentifier>
+      <UniqueIdentifier>{49C61B23-3351-2344-96D2-6E321EF355A1}</UniqueIdentifier>
     </Filter>
     <Filter Include="tutorials\tutorial_1_1\cpp">
-      <UniqueIdentifier>{3186AB57-BAFC-C74D-8DFF-03321520F432}</UniqueIdentifier>
+      <UniqueIdentifier>{F32723DF-99D2-E24E-AFE5-84CB4F20F57C}</UniqueIdentifier>
     </Filter>
     <Filter Include="tutorials\tutorial_1_1\cpp\behaviac_generated">
-      <UniqueIdentifier>{80C3EF65-A716-9D4C-A2F5-A7A58F9AF95F}</UniqueIdentifier>
+      <UniqueIdentifier>{507F92CC-7204-DB41-8F7A-4E7B8C992B7E}</UniqueIdentifier>
     </Filter>
     <Filter Include="tutorials\tutorial_1_1\cpp\behaviac_generated\types">
-      <UniqueIdentifier>{FDBE89DD-8A0B-384A-8567-CBEFD696E593}</UniqueIdentifier>
+      <UniqueIdentifier>{D29A8368-60B0-8449-B87C-742370FA11B1}</UniqueIdentifier>
     </Filter>
     <Filter Include="tutorials\tutorial_1_1\cpp\behaviac_generated\types\internal">
-      <UniqueIdentifier>{5AAF7A90-719E-D641-91D9-5FF6ADC50451}</UniqueIdentifier>
+      <UniqueIdentifier>{584B943E-727F-CD4F-999C-6AC9A8324C05}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\tutorials\tutorial_1_1\cpp\SecondAgent.h">
-      <Filter>tutorials\tutorial_1_1\cpp</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\tutorials\tutorial_1_1\cpp\behaviac_generated\types\behaviac_types.h">
       <Filter>tutorials\tutorial_1_1\cpp\behaviac_generated\types</Filter>
     </ClInclude>
@@ -44,9 +41,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\tutorials\tutorial_1_1\cpp\SecondAgent.cpp">
-      <Filter>tutorials\tutorial_1_1\cpp</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\tutorials\tutorial_1_1\cpp\tutorial_1_1.cpp">
       <Filter>tutorials\tutorial_1_1\cpp</Filter>
     </ClCompile>

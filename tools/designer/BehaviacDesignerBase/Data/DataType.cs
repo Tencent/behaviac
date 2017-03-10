@@ -316,6 +316,26 @@ namespace Behaviac.Design
                 }
             }
 
+            private bool _isConst = false;
+            public bool IsConst
+            {
+                get
+                {
+                    return _isConst;
+                }
+                set
+                {
+                    _isConst = value;
+
+                    this._nativeType = this._nativeType.Replace("const ", "");
+
+                    if (value)
+                    {
+                        this._nativeType = "const " + this._nativeType;
+                    }
+                }
+            }
+
             private object _value = null;
             public object Value
             {
@@ -440,7 +460,7 @@ namespace Behaviac.Design
                 _bParamFromStruct = true;
             }
 
-            public Param(string category, ParameterInfo pi, object v, string nativeType, string name, string displayName, string description, bool isOut, bool isRef, float rangeMin, float rangeMax)
+            public Param(string category, ParameterInfo pi, object v, string nativeType, string name, string displayName, string description, bool isOut, bool isRef, bool isConst, float rangeMin, float rangeMax)
             {
                 _paramInfo = pi;
                 _value = v;
@@ -448,6 +468,7 @@ namespace Behaviac.Design
                 _name = name;
                 _isOut = isOut;
                 _isRef = isRef;
+                _isConst = isConst;
                 _displayName = displayName;
                 _description = description;
 
@@ -499,6 +520,7 @@ namespace Behaviac.Design
                 _type = other._type;
                 _isOut = other._isOut;
                 _isRef = other._isRef;
+                _isConst = other._isConst;
                 _value = Plugin.CloneValue(other._value);
                 _isArrayIndex = other._isArrayIndex;
             }

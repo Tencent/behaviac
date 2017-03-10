@@ -1,3 +1,9 @@
+2017-3-10  3.6.24
+    Add the tutorial_1_1 and tutorial_1_2.
+    Add the Const setting for the parameters of the method.
+    Improve the generated _Get_Property_ method.
+    Fix a bug for the uint as the return type of the method.
+
 2017-3-7  3.6.23
     Fix a bug for adding the struct of UnityEngine.Vector3.
     Fix a bug for the size_t value.

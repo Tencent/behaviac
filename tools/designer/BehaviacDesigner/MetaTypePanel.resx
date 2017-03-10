@@ -141,12 +141,6 @@
   <data name="namespaceLabel.Text" xml:space="preserve">
     <value>Namespace:</value>
   </data>
-  <data name="&gt;&gt;typeComboBox.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="typeComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 20</value>
-  </data>
   <data name="&gt;&gt;typeComboBox.Parent" xml:space="preserve">
     <value>descGroupBox</value>
   </data>
@@ -158,9 +152,6 @@
   </data>
   <data name="&gt;&gt;baseLabel.Name" xml:space="preserve">
     <value>baseLabel</value>
-  </data>
-  <data name="typeComboBox.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Popup</value>
   </data>
   <data name="&gt;&gt;isRefCheckBox.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -189,6 +180,12 @@
   <data name="descLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
+  <data name="descTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>90, 164</value>
+  </data>
+  <data name="&gt;&gt;descTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="locationTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>228, 21</value>
   </data>
@@ -210,9 +207,6 @@
   <data name="&gt;&gt;descLabel.Parent" xml:space="preserve">
     <value>descGroupBox</value>
   </data>
-  <data name="locationLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="baseLabel.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
@@ -228,6 +222,9 @@
   <data name="&gt;&gt;descLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;agentLabel.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
   <data name="typeLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -240,14 +237,8 @@
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 12</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>MetaTypePanel</value>
-  </data>
   <data name="descLabel.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
-  </data>
-  <data name="&gt;&gt;exportCodeCheckBox.ZOrder" xml:space="preserve">
-    <value>4</value>
   </data>
   <data name="dispLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -288,8 +279,8 @@
   <data name="&gt;&gt;namespaceLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="dispTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 139</value>
+  <data name="typeComboBox.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
   </data>
   <data name="locationButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
@@ -306,14 +297,17 @@
   <data name="dispTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>266, 21</value>
   </data>
-  <data name="nameTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 38</value>
+  <data name="namespaceLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
   </data>
   <data name="locationTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>90, 114</value>
   </data>
   <data name="typeLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;locationTextBox.Name" xml:space="preserve">
+    <value>locationTextBox</value>
   </data>
   <data name="&gt;&gt;descGroupBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -402,11 +396,17 @@
   <data name="&gt;&gt;descTextBox.Name" xml:space="preserve">
     <value>descTextBox</value>
   </data>
+  <data name="baseComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 20</value>
+  </data>
+  <data name="&gt;&gt;typeComboBox.Name" xml:space="preserve">
+    <value>typeComboBox</value>
+  </data>
   <data name="typeLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
-  <data name="locationTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+  <data name="typeLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
   </data>
   <data name="exportCodeCheckBox.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
@@ -416,9 +416,6 @@
   </data>
   <data name="agentLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
-  </data>
-  <data name="isRefCheckBox.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Popup</value>
   </data>
   <data name="baseLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -444,6 +441,12 @@
   <data name="typeComboBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
+  <data name="descTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="descLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="typeLabel.Text" xml:space="preserve">
     <value>Type:</value>
   </data>
@@ -459,14 +462,14 @@
   <data name="&gt;&gt;baseLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="namespaceTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
   <data name="dispLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="locationButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>323, 114</value>
+  </data>
+  <data name="dispTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>90, 139</value>
   </data>
   <data name="exportCodeCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -510,8 +513,8 @@
   <data name="&gt;&gt;descGroupBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;agentLabel.ZOrder" xml:space="preserve">
-    <value>16</value>
+  <data name="isRefCheckBox.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
   </data>
   <data name="&gt;&gt;locationButton.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -540,9 +543,6 @@
   <data name="locationLabel.Text" xml:space="preserve">
     <value>Location:</value>
   </data>
-  <data name="dispTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
   <data name="&gt;&gt;exportCodeCheckBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -570,8 +570,8 @@
   <data name="&gt;&gt;descLabel.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <data name="&gt;&gt;locationTextBox.Name" xml:space="preserve">
-    <value>locationTextBox</value>
+  <data name="&gt;&gt;typeComboBox.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <data name="&gt;&gt;baseLabel.ZOrder" xml:space="preserve">
     <value>10</value>
@@ -582,11 +582,11 @@
   <data name="&gt;&gt;namespaceTextBox.Name" xml:space="preserve">
     <value>namespaceTextBox</value>
   </data>
-  <data name="&gt;&gt;typeComboBox.Name" xml:space="preserve">
-    <value>typeComboBox</value>
+  <data name="locationTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
-  <data name="descTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+  <data name="typeComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 20</value>
   </data>
   <data name="locationTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -597,8 +597,8 @@
   <data name="locationLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 12</value>
   </data>
-  <data name="baseComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>195, 20</value>
+  <data name="locationLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="agentLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -615,8 +615,8 @@
   <data name="dispLabel.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
   </data>
-  <data name="descLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="namespaceTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
   <data name="&gt;&gt;namespaceLabel.Name" xml:space="preserve">
     <value>namespaceLabel</value>
@@ -624,8 +624,8 @@
   <data name="&gt;&gt;baseComboBox.Name" xml:space="preserve">
     <value>baseComboBox</value>
   </data>
-  <data name="descTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 164</value>
+  <data name="nameTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>90, 38</value>
   </data>
   <data name="&gt;&gt;descTextBox.Parent" xml:space="preserve">
     <value>descGroupBox</value>
@@ -648,8 +648,8 @@
   <data name="&gt;&gt;descTextBox.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="typeLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MetaTypePanel</value>
   </data>
   <data name="&gt;&gt;namespaceLabel.ZOrder" xml:space="preserve">
     <value>6</value>
@@ -657,8 +657,8 @@
   <data name="isRefCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;descTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;exportCodeCheckBox.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="baseComboBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -666,8 +666,8 @@
   <data name="&gt;&gt;descGroupBox.Name" xml:space="preserve">
     <value>descGroupBox</value>
   </data>
-  <data name="namespaceLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
+  <data name="dispTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
   <data name="locationButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -678,9 +678,6 @@
   <data name="&gt;&gt;dispTextBox.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>zh-CN</value>
-  </metadata>
   <metadata name="folderBrowserDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

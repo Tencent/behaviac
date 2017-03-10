@@ -5544,7 +5544,6 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			int opr = 666;
 			behaviac.Agent pAgent_opl = behaviac.Utils.GetParentAgent(pAgent, "par_child_agent_1");
-			Debug.Check(!System.Object.ReferenceEquals(pAgent_opl, null) || Utils.IsStaticClass("par_child_agent_1"));
 			((AgentNodeTest)pAgent_opl).testVar_0 = opr;
 			return result;
 		}
@@ -5561,7 +5560,6 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			behaviac.Agent pAgent_method = behaviac.Utils.GetParentAgent(pAgent, "par_child_agent_1");
-			Debug.Check(!System.Object.ReferenceEquals(pAgent_method, null) || Utils.IsStaticClass("par_child_agent_1"));
 			((AgentNodeTest)pAgent_method).setTestVar_2(method_p0);
 			return EBTStatus.BT_SUCCESS;
 		}
@@ -5757,7 +5755,6 @@ namespace behaviac
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			behaviac.Agent pAgent_opr = ((AgentNodeTest)pAgent).par_child;
-			Debug.Check(!System.Object.ReferenceEquals(pAgent_opr, null) || Utils.IsStaticClass("par_child"));
 			int opr = ((AgentNodeTest)pAgent_opr).testVar_1;
 			((AgentNodeTest)pAgent).testVar_0 = opr;
 			return result;
@@ -5774,7 +5771,6 @@ namespace behaviac
 		{
 			int opl = ((AgentNodeTest)pAgent).testVar_0;
 			behaviac.Agent pAgent_opr = ((AgentNodeTest)pAgent).par_child;
-			Debug.Check(!System.Object.ReferenceEquals(pAgent_opr, null) || Utils.IsStaticClass("par_child"));
 			int opr = ((AgentNodeTest)pAgent_opr).testVar_1;
 			bool op = opl == opr;
 			return op ? EBTStatus.BT_SUCCESS : EBTStatus.BT_FAILURE;
@@ -5791,7 +5787,6 @@ namespace behaviac
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			behaviac.Agent pAgent_opr = ((AgentNodeTest)pAgent).par_child;
-			Debug.Check(!System.Object.ReferenceEquals(pAgent_opr, null) || Utils.IsStaticClass("par_child"));
 			int opr = (int)((AgentNodeTest)pAgent_opr).getConstOne();
 			((AgentNodeTest)pAgent).testVar_0 = opr;
 			return result;
@@ -5822,7 +5817,6 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			behaviac.Agent pAgent_opl = ((AgentNodeTest)pAgent).par_child;
-			Debug.Check(!System.Object.ReferenceEquals(pAgent_opl, null) || Utils.IsStaticClass("par_child"));
 			float opl = ((AgentNodeTest)pAgent_opl).testVar_2;
 			float opr = ((AgentNodeTest)pAgent).testVar_3;
 			bool op = opl > opr;
@@ -5841,7 +5835,6 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			behaviac.Agent pAgent_method = ((AgentNodeTest)pAgent).par_child;
-			Debug.Check(!System.Object.ReferenceEquals(pAgent_method, null) || Utils.IsStaticClass("par_child"));
 			AgentMetaVisitor.ExecuteMethod(pAgent_method, "SelectTarget", method_params);
 			return EBTStatus.BT_SUCCESS;
 		}
@@ -7024,7 +7017,6 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			int opr = ((AgentNodeTest)pAgent).testVar_0;
 			behaviac.Agent pAgent_opl = behaviac.Utils.GetParentAgent(pAgent, "par_child_agent_1");
-			Debug.Check(!System.Object.ReferenceEquals(pAgent_opl, null) || Utils.IsStaticClass("par_child_agent_1"));
 			Debug.Check(behaviac.Utils.MakeVariableId("testInt") == 2614050066u);
 			pAgent_opl.SetVariable<int>("testInt", 2614050066u, opr);
 			return result;
@@ -7040,7 +7032,6 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			behaviac.Agent pAgent_opl = behaviac.Utils.GetParentAgent(pAgent, "par_child_agent_1");
-			Debug.Check(!System.Object.ReferenceEquals(pAgent_opl, null) || Utils.IsStaticClass("par_child_agent_1"));
 			Debug.Check(behaviac.Utils.MakeVariableId("testInt") == 2614050066u);
 			int opl = pAgent_opl.GetVariable<int>(2614050066u);
 			int opr = ((AgentNodeTest)pAgent).testVar_0;
@@ -23312,7 +23303,6 @@ namespace behaviac
 		protected override double GetTime(Agent pAgent)
 		{
 			behaviac.Agent pAgent_Time = behaviac.Utils.GetParentAgent(pAgent, "par_child_agent_1");
-			Debug.Check(!System.Object.ReferenceEquals(pAgent_Time, null) || Utils.IsStaticClass("par_child_agent_1"));
 			return ((ChildNodeTest)pAgent_Time).GetConstDoubleValue();
 		}
 	}
@@ -28208,7 +28198,6 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			behaviac.Agent pAgent_method_p0 = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
-			Debug.Check(!System.Object.ReferenceEquals(pAgent_method_p0, null) || Utils.IsStaticClass("ParTestRegNameAgent"));
 			((EmployeeParTestAgent)pAgent).Func_StringRef(ref ((ParTestRegNameAgent)pAgent_method_p0).TV_STR_0);
 			Debug.Check(behaviac.Utils.MakeVariableId("TV_STR_0") == 3765213955u);
 			pAgent_method_p0.SetVariable<string>("TV_STR_0", 3765213955u, ((ParTestRegNameAgent)pAgent_method_p0).TV_STR_0);
@@ -29085,12 +29074,9 @@ namespace behaviac
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			behaviac.Agent pAgent_opr_p0 = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
-			Debug.Check(!System.Object.ReferenceEquals(pAgent_opr_p0, null) || Utils.IsStaticClass("ParTestRegNameAgent"));
 			behaviac.Agent pAgent_opr = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
-			Debug.Check(!System.Object.ReferenceEquals(pAgent_opr, null) || Utils.IsStaticClass("ParTestRegNameAgent"));
 			TNS.ST.PER.WRK.kEmployee opr = (TNS.ST.PER.WRK.kEmployee)((ParTestRegNameAgent)pAgent_opr).Func_kEmployeeIR(ParTestRegNameAgent.STV_KEMPLOYEE_0);
 			behaviac.Agent pAgent_opl = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
-			Debug.Check(!System.Object.ReferenceEquals(pAgent_opl, null) || Utils.IsStaticClass("ParTestRegNameAgent"));
 			ParTestRegNameAgent.STV_KEMPLOYEE_0 = opr;
 			return result;
 		}
@@ -29106,12 +29092,9 @@ namespace behaviac
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			behaviac.Agent pAgent_opr_p0 = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
-			Debug.Check(!System.Object.ReferenceEquals(pAgent_opr_p0, null) || Utils.IsStaticClass("ParTestRegNameAgent"));
 			behaviac.Agent pAgent_opr = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
-			Debug.Check(!System.Object.ReferenceEquals(pAgent_opr, null) || Utils.IsStaticClass("ParTestRegNameAgent"));
 			List<TNS.ST.PER.WRK.kEmployee> opr = (List<TNS.ST.PER.WRK.kEmployee>)((ParTestRegNameAgent)pAgent_opr).Func_kEmployeeListIR(ParTestRegNameAgent.STV_LIST_KEMPLOYEE_0);
 			behaviac.Agent pAgent_opl = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
-			Debug.Check(!System.Object.ReferenceEquals(pAgent_opl, null) || Utils.IsStaticClass("ParTestRegNameAgent"));
 			ParTestRegNameAgent.STV_LIST_KEMPLOYEE_0 = opr;
 			return result;
 		}
@@ -29127,12 +29110,9 @@ namespace behaviac
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			behaviac.Agent pAgent_opr_p0 = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
-			Debug.Check(!System.Object.ReferenceEquals(pAgent_opr_p0, null) || Utils.IsStaticClass("ParTestRegNameAgent"));
 			behaviac.Agent pAgent_opr = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
-			Debug.Check(!System.Object.ReferenceEquals(pAgent_opr, null) || Utils.IsStaticClass("ParTestRegNameAgent"));
 			List<sbyte> opr = (List<sbyte>)((ParTestRegNameAgent)pAgent_opr).Func_SByteListIR(ParTestRegNameAgent.STV_LIST_SBYTE_0);
 			behaviac.Agent pAgent_opl = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
-			Debug.Check(!System.Object.ReferenceEquals(pAgent_opl, null) || Utils.IsStaticClass("ParTestRegNameAgent"));
 			ParTestRegNameAgent.STV_LIST_SBYTE_0 = opr;
 			return result;
 		}
@@ -29148,12 +29128,9 @@ namespace behaviac
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			behaviac.Agent pAgent_opr_p0 = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
-			Debug.Check(!System.Object.ReferenceEquals(pAgent_opr_p0, null) || Utils.IsStaticClass("ParTestRegNameAgent"));
 			behaviac.Agent pAgent_opr = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
-			Debug.Check(!System.Object.ReferenceEquals(pAgent_opr, null) || Utils.IsStaticClass("ParTestRegNameAgent"));
 			behaviac.Agent opr = (behaviac.Agent)((ParTestRegNameAgent)pAgent_opr).Func_AgentIR(((ParTestRegNameAgent)pAgent_opr_p0).TV_AGENT_0);
 			behaviac.Agent pAgent_opl = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
-			Debug.Check(!System.Object.ReferenceEquals(pAgent_opl, null) || Utils.IsStaticClass("ParTestRegNameAgent"));
 			((ParTestRegNameAgent)pAgent_opl).TV_AGENT_0 = opr;
 			return result;
 		}
@@ -29169,12 +29146,9 @@ namespace behaviac
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			behaviac.Agent pAgent_opr_p0 = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
-			Debug.Check(!System.Object.ReferenceEquals(pAgent_opr_p0, null) || Utils.IsStaticClass("ParTestRegNameAgent"));
 			behaviac.Agent pAgent_opr = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
-			Debug.Check(!System.Object.ReferenceEquals(pAgent_opr, null) || Utils.IsStaticClass("ParTestRegNameAgent"));
 			byte opr = (byte)((ParTestRegNameAgent)pAgent_opr).Func_ByteIR(((ParTestRegNameAgent)pAgent_opr_p0).TV_BYTE_0);
 			behaviac.Agent pAgent_opl = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
-			Debug.Check(!System.Object.ReferenceEquals(pAgent_opl, null) || Utils.IsStaticClass("ParTestRegNameAgent"));
 			((ParTestRegNameAgent)pAgent_opl).TV_BYTE_0 = opr;
 			return result;
 		}
@@ -29190,12 +29164,9 @@ namespace behaviac
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			behaviac.Agent pAgent_opr_p0 = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
-			Debug.Check(!System.Object.ReferenceEquals(pAgent_opr_p0, null) || Utils.IsStaticClass("ParTestRegNameAgent"));
 			behaviac.Agent pAgent_opr = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
-			Debug.Check(!System.Object.ReferenceEquals(pAgent_opr, null) || Utils.IsStaticClass("ParTestRegNameAgent"));
 			char opr = (char)((ParTestRegNameAgent)pAgent_opr).Func_CharIR(((ParTestRegNameAgent)pAgent_opr_p0).TV_CHAR_0);
 			behaviac.Agent pAgent_opl = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
-			Debug.Check(!System.Object.ReferenceEquals(pAgent_opl, null) || Utils.IsStaticClass("ParTestRegNameAgent"));
 			((ParTestRegNameAgent)pAgent_opl).TV_CHAR_0 = opr;
 			return result;
 		}
@@ -29211,12 +29182,9 @@ namespace behaviac
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			behaviac.Agent pAgent_opr_p0 = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
-			Debug.Check(!System.Object.ReferenceEquals(pAgent_opr_p0, null) || Utils.IsStaticClass("ParTestRegNameAgent"));
 			behaviac.Agent pAgent_opr = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
-			Debug.Check(!System.Object.ReferenceEquals(pAgent_opr, null) || Utils.IsStaticClass("ParTestRegNameAgent"));
 			TNS.ST.PER.WRK.kEmployee opr = (TNS.ST.PER.WRK.kEmployee)((ParTestRegNameAgent)pAgent_opr).Func_kEmployeeIR(((ParTestRegNameAgent)pAgent_opr_p0).TV_KEMPLOYEE_0);
 			behaviac.Agent pAgent_opl = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
-			Debug.Check(!System.Object.ReferenceEquals(pAgent_opl, null) || Utils.IsStaticClass("ParTestRegNameAgent"));
 			((ParTestRegNameAgent)pAgent_opl).TV_KEMPLOYEE_0 = opr;
 			return result;
 		}
@@ -29232,12 +29200,9 @@ namespace behaviac
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			behaviac.Agent pAgent_opr_p0 = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
-			Debug.Check(!System.Object.ReferenceEquals(pAgent_opr_p0, null) || Utils.IsStaticClass("ParTestRegNameAgent"));
 			behaviac.Agent pAgent_opr = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
-			Debug.Check(!System.Object.ReferenceEquals(pAgent_opr, null) || Utils.IsStaticClass("ParTestRegNameAgent"));
 			List<TNS.ST.PER.WRK.kEmployee> opr = (List<TNS.ST.PER.WRK.kEmployee>)((ParTestRegNameAgent)pAgent_opr).Func_kEmployeeListIR(((ParTestRegNameAgent)pAgent_opr_p0).TV_LIST_KEMPLOYEE_0);
 			behaviac.Agent pAgent_opl = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
-			Debug.Check(!System.Object.ReferenceEquals(pAgent_opl, null) || Utils.IsStaticClass("ParTestRegNameAgent"));
 			((ParTestRegNameAgent)pAgent_opl).TV_LIST_KEMPLOYEE_0 = opr;
 			return result;
 		}
@@ -29253,12 +29218,9 @@ namespace behaviac
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			behaviac.Agent pAgent_opr_p0 = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
-			Debug.Check(!System.Object.ReferenceEquals(pAgent_opr_p0, null) || Utils.IsStaticClass("ParTestRegNameAgent"));
 			behaviac.Agent pAgent_opr = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
-			Debug.Check(!System.Object.ReferenceEquals(pAgent_opr, null) || Utils.IsStaticClass("ParTestRegNameAgent"));
 			sbyte opr = (sbyte)((ParTestRegNameAgent)pAgent_opr).Func_SByteIR(((ParTestRegNameAgent)pAgent_opr_p0).TV_SBYTE_0);
 			behaviac.Agent pAgent_opl = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
-			Debug.Check(!System.Object.ReferenceEquals(pAgent_opl, null) || Utils.IsStaticClass("ParTestRegNameAgent"));
 			((ParTestRegNameAgent)pAgent_opl).TV_SBYTE_0 = opr;
 			return result;
 		}
@@ -29274,12 +29236,9 @@ namespace behaviac
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			behaviac.Agent pAgent_opr_p0 = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
-			Debug.Check(!System.Object.ReferenceEquals(pAgent_opr_p0, null) || Utils.IsStaticClass("ParTestRegNameAgent"));
 			behaviac.Agent pAgent_opr = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
-			Debug.Check(!System.Object.ReferenceEquals(pAgent_opr, null) || Utils.IsStaticClass("ParTestRegNameAgent"));
 			string opr = (string)((ParTestRegNameAgent)pAgent_opr).Func_StringIR(((ParTestRegNameAgent)pAgent_opr_p0).TV_STR_0);
 			behaviac.Agent pAgent_opl = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
-			Debug.Check(!System.Object.ReferenceEquals(pAgent_opl, null) || Utils.IsStaticClass("ParTestRegNameAgent"));
 			((ParTestRegNameAgent)pAgent_opl).TV_STR_0 = opr;
 			return result;
 		}

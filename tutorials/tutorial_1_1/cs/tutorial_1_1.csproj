@@ -39,7 +39,6 @@
   <ItemGroup>
     <Compile Include="behaviac_generated\types\AgentProperties.cs" />
     <Compile Include="behaviac_generated\types\FirstAgent.cs" />
-    <Compile Include="SecondAgent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tutorial_1_1.cs" />
   </ItemGroup>

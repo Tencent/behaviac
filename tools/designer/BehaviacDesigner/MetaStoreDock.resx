@@ -973,7 +973,7 @@
     <value>metaTypePanel</value>
   </data>
   <data name="&gt;&gt;metaTypePanel.Type" xml:space="preserve">
-    <value>Behaviac.Design.MetaTypePanel, BehaviacDesigner, Version=3.6.14.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>Behaviac.Design.MetaTypePanel, BehaviacDesigner, Version=3.6.24.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;metaTypePanel.Parent" xml:space="preserve">
     <value>$this</value>
@@ -5856,7 +5856,7 @@
 </value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>612, 735</value>
+    <value>612, 480</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

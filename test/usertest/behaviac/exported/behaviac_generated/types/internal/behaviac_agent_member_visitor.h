@@ -16,9 +16,7 @@ namespace behaviac
 struct PROPERTY_TYPE_CBTPlayer_m_iBaseSpeed { };
 template<> inline unsigned int& CBTPlayer::_Get_Property_<PROPERTY_TYPE_CBTPlayer_m_iBaseSpeed>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(CBTPlayer, CBTPlayer::m_iBaseSpeed);
-	return *(reinterpret_cast<unsigned int*>(pc));
+	return this->m_iBaseSpeed;
 }
 
 struct METHOD_TYPE_CBTPlayer_Action1 { };

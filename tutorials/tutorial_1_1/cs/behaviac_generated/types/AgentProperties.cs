@@ -188,7 +188,7 @@ namespace behaviac
 
 		public override bool Load()
 		{
-			AgentMeta.TotalSignature = 3139633416;
+			AgentMeta.TotalSignature = 2175613577;
 
 			AgentMeta meta;
 
@@ -203,22 +203,11 @@ namespace behaviac
 			meta.RegisterMethod(502968959, new CMethod_behaviac_Agent_VectorRemove());
 
 			// FirstAgent
-			meta = new AgentMeta(136495355);
+			meta = new AgentMeta(1364083623);
 			AgentMeta._AgentMetas_[1778122110] = meta;
+			meta.RegisterMemberProperty(2082220067, new CMemberProperty<int>("p1", delegate(Agent self, int value) { ((FirstAgent)self)._set_p1(value); }, delegate(Agent self) { return ((FirstAgent)self)._get_p1(); }));
 			meta.RegisterMethod(1045109914, new CAgentStaticMethodVoid<string>(delegate(string param0) { FirstAgent.LogMessage(param0); }));
-			meta.RegisterMethod(1505908390, new CAgentMethodVoid(delegate(Agent self) { ((FirstAgent)self).SayHello(); }));
-			meta.RegisterMethod(2521019022, new CMethod_behaviac_Agent_VectorAdd());
-			meta.RegisterMethod(2306090221, new CMethod_behaviac_Agent_VectorClear());
-			meta.RegisterMethod(3483755530, new CMethod_behaviac_Agent_VectorContains());
-			meta.RegisterMethod(505785840, new CMethod_behaviac_Agent_VectorLength());
-			meta.RegisterMethod(502968959, new CMethod_behaviac_Agent_VectorRemove());
-
-			// SecondAgent
-			meta = new AgentMeta(3772742788);
-			AgentMeta._AgentMetas_[2432194202] = meta;
-			meta.RegisterMemberProperty(2082220067, new CMemberProperty<int>("p1", delegate(Agent self, int value) { ((SecondAgent)self)._set_p1(value); }, delegate(Agent self) { return ((SecondAgent)self)._get_p1(); }));
-			meta.RegisterMethod(1045109914, new CAgentStaticMethodVoid<string>(delegate(string param0) { SecondAgent.LogMessage(param0); }));
-			meta.RegisterMethod(1759647744, new CAgentMethodVoid<string>(delegate(Agent self, string value) { ((SecondAgent)self).m1(value); }));
+			meta.RegisterMethod(1759647744, new CAgentMethodVoid<string>(delegate(Agent self, string value) { ((FirstAgent)self).m1(value); }));
 			meta.RegisterMethod(2521019022, new CMethod_behaviac_Agent_VectorAdd());
 			meta.RegisterMethod(2306090221, new CMethod_behaviac_Agent_VectorClear());
 			meta.RegisterMethod(3483755530, new CMethod_behaviac_Agent_VectorContains());
@@ -227,7 +216,6 @@ namespace behaviac
 
 			AgentMeta.Register<behaviac.Agent>("behaviac.Agent");
 			AgentMeta.Register<FirstAgent>("FirstAgent");
-			AgentMeta.Register<SecondAgent>("SecondAgent");
 			return true;
 		}
 
@@ -235,7 +223,6 @@ namespace behaviac
 		{
 			AgentMeta.UnRegister<behaviac.Agent>("behaviac.Agent");
 			AgentMeta.UnRegister<FirstAgent>("FirstAgent");
-			AgentMeta.UnRegister<SecondAgent>("SecondAgent");
 			return true;
 		}
 	}

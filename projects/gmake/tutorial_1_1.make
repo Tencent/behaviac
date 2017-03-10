@@ -64,7 +64,6 @@ ifeq ($(config),releasestatic32)
 endif
 
 OBJECTS := \
-	$(OBJDIR)/SecondAgent.o \
 	$(OBJDIR)/tutorial_1_1.o \
 	$(OBJDIR)/behaviac_agent_meta.o \
 	$(OBJDIR)/FirstAgent.o \
@@ -127,10 +126,6 @@ $(GCH): $(PCH)
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) -x c++-header $(ALL_CXXFLAGS) -MMD -MP $(DEFINES) $(INCLUDES) -o "$@" -MF "$(@:%.gch=%.d)" -c "$<"
 endif
-
-$(OBJDIR)/SecondAgent.o: ../../tutorials/tutorial_1_1/cpp/SecondAgent.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 
 $(OBJDIR)/tutorial_1_1.o: ../../tutorials/tutorial_1_1/cpp/tutorial_1_1.cpp
 	@echo $(notdir $<)

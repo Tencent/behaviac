@@ -24,9 +24,8 @@
 #endif
 
 using namespace std;
-using namespace behaviac;
 
-SecondAgent* g_SecondAgent = NULL;
+FirstAgent* g_FirstAgent = NULL;
 
 #if !BEHAVIAC_CCDEFINE_ANDROID
 static void SetExePath()
@@ -66,11 +65,11 @@ bool InitPlayer()
 {
 	LOGI("InitPlayer\n");
 
-	g_SecondAgent = behaviac::Agent::Create<SecondAgent>();
+	g_FirstAgent = behaviac::Agent::Create<FirstAgent>();
 
-	bool bRet = g_SecondAgent->btload("SecondBT");
+	bool bRet = g_FirstAgent->btload("FirstBT");
 
-	g_SecondAgent->btsetcurrent("SecondBT");
+	g_FirstAgent->btsetcurrent("FirstBT");
 
     return bRet;
 }
@@ -86,7 +85,7 @@ void UpdateLoop()
 	{
 		LOGI("frame %d\n", ++frames);
 
-		status = g_SecondAgent->btexec();
+		status = g_FirstAgent->btexec();
 	}
 }
 
@@ -94,7 +93,7 @@ void CleanupPlayer()
 {
 	LOGI("CleanupPlayer\n");
 
-	behaviac::Agent::Destroy(g_SecondAgent);
+	behaviac::Agent::Destroy(g_FirstAgent);
 }
 
 void CleanupBehaviac()

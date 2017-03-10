@@ -23,130 +23,103 @@ template<> inline void HTNAgentHouseBase::_Execute_Method_<METHOD_TYPE_HTNAgentH
 struct PROPERTY_TYPE_ParTestAgentBase_STV_BOOL_0 { };
 template<> inline bool& ParTestAgentBase::_Get_Property_<PROPERTY_TYPE_ParTestAgentBase_STV_BOOL_0>()
 {
-	unsigned char* pc = (unsigned char*)(&ParTestAgentBase::STV_BOOL_0);
-	return *(reinterpret_cast<bool*>(pc));
+	return ParTestAgentBase::STV_BOOL_0;
 }
 
 struct PROPERTY_TYPE_ParTestAgentBase_STV_CHAR_0 { };
 template<> inline char& ParTestAgentBase::_Get_Property_<PROPERTY_TYPE_ParTestAgentBase_STV_CHAR_0>()
 {
-	unsigned char* pc = (unsigned char*)(&ParTestAgentBase::STV_CHAR_0);
-	return *(reinterpret_cast<char*>(pc));
+	return ParTestAgentBase::STV_CHAR_0;
 }
 
 struct PROPERTY_TYPE_ParTestAgentBase_STV_ECOLOR_0 { };
 template<> inline TNS::NE::NAT::eColor& ParTestAgentBase::_Get_Property_<PROPERTY_TYPE_ParTestAgentBase_STV_ECOLOR_0>()
 {
-	unsigned char* pc = (unsigned char*)(&ParTestAgentBase::STV_ECOLOR_0);
-	return *(reinterpret_cast<TNS::NE::NAT::eColor*>(pc));
+	return ParTestAgentBase::STV_ECOLOR_0;
 }
 
 struct PROPERTY_TYPE_ParTestAgentBase_STV_LIST_BOOL_0 { };
 template<> inline behaviac::vector<bool>& ParTestAgentBase::_Get_Property_<PROPERTY_TYPE_ParTestAgentBase_STV_LIST_BOOL_0>()
 {
-	unsigned char* pc = (unsigned char*)(&ParTestAgentBase::STV_LIST_BOOL_0);
-	return *(reinterpret_cast<behaviac::vector<bool>*>(pc));
+	return ParTestAgentBase::STV_LIST_BOOL_0;
 }
 
 struct PROPERTY_TYPE_ParTestAgentBase_STV_LIST_CHAR_0 { };
 template<> inline behaviac::vector<char>& ParTestAgentBase::_Get_Property_<PROPERTY_TYPE_ParTestAgentBase_STV_LIST_CHAR_0>()
 {
-	unsigned char* pc = (unsigned char*)(&ParTestAgentBase::STV_LIST_CHAR_0);
-	return *(reinterpret_cast<behaviac::vector<char>*>(pc));
+	return ParTestAgentBase::STV_LIST_CHAR_0;
 }
 
 struct PROPERTY_TYPE_ParTestAgentBase_STV_LIST_ECOLOR_0 { };
 template<> inline behaviac::vector<TNS::NE::NAT::eColor>& ParTestAgentBase::_Get_Property_<PROPERTY_TYPE_ParTestAgentBase_STV_LIST_ECOLOR_0>()
 {
-	unsigned char* pc = (unsigned char*)(&ParTestAgentBase::STV_LIST_ECOLOR_0);
-	return *(reinterpret_cast<behaviac::vector<TNS::NE::NAT::eColor>*>(pc));
+	return ParTestAgentBase::STV_LIST_ECOLOR_0;
 }
 
 struct PROPERTY_TYPE_ParTestAgentBase_STV_LIST_SBYTE_0 { };
 template<> inline behaviac::vector<signed char>& ParTestAgentBase::_Get_Property_<PROPERTY_TYPE_ParTestAgentBase_STV_LIST_SBYTE_0>()
 {
-	unsigned char* pc = (unsigned char*)(&ParTestAgentBase::STV_LIST_SBYTE_0);
-	return *(reinterpret_cast<behaviac::vector<signed char>*>(pc));
+	return ParTestAgentBase::STV_LIST_SBYTE_0;
 }
 
 struct PROPERTY_TYPE_ParTestAgentBase_TV_BOOL_0 { };
 template<> inline bool& ParTestAgentBase::_Get_Property_<PROPERTY_TYPE_ParTestAgentBase_TV_BOOL_0>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(ParTestAgentBase, ParTestAgentBase::TV_BOOL_0);
-	return *(reinterpret_cast<bool*>(pc));
+	return this->TV_BOOL_0;
 }
 
 struct PROPERTY_TYPE_ParTestAgentBase_TV_BYTE_0 { };
 template<> inline unsigned char& ParTestAgentBase::_Get_Property_<PROPERTY_TYPE_ParTestAgentBase_TV_BYTE_0>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(ParTestAgentBase, ParTestAgentBase::TV_BYTE_0);
-	return *(reinterpret_cast<unsigned char*>(pc));
+	return this->TV_BYTE_0;
 }
 
 struct PROPERTY_TYPE_ParTestAgentBase_TV_CHAR_0 { };
 template<> inline char& ParTestAgentBase::_Get_Property_<PROPERTY_TYPE_ParTestAgentBase_TV_CHAR_0>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(ParTestAgentBase, ParTestAgentBase::TV_CHAR_0);
-	return *(reinterpret_cast<char*>(pc));
+	return this->TV_CHAR_0;
 }
 
 struct PROPERTY_TYPE_ParTestAgentBase_TV_ECOLOR_0 { };
 template<> inline TNS::NE::NAT::eColor& ParTestAgentBase::_Get_Property_<PROPERTY_TYPE_ParTestAgentBase_TV_ECOLOR_0>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(ParTestAgentBase, ParTestAgentBase::TV_ECOLOR_0);
-	return *(reinterpret_cast<TNS::NE::NAT::eColor*>(pc));
+	return this->TV_ECOLOR_0;
 }
 
 struct PROPERTY_TYPE_ParTestAgentBase_TV_LIST_BOOL_0 { };
 template<> inline behaviac::vector<bool>& ParTestAgentBase::_Get_Property_<PROPERTY_TYPE_ParTestAgentBase_TV_LIST_BOOL_0>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(ParTestAgentBase, ParTestAgentBase::TV_LIST_BOOL_0);
-	return *(reinterpret_cast<behaviac::vector<bool>*>(pc));
+	return this->TV_LIST_BOOL_0;
 }
 
 struct PROPERTY_TYPE_ParTestAgentBase_TV_LIST_BYTE_0 { };
 template<> inline behaviac::vector<unsigned char>& ParTestAgentBase::_Get_Property_<PROPERTY_TYPE_ParTestAgentBase_TV_LIST_BYTE_0>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(ParTestAgentBase, ParTestAgentBase::TV_LIST_BYTE_0);
-	return *(reinterpret_cast<behaviac::vector<unsigned char>*>(pc));
+	return this->TV_LIST_BYTE_0;
 }
 
 struct PROPERTY_TYPE_ParTestAgentBase_TV_LIST_CHAR_0 { };
 template<> inline behaviac::vector<char>& ParTestAgentBase::_Get_Property_<PROPERTY_TYPE_ParTestAgentBase_TV_LIST_CHAR_0>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(ParTestAgentBase, ParTestAgentBase::TV_LIST_CHAR_0);
-	return *(reinterpret_cast<behaviac::vector<char>*>(pc));
+	return this->TV_LIST_CHAR_0;
 }
 
 struct PROPERTY_TYPE_ParTestAgentBase_TV_LIST_ECOLOR_0 { };
 template<> inline behaviac::vector<TNS::NE::NAT::eColor>& ParTestAgentBase::_Get_Property_<PROPERTY_TYPE_ParTestAgentBase_TV_LIST_ECOLOR_0>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(ParTestAgentBase, ParTestAgentBase::TV_LIST_ECOLOR_0);
-	return *(reinterpret_cast<behaviac::vector<TNS::NE::NAT::eColor>*>(pc));
+	return this->TV_LIST_ECOLOR_0;
 }
 
 struct PROPERTY_TYPE_ParTestAgentBase_TV_LIST_SBYTE_0 { };
 template<> inline behaviac::vector<signed char>& ParTestAgentBase::_Get_Property_<PROPERTY_TYPE_ParTestAgentBase_TV_LIST_SBYTE_0>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(ParTestAgentBase, ParTestAgentBase::TV_LIST_SBYTE_0);
-	return *(reinterpret_cast<behaviac::vector<signed char>*>(pc));
+	return this->TV_LIST_SBYTE_0;
 }
 
 struct PROPERTY_TYPE_ParTestAgentBase_TV_SBYTE_0 { };
 template<> inline signed char& ParTestAgentBase::_Get_Property_<PROPERTY_TYPE_ParTestAgentBase_TV_SBYTE_0>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(ParTestAgentBase, ParTestAgentBase::TV_SBYTE_0);
-	return *(reinterpret_cast<signed char*>(pc));
+	return this->TV_SBYTE_0;
 }
 
 struct METHOD_TYPE_ParTestAgentBase_Func_BooleanIR { };
@@ -303,85 +276,67 @@ template<> inline void ParTestAgentBase::_Execute_Method_<METHOD_TYPE_ParTestAge
 struct PROPERTY_TYPE_ParTestAgent_STV_INT_0 { };
 template<> inline int& ParTestAgent::_Get_Property_<PROPERTY_TYPE_ParTestAgent_STV_INT_0>()
 {
-	unsigned char* pc = (unsigned char*)(&ParTestAgent::STV_INT_0);
-	return *(reinterpret_cast<int*>(pc));
+	return ParTestAgent::STV_INT_0;
 }
 
 struct PROPERTY_TYPE_ParTestAgent_STV_KEMPLOYEE_0 { };
 template<> inline TNS::ST::PER::WRK::kEmployee& ParTestAgent::_Get_Property_<PROPERTY_TYPE_ParTestAgent_STV_KEMPLOYEE_0>()
 {
-	unsigned char* pc = (unsigned char*)(&ParTestAgent::STV_KEMPLOYEE_0);
-	return *(reinterpret_cast<TNS::ST::PER::WRK::kEmployee*>(pc));
+	return ParTestAgent::STV_KEMPLOYEE_0;
 }
 
 struct PROPERTY_TYPE_ParTestAgent_STV_LIST_INT_0 { };
 template<> inline behaviac::vector<int>& ParTestAgent::_Get_Property_<PROPERTY_TYPE_ParTestAgent_STV_LIST_INT_0>()
 {
-	unsigned char* pc = (unsigned char*)(&ParTestAgent::STV_LIST_INT_0);
-	return *(reinterpret_cast<behaviac::vector<int>*>(pc));
+	return ParTestAgent::STV_LIST_INT_0;
 }
 
 struct PROPERTY_TYPE_ParTestAgent_STV_LIST_KEMPLOYEE_0 { };
 template<> inline behaviac::vector<TNS::ST::PER::WRK::kEmployee>& ParTestAgent::_Get_Property_<PROPERTY_TYPE_ParTestAgent_STV_LIST_KEMPLOYEE_0>()
 {
-	unsigned char* pc = (unsigned char*)(&ParTestAgent::STV_LIST_KEMPLOYEE_0);
-	return *(reinterpret_cast<behaviac::vector<TNS::ST::PER::WRK::kEmployee>*>(pc));
+	return ParTestAgent::STV_LIST_KEMPLOYEE_0;
 }
 
 struct PROPERTY_TYPE_ParTestAgent_TV_INT_0 { };
 template<> inline int& ParTestAgent::_Get_Property_<PROPERTY_TYPE_ParTestAgent_TV_INT_0>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(ParTestAgent, ParTestAgent::TV_INT_0);
-	return *(reinterpret_cast<int*>(pc));
+	return this->TV_INT_0;
 }
 
 struct PROPERTY_TYPE_ParTestAgent_TV_KEMPLOYEE_0 { };
 template<> inline TNS::ST::PER::WRK::kEmployee& ParTestAgent::_Get_Property_<PROPERTY_TYPE_ParTestAgent_TV_KEMPLOYEE_0>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(ParTestAgent, ParTestAgent::TV_KEMPLOYEE_0);
-	return *(reinterpret_cast<TNS::ST::PER::WRK::kEmployee*>(pc));
+	return this->TV_KEMPLOYEE_0;
 }
 
 struct PROPERTY_TYPE_ParTestAgent_TV_LIST_INT_0 { };
 template<> inline behaviac::vector<int>& ParTestAgent::_Get_Property_<PROPERTY_TYPE_ParTestAgent_TV_LIST_INT_0>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(ParTestAgent, ParTestAgent::TV_LIST_INT_0);
-	return *(reinterpret_cast<behaviac::vector<int>*>(pc));
+	return this->TV_LIST_INT_0;
 }
 
 struct PROPERTY_TYPE_ParTestAgent_TV_LIST_KEMPLOYEE_0 { };
 template<> inline behaviac::vector<TNS::ST::PER::WRK::kEmployee>& ParTestAgent::_Get_Property_<PROPERTY_TYPE_ParTestAgent_TV_LIST_KEMPLOYEE_0>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(ParTestAgent, ParTestAgent::TV_LIST_KEMPLOYEE_0);
-	return *(reinterpret_cast<behaviac::vector<TNS::ST::PER::WRK::kEmployee>*>(pc));
+	return this->TV_LIST_KEMPLOYEE_0;
 }
 
 struct PROPERTY_TYPE_ParTestAgent_TV_LONG_0 { };
 template<> inline long& ParTestAgent::_Get_Property_<PROPERTY_TYPE_ParTestAgent_TV_LONG_0>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(ParTestAgent, ParTestAgent::TV_LONG_0);
-	return *(reinterpret_cast<long*>(pc));
+	return this->TV_LONG_0;
 }
 
 struct PROPERTY_TYPE_ParTestAgent_TV_SHORT_0 { };
 template<> inline short& ParTestAgent::_Get_Property_<PROPERTY_TYPE_ParTestAgent_TV_SHORT_0>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(ParTestAgent, ParTestAgent::TV_SHORT_0);
-	return *(reinterpret_cast<short*>(pc));
+	return this->TV_SHORT_0;
 }
 
 struct PROPERTY_TYPE_ParTestAgent_TV_USHORT_0 { };
 template<> inline unsigned short& ParTestAgent::_Get_Property_<PROPERTY_TYPE_ParTestAgent_TV_USHORT_0>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(ParTestAgent, ParTestAgent::TV_USHORT_0);
-	return *(reinterpret_cast<unsigned short*>(pc));
+	return this->TV_USHORT_0;
 }
 
 struct METHOD_TYPE_ParTestAgent_Func_IntIR { };
@@ -484,73 +439,55 @@ template<> inline void ParTestAgent::_Execute_Method_<METHOD_TYPE_ParTestAgent_F
 struct PROPERTY_TYPE_AgentNodeTest_par_child { };
 template<> inline ChildNodeTest*& AgentNodeTest::_Get_Property_<PROPERTY_TYPE_AgentNodeTest_par_child>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(AgentNodeTest, AgentNodeTest::par_child);
-	return *(reinterpret_cast<ChildNodeTest**>(pc));
+	return this->par_child;
 }
 
 struct PROPERTY_TYPE_AgentNodeTest_testColor { };
 template<> inline EnumTest& AgentNodeTest::_Get_Property_<PROPERTY_TYPE_AgentNodeTest_testColor>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(AgentNodeTest, AgentNodeTest::testColor);
-	return *(reinterpret_cast<EnumTest*>(pc));
+	return this->testColor;
 }
 
 struct PROPERTY_TYPE_AgentNodeTest_testVar_0 { };
 template<> inline int& AgentNodeTest::_Get_Property_<PROPERTY_TYPE_AgentNodeTest_testVar_0>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(AgentNodeTest, AgentNodeTest::testVar_0);
-	return *(reinterpret_cast<int*>(pc));
+	return this->testVar_0;
 }
 
 struct PROPERTY_TYPE_AgentNodeTest_testVar_1 { };
 template<> inline int& AgentNodeTest::_Get_Property_<PROPERTY_TYPE_AgentNodeTest_testVar_1>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(AgentNodeTest, AgentNodeTest::testVar_1);
-	return *(reinterpret_cast<int*>(pc));
+	return this->testVar_1;
 }
 
 struct PROPERTY_TYPE_AgentNodeTest_testVar_2 { };
 template<> inline float& AgentNodeTest::_Get_Property_<PROPERTY_TYPE_AgentNodeTest_testVar_2>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(AgentNodeTest, AgentNodeTest::testVar_2);
-	return *(reinterpret_cast<float*>(pc));
+	return this->testVar_2;
 }
 
 struct PROPERTY_TYPE_AgentNodeTest_testVar_3 { };
 template<> inline float& AgentNodeTest::_Get_Property_<PROPERTY_TYPE_AgentNodeTest_testVar_3>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(AgentNodeTest, AgentNodeTest::testVar_3);
-	return *(reinterpret_cast<float*>(pc));
+	return this->testVar_3;
 }
 
 struct PROPERTY_TYPE_AgentNodeTest_testVar_Act { };
 template<> inline Act& AgentNodeTest::_Get_Property_<PROPERTY_TYPE_AgentNodeTest_testVar_Act>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(AgentNodeTest, AgentNodeTest::testVar_Act);
-	return *(reinterpret_cast<Act*>(pc));
+	return this->testVar_Act;
 }
 
 struct PROPERTY_TYPE_AgentNodeTest_testVar_str_0 { };
 template<> inline behaviac::string& AgentNodeTest::_Get_Property_<PROPERTY_TYPE_AgentNodeTest_testVar_str_0>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(AgentNodeTest, AgentNodeTest::testVar_str_0);
-	return *(reinterpret_cast<behaviac::string*>(pc));
+	return this->testVar_str_0;
 }
 
 struct PROPERTY_TYPE_AgentNodeTest_waiting_timeout_interval { };
 template<> inline int& AgentNodeTest::_Get_Property_<PROPERTY_TYPE_AgentNodeTest_waiting_timeout_interval>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(AgentNodeTest, AgentNodeTest::waiting_timeout_interval);
-	return *(reinterpret_cast<int*>(pc));
+	return this->waiting_timeout_interval;
 }
 
 struct METHOD_TYPE_AgentNodeTest_CanSeeEnemy { };
@@ -816,9 +753,7 @@ template<> inline float ChildNodeTest::_Execute_Method_<METHOD_TYPE_ChildNodeTes
 struct PROPERTY_TYPE_ChildNodeTestSub_IntValue { };
 template<> inline int& ChildNodeTestSub::_Get_Property_<PROPERTY_TYPE_ChildNodeTestSub_IntValue>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(ChildNodeTestSub, ChildNodeTestSub::IntValue);
-	return *(reinterpret_cast<int*>(pc));
+	return this->IntValue;
 }
 
 struct METHOD_TYPE_ChildNodeTestSub_GetConstFloatValueSub { };
@@ -831,48 +766,37 @@ template<> inline float ChildNodeTestSub::_Execute_Method_<METHOD_TYPE_ChildNode
 struct PROPERTY_TYPE_CustomPropertyAgent_BoolMemberReadonly { };
 template<> inline bool& CustomPropertyAgent::_Get_Property_<PROPERTY_TYPE_CustomPropertyAgent_BoolMemberReadonly>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(CustomPropertyAgent, CustomPropertyAgent::BoolMemberReadonly);
-	return *(reinterpret_cast<bool*>(pc));
+	return this->BoolMemberReadonly;
 }
 
 struct PROPERTY_TYPE_CustomPropertyAgent_FloatPropertyReadonly { };
 template<> inline float& CustomPropertyAgent::_Get_Property_<PROPERTY_TYPE_CustomPropertyAgent_FloatPropertyReadonly>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(CustomPropertyAgent, CustomPropertyAgent::FloatPropertyReadonly);
-	return *(reinterpret_cast<float*>(pc));
+	return this->FloatPropertyReadonly;
 }
 
 struct PROPERTY_TYPE_CustomPropertyAgent_IntMemberConst { };
 template<> inline int& CustomPropertyAgent::_Get_Property_<PROPERTY_TYPE_CustomPropertyAgent_IntMemberConst>()
 {
-	unsigned char* pc = (unsigned char*)(&CustomPropertyAgent::IntMemberConst);
-	return *(reinterpret_cast<int*>(pc));
+	return CustomPropertyAgent::IntMemberConst;
 }
 
 struct PROPERTY_TYPE_CustomPropertyAgent_IntProperty { };
 template<> inline int& CustomPropertyAgent::_Get_Property_<PROPERTY_TYPE_CustomPropertyAgent_IntProperty>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(CustomPropertyAgent, CustomPropertyAgent::IntProperty);
-	return *(reinterpret_cast<int*>(pc));
+	return this->IntProperty;
 }
 
 struct PROPERTY_TYPE_CustomPropertyAgent_Location { };
 template<> inline UnityEngine::Vector3& CustomPropertyAgent::_Get_Property_<PROPERTY_TYPE_CustomPropertyAgent_Location>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(CustomPropertyAgent, CustomPropertyAgent::Location);
-	return *(reinterpret_cast<UnityEngine::Vector3*>(pc));
+	return this->Location;
 }
 
 struct PROPERTY_TYPE_CustomPropertyAgent_StringMemberReadonly { };
 template<> inline behaviac::string& CustomPropertyAgent::_Get_Property_<PROPERTY_TYPE_CustomPropertyAgent_StringMemberReadonly>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(CustomPropertyAgent, CustomPropertyAgent::StringMemberReadonly);
-	return *(reinterpret_cast<behaviac::string*>(pc));
+	return this->StringMemberReadonly;
 }
 
 struct METHOD_TYPE_CustomPropertyAgent_FnWithOutParam { };
@@ -897,147 +821,115 @@ template<> inline void CustomPropertyAgent::_Execute_Method_<METHOD_TYPE_CustomP
 struct PROPERTY_TYPE_EmployeeParTestAgent_STV_AGENT_0 { };
 template<> inline behaviac::Agent*& EmployeeParTestAgent::_Get_Property_<PROPERTY_TYPE_EmployeeParTestAgent_STV_AGENT_0>()
 {
-	unsigned char* pc = (unsigned char*)(&EmployeeParTestAgent::STV_AGENT_0);
-	return *(reinterpret_cast<behaviac::Agent**>(pc));
+	return EmployeeParTestAgent::STV_AGENT_0;
 }
 
 struct PROPERTY_TYPE_EmployeeParTestAgent_STV_F_0 { };
 template<> inline float& EmployeeParTestAgent::_Get_Property_<PROPERTY_TYPE_EmployeeParTestAgent_STV_F_0>()
 {
-	unsigned char* pc = (unsigned char*)(&EmployeeParTestAgent::STV_F_0);
-	return *(reinterpret_cast<float*>(pc));
+	return EmployeeParTestAgent::STV_F_0;
 }
 
 struct PROPERTY_TYPE_EmployeeParTestAgent_STV_LIST_AGENT_0 { };
 template<> inline behaviac::vector<behaviac::Agent*>& EmployeeParTestAgent::_Get_Property_<PROPERTY_TYPE_EmployeeParTestAgent_STV_LIST_AGENT_0>()
 {
-	unsigned char* pc = (unsigned char*)(&EmployeeParTestAgent::STV_LIST_AGENT_0);
-	return *(reinterpret_cast<behaviac::vector<behaviac::Agent*>*>(pc));
+	return EmployeeParTestAgent::STV_LIST_AGENT_0;
 }
 
 struct PROPERTY_TYPE_EmployeeParTestAgent_STV_LIST_F_0 { };
 template<> inline behaviac::vector<float>& EmployeeParTestAgent::_Get_Property_<PROPERTY_TYPE_EmployeeParTestAgent_STV_LIST_F_0>()
 {
-	unsigned char* pc = (unsigned char*)(&EmployeeParTestAgent::STV_LIST_F_0);
-	return *(reinterpret_cast<behaviac::vector<float>*>(pc));
+	return EmployeeParTestAgent::STV_LIST_F_0;
 }
 
 struct PROPERTY_TYPE_EmployeeParTestAgent_STV_LIST_STR_0 { };
 template<> inline behaviac::vector<behaviac::string>& EmployeeParTestAgent::_Get_Property_<PROPERTY_TYPE_EmployeeParTestAgent_STV_LIST_STR_0>()
 {
-	unsigned char* pc = (unsigned char*)(&EmployeeParTestAgent::STV_LIST_STR_0);
-	return *(reinterpret_cast<behaviac::vector<behaviac::string>*>(pc));
+	return EmployeeParTestAgent::STV_LIST_STR_0;
 }
 
 struct PROPERTY_TYPE_EmployeeParTestAgent_STV_STR_0 { };
 template<> inline behaviac::string& EmployeeParTestAgent::_Get_Property_<PROPERTY_TYPE_EmployeeParTestAgent_STV_STR_0>()
 {
-	unsigned char* pc = (unsigned char*)(&EmployeeParTestAgent::STV_STR_0);
-	return *(reinterpret_cast<behaviac::string*>(pc));
+	return EmployeeParTestAgent::STV_STR_0;
 }
 
 struct PROPERTY_TYPE_EmployeeParTestAgent_TV_AGENT_0 { };
 template<> inline behaviac::Agent*& EmployeeParTestAgent::_Get_Property_<PROPERTY_TYPE_EmployeeParTestAgent_TV_AGENT_0>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(EmployeeParTestAgent, EmployeeParTestAgent::TV_AGENT_0);
-	return *(reinterpret_cast<behaviac::Agent**>(pc));
+	return this->TV_AGENT_0;
 }
 
 struct PROPERTY_TYPE_EmployeeParTestAgent_TV_CSZSTR_0 { };
 template<> inline char*& EmployeeParTestAgent::_Get_Property_<PROPERTY_TYPE_EmployeeParTestAgent_TV_CSZSTR_0>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(EmployeeParTestAgent, EmployeeParTestAgent::TV_CSZSTR_0);
-	return *(reinterpret_cast<char**>(pc));
+	return (char*&)this->TV_CSZSTR_0;
 }
 
 struct PROPERTY_TYPE_EmployeeParTestAgent_TV_D_0 { };
 template<> inline double& EmployeeParTestAgent::_Get_Property_<PROPERTY_TYPE_EmployeeParTestAgent_TV_D_0>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(EmployeeParTestAgent, EmployeeParTestAgent::TV_D_0);
-	return *(reinterpret_cast<double*>(pc));
+	return this->TV_D_0;
 }
 
 struct PROPERTY_TYPE_EmployeeParTestAgent_TV_F_0 { };
 template<> inline float& EmployeeParTestAgent::_Get_Property_<PROPERTY_TYPE_EmployeeParTestAgent_TV_F_0>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(EmployeeParTestAgent, EmployeeParTestAgent::TV_F_0);
-	return *(reinterpret_cast<float*>(pc));
+	return this->TV_F_0;
 }
 
 struct PROPERTY_TYPE_EmployeeParTestAgent_TV_LIST_AGENT_0 { };
 template<> inline behaviac::vector<behaviac::Agent*>& EmployeeParTestAgent::_Get_Property_<PROPERTY_TYPE_EmployeeParTestAgent_TV_LIST_AGENT_0>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(EmployeeParTestAgent, EmployeeParTestAgent::TV_LIST_AGENT_0);
-	return *(reinterpret_cast<behaviac::vector<behaviac::Agent*>*>(pc));
+	return this->TV_LIST_AGENT_0;
 }
 
 struct PROPERTY_TYPE_EmployeeParTestAgent_TV_LIST_F_0 { };
 template<> inline behaviac::vector<float>& EmployeeParTestAgent::_Get_Property_<PROPERTY_TYPE_EmployeeParTestAgent_TV_LIST_F_0>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(EmployeeParTestAgent, EmployeeParTestAgent::TV_LIST_F_0);
-	return *(reinterpret_cast<behaviac::vector<float>*>(pc));
+	return this->TV_LIST_F_0;
 }
 
 struct PROPERTY_TYPE_EmployeeParTestAgent_TV_LIST_STR_0 { };
 template<> inline behaviac::vector<behaviac::string>& EmployeeParTestAgent::_Get_Property_<PROPERTY_TYPE_EmployeeParTestAgent_TV_LIST_STR_0>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(EmployeeParTestAgent, EmployeeParTestAgent::TV_LIST_STR_0);
-	return *(reinterpret_cast<behaviac::vector<behaviac::string>*>(pc));
+	return this->TV_LIST_STR_0;
 }
 
 struct PROPERTY_TYPE_EmployeeParTestAgent_TV_LL_0 { };
 template<> inline long long& EmployeeParTestAgent::_Get_Property_<PROPERTY_TYPE_EmployeeParTestAgent_TV_LL_0>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(EmployeeParTestAgent, EmployeeParTestAgent::TV_LL_0);
-	return *(reinterpret_cast<long long*>(pc));
+	return this->TV_LL_0;
 }
 
 struct PROPERTY_TYPE_EmployeeParTestAgent_TV_STR_0 { };
 template<> inline behaviac::string& EmployeeParTestAgent::_Get_Property_<PROPERTY_TYPE_EmployeeParTestAgent_TV_STR_0>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(EmployeeParTestAgent, EmployeeParTestAgent::TV_STR_0);
-	return *(reinterpret_cast<behaviac::string*>(pc));
+	return this->TV_STR_0;
 }
 
 struct PROPERTY_TYPE_EmployeeParTestAgent_TV_SZSTR_0 { };
 template<> inline char*& EmployeeParTestAgent::_Get_Property_<PROPERTY_TYPE_EmployeeParTestAgent_TV_SZSTR_0>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(EmployeeParTestAgent, EmployeeParTestAgent::TV_SZSTR_0);
-	return *(reinterpret_cast<char**>(pc));
+	return (char*&)this->TV_SZSTR_0;
 }
 
 struct PROPERTY_TYPE_EmployeeParTestAgent_TV_UINT_0 { };
 template<> inline unsigned int& EmployeeParTestAgent::_Get_Property_<PROPERTY_TYPE_EmployeeParTestAgent_TV_UINT_0>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(EmployeeParTestAgent, EmployeeParTestAgent::TV_UINT_0);
-	return *(reinterpret_cast<unsigned int*>(pc));
+	return this->TV_UINT_0;
 }
 
 struct PROPERTY_TYPE_EmployeeParTestAgent_TV_ULL_0 { };
 template<> inline unsigned long long& EmployeeParTestAgent::_Get_Property_<PROPERTY_TYPE_EmployeeParTestAgent_TV_ULL_0>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(EmployeeParTestAgent, EmployeeParTestAgent::TV_ULL_0);
-	return *(reinterpret_cast<unsigned long long*>(pc));
+	return this->TV_ULL_0;
 }
 
 struct PROPERTY_TYPE_EmployeeParTestAgent_TV_ULONG_0 { };
 template<> inline unsigned long& EmployeeParTestAgent::_Get_Property_<PROPERTY_TYPE_EmployeeParTestAgent_TV_ULONG_0>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(EmployeeParTestAgent, EmployeeParTestAgent::TV_ULONG_0);
-	return *(reinterpret_cast<unsigned long*>(pc));
+	return this->TV_ULONG_0;
 }
 
 struct METHOD_TYPE_EmployeeParTestAgent_Func_AgentIR { };
@@ -1242,9 +1134,7 @@ template<> inline void EmployeeParTestAgent::_Execute_Method_<METHOD_TYPE_Employ
 struct PROPERTY_TYPE_FSMAgentTest_Message { };
 template<> inline FSMAgentTest::EMessage& FSMAgentTest::_Get_Property_<PROPERTY_TYPE_FSMAgentTest_Message>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(FSMAgentTest, FSMAgentTest::Message);
-	return *(reinterpret_cast<FSMAgentTest::EMessage*>(pc));
+	return this->Message;
 }
 
 struct METHOD_TYPE_FSMAgentTest_active_update { };
@@ -1391,78 +1281,61 @@ template<> inline bool HTNAgentTravel::_Execute_Method_<METHOD_TYPE_HTNAgentTrav
 struct PROPERTY_TYPE_ParTestRegNameAgent_STV_KEMPLOYEE_0 { };
 template<> inline TNS::ST::PER::WRK::kEmployee& ParTestRegNameAgent::_Get_Property_<PROPERTY_TYPE_ParTestRegNameAgent_STV_KEMPLOYEE_0>()
 {
-	unsigned char* pc = (unsigned char*)(&ParTestRegNameAgent::STV_KEMPLOYEE_0);
-	return *(reinterpret_cast<TNS::ST::PER::WRK::kEmployee*>(pc));
+	return ParTestRegNameAgent::STV_KEMPLOYEE_0;
 }
 
 struct PROPERTY_TYPE_ParTestRegNameAgent_STV_LIST_KEMPLOYEE_0 { };
 template<> inline behaviac::vector<TNS::ST::PER::WRK::kEmployee>& ParTestRegNameAgent::_Get_Property_<PROPERTY_TYPE_ParTestRegNameAgent_STV_LIST_KEMPLOYEE_0>()
 {
-	unsigned char* pc = (unsigned char*)(&ParTestRegNameAgent::STV_LIST_KEMPLOYEE_0);
-	return *(reinterpret_cast<behaviac::vector<TNS::ST::PER::WRK::kEmployee>*>(pc));
+	return ParTestRegNameAgent::STV_LIST_KEMPLOYEE_0;
 }
 
 struct PROPERTY_TYPE_ParTestRegNameAgent_STV_LIST_SBYTE_0 { };
 template<> inline behaviac::vector<signed char>& ParTestRegNameAgent::_Get_Property_<PROPERTY_TYPE_ParTestRegNameAgent_STV_LIST_SBYTE_0>()
 {
-	unsigned char* pc = (unsigned char*)(&ParTestRegNameAgent::STV_LIST_SBYTE_0);
-	return *(reinterpret_cast<behaviac::vector<signed char>*>(pc));
+	return ParTestRegNameAgent::STV_LIST_SBYTE_0;
 }
 
 struct PROPERTY_TYPE_ParTestRegNameAgent_TV_AGENT_0 { };
 template<> inline behaviac::Agent*& ParTestRegNameAgent::_Get_Property_<PROPERTY_TYPE_ParTestRegNameAgent_TV_AGENT_0>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(ParTestRegNameAgent, ParTestRegNameAgent::TV_AGENT_0);
-	return *(reinterpret_cast<behaviac::Agent**>(pc));
+	return this->TV_AGENT_0;
 }
 
 struct PROPERTY_TYPE_ParTestRegNameAgent_TV_BYTE_0 { };
 template<> inline unsigned char& ParTestRegNameAgent::_Get_Property_<PROPERTY_TYPE_ParTestRegNameAgent_TV_BYTE_0>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(ParTestRegNameAgent, ParTestRegNameAgent::TV_BYTE_0);
-	return *(reinterpret_cast<unsigned char*>(pc));
+	return this->TV_BYTE_0;
 }
 
 struct PROPERTY_TYPE_ParTestRegNameAgent_TV_CHAR_0 { };
 template<> inline char& ParTestRegNameAgent::_Get_Property_<PROPERTY_TYPE_ParTestRegNameAgent_TV_CHAR_0>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(ParTestRegNameAgent, ParTestRegNameAgent::TV_CHAR_0);
-	return *(reinterpret_cast<char*>(pc));
+	return this->TV_CHAR_0;
 }
 
 struct PROPERTY_TYPE_ParTestRegNameAgent_TV_KEMPLOYEE_0 { };
 template<> inline TNS::ST::PER::WRK::kEmployee& ParTestRegNameAgent::_Get_Property_<PROPERTY_TYPE_ParTestRegNameAgent_TV_KEMPLOYEE_0>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(ParTestRegNameAgent, ParTestRegNameAgent::TV_KEMPLOYEE_0);
-	return *(reinterpret_cast<TNS::ST::PER::WRK::kEmployee*>(pc));
+	return this->TV_KEMPLOYEE_0;
 }
 
 struct PROPERTY_TYPE_ParTestRegNameAgent_TV_LIST_KEMPLOYEE_0 { };
 template<> inline behaviac::vector<TNS::ST::PER::WRK::kEmployee>& ParTestRegNameAgent::_Get_Property_<PROPERTY_TYPE_ParTestRegNameAgent_TV_LIST_KEMPLOYEE_0>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(ParTestRegNameAgent, ParTestRegNameAgent::TV_LIST_KEMPLOYEE_0);
-	return *(reinterpret_cast<behaviac::vector<TNS::ST::PER::WRK::kEmployee>*>(pc));
+	return this->TV_LIST_KEMPLOYEE_0;
 }
 
 struct PROPERTY_TYPE_ParTestRegNameAgent_TV_SBYTE_0 { };
 template<> inline signed char& ParTestRegNameAgent::_Get_Property_<PROPERTY_TYPE_ParTestRegNameAgent_TV_SBYTE_0>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(ParTestRegNameAgent, ParTestRegNameAgent::TV_SBYTE_0);
-	return *(reinterpret_cast<signed char*>(pc));
+	return this->TV_SBYTE_0;
 }
 
 struct PROPERTY_TYPE_ParTestRegNameAgent_TV_STR_0 { };
 template<> inline behaviac::string& ParTestRegNameAgent::_Get_Property_<PROPERTY_TYPE_ParTestRegNameAgent_TV_STR_0>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(ParTestRegNameAgent, ParTestRegNameAgent::TV_STR_0);
-	return *(reinterpret_cast<behaviac::string*>(pc));
+	return this->TV_STR_0;
 }
 
 struct METHOD_TYPE_ParTestRegNameAgent_Func_AgentIR { };
@@ -1517,33 +1390,25 @@ template<> inline behaviac::string ParTestRegNameAgent::_Execute_Method_<METHOD_
 struct PROPERTY_TYPE_PreconEffectorAgent_count_both { };
 template<> inline int& PreconEffectorAgent::_Get_Property_<PROPERTY_TYPE_PreconEffectorAgent_count_both>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(PreconEffectorAgent, PreconEffectorAgent::count_both);
-	return *(reinterpret_cast<int*>(pc));
+	return this->count_both;
 }
 
 struct PROPERTY_TYPE_PreconEffectorAgent_count_failure { };
 template<> inline int& PreconEffectorAgent::_Get_Property_<PROPERTY_TYPE_PreconEffectorAgent_count_failure>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(PreconEffectorAgent, PreconEffectorAgent::count_failure);
-	return *(reinterpret_cast<int*>(pc));
+	return this->count_failure;
 }
 
 struct PROPERTY_TYPE_PreconEffectorAgent_count_success { };
 template<> inline int& PreconEffectorAgent::_Get_Property_<PROPERTY_TYPE_PreconEffectorAgent_count_success>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(PreconEffectorAgent, PreconEffectorAgent::count_success);
-	return *(reinterpret_cast<int*>(pc));
+	return this->count_success;
 }
 
 struct PROPERTY_TYPE_PreconEffectorAgent_ret { };
 template<> inline int& PreconEffectorAgent::_Get_Property_<PROPERTY_TYPE_PreconEffectorAgent_ret>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(PreconEffectorAgent, PreconEffectorAgent::ret);
-	return *(reinterpret_cast<int*>(pc));
+	return this->ret;
 }
 
 struct METHOD_TYPE_PreconEffectorAgent_action { };
@@ -1562,40 +1427,31 @@ template<> inline int PreconEffectorAgent::_Execute_Method_<METHOD_TYPE_PreconEf
 struct PROPERTY_TYPE_PropertyReadonlyAgent_MemberReadonly { };
 template<> inline int& PropertyReadonlyAgent::_Get_Property_<PROPERTY_TYPE_PropertyReadonlyAgent_MemberReadonly>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(PropertyReadonlyAgent, PropertyReadonlyAgent::MemberReadonly);
-	return *(reinterpret_cast<int*>(pc));
+	return (int&)this->MemberReadonly;
 }
 
 struct PROPERTY_TYPE_PropertyReadonlyAgent_MemberReadonlyAs { };
 template<> inline int& PropertyReadonlyAgent::_Get_Property_<PROPERTY_TYPE_PropertyReadonlyAgent_MemberReadonlyAs>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(PropertyReadonlyAgent, PropertyReadonlyAgent::MemberReadonlyAs);
-	return *(reinterpret_cast<int*>(pc));
+	return (int&)this->MemberReadonlyAs;
 }
 
 struct PROPERTY_TYPE_PropertyReadonlyAgent_PropertyGetterOnly { };
 template<> inline int& PropertyReadonlyAgent::_Get_Property_<PROPERTY_TYPE_PropertyReadonlyAgent_PropertyGetterOnly>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(PropertyReadonlyAgent, PropertyReadonlyAgent::PropertyGetterOnly);
-	return *(reinterpret_cast<int*>(pc));
+	return this->PropertyGetterOnly;
 }
 
 struct PROPERTY_TYPE_PropertyReadonlyAgent_PropertyGetterSetter { };
 template<> inline int& PropertyReadonlyAgent::_Get_Property_<PROPERTY_TYPE_PropertyReadonlyAgent_PropertyGetterSetter>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(PropertyReadonlyAgent, PropertyReadonlyAgent::PropertyGetterSetter);
-	return *(reinterpret_cast<int*>(pc));
+	return this->PropertyGetterSetter;
 }
 
 struct PROPERTY_TYPE_PropertyReadonlyAgent_StaticPropertyGetterSetter { };
 template<> inline float& PropertyReadonlyAgent::_Get_Property_<PROPERTY_TYPE_PropertyReadonlyAgent_StaticPropertyGetterSetter>()
 {
-	unsigned char* pc = (unsigned char*)(&PropertyReadonlyAgent::StaticPropertyGetterSetter);
-	return *(reinterpret_cast<float*>(pc));
+	return PropertyReadonlyAgent::StaticPropertyGetterSetter;
 }
 
 struct METHOD_TYPE_PropertyReadonlyAgent_FnWithOutParam { };
@@ -1614,8 +1470,7 @@ template<> inline void PropertyReadonlyAgent::_Execute_Method_<METHOD_TYPE_Prope
 struct PROPERTY_TYPE_StaticAgent_sInt { };
 template<> inline int& StaticAgent::_Get_Property_<PROPERTY_TYPE_StaticAgent_sInt>()
 {
-	unsigned char* pc = (unsigned char*)(&StaticAgent::sInt);
-	return *(reinterpret_cast<int*>(pc));
+	return StaticAgent::sInt;
 }
 
 struct METHOD_TYPE_StaticAgent_sAction { };
@@ -1630,17 +1485,13 @@ namespace TestNS
 	struct PROPERTY_TYPE_TestNS_AgentArrayAccessTest_Int { };
 	template<> inline int& AgentArrayAccessTest::_Get_Property_<PROPERTY_TYPE_TestNS_AgentArrayAccessTest_Int>()
 	{
-		unsigned char* pc = (unsigned char*)this;
-		pc += (int)BEHAVIAC_OFFSETOF(TestNS::AgentArrayAccessTest, TestNS::AgentArrayAccessTest::Int);
-		return *(reinterpret_cast<int*>(pc));
+		return this->Int;
 	}
 
 	struct PROPERTY_TYPE_TestNS_AgentArrayAccessTest_ListInts { };
 	template<> inline behaviac::vector<int>& AgentArrayAccessTest::_Get_Property_<PROPERTY_TYPE_TestNS_AgentArrayAccessTest_ListInts>()
 	{
-		unsigned char* pc = (unsigned char*)this;
-		pc += (int)BEHAVIAC_OFFSETOF(TestNS::AgentArrayAccessTest, TestNS::AgentArrayAccessTest::ListInts);
-		return *(reinterpret_cast<behaviac::vector<int>*>(pc));
+		return this->ListInts;
 	}
 
 }

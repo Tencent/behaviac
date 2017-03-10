@@ -16,11 +16,21 @@ public class FirstAgent : behaviac.Agent
 ///<<< BEGIN WRITING YOUR CODE FirstAgent
 ///<<< END WRITING YOUR CODE
 {
-	public void SayHello()
+	private int p1 = 0;
+	public void _set_p1(int value)
 	{
-///<<< BEGIN WRITING YOUR CODE SayHello
+		p1 = value;
+	}
+	public int _get_p1()
+	{
+		return p1;
+	}
+
+	public void m1(string value)
+	{
+///<<< BEGIN WRITING YOUR CODE m1
         Console.WriteLine();
-        Console.WriteLine("Hello Behaviac!");
+        Console.WriteLine("{0}", value);
         Console.WriteLine();
 ///<<< END WRITING YOUR CODE
 	}

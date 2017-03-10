@@ -13,19 +13,16 @@ namespace behaviac
 {
 }
 
-
-struct PROPERTY_TYPE_SecondAgent_p1 { };
-template<> inline int& SecondAgent::_Get_Property_<PROPERTY_TYPE_SecondAgent_p1>()
+struct PROPERTY_TYPE_FirstAgent_p1 { };
+template<> inline int& FirstAgent::_Get_Property_<PROPERTY_TYPE_FirstAgent_p1>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(SecondAgent, SecondAgent::p1);
-	return *(reinterpret_cast<int*>(pc));
+	return this->p1;
 }
 
-struct METHOD_TYPE_SecondAgent_m1 { };
-template<> inline void SecondAgent::_Execute_Method_<METHOD_TYPE_SecondAgent_m1>(behaviac::string& p0)
+struct METHOD_TYPE_FirstAgent_m1 { };
+template<> inline void FirstAgent::_Execute_Method_<METHOD_TYPE_FirstAgent_m1>(behaviac::string& p0)
 {
-	this->SecondAgent::m1(p0);
+	this->FirstAgent::m1(p0);
 }
 
 

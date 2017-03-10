@@ -208,6 +208,19 @@ namespace Behaviac.Design
             }
         }
 
+        private bool _useRelativePath = true;
+        public bool UseRelativePath
+        {
+            get
+            {
+                return _useRelativePath;
+            }
+            set
+            {
+                _useRelativePath = value;
+            }
+        }
+
         public class ExportData
         {
             private bool _isExported = true;
@@ -657,6 +670,7 @@ namespace Behaviac.Design
                     }
 
                     string promptMergingMetaFiles = GetAttribute(root, "promptmergingmeta");
+                    string useRelativePath = GetAttribute(root, "userelativepath");
 
                     if (string.IsNullOrEmpty(name) ||
                         string.IsNullOrEmpty(folder) ||
@@ -668,6 +682,7 @@ namespace Behaviac.Design
                     Workspace ws = new Workspace(useIntValue == "true", language, filename, name, metaFile, folder, defaultExportFolder);
                     ws.PromptMergingMetaFiles = (promptMergingMetaFiles == "true");
                     ws.Version = 0;
+                    ws.UseRelativePath = (useRelativePath != "false");
 
                     if (!string.IsNullOrEmpty(version))
                     {
@@ -803,6 +818,11 @@ namespace Behaviac.Design
                         if (ws.PromptMergingMetaFiles)
                         {
                             workspace.SetAttribute("promptmergingmeta", "true");
+                        }
+
+                        if (!ws.UseRelativePath)
+                        {
+                            workspace.SetAttribute("userelativepath", "false");
                         }
 
                         workspace.SetAttribute("version", Workspace.CurrentVersion.ToString());
@@ -1325,8 +1345,6 @@ namespace Behaviac.Design
                         isOutStr = GetAttribute(paramNode, "IsOut");
                     }
 
-                    bool isOut = (isOutStr == "true");
-
                     string isRefStr = GetAttribute(paramNode, "isref");
 
                     if (string.IsNullOrEmpty(isRefStr))
@@ -1334,7 +1352,7 @@ namespace Behaviac.Design
                         isRefStr = GetAttribute(paramNode, "IsRef");
                     }
 
-                    bool isRef = (isRefStr == "true");
+                    string isConstStr = GetAttribute(paramNode, "IsConst");
 
                     string nativeType = Plugin.GetNativeTypeName(paramType);
 
@@ -1358,8 +1376,9 @@ namespace Behaviac.Design
                     }
 
                     MethodDef.Param param = new MethodDef.Param(paramName, paramType, nativeType, paramDisp, paramDesc);
-                    param.IsOut = isOut;
-                    param.IsRef = isRef;
+                    param.IsOut = (isOutStr == "true");
+                    param.IsRef = (isRefStr == "true");
+                    param.IsConst = (isConstStr == "true");
 
                     method.Params.Add(param);
                 }
@@ -1838,6 +1857,11 @@ namespace Behaviac.Design
                         if (param.IsRef)
                         {
                             paramEle.SetAttribute("IsRef", "true");
+                        }
+
+                        if (param.IsConst)
+                        {
+                            paramEle.SetAttribute("IsConst", "true");
                         }
 
                         paramEle.SetAttribute("DisplayName", param.DisplayName);

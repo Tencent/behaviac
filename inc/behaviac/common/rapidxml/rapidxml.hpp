@@ -1,5 +1,5 @@
-#ifndef RAPIDXML_HPP_INCLUDED
-#define RAPIDXML_HPP_INCLUDED
+#ifndef BEHAVIAC_RAPIDXML_HPP_INCLUDED
+#define BEHAVIAC_RAPIDXML_HPP_INCLUDED
 
 // Copyright (C) 2006, 2009 Marcin Kalicinski
 // Version 1.13

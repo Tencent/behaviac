@@ -2,28 +2,28 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="test">
-      <UniqueIdentifier>{14D80A53-F9BA-6C4F-BE61-8652DC6768EE}</UniqueIdentifier>
+      <UniqueIdentifier>{F55F9133-9176-084B-A3FD-2F105C7FFFC5}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running">
-      <UniqueIdentifier>{0A1B6FB1-EB1F-FE40-A657-860B0AC1AD34}</UniqueIdentifier>
+      <UniqueIdentifier>{E7D2E4C3-EFA6-BE43-AF3B-968BDABDC707}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac">
-      <UniqueIdentifier>{BDD4095A-EA99-6C4F-B349-6E78BB01AB89}</UniqueIdentifier>
+      <UniqueIdentifier>{6011FA67-15C6-1C49-A530-45E9E27997CB}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac\exported">
-      <UniqueIdentifier>{1EF1A38F-1111-CE4B-9493-1C885830DDCF}</UniqueIdentifier>
+      <UniqueIdentifier>{42ADFCCB-B994-754B-A422-E11D3F98CA51}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac\exported\behaviac_generated">
-      <UniqueIdentifier>{49F3222F-FB90-7C40-A3D6-14CD30B06790}</UniqueIdentifier>
+      <UniqueIdentifier>{A18E0C7E-69CB-294A-B117-9A86F601EE5D}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac\exported\behaviac_generated\behaviors">
-      <UniqueIdentifier>{066C6BC5-7EA2-494D-8171-6587DE2719A5}</UniqueIdentifier>
+      <UniqueIdentifier>{41C150D6-7CB2-9F42-AA2F-04983437C88E}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac\exported\behaviac_generated\types">
-      <UniqueIdentifier>{C623F1A5-219D-204C-891F-A0266AB384D2}</UniqueIdentifier>
+      <UniqueIdentifier>{15258383-9521-CF43-BA3D-D9F03AF6AF37}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac\exported\behaviac_generated\types\internal">
-      <UniqueIdentifier>{7DE1F66C-BA50-8645-84EA-EA9CC76C043D}</UniqueIdentifier>
+      <UniqueIdentifier>{21369C56-4DB7-734B-B14D-E1041C328DA0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

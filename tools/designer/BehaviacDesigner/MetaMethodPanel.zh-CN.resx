@@ -131,13 +131,13 @@
     <value>静态?</value>
   </data>
   <data name="arrayCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>450, 45</value>
+    <value>474, 45</value>
   </data>
   <data name="arrayCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 16</value>
+    <value>54, 16</value>
   </data>
   <data name="arrayCheckBox.Text" xml:space="preserve">
-    <value>是否数组?</value>
+    <value>数组?</value>
   </data>
   <data name="descLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>35, 12</value>
@@ -169,6 +169,9 @@
   <data name="nameLabel.Text" xml:space="preserve">
     <value>名字</value>
   </data>
+  <data name="isConstlabel.Text" xml:space="preserve">
+    <value>是否常量</value>
+  </data>
   <data name="removeParamButton.Text" xml:space="preserve">
     <value>删除</value>
   </data>
@@ -182,7 +185,7 @@
     <value>参数:</value>
   </data>
   <data name="returnTypeComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>356, 20</value>
+    <value>380, 20</value>
   </data>
   <data name="typeLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>71, 12</value>
