@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tutorial_4", "..\tutorial_4
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tutorial_1_2", "..\tutorial_1_2\cs\tutorial_1_2.csproj", "{5989203F-A9DE-48C4-B7F5-A4D8DB252C44}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tutorial_6", "..\tutorial_6\cs\tutorial_6.csproj", "{65CFD67D-4AE5-47D0-8E01-0A6BB988B9ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -109,6 +111,16 @@ Global
 		{5989203F-A9DE-48C4-B7F5-A4D8DB252C44}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{5989203F-A9DE-48C4-B7F5-A4D8DB252C44}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{5989203F-A9DE-48C4-B7F5-A4D8DB252C44}.Release|Win32.ActiveCfg = Release|Any CPU
+		{65CFD67D-4AE5-47D0-8E01-0A6BB988B9ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65CFD67D-4AE5-47D0-8E01-0A6BB988B9ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65CFD67D-4AE5-47D0-8E01-0A6BB988B9ED}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{65CFD67D-4AE5-47D0-8E01-0A6BB988B9ED}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{65CFD67D-4AE5-47D0-8E01-0A6BB988B9ED}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{65CFD67D-4AE5-47D0-8E01-0A6BB988B9ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65CFD67D-4AE5-47D0-8E01-0A6BB988B9ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65CFD67D-4AE5-47D0-8E01-0A6BB988B9ED}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{65CFD67D-4AE5-47D0-8E01-0A6BB988B9ED}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{65CFD67D-4AE5-47D0-8E01-0A6BB988B9ED}.Release|Win32.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,5 +1,5 @@
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://github.com/Tencent/behaviac/blob/master/license.txt)
-[![Release Version](https://img.shields.io/badge/release-3.6.24-red.svg)](https://github.com/Tencent/behaviac/releases)
+[![Release Version](https://img.shields.io/badge/release-3.6.25-red.svg)](https://github.com/Tencent/behaviac/releases)
 [![Updates](https://img.shields.io/badge/Platform-iOS | Android | Windows | Linux | Unity -brightgreen.svg)](https://github.com/Tencent/behaviac/blob/master/history.txt)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Tencent/behaviac/pulls)
 

@@ -1289,8 +1289,8 @@ namespace behaviac
             LogError(msg);
 
 #if !BEHAVIAC_NOT_USE_UNITY
-            //UnityEngine.Debug.Break();
-            System.Diagnostics.Debug.Assert(false);
+            UnityEngine.Debug.Break();
+            //System.Diagnostics.Debug.Assert(false);
 #else
             //throw new Exception();
             System.Diagnostics.Debug.Assert(false);

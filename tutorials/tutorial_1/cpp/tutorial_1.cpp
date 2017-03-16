@@ -24,7 +24,6 @@
 #endif
 
 using namespace std;
-using namespace behaviac;
 
 FirstAgent* g_FirstAgent = NULL;
 

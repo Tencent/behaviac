@@ -868,4 +868,7 @@
   <data name="AutoMergeMetaFilesInfo" xml:space="preserve">
     <value>多个类型信息文件将被自动合并，并删除掉旧的类型信息文件，确定吗？</value>
   </data>
+  <data name="ReferencedBehaviorFilename" xml:space="preserve">
+    <value>引用文件名</value>
+  </data>
 </root>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: maintree_task.xml-->
+<behavior name="maintree_task" agenttype="FirstAgent" version="5">
+  <node class="Sequence" id="0">
+    <attachment class="Event" id="1" flag="event">
+      <property ReferenceFilename="subtree_task" />
+      <property Task="Self.FirstAgent::event_task(0)" />
+      <property TriggeredOnce="false" />
+      <property TriggerMode="Transfer" />
+    </attachment>
+    <node class="Action" id="4">
+      <property Method="Self.FirstAgent::Say(&quot;Wait subtree...&quot;)" />
+      <property ResultOption="BT_RUNNING" />
+    </node>
+    <node class="Assignment" id="3">
+      <property CastRight="false" />
+      <property Opl="int Self.FirstAgent::p1" />
+      <property Opr="const int 1" />
+    </node>
+    <node class="Condition" id="2">
+      <property Operator="Equal" />
+      <property Opl="int Self.FirstAgent::p1" />
+      <property Opr="const int 1" />
+    </node>
+    <node class="Action" id="5">
+      <property Method="Self.FirstAgent::Say(&quot;Hello maintree!&quot;)" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+  </node>
+</behavior>

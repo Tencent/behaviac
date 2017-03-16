@@ -385,7 +385,7 @@ namespace Behaviac.Design.Importers
 
                                 if (i == 0 && classfullname != "behaviac::Agent")
                                 {
-                                    wrtr.WriteLine("\t[Behaviac.Design.ClassDesc(\"behaviac::Agent\", \"Agent\", false, true, false, \"\", \"\", false, true, \"\")]");
+                                    wrtr.WriteLine("\t[Behaviac.Design.ClassDesc(\"behaviac::Agent\", \"\", \"Agent\", false, true, false, \"\", \"\", false, true, \"\")]");
                                     wrtr.WriteLine("\tpublic class behaviac_Agent : Behaviac.Design.Agent");
                                     wrtr.WriteLine("\t{");
                                     wrtr.WriteLine("\t}\n");

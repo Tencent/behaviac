@@ -2,166 +2,166 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="inc">
-      <UniqueIdentifier>{A61E554B-F50C-4041-90C3-B04CEA47D42C}</UniqueIdentifier>
+      <UniqueIdentifier>{4B74C9AE-2982-3745-8282-C526D8F64CE8}</UniqueIdentifier>
     </Filter>
     <Filter Include="inc\behaviac">
-      <UniqueIdentifier>{6D83E72C-9A56-EB44-A5C6-1C858BDDD59F}</UniqueIdentifier>
+      <UniqueIdentifier>{556D341E-F013-C54F-ABED-BCAB84FF4B4C}</UniqueIdentifier>
     </Filter>
     <Filter Include="inc\behaviac\agent">
-      <UniqueIdentifier>{5F78B868-63ED-0D44-89DA-FBDEC3E657FF}</UniqueIdentifier>
+      <UniqueIdentifier>{9EBDC145-9EA0-934D-8001-0E4A0CE2D227}</UniqueIdentifier>
     </Filter>
     <Filter Include="inc\behaviac\behaviortree">
-      <UniqueIdentifier>{723C61AD-E379-5646-A544-804E61A6B7F6}</UniqueIdentifier>
+      <UniqueIdentifier>{04299F82-19AF-AB40-856F-BAB4A1499E3E}</UniqueIdentifier>
     </Filter>
     <Filter Include="inc\behaviac\behaviortree\attachments">
-      <UniqueIdentifier>{52B5D628-3DF4-7E4C-A148-5947AC707E8A}</UniqueIdentifier>
+      <UniqueIdentifier>{205633CD-1C95-264F-885A-85B7F2C69FE9}</UniqueIdentifier>
     </Filter>
     <Filter Include="inc\behaviac\behaviortree\nodes">
-      <UniqueIdentifier>{FCEC89D4-02DE-3648-B057-083BD435EEFD}</UniqueIdentifier>
+      <UniqueIdentifier>{A0F5FF8A-66D8-5B4E-B9CE-FED18BD50570}</UniqueIdentifier>
     </Filter>
     <Filter Include="inc\behaviac\behaviortree\nodes\actions">
-      <UniqueIdentifier>{12665B44-0660-B041-8FBD-7AF7E6770B2B}</UniqueIdentifier>
+      <UniqueIdentifier>{1609703F-ACD1-8A46-B42C-218F33D32BEF}</UniqueIdentifier>
     </Filter>
     <Filter Include="inc\behaviac\behaviortree\nodes\composites">
-      <UniqueIdentifier>{EFD89F47-72A0-2C4B-B193-C222256AC9CB}</UniqueIdentifier>
+      <UniqueIdentifier>{A1B0D5FE-7F65-F147-A9B8-DFDE751A5B27}</UniqueIdentifier>
     </Filter>
     <Filter Include="inc\behaviac\behaviortree\nodes\conditions">
-      <UniqueIdentifier>{EB751EFA-51B2-164B-AAC3-434D48F77F27}</UniqueIdentifier>
+      <UniqueIdentifier>{2EC3FD07-A382-394A-A442-AB9924C73ED7}</UniqueIdentifier>
     </Filter>
     <Filter Include="inc\behaviac\behaviortree\nodes\decorators">
-      <UniqueIdentifier>{80DD9E8F-12D4-4A4E-8086-49A6679DA74B}</UniqueIdentifier>
+      <UniqueIdentifier>{55ADFEEB-1CD0-D645-A90D-23A33B4E159C}</UniqueIdentifier>
     </Filter>
     <Filter Include="inc\behaviac\common">
-      <UniqueIdentifier>{77B55811-1249-1443-BEA4-F2F588E68679}</UniqueIdentifier>
+      <UniqueIdentifier>{A315A0F5-89A2-B249-BF80-92F6A5F541A4}</UniqueIdentifier>
     </Filter>
     <Filter Include="inc\behaviac\common\container">
-      <UniqueIdentifier>{935B9729-D420-9C43-8484-8F2D607BC62F}</UniqueIdentifier>
+      <UniqueIdentifier>{AFEEE7BC-0894-E647-9B2A-C5329055F48C}</UniqueIdentifier>
     </Filter>
     <Filter Include="inc\behaviac\common\file">
-      <UniqueIdentifier>{A4709BFD-28A0-B740-8B79-798FD85A2523}</UniqueIdentifier>
+      <UniqueIdentifier>{6755632D-5181-3C48-96EA-5B3358E0E111}</UniqueIdentifier>
     </Filter>
     <Filter Include="inc\behaviac\common\logger">
-      <UniqueIdentifier>{F237FFEA-E165-BE4D-8E6E-B874D4E2B5B4}</UniqueIdentifier>
+      <UniqueIdentifier>{335971D1-D7F6-7743-A083-60866BF5FC00}</UniqueIdentifier>
     </Filter>
     <Filter Include="inc\behaviac\common\memory">
-      <UniqueIdentifier>{BA548B4B-71BD-B841-9FF8-BA3D462816F4}</UniqueIdentifier>
+      <UniqueIdentifier>{F871BC61-77A0-1245-BD2F-8BD41F72640F}</UniqueIdentifier>
     </Filter>
     <Filter Include="inc\behaviac\common\meta">
-      <UniqueIdentifier>{15CD0962-04F2-4B4D-B7CD-4FB97A95199D}</UniqueIdentifier>
+      <UniqueIdentifier>{D5042ABA-690E-A64C-9846-DDA9910463F8}</UniqueIdentifier>
     </Filter>
     <Filter Include="inc\behaviac\common\object">
-      <UniqueIdentifier>{C1A86649-365F-1A49-AA7C-1BD76B3D1EC5}</UniqueIdentifier>
+      <UniqueIdentifier>{1DD54556-ABD8-FA43-AE78-3E886C590EAA}</UniqueIdentifier>
     </Filter>
     <Filter Include="inc\behaviac\common\profiler">
-      <UniqueIdentifier>{8234CD61-585C-9443-9091-1D3B21846952}</UniqueIdentifier>
+      <UniqueIdentifier>{FEDDFF36-CA82-3849-9CCD-18EC4F04B965}</UniqueIdentifier>
     </Filter>
     <Filter Include="inc\behaviac\common\randomgenerator">
-      <UniqueIdentifier>{C75102FC-4FDC-CF4B-B700-91BE29538058}</UniqueIdentifier>
+      <UniqueIdentifier>{20D57225-57D2-7E4F-9044-97C80918C6E0}</UniqueIdentifier>
     </Filter>
     <Filter Include="inc\behaviac\common\serialization">
-      <UniqueIdentifier>{D66B3A27-EED8-7143-872E-4CD2D3998ABE}</UniqueIdentifier>
+      <UniqueIdentifier>{350451A9-C4B6-E540-B531-D13067A8DEEF}</UniqueIdentifier>
     </Filter>
     <Filter Include="inc\behaviac\common\socket">
-      <UniqueIdentifier>{5BD659F4-F0C5-7347-B063-C4353622F80D}</UniqueIdentifier>
+      <UniqueIdentifier>{8209DC2E-6237-F645-B2FD-3205FA32B7F2}</UniqueIdentifier>
     </Filter>
     <Filter Include="inc\behaviac\common\string">
-      <UniqueIdentifier>{BFC19D12-F6E0-B44A-8489-59BA93E58F8F}</UniqueIdentifier>
+      <UniqueIdentifier>{76D299F0-D98C-C24F-8D36-8D45DDC331BF}</UniqueIdentifier>
     </Filter>
     <Filter Include="inc\behaviac\common\thread">
-      <UniqueIdentifier>{94E9926D-B3E4-EE41-AAB5-98CC74581E15}</UniqueIdentifier>
+      <UniqueIdentifier>{166BFA05-C520-194E-B6BA-DB391BBD7B20}</UniqueIdentifier>
     </Filter>
     <Filter Include="inc\behaviac\common\xml">
-      <UniqueIdentifier>{403F5F8D-642F-CD44-BA48-2D3FA627B693}</UniqueIdentifier>
+      <UniqueIdentifier>{F15EA89E-95EB-DF44-8615-B066615C6F0F}</UniqueIdentifier>
     </Filter>
     <Filter Include="inc\behaviac\fsm">
-      <UniqueIdentifier>{49C10B2F-BA07-724F-9E88-046D66E62D44}</UniqueIdentifier>
+      <UniqueIdentifier>{12FB189D-10B8-834D-9493-C23A1E4966D1}</UniqueIdentifier>
     </Filter>
     <Filter Include="inc\behaviac\htn">
-      <UniqueIdentifier>{9AF551B4-96C1-2E42-AE93-72EE4451A407}</UniqueIdentifier>
+      <UniqueIdentifier>{B40F93C5-7A55-5040-AF16-AA39F34A81F4}</UniqueIdentifier>
     </Filter>
     <Filter Include="inc\behaviac\network">
-      <UniqueIdentifier>{FBCC912B-DB64-E049-A842-94868BFC209C}</UniqueIdentifier>
+      <UniqueIdentifier>{017B97E2-57D4-6846-A894-7AFA69F71EF9}</UniqueIdentifier>
     </Filter>
     <Filter Include="inc\behaviac\property">
-      <UniqueIdentifier>{DA4F578B-8305-564A-87F8-76F6003BAB06}</UniqueIdentifier>
+      <UniqueIdentifier>{1F28D56F-0427-FD40-8D78-6ABDDE2E7C6A}</UniqueIdentifier>
     </Filter>
     <Filter Include="inc\behaviac\common\rapidxml">
-      <UniqueIdentifier>{A7F7519D-892F-5D46-A02F-CD5D538B6C0D}</UniqueIdentifier>
+      <UniqueIdentifier>{6DF176A7-3B29-3346-90B3-49CFA88B14AA}</UniqueIdentifier>
     </Filter>
     <Filter Include="src">
-      <UniqueIdentifier>{FBB09538-AADE-304E-A2DB-F3199CD3B37F}</UniqueIdentifier>
+      <UniqueIdentifier>{3A569644-DDD6-114B-A2A0-078EF5CC4818}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\agent">
-      <UniqueIdentifier>{15EC4782-B25D-BB4B-8E20-B0DB1A63125C}</UniqueIdentifier>
+      <UniqueIdentifier>{083A9076-32E1-3448-ADC5-BD36A4CFD244}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\behaviortree">
-      <UniqueIdentifier>{DF96B5D8-B867-E34E-878B-8DAE7248D54E}</UniqueIdentifier>
+      <UniqueIdentifier>{48D5313E-26D4-B046-9AF4-D6C4C00C98EA}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\behaviortree\attachments">
-      <UniqueIdentifier>{8FFD646D-9AA7-5E40-A572-52ADF92732D7}</UniqueIdentifier>
+      <UniqueIdentifier>{2B22AF11-C65F-8942-A34F-82B8D77B335A}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\behaviortree\nodes">
-      <UniqueIdentifier>{682ED4C8-7620-0C44-B6BC-CD42E4223A69}</UniqueIdentifier>
+      <UniqueIdentifier>{B4632CB6-050D-0B41-8D15-9558CEE9D755}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\behaviortree\nodes\actions">
-      <UniqueIdentifier>{50DCFC53-9BB1-EA41-8F8D-0489C9919431}</UniqueIdentifier>
+      <UniqueIdentifier>{13457559-7716-7F4F-8553-E53E6C2F0BDC}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\behaviortree\nodes\composites">
-      <UniqueIdentifier>{726D320E-75E3-8248-A0E9-E09F2AF21A8E}</UniqueIdentifier>
+      <UniqueIdentifier>{A16E3DD7-C542-334E-AA23-4E874CA523A5}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\behaviortree\nodes\conditions">
-      <UniqueIdentifier>{2EBD3FC8-AE43-1E4C-8A99-9833AB0D268F}</UniqueIdentifier>
+      <UniqueIdentifier>{5F84B05A-162B-4841-9BD6-B6516C2017BB}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\behaviortree\nodes\decorators">
-      <UniqueIdentifier>{80E78902-D68E-604D-921C-4AE0F4839CE0}</UniqueIdentifier>
+      <UniqueIdentifier>{F7B04BB3-E2E8-2A48-BF3F-D593D5605B95}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\common">
-      <UniqueIdentifier>{C8AAF316-A301-504D-9CFA-9F2A1221AE61}</UniqueIdentifier>
+      <UniqueIdentifier>{12FA07A7-1171-7C41-AF41-FD8D98186221}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\common\file">
-      <UniqueIdentifier>{4CC2DFE8-725A-A24D-BBA0-A58A75045B88}</UniqueIdentifier>
+      <UniqueIdentifier>{3AAF2D46-6D0C-EF4E-82CE-EB4A501E2888}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\common\logger">
-      <UniqueIdentifier>{689BB38C-7540-CE4F-8920-BEFF607B842B}</UniqueIdentifier>
+      <UniqueIdentifier>{7AFA5F51-B1CA-6E48-B754-194A04885251}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\common\memory">
-      <UniqueIdentifier>{9D480650-8113-5043-B6AC-21C1F75CF7FE}</UniqueIdentifier>
+      <UniqueIdentifier>{E5FB951A-DC7D-FB40-B97F-C5973BCC9936}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\common\object">
-      <UniqueIdentifier>{48BDF634-0D39-1242-942B-5B3FD8473689}</UniqueIdentifier>
+      <UniqueIdentifier>{6E00E524-FA9E-F249-8C19-07A01B22D607}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\common\profiler">
-      <UniqueIdentifier>{F5C1CB31-C466-FD4C-88A6-85DB62315AFF}</UniqueIdentifier>
+      <UniqueIdentifier>{0C53117E-2E22-BC48-831C-2761B595777D}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\common\randomgenerator">
-      <UniqueIdentifier>{7D1EBD7D-5D7E-F745-BEA5-512549CFE11A}</UniqueIdentifier>
+      <UniqueIdentifier>{9AE3AC5E-09AD-6941-88E5-5ACC99C11FE1}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\common\serialization">
-      <UniqueIdentifier>{2B873126-50E1-934C-95BA-988A0F99F982}</UniqueIdentifier>
+      <UniqueIdentifier>{FA84D043-C810-F944-98C0-B2AE5CCB8153}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\common\socket">
-      <UniqueIdentifier>{FD34FB1B-3E6A-9B43-B516-1C1F31D94ED6}</UniqueIdentifier>
+      <UniqueIdentifier>{19AA691E-E9E0-1440-A125-6E7E8D220898}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\common\string">
-      <UniqueIdentifier>{35EC92D2-A836-914E-954D-3AE6EB6B4898}</UniqueIdentifier>
+      <UniqueIdentifier>{C01552A6-44D6-3044-9435-C9888A7B04E4}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\common\thread">
-      <UniqueIdentifier>{3400B232-9F5D-844B-9EFF-E461636BC9C5}</UniqueIdentifier>
+      <UniqueIdentifier>{92EE5D26-8FBC-5D43-B1EC-4D2548F1B8B4}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\common\xml">
-      <UniqueIdentifier>{F8FEDFDE-B47E-B044-B613-98A43806D8AC}</UniqueIdentifier>
+      <UniqueIdentifier>{6FE35D05-7222-A645-BB79-BDFBADCB5720}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\fsm">
-      <UniqueIdentifier>{C9837783-948A-FE4E-9D8D-281767CA716C}</UniqueIdentifier>
+      <UniqueIdentifier>{BB10892B-1C09-7E4A-8509-BA81E0B3CEFE}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\htn">
-      <UniqueIdentifier>{C69A3D0C-308D-AC43-BF3C-95D5803D4668}</UniqueIdentifier>
+      <UniqueIdentifier>{5B8E5FA6-2956-E340-9883-66A3C60E1A87}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\network">
-      <UniqueIdentifier>{9F9F60CD-DAFD-DF40-AA4B-0D1F5FA06F9A}</UniqueIdentifier>
+      <UniqueIdentifier>{D0B4E084-AD33-7440-A96C-C5F3615D6CD6}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\property">
-      <UniqueIdentifier>{DF72A4D4-28A0-204A-9088-F705DA9E2E9A}</UniqueIdentifier>
+      <UniqueIdentifier>{AE8DECD7-B1C4-6E44-9728-84BB061604EF}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

@@ -519,6 +519,14 @@ namespace behaviac
                         {
                             buffer = string.Format("Agent_$_{0:3}.log", agentId);
                         }
+
+#if !BEHAVIAC_NOT_USE_UNITY
+                        if (UnityEngine.Application.platform != UnityEngine.RuntimePlatform.WindowsEditor &&
+                            UnityEngine.Application.platform != UnityEngine.RuntimePlatform.WindowsPlayer)
+                        {
+                            buffer = Path.Combine(UnityEngine.Application.persistentDataPath, buffer);
+                        }
+#endif
                     }
                     else
                     {

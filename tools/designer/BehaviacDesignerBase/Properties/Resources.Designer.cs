@@ -1884,6 +1884,15 @@ namespace Behaviac.Design.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Behavior Filename.
+        /// </summary>
+        internal static string ReferencedBehaviorFilename {
+            get {
+                return ResourceManager.GetString("ReferencedBehaviorFilename", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ReferencedBehaviorPath.
         /// </summary>
         internal static string ReferencedBehaviorPath {
