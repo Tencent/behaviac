@@ -183,8 +183,10 @@ namespace behaviac {
 
 #if BEHAVIAC_CCDEFINE_MSVC
     static int32_t t_packetBufferIndex = TLS_OUT_OF_INDEXES;
-#elif BEHAVIAC_CCDEFINE_APPLE || BEHAVIAC_CCDEFINE_ANDROID
+#elif BEHAVIAC_CCDEFINE_ANDROID
     static __thread int32_t t_packetBufferIndex = (int32_t) - 1;
+#elif BEHAVIAC_CCDEFINE_APPLE
+	static int32_t t_packetBufferIndex = (int32_t) - 1;
 #else
     static __thread int32_t t_packetBufferIndex = (int32_t) - 1;
 #endif

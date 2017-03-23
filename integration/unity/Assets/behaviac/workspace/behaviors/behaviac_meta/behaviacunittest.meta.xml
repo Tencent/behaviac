@@ -253,365 +253,14 @@
       <Method Name="exit_action_1" DisplayName="exit_action_1" Desc="exit_action_1" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
         <Param Name="param0" Type="float" TypeFullName="System.Single" DisplayName="f" Desc="f" />
       </Method>
-      <Method Name="VectorLength" DisplayName="VectorLength" Desc="VectorLength" Class="behaviac::Agent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="const IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-      </Method>
-      <Method Name="VectorAdd" DisplayName="VectorAdd" Desc="VectorAdd" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorRemove" DisplayName="VectorRemove" Desc="VectorRemove" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorContains" DisplayName="VectorContains" Desc="VectorContains" Class="behaviac::Agent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorClear" DisplayName="VectorClear" Desc="VectorClear" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-      </Method>
-      <Method Name="LogMessage" DisplayName="LogMessage" Desc="LogMessage" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="const char*" TypeFullName="System.String" DisplayName="param0" Desc="param0" />
-      </Method>
     </agent>
     <agent classfullname="ChildNodeTest" base="AgentNodeTest" DisplayName="ChildNodeTest" Desc="ChildNodeTest" IsRefType="true" IsImplemented="true">
-      <Member Name="testInt" DisplayName="testInt" Desc="testInt" Class="AgentNodeTest" Type="int" TypeFullName="System.Int32" IsCustomized="true" defaultvalue="10" Static="false" Public="true" Readonly="false" />
-      <Member Name="redirectTime" DisplayName="redirectTime" Desc="redirectTime" Class="AgentNodeTest" Type="uint" TypeFullName="System.UInt32" IsCustomized="true" defaultvalue="0" Static="false" Public="true" Readonly="false" />
-      <Member Name="test_int_array" DisplayName="test_int_array" Desc="test_int_array" Class="AgentNodeTest" Type="vector&lt;int&gt;" TypeFullName="System.Collections.Generic.List`1[[System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" IsCustomized="true" defaultvalue="3:1|2|3" Static="false" Public="true" Readonly="false" />
-      <Member Name="testFloat2" DisplayName="testFloat2" Desc="local_node" Class="AgentNodeTest" Type="TestNS::Float2" TypeFullName="XMLPluginBehaviac.TestNS_Float2" IsCustomized="true" defaultvalue="{x=0;y=0;}" Static="false" Public="true" Readonly="false" />
-      <Member Name="c_ReturnFloat2" DisplayName="c_ReturnFloat2" Desc="c_ReturnFloat2" Class="AgentNodeTest" Type="TestNS::Float2" TypeFullName="XMLPluginBehaviac.TestNS_Float2" IsCustomized="true" defaultvalue="{x=0;y=0;}" Static="false" Public="true" Readonly="false" />
-      <Member Name="c_ReturnFloat2Const" DisplayName="c_ReturnFloat2Const" Desc="c_ReturnFloat2Const" Class="AgentNodeTest" Type="TestNS::Float2" TypeFullName="XMLPluginBehaviac.TestNS_Float2" IsCustomized="true" defaultvalue="{x=0;y=0;}" Static="false" Public="true" Readonly="false" />
-      <Member Name="par_child_agent_1" DisplayName="par_child_agent_1" Desc="par_child_agent_1" Class="AgentNodeTest" Type="ChildNodeTest" TypeFullName="XMLPluginBehaviac.ChildNodeTest" IsCustomized="true" defaultvalue="null" Static="false" Public="true" Readonly="false" />
-      <Member Name="redirectCount" DisplayName="redirectCount" Desc="redirectCount" Class="AgentNodeTest" Type="uint" TypeFullName="System.UInt32" IsCustomized="true" defaultvalue="0" Static="false" Public="true" Readonly="false" />
-      <Member Name="testVar_str_1" DisplayName="testVar_str_1" Desc="testVar_str_1" Class="AgentNodeTest" Type="string" TypeFullName="System.String" defaultvalue="" Static="false" Public="true" Readonly="false" />
-      <Member Name="testVar_str_0" DisplayName="testVar_str_0" Desc="testVar_str_0" Class="AgentNodeTest" Type="string" TypeFullName="System.String" defaultvalue="" Static="false" Public="true" Readonly="false" />
-      <Member Name="testVar_2" DisplayName="testVar_2" Desc="testVar_2" Class="AgentNodeTest" Type="float" TypeFullName="System.Single" defaultvalue="0" Static="false" Public="true" Readonly="false" />
-      <Member Name="waiting_timeout_interval" DisplayName="waiting_timeout_interval" Desc="waiting_timeout_interval" Class="AgentNodeTest" Type="int" TypeFullName="System.Int32" defaultvalue="0" Static="false" Public="true" Readonly="false" />
-      <Member Name="testVar_Act" DisplayName="testVar_Act" Desc="testVar_Act" Class="AgentNodeTest" Type="Act*" TypeFullName="XMLPluginBehaviac.Act" defaultvalue="{Var_B_Loop=false;Var_List_EnumTest=0:;}" Static="false" Public="true" Readonly="false" />
-      <Member Name="testVar_0" DisplayName="testVar_0" Desc="testVar_0" Class="AgentNodeTest" Type="int" TypeFullName="System.Int32" defaultvalue="0" Static="false" Public="true" Readonly="false" />
-      <Member Name="par_child" DisplayName="par_child" Desc="par_child" Class="AgentNodeTest" Type="ChildNodeTest*" TypeFullName="XMLPluginBehaviac.ChildNodeTest" defaultvalue="null" Static="false" Public="true" Readonly="false" />
-      <Member Name="testVar_1" DisplayName="testVar_1" Desc="testVar_1 property" Class="AgentNodeTest" Type="int" TypeFullName="System.Int32" defaultvalue="0" Static="false" Public="true" Readonly="false" />
-      <Member Name="testVar_3" DisplayName="testVar_3" Desc="testVar_3" Class="AgentNodeTest" Type="float" TypeFullName="System.Single" defaultvalue="0" Static="false" Public="true" Readonly="false" />
-      <Member Name="testColor" DisplayName="testColor" Desc="testColor" Class="AgentNodeTest" Type="EnumTest" TypeFullName="XMLPluginBehaviac.EnumTest" defaultvalue="EnumTest_One" Static="false" Public="true" Readonly="false" />
       <Method Name="GetConstFloatValue" DisplayName="GetConstFloatValue" Desc="GetConstFloatValue" Class="ChildNodeTest" ReturnType="float" ReturnTypeFullName="System.Single" Static="false" Public="true" istask="false" />
       <Method Name="GetConstDoubleValue" DisplayName="GetConstDoubleValue" Desc="GetConstDoubleValue" Class="ChildNodeTest" ReturnType="double" ReturnTypeFullName="System.Double" Static="false" Public="true" istask="false" />
-      <Method Name="setTestVar_0" DisplayName="setTestVar_0" Desc="setTestVar_0" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="int" TypeFullName="System.Int32" DisplayName="var" Desc="var" />
-      </Method>
-      <Method Name="setEventVarInt" DisplayName="setEventVarInt" Desc="setEventVarInt" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="int" TypeFullName="System.Int32" DisplayName="var" Desc="var" />
-      </Method>
-      <Method Name="setEventVarFloat" DisplayName="setEventVarFloat" Desc="setEventVarFloat" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="float" TypeFullName="System.Single" DisplayName="var" Desc="var" />
-      </Method>
-      <Method Name="setTestVar_2" DisplayName="setTestVar_2" Desc="setTestVar_2" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="float" TypeFullName="System.Single" DisplayName="var" Desc="var" />
-      </Method>
-      <Method Name="setTestVar_1" DisplayName="setTestVar_1" Desc="setTestVar_1" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="int" TypeFullName="System.Int32" DisplayName="var" Desc="var" />
-      </Method>
-      <Method Name="setTestVar_0_2" DisplayName="setTestVar_0_2" Desc="setTestVar_0_2" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="false" istask="false">
-        <Param Name="param0" Type="int" TypeFullName="System.Int32" DisplayName="var0" Desc="var0" />
-        <Param Name="param1" Type="float" TypeFullName="System.Single" DisplayName="var2" Desc="var2" />
-      </Method>
-      <Method Name="return_status" DisplayName="return_status" Desc="return_status" Class="AgentNodeTest" ReturnType="behaviac::EBTStatus" ReturnTypeFullName="XMLPluginBehaviac.behaviac_EBTStatus" Static="false" Public="false" istask="false">
-        <Param Name="param0" Type="TestNS::Float2" TypeFullName="XMLPluginBehaviac.TestNS_Float2" DisplayName="f2" Desc="f2" />
-      </Method>
-      <Method Name="MoveToTarget" DisplayName="MoveToTarget" Desc="MoveToTarget" Class="AgentNodeTest" ReturnType="behaviac::EBTStatus" ReturnTypeFullName="XMLPluginBehaviac.behaviac_EBTStatus" Static="false" Public="false" istask="false" />
-      <Method Name="Move" DisplayName="Move" Desc="Move" Class="AgentNodeTest" ReturnType="behaviac::EBTStatus" ReturnTypeFullName="XMLPluginBehaviac.behaviac_EBTStatus" Static="false" Public="false" istask="false" />
-      <Method Name="setEventVarBool" DisplayName="setEventVarBool" Desc="setEventVarBool" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="bool" TypeFullName="System.Boolean" DisplayName="var" Desc="var" />
-      </Method>
-      <Method Name="setEventVarAgent" DisplayName="setEventVarAgent" Desc="setEventVarAgent" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="AgentNodeTest*" TypeFullName="XMLPluginBehaviac.AgentNodeTest" DisplayName="agent" Desc="agent" />
-      </Method>
-      <Method Name="SelectTarget" DisplayName="SelectTarget" Desc="SelectTarget" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="false" istask="false" />
-      <Method Name="setTestVar_3" DisplayName="setTestVar_3" Desc="setTestVar_3" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="float" TypeFullName="System.Single" DisplayName="var" Desc="var" />
-      </Method>
-      <Method Name="testGameObject" DisplayName="testGameObject" Desc="testGameObject" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="UnityEngine::GameObject*" TypeFullName="XMLPluginBehaviac.UnityEngine_GameObject" DisplayName="go" Desc="go" />
-      </Method>
-      <Method Name="TestFuncD" DisplayName="TestFuncD" Desc="TestFuncD" Class="AgentNodeTest" ReturnType="behaviac::EBTStatus" ReturnTypeFullName="XMLPluginBehaviac.behaviac_EBTStatus" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="TestClassA*" TypeFullName="XMLPluginBehaviac.TestClassA" DisplayName="fun" Desc="fun" />
-      </Method>
-      <Method Name="TestFunC" DisplayName="TestFunC" Desc="TestFunC" Class="AgentNodeTest" ReturnType="TestClassA*" ReturnTypeFullName="XMLPluginBehaviac.TestClassA" Static="false" Public="true" istask="false" />
-      <Method Name="transitPlanTactics" DisplayName="transitPlanTactics" Desc="transitPlanTactics" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="false" istask="false">
-        <Param Name="param0" Type="BSASN::TransitPlan" TypeFullName="XMLPluginBehaviac.BSASN_TransitPlan" DisplayName="task_tactics_type" Desc="task_tactics_type" />
-        <Param Name="param1" Type="EnumTest" TypeFullName="XMLPluginBehaviac.EnumTest" DisplayName="enumTest" Desc="enumTest" />
-        <Param Name="param2" Type="string" TypeFullName="System.String" DisplayName="platform_ID" Desc="platform_ID" />
-      </Method>
-      <Method Name="testVectorStruct" DisplayName="testVectorStruct" Desc="testVectorStruct" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="false" istask="false">
-        <Param Name="param0" Type="vector&lt;TestNS::Float2&gt;" TypeFullName="System.Collections.Generic.List`1[[XMLPluginBehaviac.TestNS_Float2, XMLPluginBehaviac, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]" DisplayName="param" Desc="param" />
-      </Method>
-      <Method Name="testString" DisplayName="testString" Desc="testString" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="false" istask="false">
-        <Param Name="param0" Type="string" TypeFullName="System.String" DisplayName="str" Desc="str" />
-      </Method>
-      <Method Name="switchRef" DisplayName="switchRef" Desc="switchRef" Class="AgentNodeTest" ReturnType="behaviac::EBTStatus" ReturnTypeFullName="XMLPluginBehaviac.behaviac_EBTStatus" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="string" TypeFullName="System.String" DisplayName="refTree" Desc="refTree" />
-      </Method>
-      <Method Name="Stop" DisplayName="Stop" Desc="Stop" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="false" istask="false" />
-      <Method Name="setTestVar_R" DisplayName="setTestVar_R" Desc="setTestVar_R" Class="AgentNodeTest" ReturnType="float" ReturnTypeFullName="System.Single" Static="false" Public="false" istask="false" />
-      <Method Name="testExtendedStruct" DisplayName="testExtendedStruct" Desc="testExtendedStruct" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="false" istask="false">
-        <Param Name="param0" Type="TestNS::Float2" TypeFullName="XMLPluginBehaviac.TestNS_Float2" IsRef="true" DisplayName="f" Desc="f" />
-      </Method>
-      <Method Name="testExtendedRefType" DisplayName="testExtendedRefType" Desc="testExtendedRefType" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="false" istask="false">
-        <Param Name="param0" Type="TestNS::Node*" TypeFullName="XMLPluginBehaviac.TestNS_Node" DisplayName="go" Desc="go" />
-      </Method>
-      <Method Name="task_test" DisplayName="task_test" Desc="task_test" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="true">
-        <Param Name="param0" Type="int" TypeFullName="System.Int32" DisplayName="count" Desc="param0" />
-        <Param Name="param1" Type="float" TypeFullName="System.Single" DisplayName="weight" Desc="param1" />
-      </Method>
-      <Method Name="IsTargetValid" DisplayName="IsTargetValid" Desc="IsTargetValid" Class="AgentNodeTest" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="false" istask="false" />
-      <Method Name="event_test_b" DisplayName="event_test_b" Desc="event_test_1" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="true">
-        <Param Name="param0" Type="int" TypeFullName="System.Int32" DisplayName="param" Desc="param0" />
-      </Method>
-      <Method Name="event_test_agent" DisplayName="event_test_agent" Desc="event_test_agent" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="true">
-        <Param Name="param0" Type="AgentNodeTest" TypeFullName="XMLPluginBehaviac.AgentNodeTest" DisplayName="agent" Desc="param0" />
-      </Method>
-      <Method Name="event_test_a" DisplayName="event_test_a" Desc="event_test_0" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="true">
-        <Param Name="param0" Type="int" TypeFullName="System.Int32" DisplayName="param" Desc="param0" />
-      </Method>
-      <Method Name="event_test_int" DisplayName="event_test_int" Desc="event_test_int" Class="AgentNodeTest" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="true">
-        <Param Name="param0" Type="int" TypeFullName="System.Int32" DisplayName="val_int" Desc="val_int" />
-      </Method>
-      <Method Name="event_test_float2_ref" DisplayName="event_test_float2_ref" Desc="event_test_float2_ref" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="true">
-        <Param Name="param0" Type="TestNS::Float2&amp;" TypeFullName="XMLPluginBehaviac.TestNS_Float2" IsRef="true" DisplayName="float2" Desc="param0" />
-      </Method>
-      <Method Name="event_test_float2" DisplayName="event_test_float2" Desc="event_test_float2" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="true">
-        <Param Name="param0" Type="TestNS::Float2" TypeFullName="XMLPluginBehaviac.TestNS_Float2" DisplayName="float2" Desc="param0" />
-      </Method>
-      <Method Name="createGameObject" DisplayName="createGameObject" Desc="createGameObject" Class="AgentNodeTest" ReturnType="UnityEngine::GameObject*" ReturnTypeFullName="XMLPluginBehaviac.UnityEngine_GameObject" Static="false" Public="true" istask="false" />
-      <Method Name="createExtendedNode" DisplayName="createExtendedNode" Desc="createExtendedNode" Class="AgentNodeTest" ReturnType="TestNS::Node*" ReturnTypeFullName="XMLPluginBehaviac.TestNS_Node" Static="false" Public="false" istask="false" />
-      <Method Name="CanSeeEnemy" DisplayName="CanSeeEnemy" Desc="CanSeeEnemy" Class="AgentNodeTest" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="false" istask="false" />
-      <Method Name="enter_action_2" DisplayName="enter_action_2" Desc="enter_action_2" Class="AgentNodeTest" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="int" TypeFullName="System.Int32" DisplayName="i" Desc="i" />
-        <Param Name="param1" Type="string" TypeFullName="System.String" DisplayName="str" Desc="str" />
-      </Method>
-      <Method Name="enter_action_1" DisplayName="enter_action_1" Desc="enter_action_1" Class="AgentNodeTest" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="float" TypeFullName="System.Single" DisplayName="f" Desc="f" />
-      </Method>
-      <Method Name="enter_action_0" DisplayName="enter_action_0" Desc="enter_action_0" Class="AgentNodeTest" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="false" />
-      <Method Name="event_test_int_bool" DisplayName="event_test_int_bool" Desc="event_test_int_bool" Class="AgentNodeTest" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="true">
-        <Param Name="param0" Type="int" TypeFullName="System.Int32" DisplayName="val_int" Desc="val_int" />
-        <Param Name="param1" Type="bool" TypeFullName="System.Boolean" DisplayName="val_bool" Desc="val_bool" />
-      </Method>
-      <Method Name="getExtendedStruct" DisplayName="getExtendedStruct" Desc="getExtendedStruct" Class="AgentNodeTest" ReturnType="TestNS::Float2" ReturnTypeFullName="XMLPluginBehaviac.TestNS_Float2" Static="false" Public="false" istask="false" />
-      <Method Name="getConstThousand" DisplayName="getConstThousand" Desc="getConstThousand" Class="AgentNodeTest" ReturnType="int" ReturnTypeFullName="System.Int32" Static="false" Public="false" istask="false">
-        <Param Name="param0" Type="int" TypeFullName="System.Int32" DisplayName="a" Desc="a" />
-        <Param Name="param1" Type="int" TypeFullName="System.Int32" DisplayName="b" Desc="b" />
-      </Method>
-      <Method Name="getConstOne" DisplayName="getConstOne" Desc="getConstOne" Class="AgentNodeTest" ReturnType="int" ReturnTypeFullName="System.Int32" Static="false" Public="true" istask="false" />
-      <Method Name="initChildAgentTest" DisplayName="initChildAgentTest" Desc="initChildAgentTest" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false" />
-      <Method Name="initChildAgent" DisplayName="initChildAgent" Desc="initChildAgent" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false" />
-      <Method Name="GetRefTree" DisplayName="GetRefTree" Desc="GetRefTree" Class="AgentNodeTest" ReturnType="string" ReturnTypeFullName="System.String" Static="false" Public="true" istask="false" />
-      <Method Name="exit_action_0" DisplayName="exit_action_0" Desc="exit_action_0" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false" />
-      <Method Name="event_test_void" DisplayName="event_test_void" Desc="event_test_void" Class="AgentNodeTest" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="true" />
-      <Method Name="event_test_int_bool_float" DisplayName="event_test_int_bool_float" Desc="event_test_int_bool_float" Class="AgentNodeTest" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="true">
-        <Param Name="param0" Type="int" TypeFullName="System.Int32" DisplayName="val_int" Desc="val_int" />
-        <Param Name="param1" Type="bool" TypeFullName="System.Boolean" DisplayName="val_bool" Desc="val_bool" />
-        <Param Name="param2" Type="float" TypeFullName="System.Single" DisplayName="val_float" Desc="val_float" />
-      </Method>
-      <Method Name="getConstExtendedStruct" DisplayName="getConstExtendedStruct" Desc="getConstExtendedStruct" Class="AgentNodeTest" ReturnType="TestNS::Float2" ReturnTypeFullName="XMLPluginBehaviac.TestNS_Float2" Static="false" Public="false" istask="false" />
-      <Method Name="exit_action_2" DisplayName="exit_action_2" Desc="exit_action_2" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="int" TypeFullName="System.Int32" DisplayName="i" Desc="i" />
-        <Param Name="param1" Type="string" TypeFullName="System.String" DisplayName="str" Desc="str" />
-      </Method>
-      <Method Name="exit_action_1" DisplayName="exit_action_1" Desc="exit_action_1" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="float" TypeFullName="System.Single" DisplayName="f" Desc="f" />
-      </Method>
-      <Method Name="VectorLength" DisplayName="VectorLength" Desc="VectorLength" Class="behaviac::Agent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="const IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-      </Method>
-      <Method Name="VectorAdd" DisplayName="VectorAdd" Desc="VectorAdd" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorRemove" DisplayName="VectorRemove" Desc="VectorRemove" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorContains" DisplayName="VectorContains" Desc="VectorContains" Class="behaviac::Agent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorClear" DisplayName="VectorClear" Desc="VectorClear" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-      </Method>
-      <Method Name="LogMessage" DisplayName="LogMessage" Desc="LogMessage" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="const char*" TypeFullName="System.String" DisplayName="param0" Desc="param0" />
-      </Method>
     </agent>
     <agent classfullname="ChildNodeTestSub" base="ChildNodeTest" DisplayName="ChildNodeTestSub" Desc="ChildNodeTestSub" IsRefType="true" IsImplemented="true">
       <Member Name="IntValue" DisplayName="IntValue" Desc="IntValue" Class="ChildNodeTestSub" Type="int" TypeFullName="System.Int32" defaultvalue="0" Static="false" Public="true" Readonly="false" />
-      <Member Name="testInt" DisplayName="testInt" Desc="testInt" Class="AgentNodeTest" Type="int" TypeFullName="System.Int32" IsCustomized="true" defaultvalue="10" Static="false" Public="true" Readonly="false" />
-      <Member Name="redirectTime" DisplayName="redirectTime" Desc="redirectTime" Class="AgentNodeTest" Type="uint" TypeFullName="System.UInt32" IsCustomized="true" defaultvalue="0" Static="false" Public="true" Readonly="false" />
-      <Member Name="test_int_array" DisplayName="test_int_array" Desc="test_int_array" Class="AgentNodeTest" Type="vector&lt;int&gt;" TypeFullName="System.Collections.Generic.List`1[[System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" IsCustomized="true" defaultvalue="3:1|2|3" Static="false" Public="true" Readonly="false" />
-      <Member Name="testFloat2" DisplayName="testFloat2" Desc="local_node" Class="AgentNodeTest" Type="TestNS::Float2" TypeFullName="XMLPluginBehaviac.TestNS_Float2" IsCustomized="true" defaultvalue="{x=0;y=0;}" Static="false" Public="true" Readonly="false" />
-      <Member Name="c_ReturnFloat2" DisplayName="c_ReturnFloat2" Desc="c_ReturnFloat2" Class="AgentNodeTest" Type="TestNS::Float2" TypeFullName="XMLPluginBehaviac.TestNS_Float2" IsCustomized="true" defaultvalue="{x=0;y=0;}" Static="false" Public="true" Readonly="false" />
-      <Member Name="c_ReturnFloat2Const" DisplayName="c_ReturnFloat2Const" Desc="c_ReturnFloat2Const" Class="AgentNodeTest" Type="TestNS::Float2" TypeFullName="XMLPluginBehaviac.TestNS_Float2" IsCustomized="true" defaultvalue="{x=0;y=0;}" Static="false" Public="true" Readonly="false" />
-      <Member Name="par_child_agent_1" DisplayName="par_child_agent_1" Desc="par_child_agent_1" Class="AgentNodeTest" Type="ChildNodeTest" TypeFullName="XMLPluginBehaviac.ChildNodeTest" IsCustomized="true" defaultvalue="null" Static="false" Public="true" Readonly="false" />
-      <Member Name="redirectCount" DisplayName="redirectCount" Desc="redirectCount" Class="AgentNodeTest" Type="uint" TypeFullName="System.UInt32" IsCustomized="true" defaultvalue="0" Static="false" Public="true" Readonly="false" />
-      <Member Name="testVar_str_1" DisplayName="testVar_str_1" Desc="testVar_str_1" Class="AgentNodeTest" Type="string" TypeFullName="System.String" defaultvalue="" Static="false" Public="true" Readonly="false" />
-      <Member Name="testVar_str_0" DisplayName="testVar_str_0" Desc="testVar_str_0" Class="AgentNodeTest" Type="string" TypeFullName="System.String" defaultvalue="" Static="false" Public="true" Readonly="false" />
-      <Member Name="testVar_2" DisplayName="testVar_2" Desc="testVar_2" Class="AgentNodeTest" Type="float" TypeFullName="System.Single" defaultvalue="0" Static="false" Public="true" Readonly="false" />
-      <Member Name="waiting_timeout_interval" DisplayName="waiting_timeout_interval" Desc="waiting_timeout_interval" Class="AgentNodeTest" Type="int" TypeFullName="System.Int32" defaultvalue="0" Static="false" Public="true" Readonly="false" />
-      <Member Name="testVar_Act" DisplayName="testVar_Act" Desc="testVar_Act" Class="AgentNodeTest" Type="Act*" TypeFullName="XMLPluginBehaviac.Act" defaultvalue="{Var_B_Loop=false;Var_List_EnumTest=0:;}" Static="false" Public="true" Readonly="false" />
-      <Member Name="testVar_0" DisplayName="testVar_0" Desc="testVar_0" Class="AgentNodeTest" Type="int" TypeFullName="System.Int32" defaultvalue="0" Static="false" Public="true" Readonly="false" />
-      <Member Name="par_child" DisplayName="par_child" Desc="par_child" Class="AgentNodeTest" Type="ChildNodeTest*" TypeFullName="XMLPluginBehaviac.ChildNodeTest" defaultvalue="null" Static="false" Public="true" Readonly="false" />
-      <Member Name="testVar_1" DisplayName="testVar_1" Desc="testVar_1 property" Class="AgentNodeTest" Type="int" TypeFullName="System.Int32" defaultvalue="0" Static="false" Public="true" Readonly="false" />
-      <Member Name="testVar_3" DisplayName="testVar_3" Desc="testVar_3" Class="AgentNodeTest" Type="float" TypeFullName="System.Single" defaultvalue="0" Static="false" Public="true" Readonly="false" />
-      <Member Name="testColor" DisplayName="testColor" Desc="testColor" Class="AgentNodeTest" Type="EnumTest" TypeFullName="XMLPluginBehaviac.EnumTest" defaultvalue="EnumTest_One" Static="false" Public="true" Readonly="false" />
       <Method Name="GetConstFloatValueSub" DisplayName="GetConstFloatValueSub" Desc="GetConstFloatValueSub" Class="ChildNodeTestSub" ReturnType="float" ReturnTypeFullName="System.Single" Static="false" Public="true" istask="false" />
-      <Method Name="GetConstFloatValue" DisplayName="GetConstFloatValue" Desc="GetConstFloatValue" Class="ChildNodeTest" ReturnType="float" ReturnTypeFullName="System.Single" Static="false" Public="true" istask="false" />
-      <Method Name="GetConstDoubleValue" DisplayName="GetConstDoubleValue" Desc="GetConstDoubleValue" Class="ChildNodeTest" ReturnType="double" ReturnTypeFullName="System.Double" Static="false" Public="true" istask="false" />
-      <Method Name="setTestVar_0" DisplayName="setTestVar_0" Desc="setTestVar_0" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="int" TypeFullName="System.Int32" DisplayName="var" Desc="var" />
-      </Method>
-      <Method Name="setEventVarInt" DisplayName="setEventVarInt" Desc="setEventVarInt" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="int" TypeFullName="System.Int32" DisplayName="var" Desc="var" />
-      </Method>
-      <Method Name="setEventVarFloat" DisplayName="setEventVarFloat" Desc="setEventVarFloat" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="float" TypeFullName="System.Single" DisplayName="var" Desc="var" />
-      </Method>
-      <Method Name="setTestVar_2" DisplayName="setTestVar_2" Desc="setTestVar_2" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="float" TypeFullName="System.Single" DisplayName="var" Desc="var" />
-      </Method>
-      <Method Name="setTestVar_1" DisplayName="setTestVar_1" Desc="setTestVar_1" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="int" TypeFullName="System.Int32" DisplayName="var" Desc="var" />
-      </Method>
-      <Method Name="setTestVar_0_2" DisplayName="setTestVar_0_2" Desc="setTestVar_0_2" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="false" istask="false">
-        <Param Name="param0" Type="int" TypeFullName="System.Int32" DisplayName="var0" Desc="var0" />
-        <Param Name="param1" Type="float" TypeFullName="System.Single" DisplayName="var2" Desc="var2" />
-      </Method>
-      <Method Name="return_status" DisplayName="return_status" Desc="return_status" Class="AgentNodeTest" ReturnType="behaviac::EBTStatus" ReturnTypeFullName="XMLPluginBehaviac.behaviac_EBTStatus" Static="false" Public="false" istask="false">
-        <Param Name="param0" Type="TestNS::Float2" TypeFullName="XMLPluginBehaviac.TestNS_Float2" DisplayName="f2" Desc="f2" />
-      </Method>
-      <Method Name="MoveToTarget" DisplayName="MoveToTarget" Desc="MoveToTarget" Class="AgentNodeTest" ReturnType="behaviac::EBTStatus" ReturnTypeFullName="XMLPluginBehaviac.behaviac_EBTStatus" Static="false" Public="false" istask="false" />
-      <Method Name="Move" DisplayName="Move" Desc="Move" Class="AgentNodeTest" ReturnType="behaviac::EBTStatus" ReturnTypeFullName="XMLPluginBehaviac.behaviac_EBTStatus" Static="false" Public="false" istask="false" />
-      <Method Name="setEventVarBool" DisplayName="setEventVarBool" Desc="setEventVarBool" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="bool" TypeFullName="System.Boolean" DisplayName="var" Desc="var" />
-      </Method>
-      <Method Name="setEventVarAgent" DisplayName="setEventVarAgent" Desc="setEventVarAgent" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="AgentNodeTest*" TypeFullName="XMLPluginBehaviac.AgentNodeTest" DisplayName="agent" Desc="agent" />
-      </Method>
-      <Method Name="SelectTarget" DisplayName="SelectTarget" Desc="SelectTarget" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="false" istask="false" />
-      <Method Name="setTestVar_3" DisplayName="setTestVar_3" Desc="setTestVar_3" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="float" TypeFullName="System.Single" DisplayName="var" Desc="var" />
-      </Method>
-      <Method Name="testGameObject" DisplayName="testGameObject" Desc="testGameObject" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="UnityEngine::GameObject*" TypeFullName="XMLPluginBehaviac.UnityEngine_GameObject" DisplayName="go" Desc="go" />
-      </Method>
-      <Method Name="TestFuncD" DisplayName="TestFuncD" Desc="TestFuncD" Class="AgentNodeTest" ReturnType="behaviac::EBTStatus" ReturnTypeFullName="XMLPluginBehaviac.behaviac_EBTStatus" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="TestClassA*" TypeFullName="XMLPluginBehaviac.TestClassA" DisplayName="fun" Desc="fun" />
-      </Method>
-      <Method Name="TestFunC" DisplayName="TestFunC" Desc="TestFunC" Class="AgentNodeTest" ReturnType="TestClassA*" ReturnTypeFullName="XMLPluginBehaviac.TestClassA" Static="false" Public="true" istask="false" />
-      <Method Name="transitPlanTactics" DisplayName="transitPlanTactics" Desc="transitPlanTactics" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="false" istask="false">
-        <Param Name="param0" Type="BSASN::TransitPlan" TypeFullName="XMLPluginBehaviac.BSASN_TransitPlan" DisplayName="task_tactics_type" Desc="task_tactics_type" />
-        <Param Name="param1" Type="EnumTest" TypeFullName="XMLPluginBehaviac.EnumTest" DisplayName="enumTest" Desc="enumTest" />
-        <Param Name="param2" Type="string" TypeFullName="System.String" DisplayName="platform_ID" Desc="platform_ID" />
-      </Method>
-      <Method Name="testVectorStruct" DisplayName="testVectorStruct" Desc="testVectorStruct" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="false" istask="false">
-        <Param Name="param0" Type="vector&lt;TestNS::Float2&gt;" TypeFullName="System.Collections.Generic.List`1[[XMLPluginBehaviac.TestNS_Float2, XMLPluginBehaviac, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]" DisplayName="param" Desc="param" />
-      </Method>
-      <Method Name="testString" DisplayName="testString" Desc="testString" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="false" istask="false">
-        <Param Name="param0" Type="string" TypeFullName="System.String" DisplayName="str" Desc="str" />
-      </Method>
-      <Method Name="switchRef" DisplayName="switchRef" Desc="switchRef" Class="AgentNodeTest" ReturnType="behaviac::EBTStatus" ReturnTypeFullName="XMLPluginBehaviac.behaviac_EBTStatus" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="string" TypeFullName="System.String" DisplayName="refTree" Desc="refTree" />
-      </Method>
-      <Method Name="Stop" DisplayName="Stop" Desc="Stop" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="false" istask="false" />
-      <Method Name="setTestVar_R" DisplayName="setTestVar_R" Desc="setTestVar_R" Class="AgentNodeTest" ReturnType="float" ReturnTypeFullName="System.Single" Static="false" Public="false" istask="false" />
-      <Method Name="testExtendedStruct" DisplayName="testExtendedStruct" Desc="testExtendedStruct" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="false" istask="false">
-        <Param Name="param0" Type="TestNS::Float2" TypeFullName="XMLPluginBehaviac.TestNS_Float2" IsRef="true" DisplayName="f" Desc="f" />
-      </Method>
-      <Method Name="testExtendedRefType" DisplayName="testExtendedRefType" Desc="testExtendedRefType" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="false" istask="false">
-        <Param Name="param0" Type="TestNS::Node*" TypeFullName="XMLPluginBehaviac.TestNS_Node" DisplayName="go" Desc="go" />
-      </Method>
-      <Method Name="task_test" DisplayName="task_test" Desc="task_test" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="true">
-        <Param Name="param0" Type="int" TypeFullName="System.Int32" DisplayName="count" Desc="param0" />
-        <Param Name="param1" Type="float" TypeFullName="System.Single" DisplayName="weight" Desc="param1" />
-      </Method>
-      <Method Name="IsTargetValid" DisplayName="IsTargetValid" Desc="IsTargetValid" Class="AgentNodeTest" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="false" istask="false" />
-      <Method Name="event_test_b" DisplayName="event_test_b" Desc="event_test_1" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="true">
-        <Param Name="param0" Type="int" TypeFullName="System.Int32" DisplayName="param" Desc="param0" />
-      </Method>
-      <Method Name="event_test_agent" DisplayName="event_test_agent" Desc="event_test_agent" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="true">
-        <Param Name="param0" Type="AgentNodeTest" TypeFullName="XMLPluginBehaviac.AgentNodeTest" DisplayName="agent" Desc="param0" />
-      </Method>
-      <Method Name="event_test_a" DisplayName="event_test_a" Desc="event_test_0" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="true">
-        <Param Name="param0" Type="int" TypeFullName="System.Int32" DisplayName="param" Desc="param0" />
-      </Method>
-      <Method Name="event_test_int" DisplayName="event_test_int" Desc="event_test_int" Class="AgentNodeTest" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="true">
-        <Param Name="param0" Type="int" TypeFullName="System.Int32" DisplayName="val_int" Desc="val_int" />
-      </Method>
-      <Method Name="event_test_float2_ref" DisplayName="event_test_float2_ref" Desc="event_test_float2_ref" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="true">
-        <Param Name="param0" Type="TestNS::Float2&amp;" TypeFullName="XMLPluginBehaviac.TestNS_Float2" IsRef="true" DisplayName="float2" Desc="param0" />
-      </Method>
-      <Method Name="event_test_float2" DisplayName="event_test_float2" Desc="event_test_float2" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="true">
-        <Param Name="param0" Type="TestNS::Float2" TypeFullName="XMLPluginBehaviac.TestNS_Float2" DisplayName="float2" Desc="param0" />
-      </Method>
-      <Method Name="createGameObject" DisplayName="createGameObject" Desc="createGameObject" Class="AgentNodeTest" ReturnType="UnityEngine::GameObject*" ReturnTypeFullName="XMLPluginBehaviac.UnityEngine_GameObject" Static="false" Public="true" istask="false" />
-      <Method Name="createExtendedNode" DisplayName="createExtendedNode" Desc="createExtendedNode" Class="AgentNodeTest" ReturnType="TestNS::Node*" ReturnTypeFullName="XMLPluginBehaviac.TestNS_Node" Static="false" Public="false" istask="false" />
-      <Method Name="CanSeeEnemy" DisplayName="CanSeeEnemy" Desc="CanSeeEnemy" Class="AgentNodeTest" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="false" istask="false" />
-      <Method Name="enter_action_2" DisplayName="enter_action_2" Desc="enter_action_2" Class="AgentNodeTest" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="int" TypeFullName="System.Int32" DisplayName="i" Desc="i" />
-        <Param Name="param1" Type="string" TypeFullName="System.String" DisplayName="str" Desc="str" />
-      </Method>
-      <Method Name="enter_action_1" DisplayName="enter_action_1" Desc="enter_action_1" Class="AgentNodeTest" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="float" TypeFullName="System.Single" DisplayName="f" Desc="f" />
-      </Method>
-      <Method Name="enter_action_0" DisplayName="enter_action_0" Desc="enter_action_0" Class="AgentNodeTest" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="false" />
-      <Method Name="event_test_int_bool" DisplayName="event_test_int_bool" Desc="event_test_int_bool" Class="AgentNodeTest" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="true">
-        <Param Name="param0" Type="int" TypeFullName="System.Int32" DisplayName="val_int" Desc="val_int" />
-        <Param Name="param1" Type="bool" TypeFullName="System.Boolean" DisplayName="val_bool" Desc="val_bool" />
-      </Method>
-      <Method Name="getExtendedStruct" DisplayName="getExtendedStruct" Desc="getExtendedStruct" Class="AgentNodeTest" ReturnType="TestNS::Float2" ReturnTypeFullName="XMLPluginBehaviac.TestNS_Float2" Static="false" Public="false" istask="false" />
-      <Method Name="getConstThousand" DisplayName="getConstThousand" Desc="getConstThousand" Class="AgentNodeTest" ReturnType="int" ReturnTypeFullName="System.Int32" Static="false" Public="false" istask="false">
-        <Param Name="param0" Type="int" TypeFullName="System.Int32" DisplayName="a" Desc="a" />
-        <Param Name="param1" Type="int" TypeFullName="System.Int32" DisplayName="b" Desc="b" />
-      </Method>
-      <Method Name="getConstOne" DisplayName="getConstOne" Desc="getConstOne" Class="AgentNodeTest" ReturnType="int" ReturnTypeFullName="System.Int32" Static="false" Public="true" istask="false" />
-      <Method Name="initChildAgentTest" DisplayName="initChildAgentTest" Desc="initChildAgentTest" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false" />
-      <Method Name="initChildAgent" DisplayName="initChildAgent" Desc="initChildAgent" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false" />
-      <Method Name="GetRefTree" DisplayName="GetRefTree" Desc="GetRefTree" Class="AgentNodeTest" ReturnType="string" ReturnTypeFullName="System.String" Static="false" Public="true" istask="false" />
-      <Method Name="exit_action_0" DisplayName="exit_action_0" Desc="exit_action_0" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false" />
-      <Method Name="event_test_void" DisplayName="event_test_void" Desc="event_test_void" Class="AgentNodeTest" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="true" />
-      <Method Name="event_test_int_bool_float" DisplayName="event_test_int_bool_float" Desc="event_test_int_bool_float" Class="AgentNodeTest" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="true">
-        <Param Name="param0" Type="int" TypeFullName="System.Int32" DisplayName="val_int" Desc="val_int" />
-        <Param Name="param1" Type="bool" TypeFullName="System.Boolean" DisplayName="val_bool" Desc="val_bool" />
-        <Param Name="param2" Type="float" TypeFullName="System.Single" DisplayName="val_float" Desc="val_float" />
-      </Method>
-      <Method Name="getConstExtendedStruct" DisplayName="getConstExtendedStruct" Desc="getConstExtendedStruct" Class="AgentNodeTest" ReturnType="TestNS::Float2" ReturnTypeFullName="XMLPluginBehaviac.TestNS_Float2" Static="false" Public="false" istask="false" />
-      <Method Name="exit_action_2" DisplayName="exit_action_2" Desc="exit_action_2" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="int" TypeFullName="System.Int32" DisplayName="i" Desc="i" />
-        <Param Name="param1" Type="string" TypeFullName="System.String" DisplayName="str" Desc="str" />
-      </Method>
-      <Method Name="exit_action_1" DisplayName="exit_action_1" Desc="exit_action_1" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="float" TypeFullName="System.Single" DisplayName="f" Desc="f" />
-      </Method>
-      <Method Name="VectorLength" DisplayName="VectorLength" Desc="VectorLength" Class="behaviac::Agent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="const IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-      </Method>
-      <Method Name="VectorAdd" DisplayName="VectorAdd" Desc="VectorAdd" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorRemove" DisplayName="VectorRemove" Desc="VectorRemove" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorContains" DisplayName="VectorContains" Desc="VectorContains" Class="behaviac::Agent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorClear" DisplayName="VectorClear" Desc="VectorClear" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-      </Method>
-      <Method Name="LogMessage" DisplayName="LogMessage" Desc="LogMessage" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="const char*" TypeFullName="System.String" DisplayName="param0" Desc="param0" />
-      </Method>
     </agent>
     <agent classfullname="CustomPropertyAgent" base="behaviac::Agent" DisplayName="CustomPropertyAgent" Desc="CustomPropertyAgent" IsRefType="true" IsImplemented="true">
       <Member Name="c_StaticString" DisplayName="c_StaticString" Desc="c_StaticString" Class="CustomPropertyAgent" Type="string" TypeFullName="System.String" IsCustomized="true" defaultvalue="" Static="true" Public="true" Readonly="false" />
@@ -638,27 +287,6 @@
       </Method>
       <Method Name="PIR_IntArray" DisplayName="PIR_IntArray" Desc="PIR_IntArray" Class="CustomPropertyAgent" ReturnType="vector&lt;int&gt;" ReturnTypeFullName="System.Collections.Generic.List`1[[System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" Static="false" Public="true" istask="false">
         <Param Name="param0" Type="vector&lt;int&gt;" TypeFullName="System.Collections.Generic.List`1[[System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" DisplayName="intArray" Desc="param0" />
-      </Method>
-      <Method Name="VectorLength" DisplayName="VectorLength" Desc="VectorLength" Class="behaviac::Agent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="const IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-      </Method>
-      <Method Name="VectorAdd" DisplayName="VectorAdd" Desc="VectorAdd" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorRemove" DisplayName="VectorRemove" Desc="VectorRemove" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorContains" DisplayName="VectorContains" Desc="VectorContains" Class="behaviac::Agent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorClear" DisplayName="VectorClear" Desc="VectorClear" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-      </Method>
-      <Method Name="LogMessage" DisplayName="LogMessage" Desc="LogMessage" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="const char*" TypeFullName="System.String" DisplayName="param0" Desc="param0" />
       </Method>
     </agent>
     <agent classfullname="ParTestAgentBase" base="behaviac::Agent" DisplayName="ParTestAgentBase" Desc="测试Agent的最底层基类" IsRefType="true" IsImplemented="true">
@@ -754,27 +382,6 @@
       <Method Name="Func_SByteIR" DisplayName="0 # PIR_SByte" Desc="A" Class="ParTestAgentBase" ReturnType="sbyte" ReturnTypeFullName="System.SByte" Static="false" Public="true" istask="false">
         <Param Name="param0" Type="sbyte" TypeFullName="System.SByte" DisplayName="par" Desc="par" />
       </Method>
-      <Method Name="VectorLength" DisplayName="VectorLength" Desc="VectorLength" Class="behaviac::Agent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="const IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-      </Method>
-      <Method Name="VectorAdd" DisplayName="VectorAdd" Desc="VectorAdd" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorRemove" DisplayName="VectorRemove" Desc="VectorRemove" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorContains" DisplayName="VectorContains" Desc="VectorContains" Class="behaviac::Agent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorClear" DisplayName="VectorClear" Desc="VectorClear" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-      </Method>
-      <Method Name="LogMessage" DisplayName="LogMessage" Desc="LogMessage" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="const char*" TypeFullName="System.String" DisplayName="param0" Desc="param0" />
-      </Method>
     </agent>
     <agent classfullname="ParTestAgent" base="ParTestAgentBase" DisplayName="ParTestAgent" Desc="ParTestAgent" IsRefType="true" IsImplemented="true">
       <Member Name="C_Agent" DisplayName="C_Agent" Desc="C_Agent" Class="ParTestAgent" Type="ParTestAgent" TypeFullName="XMLPluginBehaviac.ParTestAgent" IsCustomized="true" defaultvalue="null" Static="false" Public="true" Readonly="false" />
@@ -790,23 +397,6 @@
       <Member Name="STV_LIST_INT_0" DisplayName="1 # STV_LIST_INT_0" Desc="A" Class="ParTestAgent" Type="vector&lt;int&gt;" TypeFullName="System.Collections.Generic.List`1[[System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" defaultvalue="0:" Static="true" Public="true" Readonly="false" />
       <Member Name="TV_LIST_KEMPLOYEE_0" DisplayName="1 # TV_LIST_KEMPLOYEE_0" Desc="A" Class="ParTestAgent" Type="vector&lt;TNS::ST::PER::WRK::kEmployee&gt;" TypeFullName="System.Collections.Generic.List`1[[XMLPluginBehaviac.TNS_ST_PER_WRK_kEmployee, XMLPluginBehaviac, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]" defaultvalue="0:" Static="false" Public="true" Readonly="false" />
       <Member Name="TV_LIST_INT_0" DisplayName="1 # TV_LIST_INT_0" Desc="A" Class="ParTestAgent" Type="vector&lt;int&gt;" TypeFullName="System.Collections.Generic.List`1[[System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" defaultvalue="0:" Static="false" Public="true" Readonly="false" />
-      <Member Name="TV_ECOLOR_0" DisplayName="0 # TV_ECOLOR_0" Desc="A" Class="ParTestAgentBase" Type="TNS::NE::NAT::eColor" TypeFullName="XMLPluginBehaviac.TNS_NE_NAT_eColor" defaultvalue="RED" Static="false" Public="true" Readonly="false" />
-      <Member Name="TV_LIST_BOOL_0" DisplayName="0 # TV_LIST_BOOL_0" Desc="A" Class="ParTestAgentBase" Type="vector&lt;bool&gt;" TypeFullName="System.Collections.Generic.List`1[[System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" defaultvalue="0:" Static="false" Public="true" Readonly="false" />
-      <Member Name="TV_LIST_BYTE_0" DisplayName="0 # TV_LIST_BYTE_0" Desc="A" Class="ParTestAgentBase" Type="vector&lt;ubyte&gt;" TypeFullName="System.Collections.Generic.List`1[[System.Byte, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" defaultvalue="0:" Static="false" Public="true" Readonly="false" />
-      <Member Name="TV_CHAR_0" DisplayName="0 # TV_CHAR_0" Desc="A" Class="ParTestAgentBase" Type="char" TypeFullName="System.Char" defaultvalue="" Static="false" Public="true" Readonly="false" />
-      <Member Name="TV_LIST_SBYTE_0" DisplayName="0 # TV_LIST_SBYTE_0" Desc="A" Class="ParTestAgentBase" Type="vector&lt;sbyte&gt;" TypeFullName="System.Collections.Generic.List`1[[System.SByte, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" defaultvalue="0:" Static="false" Public="true" Readonly="false" />
-      <Member Name="TV_SBYTE_0" DisplayName="0 # TV_SBYTE_0" Desc="A" Class="ParTestAgentBase" Type="sbyte" TypeFullName="System.SByte" defaultvalue="0" Static="false" Public="true" Readonly="false" />
-      <Member Name="TV_LIST_CHAR_0" DisplayName="0 # TV_LIST_CHAR_0" Desc="A" Class="ParTestAgentBase" Type="vector&lt;char&gt;" TypeFullName="System.Collections.Generic.List`1[[System.Char, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" defaultvalue="0:" Static="false" Public="true" Readonly="false" />
-      <Member Name="TV_LIST_ECOLOR_0" DisplayName="0 # TV_LIST_ECOLOR_0" Desc="A" Class="ParTestAgentBase" Type="vector&lt;TNS::NE::NAT::eColor&gt;" TypeFullName="System.Collections.Generic.List`1[[XMLPluginBehaviac.TNS_NE_NAT_eColor, XMLPluginBehaviac, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]" defaultvalue="0:" Static="false" Public="true" Readonly="false" />
-      <Member Name="STV_LIST_BOOL_0" DisplayName="0 # STV_LIST_BOOL_0" Desc="A" Class="ParTestAgentBase" Type="vector&lt;bool&gt;" TypeFullName="System.Collections.Generic.List`1[[System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" defaultvalue="0:" Static="true" Public="true" Readonly="false" />
-      <Member Name="STV_BOOL_0" DisplayName="0 # STV_BOOL_0" Desc="A" Class="ParTestAgentBase" Type="bool" TypeFullName="System.Boolean" defaultvalue="false" Static="true" Public="true" Readonly="false" />
-      <Member Name="STV_CHAR_0" DisplayName="0 # STV_CHAR_0" Desc="A" Class="ParTestAgentBase" Type="char" TypeFullName="System.Char" defaultvalue="" Static="true" Public="true" Readonly="false" />
-      <Member Name="STV_ECOLOR_0" DisplayName="0 # STV_ECOLOR_0" Desc="A" Class="ParTestAgentBase" Type="TNS::NE::NAT::eColor" TypeFullName="XMLPluginBehaviac.TNS_NE_NAT_eColor" defaultvalue="RED" Static="true" Public="true" Readonly="false" />
-      <Member Name="STV_LIST_CHAR_0" DisplayName="0 # STV_LIST_CHAR_0" Desc="A" Class="ParTestAgentBase" Type="vector&lt;char&gt;" TypeFullName="System.Collections.Generic.List`1[[System.Char, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" defaultvalue="0:" Static="true" Public="true" Readonly="false" />
-      <Member Name="STV_LIST_SBYTE_0" DisplayName="0 # STV_LIST_SBYTE_0" Desc="A" Class="ParTestAgentBase" Type="vector&lt;sbyte&gt;" TypeFullName="System.Collections.Generic.List`1[[System.SByte, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" defaultvalue="0:" Static="true" Public="true" Readonly="false" />
-      <Member Name="TV_BOOL_0" DisplayName="0 # TV_BOOL_0" Desc="A" Class="ParTestAgentBase" Type="bool" TypeFullName="System.Boolean" defaultvalue="false" Static="false" Public="true" Readonly="false" />
-      <Member Name="TV_BYTE_0" DisplayName="0 # TV_BYTE_0" Desc="A" Class="ParTestAgentBase" Type="ubyte" TypeFullName="System.Byte" defaultvalue="0" Static="false" Public="true" Readonly="false" />
-      <Member Name="STV_LIST_ECOLOR_0" DisplayName="0 # STV_LIST_ECOLOR_0" Desc="A" Class="ParTestAgentBase" Type="vector&lt;TNS::NE::NAT::eColor&gt;" TypeFullName="System.Collections.Generic.List`1[[XMLPluginBehaviac.TNS_NE_NAT_eColor, XMLPluginBehaviac, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]" defaultvalue="0:" Static="true" Public="true" Readonly="false" />
       <Method Name="Func_IntListRef" DisplayName="1 # UPR_IntList" Desc="A" Class="ParTestAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
         <Param Name="param0" Type="vector&lt;int&gt;" TypeFullName="System.Collections.Generic.List`1[[System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" IsRef="true" DisplayName="par" Desc="par" />
       </Method>
@@ -855,102 +445,6 @@
       <Method Name="Func_ShortIR" DisplayName="1 # PIR_Short" Desc="A" Class="ParTestAgent" ReturnType="short" ReturnTypeFullName="System.Int16" Static="false" Public="true" istask="false">
         <Param Name="param0" Type="short" TypeFullName="System.Int16" DisplayName="par" Desc="par" />
       </Method>
-      <Method Name="Func_BooleanListRef" DisplayName="0 # UPR_BooleanList" Desc="A" Class="ParTestAgentBase" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="vector&lt;bool&gt;" TypeFullName="System.Collections.Generic.List`1[[System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" IsRef="true" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_ByteRef" DisplayName="0 # UPR_Byte" Desc="A" Class="ParTestAgentBase" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="ubyte" TypeFullName="System.Byte" IsRef="true" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_ByteListRef" DisplayName="0 # UPR_ByteList" Desc="A" Class="ParTestAgentBase" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="vector&lt;ubyte&gt;" TypeFullName="System.Collections.Generic.List`1[[System.Byte, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" IsRef="true" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_SByteSMF" DisplayName="0 # SMF_SByte" Desc="A" Class="ParTestAgentBase" ReturnType="sbyte" ReturnTypeFullName="System.SByte" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="sbyte" TypeFullName="System.SByte" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_SByteListSMF" DisplayName="0 # SMF_SByteList" Desc="A" Class="ParTestAgentBase" ReturnType="vector&lt;sbyte&gt;" ReturnTypeFullName="System.Collections.Generic.List`1[[System.SByte, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="vector&lt;sbyte&gt;" TypeFullName="System.Collections.Generic.List`1[[System.SByte, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_BooleanRef" DisplayName="0 # UPR_Boolean" Desc="A" Class="ParTestAgentBase" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="bool" TypeFullName="System.Boolean" IsRef="true" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_eColorListRef" DisplayName="0 # UPR_eColorList" Desc="A" Class="ParTestAgentBase" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="vector&lt;TNS::NE::NAT::eColor&gt;" TypeFullName="System.Collections.Generic.List`1[[XMLPluginBehaviac.TNS_NE_NAT_eColor, XMLPluginBehaviac, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]" IsRef="true" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_SByteRef" DisplayName="0 # UPR_SByte" Desc="A" Class="ParTestAgentBase" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="sbyte" TypeFullName="System.SByte" IsRef="true" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_SByteListRef" DisplayName="0 # UPR_SByteList" Desc="A" Class="ParTestAgentBase" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="vector&lt;sbyte&gt;" TypeFullName="System.Collections.Generic.List`1[[System.SByte, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" IsRef="true" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_CharRef" DisplayName="0 # UPR_Char" Desc="A" Class="ParTestAgentBase" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="char" TypeFullName="System.Char" IsRef="true" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_CharListRef" DisplayName="0 # UPR_CharList" Desc="A" Class="ParTestAgentBase" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="vector&lt;char&gt;" TypeFullName="System.Collections.Generic.List`1[[System.Char, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" IsRef="true" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_eColorRef" DisplayName="0 # UPR_eColor" Desc="A" Class="ParTestAgentBase" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="TNS::NE::NAT::eColor" TypeFullName="XMLPluginBehaviac.TNS_NE_NAT_eColor" IsRef="true" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_CharListSMF" DisplayName="0 # SMF_CharList" Desc="A" Class="ParTestAgentBase" ReturnType="vector&lt;char&gt;" ReturnTypeFullName="System.Collections.Generic.List`1[[System.Char, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="vector&lt;char&gt;" TypeFullName="System.Collections.Generic.List`1[[System.Char, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_ByteListIR" DisplayName="0 # PIR_ByteList" Desc="A" Class="ParTestAgentBase" ReturnType="vector&lt;ubyte&gt;" ReturnTypeFullName="System.Collections.Generic.List`1[[System.Byte, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="vector&lt;ubyte&gt;" TypeFullName="System.Collections.Generic.List`1[[System.Byte, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_CharIR" DisplayName="0 # PIR_Char" Desc="A" Class="ParTestAgentBase" ReturnType="char" ReturnTypeFullName="System.Char" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="char" TypeFullName="System.Char" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_CharListIR" DisplayName="0 # PIR_CharList" Desc="A" Class="ParTestAgentBase" ReturnType="vector&lt;char&gt;" ReturnTypeFullName="System.Collections.Generic.List`1[[System.Char, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="vector&lt;char&gt;" TypeFullName="System.Collections.Generic.List`1[[System.Char, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_BooleanIR" DisplayName="0 # PIR_Boolean" Desc="A" Class="ParTestAgentBase" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="bool" TypeFullName="System.Boolean" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_BooleanListIR" DisplayName="0 # PIR_BooleanList" Desc="A" Class="ParTestAgentBase" ReturnType="vector&lt;bool&gt;" ReturnTypeFullName="System.Collections.Generic.List`1[[System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="vector&lt;bool&gt;" TypeFullName="System.Collections.Generic.List`1[[System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_ByteIR" DisplayName="0 # PIR_Byte" Desc="A" Class="ParTestAgentBase" ReturnType="ubyte" ReturnTypeFullName="System.Byte" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="ubyte" TypeFullName="System.Byte" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_SByteListIR" DisplayName="0 # PIR_SByteList" Desc="A" Class="ParTestAgentBase" ReturnType="vector&lt;sbyte&gt;" ReturnTypeFullName="System.Collections.Generic.List`1[[System.SByte, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="vector&lt;sbyte&gt;" TypeFullName="System.Collections.Generic.List`1[[System.SByte, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_ByteSMF" DisplayName="0 # SMF_Byte" Desc="A" Class="ParTestAgentBase" ReturnType="ubyte" ReturnTypeFullName="System.Byte" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="ubyte" TypeFullName="System.Byte" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_CharSMF" DisplayName="0 # SMF_Char" Desc="A" Class="ParTestAgentBase" ReturnType="char" ReturnTypeFullName="System.Char" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="char" TypeFullName="System.Char" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_eColorIR" DisplayName="0 # PIR_eColor" Desc="A" Class="ParTestAgentBase" ReturnType="TNS::NE::NAT::eColor" ReturnTypeFullName="XMLPluginBehaviac.TNS_NE_NAT_eColor" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="TNS::NE::NAT::eColor" TypeFullName="XMLPluginBehaviac.TNS_NE_NAT_eColor" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_eColorListIR" DisplayName="0 # PIR_eColorList" Desc="A" Class="ParTestAgentBase" ReturnType="vector&lt;TNS::NE::NAT::eColor&gt;" ReturnTypeFullName="System.Collections.Generic.List`1[[XMLPluginBehaviac.TNS_NE_NAT_eColor, XMLPluginBehaviac, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="vector&lt;TNS::NE::NAT::eColor&gt;" TypeFullName="System.Collections.Generic.List`1[[XMLPluginBehaviac.TNS_NE_NAT_eColor, XMLPluginBehaviac, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_SByteIR" DisplayName="0 # PIR_SByte" Desc="A" Class="ParTestAgentBase" ReturnType="sbyte" ReturnTypeFullName="System.SByte" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="sbyte" TypeFullName="System.SByte" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="VectorLength" DisplayName="VectorLength" Desc="VectorLength" Class="behaviac::Agent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="const IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-      </Method>
-      <Method Name="VectorAdd" DisplayName="VectorAdd" Desc="VectorAdd" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorRemove" DisplayName="VectorRemove" Desc="VectorRemove" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorContains" DisplayName="VectorContains" Desc="VectorContains" Class="behaviac::Agent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorClear" DisplayName="VectorClear" Desc="VectorClear" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-      </Method>
-      <Method Name="LogMessage" DisplayName="LogMessage" Desc="LogMessage" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="const char*" TypeFullName="System.String" DisplayName="param0" Desc="param0" />
-      </Method>
     </agent>
     <agent classfullname="EmployeeParTestAgent" base="ParTestAgent" DisplayName="EmployeeParTestAgent" Desc="EmployeeParTestAgent" IsRefType="true" IsImplemented="true">
       <Member Name="target" DisplayName="target" Desc="target" Class="EmployeeParTestAgent" Type="ParTestAgent" TypeFullName="XMLPluginBehaviac.ParTestAgent" IsCustomized="true" defaultvalue="null" Static="false" Public="true" Readonly="false" />
@@ -972,36 +466,6 @@
       <Member Name="STV_AGENT_0" DisplayName="2 # STV_AGENT_0" Desc="A" Class="EmployeeParTestAgent" Type="behaviac::Agent*" TypeFullName="XMLPluginBehaviac.behaviac_Agent" defaultvalue="null" Static="true" Public="true" Readonly="false" />
       <Member Name="TV_CSZSTR_0" DisplayName="2 # TV_CSZSTR_0" Desc="A" Class="EmployeeParTestAgent" Type="string" TypeFullName="System.String" defaultvalue="" Static="false" Public="true" Readonly="false" />
       <Member Name="STV_LIST_STR_0" DisplayName="2 # STV_LIST_STR_0" Desc="A" Class="EmployeeParTestAgent" Type="vector&lt;string&gt;" TypeFullName="System.Collections.Generic.List`1[[System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" defaultvalue="0:" Static="true" Public="true" Readonly="false" />
-      <Member Name="C_Agent" DisplayName="C_Agent" Desc="C_Agent" Class="ParTestAgent" Type="ParTestAgent" TypeFullName="XMLPluginBehaviac.ParTestAgent" IsCustomized="true" defaultvalue="null" Static="false" Public="true" Readonly="false" />
-      <Member Name="C_GameObject" DisplayName="C_GameObject" Desc="C_GameObject" Class="ParTestAgent" Type="UnityEngine::GameObject" TypeFullName="XMLPluginBehaviac.UnityEngine_GameObject" IsCustomized="true" defaultvalue="null" Static="false" Public="true" Readonly="false" />
-      <Member Name="STV_LIST_KEMPLOYEE_0" DisplayName="1 # STV_LIST_KEMPLOYEE_0" Desc="A" Class="ParTestAgent" Type="vector&lt;TNS::ST::PER::WRK::kEmployee&gt;" TypeFullName="System.Collections.Generic.List`1[[XMLPluginBehaviac.TNS_ST_PER_WRK_kEmployee, XMLPluginBehaviac, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]" defaultvalue="0:" Static="true" Public="true" Readonly="false" />
-      <Member Name="TV_KEMPLOYEE_0" DisplayName="1 # TV_KEMPLOYEE_0" Desc="A" Class="ParTestAgent" Type="TNS::ST::PER::WRK::kEmployee" TypeFullName="XMLPluginBehaviac.TNS_ST_PER_WRK_kEmployee" defaultvalue="{id=0;name=&quot;&quot;;code=A;weight=0;isMale=false;skinColor=RED;car={brand=&quot;&quot;;price=0;color=RED;};boss=null;}" Static="false" Public="true" Readonly="false" />
-      <Member Name="TV_LONG_0" DisplayName="1 # TV_LONG_0" Desc="A" Class="ParTestAgent" Type="long" TypeFullName="System.Int64" defaultvalue="0" Static="false" Public="true" Readonly="false" />
-      <Member Name="STV_INT_0" DisplayName="1 # STV_INT_0" Desc="A" Class="ParTestAgent" Type="int" TypeFullName="System.Int32" defaultvalue="0" Static="true" Public="true" Readonly="false" />
-      <Member Name="TV_INT_0" DisplayName="1 # TV_INT_0" Desc="A" Class="ParTestAgent" Type="int" TypeFullName="System.Int32" defaultvalue="0" Static="false" Public="true" Readonly="false" />
-      <Member Name="STV_KEMPLOYEE_0" DisplayName="1 # STV_KEMPLOYEE_0" Desc="A" Class="ParTestAgent" Type="TNS::ST::PER::WRK::kEmployee" TypeFullName="XMLPluginBehaviac.TNS_ST_PER_WRK_kEmployee" defaultvalue="{id=0;name=&quot;&quot;;code=A;weight=0;isMale=false;skinColor=RED;car={brand=&quot;&quot;;price=0;color=RED;};boss=null;}" Static="true" Public="true" Readonly="false" />
-      <Member Name="TV_SHORT_0" DisplayName="1 # TV_SHORT_0" Desc="A" Class="ParTestAgent" Type="short" TypeFullName="System.Int16" defaultvalue="0" Static="false" Public="true" Readonly="false" />
-      <Member Name="TV_USHORT_0" DisplayName="1 # TV_USHORT_0" Desc="A" Class="ParTestAgent" Type="ushort" TypeFullName="System.UInt16" defaultvalue="0" Static="false" Public="true" Readonly="false" />
-      <Member Name="STV_LIST_INT_0" DisplayName="1 # STV_LIST_INT_0" Desc="A" Class="ParTestAgent" Type="vector&lt;int&gt;" TypeFullName="System.Collections.Generic.List`1[[System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" defaultvalue="0:" Static="true" Public="true" Readonly="false" />
-      <Member Name="TV_LIST_KEMPLOYEE_0" DisplayName="1 # TV_LIST_KEMPLOYEE_0" Desc="A" Class="ParTestAgent" Type="vector&lt;TNS::ST::PER::WRK::kEmployee&gt;" TypeFullName="System.Collections.Generic.List`1[[XMLPluginBehaviac.TNS_ST_PER_WRK_kEmployee, XMLPluginBehaviac, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]" defaultvalue="0:" Static="false" Public="true" Readonly="false" />
-      <Member Name="TV_LIST_INT_0" DisplayName="1 # TV_LIST_INT_0" Desc="A" Class="ParTestAgent" Type="vector&lt;int&gt;" TypeFullName="System.Collections.Generic.List`1[[System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" defaultvalue="0:" Static="false" Public="true" Readonly="false" />
-      <Member Name="TV_ECOLOR_0" DisplayName="0 # TV_ECOLOR_0" Desc="A" Class="ParTestAgentBase" Type="TNS::NE::NAT::eColor" TypeFullName="XMLPluginBehaviac.TNS_NE_NAT_eColor" defaultvalue="RED" Static="false" Public="true" Readonly="false" />
-      <Member Name="TV_LIST_BOOL_0" DisplayName="0 # TV_LIST_BOOL_0" Desc="A" Class="ParTestAgentBase" Type="vector&lt;bool&gt;" TypeFullName="System.Collections.Generic.List`1[[System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" defaultvalue="0:" Static="false" Public="true" Readonly="false" />
-      <Member Name="TV_LIST_BYTE_0" DisplayName="0 # TV_LIST_BYTE_0" Desc="A" Class="ParTestAgentBase" Type="vector&lt;ubyte&gt;" TypeFullName="System.Collections.Generic.List`1[[System.Byte, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" defaultvalue="0:" Static="false" Public="true" Readonly="false" />
-      <Member Name="TV_CHAR_0" DisplayName="0 # TV_CHAR_0" Desc="A" Class="ParTestAgentBase" Type="char" TypeFullName="System.Char" defaultvalue="" Static="false" Public="true" Readonly="false" />
-      <Member Name="TV_LIST_SBYTE_0" DisplayName="0 # TV_LIST_SBYTE_0" Desc="A" Class="ParTestAgentBase" Type="vector&lt;sbyte&gt;" TypeFullName="System.Collections.Generic.List`1[[System.SByte, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" defaultvalue="0:" Static="false" Public="true" Readonly="false" />
-      <Member Name="TV_SBYTE_0" DisplayName="0 # TV_SBYTE_0" Desc="A" Class="ParTestAgentBase" Type="sbyte" TypeFullName="System.SByte" defaultvalue="0" Static="false" Public="true" Readonly="false" />
-      <Member Name="TV_LIST_CHAR_0" DisplayName="0 # TV_LIST_CHAR_0" Desc="A" Class="ParTestAgentBase" Type="vector&lt;char&gt;" TypeFullName="System.Collections.Generic.List`1[[System.Char, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" defaultvalue="0:" Static="false" Public="true" Readonly="false" />
-      <Member Name="TV_LIST_ECOLOR_0" DisplayName="0 # TV_LIST_ECOLOR_0" Desc="A" Class="ParTestAgentBase" Type="vector&lt;TNS::NE::NAT::eColor&gt;" TypeFullName="System.Collections.Generic.List`1[[XMLPluginBehaviac.TNS_NE_NAT_eColor, XMLPluginBehaviac, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]" defaultvalue="0:" Static="false" Public="true" Readonly="false" />
-      <Member Name="STV_LIST_BOOL_0" DisplayName="0 # STV_LIST_BOOL_0" Desc="A" Class="ParTestAgentBase" Type="vector&lt;bool&gt;" TypeFullName="System.Collections.Generic.List`1[[System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" defaultvalue="0:" Static="true" Public="true" Readonly="false" />
-      <Member Name="STV_BOOL_0" DisplayName="0 # STV_BOOL_0" Desc="A" Class="ParTestAgentBase" Type="bool" TypeFullName="System.Boolean" defaultvalue="false" Static="true" Public="true" Readonly="false" />
-      <Member Name="STV_CHAR_0" DisplayName="0 # STV_CHAR_0" Desc="A" Class="ParTestAgentBase" Type="char" TypeFullName="System.Char" defaultvalue="" Static="true" Public="true" Readonly="false" />
-      <Member Name="STV_ECOLOR_0" DisplayName="0 # STV_ECOLOR_0" Desc="A" Class="ParTestAgentBase" Type="TNS::NE::NAT::eColor" TypeFullName="XMLPluginBehaviac.TNS_NE_NAT_eColor" defaultvalue="RED" Static="true" Public="true" Readonly="false" />
-      <Member Name="STV_LIST_CHAR_0" DisplayName="0 # STV_LIST_CHAR_0" Desc="A" Class="ParTestAgentBase" Type="vector&lt;char&gt;" TypeFullName="System.Collections.Generic.List`1[[System.Char, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" defaultvalue="0:" Static="true" Public="true" Readonly="false" />
-      <Member Name="STV_LIST_SBYTE_0" DisplayName="0 # STV_LIST_SBYTE_0" Desc="A" Class="ParTestAgentBase" Type="vector&lt;sbyte&gt;" TypeFullName="System.Collections.Generic.List`1[[System.SByte, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" defaultvalue="0:" Static="true" Public="true" Readonly="false" />
-      <Member Name="TV_BOOL_0" DisplayName="0 # TV_BOOL_0" Desc="A" Class="ParTestAgentBase" Type="bool" TypeFullName="System.Boolean" defaultvalue="false" Static="false" Public="true" Readonly="false" />
-      <Member Name="TV_BYTE_0" DisplayName="0 # TV_BYTE_0" Desc="A" Class="ParTestAgentBase" Type="ubyte" TypeFullName="System.Byte" defaultvalue="0" Static="false" Public="true" Readonly="false" />
-      <Member Name="STV_LIST_ECOLOR_0" DisplayName="0 # STV_LIST_ECOLOR_0" Desc="A" Class="ParTestAgentBase" Type="vector&lt;TNS::NE::NAT::eColor&gt;" TypeFullName="System.Collections.Generic.List`1[[XMLPluginBehaviac.TNS_NE_NAT_eColor, XMLPluginBehaviac, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]" defaultvalue="0:" Static="true" Public="true" Readonly="false" />
       <Method Name="Func_CSzStringRef" DisplayName="2 # UPR_CSzString" Desc="A" Class="EmployeeParTestAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
         <Param Name="param0" Type="string" TypeFullName="System.String" IsRef="true" DisplayName="par" Desc="par" />
       </Method>
@@ -1095,150 +559,6 @@
       <Method Name="Func_UIntIR" DisplayName="2 # PIR_UInt" Desc="A" Class="EmployeeParTestAgent" ReturnType="uint" ReturnTypeFullName="System.UInt32" Static="false" Public="true" istask="false">
         <Param Name="param0" Type="uint" TypeFullName="System.UInt32" DisplayName="par" Desc="par" />
       </Method>
-      <Method Name="Func_IntListRef" DisplayName="1 # UPR_IntList" Desc="A" Class="ParTestAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="vector&lt;int&gt;" TypeFullName="System.Collections.Generic.List`1[[System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" IsRef="true" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_kEmployeeRef" DisplayName="1 # UPR_kEmployee" Desc="A" Class="ParTestAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="TNS::ST::PER::WRK::kEmployee" TypeFullName="XMLPluginBehaviac.TNS_ST_PER_WRK_kEmployee" IsRef="true" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_kEmployeeListSMF" DisplayName="1 # SMF_kEmployeeList" Desc="A" Class="ParTestAgent" ReturnType="vector&lt;TNS::ST::PER::WRK::kEmployee&gt;" ReturnTypeFullName="System.Collections.Generic.List`1[[XMLPluginBehaviac.TNS_ST_PER_WRK_kEmployee, XMLPluginBehaviac, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="vector&lt;TNS::ST::PER::WRK::kEmployee&gt;" TypeFullName="System.Collections.Generic.List`1[[XMLPluginBehaviac.TNS_ST_PER_WRK_kEmployee, XMLPluginBehaviac, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_IntRef" DisplayName="1 # UPR_Int" Desc="A" Class="ParTestAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="int" TypeFullName="System.Int32" IsRef="true" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_ShortRef" DisplayName="1 # UPR_Short" Desc="A" Class="ParTestAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="short" TypeFullName="System.Int16" IsRef="true" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_UShortRef" DisplayName="1 # UPR_UShort" Desc="A" Class="ParTestAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="ushort" TypeFullName="System.UInt16" IsRef="true" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_kEmployeeListRef" DisplayName="1 # UPR_kEmployeeList" Desc="A" Class="ParTestAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="vector&lt;TNS::ST::PER::WRK::kEmployee&gt;" TypeFullName="System.Collections.Generic.List`1[[XMLPluginBehaviac.TNS_ST_PER_WRK_kEmployee, XMLPluginBehaviac, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]" IsRef="true" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_LongRef" DisplayName="1 # UPR_Long" Desc="A" Class="ParTestAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="long" TypeFullName="System.Int64" IsRef="true" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_kEmployeeIR" DisplayName="1 # PIR_kEmployee" Desc="A" Class="ParTestAgent" ReturnType="TNS::ST::PER::WRK::kEmployee" ReturnTypeFullName="XMLPluginBehaviac.TNS_ST_PER_WRK_kEmployee" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="TNS::ST::PER::WRK::kEmployee" TypeFullName="XMLPluginBehaviac.TNS_ST_PER_WRK_kEmployee" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_kEmployeeListIR" DisplayName="1 # PIR_kEmployeeList" Desc="A" Class="ParTestAgent" ReturnType="vector&lt;TNS::ST::PER::WRK::kEmployee&gt;" ReturnTypeFullName="System.Collections.Generic.List`1[[XMLPluginBehaviac.TNS_ST_PER_WRK_kEmployee, XMLPluginBehaviac, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="vector&lt;TNS::ST::PER::WRK::kEmployee&gt;" TypeFullName="System.Collections.Generic.List`1[[XMLPluginBehaviac.TNS_ST_PER_WRK_kEmployee, XMLPluginBehaviac, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_IntIR" DisplayName="1 # PIR_Int" Desc="A" Class="ParTestAgent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="int" TypeFullName="System.Int32" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_IntListIR" DisplayName="1 # PIR_IntList" Desc="A" Class="ParTestAgent" ReturnType="vector&lt;int&gt;" ReturnTypeFullName="System.Collections.Generic.List`1[[System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="vector&lt;int&gt;" TypeFullName="System.Collections.Generic.List`1[[System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_UShortIR" DisplayName="1 # PIR_UShort" Desc="A" Class="ParTestAgent" ReturnType="ushort" ReturnTypeFullName="System.UInt16" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="ushort" TypeFullName="System.UInt16" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_kEmployeeSMF" DisplayName="1 # SMF_kEmployee" Desc="A" Class="ParTestAgent" ReturnType="TNS::ST::PER::WRK::kEmployee" ReturnTypeFullName="XMLPluginBehaviac.TNS_ST_PER_WRK_kEmployee" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="TNS::ST::PER::WRK::kEmployee" TypeFullName="XMLPluginBehaviac.TNS_ST_PER_WRK_kEmployee" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_LongIR" DisplayName="1 # PIR_Long" Desc="A" Class="ParTestAgent" ReturnType="long" ReturnTypeFullName="System.Int64" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="long" TypeFullName="System.Int64" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_ShortIR" DisplayName="1 # PIR_Short" Desc="A" Class="ParTestAgent" ReturnType="short" ReturnTypeFullName="System.Int16" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="short" TypeFullName="System.Int16" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_BooleanListRef" DisplayName="0 # UPR_BooleanList" Desc="A" Class="ParTestAgentBase" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="vector&lt;bool&gt;" TypeFullName="System.Collections.Generic.List`1[[System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" IsRef="true" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_ByteRef" DisplayName="0 # UPR_Byte" Desc="A" Class="ParTestAgentBase" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="ubyte" TypeFullName="System.Byte" IsRef="true" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_ByteListRef" DisplayName="0 # UPR_ByteList" Desc="A" Class="ParTestAgentBase" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="vector&lt;ubyte&gt;" TypeFullName="System.Collections.Generic.List`1[[System.Byte, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" IsRef="true" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_SByteSMF" DisplayName="0 # SMF_SByte" Desc="A" Class="ParTestAgentBase" ReturnType="sbyte" ReturnTypeFullName="System.SByte" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="sbyte" TypeFullName="System.SByte" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_SByteListSMF" DisplayName="0 # SMF_SByteList" Desc="A" Class="ParTestAgentBase" ReturnType="vector&lt;sbyte&gt;" ReturnTypeFullName="System.Collections.Generic.List`1[[System.SByte, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="vector&lt;sbyte&gt;" TypeFullName="System.Collections.Generic.List`1[[System.SByte, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_BooleanRef" DisplayName="0 # UPR_Boolean" Desc="A" Class="ParTestAgentBase" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="bool" TypeFullName="System.Boolean" IsRef="true" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_eColorListRef" DisplayName="0 # UPR_eColorList" Desc="A" Class="ParTestAgentBase" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="vector&lt;TNS::NE::NAT::eColor&gt;" TypeFullName="System.Collections.Generic.List`1[[XMLPluginBehaviac.TNS_NE_NAT_eColor, XMLPluginBehaviac, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]" IsRef="true" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_SByteRef" DisplayName="0 # UPR_SByte" Desc="A" Class="ParTestAgentBase" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="sbyte" TypeFullName="System.SByte" IsRef="true" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_SByteListRef" DisplayName="0 # UPR_SByteList" Desc="A" Class="ParTestAgentBase" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="vector&lt;sbyte&gt;" TypeFullName="System.Collections.Generic.List`1[[System.SByte, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" IsRef="true" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_CharRef" DisplayName="0 # UPR_Char" Desc="A" Class="ParTestAgentBase" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="char" TypeFullName="System.Char" IsRef="true" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_CharListRef" DisplayName="0 # UPR_CharList" Desc="A" Class="ParTestAgentBase" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="vector&lt;char&gt;" TypeFullName="System.Collections.Generic.List`1[[System.Char, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" IsRef="true" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_eColorRef" DisplayName="0 # UPR_eColor" Desc="A" Class="ParTestAgentBase" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="TNS::NE::NAT::eColor" TypeFullName="XMLPluginBehaviac.TNS_NE_NAT_eColor" IsRef="true" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_CharListSMF" DisplayName="0 # SMF_CharList" Desc="A" Class="ParTestAgentBase" ReturnType="vector&lt;char&gt;" ReturnTypeFullName="System.Collections.Generic.List`1[[System.Char, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="vector&lt;char&gt;" TypeFullName="System.Collections.Generic.List`1[[System.Char, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_ByteListIR" DisplayName="0 # PIR_ByteList" Desc="A" Class="ParTestAgentBase" ReturnType="vector&lt;ubyte&gt;" ReturnTypeFullName="System.Collections.Generic.List`1[[System.Byte, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="vector&lt;ubyte&gt;" TypeFullName="System.Collections.Generic.List`1[[System.Byte, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_CharIR" DisplayName="0 # PIR_Char" Desc="A" Class="ParTestAgentBase" ReturnType="char" ReturnTypeFullName="System.Char" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="char" TypeFullName="System.Char" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_CharListIR" DisplayName="0 # PIR_CharList" Desc="A" Class="ParTestAgentBase" ReturnType="vector&lt;char&gt;" ReturnTypeFullName="System.Collections.Generic.List`1[[System.Char, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="vector&lt;char&gt;" TypeFullName="System.Collections.Generic.List`1[[System.Char, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_BooleanIR" DisplayName="0 # PIR_Boolean" Desc="A" Class="ParTestAgentBase" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="bool" TypeFullName="System.Boolean" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_BooleanListIR" DisplayName="0 # PIR_BooleanList" Desc="A" Class="ParTestAgentBase" ReturnType="vector&lt;bool&gt;" ReturnTypeFullName="System.Collections.Generic.List`1[[System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="vector&lt;bool&gt;" TypeFullName="System.Collections.Generic.List`1[[System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_ByteIR" DisplayName="0 # PIR_Byte" Desc="A" Class="ParTestAgentBase" ReturnType="ubyte" ReturnTypeFullName="System.Byte" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="ubyte" TypeFullName="System.Byte" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_SByteListIR" DisplayName="0 # PIR_SByteList" Desc="A" Class="ParTestAgentBase" ReturnType="vector&lt;sbyte&gt;" ReturnTypeFullName="System.Collections.Generic.List`1[[System.SByte, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="vector&lt;sbyte&gt;" TypeFullName="System.Collections.Generic.List`1[[System.SByte, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_ByteSMF" DisplayName="0 # SMF_Byte" Desc="A" Class="ParTestAgentBase" ReturnType="ubyte" ReturnTypeFullName="System.Byte" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="ubyte" TypeFullName="System.Byte" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_CharSMF" DisplayName="0 # SMF_Char" Desc="A" Class="ParTestAgentBase" ReturnType="char" ReturnTypeFullName="System.Char" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="char" TypeFullName="System.Char" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_eColorIR" DisplayName="0 # PIR_eColor" Desc="A" Class="ParTestAgentBase" ReturnType="TNS::NE::NAT::eColor" ReturnTypeFullName="XMLPluginBehaviac.TNS_NE_NAT_eColor" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="TNS::NE::NAT::eColor" TypeFullName="XMLPluginBehaviac.TNS_NE_NAT_eColor" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_eColorListIR" DisplayName="0 # PIR_eColorList" Desc="A" Class="ParTestAgentBase" ReturnType="vector&lt;TNS::NE::NAT::eColor&gt;" ReturnTypeFullName="System.Collections.Generic.List`1[[XMLPluginBehaviac.TNS_NE_NAT_eColor, XMLPluginBehaviac, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="vector&lt;TNS::NE::NAT::eColor&gt;" TypeFullName="System.Collections.Generic.List`1[[XMLPluginBehaviac.TNS_NE_NAT_eColor, XMLPluginBehaviac, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="Func_SByteIR" DisplayName="0 # PIR_SByte" Desc="A" Class="ParTestAgentBase" ReturnType="sbyte" ReturnTypeFullName="System.SByte" Static="false" Public="true" istask="false">
-        <Param Name="param0" Type="sbyte" TypeFullName="System.SByte" DisplayName="par" Desc="par" />
-      </Method>
-      <Method Name="VectorLength" DisplayName="VectorLength" Desc="VectorLength" Class="behaviac::Agent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="const IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-      </Method>
-      <Method Name="VectorAdd" DisplayName="VectorAdd" Desc="VectorAdd" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorRemove" DisplayName="VectorRemove" Desc="VectorRemove" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorContains" DisplayName="VectorContains" Desc="VectorContains" Class="behaviac::Agent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorClear" DisplayName="VectorClear" Desc="VectorClear" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-      </Method>
-      <Method Name="LogMessage" DisplayName="LogMessage" Desc="LogMessage" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="const char*" TypeFullName="System.String" DisplayName="param0" Desc="param0" />
-      </Method>
     </agent>
     <agent classfullname="FSMAgentTest" base="behaviac::Agent" DisplayName="FSMAgentTest" Desc="FSMAgentTest" IsRefType="true" IsImplemented="true">
       <Member Name="FoodCount" DisplayName="FoodCount" Desc="FoodCount" Class="FSMAgentTest" Type="int" TypeFullName="System.Int32" IsCustomized="true" defaultvalue="0" Static="false" Public="true" Readonly="false" />
@@ -1252,52 +572,10 @@
       <Method Name="pause_update" DisplayName="pause_update" Desc="pause_update" Class="FSMAgentTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false" />
       <Method Name="active_update" DisplayName="active_update" Desc="active_update" Class="FSMAgentTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false" />
       <Method Name="exit_update" DisplayName="exit_update" Desc="exit_update" Class="FSMAgentTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false" />
-      <Method Name="VectorLength" DisplayName="VectorLength" Desc="VectorLength" Class="behaviac::Agent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="const IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-      </Method>
-      <Method Name="VectorAdd" DisplayName="VectorAdd" Desc="VectorAdd" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorRemove" DisplayName="VectorRemove" Desc="VectorRemove" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorContains" DisplayName="VectorContains" Desc="VectorContains" Class="behaviac::Agent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorClear" DisplayName="VectorClear" Desc="VectorClear" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-      </Method>
-      <Method Name="LogMessage" DisplayName="LogMessage" Desc="LogMessage" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="const char*" TypeFullName="System.String" DisplayName="param0" Desc="param0" />
-      </Method>
     </agent>
     <agent classfullname="HTNAgentHouseBase" base="behaviac::Agent" DisplayName="HTNAgentHouseBase" Desc="HTNAgentHouseBase" IsRefType="true" IsImplemented="true">
       <Member Name="Money" DisplayName="Money" Desc="MemberProperty" Class="HTNAgentHouseBase" Type="int" TypeFullName="System.Int32" IsCustomized="true" defaultvalue="0" Static="false" Public="true" Readonly="false" />
       <Method Name="ObtainPermit" DisplayName="ObtainPermit" Desc="ObtainPermit" Class="HTNAgentHouseBase" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false" />
-      <Method Name="VectorLength" DisplayName="VectorLength" Desc="VectorLength" Class="behaviac::Agent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="const IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-      </Method>
-      <Method Name="VectorAdd" DisplayName="VectorAdd" Desc="VectorAdd" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorRemove" DisplayName="VectorRemove" Desc="VectorRemove" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorContains" DisplayName="VectorContains" Desc="VectorContains" Class="behaviac::Agent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorClear" DisplayName="VectorClear" Desc="VectorClear" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-      </Method>
-      <Method Name="LogMessage" DisplayName="LogMessage" Desc="LogMessage" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="const char*" TypeFullName="System.String" DisplayName="param0" Desc="param0" />
-      </Method>
     </agent>
     <agent classfullname="HTNAgentHouse" base="HTNAgentHouseBase" DisplayName="HTNAgentHouse" Desc="HTNAgentHouse" IsRefType="true" IsImplemented="true">
       <Member Name="Contract" DisplayName="Contract" Desc="HTNAgentHouse::Contract" Class="HTNAgentHouse" Type="bool" TypeFullName="System.Boolean" IsCustomized="true" defaultvalue="false" Static="false" Public="true" Readonly="false" />
@@ -1307,7 +585,6 @@
       <Member Name="Land" DisplayName="Land" Desc="Land" Class="HTNAgentHouse" Type="bool" TypeFullName="System.Boolean" IsCustomized="true" defaultvalue="false" Static="false" Public="true" Readonly="false" />
       <Member Name="Mortgage" DisplayName="Mortgage" Desc="HTNAgentHouse::Mortgage" Class="HTNAgentHouse" Type="bool" TypeFullName="System.Boolean" IsCustomized="true" defaultvalue="false" Static="false" Public="true" Readonly="false" />
       <Member Name="Permit" DisplayName="Permit" Desc="HTNAgentHouse::Permit" Class="HTNAgentHouse" Type="bool" TypeFullName="System.Boolean" IsCustomized="true" defaultvalue="false" Static="false" Public="true" Readonly="false" />
-      <Member Name="Money" DisplayName="Money" Desc="MemberProperty" Class="HTNAgentHouseBase" Type="int" TypeFullName="System.Int32" IsCustomized="true" defaultvalue="0" Static="false" Public="true" Readonly="false" />
       <Method Name="GetFriend" DisplayName="GetFriend" Desc="GetFriend" Class="HTNAgentHouse" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false" />
       <Method Name="CutLogs" DisplayName="CutLogs" Desc="CutLogs" Class="HTNAgentHouse" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false" />
       <Method Name="construct" DisplayName="construct" Desc="construct" Class="HTNAgentHouse" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="true" />
@@ -1322,28 +599,6 @@
       <Method Name="BuyLand" DisplayName="BuyLand" Desc="BuyLand" Class="HTNAgentHouse" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false" />
       <Method Name="BuildWalls" DisplayName="BuildWalls" Desc="BuildWalls" Class="HTNAgentHouse" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false" />
       <Method Name="BuildRoof" DisplayName="BuildRoof" Desc="BuildRoof" Class="HTNAgentHouse" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false" />
-      <Method Name="ObtainPermit" DisplayName="ObtainPermit" Desc="ObtainPermit" Class="HTNAgentHouseBase" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false" />
-      <Method Name="VectorLength" DisplayName="VectorLength" Desc="VectorLength" Class="behaviac::Agent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="const IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-      </Method>
-      <Method Name="VectorAdd" DisplayName="VectorAdd" Desc="VectorAdd" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorRemove" DisplayName="VectorRemove" Desc="VectorRemove" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorContains" DisplayName="VectorContains" Desc="VectorContains" Class="behaviac::Agent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorClear" DisplayName="VectorClear" Desc="VectorClear" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-      </Method>
-      <Method Name="LogMessage" DisplayName="LogMessage" Desc="LogMessage" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="const char*" TypeFullName="System.String" DisplayName="param0" Desc="param0" />
-      </Method>
     </agent>
     <agent classfullname="HTNAgentTravel" base="behaviac::Agent" DisplayName="HTNAgentTravel" Desc="HTNAgentTravel" IsRefType="true" IsImplemented="true">
       <Method Name="root" DisplayName="root" Desc="root" Class="HTNAgentTravel" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="true" />
@@ -1385,27 +640,6 @@
       <Method Name="exist_start" DisplayName="exist_start" Desc="exist_start" Class="HTNAgentTravel" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="false">
         <Param Name="param0" Type="int" TypeFullName="System.Int32" IsRef="true" DisplayName="s" Desc="s" />
       </Method>
-      <Method Name="VectorLength" DisplayName="VectorLength" Desc="VectorLength" Class="behaviac::Agent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="const IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-      </Method>
-      <Method Name="VectorAdd" DisplayName="VectorAdd" Desc="VectorAdd" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorRemove" DisplayName="VectorRemove" Desc="VectorRemove" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorContains" DisplayName="VectorContains" Desc="VectorContains" Class="behaviac::Agent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorClear" DisplayName="VectorClear" Desc="VectorClear" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-      </Method>
-      <Method Name="LogMessage" DisplayName="LogMessage" Desc="LogMessage" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="const char*" TypeFullName="System.String" DisplayName="param0" Desc="param0" />
-      </Method>
     </agent>
     <agent classfullname="ParTestRegNameAgent" base="behaviac::Agent" DisplayName="ParTestRegNameAgent" Desc="ParTestRegNameAgent" IsRefType="true" IsImplemented="true">
       <Member Name="TV_KEMPLOYEE_0" DisplayName="3 # TV_KEMPLOYEE_0" Desc="A" Class="ParTestRegNameAgent" Type="TNS::ST::PER::WRK::kEmployee" TypeFullName="XMLPluginBehaviac.TNS_ST_PER_WRK_kEmployee" defaultvalue="{id=0;name=&quot;&quot;;code=A;weight=0;isMale=false;skinColor=RED;car={brand=&quot;&quot;;price=0;color=RED;};boss=null;}" Static="false" Public="true" Readonly="false" />
@@ -1442,27 +676,6 @@
       <Method Name="Func_CharIR" DisplayName="3 # PIR_Char" Desc="A" Class="ParTestRegNameAgent" ReturnType="char" ReturnTypeFullName="System.Char" Static="false" Public="true" istask="false">
         <Param Name="param0" Type="char" TypeFullName="System.Char" DisplayName="par" Desc="par" />
       </Method>
-      <Method Name="VectorLength" DisplayName="VectorLength" Desc="VectorLength" Class="behaviac::Agent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="const IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-      </Method>
-      <Method Name="VectorAdd" DisplayName="VectorAdd" Desc="VectorAdd" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorRemove" DisplayName="VectorRemove" Desc="VectorRemove" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorContains" DisplayName="VectorContains" Desc="VectorContains" Class="behaviac::Agent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorClear" DisplayName="VectorClear" Desc="VectorClear" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-      </Method>
-      <Method Name="LogMessage" DisplayName="LogMessage" Desc="LogMessage" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="const char*" TypeFullName="System.String" DisplayName="param0" Desc="param0" />
-      </Method>
     </agent>
     <agent classfullname="PreconEffectorAgent" base="behaviac::Agent" DisplayName="PreconEffectorAgent" Desc="PreconEffectorAgent" IsRefType="true" IsImplemented="true">
       <Member Name="count_success" DisplayName="count_success" Desc="count_success" Class="PreconEffectorAgent" Type="int" TypeFullName="System.Int32" defaultvalue="0" Static="false" Public="true" Readonly="false" />
@@ -1471,27 +684,6 @@
       <Member Name="count_failure" DisplayName="count_failure" Desc="count_failure" Class="PreconEffectorAgent" Type="int" TypeFullName="System.Int32" defaultvalue="0" Static="false" Public="true" Readonly="false" />
       <Method Name="fn_return" DisplayName="fn_return" Desc="fn_return" Class="PreconEffectorAgent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="false" Public="true" istask="false" />
       <Method Name="action" DisplayName="action" Desc="action" Class="PreconEffectorAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false" />
-      <Method Name="VectorLength" DisplayName="VectorLength" Desc="VectorLength" Class="behaviac::Agent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="const IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-      </Method>
-      <Method Name="VectorAdd" DisplayName="VectorAdd" Desc="VectorAdd" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorRemove" DisplayName="VectorRemove" Desc="VectorRemove" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorContains" DisplayName="VectorContains" Desc="VectorContains" Class="behaviac::Agent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorClear" DisplayName="VectorClear" Desc="VectorClear" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-      </Method>
-      <Method Name="LogMessage" DisplayName="LogMessage" Desc="LogMessage" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="const char*" TypeFullName="System.String" DisplayName="param0" Desc="param0" />
-      </Method>
     </agent>
     <agent classfullname="PropertyReadonlyAgent" base="behaviac::Agent" DisplayName="PropertyReadonlyAgent" Desc="PropertyReadonlyAgent" IsRefType="true" IsImplemented="true">
       <Member Name="c_ResultStatic" DisplayName="c_ResultStatic" Desc="c_ResultStatic" Class="PropertyReadonlyAgent" Type="int" TypeFullName="System.Int32" IsCustomized="true" defaultvalue="0" Static="true" Public="true" Readonly="false" />
@@ -1507,27 +699,6 @@
       <Method Name="FnWithOutParam" DisplayName="FnWithOutParam" Desc="FnWithOutParam" Class="PropertyReadonlyAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
         <Param Name="param0" Type="int" TypeFullName="System.Int32" IsOut="true" DisplayName="param" Desc="param" />
       </Method>
-      <Method Name="VectorLength" DisplayName="VectorLength" Desc="VectorLength" Class="behaviac::Agent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="const IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-      </Method>
-      <Method Name="VectorAdd" DisplayName="VectorAdd" Desc="VectorAdd" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorRemove" DisplayName="VectorRemove" Desc="VectorRemove" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorContains" DisplayName="VectorContains" Desc="VectorContains" Class="behaviac::Agent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorClear" DisplayName="VectorClear" Desc="VectorClear" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-      </Method>
-      <Method Name="LogMessage" DisplayName="LogMessage" Desc="LogMessage" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="const char*" TypeFullName="System.String" DisplayName="param0" Desc="param0" />
-      </Method>
     </agent>
     <agent classfullname="StaticAgent" base="behaviac::Agent" DisplayName="StaticAgent" Desc="StaticAgent" IsRefType="true" IsStatic="true" IsImplemented="true">
       <Member Name="sInt" DisplayName="sInt" Desc="sInt" Class="StaticAgent" Type="int" TypeFullName="System.Int32" defaultvalue="0" Static="true" Public="true" Readonly="false" />
@@ -1542,27 +713,6 @@
       <Member Name="c_doubleVec2" DisplayName="c_doubleVec2" Desc="c_doubleVec2" Class="TestNS::AgentArrayAccessTest" Type="vector&lt;double&gt;" TypeFullName="System.Collections.Generic.List`1[[System.Double, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" IsCustomized="true" defaultvalue="3:0.01|0.02|0.03" Static="false" Public="true" Readonly="false" />
       <Member Name="Int" DisplayName="Int" Desc="Int" Class="TestNS::AgentArrayAccessTest" Type="int" TypeFullName="System.Int32" defaultvalue="0" Static="false" Public="true" Readonly="false" />
       <Member Name="ListInts" DisplayName="ListInts" Desc="ListInts" Class="TestNS::AgentArrayAccessTest" Type="vector&lt;int&gt;" TypeFullName="System.Collections.Generic.List`1[[System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" defaultvalue="0:" Static="false" Public="true" Readonly="false" />
-      <Method Name="VectorLength" DisplayName="VectorLength" Desc="VectorLength" Class="behaviac::Agent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="const IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-      </Method>
-      <Method Name="VectorAdd" DisplayName="VectorAdd" Desc="VectorAdd" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorRemove" DisplayName="VectorRemove" Desc="VectorRemove" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorContains" DisplayName="VectorContains" Desc="VectorContains" Class="behaviac::Agent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
-      </Method>
-      <Method Name="VectorClear" DisplayName="VectorClear" Desc="VectorClear" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
-      </Method>
-      <Method Name="LogMessage" DisplayName="LogMessage" Desc="LogMessage" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
-        <Param Name="param0" Type="const char*" TypeFullName="System.String" DisplayName="param0" Desc="param0" />
-      </Method>
     </agent>
   </agents>
   <instances>

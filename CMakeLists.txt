@@ -31,7 +31,7 @@ cmake_minimum_required (VERSION 2.8)
 # set(CMAKE_CONFIGURATION_TYPES "Debug;Release;Profile" CACHE STRING "" FORCE) 
 set(CMAKE_CONFIGURATION_TYPES "Debug;Release" CACHE STRING "" FORCE) 
 
-set (BEHAVIAC_PACKAGE_VERSION 3.6.25)
+set (BEHAVIAC_PACKAGE_VERSION 3.6.26)
 
 #option( BUILD_SHARED_LIBS "set to OFF to build static libraries" ON )
 SET(BUILD_SHARED_LIBS ON CACHE BOOL "set to OFF to build static libraries")
@@ -410,3 +410,4 @@ add_subdirectory ("${PROJECT_SOURCE_DIR}/tutorials/tutorial_3/cpp")
 add_subdirectory ("${PROJECT_SOURCE_DIR}/tutorials/tutorial_4/cpp")
 add_subdirectory ("${PROJECT_SOURCE_DIR}/tutorials/tutorial_5/cpp")
 add_subdirectory ("${PROJECT_SOURCE_DIR}/tutorials/tutorial_6/cpp")
+add_subdirectory ("${PROJECT_SOURCE_DIR}/tutorials/tutorial_7/cpp")

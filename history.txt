@@ -1,3 +1,10 @@
+2017-3-23  3.6.26
+    Support renaming the types.
+    Do not send the update message when debugging.
+    Fix a bug for setting the var when debugging for C#.
+    Fix a bug for generating codes for Agent* as the return type of the method.
+    Fix a bug for renaming the method.
+
 2017-3-16  3.6.25
     Support renaming types.
     Add the tutorial_6 projects.

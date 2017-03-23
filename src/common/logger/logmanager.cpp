@@ -188,12 +188,16 @@ namespace behaviac {
                         //[tick]Ship::Ship_1 ships\suicide.xml->Selector[1]:enter [all/success/failure] [1]
                         //[tick]Ship::Ship_1 ships\suicide.xml->Selector[1]:update [1]
                         int count = Workspace::GetInstance()->UpdateActionCount(btMsg);
+						BEHAVIAC_UNUSED_VAR(count);
 
-                        char buffer[1024];
-                        string_sprintf(buffer, "[tick]%s %s [%s] [%d]\n", agentName.c_str(), btMsg, actionResultStr, count);
+						if (!StringUtils::Compare(actionResultStr, "running"))
+						{
+							char buffer[1024];
+							string_sprintf(buffer, "[tick]%s %s [%s] [%d]\n", agentName.c_str(), btMsg, actionResultStr, count);
 
-                        this->Output(pAgent, buffer);
-                        Socket::SendText(buffer);
+							this->Output(pAgent, buffer);
+							Socket::SendText(buffer);
+						}
                     } else if (mode == behaviac::ELM_jump) {
                         char buffer[1024];
                         string_sprintf(buffer, "[jump]%s %s\n", agentName.c_str(), btMsg);

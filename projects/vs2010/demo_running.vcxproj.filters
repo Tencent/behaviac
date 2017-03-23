@@ -2,28 +2,28 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="test">
-      <UniqueIdentifier>{86FE23A3-0F9C-144B-8750-D405F1AEDA66}</UniqueIdentifier>
+      <UniqueIdentifier>{89CE00CD-9DA7-684F-AA87-034E5B247B5E}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running">
-      <UniqueIdentifier>{A098655D-A479-FE42-AD6C-AEFB8AEBEE88}</UniqueIdentifier>
+      <UniqueIdentifier>{9FDE2B27-6533-AF45-9049-6DFC9AB7AA4D}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac">
-      <UniqueIdentifier>{CA002994-40CA-3A4C-94EF-684B4FA5E03A}</UniqueIdentifier>
+      <UniqueIdentifier>{E7BD6CE1-46A5-9046-B549-7154442DC280}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac\exported">
-      <UniqueIdentifier>{1375B7AA-CBBD-544C-B07F-D15241BAAF86}</UniqueIdentifier>
+      <UniqueIdentifier>{8EEB6369-7768-1A44-A45D-78319481C11A}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac\exported\behaviac_generated">
-      <UniqueIdentifier>{FE5996A5-94E3-FC48-992B-1C732DDF7490}</UniqueIdentifier>
+      <UniqueIdentifier>{0592BC02-A57C-884E-B22B-91D79EAEA6BD}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac\exported\behaviac_generated\behaviors">
-      <UniqueIdentifier>{49A64D8F-9600-634B-89BC-9800FBDD3495}</UniqueIdentifier>
+      <UniqueIdentifier>{7EBF4527-4684-5345-88B1-127B71341202}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac\exported\behaviac_generated\types">
-      <UniqueIdentifier>{E040CB71-B081-1648-B426-B43CF898BA09}</UniqueIdentifier>
+      <UniqueIdentifier>{5B17274B-B5F7-6B4B-B78B-1F2B4994FDB9}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac\exported\behaviac_generated\types\internal">
-      <UniqueIdentifier>{8B759932-EE86-DB4D-AA0C-637C9244A542}</UniqueIdentifier>
+      <UniqueIdentifier>{F8050755-884A-7B4A-A6AD-CADE0C498A3D}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

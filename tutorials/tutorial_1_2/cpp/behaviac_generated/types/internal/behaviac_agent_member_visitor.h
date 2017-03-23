@@ -9,9 +9,6 @@
 
 // Agent property and method handlers
 
-namespace behaviac
-{
-}
 
 struct PROPERTY_TYPE_SecondAgent_p1 { };
 template<> inline int& SecondAgent::_Get_Property_<PROPERTY_TYPE_SecondAgent_p1>()

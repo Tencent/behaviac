@@ -2,28 +2,28 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="test">
-      <UniqueIdentifier>{F57B648B-E258-234A-9F13-976482CF515E}</UniqueIdentifier>
+      <UniqueIdentifier>{23A4CC83-D542-2D47-99E1-22BD62179902}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running">
-      <UniqueIdentifier>{38696485-6A02-CC49-9FD8-CC8B8950C684}</UniqueIdentifier>
+      <UniqueIdentifier>{73406559-DDF7-D54D-AE9A-E1C9EF236536}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac">
-      <UniqueIdentifier>{C75CF597-25D8-CD49-830A-FC6908F4834B}</UniqueIdentifier>
+      <UniqueIdentifier>{10FBED2D-D700-2444-882C-53F8FA3E0163}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac\exported">
-      <UniqueIdentifier>{9E076078-E357-314A-8D95-E5D0F302C80F}</UniqueIdentifier>
+      <UniqueIdentifier>{9B4483AE-78AD-164A-84FB-FA3AAA053D2B}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac\exported\behaviac_generated">
-      <UniqueIdentifier>{F8F87647-5F0A-9A46-B334-6316C49F3E57}</UniqueIdentifier>
+      <UniqueIdentifier>{DE68310C-46F7-FA44-A1DA-1B58D456C656}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac\exported\behaviac_generated\behaviors">
-      <UniqueIdentifier>{C045368E-0391-974C-B70C-0DAE1AB56252}</UniqueIdentifier>
+      <UniqueIdentifier>{0F9C14A5-3833-9E46-B32B-5E9C3A87C0B9}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac\exported\behaviac_generated\types">
-      <UniqueIdentifier>{BE409C23-58C6-794F-8105-48395C30AF91}</UniqueIdentifier>
+      <UniqueIdentifier>{AF157F97-E971-9E4D-B1A7-AE9ED2571460}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac\exported\behaviac_generated\types\internal">
-      <UniqueIdentifier>{89823AE3-6339-AA46-8C09-7DCD939E7592}</UniqueIdentifier>
+      <UniqueIdentifier>{DDC1573A-E23E-F740-A20B-714C2F377B37}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

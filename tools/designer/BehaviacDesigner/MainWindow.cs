@@ -971,7 +971,6 @@ namespace Behaviac.Design
                     }
 
                     loadLayout(curEditMode, __layoutDesignFile, true);
-
                 }
                 else
                 {
@@ -999,7 +998,6 @@ namespace Behaviac.Design
                         Utilities.ClearDirectory(logFileDir);
                     }
                 }
-
             }
             catch
             {
@@ -1138,9 +1136,9 @@ namespace Behaviac.Design
                         dock.BehaviorTreeView = control;
                         dock.Activated += new EventHandler(dock_Activated);
                         dock.FormClosed += new FormClosedEventHandler(dock_FormClosed);
-                        dock.Show(dockPanel, WeifenLuo.WinFormsUI.Docking.DockState.Document);
-
                         dock.ToolTipText = FileManagers.FileManager.GetRelativePath(node.Filename);
+
+                        dock.Show(dockPanel, WeifenLuo.WinFormsUI.Docking.DockState.Document);
                     }
                     catch
                     {

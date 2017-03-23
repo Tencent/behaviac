@@ -178,22 +178,27 @@ namespace behaviac {
             this->m_variables->Clear(true);
         }
     }
-    void Agent::SetVariableFromString(const char* variableName, const char* valueStr) {
-        uint32_t variableId = MakeVariableId(variableName);
-        IInstanceMember* valueMember = AgentMeta::ParseProperty(valueStr);
 
-        if (valueMember) {
-            IInstantiatedVariable* v = this->GetInstantiatedVariable(variableId);
+    void Agent::SetVariableFromString(const char* variableName, const char* valueStr) {
+        //IInstanceMember* valueMember = AgentMeta::ParseProperty(valueStr);
+
+		//if (valueMember)
+		if (valueStr)
+		{
+			uint32_t variableId = MakeVariableId(variableName);
+			IInstantiatedVariable* v = this->GetInstantiatedVariable(variableId);
 
             if (v != NULL) {
-                v->SetValue(this, (void*)valueMember->GetValueObject(this));
+                //v->SetValue(this, (void*)valueMember->GetValueObject(this));
+				v->SetValueFromString(valueStr);
                 return;
             }
 
             IProperty* prop = this->GetProperty(variableId);
 
             if (prop) {
-                prop->SetValueFrom(this, valueMember);
+                //prop->SetValueFrom(this, valueMember);
+				prop->SetValueFromString(this, valueStr);
             }
         }
     }
@@ -398,6 +403,7 @@ namespace behaviac {
         }
     }
 #endif//#if BEHAVIAC_ENABLE_NETWORKD
+
     void Agent::LogVariables(bool bForce) {
         BEHAVIAC_UNUSED_VAR(bForce);
 #if !BEHAVIAC_RELEASE
@@ -456,6 +462,27 @@ namespace behaviac {
 
 #endif//BEHAVIAC_RELEASE
     }
+
+	void Agent::LogRunningNodes()
+	{
+#if !BEHAVIAC_RELEASE
+		if (Config::IsLoggingOrSocketing() && this->m_currentBT != NULL)
+		{
+			behaviac::vector<BehaviorTask*> runningNodes = this->m_currentBT->GetRunningNodes(false);
+
+			for (unsigned int i = 0; i < runningNodes.size(); ++i)
+			{
+				string btStr = BehaviorTask::GetTickInfo(this, runningNodes[i], "enter");
+
+				//empty btStr is for internal BehaviorTreeTask
+				if (!StringUtils::IsNullOrEmpty(btStr.c_str()))
+				{
+					LogManager::GetInstance()->Log(this, btStr.c_str(), EAR_success, ELM_tick);
+				}
+			}
+		}
+#endif//BEHAVIAC_RELEASE
+	}
 
     void Agent::ResetChangedVariables() {
         //TODO: Reset() method removed, the below code need to remove

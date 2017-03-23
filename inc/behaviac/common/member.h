@@ -320,7 +320,7 @@ namespace behaviac {
             const RealBaseType& currentValue = pAgent->GetVariable<RealBaseType>(name);
 
             if (bForce || OperationUtils::Compare<RealBaseType>(currentValue, this->value, E_NOTEQUAL)) {
-                behaviac::string valueStr = StringUtils::ToString(this->value);
+				behaviac::string valueStr = StringUtils::ToString(currentValue);
                 behaviac::string typeName = GetClassTypeName((RealBaseType*)0);
 
                 LogManager::GetInstance()->Log(pAgent, typeName.c_str(), name, valueStr.c_str());

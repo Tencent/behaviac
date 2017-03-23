@@ -785,18 +785,10 @@ namespace Behaviac.Design
         {
             get
             {
-                //if (_isInherited)
-                //{
-                //    return true;
-                //}
-
-                //if (_agentType != null && _agentType.Base != null)
-                //{
-                //    if (null != _agentType.Base.GetMethodByName(this.BasicName))
-                //    {
-                //        _isInherited = true;
-                //    }
-                //}
+                if (!_isInherited && _agentType != null && _agentType.Name != this.ClassName)
+                {
+                    _isInherited = true;
+                }
 
                 return _isInherited;
             }
@@ -908,7 +900,8 @@ namespace Behaviac.Design
 
                     if (index != -1)
                     {
-                        return _name.Substring(0, index - 1);
+                        _classname = _name.Substring(0, index - 1);
+                        return _classname;
                     }
                 }
 
@@ -1650,6 +1643,11 @@ namespace Behaviac.Design
         {
             get
             {
+                if (!_isInherited && _agentType != null && _agentType.Name != this.ClassName)
+                {
+                    _isInherited = true;
+                }
+
                 return _isInherited;
             }
             set
@@ -1922,7 +1920,8 @@ namespace Behaviac.Design
 
                     if (index != -1)
                     {
-                        return _name.Substring(0, index - 1);
+                        _classname = _name.Substring(0, index - 1);
+                        return _classname;
                     }
                 }
 

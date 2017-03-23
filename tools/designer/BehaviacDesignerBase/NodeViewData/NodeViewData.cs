@@ -1232,9 +1232,11 @@ namespace Behaviac.Design
                     // store the required space depending on parallel and non-parallel subitems
                     if (subitem.ShowParallelToLabel)
                     {
-                        subItemParallelHeight += subitem.Height;
-                        _subItemParallelWidth = Math.Max(_subItemParallelWidth, subitem.Width);
-
+                        if (this.IsExpanded)
+                        {
+                            subItemParallelHeight += subitem.Height;
+                            _subItemParallelWidth = Math.Max(_subItemParallelWidth, subitem.Width);
+                        }
                     }
                     else
                     {
@@ -1451,14 +1453,13 @@ namespace Behaviac.Design
                     if (_subItems[i].ShowParallelToLabel)
                     {
                         if (i < n)
-                            // store the height of all parallel subitems before the requested one
                         {
+                            // store the height of all parallel subitems before the requested one
                             previousParallelHeight += _subItems[i].Height;
                         }
 
                         // store the height of all available subitems
                         totalParallelHeight += _subItems[i].Height;
-
                     }
                     else
                     {
@@ -1468,8 +1469,11 @@ namespace Behaviac.Design
                 }
 
                 // calculate the final top
-                top = nodeBoundingBox.Top + (nodeBoundingBox.Height - totalParallelHeight) * 0.5f + previousParallelHeight;
-
+                top = nodeBoundingBox.Top + previousParallelHeight;
+                if (this.IsExpanded)
+                {
+                    top += (nodeBoundingBox.Height - totalParallelHeight) * 0.5f;
+                }
             }
             else
             {
@@ -1520,7 +1524,7 @@ namespace Behaviac.Design
                 }
             }
 
-            // first find the first and last parallel subitem
+            // find the first and last parallel subitem
             int firstParallel = -1;
             int lastParallel = -1;
 

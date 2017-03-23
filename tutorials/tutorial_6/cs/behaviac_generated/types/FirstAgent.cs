@@ -26,7 +26,7 @@ public class FirstAgent : behaviac.Agent
 		return p1;
 	}
 
-	private void Say(string param0)
+	public void Say(string param0)
 	{
 ///<<< BEGIN WRITING YOUR CODE Say
         Console.WriteLine();

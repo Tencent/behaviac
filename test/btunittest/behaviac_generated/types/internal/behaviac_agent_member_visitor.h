@@ -9,9 +9,6 @@
 
 // Agent property and method handlers
 
-namespace behaviac
-{
-}
 
 struct METHOD_TYPE_HTNAgentHouseBase_ObtainPermit { };
 template<> inline void HTNAgentHouseBase::_Execute_Method_<METHOD_TYPE_HTNAgentHouseBase_ObtainPermit>()

@@ -586,9 +586,9 @@ namespace PluginBehaviac.Exporters
 
                 if (!string.IsNullOrEmpty(ns))
                 {
-                    foreach (PropertyDef property in agenType.GetProperties(true))
+                    foreach (PropertyDef prop in agenType.GetProperties(true))
                     {
-                        if (property.IsMember && !property.IsAddedAutomatically)
+                        if (!prop.IsPublic && !prop.IsInherited && !prop.IsArrayElement)
                         {
                             namespaces = GetNamespaces(ns);
                             break;
@@ -600,7 +600,7 @@ namespace PluginBehaviac.Exporters
                 {
                     foreach (MethodDef method in agenType.GetMethods(true))
                     {
-                        if (method.ClassName == agenType.Name)
+                        if (!method.IsPublic && !method.IsNamedEvent && method.ClassName == agenType.Name)
                         {
                             namespaces = GetNamespaces(ns);
                             break;
@@ -674,6 +674,10 @@ namespace PluginBehaviac.Exporters
 
                         string methodName = agenType.Name.Replace("::", "_") + "_" + method.BasicName.Replace("::", "_");
                         string nativeReturnType = DataCppExporter.GetGeneratedNativeType(method.NativeReturnType);
+                        if (Plugin.IsRefType(method.ReturnType) && !nativeReturnType.EndsWith("*"))
+                        {
+                            nativeReturnType += "*";
+                        }
 
                         if (method.NativeReturnType.StartsWith("const "))
                         {
@@ -1716,6 +1720,11 @@ namespace PluginBehaviac.Exporters
                     }
 
                     string methodReturnType = DataCppExporter.GetGeneratedNativeType(method.NativeReturnType);
+                    if (Plugin.IsRefType(method.ReturnType) && !methodReturnType.EndsWith("*"))
+                    {
+                        methodReturnType += "*";
+                    }
+
                     string agentTypeName = agent.Name;
                     string methodName = agentTypeName.Replace("::", "_") + "_" + method.BasicName.Replace("::", "_");
 
@@ -2273,7 +2282,13 @@ namespace PluginBehaviac.Exporters
                             ExportMethodComment(file, indent, method.OldName);
                             method.OldName = null;
 
-                            file.WriteLine("{0}{1} {2}::{3}({4})", indent, DataCppExporter.GetGeneratedNativeType(method.NativeReturnType), agent.BasicName, method.BasicName, allParams);
+                            string methodReturnType = DataCppExporter.GetGeneratedNativeType(method.NativeReturnType);
+                            if (Plugin.IsRefType(method.ReturnType) && !methodReturnType.EndsWith("*"))
+                            {
+                                methodReturnType += "*";
+                            }
+
+                            file.WriteLine("{0}{1} {2}::{3}({4})", indent, methodReturnType, agent.BasicName, method.BasicName, allParams);
                             file.WriteLine("{0}{{", indent);
                             ExportBeginComment(file, "\t" + indent, method.BasicName);
 
@@ -2830,6 +2845,11 @@ namespace PluginBehaviac.Exporters
                     file.WriteLine("\t\t\tAgentMeta::Register<{0}>(\"{0}\");", structFullname);
                 }
 
+                foreach (string newTypes in Plugin.TypeRenames.Values)
+                {
+                    file.WriteLine("\t\t\tAgentMeta::Register<{0}>(\"{0}\");", newTypes);
+                }
+
                 if (Plugin.InstanceNames.Count > 0)
                 {
                     file.WriteLine();
@@ -3078,6 +3098,11 @@ namespace PluginBehaviac.Exporters
                     }
 
                     string methodReturnType = DataCppExporter.GetGeneratedNativeType(method.NativeReturnType);
+                    if (Plugin.IsRefType(method.ReturnType) && !methodReturnType.EndsWith("*"))
+                    {
+                        methodReturnType += "*";
+                    }
+
                     string methodName = agentTypeName.Replace("::", "_") + "_" + method.BasicName.Replace("::", "_");
 
                     if (method.IsNamedEvent)

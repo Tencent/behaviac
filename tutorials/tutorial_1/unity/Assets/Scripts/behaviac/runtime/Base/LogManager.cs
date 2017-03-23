@@ -163,9 +163,12 @@ namespace behaviac
                             //[tick]Ship.Ship_1 ships\suicide.xml.Selector[1]:update [1]
                             int count = Workspace.Instance.UpdateActionCount(btMsg);
 
-                            string buffer = string.Format("[tick]{0} {1} [{2}] [{3}]\n", agentName, btMsg, actionResultStr, count);
+                            if (actionResultStr != "running")
+                            {
+                                string buffer = string.Format("[tick]{0} {1} [{2}] [{3}]\n", agentName, btMsg, actionResultStr, count);
 
-                            Output(pAgent, buffer);
+                                Output(pAgent, buffer);
+                            }
                         }
                         else if (mode == LogMode.ELM_jump)
                         {

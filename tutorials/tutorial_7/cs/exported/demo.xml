@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: demo.xml-->
+<behavior name="demo" agenttype="FirstAgent" version="5">
+  <node class="DecoratorLoop" id="1">
+    <property Count="const int -1" />
+    <property DecorateWhenChildEnds="true" />
+    <property DoneWithinFrame="false" />
+    <node class="Sequence" id="0">
+      <node class="Action" id="6">
+        <property Method="Self.FirstAgent::Start()" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Assignment" id="3">
+        <property CastRight="false" />
+        <property Opl="int Self.FirstAgent::p1" />
+        <property Opr="const int 1" />
+      </node>
+      <node class="Condition" id="2">
+        <property Operator="Equal" />
+        <property Opl="int Self.FirstAgent::p1" />
+        <property Opr="const int 1" />
+      </node>
+      <node class="Action" id="5">
+        <property Method="Self.FirstAgent::Wait()" />
+        <property ResultOption="BT_INVALID" />
+      </node>
+    </node>
+  </node>
+</behavior>

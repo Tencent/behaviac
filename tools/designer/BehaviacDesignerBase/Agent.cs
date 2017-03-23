@@ -853,7 +853,7 @@ namespace Behaviac.Design
 
             foreach (PropertyDef prop in _propertyList)
             {
-                if (!findProperty(properties, prop.BasicName))
+                if (!prop.IsInherited && !findProperty(properties, prop.BasicName))
                 {
                     properties.Add(prop);
                 }
@@ -1057,7 +1057,7 @@ namespace Behaviac.Design
 
             foreach (MethodDef method in _methodsList)
             {
-                if (!findMethod(methods, method.BasicName))
+                if (!method.IsInherited && !findMethod(methods, method.BasicName))
                 {
                     methods.Add(method);
                 }

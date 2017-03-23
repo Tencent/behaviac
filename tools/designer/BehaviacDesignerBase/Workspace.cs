@@ -1799,7 +1799,7 @@ namespace Behaviac.Design
 
                 foreach (PropertyDef prop in agent.GetProperties())
                 {
-                    if (prop.IsArrayElement || prop.IsPar)
+                    if (prop.IsArrayElement || prop.IsPar || prop.IsInherited)
                     {
                         continue;
                     }
@@ -1828,6 +1828,11 @@ namespace Behaviac.Design
 
                 foreach (MethodDef method in agent.GetMethods())
                 {
+                    if (method.IsInherited)
+                    {
+                        continue;
+                    }
+
                     XmlElement methodEle = bbfile.CreateElement("Method");
 
                     methodEle.SetAttribute("Name", method.BasicName);

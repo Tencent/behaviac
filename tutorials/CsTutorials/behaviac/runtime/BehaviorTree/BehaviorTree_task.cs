@@ -515,7 +515,7 @@ namespace behaviac
 
             if (Config.IsLoggingOrSocketing)
             {
-                if (pAgent != null && pAgent.IsMasked())
+                if (!System.Object.ReferenceEquals(pAgent, null) && pAgent.IsMasked())
                 {
                     //BEHAVIAC_PROFILE("GetTickInfo", true);
 
