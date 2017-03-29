@@ -374,15 +374,15 @@ namespace behaviac {
         Register<unsigned long>("ulong");
         Register<unsigned long long>("ullong");
         Register<float>("Single");
+		Register<char*>("char*");
+		Register<const char*>("const char*");
 #if BEHAVIAC_USE_CUSTOMSTRING
         Register<behaviac::string>("string");
         Register<behaviac::string>("String");
 #else
 		Register<std::string>("string");
 		Register<std::string>("String");
-
 		Register<std::string>("std::string");
-
 #endif
         Register<behaviac::Agent>("behaviac::Agent");
         Register<behaviac::EBTStatus>("behaviac::EBTStatus");
@@ -421,13 +421,14 @@ namespace behaviac {
         UnRegister<unsigned long>("ulong");
         UnRegister<unsigned long long>("ullong");
         UnRegister<float>("Single");
+		UnRegister<char*>("char*");
+		UnRegister<const char*>("const char*");
 #if BEHAVIAC_USE_CUSTOMSTRING
         UnRegister<behaviac::string>("string");
         UnRegister<behaviac::string>("String");
 #else
 		UnRegister<std::string>("string");
 		UnRegister<std::string>("String");
-
 		UnRegister<std::string>("std::string");
 #endif
         UnRegister<behaviac::Agent>("behaviac::Agent");
@@ -685,7 +686,7 @@ namespace behaviac {
             for (unsigned int i = 0; i < allFiles.size(); ++i) {
                 size_t index = allFiles[i].find(ext);
 
-                if (index > 0) {
+				if (index != (size_t)-1) {
                     index = allFiles[i].find(".meta");
                     BEHAVIAC_ASSERT(index > 0);
                     string filename = allFiles[i].substr(0, index + 5);
@@ -948,10 +949,11 @@ namespace behaviac {
         while (type != BsonDeserizer::BT_None) {
             if (type == BsonDeserizer::BT_PropertiesElement) {
                 d->OpenDocument();
-                type = d->ReadType();
 
-                while (type != BsonDeserizer::BT_None) {
-                    if (type == BsonDeserizer::BT_PropertyElement) {
+				BsonDeserizer::BsonTypes internalType = d->ReadType();
+
+				while (internalType != BsonDeserizer::BT_None) {
+					if (internalType == BsonDeserizer::BT_PropertyElement) {
                         d->OpenDocument();
                         const char* propName = d->ReadString();
                         const char* propType = d->ReadString();
@@ -981,7 +983,7 @@ namespace behaviac {
                         BEHAVIAC_ASSERT(false);
                     }
 
-                    type = d->ReadType();
+					internalType = d->ReadType();
                 }//end of while
 
                 d->CloseDocument(false);

@@ -501,19 +501,32 @@ namespace WeifenLuo.WinFormsUI.Docking
                 m_isFloat = (m_visibleState == DockState.Float);
 
                 if (Pane == null)
-                    Pane = DockPanel.DockPaneFactory.CreateDockPane(Content, visibleState, true);
+                {
+                    if (DockPanel != null)
+                    {
+                        Pane = DockPanel.DockPaneFactory.CreateDockPane(Content, visibleState, true);
+                    }
+                }
                 else if (Pane.DockState != visibleState)
                 {
                     if (Pane.Contents.Count == 1)
                         Pane.SetDockState(visibleState);
                     else
-                        Pane = DockPanel.DockPaneFactory.CreateDockPane(Content, visibleState, true);
+                    {
+                        if (DockPanel != null)
+                        {
+                            Pane = DockPanel.DockPaneFactory.CreateDockPane(Content, visibleState, true);
+                        }
+                    }
                 }
             }
 
             if (Form.ContainsFocus)
                 if (DockState == DockState.Hidden || DockState == DockState.Unknown)
-                    DockPanel.ContentFocusManager.GiveUpFocus(Content);
+                {
+                    if (DockPanel != null)
+                        DockPanel.ContentFocusManager.GiveUpFocus(Content);
+                }
 
             SetPaneAndVisible(Pane);
 
@@ -531,11 +544,13 @@ namespace WeifenLuo.WinFormsUI.Docking
 
             if (oldDockState != DockState)
             {
-                if (DockState == DockState.Hidden || DockState == DockState.Unknown ||
-                    DockHelper.IsDockStateAutoHide(DockState))
-                    DockPanel.ContentFocusManager.RemoveFromList(Content);
-                else
-                    DockPanel.ContentFocusManager.AddToList(Content);
+                if (DockPanel != null)
+                {
+                    if (DockState == DockState.Hidden || DockState == DockState.Unknown || DockHelper.IsDockStateAutoHide(DockState))
+                        DockPanel.ContentFocusManager.RemoveFromList(Content);
+                    else
+                        DockPanel.ContentFocusManager.AddToList(Content);
+                }
 
                 OnDockStateChanged(EventArgs.Empty);
             }

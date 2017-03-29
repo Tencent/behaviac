@@ -110,6 +110,21 @@ namespace behaviac {
                 typename behaviac::Meta::RemovePtr<T>::Result, T >::Result Result;
     };
 
+	template <typename T>
+	struct SzStringMapper {
+		typedef T Result;
+	};
+
+	template <>
+	struct SzStringMapper<char*> {
+		typedef behaviac::string Result;
+	};
+
+	template <>
+	struct SzStringMapper<const char*> {
+		typedef behaviac::string Result;
+	};
+
     class BEHAVIAC_API AgentMeta {
     private:
         behaviac::map<uint32_t, IProperty*>                     _memberProperties;
@@ -258,7 +273,9 @@ namespace behaviac {
 
 			if (isStructOrConst)
 			{
-                typedef typename RemovePointerForAgentType<T>::Result Type;
+                typedef typename RemovePointerForAgentType<T>::Result Type_;
+				typedef typename SzStringMapper<Type_>::Result Type;
+
 				behaviac::string typeName = behaviac::GetTypeDescString<Type>();
 
                 return AgentMeta::CreateInstanceConst(typeName, value);

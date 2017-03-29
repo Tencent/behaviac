@@ -1075,11 +1075,13 @@ namespace WeifenLuo.WinFormsUI.Docking
                 if (content.DockHandler.IsDockStateValid(pane.DockState))
                 {
                     content.DockHandler.Pane = pane;
-                    i--;
+                    // +HC
+                    //i--;
+                    // -HC
                 }
             }
 
-            if (activeContent.DockHandler.Pane == pane)
+            if (activeContent != null && activeContent.DockHandler.Pane == pane)
                 pane.ActiveContent = activeContent;
         }
 

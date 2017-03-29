@@ -9,33 +9,24 @@
 
 // Agent property and method handlers
 
-namespace behaviac
-{
-}
 
 struct PROPERTY_TYPE_FirstAgent_p1 { };
 template<> inline int& FirstAgent::_Get_Property_<PROPERTY_TYPE_FirstAgent_p1>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(FirstAgent, FirstAgent::p1);
-	return *(reinterpret_cast<int*>(pc));
+	return this->p1;
 }
 
 struct PROPERTY_TYPE_FirstAgent_pInstance { };
 template<> inline SecondAgent*& FirstAgent::_Get_Property_<PROPERTY_TYPE_FirstAgent_pInstance>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(FirstAgent, FirstAgent::pInstance);
-	return *(reinterpret_cast<SecondAgent**>(pc));
+	return this->pInstance;
 }
 
 
 struct PROPERTY_TYPE_SecondAgent_p2 { };
 template<> inline int& SecondAgent::_Get_Property_<PROPERTY_TYPE_SecondAgent_p2>()
 {
-	unsigned char* pc = (unsigned char*)this;
-	pc += (int)BEHAVIAC_OFFSETOF(SecondAgent, SecondAgent::p2);
-	return *(reinterpret_cast<int*>(pc));
+	return this->p2;
 }
 
 

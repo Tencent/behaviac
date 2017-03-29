@@ -305,6 +305,8 @@ namespace behaviac {
         */
         void LogVariables(bool bForce);
 
+		void LogRunningNodes();
+
         //static bool Invoke(Agent* pAgent, const char* methodName);
 
         //template <typename P1>

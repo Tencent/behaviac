@@ -16,7 +16,7 @@ namespace behaviac {
     }
 
     bool Transition::IsValid(Agent* pAgent, BehaviorTask* pTask) const {
-        if (Transition::DynamicCast(pTask) == 0) {
+		if (Transition::DynamicCast(pTask->GetNode()) == 0) {
             return false;
         }
 

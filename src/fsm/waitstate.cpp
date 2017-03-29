@@ -197,23 +197,25 @@ namespace behaviac {
         BEHAVIAC_ASSERT(WaitState::DynamicCast(this->GetNode()) != 0, "node is not an WaitState");
 
         WaitState* pStateNode = (WaitState*)(this->GetNode());
-        BEHAVIAC_UNUSED_VAR(pStateNode);
 
-        bool bUseIntValue = Workspace::GetInstance()->GetUseIntValue();
+		bool bUseIntValue = Workspace::GetInstance()->GetUseIntValue();
 
-        if (bUseIntValue) {
-            long long time = Workspace::GetInstance()->GetIntValueSinceStartup();
+		if (bUseIntValue) {
+			long long time = Workspace::GetInstance()->GetIntValueSinceStartup();
 
-            if (time - this->m_intStart >= this->m_intTime) {
-                return BT_SUCCESS;
-            }
-        } else {
-            double time = Workspace::GetInstance()->GetDoubleValueSinceStartup();
+			if (time - this->m_intStart >= this->m_intTime) {
+				pStateNode->Update(pAgent, this->m_nextStateId);
+				return BT_SUCCESS;
+			}
+		}
+		else {
+			double time = Workspace::GetInstance()->GetDoubleValueSinceStartup();
 
-            if (time - this->m_start >= this->m_time) {
-                return BT_SUCCESS;
-            }
-        }
+			if (time - this->m_start >= this->m_time) {
+				pStateNode->Update(pAgent, this->m_nextStateId);
+				return BT_SUCCESS;
+			}
+		}
 
         return BT_RUNNING;
     }

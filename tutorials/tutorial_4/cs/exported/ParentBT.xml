@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: ParentBT.xml-->
+<behavior name="ParentBT" agenttype="FirstAgent" version="5">
+  <node class="Selector" id="1">
+    <node class="Sequence" id="2">
+      <node class="Assignment" id="5">
+        <property CastRight="false" />
+        <property Opl="int Self.FirstAgent::p1" />
+        <property Opr="const int 6" />
+      </node>
+      <node class="Condition" id="6">
+        <property Operator="Greater" />
+        <property Opl="int Self.FirstAgent::p1" />
+        <property Opr="const int 1" />
+      </node>
+      <node class="Action" id="0">
+        <property Method="Self.FirstAgent::Say(&quot;Hello Prefab!&quot;)" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+    </node>
+    <node class="Sequence" id="8">
+      <node class="Assignment" id="9">
+        <property CastRight="false" />
+        <property Opl="int Self.FirstAgent::p1" />
+        <property Opr="const int 3" />
+      </node>
+      <node class="Condition" id="10">
+        <property Operator="Greater" />
+        <property Opl="int Self.FirstAgent::p1" />
+        <property Opr="const int 1" />
+      </node>
+      <node class="Action" id="11">
+        <property Method="Self.FirstAgent::Say(&quot;Hello Prefab!&quot;)" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+    </node>
+    <node class="Sequence" id="3">
+      <node class="Compute" id="7">
+        <property Operator="Mul" />
+        <property Opl="int Self.FirstAgent::p1" />
+        <property Opr1="const int 3" />
+        <property Opr2="const int 5" />
+      </node>
+      <node class="Action" id="4">
+        <property Method="Self.FirstAgent::Say(&quot;Hello Parent!&quot;)" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+    </node>
+  </node>
+</behavior>

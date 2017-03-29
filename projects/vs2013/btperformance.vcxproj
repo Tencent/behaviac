@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{3CDFEE8D-B16E-7F47-9BDC-6CD858A4B143}</ProjectGuid>
+    <ProjectGuid>{60BC45C8-125A-1045-8C62-E556418032A7}</ProjectGuid>
     <RootNamespace>btperformance</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>

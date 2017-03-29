@@ -52,13 +52,6 @@ namespace Behaviac.Design
             this.dispTextBox = new System.Windows.Forms.TextBox();
             this.dispLabel = new System.Windows.Forms.Label();
             this.panel = new System.Windows.Forms.Panel();
-            this.removeParamButton = new System.Windows.Forms.Button();
-            this.addParamButton = new System.Windows.Forms.Button();
-            this.paramLabel = new System.Windows.Forms.Label();
-            this.returnTypeComboBox = new System.Windows.Forms.ComboBox();
-            this.typeLabel = new System.Windows.Forms.Label();
-            this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.agentLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel = new Behaviac.Design.BehaviacTableLayoutPanel();
             this.displaynameLabel = new System.Windows.Forms.Label();
             this.byReferLabel = new System.Windows.Forms.Label();
@@ -66,6 +59,14 @@ namespace Behaviac.Design
             this.label1 = new System.Windows.Forms.Label();
             this.isArrayLabel = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
+            this.isConstlabel = new System.Windows.Forms.Label();
+            this.removeParamButton = new System.Windows.Forms.Button();
+            this.addParamButton = new System.Windows.Forms.Button();
+            this.paramLabel = new System.Windows.Forms.Label();
+            this.returnTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.typeLabel = new System.Windows.Forms.Label();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.agentLabel = new System.Windows.Forms.Label();
             this.descGroupBox.SuspendLayout();
             this.panel.SuspendLayout();
             this.tableLayoutPanel.SuspendLayout();
@@ -157,6 +158,61 @@ namespace Behaviac.Design
             this.panel.Controls.Add(this.tableLayoutPanel);
             this.panel.Name = "panel";
             // 
+            // tableLayoutPanel
+            // 
+            resources.ApplyResources(this.tableLayoutPanel, "tableLayoutPanel");
+            this.tableLayoutPanel.Controls.Add(this.displaynameLabel, 6, 0);
+            this.tableLayoutPanel.Controls.Add(this.byReferLabel, 4, 0);
+            this.tableLayoutPanel.Controls.Add(this.parameterLabel, 0, 0);
+            this.tableLayoutPanel.Controls.Add(this.label1, 2, 0);
+            this.tableLayoutPanel.Controls.Add(this.isArrayLabel, 3, 0);
+            this.tableLayoutPanel.Controls.Add(this.nameLabel, 1, 0);
+            this.tableLayoutPanel.Controls.Add(this.isConstlabel, 5, 0);
+            this.tableLayoutPanel.ForeColor = System.Drawing.Color.LightGray;
+            this.tableLayoutPanel.Name = "tableLayoutPanel";
+            // 
+            // displaynameLabel
+            // 
+            resources.ApplyResources(this.displaynameLabel, "displaynameLabel");
+            this.displaynameLabel.ForeColor = System.Drawing.Color.LightGray;
+            this.displaynameLabel.Name = "displaynameLabel";
+            // 
+            // byReferLabel
+            // 
+            resources.ApplyResources(this.byReferLabel, "byReferLabel");
+            this.byReferLabel.ForeColor = System.Drawing.Color.LightGray;
+            this.byReferLabel.Name = "byReferLabel";
+            // 
+            // parameterLabel
+            // 
+            resources.ApplyResources(this.parameterLabel, "parameterLabel");
+            this.parameterLabel.ForeColor = System.Drawing.Color.LightGray;
+            this.parameterLabel.Name = "parameterLabel";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.Color.LightGray;
+            this.label1.Name = "label1";
+            // 
+            // isArrayLabel
+            // 
+            resources.ApplyResources(this.isArrayLabel, "isArrayLabel");
+            this.isArrayLabel.ForeColor = System.Drawing.Color.LightGray;
+            this.isArrayLabel.Name = "isArrayLabel";
+            // 
+            // nameLabel
+            // 
+            resources.ApplyResources(this.nameLabel, "nameLabel");
+            this.nameLabel.ForeColor = System.Drawing.Color.LightGray;
+            this.nameLabel.Name = "nameLabel";
+            // 
+            // isConstlabel
+            // 
+            resources.ApplyResources(this.isConstlabel, "isConstlabel");
+            this.isConstlabel.ForeColor = System.Drawing.Color.LightGray;
+            this.isConstlabel.Name = "isConstlabel";
+            // 
             // removeParamButton
             // 
             resources.ApplyResources(this.removeParamButton, "removeParamButton");
@@ -213,54 +269,6 @@ namespace Behaviac.Design
             resources.ApplyResources(this.agentLabel, "agentLabel");
             this.agentLabel.Name = "agentLabel";
             // 
-            // tableLayoutPanel
-            // 
-            resources.ApplyResources(this.tableLayoutPanel, "tableLayoutPanel");
-            this.tableLayoutPanel.Controls.Add(this.displaynameLabel, 5, 0);
-            this.tableLayoutPanel.Controls.Add(this.byReferLabel, 4, 0);
-            this.tableLayoutPanel.Controls.Add(this.parameterLabel, 0, 0);
-            this.tableLayoutPanel.Controls.Add(this.label1, 2, 0);
-            this.tableLayoutPanel.Controls.Add(this.isArrayLabel, 3, 0);
-            this.tableLayoutPanel.Controls.Add(this.nameLabel, 1, 0);
-            this.tableLayoutPanel.ForeColor = System.Drawing.Color.LightGray;
-            this.tableLayoutPanel.Name = "tableLayoutPanel";
-            // 
-            // displaynameLabel
-            // 
-            resources.ApplyResources(this.displaynameLabel, "displaynameLabel");
-            this.displaynameLabel.ForeColor = System.Drawing.Color.LightGray;
-            this.displaynameLabel.Name = "displaynameLabel";
-            // 
-            // byReferLabel
-            // 
-            resources.ApplyResources(this.byReferLabel, "byReferLabel");
-            this.byReferLabel.ForeColor = System.Drawing.Color.LightGray;
-            this.byReferLabel.Name = "byReferLabel";
-            // 
-            // parameterLabel
-            // 
-            resources.ApplyResources(this.parameterLabel, "parameterLabel");
-            this.parameterLabel.ForeColor = System.Drawing.Color.LightGray;
-            this.parameterLabel.Name = "parameterLabel";
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.ForeColor = System.Drawing.Color.LightGray;
-            this.label1.Name = "label1";
-            // 
-            // isArrayLabel
-            // 
-            resources.ApplyResources(this.isArrayLabel, "isArrayLabel");
-            this.isArrayLabel.ForeColor = System.Drawing.Color.LightGray;
-            this.isArrayLabel.Name = "isArrayLabel";
-            // 
-            // nameLabel
-            // 
-            resources.ApplyResources(this.nameLabel, "nameLabel");
-            this.nameLabel.ForeColor = System.Drawing.Color.LightGray;
-            this.nameLabel.Name = "nameLabel";
-            // 
             // MetaMethodPanel
             // 
             resources.ApplyResources(this, "$this");
@@ -302,6 +310,7 @@ namespace Behaviac.Design
         private System.Windows.Forms.Label typeLabel;
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.Label agentLabel;
+        private System.Windows.Forms.Label isConstlabel;
 
     }
 }

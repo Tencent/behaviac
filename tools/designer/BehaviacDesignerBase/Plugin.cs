@@ -1769,6 +1769,15 @@ namespace Behaviac.Design
             return (type != null) && (baseType != null) && (type == baseType || type.IsSubclassOf(baseType));
         }
 
+        private static Dictionary<string, string> _typeRenames = new Dictionary<string, string>();
+        public static Dictionary<string, string> TypeRenames
+        {
+            get
+            {
+                return _typeRenames;
+            }
+        }
+
         private static List<string> _filterNodes = new List<string>();
         public static List<string> FilterNodes
         {
@@ -2464,7 +2473,9 @@ namespace Behaviac.Design
 
         public static bool IsCustomClassType(Type type)
         {
-            return type != null && !type.IsByRef && (type.IsClass || type.IsValueType) && type != typeof(void) && !type.IsEnum && !type.IsPrimitive && !IsStringType(type) && !IsArrayType(type);
+            return type != null && !type.IsByRef && (type.IsClass || type.IsValueType) &&
+                type != typeof(void) && type != typeof(llong) && type != typeof(ullong) &&
+                !type.IsEnum && !type.IsPrimitive && !IsStringType(type) && !IsArrayType(type);
         }
 
         public static bool IsCompatibleType(ValueTypes valueType, Type filterType, Type typeToFilter, bool bArrayType)

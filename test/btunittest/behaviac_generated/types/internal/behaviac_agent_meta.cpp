@@ -3553,7 +3553,7 @@ namespace behaviac
 			meta->RegisterMethod(1560584299u, BEHAVIAC_NEW CAgentMethod_1< behaviac::vector<behaviac::Agent*>, behaviac::vector<behaviac::Agent*> >(FunctionPointer_EmployeeParTestAgent_Func_AgentListIR));
 			meta->RegisterMethod(47681223u, BEHAVIAC_NEW CAgentMethod_1< char*, char* >(FunctionPointer_EmployeeParTestAgent_Func_CSzStringIR));
 			meta->RegisterMethod(3627728538u, BEHAVIAC_NEW CAgentMethod_1< double, double >(FunctionPointer_EmployeeParTestAgent_Func_DoubleIR));
-			meta->RegisterMethod(3461542282u, BEHAVIAC_NEW CAgentMethod_1< long long, long long& >(FunctionPointer_EmployeeParTestAgent_Func_LongLongIR));
+			meta->RegisterMethod(3461542282u, BEHAVIAC_NEW CAgentMethod_1< long long, long long >(FunctionPointer_EmployeeParTestAgent_Func_LongLongIR));
 			meta->RegisterMethod(2272152182u, BEHAVIAC_NEW CMethod_EmployeeParTestAgent_Func_ParTestAgentBaseIR());
 			meta->RegisterMethod(1915934982u, BEHAVIAC_NEW CAgentMethod_1< behaviac::vector<ParTestAgentBase*>, behaviac::vector<ParTestAgentBase*> >(FunctionPointer_EmployeeParTestAgent_Func_ParTestAgentBaseListIR));
 			meta->RegisterMethod(3823157538u, BEHAVIAC_NEW CAgentMethod_1< float, float >(FunctionPointer_EmployeeParTestAgent_Func_SingleIR));
@@ -3563,7 +3563,7 @@ namespace behaviac
 			meta->RegisterMethod(831825780u, BEHAVIAC_NEW CAgentMethod_1< char*, char* >(FunctionPointer_EmployeeParTestAgent_Func_SzStringIR));
 			meta->RegisterMethod(154570427u, BEHAVIAC_NEW CAgentMethod_1< unsigned int, unsigned int >(FunctionPointer_EmployeeParTestAgent_Func_UIntIR));
 			meta->RegisterMethod(3722383617u, BEHAVIAC_NEW CAgentMethod_1< unsigned long, unsigned long >(FunctionPointer_EmployeeParTestAgent_Func_ULongIR));
-			meta->RegisterMethod(506761253u, BEHAVIAC_NEW CAgentMethod_1< unsigned long long, unsigned long long& >(FunctionPointer_EmployeeParTestAgent_Func_ULongLongIR));
+			meta->RegisterMethod(506761253u, BEHAVIAC_NEW CAgentMethod_1< unsigned long long, unsigned long long >(FunctionPointer_EmployeeParTestAgent_Func_ULongLongIR));
 			meta->RegisterMethod(1957836262u, BEHAVIAC_NEW CAgentStaticMethod_1< behaviac::vector<behaviac::Agent*>, behaviac::vector<behaviac::Agent*> >(FunctionPointer_EmployeeParTestAgent_Func_AgentListSMF));
 			meta->RegisterMethod(4246976610u, BEHAVIAC_NEW CMethod_EmployeeParTestAgent_Func_AgentSMF());
 			meta->RegisterMethod(9683594u, BEHAVIAC_NEW CAgentStaticMethod_1< behaviac::vector<behaviac::string>, behaviac::vector<behaviac::string> >(FunctionPointer_EmployeeParTestAgent_Func_StringListSMF));

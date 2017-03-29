@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<agents version="1" signature="2175613577">
+  <agent type="FirstAgent" base="behaviac::Agent" signature="1364083623">
+    <properties>
+      <property name="p1" type="int" member="false" static="false" defaultvalue="0" />
+    </properties>
+  </agent>
+</agents>

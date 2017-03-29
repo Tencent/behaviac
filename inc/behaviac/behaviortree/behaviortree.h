@@ -178,7 +178,7 @@ namespace behaviac {
             BEHAVIAC_ASSERT(false, "Can't step into this line");
             return false;
         }
-        static BehaviorNode* load(const char* agentType, rapidxml::xml_node<>* node, int version);
+        static BehaviorNode* load(const char* agentType, behaviac::rapidxml::xml_node<>* node, int version);
 
         static void Cleanup();
 
@@ -226,13 +226,13 @@ namespace behaviac {
 
         virtual void load(int version, const char* agentType, const properties_t& properties);
 
-        virtual void load_local(int version, const char* agentType, rapidxml::xml_node<>* node);
-        void load_properties(int version, const char* agentType, rapidxml::xml_node<>* node);
-        void load_properties_pars(int version, const char* agentType, rapidxml::xml_node<>* node);
-        bool load_property_pars(properties_t& properties, rapidxml::xml_node<>* c, int version, const char* agentType);
-        bool load_attachment(int version, const char* agentType, bool bHasEvents, rapidxml::xml_node<>*  c);
-        void load_properties_pars_attachments_children(bool bNode, int version, const char* agentType, rapidxml::xml_node<>* node);
-        void load_attachment_transition_effectors(int version, const char* agentType, rapidxml::xml_node<>* c);
+        virtual void load_local(int version, const char* agentType, behaviac::rapidxml::xml_node<>* node);
+        void load_properties(int version, const char* agentType, behaviac::rapidxml::xml_node<>* node);
+        void load_properties_pars(int version, const char* agentType, behaviac::rapidxml::xml_node<>* node);
+        bool load_property_pars(properties_t& properties, behaviac::rapidxml::xml_node<>* c, int version, const char* agentType);
+        bool load_attachment(int version, const char* agentType, bool bHasEvents, behaviac::rapidxml::xml_node<>*  c);
+        void load_properties_pars_attachments_children(bool bNode, int version, const char* agentType, behaviac::rapidxml::xml_node<>* node);
+        void load_attachment_transition_effectors(int version, const char* agentType, behaviac::rapidxml::xml_node<>* c);
 
         virtual void load_local(int version, const char* agentType, BsonDeserizer& d);
         void load_pars(int version, const char* agentType, BsonDeserizer& d);
@@ -357,7 +357,7 @@ namespace behaviac {
 
         bool IsFSM();
         void SetIsFSM(bool isFsm);
-        void load_local(int version, const char* agentType, rapidxml::xml_node<>* node);
+        void load_local(int version, const char* agentType, behaviac::rapidxml::xml_node<>* node);
         void load_local(int version, const char* agentType, BsonDeserizer& d);
 
         void AddLocal(const char* agentType, const char* typeName, const char* name, const char* valueStr);

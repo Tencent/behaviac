@@ -385,7 +385,7 @@ namespace Behaviac.Design.Importers
 
                                 if (i == 0 && classfullname != "behaviac::Agent")
                                 {
-                                    wrtr.WriteLine("\t[Behaviac.Design.ClassDesc(\"behaviac::Agent\", \"Agent\", false, true, false, \"\", \"\", false, true, \"\")]");
+                                    wrtr.WriteLine("\t[Behaviac.Design.ClassDesc(\"behaviac::Agent\", \"\", \"Agent\", false, true, false, \"\", \"\", false, true, \"\")]");
                                     wrtr.WriteLine("\tpublic class behaviac_Agent : Behaviac.Design.Agent");
                                     wrtr.WriteLine("\t{");
                                     wrtr.WriteLine("\t}\n");
@@ -1160,7 +1160,9 @@ namespace Behaviac.Design.Importers
                         {
                             paramNum++;
 
-                            string paramName = "param" + i;
+                            XmlNode paramNameNode = paramNode.Attributes["Name"];
+                            string paramName = (paramNameNode != null && paramNameNode.Value.Length > 0) ? paramNameNode.Value : "param" + i;
+
                             XmlNode paramDisplayNode = paramNode.Attributes["DisplayName"];
                             string paramDisplayName = (paramDisplayNode != null && paramDisplayNode.Value.Length > 0) ? paramDisplayNode.Value : paramName;
 
@@ -1180,6 +1182,9 @@ namespace Behaviac.Design.Importers
 
                             XmlNode isRefNode = paramNode.Attributes["IsRef"];
                             string isRef = (isRefNode != null && isRefNode.Value == "true") ? "true" : "false";
+
+                            XmlNode isConstNode = paramNode.Attributes["IsConst"];
+                            string isConst = (isConstNode != null && isConstNode.Value == "true") ? "true" : "false";
 
                             XmlNode paramRangeMinNode = paramNode.Attributes["RangeMin"];
                             string paramRangeMin = (paramRangeMinNode != null && paramRangeMinNode.Value.Length > 0) ? paramRangeMinNode.Value : null;
@@ -1212,7 +1217,7 @@ namespace Behaviac.Design.Importers
 
                             if (string.IsNullOrEmpty(paramRangeMin) && string.IsNullOrEmpty(paramRangeMax))
                             {
-                                wrtr.WriteLine("\t\t\t[Behaviac.Design.ParamDesc(\"{0}\", \"{1}\", \"{2}\", \"{3}\", {4}, {5})]", paramNativeType, paramDisplayName, paramDesc, defaultValue, isOut, isRef);
+                                wrtr.WriteLine("\t\t\t[Behaviac.Design.ParamDesc(\"{0}\", \"{1}\", \"{2}\", \"{3}\", \"{4}\", {5}, {6}, {7})]", paramNativeType, paramName, paramDisplayName, paramDesc, defaultValue, isOut, isRef, isConst);
                             }
                             else
                             {
@@ -1226,7 +1231,7 @@ namespace Behaviac.Design.Importers
                                     paramRangeMax = float.MaxValue.ToString();
                                 }
 
-                                wrtr.WriteLine("\t\t\t[Behaviac.Design.ParamDesc(\"{0}\", \"{1}\", \"{2}\", \"{3}\", {4}, {5}, {6}f, {7}f)]", paramNativeType, paramDisplayName, paramDesc, defaultValue, isOut, isRef, paramRangeMin, paramRangeMax);
+                                wrtr.WriteLine("\t\t\t[Behaviac.Design.ParamDesc(\"{0}\", \"{1}\", \"{2}\", \"{3}\", \"{4}\", {5}, {6}, {7}, {8}f, {9}f)]", paramNativeType, paramName, paramDisplayName, paramDesc, defaultValue, isOut, isRef, isConst, paramRangeMin, paramRangeMax);
                             }
 
                             wrtr.Write("\t\t\t{0} {1}", paramType, paramName);

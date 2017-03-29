@@ -31,7 +31,7 @@ namespace behaviac {
     class BEHAVIAC_API Variables {
     public:
         Variables();
-        Variables(behaviac::map<uint32_t, IInstantiatedVariable*>vars);
+        Variables(const behaviac::map<uint32_t, IInstantiatedVariable*>& vars);
         virtual ~Variables();
 
         virtual void Clear(bool bFull);

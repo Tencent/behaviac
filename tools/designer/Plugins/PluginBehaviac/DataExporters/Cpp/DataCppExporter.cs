@@ -69,12 +69,15 @@ namespace PluginBehaviac.DataExporters
             typeName = typeName.Replace("const ", "");
 
             //repalce "std::string" and "string" with "beahviac::string"
-            //if (typeName.Contains("std::string"))
-            //{
-            //    typeName = typeName.Replace("std::string", "behaviac::string");
-            //}
-
-            if (!typeName.Contains("behaviac::string") && !typeName.Contains("behaviac::wstring"))
+            if (typeName.Contains("std::string"))
+            {
+                typeName = typeName.Replace("std::string", "behaviac::string");
+            }
+            else if (typeName.Contains("std::wstring"))
+            {
+                typeName = typeName.Replace("std::wstring", "behaviac::wstring");
+            }
+            else if (!typeName.Contains("behaviac::string") && !typeName.Contains("behaviac::wstring"))
             {
                 if (typeName.Contains("wstring"))
                 {
@@ -83,6 +86,14 @@ namespace PluginBehaviac.DataExporters
                 else
                 {
                     typeName = typeName.Replace("string", "behaviac::string");
+                }
+            }
+
+            if (Plugin.TypeRenames.Count > 0)
+            {
+                foreach (KeyValuePair<string, string> typePair in Plugin.TypeRenames)
+                {
+                    typeName = typeName.Replace(typePair.Key, typePair.Value);
                 }
             }
 

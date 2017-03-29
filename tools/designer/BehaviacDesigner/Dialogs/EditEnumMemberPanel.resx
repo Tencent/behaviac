@@ -135,9 +135,6 @@
   <data name="valueNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>40</value>
   </data>
-  <data name="valueNumericUpDown.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="&gt;&gt;valueNumericUpDown.Name" xml:space="preserve">
     <value>valueNumericUpDown</value>
   </data>
@@ -170,9 +167,6 @@
   </data>
   <data name="valueLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
-  </data>
-  <data name="valueLabel.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="&gt;&gt;valueLabel.Name" xml:space="preserve">
     <value>valueLabel</value>

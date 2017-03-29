@@ -870,4 +870,7 @@ Please reexport the meta with the latest runtime!</value>
   <data name="AutoMergeMetaFilesInfo" xml:space="preserve">
     <value>All meta files will be merged, and the previous mete files will be removed. Are you sure?</value>
   </data>
+  <data name="ReferencedBehaviorFilename" xml:space="preserve">
+    <value>Behavior Filename</value>
+  </data>
 </root>

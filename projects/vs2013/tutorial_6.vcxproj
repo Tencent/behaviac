@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{447E97AC-C89C-BE4B-82B1-96A1240276BA}</ProjectGuid>
-    <RootNamespace>tutorial_0</RootNamespace>
+    <ProjectGuid>{80188EBF-E5C8-714D-96CC-65EDAA12609D}</ProjectGuid>
+    <RootNamespace>tutorial_6</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -66,29 +66,29 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">
     <OutDir>..\..\bin\</OutDir>
-    <IntDir>..\..\intermediate\debugstatic\vs2013\tutorial_0\x32\</IntDir>
-    <TargetName>tutorial_0_debugstatic_win32_vs2013</TargetName>
+    <IntDir>..\..\intermediate\debugstatic\vs2013\tutorial_6\x32\</IntDir>
+    <TargetName>tutorial_6_debugstatic_win32_vs2013</TargetName>
     <TargetExt>.exe</TargetExt>
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">
     <OutDir>..\..\bin\</OutDir>
-    <IntDir>..\..\intermediate\releasestatic\vs2013\tutorial_0\x32\</IntDir>
-    <TargetName>tutorial_0_releasestatic_win32_vs2013</TargetName>
+    <IntDir>..\..\intermediate\releasestatic\vs2013\tutorial_6\x32\</IntDir>
+    <TargetName>tutorial_6_releasestatic_win32_vs2013</TargetName>
     <TargetExt>.exe</TargetExt>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
     <OutDir>..\..\bin\</OutDir>
-    <IntDir>..\..\intermediate\debugdll\vs2013\tutorial_0\x32\</IntDir>
-    <TargetName>tutorial_0_debugdll_win32_vs2013</TargetName>
+    <IntDir>..\..\intermediate\debugdll\vs2013\tutorial_6\x32\</IntDir>
+    <TargetName>tutorial_6_debugdll_win32_vs2013</TargetName>
     <TargetExt>.exe</TargetExt>
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
     <OutDir>..\..\bin\</OutDir>
-    <IntDir>..\..\intermediate\releasedll\vs2013\tutorial_0\x32\</IntDir>
-    <TargetName>tutorial_0_releasedll_win32_vs2013</TargetName>
+    <IntDir>..\..\intermediate\releasedll\vs2013\tutorial_6\x32\</IntDir>
+    <TargetName>tutorial_6_releasedll_win32_vs2013</TargetName>
     <TargetExt>.exe</TargetExt>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
@@ -108,7 +108,7 @@
     <ExceptionHandling>false</ExceptionHandling>
       <FloatingPointModel>Fast</FloatingPointModel>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-      <ProgramDataBaseFileName>$(OutDir)tutorial_0_debugstatic_win32_vs2013.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>$(OutDir)tutorial_6_debugstatic_win32_vs2013.pdb</ProgramDataBaseFileName>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_DEBUG;DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -117,7 +117,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <OutputFile>$(OutDir)tutorial_0_debugstatic_win32_vs2013.exe</OutputFile>
+      <OutputFile>$(OutDir)tutorial_6_debugstatic_win32_vs2013.exe</OutputFile>
       <AdditionalLibraryDirectories>..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
       <TargetMachine>MachineX86</TargetMachine>
@@ -148,7 +148,7 @@
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <OutputFile>$(OutDir)tutorial_0_releasestatic_win32_vs2013.exe</OutputFile>
+      <OutputFile>$(OutDir)tutorial_6_releasestatic_win32_vs2013.exe</OutputFile>
       <AdditionalLibraryDirectories>..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
       <TargetMachine>MachineX86</TargetMachine>
@@ -170,7 +170,7 @@
     <ExceptionHandling>false</ExceptionHandling>
       <FloatingPointModel>Fast</FloatingPointModel>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-      <ProgramDataBaseFileName>$(OutDir)tutorial_0_debugdll_win32_vs2013.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>$(OutDir)tutorial_6_debugdll_win32_vs2013.pdb</ProgramDataBaseFileName>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_DEBUG;DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -179,7 +179,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <OutputFile>$(OutDir)tutorial_0_debugdll_win32_vs2013.exe</OutputFile>
+      <OutputFile>$(OutDir)tutorial_6_debugdll_win32_vs2013.exe</OutputFile>
       <AdditionalLibraryDirectories>..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
       <TargetMachine>MachineX86</TargetMachine>
@@ -210,26 +210,26 @@
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <OutputFile>$(OutDir)tutorial_0_releasedll_win32_vs2013.exe</OutputFile>
+      <OutputFile>$(OutDir)tutorial_6_releasedll_win32_vs2013.exe</OutputFile>
       <AdditionalLibraryDirectories>..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\tutorials\tutorial_0\cpp\behaviac_generated\types\behaviac_types.h" />
-    <ClInclude Include="..\..\tutorials\tutorial_0\cpp\behaviac_generated\types\internal\behaviac_agent_headers.h" />
-    <ClInclude Include="..\..\tutorials\tutorial_0\cpp\behaviac_generated\types\internal\behaviac_agent_member_visitor.h" />
-    <ClInclude Include="..\..\tutorials\tutorial_0\cpp\behaviac_generated\types\internal\behaviac_agent_meta.h" />
-    <ClInclude Include="..\..\tutorials\tutorial_0\cpp\behaviac_generated\types\internal\behaviac_headers.h" />
-    <ClInclude Include="..\..\tutorials\tutorial_0\cpp\behaviac_generated\types\internal\FirstAgent.h" />
+    <ClInclude Include="..\..\tutorials\tutorial_6\cpp\behaviac_generated\types\behaviac_types.h" />
+    <ClInclude Include="..\..\tutorials\tutorial_6\cpp\behaviac_generated\types\internal\behaviac_agent_headers.h" />
+    <ClInclude Include="..\..\tutorials\tutorial_6\cpp\behaviac_generated\types\internal\behaviac_agent_member_visitor.h" />
+    <ClInclude Include="..\..\tutorials\tutorial_6\cpp\behaviac_generated\types\internal\behaviac_agent_meta.h" />
+    <ClInclude Include="..\..\tutorials\tutorial_6\cpp\behaviac_generated\types\internal\behaviac_headers.h" />
+    <ClInclude Include="..\..\tutorials\tutorial_6\cpp\behaviac_generated\types\internal\FirstAgent.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\tutorials\tutorial_0\cpp\tutorial_0.cpp">
+    <ClCompile Include="..\..\tutorials\tutorial_6\cpp\tutorial_6.cpp">
     </ClCompile>
-    <ClCompile Include="..\..\tutorials\tutorial_0\cpp\behaviac_generated\types\internal\behaviac_agent_meta.cpp">
+    <ClCompile Include="..\..\tutorials\tutorial_6\cpp\behaviac_generated\types\internal\behaviac_agent_meta.cpp">
     </ClCompile>
-    <ClCompile Include="..\..\tutorials\tutorial_0\cpp\behaviac_generated\types\internal\FirstAgent.cpp">
+    <ClCompile Include="..\..\tutorials\tutorial_6\cpp\behaviac_generated\types\internal\FirstAgent.cpp">
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

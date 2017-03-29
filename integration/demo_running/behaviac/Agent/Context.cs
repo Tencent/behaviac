@@ -310,6 +310,8 @@ namespace behaviac
                     if (e.Current.IsMasked())
                     {
                         e.Current.LogVariables(true);
+
+                        e.Current.LogRunningNodes();
                     }
                 }
             }

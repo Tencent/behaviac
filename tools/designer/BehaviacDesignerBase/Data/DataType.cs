@@ -192,6 +192,11 @@ namespace Behaviac.Design
             {
                 get
                 {
+                    if (!string.IsNullOrEmpty(_name))
+                    {
+                        return _name;
+                    }
+
                     if (_paramInfo != null)
                     {
                         return _paramInfo.Name;
@@ -307,6 +312,26 @@ namespace Behaviac.Design
                     if (value)
                     {
                         this._nativeType += "&";
+                    }
+                }
+            }
+
+            private bool _isConst = false;
+            public bool IsConst
+            {
+                get
+                {
+                    return _isConst;
+                }
+                set
+                {
+                    _isConst = value;
+
+                    this._nativeType = this._nativeType.Replace("const ", "");
+
+                    if (value)
+                    {
+                        this._nativeType = "const " + this._nativeType;
                     }
                 }
             }
@@ -435,13 +460,15 @@ namespace Behaviac.Design
                 _bParamFromStruct = true;
             }
 
-            public Param(string category, ParameterInfo pi, object v, string nativeType, string displayName, string description, bool isOut, bool isRef, float rangeMin, float rangeMax)
+            public Param(string category, ParameterInfo pi, object v, string nativeType, string name, string displayName, string description, bool isOut, bool isRef, bool isConst, float rangeMin, float rangeMax)
             {
                 _paramInfo = pi;
                 _value = v;
                 _nativeType = nativeType;
+                _name = name;
                 _isOut = isOut;
                 _isRef = isRef;
+                _isConst = isConst;
                 _displayName = displayName;
                 _description = description;
 
@@ -485,6 +512,7 @@ namespace Behaviac.Design
             {
                 _paramInfo = other._paramInfo;
                 _attribute = other._attribute;
+                _property = other._property;
                 _nativeType = other._nativeType;
                 _displayName = other._displayName;
                 _description = other._description;
@@ -492,6 +520,7 @@ namespace Behaviac.Design
                 _type = other._type;
                 _isOut = other._isOut;
                 _isRef = other._isRef;
+                _isConst = other._isConst;
                 _value = Plugin.CloneValue(other._value);
                 _isArrayIndex = other._isArrayIndex;
             }
@@ -719,10 +748,16 @@ namespace Behaviac.Design
             {
                 _params.Add(new Param(param));
             }
+
+            _structParams = new Dictionary<string, StructParamBase_t>();
+            foreach (string key in other._structParams.Keys)
+            {
+                _structParams[key] = other._structParams[key].Clone();
+            }
         }
 
         AgentType _agentType = null;
-                               public AgentType AgentType
+        public AgentType AgentType
         {
             get
             {
@@ -750,18 +785,10 @@ namespace Behaviac.Design
         {
             get
             {
-                //if (_isInherited)
-                //{
-                //    return true;
-                //}
-
-                //if (_agentType != null && _agentType.Base != null)
-                //{
-                //    if (null != _agentType.Base.GetMethodByName(this.BasicName))
-                //    {
-                //        _isInherited = true;
-                //    }
-                //}
+                if (!_isInherited && _agentType != null && _agentType.Name != this.ClassName)
+                {
+                    _isInherited = true;
+                }
 
                 return _isInherited;
             }
@@ -873,7 +900,8 @@ namespace Behaviac.Design
 
                     if (index != -1)
                     {
-                        return _name.Substring(0, index - 1);
+                        _classname = _name.Substring(0, index - 1);
+                        return _classname;
                     }
                 }
 
@@ -1028,6 +1056,7 @@ namespace Behaviac.Design
 
         abstract class StructParamBase_t
         {
+            public abstract StructParamBase_t Clone();
             public abstract List<Param> GetParams(int index);
             public abstract void AddParam(int index, Param param);
         }
@@ -1041,6 +1070,18 @@ namespace Behaviac.Design
             {
                 type = null;
                 this.ps = new List<Param>();
+            }
+
+            public override StructParamBase_t Clone()
+            {
+                StructParam_t s = new StructParam_t();
+                s.type = this.type;
+                s.ps = new List<Param>();
+                foreach (Param p in this.ps)
+                {
+                    s.ps.Add(new Param(p));
+                }
+                return s;
             }
 
             public override List<Param> GetParams(int index)
@@ -1063,6 +1104,23 @@ namespace Behaviac.Design
             public StructArrayParam_t()
             {
                 ps = new Dictionary<int, List<Param>>();
+            }
+
+            public override StructParamBase_t Clone()
+            {
+                StructArrayParam_t s = new StructArrayParam_t();
+                s.ps = new Dictionary<int, List<Param>>();
+                foreach (int key in this.ps.Keys)
+                {
+                    List<Param> paramList = new List<Param>();
+                    foreach (Param p in this.ps[key])
+                    {
+                        paramList.Add(new Param(p));
+                    }
+
+                    s.ps[key] = paramList;
+                }
+                return s;
             }
 
             public override List<Param> GetParams(int index)
@@ -1585,6 +1643,11 @@ namespace Behaviac.Design
         {
             get
             {
+                if (!_isInherited && _agentType != null && _agentType.Name != this.ClassName)
+                {
+                    _isInherited = true;
+                }
+
                 return _isInherited;
             }
             set
@@ -1857,7 +1920,8 @@ namespace Behaviac.Design
 
                     if (index != -1)
                     {
-                        return _name.Substring(0, index - 1);
+                        _classname = _name.Substring(0, index - 1);
+                        return _classname;
                     }
                 }
 
@@ -3384,8 +3448,23 @@ namespace Behaviac.Design
 
     public class TypeManager
     {
-        public List<EnumType> Enums = new List<EnumType>();
-        public List<StructType> Structs = new List<StructType>();
+        private List<EnumType> _enums = new List<EnumType>();
+        public List<EnumType> Enums
+        {
+            get
+            {
+                return _enums;
+            }
+        }
+
+        private List<StructType> _structs = new List<StructType>();
+        public List<StructType> Structs
+        {
+            get
+            {
+                return _structs;
+            }
+        }
 
         private Dictionary<string, string> _names = new Dictionary<string, string>();
 

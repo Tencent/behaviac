@@ -124,10 +124,10 @@
   <data name="&gt;&gt;panel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="returnTypeComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>374, 20</value>
+  <data name="&gt;&gt;displaynameLabel.Name" xml:space="preserve">
+    <value>displaynameLabel</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="tableLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>517, 75</value>
   </data>
@@ -147,8 +147,8 @@
   <data name="&gt;&gt;nameLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="typeLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 46</value>
+  <data name="isConstlabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
   <data name="isArrayLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -207,11 +207,14 @@
   <data name="returnTypeComboBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>88, 42</value>
   </data>
+  <data name="isConstlabel.Text" xml:space="preserve">
+    <value>Is Const</value>
+  </data>
   <data name="tableLayoutPanel.RowCount" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 22</value>
+    <value>107, 22</value>
   </data>
   <data name="&gt;&gt;panel.Parent" xml:space="preserve">
     <value>descGroupBox</value>
@@ -228,6 +231,9 @@
   <data name="&gt;&gt;isStaticCheckBox.Name" xml:space="preserve">
     <value>isStaticCheckBox</value>
   </data>
+  <data name="isConstlabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>370, 1</value>
+  </data>
   <data name="addParamButton.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
@@ -240,8 +246,8 @@
   <data name="paramLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;descGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;returnTypeComboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="parameterLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 1</value>
@@ -254,9 +260,6 @@
   </data>
   <data name="&gt;&gt;arrayCheckBox.Parent" xml:space="preserve">
     <value>descGroupBox</value>
-  </data>
-  <data name="returnTypeComboBox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
@@ -276,8 +279,8 @@
   <data name="&gt;&gt;descLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;nameTextBox.Name" xml:space="preserve">
-    <value>nameTextBox</value>
+  <data name="typeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 46</value>
   </data>
   <data name="paramLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -315,8 +318,8 @@
   <data name="displaynameLabel.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
   </data>
-  <data name="nameTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="returnTypeComboBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
   <data name="&gt;&gt;typeLabel.Parent" xml:space="preserve">
     <value>descGroupBox</value>
@@ -331,13 +334,16 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="tableLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="displaynameLabel" Row="0" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="byReferLabel" Row="0" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="parameterLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label1" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="isArrayLabel" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="nameLabel" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,45,Percent,27.95955,Percent,34.34709,Absolute,60,Absolute,60,Percent,37.69336" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="displaynameLabel" Row="0" RowSpan="1" Column="6" ColumnSpan="1" /&gt;&lt;Control Name="byReferLabel" Row="0" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="parameterLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label1" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="isArrayLabel" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="nameLabel" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="isConstlabel" Row="0" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,45,Percent,32.57291,Percent,37.90004,Absolute,60,Absolute,60,Absolute,60,Percent,29.52704" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="nameLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>47, 1</value>
   </data>
   <data name="descTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>439, 21</value>
+  </data>
+  <data name="&gt;&gt;isConstlabel.Parent" xml:space="preserve">
+    <value>tableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;addParamButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -348,8 +354,8 @@
   <data name="&gt;&gt;label1.Parent" xml:space="preserve">
     <value>tableLayoutPanel</value>
   </data>
-  <data name="descTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>88, 115</value>
+  <data name="isConstlabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 22</value>
   </data>
   <data name="&gt;&gt;displaynameLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -390,20 +396,26 @@
   <data name="&gt;&gt;parameterLabel.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="&gt;&gt;descGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>144, 1</value>
+    <value>140, 1</value>
+  </data>
+  <data name="isConstlabel.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
   </data>
   <data name="isPublicCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>MetaMethodPanel</value>
+  <data name="descTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
   <data name="addParamButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>89, 141</value>
   </data>
-  <data name="tableLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="&gt;&gt;isConstlabel.Name" xml:space="preserve">
+    <value>isConstlabel</value>
   </data>
   <data name="&gt;&gt;returnTypeComboBox.Parent" xml:space="preserve">
     <value>descGroupBox</value>
@@ -417,17 +429,20 @@
   <data name="&gt;&gt;isArrayLabel.Name" xml:space="preserve">
     <value>isArrayLabel</value>
   </data>
-  <data name="&gt;&gt;removeParamButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="isConstlabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="byReferLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>324, 1</value>
+    <value>309, 1</value>
   </data>
   <data name="byReferLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 22</value>
   </data>
   <data name="isPublicCheckBox.Text" xml:space="preserve">
     <value>Public?</value>
+  </data>
+  <data name="&gt;&gt;arrayCheckBox.Name" xml:space="preserve">
+    <value>arrayCheckBox</value>
   </data>
   <data name="&gt;&gt;isPublicCheckBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -438,6 +453,9 @@
   <data name="returnTypeComboBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
+  <data name="isConstlabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
   <data name="isArrayLabel.Text" xml:space="preserve">
     <value>Is Array</value>
   </data>
@@ -446,9 +464,6 @@
   </data>
   <data name="dispLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>83, 12</value>
-  </data>
-  <data name="&gt;&gt;returnTypeComboBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;displaynameLabel.Parent" xml:space="preserve">
     <value>tableLayoutPanel</value>
@@ -460,7 +475,7 @@
     <value>0</value>
   </data>
   <data name="nameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 22</value>
+    <value>92, 22</value>
   </data>
   <data name="isPublicCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>89, 68</value>
@@ -476,6 +491,9 @@
   </data>
   <data name="&gt;&gt;dispTextBox.Name" xml:space="preserve">
     <value>dispTextBox</value>
+  </data>
+  <data name="isConstlabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="&gt;&gt;isArrayLabel.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -504,8 +522,14 @@
   <data name="typeLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
+  <data name="tableLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
   <data name="&gt;&gt;byReferLabel.Parent" xml:space="preserve">
     <value>tableLayoutPanel</value>
+  </data>
+  <data name="nameTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="arrayCheckBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -514,7 +538,7 @@
     <value>NoControl</value>
   </data>
   <data name="tableLayoutPanel.ColumnCount" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="nameLabel.Text" xml:space="preserve">
     <value>Name</value>
@@ -537,8 +561,8 @@
   <data name="&gt;&gt;dispLabel.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="descTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+  <data name="&gt;&gt;nameTextBox.Name" xml:space="preserve">
+    <value>nameTextBox</value>
   </data>
   <data name="dispLabel.Text" xml:space="preserve">
     <value>Display Name:</value>
@@ -609,14 +633,17 @@
   <data name="&gt;&gt;isPublicCheckBox.Name" xml:space="preserve">
     <value>isPublicCheckBox</value>
   </data>
-  <data name="dispLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MetaMethodPanel</value>
   </data>
   <data name="&gt;&gt;parameterLabel.Parent" xml:space="preserve">
     <value>tableLayoutPanel</value>
   </data>
   <data name="typeLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="dispLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="arrayCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -633,8 +660,8 @@
   <data name="&gt;&gt;nameTextBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;arrayCheckBox.Name" xml:space="preserve">
-    <value>arrayCheckBox</value>
+  <data name="descTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>88, 115</value>
   </data>
   <data name="returnTypeComboBox.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
@@ -651,6 +678,9 @@
   <data name="isPublicCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>66, 16</value>
   </data>
+  <data name="&gt;&gt;isConstlabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="descGroupBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -665,6 +695,9 @@
   </data>
   <data name="&gt;&gt;agentLabel.ZOrder" xml:space="preserve">
     <value>14</value>
+  </data>
+  <data name="returnTypeComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>374, 20</value>
   </data>
   <data name="descLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>77, 12</value>
@@ -708,8 +741,8 @@
   <data name="panel.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;agentLabel.Name" xml:space="preserve">
-    <value>agentLabel</value>
+  <data name="&gt;&gt;removeParamButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="isStaticCheckBox.Text" xml:space="preserve">
     <value>Static?</value>
@@ -728,6 +761,9 @@
   </data>
   <data name="&gt;&gt;descLabel.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="&gt;&gt;isConstlabel.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="&gt;&gt;isStaticCheckBox.Parent" xml:space="preserve">
     <value>descGroupBox</value>
@@ -751,10 +787,10 @@
     <value>descGroupBox</value>
   </data>
   <data name="displaynameLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>385, 1</value>
+    <value>431, 1</value>
   </data>
-  <data name="&gt;&gt;displaynameLabel.Name" xml:space="preserve">
-    <value>displaynameLabel</value>
+  <data name="&gt;&gt;byReferLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="nameLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -802,7 +838,7 @@
     <value>6</value>
   </data>
   <data name="displaynameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>131, 22</value>
+    <value>85, 22</value>
   </data>
   <data name="&gt;&gt;paramLabel.Name" xml:space="preserve">
     <value>paramLabel</value>
@@ -819,6 +855,9 @@
   <data name="&gt;&gt;isArrayLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;agentLabel.Name" xml:space="preserve">
+    <value>agentLabel</value>
+  </data>
   <data name="&gt;&gt;dispTextBox.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
@@ -826,10 +865,7 @@
     <value>58, 21</value>
   </data>
   <data name="isArrayLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>263, 1</value>
-  </data>
-  <data name="&gt;&gt;byReferLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>248, 1</value>
   </data>
   <data name="nameTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>440, 21</value>
@@ -850,7 +886,7 @@
     <value>167, 68</value>
   </data>
   <data name="&gt;&gt;tableLayoutPanel.Type" xml:space="preserve">
-    <value>Behaviac.Design.BehaviacTableLayoutPanel, BehaviacDesigner, Version=3.6.14.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>Behaviac.Design.BehaviacTableLayoutPanel, BehaviacDesigner, Version=3.6.24.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="byReferLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>

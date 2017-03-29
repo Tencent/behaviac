@@ -19,6 +19,7 @@ enum ETest
 };
 
 DECLARE_BEHAVIAC_ENUM(ETest, ETest);
+BEHAVIAC_DECLARE_TYPE_VECTOR_HANDLER(ETest);
 
 
 // -------------------
@@ -28,9 +29,27 @@ DECLARE_BEHAVIAC_ENUM(ETest, ETest);
 struct StructTest
 {
 	bool a;
-
-DECLARE_BEHAVIAC_STRUCT(StructTest);
 };
 
+BEHAVIAC_EXTEND_EXISTING_TYPE(StructTest, false);
 BEHAVIAC_DECLARE_TYPE_VECTOR_HANDLER(StructTest);
+
+template< typename SWAPPER >
+inline void SwapByteImplement(StructTest& v)
+{
+	SwapByteImplement< SWAPPER >(v.a);
+}
+
+namespace behaviac
+{
+	namespace PrivateDetails
+	{
+		template<>
+		inline bool Equal(const StructTest& lhs, const StructTest& rhs)
+		{
+			return Equal(lhs.a, rhs.a);
+		}
+	}
+}
+
 #endif // _BEHAVIAC_CUSTOMIZED_TYPES_H_

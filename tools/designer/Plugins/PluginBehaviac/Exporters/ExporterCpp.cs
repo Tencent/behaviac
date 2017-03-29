@@ -301,25 +301,28 @@ namespace PluginBehaviac.Exporters
         private List<string> GetNamespaces(string ns)
         {
             List<string> namespaces = new List<string>();
-            int startIndex = 0;
-
-            for (int i = 0; i < ns.Length; ++i)
-            {
-                if (ns[i] == ':')
-                {
-                    Debug.Check(ns[i + 1] == ':');
-
-                    namespaces.Add(ns.Substring(startIndex, i - startIndex));
-                    startIndex = i + 2;
-                    ++i;
-                }
-            }
-
-            ns = ns.Substring(startIndex, ns.Length - startIndex);
-
             if (!string.IsNullOrEmpty(ns))
             {
-                namespaces.Add(ns);
+                int startIndex = 0;
+
+                for (int i = 0; i < ns.Length; ++i)
+                {
+                    if (ns[i] == ':')
+                    {
+                        Debug.Check(ns[i + 1] == ':');
+
+                        namespaces.Add(ns.Substring(startIndex, i - startIndex));
+                        startIndex = i + 2;
+                        ++i;
+                    }
+                }
+
+                ns = ns.Substring(startIndex, ns.Length - startIndex);
+
+                if (!string.IsNullOrEmpty(ns))
+                {
+                    namespaces.Add(ns);
+                }
             }
 
             return namespaces;
@@ -477,14 +480,19 @@ namespace PluginBehaviac.Exporters
                 if (this.IncludedFilenames != null)
                 {
                     string exportFullPath = Workspace.Current.GetExportAbsoluteFolder(Workspace.Current.Language);
+                    string relativePath = "";
 
-                    string relativePath = agentFolder.Replace('/', '\\');
-                    relativePath = Workspace.MakeRelative(exportFullPath, relativePath, true, true);
-                    relativePath = relativePath.Replace('\\', '/');
+                    if (Workspace.Current.UseRelativePath)
+                    {
+                        relativePath = agentFolder.Replace('/', '\\');
+                        relativePath = Workspace.MakeRelative(exportFullPath, relativePath, true, true);
+                        relativePath = relativePath.Replace('\\', '/');
+                        relativePath += "/";
+                    }
 
                     foreach (string headerFilename in this.IncludedFilenames)
                     {
-                        file.WriteLine("#include \"{0}/{1}\"", relativePath, headerFilename);
+                        file.WriteLine("#include \"{0}{1}\"", relativePath, headerFilename);
                     }
                 }
 
@@ -578,9 +586,9 @@ namespace PluginBehaviac.Exporters
 
                 if (!string.IsNullOrEmpty(ns))
                 {
-                    foreach (PropertyDef property in agenType.GetProperties(true))
+                    foreach (PropertyDef prop in agenType.GetProperties(true))
                     {
-                        if (property.IsMember && !property.IsAddedAutomatically)
+                        if (!prop.IsPublic && !prop.IsInherited && !prop.IsArrayElement)
                         {
                             namespaces = GetNamespaces(ns);
                             break;
@@ -592,7 +600,7 @@ namespace PluginBehaviac.Exporters
                 {
                     foreach (MethodDef method in agenType.GetMethods(true))
                     {
-                        if (method.ClassName == agenType.Name)
+                        if (!method.IsPublic && !method.IsNamedEvent && method.ClassName == agenType.Name)
                         {
                             namespaces = GetNamespaces(ns);
                             break;
@@ -624,17 +632,20 @@ namespace PluginBehaviac.Exporters
                         }
                         else // field
                         {
+                            string typeConvert = "";
+                            if (prop.IsReadonly || prop.NativeType == "char*" || prop.NativeType == "const char*")
+                            {
+                                typeConvert = string.Format("({0}&)", nativeType);
+                            }
+
                             if (prop.IsStatic)
                             {
-                                file.WriteLine("{0}\tunsigned char* pc = (unsigned char*)(&{1});", indent, prop.Name);
+                                file.WriteLine("{0}\treturn {1}{2};", indent, typeConvert, prop.Name);
                             }
                             else
                             {
-                                file.WriteLine("{0}\tunsigned char* pc = (unsigned char*)this;", indent);
-                                file.WriteLine("{0}\tpc += (int)BEHAVIAC_OFFSETOF({1}, {2});", indent, prop.ClassName, prop.Name);
+                                file.WriteLine("{0}\treturn {1}this->{2};", indent, typeConvert, prop.BasicName);
                             }
-
-                            file.WriteLine("{0}\treturn *(reinterpret_cast<{1}*>(pc));", indent, nativeType);
                         }
 
                         file.WriteLine("{0}}}\r\n", indent);
@@ -663,6 +674,10 @@ namespace PluginBehaviac.Exporters
 
                         string methodName = agenType.Name.Replace("::", "_") + "_" + method.BasicName.Replace("::", "_");
                         string nativeReturnType = DataCppExporter.GetGeneratedNativeType(method.NativeReturnType);
+                        if (Plugin.IsRefType(method.ReturnType) && !nativeReturnType.EndsWith("*"))
+                        {
+                            nativeReturnType += "*";
+                        }
 
                         if (method.NativeReturnType.StartsWith("const "))
                         {
@@ -1389,13 +1404,18 @@ namespace PluginBehaviac.Exporters
                                 file.WriteLine();
                             }
 
-                            string instanceName = method.IsStatic ? agentTypeName : string.Format("(({0})agent)", agentTypeName);
-
                             if (methodReturnType == "void")
                             {
                                 if (method.IsPublic)
                                 {
-                                    file.WriteLine("\t\t\t\t\t{0}::{1}({2});", instanceName, method.BasicName, paramValues);
+                                    if (method.IsStatic)
+                                    {
+                                        file.WriteLine("\t\t\t\t\t{0}::{1}({2});", agentTypeName, method.BasicName, paramValues);
+                                    }
+                                    else
+                                    {
+                                        file.WriteLine("\t\t\t\t\t(({0}*)self)->{1}({2});", agentTypeName, method.BasicName, paramValues);
+                                    }
                                 }
                                 else
                                 {
@@ -1418,7 +1438,14 @@ namespace PluginBehaviac.Exporters
                             {
                                 if (method.IsPublic)
                                 {
-                                    file.WriteLine("\t\t\t\t\t_returnValue->value = {0}::{1}({2});", instanceName, method.BasicName, paramValues);
+                                    if (method.IsStatic)
+                                    {
+                                        file.WriteLine("\t\t\t\t\t_returnValue->value = {0}::{1}({2});", agentTypeName, method.BasicName, paramValues);
+                                    }
+                                    else
+                                    {
+                                        file.WriteLine("\t\t\t\t\t_returnValue->value = (({0}*)self)->{1}({2});", agentTypeName, method.BasicName, paramValues);
+                                    }
                                 }
                                 else
                                 {
@@ -1693,6 +1720,11 @@ namespace PluginBehaviac.Exporters
                     }
 
                     string methodReturnType = DataCppExporter.GetGeneratedNativeType(method.NativeReturnType);
+                    if (Plugin.IsRefType(method.ReturnType) && !methodReturnType.EndsWith("*"))
+                    {
+                        methodReturnType += "*";
+                    }
+
                     string agentTypeName = agent.Name;
                     string methodName = agentTypeName.Replace("::", "_") + "_" + method.BasicName.Replace("::", "_");
 
@@ -1948,13 +1980,12 @@ namespace PluginBehaviac.Exporters
                 }
 
                 string indent = "";
+                List<string> namespaces = new List<string>();
 
                 if (!string.IsNullOrEmpty(agent.Namespace))
                 {
-                    indent = "\t";
-
-                    file.WriteLine("namespace {0}", agent.Namespace);
-                    file.WriteLine("{");
+                    namespaces = GetNamespaces(agent.Namespace);
+                    indent = WriteNamespacesHead(file, namespaces);
 
                     if (!preview)
                     {
@@ -1982,7 +2013,7 @@ namespace PluginBehaviac.Exporters
 
                 if (agent.Base != null)
                 {
-                    file.WriteLine("{0}\tBEHAVIAC_DECLARE_AGENTTYPE({1}, {2})", indent, agent.BasicName, agent.Base.Name);
+                    file.WriteLine("{0}\tBEHAVIAC_DECLARE_AGENTTYPE({1}, {2})", indent, agent.Name, agent.Base.Name);
                     file.WriteLine();
                 }
 
@@ -2048,7 +2079,7 @@ namespace PluginBehaviac.Exporters
                     }
 
                     //end of namespace
-                    file.WriteLine("}");
+                    WriteNamespacesTail(file, namespaces);
                 }
 
                 file.WriteLine();
@@ -2152,13 +2183,12 @@ namespace PluginBehaviac.Exporters
                     file.WriteLine();
 
                     string indent = "";
+                    List<string> namespaces = new List<string>();
 
                     if (!string.IsNullOrEmpty(agent.Namespace))
                     {
-                        indent = "\t";
-
-                        file.WriteLine("namespace {0}", agent.Namespace);
-                        file.WriteLine("{");
+                        namespaces = GetNamespaces(agent.Namespace);
+                        indent = WriteNamespacesHead(file, namespaces);
 
                         ExportBeginComment(file, "", Behaviac.Design.Exporters.Exporter.namespace_init_part);
                         file.WriteLine();
@@ -2252,7 +2282,13 @@ namespace PluginBehaviac.Exporters
                             ExportMethodComment(file, indent, method.OldName);
                             method.OldName = null;
 
-                            file.WriteLine("{0}{1} {2}::{3}({4})", indent, method.NativeReturnType, agent.BasicName, method.BasicName, allParams);
+                            string methodReturnType = DataCppExporter.GetGeneratedNativeType(method.NativeReturnType);
+                            if (Plugin.IsRefType(method.ReturnType) && !methodReturnType.EndsWith("*"))
+                            {
+                                methodReturnType += "*";
+                            }
+
+                            file.WriteLine("{0}{1} {2}::{3}({4})", indent, methodReturnType, agent.BasicName, method.BasicName, allParams);
                             file.WriteLine("{0}{{", indent);
                             ExportBeginComment(file, "\t" + indent, method.BasicName);
 
@@ -2285,7 +2321,7 @@ namespace PluginBehaviac.Exporters
                         ExportEndComment(file, indent);
 
                         //end of namespace
-                        file.WriteLine("}");
+                        WriteNamespacesTail(file, namespaces);
                     }
 
                     file.WriteLine();
@@ -2313,12 +2349,13 @@ namespace PluginBehaviac.Exporters
 
                     file.WriteLine("#ifndef {0}", headerFileMacro);
                     file.WriteLine("#define {0}", headerFileMacro);
-                    file.WriteLine();
 
-                    file.WriteLine("#include \"behaviac/agent/agent.h\"\n");
+                    file.WriteLine();
+                    file.WriteLine("#include \"behaviac/agent/agent.h\"");
 
                     if (TypeManager.Instance.HasNonImplementedEnums())
                     {
+                        file.WriteLine();
                         file.WriteLine("// -------------------");
                         file.WriteLine("// Customized enums");
                         file.WriteLine("// -------------------");
@@ -2334,12 +2371,11 @@ namespace PluginBehaviac.Exporters
 
                             ExportEnumFile(file, enumType, null);
                         }
-
-                        file.WriteLine();
                     }
 
                     if (TypeManager.Instance.HasNonImplementedStructs())
                     {
+                        file.WriteLine();
                         file.WriteLine("// -------------------");
                         file.WriteLine("// Customized structs");
                         file.WriteLine("// -------------------");
@@ -2357,6 +2393,7 @@ namespace PluginBehaviac.Exporters
                         }
                     }
 
+                    file.WriteLine();
                     file.WriteLine("#endif // {0}", headerFileMacro);
 
                     string filename = Path.Combine(agentFolder, "behaviac_customized_types.h");
@@ -2426,15 +2463,9 @@ namespace PluginBehaviac.Exporters
                     enumfile.WriteLine("}");
                 }
 
-                string fullName = enumType.Name;
-
-                if (!string.IsNullOrEmpty(enumType.Namespace))
-                {
-                    fullName = enumType.Namespace + "::" + enumType.Name;
-                }
-
                 enumfile.WriteLine();
-                enumfile.WriteLine("DECLARE_BEHAVIAC_ENUM({0}, {1});", fullName, enumType.Name);
+                enumfile.WriteLine("DECLARE_BEHAVIAC_ENUM({0}, {1});", enumType.Fullname, enumType.Name);
+                enumfile.WriteLine("BEHAVIAC_DECLARE_TYPE_VECTOR_HANDLER({0});", enumType.Fullname);
                 enumfile.WriteLine();
 
                 if (hasSetExportLocation)
@@ -2462,95 +2493,142 @@ namespace PluginBehaviac.Exporters
         private void ExportStructFile(StringWriter file, StructType structType, string filename)
         {
             StringWriter structfile = file;
+            bool shouldExportStruct = (!structType.IsImplemented || !string.IsNullOrEmpty(filename));
             bool hasSetExportLocation = (!string.IsNullOrEmpty(filename) || !string.IsNullOrEmpty(structType.ExportLocation));
             string structHeaderFileMacro = string.Format("_BEHAVIAC_STRUCT_{0}_H_", structType.Name.ToUpperInvariant());
 
-            if (hasSetExportLocation)
+            if (shouldExportStruct)
             {
-                structfile = new StringWriter();
+                if (hasSetExportLocation)
+                {
+                    structfile = new StringWriter();
 
-                structfile.WriteLine("// ---------------------------------------------------------------------");
-                structfile.WriteLine("// THIS FILE IS AUTO-GENERATED BY BEHAVIAC DESIGNER, SO PLEASE DON'T MODIFY IT BY YOURSELF!");
-                structfile.WriteLine("// ---------------------------------------------------------------------");
+                    structfile.WriteLine("// ---------------------------------------------------------------------");
+                    structfile.WriteLine("// THIS FILE IS AUTO-GENERATED BY BEHAVIAC DESIGNER, SO PLEASE DON'T MODIFY IT BY YOURSELF!");
+                    structfile.WriteLine("// ---------------------------------------------------------------------");
+                    structfile.WriteLine();
+                    structfile.WriteLine("#ifndef {0}", structHeaderFileMacro);
+                    structfile.WriteLine("#define {0}", structHeaderFileMacro);
+                    structfile.WriteLine();
+                    structfile.WriteLine("#include \"behaviac/agent/agent.h\"\n");
+                }
+
                 structfile.WriteLine();
-                structfile.WriteLine("#ifndef {0}", structHeaderFileMacro);
-                structfile.WriteLine("#define {0}", structHeaderFileMacro);
-                structfile.WriteLine();
-                structfile.WriteLine("#include \"behaviac/agent/agent.h\"\n");
+
+                string indent = "";
+
+                if (!string.IsNullOrEmpty(structType.Namespace))
+                {
+                    indent = "\t";
+
+                    structfile.WriteLine("namespace {0}", structType.Namespace);
+                    structfile.WriteLine("{");
+                }
+
+                if (string.IsNullOrEmpty(structType.BaseName))
+                {
+                    structfile.WriteLine("{0}struct {1}", indent, structType.Name);
+                }
+                else
+                {
+                    StructType baseStruct = TypeManager.Instance.FindStruct(structType.BaseName);
+                    Debug.Check(baseStruct != null);
+
+                    string baseName = structType.BaseName;
+
+                    if (baseStruct != null)
+                    {
+                        baseName = baseStruct.Name;
+
+                        if (!string.IsNullOrEmpty(baseStruct.Namespace) && baseStruct.Namespace != structType.Namespace)
+                        {
+                            baseName = string.Format("{0}::{1}", baseStruct.Namespace, baseName);
+                        }
+                    }
+
+                    structfile.WriteLine("{0}struct {1} : public {2}", indent, structType.Name, baseName);
+                }
+
+                structfile.WriteLine("{0}{{", indent);
+
+                if (structType.Properties.Count > 0)
+                {
+                    for (int m = 0; m < structType.Properties.Count; ++m)
+                    {
+                        PropertyDef member = structType.Properties[m];
+                        if (!member.IsInherited)
+                        {
+                            structfile.WriteLine("{0}\t{1} {2};", indent, DataCppExporter.GetGeneratedNativeType(member.NativeType), member.BasicName);
+                        }
+                    }
+                }
+
+                //structfile.WriteLine();
+                //structfile.WriteLine("DECLARE_BEHAVIAC_STRUCT({0});", structType.Fullname);
+
+                structfile.WriteLine("{0}}};", indent);
+
+                if (!string.IsNullOrEmpty(structType.Namespace))
+                {
+                    structfile.WriteLine("}");
+                }
             }
 
             structfile.WriteLine();
+            structfile.WriteLine("BEHAVIAC_EXTEND_EXISTING_TYPE({0}, {1});", structType.Fullname, structType.IsRef ? "true" : "false");
+            structfile.WriteLine("BEHAVIAC_DECLARE_TYPE_VECTOR_HANDLER({0});", structType.Fullname);
+            structfile.WriteLine();
 
-            string indent = "";
-
-            if (!string.IsNullOrEmpty(structType.Namespace))
+            structfile.WriteLine("template< typename SWAPPER >");
+            structfile.WriteLine("inline void SwapByteImplement({0}& v)", structType.Fullname);
+            structfile.WriteLine("{");
+            for (int m = 0; m < structType.Properties.Count; ++m)
             {
-                indent = "\t";
-
-                structfile.WriteLine("namespace {0}", structType.Namespace);
-                structfile.WriteLine("{");
+                PropertyDef member = structType.Properties[m];
+                structfile.WriteLine("\tSwapByteImplement< SWAPPER >(v.{0});", member.BasicName);
             }
+            structfile.WriteLine("}");
+            structfile.WriteLine();
 
-            if (string.IsNullOrEmpty(structType.BaseName))
+            structfile.WriteLine("namespace behaviac");
+            structfile.WriteLine("{");
+            structfile.WriteLine("\tnamespace PrivateDetails");
+            structfile.WriteLine("\t{");
+            structfile.WriteLine("\t\ttemplate<>");
+            structfile.WriteLine("\t\tinline bool Equal(const {0}& lhs, const {0}& rhs)", structType.Fullname);
+            structfile.WriteLine("\t\t{");
+            if (structType.IsRef || structType.Properties.Count == 0)
             {
-                structfile.WriteLine("{0}struct {1}", indent, structType.Name);
+                structfile.WriteLine("\t\t\treturn &lhs == &rhs;");
             }
             else
             {
-                StructType baseStruct = TypeManager.Instance.FindStruct(structType.BaseName);
-                Debug.Check(baseStruct != null);
-
-                string baseName = structType.BaseName;
-
-                if (baseStruct != null)
-                {
-                    baseName = baseStruct.Name;
-
-                    if (!string.IsNullOrEmpty(baseStruct.Namespace) && baseStruct.Namespace != structType.Namespace)
-                    {
-                        baseName = string.Format("{0}::{1}", baseStruct.Namespace, baseName);
-                    }
-                }
-
-                structfile.WriteLine("{0}struct {1} : public {2}", indent, structType.Name, baseName);
-            }
-
-            structfile.WriteLine("{0}{{", indent);
-
-            if (structType.Properties.Count > 0)
-            {
+                structfile.Write("\t\t\treturn ");
                 for (int m = 0; m < structType.Properties.Count; ++m)
                 {
                     PropertyDef member = structType.Properties[m];
-                    if (!member.IsInherited)
+                    string preStr = "";
+                    if (m > 0)
                     {
-                        structfile.WriteLine("{0}\t{1} {2};", indent, DataCppExporter.GetGeneratedNativeType(member.NativeType), member.BasicName);
+                        preStr = "\t\t\t\t&& ";
                     }
+
+                    string postStr = "";
+                    if (m == structType.Properties.Count - 1)
+                    {
+                        postStr = ";";
+                    }
+
+                    structfile.WriteLine("{0}Equal(lhs.{1}, rhs.{1}){2}", preStr, member.BasicName, postStr);
                 }
             }
+            structfile.WriteLine("\t\t}");
+            structfile.WriteLine("\t}");
+            structfile.WriteLine("}");
 
-            string fullName = structType.Name;
-
-            if (!string.IsNullOrEmpty(structType.Namespace))
+            if (shouldExportStruct && hasSetExportLocation)
             {
-                fullName = structType.Namespace + "::" + structType.Name;
-            }
-
-            structfile.WriteLine();
-            structfile.WriteLine("DECLARE_BEHAVIAC_STRUCT({0});", fullName);
-
-            structfile.WriteLine("{0}}};", indent);
-
-            if (!string.IsNullOrEmpty(structType.Namespace))
-            {
-                structfile.WriteLine("}");
-            }
-
-            structfile.WriteLine();
-            structfile.WriteLine("BEHAVIAC_DECLARE_TYPE_VECTOR_HANDLER({0});", fullName);
-
-            if (hasSetExportLocation)
-            {
+                structfile.WriteLine();
                 structfile.WriteLine("#endif // {0}", structHeaderFileMacro);
 
                 string structFilename = filename;
@@ -2573,7 +2651,7 @@ namespace PluginBehaviac.Exporters
 
         private void ExportCustomizedTypesImplemention(string agentFolder)
         {
-            if (TypeManager.Instance.HasNonImplementedTypes())
+            if (TypeManager.Instance.HasNonImplementedEnums())
             {
                 using (StringWriter file = new StringWriter())
                 {
@@ -2585,150 +2663,82 @@ namespace PluginBehaviac.Exporters
                     file.WriteLine("#include \"behaviac_customized_types.h\"");
                     file.WriteLine();
 
-                    if (TypeManager.Instance.HasNonImplementedEnums())
+                    file.WriteLine("// -------------------");
+                    file.WriteLine("// Customized enums");
+                    file.WriteLine("// -------------------");
+
+                    for (int e = 0; e < TypeManager.Instance.Enums.Count; ++e)
                     {
-                        file.WriteLine("// -------------------");
-                        file.WriteLine("// Customized enums");
-                        file.WriteLine("// -------------------");
+                        EnumType enumType = TypeManager.Instance.Enums[e];
 
-                        for (int e = 0; e < TypeManager.Instance.Enums.Count; ++e)
+                        if (enumType.IsImplemented)
                         {
-                            EnumType enumType = TypeManager.Instance.Enums[e];
+                            continue;
+                        }
 
-                            if (enumType.IsImplemented)
-                            {
-                                continue;
-                            }
+                        StringWriter enumfile = file;
 
-                            StringWriter enumfile = file;
+                        if (!string.IsNullOrEmpty(enumType.ExportLocation))
+                        {
+                            enumfile = new StringWriter();
 
-                            if (!string.IsNullOrEmpty(enumType.ExportLocation))
-                            {
-                                enumfile = new StringWriter();
-
-                                enumfile.WriteLine("// ---------------------------------------------------------------------");
-                                enumfile.WriteLine("// THIS FILE IS AUTO-GENERATED BY BEHAVIAC DESIGNER, SO PLEASE DON'T MODIFY IT BY YOURSELF!");
-                                enumfile.WriteLine("// ---------------------------------------------------------------------");
-                                enumfile.WriteLine();
-                                enumfile.WriteLine("#include \"behaviac/agent/registermacros.h\"");
-                                enumfile.WriteLine("#include \"{0}.h\"", enumType.Name);
-                                enumfile.WriteLine();
-                            }
-
+                            enumfile.WriteLine("// ---------------------------------------------------------------------");
+                            enumfile.WriteLine("// THIS FILE IS AUTO-GENERATED BY BEHAVIAC DESIGNER, SO PLEASE DON'T MODIFY IT BY YOURSELF!");
+                            enumfile.WriteLine("// ---------------------------------------------------------------------");
                             enumfile.WriteLine();
+                            enumfile.WriteLine("#include \"behaviac/agent/registermacros.h\"");
+                            enumfile.WriteLine("#include \"{0}.h\"", enumType.Name);
+                            enumfile.WriteLine();
+                        }
 
-                            string fullName = enumType.Name;
+                        enumfile.WriteLine();
+
+                        string fullName = enumType.Name;
+
+                        if (!string.IsNullOrEmpty(enumType.Namespace))
+                        {
+                            fullName = enumType.Namespace + "::" + enumType.Name;
+                        }
+
+                        enumfile.WriteLine("BEHAVIAC_BEGIN_ENUM({0}, {1})", fullName, enumType.Name);
+                        enumfile.WriteLine("{");
+                        enumfile.WriteLine("\tBEHAVIAC_ENUMCLASS_DISPLAY_INFO(L\"{0}\", L\"{1}\");", enumType.DisplayName, enumType.Description);
+                        enumfile.WriteLine();
+
+                        for (int m = 0; m < enumType.Members.Count; ++m)
+                        {
+                            EnumType.EnumMemberType member = enumType.Members[m];
+
+                            string fullMemberName = member.Name;
 
                             if (!string.IsNullOrEmpty(enumType.Namespace))
                             {
-                                fullName = enumType.Namespace + "::" + enumType.Name;
+                                fullMemberName = enumType.Namespace + "::" + member.Name;
                             }
 
-                            enumfile.WriteLine("BEHAVIAC_BEGIN_ENUM({0}, {1})", fullName, enumType.Name);
-                            enumfile.WriteLine("{");
-                            enumfile.WriteLine("\tBEHAVIAC_ENUMCLASS_DISPLAY_INFO(L\"{0}\", L\"{1}\");", enumType.DisplayName, enumType.Description);
-                            enumfile.WriteLine();
-
-                            for (int m = 0; m < enumType.Members.Count; ++m)
+                            if (member.DisplayName != member.Name || !string.IsNullOrEmpty(member.Description))
                             {
-                                EnumType.EnumMemberType member = enumType.Members[m];
-
-                                string fullMemberName = member.Name;
-
-                                if (!string.IsNullOrEmpty(enumType.Namespace))
-                                {
-                                    fullMemberName = enumType.Namespace + "::" + member.Name;
-                                }
-
-                                if (member.DisplayName != member.Name || !string.IsNullOrEmpty(member.Description))
-                                {
-                                    enumfile.WriteLine("\tBEHAVIAC_ENUM_ITEM({0}, \"{1}\").DISPLAY_INFO(L\"{2}\", L\"{3}\");", fullMemberName, member.Name, member.DisplayName, member.Description);
-                                }
-                                else
-                                {
-                                    enumfile.WriteLine("\tBEHAVIAC_ENUM_ITEM({0}, \"{1}\");", fullMemberName, member.Name);
-                                }
+                                enumfile.WriteLine("\tBEHAVIAC_ENUM_ITEM({0}, \"{1}\").DISPLAY_INFO(L\"{2}\", L\"{3}\");", fullMemberName, member.Name, member.DisplayName, member.Description);
                             }
-
-                            enumfile.WriteLine("}");
-                            enumfile.WriteLine("BEHAVIAC_END_ENUM()");
-
-                            if (!string.IsNullOrEmpty(enumType.ExportLocation))
+                            else
                             {
-                                string enumLocation = Workspace.Current.MakeAbsolutePath(enumType.ExportLocation);
-                                string enumFilename = Path.Combine(enumLocation, enumType.Name + ".cpp");
-
-                                UpdateFile(enumfile, enumFilename);
+                                enumfile.WriteLine("\tBEHAVIAC_ENUM_ITEM({0}, \"{1}\");", fullMemberName, member.Name);
                             }
                         }
 
-                        file.WriteLine();
-                    }
+                        enumfile.WriteLine("}");
+                        enumfile.WriteLine("BEHAVIAC_END_ENUM()");
 
-                    if (TypeManager.Instance.HasNonImplementedStructs())
-                    {
-                        file.WriteLine("// -------------------");
-                        file.WriteLine("// Customized structs");
-                        file.WriteLine("// -------------------");
-
-                        for (int s = 0; s < TypeManager.Instance.Structs.Count; s++)
+                        if (!string.IsNullOrEmpty(enumType.ExportLocation))
                         {
-                            StructType structType = TypeManager.Instance.Structs[s];
+                            string enumLocation = Workspace.Current.MakeAbsolutePath(enumType.ExportLocation);
+                            string enumFilename = Path.Combine(enumLocation, enumType.Name + ".cpp");
 
-                            if (structType.IsImplemented)
-                            {
-                                continue;
-                            }
-
-                            StringWriter structfile = file;
-
-                            if (!string.IsNullOrEmpty(structType.ExportLocation))
-                            {
-                                structfile = new StringWriter();
-
-                                structfile.WriteLine("// ---------------------------------------------------------------------");
-                                structfile.WriteLine("// THIS FILE IS AUTO-GENERATED BY BEHAVIAC DESIGNER, SO PLEASE DON'T MODIFY IT BY YOURSELF!");
-                                structfile.WriteLine("// ---------------------------------------------------------------------");
-                                structfile.WriteLine();
-                                structfile.WriteLine("#include \"behaviac/agent/registermacros.h\"");
-                                structfile.WriteLine("#include \"{0}.h\"", structType.Name);
-                            }
-
-                            structfile.WriteLine();
-
-                            //string fullName = structType.Name;
-                            //if (!string.IsNullOrEmpty(structType.Namespace))
-                            //{
-                            //    fullName = structType.Namespace + "::" + structType.Name;
-                            //}
-
-                            //structfile.WriteLine("BEHAVIAC_BEGIN_STRUCT({0})", fullName);
-                            //structfile.WriteLine("{");
-                            //structfile.WriteLine("\tBEHAVIAC_STRUCT_DISPLAYNAME(L\"{0}\");", structType.DisplayName);
-                            //structfile.WriteLine("\tBEHAVIAC_STRUCT_DESC(L\"{0}\");", structType.Description);
-                            //structfile.WriteLine();
-
-                            //for (int m = 0; m < structType.Properties.Count; ++m)
-                            //{
-                            //    PropertyDef member = structType.Properties[m];
-                            //    if (member.DisplayName != member.Name || !string.IsNullOrEmpty(member.BasicDescription))
-                            //        structfile.WriteLine("\tBEHAVIAC_REGISTER_STRUCT_PROPERTY({0});", member.BasicName);
-                            //    else
-                            //        structfile.WriteLine("\tBEHAVIAC_REGISTER_STRUCT_PROPERTY({0});", member.BasicName);
-                            //}
-
-                            //structfile.WriteLine("}");
-                            //structfile.WriteLine("BEHAVIAC_END_STRUCT()");
-
-                            if (!string.IsNullOrEmpty(structType.ExportLocation))
-                            {
-                                string structLocation = Workspace.Current.MakeAbsolutePath(structType.ExportLocation);
-                                string structFilename = Path.Combine(structLocation, structType.Name + ".cpp");
-
-                                UpdateFile(structfile, structFilename);
-                            }
+                            UpdateFile(enumfile, enumFilename);
                         }
                     }
+
+                    file.WriteLine();
 
                     string filename = Path.Combine(agentFolder, "behaviac_customized_types.cpp");
 
@@ -2833,6 +2843,11 @@ namespace PluginBehaviac.Exporters
                 {
                     string structFullname = structType.Fullname;
                     file.WriteLine("\t\t\tAgentMeta::Register<{0}>(\"{0}\");", structFullname);
+                }
+
+                foreach (string newTypes in Plugin.TypeRenames.Values)
+                {
+                    file.WriteLine("\t\t\tAgentMeta::Register<{0}>(\"{0}\");", newTypes);
                 }
 
                 if (Plugin.InstanceNames.Count > 0)
@@ -3083,6 +3098,11 @@ namespace PluginBehaviac.Exporters
                     }
 
                     string methodReturnType = DataCppExporter.GetGeneratedNativeType(method.NativeReturnType);
+                    if (Plugin.IsRefType(method.ReturnType) && !methodReturnType.EndsWith("*"))
+                    {
+                        methodReturnType += "*";
+                    }
+
                     string methodName = agentTypeName.Replace("::", "_") + "_" + method.BasicName.Replace("::", "_");
 
                     if (method.IsNamedEvent)

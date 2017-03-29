@@ -141,7 +141,7 @@ namespace behaviac
             Init_(this.m_contextId, this, this.m_priority);
 
 #if !BEHAVIAC_RELEASE
-            this.SetName(this.name);
+            //this.SetName(this.name);
             this._members.Clear();
 #endif
         }
@@ -1369,6 +1369,27 @@ namespace behaviac
 #endif
         }
 
+        public void LogRunningNodes()
+        {
+#if !BEHAVIAC_RELEASE
+            if (Config.IsLoggingOrSocketing && this.m_currentBT != null)
+            {
+                List<BehaviorTask> runningNodes = this.m_currentBT.GetRunningNodes(false);
+
+                foreach (BehaviorTask behaviorTask in runningNodes)
+                {
+                    string btStr = BehaviorTask.GetTickInfo(this, behaviorTask, "enter");
+
+                    //empty btStr is for internal BehaviorTreeTask
+                    if (!string.IsNullOrEmpty(btStr))
+                    {
+                        LogManager.Instance.Log(this, btStr, EActionResult.EAR_success, LogMode.ELM_tick);
+                    }
+                }
+            }
+#endif
+        }
+
 #if !BEHAVIAC_RELEASE
         public int m_debug_in_exec;
         public int m_debug_count;
@@ -1382,6 +1403,7 @@ namespace behaviac
             pAgent.m_contextId = contextId;
             pAgent.m_id = ms_agent_index++;
             pAgent.m_priority = priority;
+            pAgent.SetName(pAgent.name);
 
             Context.AddAgent(pAgent);
 

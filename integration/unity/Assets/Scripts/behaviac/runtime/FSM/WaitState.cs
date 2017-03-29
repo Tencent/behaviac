@@ -174,11 +174,13 @@ namespace behaviac
             {
                 Debug.Check(childStatus == EBTStatus.BT_RUNNING);
                 Debug.Check(this.m_node is WaitState, "node is not an WaitState");
+                WaitState pStateNode = (WaitState)this.m_node;
 
                 if (Workspace.Instance.UseIntValue)
                 {
                     if (Workspace.Instance.IntValueSinceStartup - this.m_intStart >= this.m_intTime)
                     {
+                        pStateNode.Update(pAgent, out this.m_nextStateId);
                         return EBTStatus.BT_SUCCESS;
                     }
                 }
@@ -186,6 +188,7 @@ namespace behaviac
                 {
                     if (Workspace.Instance.DoubleValueSinceStartup - this.m_start >= this.m_time)
                     {
+                        pStateNode.Update(pAgent, out this.m_nextStateId);
                         return EBTStatus.BT_SUCCESS;
                     }
                 }

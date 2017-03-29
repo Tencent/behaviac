@@ -290,9 +290,30 @@ namespace Behaviac.Design
 
                     XmlNode configNode = configFile.ChildNodes[1];
 
+                    Plugin.TypeRenames.Clear();
+
                     foreach (XmlNode xmlNode in configNode.ChildNodes)
                     {
-                        if (xmlNode.Name == "FilterNodes")
+                        if (xmlNode.Name == "TypeRenames")
+                        {
+                            XmlAttribute langAttr = xmlNode.Attributes["Language"];
+                            if (Workspace.Current == null || langAttr != null && langAttr.Value == Workspace.Current.Language)
+                            {
+                                foreach (XmlNode node in xmlNode.ChildNodes)
+                                {
+                                    XmlAttribute oldNameAttr = node.Attributes != null ? node.Attributes["OldName"] : null;
+                                    XmlAttribute newNameAttr = node.Attributes != null ? node.Attributes["NewName"] : null;
+
+                                    if (oldNameAttr != null && newNameAttr != null)
+                                    {
+                                        string oldName = oldNameAttr.Value;
+                                        string newName = newNameAttr.Value;
+                                        Plugin.TypeRenames[oldName] = newName;
+                                    }
+                                }
+                            }
+                        }
+                        else if (xmlNode.Name == "FilterNodes")
                         {
                             Plugin.FilterNodes.Clear();
 
@@ -306,7 +327,6 @@ namespace Behaviac.Design
                                     Plugin.FilterNodes.Add(nodeName);
                                 }
                             }
-
                         }
                         else if (xmlNode.Name == "Themes")
                         {
@@ -335,7 +355,6 @@ namespace Behaviac.Design
                         }
                     }
                 }
-
             }
             catch (Exception e)
             {
@@ -952,7 +971,6 @@ namespace Behaviac.Design
                     }
 
                     loadLayout(curEditMode, __layoutDesignFile, true);
-
                 }
                 else
                 {
@@ -980,7 +998,6 @@ namespace Behaviac.Design
                         Utilities.ClearDirectory(logFileDir);
                     }
                 }
-
             }
             catch
             {
@@ -1119,9 +1136,9 @@ namespace Behaviac.Design
                         dock.BehaviorTreeView = control;
                         dock.Activated += new EventHandler(dock_Activated);
                         dock.FormClosed += new FormClosedEventHandler(dock_FormClosed);
-                        dock.Show(dockPanel, WeifenLuo.WinFormsUI.Docking.DockState.Document);
-
                         dock.ToolTipText = FileManagers.FileManager.GetRelativePath(node.Filename);
+
+                        dock.Show(dockPanel, WeifenLuo.WinFormsUI.Docking.DockState.Document);
                     }
                     catch
                     {

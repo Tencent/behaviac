@@ -163,9 +163,12 @@ namespace behaviac
                             //[tick]Ship.Ship_1 ships\suicide.xml.Selector[1]:update [1]
                             int count = Workspace.Instance.UpdateActionCount(btMsg);
 
-                            string buffer = string.Format("[tick]{0} {1} [{2}] [{3}]\n", agentName, btMsg, actionResultStr, count);
+                            if (actionResultStr != "running")
+                            {
+                                string buffer = string.Format("[tick]{0} {1} [{2}] [{3}]\n", agentName, btMsg, actionResultStr, count);
 
-                            Output(pAgent, buffer);
+                                Output(pAgent, buffer);
+                            }
                         }
                         else if (mode == LogMode.ELM_jump)
                         {
@@ -519,6 +522,14 @@ namespace behaviac
                         {
                             buffer = string.Format("Agent_$_{0:3}.log", agentId);
                         }
+
+#if !BEHAVIAC_NOT_USE_UNITY
+                        if (UnityEngine.Application.platform != UnityEngine.RuntimePlatform.WindowsEditor &&
+                            UnityEngine.Application.platform != UnityEngine.RuntimePlatform.WindowsPlayer)
+                        {
+                            buffer = Path.Combine(UnityEngine.Application.persistentDataPath, buffer);
+                        }
+#endif
                     }
                     else
                     {

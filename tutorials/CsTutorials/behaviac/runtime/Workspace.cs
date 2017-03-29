@@ -1217,13 +1217,15 @@ namespace behaviac
 #endif
         }
 
+        private int m_frame = 0;
+
         protected void LogFrames()
         {
 #if !BEHAVIAC_RELEASE
 
             if (Config.IsLoggingOrSocketing)
             {
-                LogManager.Instance.Log("[frame]{0}\n", this.FrameSinceStartup);
+                LogManager.Instance.Log("[frame]{0}\n", (this.FrameSinceStartup >= 0) ? this.FrameSinceStartup : (this.m_frame++));
             }
 
 #endif

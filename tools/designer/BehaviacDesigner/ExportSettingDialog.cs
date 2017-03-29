@@ -67,6 +67,8 @@ namespace Behaviac.Design
                         addFilename(includedFilename);
                     }
                 }
+
+                autoSetRelativePathCheckBox.Checked = Workspace.Current.UseRelativePath;
             }
         }
 
@@ -94,6 +96,8 @@ namespace Behaviac.Design
                 }
 
                 Workspace.Current.SetIncludedFilenames(_exporterInfo.ID, exportIncludedFilenames);
+
+                Workspace.Current.UseRelativePath = autoSetRelativePathCheckBox.Checked;
 
                 Workspace.SaveWorkspaceFile(Workspace.Current);
             }
@@ -199,16 +203,6 @@ namespace Behaviac.Design
                     row.Cells["filenameColumn"].Value = filename;
                 }
             }
-        }
-
-        private void exportFolderTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void exportFolderLabel_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

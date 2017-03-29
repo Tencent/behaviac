@@ -564,7 +564,10 @@ namespace behaviac
                     }
                 }
 
-                m_packetQueue.Enqueue(packet);
+                lock (m_packetQueue)
+                {
+                    m_packetQueue.Enqueue(packet);
+                }
             }
         }
 
@@ -577,23 +580,11 @@ namespace behaviac
                 return true;
             }
 
-            Packet packet = m_packetQueue.Peek();
-
-            while (packet == null)
+            lock (m_packetQueue)
             {
-                m_packetQueue.Dequeue();
+                Packet packet = m_packetQueue.Peek();
 
-                if (m_packetQueue.Count == 0)
-                {
-                    break;
-                }
-
-                packet = m_packetQueue.Peek();
-            }
-
-            while (packet != null)
-            {
-                if (coll.Add(packet))
+                while (packet == null)
                 {
                     m_packetQueue.Dequeue();
 
@@ -604,9 +595,24 @@ namespace behaviac
 
                     packet = m_packetQueue.Peek();
                 }
-                else
+
+                while (packet != null)
                 {
-                    return false;
+                    if (coll.Add(packet))
+                    {
+                        m_packetQueue.Dequeue();
+
+                        if (m_packetQueue.Count == 0)
+                        {
+                            break;
+                        }
+
+                        packet = m_packetQueue.Peek();
+                    }
+                    else
+                    {
+                        return false;
+                    }
                 }
             }
 
@@ -617,24 +623,27 @@ namespace behaviac
 
         private void SendPackets(Socket h)
         {
-            Packet packet = m_packetQueue.Peek();
-
-            while (packet != null)
+            lock (m_packetQueue)
             {
-                int bytesWritten = (0);
-                bool success = SocketBase.Write(h, packet.GetData(), ref bytesWritten);
+                Packet packet = m_packetQueue.Peek();
 
-                // Failed to send data. Most probably sending too much, break and
-                // hope for the best next time
-                if (!success)
+                while (packet != null)
                 {
-                    Debug.Check(false);
-                    behaviac.Debug.LogWarning("A packet is not correctly sent...\n");
-                    break;
-                }
+                    int bytesWritten = (0);
+                    bool success = SocketBase.Write(h, packet.GetData(), ref bytesWritten);
 
-                m_packetQueue.Dequeue();	// 'Commit' pop if data sent.
-                packet = m_packetQueue.Peek();
+                    // Failed to send data. Most probably sending too much, break and
+                    // hope for the best next time
+                    if (!success)
+                    {
+                        Debug.Check(false);
+                        behaviac.Debug.LogWarning("A packet is not correctly sent...\n");
+                        break;
+                    }
+
+                    m_packetQueue.Dequeue();	// 'Commit' pop if data sent.
+                    packet = m_packetQueue.Peek();
+                }
             }
         }
 

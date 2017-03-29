@@ -2,22 +2,22 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="tutorials">
-      <UniqueIdentifier>{80E9BA9B-3AE2-2142-812D-3B82CE346DCF}</UniqueIdentifier>
+      <UniqueIdentifier>{BD9A1E4F-BEBF-C349-B305-5B2401BB57B5}</UniqueIdentifier>
     </Filter>
     <Filter Include="tutorials\tutorial_3">
-      <UniqueIdentifier>{C125695D-27E0-FC4E-BABE-A82215492491}</UniqueIdentifier>
+      <UniqueIdentifier>{1C746284-461C-584F-81E3-86AFE5179C09}</UniqueIdentifier>
     </Filter>
     <Filter Include="tutorials\tutorial_3\cpp">
-      <UniqueIdentifier>{9D9A957E-A244-D34B-9FB8-678A918A4BA2}</UniqueIdentifier>
+      <UniqueIdentifier>{8E76419F-6A6D-0B48-A29C-596672082143}</UniqueIdentifier>
     </Filter>
     <Filter Include="tutorials\tutorial_3\cpp\behaviac_generated">
-      <UniqueIdentifier>{87A72352-7CF9-FE45-80A5-5CFECFD70CA2}</UniqueIdentifier>
+      <UniqueIdentifier>{5F16BC26-CF3B-3342-BA2C-DBB75A4BB0E7}</UniqueIdentifier>
     </Filter>
     <Filter Include="tutorials\tutorial_3\cpp\behaviac_generated\types">
-      <UniqueIdentifier>{2414B27F-472C-084C-85E9-8055EA14658A}</UniqueIdentifier>
+      <UniqueIdentifier>{C82DF770-CF90-DA44-AC99-68959764AA79}</UniqueIdentifier>
     </Filter>
     <Filter Include="tutorials\tutorial_3\cpp\behaviac_generated\types\internal">
-      <UniqueIdentifier>{454766E5-1238-D24D-AA7F-37143A2F85A5}</UniqueIdentifier>
+      <UniqueIdentifier>{4E7BC969-795E-5849-9D80-8988832C53AA}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

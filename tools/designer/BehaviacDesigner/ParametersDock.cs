@@ -179,22 +179,27 @@ namespace Behaviac.Design
                     AgentType agentType1 = Plugin.GetAgentType(at);
 
                     ParametersDock dock = findParametersDock(agentType1, an);
-                    dock.InspectObject(agentType1, agentFullName1);
+                    if (dock != null)
+                    {
+                        dock.InspectObject(agentType1, agentFullName1);
 
-                    dock.setProperty(nodeState, agentFullName1);
+                        dock.setProperty(nodeState, agentFullName1);
+                    }
                 }
-
             }
             else if (AgentDataPool.CurrentFrame > -1 && !string.IsNullOrEmpty(agentName))
             {
                 ParametersDock dock = findParametersDock(agentType, agentName);
-                dock.InspectObject(agentType, agentFullName);
-
-                List<AgentDataPool.ValueMark> valueSet = AgentDataPool.GetValidValues(agentType, agentFullName, AgentDataPool.CurrentFrame);
-
-                foreach (AgentDataPool.ValueMark value in valueSet)
+                if (dock != null)
                 {
-                    dock.setProperty(null, value.Name, value.Value);
+                    dock.InspectObject(agentType, agentFullName);
+
+                    List<AgentDataPool.ValueMark> valueSet = AgentDataPool.GetValidValues(agentType, agentFullName, AgentDataPool.CurrentFrame);
+
+                    foreach (AgentDataPool.ValueMark value in valueSet)
+                    {
+                        dock.setProperty(null, value.Name, value.Value);
+                    }
                 }
             }
 

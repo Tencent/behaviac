@@ -112,6 +112,19 @@ namespace Behaviac.Design
                 }
             }
 
+            private System.Windows.Forms.CheckBox _isConstCheckBox;
+            public System.Windows.Forms.CheckBox IsConstCheckBox
+            {
+                get
+                {
+                    return _isConstCheckBox;
+                }
+                set
+                {
+                    _isConstCheckBox = value;
+                }
+            }
+
             private System.Windows.Forms.TextBox _displayNameTextBox;
             public System.Windows.Forms.TextBox DisplayNameTextBox
             {
@@ -150,6 +163,11 @@ namespace Behaviac.Design
                 if (this.ByReferrenceCheckBox != null)
                 {
                     this.ByReferrenceCheckBox.Dispose();
+                }
+
+                if (this.IsConstCheckBox != null)
+                {
+                    this.IsConstCheckBox.Dispose();
                 }
 
                 if (this.DisplayNameTextBox != null)
@@ -310,7 +328,7 @@ namespace Behaviac.Design
             }
         }
 
-        private int getRowIndex(CheckBox selectCheckBox, TextBox nameTextBox, ComboBox typeComboBox, CheckBox isArrayCheckBox, CheckBox byReferrenceCheckBox, TextBox displayNameTextBox)
+        private int getRowIndex(CheckBox selectCheckBox, TextBox nameTextBox, ComboBox typeComboBox, CheckBox isArrayCheckBox, CheckBox byReferrenceCheckBox, CheckBox isConstCheckBox, TextBox displayNameTextBox)
         {
             for (int i = 0; i < _rowControls.Count; ++i)
             {
@@ -319,6 +337,7 @@ namespace Behaviac.Design
                     typeComboBox != null && _rowControls[i].TypeComboBox == typeComboBox ||
                     isArrayCheckBox != null && _rowControls[i].IsArrayCheckBox == isArrayCheckBox ||
                     byReferrenceCheckBox != null && _rowControls[i].ByReferrenceCheckBox == byReferrenceCheckBox ||
+                    isConstCheckBox != null && _rowControls[i].IsConstCheckBox == isConstCheckBox ||
                     displayNameTextBox != null && _rowControls[i].DisplayNameTextBox == displayNameTextBox)
                 {
                     return i;
@@ -384,7 +403,7 @@ namespace Behaviac.Design
 
         private void NameTextBox_TextChanged(object sender, EventArgs e)
         {
-            int rowIndex = getRowIndex(null, sender as TextBox, null, null, null, null);
+            int rowIndex = getRowIndex(null, sender as TextBox, null, null, null, null, null);
 
             if (rowIndex > -1)
             {
@@ -404,7 +423,7 @@ namespace Behaviac.Design
 
         private void DisplayNameTextBox_TextChanged(object sender, EventArgs e)
         {
-            int rowIndex = getRowIndex(null, null, null, null, null, sender as TextBox);
+            int rowIndex = getRowIndex(null, null, null, null, null, null, sender as TextBox);
 
             if (rowIndex > -1)
             {
@@ -417,7 +436,7 @@ namespace Behaviac.Design
 
         private void TypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int rowIndex = getRowIndex(null, null, sender as ComboBox, null, null, null);
+            int rowIndex = getRowIndex(null, null, sender as ComboBox, null, null, null, null);
 
             if (rowIndex > -1)
             {
@@ -433,7 +452,7 @@ namespace Behaviac.Design
 
         private void IsArrayCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            int rowIndex = getRowIndex(null, null, null, sender as CheckBox, null, null);
+            int rowIndex = getRowIndex(null, null, null, sender as CheckBox, null, null, null);
 
             if (rowIndex > -1)
             {
@@ -446,12 +465,25 @@ namespace Behaviac.Design
 
         private void ByReferrenceCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            int rowIndex = getRowIndex(null, null, null, null, sender as CheckBox, null);
+            int rowIndex = getRowIndex(null, null, null, null, sender as CheckBox, null, null);
 
             if (rowIndex > -1)
             {
                 RowControl rowControl = _rowControls[rowIndex];
                 rowControl.Param.IsRef = rowControl.ByReferrenceCheckBox.Checked;
+
+                this.IsModified = true;
+            }
+        }
+
+        private void IsConstCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            int rowIndex = getRowIndex(null, null, null, null, null, sender as CheckBox, null);
+
+            if (rowIndex > -1)
+            {
+                RowControl rowControl = _rowControls[rowIndex];
+                rowControl.Param.IsConst = rowControl.IsConstCheckBox.Checked;
 
                 this.IsModified = true;
             }
@@ -563,6 +595,19 @@ namespace Behaviac.Design
                 rowControl.ByReferrenceCheckBox.CheckedChanged += new EventHandler(ByReferrenceCheckBox_CheckedChanged);
                 this.tableLayoutPanel.Controls.Add(rowControl.ByReferrenceCheckBox, 4, rowIndex);
 
+                rowControl.IsConstCheckBox = new System.Windows.Forms.CheckBox();
+                rowControl.IsConstCheckBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+                rowControl.IsConstCheckBox.ForeColor = System.Drawing.Color.LightGray;
+                rowControl.IsConstCheckBox.FlatAppearance.MouseDownBackColor = Color.DarkGray;
+                rowControl.IsConstCheckBox.FlatAppearance.MouseOverBackColor = Color.DarkGray;
+                //rowControl.IsConstCheckBox.Dock = System.Windows.Forms.DockStyle.Fill;
+                rowControl.IsConstCheckBox.CheckAlign = ContentAlignment.MiddleCenter;
+                rowControl.IsConstCheckBox.Margin = new System.Windows.Forms.Padding(0);
+                rowControl.IsConstCheckBox.Enabled = (paramType != null && Workspace.Current.Language == "cpp");
+                rowControl.IsConstCheckBox.Checked = param.IsConst;
+                rowControl.IsConstCheckBox.CheckedChanged += new EventHandler(IsConstCheckBox_CheckedChanged);
+                this.tableLayoutPanel.Controls.Add(rowControl.IsConstCheckBox, 5, rowIndex);
+
                 rowControl.DisplayNameTextBox = new System.Windows.Forms.TextBox();
                 rowControl.DisplayNameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
                 rowControl.DisplayNameTextBox.ForeColor = System.Drawing.Color.LightGray;
@@ -571,7 +616,7 @@ namespace Behaviac.Design
                 rowControl.DisplayNameTextBox.Margin = new System.Windows.Forms.Padding(3);
                 rowControl.DisplayNameTextBox.Text = param.DisplayName;
                 rowControl.DisplayNameTextBox.TextChanged += new EventHandler(DisplayNameTextBox_TextChanged);
-                this.tableLayoutPanel.Controls.Add(rowControl.DisplayNameTextBox, 5, rowIndex);
+                this.tableLayoutPanel.Controls.Add(rowControl.DisplayNameTextBox, 6, rowIndex);
 
                 this.tableLayoutPanel.RowCount++;
                 this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
@@ -596,6 +641,7 @@ namespace Behaviac.Design
             this.tableLayoutPanel.Controls.Remove(rowControl.TypeComboBox);
             this.tableLayoutPanel.Controls.Remove(rowControl.IsArrayCheckBox);
             this.tableLayoutPanel.Controls.Remove(rowControl.ByReferrenceCheckBox);
+            this.tableLayoutPanel.Controls.Remove(rowControl.IsConstCheckBox);
             this.tableLayoutPanel.Controls.Remove(rowControl.DisplayNameTextBox);
 
             for (int r = rowIndex + 1; r < this.tableLayoutPanel.RowCount; ++r)
@@ -628,6 +674,7 @@ namespace Behaviac.Design
                 this.tableLayoutPanel.Controls.Remove(rowControl.TypeComboBox);
                 this.tableLayoutPanel.Controls.Remove(rowControl.IsArrayCheckBox);
                 this.tableLayoutPanel.Controls.Remove(rowControl.ByReferrenceCheckBox);
+                this.tableLayoutPanel.Controls.Remove(rowControl.IsConstCheckBox);
                 this.tableLayoutPanel.Controls.Remove(rowControl.DisplayNameTextBox);
 
                 rowControl.Cleanup();

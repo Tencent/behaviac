@@ -232,14 +232,14 @@ namespace behaviac {
                 container.reserve(size);
             }
             template <typename T> void ContainerReserve(behaviac::list<T>& container, uint32_t size) {}
-            template <typename T> void ContainerReserve(behaviac::set_t<T>& container, uint32_t size) {}
+            template <typename T> void ContainerReserve(behaviac::set<T>& container, uint32_t size) {}
             template <typename T> void ContainerInsert(behaviac::vector<T>& container, T item) {
                 container.push_back(item);
             }
             template <typename T> void ContainerInsert(behaviac::list<T>& container, T item) {
                 container.push_back(item);
             }
-            template <typename T> void ContainerInsert(behaviac::set_t<T>& container, T item) {
+            template <typename T> void ContainerInsert(behaviac::set<T>& container, T item) {
                 container.insert(item);
             }
 
@@ -364,7 +364,7 @@ namespace behaviac {
             template <typename T> bool ParseString(const char* str, behaviac::list<T>& contVal) {
                 return ContainerFromStringSelector<T, behaviac::Meta::HasFromString<T>::Result>::ParseString(str, contVal, T());
             }
-            template <typename T> bool ParseString(const char* str, behaviac::set_t<T>& contVal) {
+            template <typename T> bool ParseString(const char* str, behaviac::set<T>& contVal) {
                 return ContainerFromStringSelector<T, behaviac::Meta::HasFromString<T>::Result>::ParseString(str, contVal, T());
             }
         }//namespace internal

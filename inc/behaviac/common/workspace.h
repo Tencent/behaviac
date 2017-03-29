@@ -109,6 +109,14 @@ namespace behaviac {
     class BehaviorTreeTask;
     class Agent;
 
+	/*! \addtogroup Workspace
+	* @{
+	* \addtogroup Workspace
+	* @{ */
+
+	/**
+	Workspace is used to manage the file format, time, load/unload/update bt, debug and so on.
+	*/
     class BEHAVIAC_API Workspace {
     public:
         BEHAVIAC_DECLARE_MEMORY_OPERATORS(Workspace);

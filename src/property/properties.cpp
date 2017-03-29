@@ -22,7 +22,7 @@ namespace behaviac {
     Variables::Variables() {
         BEHAVIAC_ASSERT(this->m_variables.size() == 0);
     }
-    Variables::Variables(behaviac::map<uint32_t, IInstantiatedVariable*>vars) {
+    Variables::Variables(const behaviac::map<uint32_t, IInstantiatedVariable*>& vars) {
         this->m_variables = vars;
     }
 

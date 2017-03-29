@@ -1527,7 +1527,7 @@ namespace Behaviac.Design
 
                                 if (prop != null)
                                 {
-                                    structType.Properties.Add(prop);
+                                    structType.AddProperty(prop);
 
                                     this.memberListBox.Items.Add(Member_Str + prop.DisplayName);
                                     this.memberListBox.SelectedIndex = this.memberListBox.Items.Count - 1;
@@ -2138,7 +2138,7 @@ namespace Behaviac.Design
 
                             if (structType.CanBeRemoved())
                             {
-                                structType.Properties.RemoveAt(memberIndex);
+                                structType.RemoveProperty(structType.Properties[memberIndex].BasicName);
 
                                 _lastSelectedType = structType.Name;
                             }

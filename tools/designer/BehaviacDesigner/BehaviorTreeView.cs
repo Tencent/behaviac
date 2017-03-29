@@ -80,7 +80,7 @@ namespace Behaviac.Design
         {
             this.toolTipTimer.Stop();
 
-            if (_currentNode != null)
+            if (_currentNode != null && this.toolTip != null)
             {
                 if (_currentExpandNode != null)
                 {
@@ -88,12 +88,10 @@ namespace Behaviac.Design
                     {
                         this.toolTip.Show(_nodeToolTip, this, new Point((int)_currentNode.DisplayBoundingBox.X - 20, (int)_currentNode.DisplayBoundingBox.Y - 5 - 18));
                     }
-
                     else
                     {
                         this.toolTip.Show(_nodeToolTip, this, new Point((int)(_currentNode.DisplayBoundingBox.X + _currentNode.DisplayBoundingBox.Width) - 20, (int)_currentNode.DisplayBoundingBox.Y - 5 - 18));
                     }
-
                 }
                 else
                 {

@@ -368,7 +368,9 @@ namespace behaviac {
         for (vector<behaviac::Context::HeapItem_t>::iterator it = this->m_agents.begin(); it != this->m_agents.end(); ++it) {
             for (Agents_t::iterator pa = it->agents.begin(); pa != it->agents.end(); ++pa) {
                 if (pa->second->IsMasked()) {
-                    pa->second->LogVariables(true);
+					pa->second->LogVariables(true);
+
+					pa->second->LogRunningNodes();
                 }
             }
         }
