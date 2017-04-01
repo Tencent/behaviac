@@ -89,6 +89,10 @@ class TestClassA
 {
 public:
 	DECLARE_BEHAVIAC_STRUCT(TestClassA, true);
+
+	TestClassA() {
+
+	}
 };
 
 class ChildNodeTest;
@@ -273,7 +277,7 @@ public:
 	TestClassA* TestFunC()
 	{
 		//possible memory leak, however it doesn't matter ...
-		return BEHAVIAC_NEW TestClassA();
+		return BEHAVIAC_NEW TestClassA;
 	}
 
 	behaviac::EBTStatus TestFuncD(TestClassA* fun)

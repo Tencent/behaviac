@@ -100,6 +100,10 @@ namespace Behaviac.Design
         internal void SetNodeList()
         {
             bool isDesignMode = (Plugin.EditMode == EditModes.Design);
+
+            this.showSelectedNodeButton.Visible = isDesignMode;
+            this.settingButton.Visible = isDesignMode;
+            this.separator3.Visible = isDesignMode;
             this.debugLabel.Visible = !isDesignMode;
             this.cancelButton.Visible = !isDesignMode;
 
@@ -263,17 +267,23 @@ namespace Behaviac.Design
             {
                 documentMenuItem.Visible = true;
                 debugMenuItem.Visible = false;
+                separator.Visible = false;
+                deleteMenuItem.Visible = false;
+                deleteAllMenuItem.Visible = false;
+                separator2.Visible = false;
                 showPropMenuItem.Visible = false;
                 showPlanningMenuItem.Visible = false;
-                separator.Visible = false;
             }
             else
             {
                 documentMenuItem.Visible = false;
                 debugMenuItem.Visible = true;
+                separator.Visible = true;
+                deleteMenuItem.Visible = true;
+                deleteAllMenuItem.Visible = true;
+                separator2.Visible = true;
                 showPropMenuItem.Visible = true;
                 showPlanningMenuItem.Visible = true;
-                separator.Visible = true;
             }
 
             this.contextMenuStrip.Show(this, new Point(e.X, e.Y));
@@ -495,7 +505,6 @@ namespace Behaviac.Design
                 this.debugMenuItem.Enabled = false;
                 this.showPropMenuItem.Enabled = true;
                 this.showPlanningMenuItem.Enabled = true;
-
             }
             else
             {
@@ -586,6 +595,21 @@ namespace Behaviac.Design
         private void documentMenuItem_Click(object sender, EventArgs e)
         {
             showDoc();
+        }
+
+        private void deleteMenuItem_Click(object sender, EventArgs e)
+        {
+            TreeNode treeNode = this.treeView.SelectedNode;
+
+            if (treeNode != null)
+            {
+                this.treeView.Nodes.Remove(treeNode);
+            }
+        }
+
+        private void deleteAllMenuItem_Click(object sender, EventArgs e)
+        {
+            this.treeView.Nodes.Clear();
         }
     }
 }

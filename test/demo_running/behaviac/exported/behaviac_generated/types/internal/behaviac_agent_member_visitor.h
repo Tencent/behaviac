@@ -9,9 +9,6 @@
 
 // Agent property and method handlers
 
-namespace behaviac
-{
-}
 
 
 #endif // _BEHAVIAC_MEMBER_VISITOR_H_

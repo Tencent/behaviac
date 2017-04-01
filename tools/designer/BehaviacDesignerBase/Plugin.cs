@@ -2489,18 +2489,21 @@ namespace Behaviac.Design
                     return true;
                 }
 
-                if (valueType == ValueTypes.All)
-                {
-                    return true;
-                }
+                //if (valueType == ValueTypes.All)
+                //{
+                //    return true;
+                //}
 
-                if ((valueType & ValueTypes.Int) == ValueTypes.Int && Plugin.IsIntergerType(typeToFilter) ||
-                    (valueType & ValueTypes.Float) == ValueTypes.Float && Plugin.IsFloatType(typeToFilter) ||
-                    (valueType & ValueTypes.Bool) == ValueTypes.Float && Plugin.IsBooleanType(typeToFilter) ||
-                    (valueType & ValueTypes.String) == ValueTypes.Float && Plugin.IsStringType(typeToFilter)
-                   )
+                if (filterType == null)
                 {
-                    return true;
+                    if ((valueType & ValueTypes.Int) == ValueTypes.Int && Plugin.IsIntergerType(typeToFilter) ||
+                        (valueType & ValueTypes.Float) == ValueTypes.Float && Plugin.IsFloatType(typeToFilter) ||
+                        (valueType & ValueTypes.Bool) == ValueTypes.Float && Plugin.IsBooleanType(typeToFilter) ||
+                        (valueType & ValueTypes.String) == ValueTypes.Float && Plugin.IsStringType(typeToFilter)
+                       )
+                    {
+                        return true;
+                    }
                 }
 
                 if ((valueType & ValueTypes.RefType) == ValueTypes.RefType && Plugin.IsRefType(typeToFilter))

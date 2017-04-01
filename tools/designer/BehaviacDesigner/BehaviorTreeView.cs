@@ -297,6 +297,20 @@ namespace Behaviac.Design
         private void nodeViewData_WasModified(BehaviorNode root, Node node)
         {
             LayoutChanged();
+
+            if (this.RootNodeView != null)
+            {
+                List<NodeViewData> allNodeViewDatas = new List<NodeViewData>();
+                this.RootNodeView.FindNodeViewDatas(node, ref allNodeViewDatas);
+
+                if (allNodeViewDatas.Count > 0)
+                {
+                    foreach (NodeViewData nvd in allNodeViewDatas)
+                    {
+                        nvd.OnNodeModified(root, node);
+                    }
+                }
+            }
         }
 
         private PointF _startMousePosition;

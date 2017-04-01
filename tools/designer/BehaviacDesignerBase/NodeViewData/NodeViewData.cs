@@ -709,7 +709,7 @@ namespace Behaviac.Design
         /// </summary>
         /// <param name="node">The node you want to get the NodeViewData for.</param>
         /// <returns>Returns the first NodeViewData found.</returns>
-        public virtual NodeViewData FindNodeViewData(Node node)
+        public NodeViewData FindNodeViewData(Node node)
         {
             if (node == null)
             {
@@ -734,6 +734,24 @@ namespace Behaviac.Design
             }
 
             return null;
+        }
+
+        public void FindNodeViewDatas(Node node, ref List<NodeViewData> allNodeViewDatas)
+        {
+            if (node != null)
+            {
+                // check if this is a fitting view
+                if (_node == node)
+                {
+                    allNodeViewDatas.Add(this);
+                }
+
+                // search the children
+                foreach (NodeViewData child in this.GetChildNodes())
+                {
+                    child.FindNodeViewDatas(node, ref allNodeViewDatas);
+                }
+            }
         }
 
         /// <summary>
@@ -1075,13 +1093,12 @@ namespace Behaviac.Design
             if (rootBehavior != null)
             {
                 _rootBehavior = rootBehavior;
-                _rootBehavior.WasModified += new WasModifiedEventDelegate(node_WasModified);
             }
 
             if (node != null)
             {
                 _node = node;
-                _node.SubItemAdded += new Node.SubItemAddedEventDelegate(node_SubItemAdded);
+                _node.SubItemAdded += node_SubItemAdded;
             }
 
             _shape = shape;
@@ -3164,7 +3181,7 @@ namespace Behaviac.Design
             }
         }
 
-        protected void node_WasModified(BehaviorNode root, Node node)
+        public void OnNodeModified(BehaviorNode root, Node node)
         {
             this._fullId = null;
 

@@ -9,9 +9,6 @@
 
 // Agent property and method handlers
 
-namespace behaviac
-{
-}
 
 struct PROPERTY_TYPE_CBTPlayer_m_iBaseSpeed { };
 template<> inline unsigned int& CBTPlayer::_Get_Property_<PROPERTY_TYPE_CBTPlayer_m_iBaseSpeed>()

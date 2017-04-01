@@ -69,40 +69,42 @@ namespace Behaviac.Design
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.showSelectedNodeButton = new System.Windows.Forms.ToolStripButton();
             this.settingButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.separator3 = new System.Windows.Forms.ToolStripSeparator();
             this.expandButton = new System.Windows.Forms.ToolStripButton();
             this.collapseButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.separator4 = new System.Windows.Forms.ToolStripSeparator();
             this.cancelButton = new System.Windows.Forms.ToolStripButton();
             this.debugLabel = new System.Windows.Forms.ToolStripLabel();
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.documentMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.debugMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.separator = new System.Windows.Forms.ToolStripSeparator();
+            this.deleteMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteAllMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.separator2 = new System.Windows.Forms.ToolStripSeparator();
             this.showPropMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showPlanningMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.toolStrip.SuspendLayout();
             this.contextMenuStrip.SuspendLayout();
             this.SuspendLayout();
-            //
+            // 
             // treeView
-            //
-            resources.ApplyResources(this.treeView, "treeView");
+            // 
             this.treeView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            resources.ApplyResources(this.treeView, "treeView");
             this.treeView.ForeColor = System.Drawing.Color.LightGray;
             this.treeView.ImageList = this.imageList;
             this.treeView.Name = "treeView";
-            this.toolTip.SetToolTip(this.treeView, resources.GetString("treeView.ToolTip"));
             this.treeView.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.treeView_ItemDrag);
             this.treeView.NodeMouseHover += new System.Windows.Forms.TreeNodeMouseHoverEventHandler(this.treeView_NodeMouseHover);
             this.treeView.DoubleClick += new System.EventHandler(this.treeView_DoubleClick);
             this.treeView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.treeView_KeyDown);
             this.treeView.MouseLeave += new System.EventHandler(this.treeView_MouseLeave);
             this.treeView.MouseUp += new System.Windows.Forms.MouseEventHandler(this.treeView_MouseUp);
-            //
+            // 
             // imageList
-            //
+            // 
             this.imageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList.ImageStream")));
             this.imageList.TransparentColor = System.Drawing.Color.Magenta;
             this.imageList.Images.SetKeyName(0, "flag_blue");
@@ -142,142 +144,161 @@ namespace Behaviac.Design
             this.imageList.Images.SetKeyName(34, "loopUntil");
             this.imageList.Images.SetKeyName(35, "log");
             this.imageList.Images.SetKeyName(36, "waitFrame");
-            //
+            // 
             // toolStrip
-            //
-            resources.ApplyResources(this.toolStrip, "toolStrip");
+            // 
             this.toolStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[]
-            {
-                this.showSelectedNodeButton,
-                this.settingButton,
-                this.toolStripSeparator3,
-                this.expandButton,
-                this.collapseButton,
-                this.toolStripSeparator1,
-                this.cancelButton,
-                this.debugLabel
-            });
+            this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showSelectedNodeButton,
+            this.settingButton,
+            this.separator3,
+            this.expandButton,
+            this.collapseButton,
+            this.separator4,
+            this.cancelButton,
+            this.debugLabel});
+            resources.ApplyResources(this.toolStrip, "toolStrip");
             this.toolStrip.Name = "toolStrip";
-            this.toolTip.SetToolTip(this.toolStrip, resources.GetString("toolStrip.ToolTip"));
             this.toolStrip.SizeChanged += new System.EventHandler(this.toolStrip_SizeChanged);
-            //
+            // 
             // showSelectedNodeButton
-            //
-            resources.ApplyResources(this.showSelectedNodeButton, "showSelectedNodeButton");
+            // 
             this.showSelectedNodeButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.showSelectedNodeButton, "showSelectedNodeButton");
             this.showSelectedNodeButton.Name = "showSelectedNodeButton";
             this.showSelectedNodeButton.Click += new System.EventHandler(this.showSelectedNodeButton_Click);
-            //
+            // 
             // settingButton
-            //
-            resources.ApplyResources(this.settingButton, "settingButton");
+            // 
             this.settingButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.settingButton, "settingButton");
             this.settingButton.Name = "settingButton";
             this.settingButton.Click += new System.EventHandler(this.settingButton_Click);
-            //
-            // toolStripSeparator3
-            //
-            resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            //
+            // 
+            // separator3
+            // 
+            this.separator3.Name = "separator3";
+            resources.ApplyResources(this.separator3, "separator3");
+            // 
             // expandButton
-            //
-            resources.ApplyResources(this.expandButton, "expandButton");
+            // 
             this.expandButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.expandButton, "expandButton");
             this.expandButton.Name = "expandButton";
             this.expandButton.Click += new System.EventHandler(this.expandButton_Click);
-            //
+            // 
             // collapseButton
-            //
-            resources.ApplyResources(this.collapseButton, "collapseButton");
+            // 
             this.collapseButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.collapseButton, "collapseButton");
             this.collapseButton.Name = "collapseButton";
             this.collapseButton.Click += new System.EventHandler(this.collapseButton_Click);
-            //
-            // toolStripSeparator1
-            //
-            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            //
+            // 
+            // separator4
+            // 
+            this.separator4.Name = "separator4";
+            resources.ApplyResources(this.separator4, "separator4");
+            // 
             // cancelButton
-            //
-            resources.ApplyResources(this.cancelButton, "cancelButton");
+            // 
             this.cancelButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.cancelButton, "cancelButton");
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
-            //
+            // 
             // debugLabel
-            //
+            // 
             resources.ApplyResources(this.debugLabel, "debugLabel");
             this.debugLabel.ForeColor = System.Drawing.Color.LightGray;
             this.debugLabel.Name = "debugLabel";
-            //
+            // 
             // contextMenuStrip
-            //
-            resources.ApplyResources(this.contextMenuStrip, "contextMenuStrip");
+            // 
             this.contextMenuStrip.BackColor = System.Drawing.Color.DarkGray;
-            this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[]
-            {
-                this.documentMenuItem,
-                this.debugMenuItem,
-                this.separator,
-                this.showPropMenuItem,
-                this.showPlanningMenuItem
-            });
+            this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.documentMenuItem,
+            this.debugMenuItem,
+            this.separator,
+            this.deleteMenuItem,
+            this.deleteAllMenuItem,
+            this.separator2,
+            this.showPropMenuItem,
+            this.showPlanningMenuItem});
             this.contextMenuStrip.Name = "contextMenuStrip";
-            this.toolTip.SetToolTip(this.contextMenuStrip, resources.GetString("contextMenuStrip.ToolTip"));
+            resources.ApplyResources(this.contextMenuStrip, "contextMenuStrip");
             this.contextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Opening);
-            //
+            // 
             // documentMenuItem
-            //
-            resources.ApplyResources(this.documentMenuItem, "documentMenuItem");
+            // 
             this.documentMenuItem.BackColor = System.Drawing.Color.DarkGray;
             this.documentMenuItem.ForeColor = System.Drawing.SystemColors.WindowText;
             this.documentMenuItem.Name = "documentMenuItem";
+            resources.ApplyResources(this.documentMenuItem, "documentMenuItem");
             this.documentMenuItem.Click += new System.EventHandler(this.documentMenuItem_Click);
-            //
+            // 
             // debugMenuItem
-            //
-            resources.ApplyResources(this.debugMenuItem, "debugMenuItem");
+            // 
             this.debugMenuItem.BackColor = System.Drawing.Color.DarkGray;
             this.debugMenuItem.ForeColor = System.Drawing.SystemColors.WindowText;
             this.debugMenuItem.Name = "debugMenuItem";
+            resources.ApplyResources(this.debugMenuItem, "debugMenuItem");
             this.debugMenuItem.Click += new System.EventHandler(this.debugMenuItem_Click);
-            //
+            // 
             // separator
-            //
-            resources.ApplyResources(this.separator, "separator");
+            // 
             this.separator.BackColor = System.Drawing.Color.DarkGray;
             this.separator.ForeColor = System.Drawing.SystemColors.WindowText;
             this.separator.Name = "separator";
-            //
+            resources.ApplyResources(this.separator, "separator");
+            // 
+            // deleteMenuItem
+            // 
+            this.deleteMenuItem.BackColor = System.Drawing.Color.DarkGray;
+            this.deleteMenuItem.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.deleteMenuItem.Name = "deleteMenuItem";
+            resources.ApplyResources(this.deleteMenuItem, "deleteMenuItem");
+            this.deleteMenuItem.Click += new System.EventHandler(this.deleteMenuItem_Click);
+            // 
+            // deleteAllMenuItem
+            // 
+            this.deleteAllMenuItem.BackColor = System.Drawing.Color.DarkGray;
+            this.deleteAllMenuItem.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.deleteAllMenuItem.Name = "deleteAllMenuItem";
+            resources.ApplyResources(this.deleteAllMenuItem, "deleteAllMenuItem");
+            this.deleteAllMenuItem.Click += new System.EventHandler(this.deleteAllMenuItem_Click);
+            // 
+            // separator2
+            // 
+            this.separator2.BackColor = System.Drawing.Color.DarkGray;
+            this.separator2.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.separator2.Name = "separator2";
+            resources.ApplyResources(this.separator2, "separator2");
+            // 
             // showPropMenuItem
-            //
-            resources.ApplyResources(this.showPropMenuItem, "showPropMenuItem");
+            // 
             this.showPropMenuItem.BackColor = System.Drawing.Color.DarkGray;
             this.showPropMenuItem.ForeColor = System.Drawing.SystemColors.WindowText;
             this.showPropMenuItem.Name = "showPropMenuItem";
+            resources.ApplyResources(this.showPropMenuItem, "showPropMenuItem");
             this.showPropMenuItem.Click += new System.EventHandler(this.parameterMenuItem_Click);
-            //
+            // 
             // showPlanningMenuItem
-            //
-            resources.ApplyResources(this.showPlanningMenuItem, "showPlanningMenuItem");
+            // 
             this.showPlanningMenuItem.Name = "showPlanningMenuItem";
+            resources.ApplyResources(this.showPlanningMenuItem, "showPlanningMenuItem");
             this.showPlanningMenuItem.Click += new System.EventHandler(this.showPlanningToolStripMenuItem_Click);
-            //
+            // 
             // toolTip
-            //
+            // 
             this.toolTip.AutomaticDelay = 400;
-            //
+            // 
             // NodeTreeList
-            //
+            // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.treeView);
             this.Controls.Add(this.toolStrip);
             this.Name = "NodeTreeList";
-            this.toolTip.SetToolTip(this, resources.GetString("$this.ToolTip"));
             this.toolStrip.ResumeLayout(false);
             this.toolStrip.PerformLayout();
             this.contextMenuStrip.ResumeLayout(false);
@@ -296,15 +317,18 @@ namespace Behaviac.Design
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem showPropMenuItem;
         private System.Windows.Forms.ToolStripMenuItem debugMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripSeparator separator4;
         private System.Windows.Forms.ToolStripLabel debugLabel;
         private System.Windows.Forms.ToolStripButton cancelButton;
         private System.Windows.Forms.ToolStripSeparator separator;
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.ToolStripButton showSelectedNodeButton;
         private System.Windows.Forms.ToolStripButton settingButton;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripSeparator separator3;
         private System.Windows.Forms.ToolStripMenuItem showPlanningMenuItem;
         private System.Windows.Forms.ToolStripMenuItem documentMenuItem;
+        private System.Windows.Forms.ToolStripSeparator separator2;
+        private System.Windows.Forms.ToolStripMenuItem deleteMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteAllMenuItem;
     }
 }

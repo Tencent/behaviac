@@ -80,6 +80,7 @@ void UpdateLoop()
 
 	behaviac::EBTStatus status = g_FirstAgent->btexec();
 	BEHAVIAC_ASSERT(status == behaviac::BT_RUNNING);
+	BEHAVIAC_UNUSED_VAR(status);
 
 	g_FirstAgent->FireEvent("event_task", 2);
 }

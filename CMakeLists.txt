@@ -31,7 +31,7 @@ cmake_minimum_required (VERSION 2.8)
 # set(CMAKE_CONFIGURATION_TYPES "Debug;Release;Profile" CACHE STRING "" FORCE) 
 set(CMAKE_CONFIGURATION_TYPES "Debug;Release" CACHE STRING "" FORCE) 
 
-set (BEHAVIAC_PACKAGE_VERSION 3.6.26)
+set (BEHAVIAC_PACKAGE_VERSION 3.6.27)
 
 #option( BUILD_SHARED_LIBS "set to OFF to build static libraries" ON )
 SET(BUILD_SHARED_LIBS ON CACHE BOOL "set to OFF to build static libraries")
@@ -255,6 +255,12 @@ if(CMAKE_GENERATOR MATCHES "Visual Studio 14" AND CMAKE_SYSTEM_NAME MATCHES "VCM
 	set (BEHAVIAC_ANDROID_ON 1)
 endif()
 
+set (BEHAVIAC_ANDROID_STUDIO 0)
+
+if(CMAKE_GENERATOR MATCHES "Ninja" AND CMAKE_SYSTEM_NAME MATCHES "Android")
+	set (BEHAVIAC_ANDROID_STUDIO 1)
+endif()
+
 set (COMPILE_POSTFIX "")
 
 
@@ -295,8 +301,11 @@ else()
 		set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
 		set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Werror -Woverloaded-virtual -Wnon-virtual-dtor -Wfloat-equal -Wno-unused-local-typedefs -finput-charset=UTF-8 ")
         # set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wa,-mbig-obj")
-        
-	endif()
+    endif()
+	
+	# if (BEHAVIAC_ANDROID_STUDIO)
+	#    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mxgot")
+	# endif()
 	
 	# if(CMAKE_GENERATOR STREQUAL Xcode)
 	# 	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wunused-private-field")
@@ -341,7 +350,13 @@ foreach( OUTPUTCONFIG ${CMAKE_CONFIGURATION_TYPES} )
     set( CMAKE_ARCHIVE_OUTPUT_DIRECTORY_${OUTPUTCONFIG} ${LIB_OUTPUT_PATH} )
 endforeach( OUTPUTCONFIG CMAKE_CONFIGURATION_TYPES )
 
-add_library(libbehaviac ${BEHAVIAC_INC} ${BEHAVIAC_SRC} ${LINKER_SCRIPT})
+set( SHARED_LIB "" )
+
+if (BEHAVIAC_ANDROID_STUDIO)
+    set( SHARED_LIB "SHARED" )
+endif()
+
+add_library(libbehaviac ${SHARED_LIB} ${BEHAVIAC_INC} ${BEHAVIAC_SRC} ${LINKER_SCRIPT})
 
 set_target_properties(libbehaviac PROPERTIES PREFIX "")
 # set_target_properties(libbehaviac PROPERTIES OUTPUT_NAME_DEBUG libbehaviac${${CMAKE_DEBUG_POSTFIX}}
@@ -359,6 +374,10 @@ set_target_properties(libbehaviac PROPERTIES RELEASE_POSTFIX ${CMAKE_RELEASE_POS
 # 	#     LIBRARY_OUTPUT_DIRECTORY_${OUTPUTCONFIG}   ${LIB_OUTPUT_PATH}
 # 	#     RUNTIME_OUTPUT_DIRECTORY_${OUTPUTCONFIG}   ${BINARY_PATH})
 # endforeach( OUTPUTCONFIG CMAKE_CONFIGURATION_TYPES )
+
+if (BEHAVIAC_ANDROID_STUDIO)
+	target_link_libraries(libbehaviac log android)
+endif()
 
 # Cmake comes with a builtin add_definitions command to add definitions to
 # everything in the current directory, but we need to add definitions to
@@ -388,26 +407,28 @@ else()
 	message( STATUS "build static libs" )
 endif()
 
-add_subdirectory ("${PROJECT_SOURCE_DIR}/test/btunittest")
-add_subdirectory ("${PROJECT_SOURCE_DIR}/test/btremotetest")
-add_subdirectory ("${PROJECT_SOURCE_DIR}/test/demo_running")
-add_subdirectory ("${PROJECT_SOURCE_DIR}/test/usertest")
+if (NOT BEHAVIAC_ANDROID_STUDIO)
+	add_subdirectory ("${PROJECT_SOURCE_DIR}/test/btunittest")
+	add_subdirectory ("${PROJECT_SOURCE_DIR}/test/btremotetest")
+	add_subdirectory ("${PROJECT_SOURCE_DIR}/test/demo_running")
+	add_subdirectory ("${PROJECT_SOURCE_DIR}/test/usertest")
 
-if (MSVC)
-	add_subdirectory ("${PROJECT_SOURCE_DIR}/test/btperformance")
-    if (EXISTS "${PROJECT_SOURCE_DIR}/example/spaceship")
-        add_subdirectory ("${PROJECT_SOURCE_DIR}/example/spaceship")
-    endif()
+	if (MSVC)
+		add_subdirectory ("${PROJECT_SOURCE_DIR}/test/btperformance")
+	    if (EXISTS "${PROJECT_SOURCE_DIR}/example/spaceship")
+	        add_subdirectory ("${PROJECT_SOURCE_DIR}/example/spaceship")
+	    endif()
+	endif()
+
+    #add_subdirectory ("${PROJECT_SOURCE_DIR}/example/airbattledemo")
+
+    add_subdirectory ("${PROJECT_SOURCE_DIR}/tutorials/tutorial_1/cpp")
+    add_subdirectory ("${PROJECT_SOURCE_DIR}/tutorials/tutorial_1_1/cpp")
+    add_subdirectory ("${PROJECT_SOURCE_DIR}/tutorials/tutorial_1_2/cpp")
+	add_subdirectory ("${PROJECT_SOURCE_DIR}/tutorials/tutorial_2/cpp")
+	add_subdirectory ("${PROJECT_SOURCE_DIR}/tutorials/tutorial_3/cpp")
+	add_subdirectory ("${PROJECT_SOURCE_DIR}/tutorials/tutorial_4/cpp")
+	add_subdirectory ("${PROJECT_SOURCE_DIR}/tutorials/tutorial_5/cpp")
+	add_subdirectory ("${PROJECT_SOURCE_DIR}/tutorials/tutorial_6/cpp")
+	add_subdirectory ("${PROJECT_SOURCE_DIR}/tutorials/tutorial_7/cpp")
 endif()
-
-#add_subdirectory ("${PROJECT_SOURCE_DIR}/example/airbattledemo")
-
-add_subdirectory ("${PROJECT_SOURCE_DIR}/tutorials/tutorial_1/cpp")
-add_subdirectory ("${PROJECT_SOURCE_DIR}/tutorials/tutorial_1_1/cpp")
-add_subdirectory ("${PROJECT_SOURCE_DIR}/tutorials/tutorial_1_2/cpp")
-add_subdirectory ("${PROJECT_SOURCE_DIR}/tutorials/tutorial_2/cpp")
-add_subdirectory ("${PROJECT_SOURCE_DIR}/tutorials/tutorial_3/cpp")
-add_subdirectory ("${PROJECT_SOURCE_DIR}/tutorials/tutorial_4/cpp")
-add_subdirectory ("${PROJECT_SOURCE_DIR}/tutorials/tutorial_5/cpp")
-add_subdirectory ("${PROJECT_SOURCE_DIR}/tutorials/tutorial_6/cpp")
-add_subdirectory ("${PROJECT_SOURCE_DIR}/tutorials/tutorial_7/cpp")
