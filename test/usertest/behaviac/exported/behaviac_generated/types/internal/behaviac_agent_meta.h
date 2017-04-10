@@ -7,6 +7,7 @@
 
 #include "behaviac_agent_headers.h"
 #include "behaviac_agent_member_visitor.h"
+#include "behaviac_customized_types.h"
 
 namespace behaviac
 {

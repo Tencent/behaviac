@@ -28,17 +28,6 @@
 #include <windows.h>
 #endif//BEHAVIAC_CCDEFINE_MSVC
 
-BEHAVIAC_BEGIN_ENUM(behaviac::EBTStatus, EBTStatus) {
-    BEHAVIAC_ENUMCLASS_DISPLAYNAME(L"BT状态");
-    BEHAVIAC_ENUMCLASS_DESC(L"BT状态");
-
-    BEHAVIAC_ENUM_ITEM(behaviac::BT_INVALID, "BT_INVALID");
-    BEHAVIAC_ENUM_ITEM(behaviac::BT_SUCCESS, "BT_SUCCESS");
-    BEHAVIAC_ENUM_ITEM(behaviac::BT_FAILURE, "BT_FAILURE");
-    BEHAVIAC_ENUM_ITEM(behaviac::BT_RUNNING, "BT_RUNNING");
-}
-BEHAVIAC_END_ENUM()
-
 namespace behaviac {
     BehaviorTask::BehaviorTask() : m_status(BT_INVALID), m_node(0), m_parent(0), m_attachments(0), m_id((uint16_t) - 1), m_bHasManagingParent(false) {
     }

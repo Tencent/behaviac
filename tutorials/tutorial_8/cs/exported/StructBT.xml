@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: StructBT.xml-->
+<behavior name="StructBT" agenttype="FirstAgent" version="5">
+  <node class="Sequence" id="0">
+    <node class="Assignment" id="3">
+      <property CastRight="false" />
+      <property Opl="FirstStruct Self.FirstAgent::p1" />
+      <property Opr="const FirstStruct {s1=1;s2=2;}" />
+    </node>
+    <node class="Condition" id="4">
+      <property Operator="Equal" />
+      <property Opl="Self.FirstAgent::GetP1s1()" />
+      <property Opr="const int 1" />
+    </node>
+    <node class="Condition" id="1">
+      <property Operator="Equal" />
+      <property Opl="FirstStruct Self.FirstAgent::p1" />
+      <property Opr="const FirstStruct {s1=1;s2=2;}" />
+    </node>
+    <node class="Action" id="2">
+      <property Method="Self.FirstAgent::SayHello()" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+  </node>
+</behavior>

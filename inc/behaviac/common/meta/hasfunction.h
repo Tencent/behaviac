@@ -22,43 +22,57 @@
 
 namespace behaviac {
     namespace Meta {
-        template<typename Type>
-        struct HasToString {
-        private:
+		template<typename Type>
+		struct HasToString {
+			enum {
+				Result = 0
+			};
+		};
 
-            template<typename U, behaviac::string(U::*)() const> struct TPROTOTYPE {};
+		template<typename Type>
+		struct HasFromString {
+			enum {
+				Result = 0
+			};
+		};
 
-            template< typename U >
-            static Yes TYesNoTester(TPROTOTYPE<U, &U::ToString>*);
+        //template<typename Type>
+        //struct HasToString {
+        //private:
 
-            template<typename U>
-            static No TYesNoTester(...);
+        //    template<typename U, behaviac::string(U::*)() const> struct TPROTOTYPE {};
 
-        public:
+        //    template< typename U >
+        //    static Yes TYesNoTester(TPROTOTYPE<U, &U::ToString>*);
 
-            enum {
-                Result = sizeof(TYesNoTester<Type>(0)) == sizeof(Yes)
-            };
-        };
+        //    template<typename U>
+        //    static No TYesNoTester(...);
 
-        template<typename Type>
-        struct HasFromString {
-        private:
+        //public:
 
-            template<typename U, bool (U::*)(const char*)> struct TPROTOTYPE {};
+        //    enum {
+        //        Result = sizeof(TYesNoTester<Type>(0)) == sizeof(Yes)
+        //    };
+        //};
 
-            template< typename U >
-            static Yes TYesNoTester(TPROTOTYPE<U, &U::ParseString>*);
+        //template<typename Type>
+        //struct HasFromString {
+        //private:
 
-            template<typename U>
-            static No TYesNoTester(...);
+        //    template<typename U, bool (U::*)(const char*)> struct TPROTOTYPE {};
 
-        public:
+        //    template< typename U >
+        //    static Yes TYesNoTester(TPROTOTYPE<U, &U::ParseString>*);
 
-            enum {
-                Result = sizeof(TYesNoTester<Type>(0)) == sizeof(Yes)
-            };
-        };
+        //    template<typename U>
+        //    static No TYesNoTester(...);
+
+        //public:
+
+        //    enum {
+        //        Result = sizeof(TYesNoTester<Type>(0)) == sizeof(Yes)
+        //    };
+        //};
     }
 }
 

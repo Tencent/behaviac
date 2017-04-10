@@ -2,28 +2,28 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="test">
-      <UniqueIdentifier>{89CE00CD-9DA7-684F-AA87-034E5B247B5E}</UniqueIdentifier>
+      <UniqueIdentifier>{2755BB43-D2E2-C548-B1CA-95672C57A289}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running">
-      <UniqueIdentifier>{9FDE2B27-6533-AF45-9049-6DFC9AB7AA4D}</UniqueIdentifier>
+      <UniqueIdentifier>{7BAED0F4-9957-2146-B8DA-98BA633BE4DE}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac">
-      <UniqueIdentifier>{E7BD6CE1-46A5-9046-B549-7154442DC280}</UniqueIdentifier>
+      <UniqueIdentifier>{72A5678B-7BE9-E948-B08E-8C96384D0A6A}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac\exported">
-      <UniqueIdentifier>{8EEB6369-7768-1A44-A45D-78319481C11A}</UniqueIdentifier>
+      <UniqueIdentifier>{5205C33B-6FD8-9848-8445-F8EBE415106D}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac\exported\behaviac_generated">
-      <UniqueIdentifier>{0592BC02-A57C-884E-B22B-91D79EAEA6BD}</UniqueIdentifier>
+      <UniqueIdentifier>{44521E05-E93C-A14B-8190-F0CD1F37CCAD}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac\exported\behaviac_generated\behaviors">
-      <UniqueIdentifier>{7EBF4527-4684-5345-88B1-127B71341202}</UniqueIdentifier>
+      <UniqueIdentifier>{B020244F-2C91-CD47-993A-363CE2CE6A63}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac\exported\behaviac_generated\types">
-      <UniqueIdentifier>{5B17274B-B5F7-6B4B-B78B-1F2B4994FDB9}</UniqueIdentifier>
+      <UniqueIdentifier>{4B70AC7D-3F98-7A48-8DF1-AB42DA646784}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac\exported\behaviac_generated\types\internal">
-      <UniqueIdentifier>{F8050755-884A-7B4A-A6AD-CADE0C498A3D}</UniqueIdentifier>
+      <UniqueIdentifier>{0F3F7645-278D-904E-A721-736A264D54D6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -45,6 +45,9 @@
     <ClInclude Include="..\..\test\demo_running\behaviac\exported\behaviac_generated\types\internal\behaviac_agent_meta.h">
       <Filter>test\demo_running\behaviac\exported\behaviac_generated\types\internal</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\test\demo_running\behaviac\exported\behaviac_generated\types\internal\behaviac_customized_types.h">
+      <Filter>test\demo_running\behaviac\exported\behaviac_generated\types\internal</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\test\demo_running\behaviac\exported\behaviac_generated\types\internal\behaviac_headers.h">
       <Filter>test\demo_running\behaviac\exported\behaviac_generated\types\internal</Filter>
     </ClInclude>
@@ -60,6 +63,9 @@
       <Filter>test\demo_running\behaviac\exported\behaviac_generated\behaviors</Filter>
     </ClCompile>
     <ClCompile Include="..\..\test\demo_running\behaviac\exported\behaviac_generated\types\internal\behaviac_agent_meta.cpp">
+      <Filter>test\demo_running\behaviac\exported\behaviac_generated\types\internal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\test\demo_running\behaviac\exported\behaviac_generated\types\internal\behaviac_customized_types.cpp">
       <Filter>test\demo_running\behaviac\exported\behaviac_generated\types\internal</Filter>
     </ClCompile>
   </ItemGroup>

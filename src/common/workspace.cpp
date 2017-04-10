@@ -377,7 +377,7 @@ namespace behaviac {
     void Workspace::LogWorkspaceInfo() {
         {
             Workspace::EFileFormat format = this->GetFileFormat();
-            const char* formatString = (format == EFF_xml ? "xml" : "bson");
+			const char* formatString = (format == EFF_bson ? "bson.bytes" : (format == EFF_cpp ? "cpp" : "xml"));
 
             char msg[1024] = { 0 };
             sprintf(msg, "[workspace] %s \"%s\"\n", formatString, "");
@@ -767,7 +767,7 @@ namespace behaviac {
                 bLoadResult = (*btCreator)(pBT);
             } else {
                 BEHAVIAC_ASSERT(0);
-                BEHAVIAC_LOGWARNING("The behaviac_generated/behaviors/generated_behaviors.h should be included by one of your apps.");
+                BEHAVIAC_LOGWARNING("The behaviac_generated/behaviors/behaviac_generated_behaviors.h should be included by one of your apps.");
             }
         } else {
             BEHAVIAC_ASSERT(0);

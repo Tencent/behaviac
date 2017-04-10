@@ -200,7 +200,7 @@ namespace Behaviac.Design
 
                 ms_fileFormat = format.Trim();
 
-                Debug.Check(ms_fileFormat == "xml" || ms_fileFormat == "bson");
+                Debug.Check(ms_fileFormat == "xml" || ms_fileFormat == "bson.bytes" || ms_fileFormat == Workspace.Current.Language);
 
                 MainWindow.Instance.NodeTreeList.SetNodeList();
 
@@ -606,6 +606,20 @@ namespace Behaviac.Design
                 }
 
                 exportedFilename += string.Format(".{0}", ms_fileFormat);
+
+                if (ms_fileFormat == Workspace.Current.Language)
+                {
+                    string folder = Workspace.Current.GetExportAbsoluteFolder(Workspace.Current.Language);
+
+                    if (Workspace.Current.Language == "cpp")
+                    {
+                        exportedFilename = Path.Combine(folder, "behaviac_generated/behaviors/behaviac_generated_behaviors.h");
+                    }
+                    else
+                    {
+                        exportedFilename = Path.Combine(folder, "behaviac_generated/behaviors/generated_behaviors.cs");
+                    }
+                }
 
                 if (File.Exists(sourceFilename) && File.Exists(exportedFilename))
                 {

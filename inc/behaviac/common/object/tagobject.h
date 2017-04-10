@@ -40,15 +40,9 @@ namespace behaviac {
         BEHAVIAC_DECLARE_MEMORY_OPERATORS(behaviac::CTagObject);
         BEHAVIAC_DECLARE_ROOT_DYNAMIC_TYPE(behaviac::CTagObject, CRTTIBase);
 
-        void Load(const behaviac::IIONode* node, const char* szClassName = 0);
-        void Save(behaviac::IIONode* node, const char* szClassName = 0) const;
-
-        static void Load(const char* szClassName, CTagObject* pObject, const behaviac::IIONode* node);
-        static void Save(const char* szClassName, const CTagObject* pObject, behaviac::IIONode* node);
-
+		static void Load(const void* pObject, const behaviac::IIONode* node, const char* szClassName);
+		static void Save(const void* pObject, behaviac::IIONode* node, const char* szClassName);
     };
-
-
 }//namespace behaviac
 
 namespace behaviac {
@@ -57,15 +51,14 @@ namespace behaviac {
 
         template<typename T>
         inline bool FromString_Struct(const char* str, T& val) {
-            char temp[1024];
-            string_sprintf(temp, "%s", GetClassTypeName((T*)0));
+			const char* className = behaviac::GetClassTypeName((T*)0);
 
-            behaviac::XmlNodeReference xmlNode = MakeXmlNodeStruct(str, temp);
+			behaviac::XmlNodeReference xmlNode = MakeXmlNodeStruct(str, className);
 
             if ((IXmlNode*)xmlNode) {
                 CTextNode textNode(xmlNode);
 
-                val.Load(&textNode);
+				CTagObject::Load(&val, &textNode, className);
 
                 return true;
             }
@@ -76,15 +69,13 @@ namespace behaviac {
         BEHAVIAC_API bool MakeStringFromXmlNodeStruct(behaviac::XmlConstNodeRef xmlNode, behaviac::string& result);
 
         template<typename T>
-        inline behaviac::string ToString_Struct(T& val) {
-            //behaviac::string typeNameT = FormatString("%s", GetClassTypeName((T*)0));
-            const char* typeNameT = GetClassTypeName((T*)0);
-
-            behaviac::XmlNodeReference xmlNode = CreateXmlNode(typeNameT);
+		inline behaviac::string ToString_Struct(T& val, const char* szClassName) {
+			//const char* szClassName = behaviac::GetClassTypeName((T*)0);
+			behaviac::XmlNodeReference xmlNode = CreateXmlNode(szClassName);
 
             CTextNode textNode(xmlNode);
 
-            val.Save(&textNode);
+			CTagObject::Save(&val, &textNode, szClassName);
 
             behaviac::string result;
 
@@ -96,17 +87,17 @@ namespace behaviac {
         }
     }
 
-    BEHAVIAC_API bool Equal_Struct(const behaviac::CTagObject* lhs, const behaviac::CTagObject* rhs);
+	BEHAVIAC_API bool Equal_Struct(void* lhs, void* rhs, const char* szClassName);
 }
 
 #define BEHAVIAC_ACCESS_PROPERTY												\
     template<typename T, typename R>											\
     BEHAVIAC_FORCEINLINE R& _Get_Property_();									\
-     
+
 // behaviac::CTagObject macros
 #define BEHAVIAC_ACCESS_PROPERTY_METHOD											\
     BEHAVIAC_ACCESS_PROPERTY													\
-    \
+																				\
     template<typename T, typename R>											\
     BEHAVIAC_FORCEINLINE R _Execute_Method_();									\
     template<typename T, typename R, typename P0>								\
@@ -116,15 +107,15 @@ namespace behaviac {
     template<typename T, typename R, typename P0, typename P1, typename P2>		\
     BEHAVIAC_FORCEINLINE R _Execute_Method_(P0, P1, P2);																									\
     template<typename T, typename R, typename P0, typename P1, typename P2, typename P3>																	\
-    BEHAVIAC_FORCEINLINE R _Execute_Method_(P0, P1, P2, P3);																							\
+    BEHAVIAC_FORCEINLINE R _Execute_Method_(P0, P1, P2, P3);																								\
     template<typename T, typename R, typename P0, typename P1, typename P2, typename P3, typename P4>														\
-    BEHAVIAC_FORCEINLINE R _Execute_Method_(P0, P1, P2, P3, P4);																						\
+    BEHAVIAC_FORCEINLINE R _Execute_Method_(P0, P1, P2, P3, P4);																							\
     template<typename T, typename R, typename P0, typename P1, typename P2, typename P3, typename P4, typename P5>											\
-    BEHAVIAC_FORCEINLINE R _Execute_Method_(P0, P1, P2, P3, P4, P5);																					\
+    BEHAVIAC_FORCEINLINE R _Execute_Method_(P0, P1, P2, P3, P4, P5);																						\
     template<typename T, typename R, typename P0, typename P1, typename P2, typename P3, typename P4, typename P5, typename P6>								\
-    BEHAVIAC_FORCEINLINE R _Execute_Method_(P0, P1, P2, P3, P4, P5, P6);																				\
+    BEHAVIAC_FORCEINLINE R _Execute_Method_(P0, P1, P2, P3, P4, P5, P6);																					\
     template<typename T, typename R, typename P0, typename P1, typename P2, typename P3, typename P4, typename P5, typename P6, typename P7>				\
-    BEHAVIAC_FORCEINLINE R _Execute_Method_(P0, P1, P2, P3, P4, P5, P6, P7);																		\
+    BEHAVIAC_FORCEINLINE R _Execute_Method_(P0, P1, P2, P3, P4, P5, P6, P7);																				\
     template<typename T, typename R, typename P0, typename P1, typename P2, typename P3, typename P4, typename P5, typename P6, typename P7, typename P8>	\
     BEHAVIAC_FORCEINLINE R _Execute_Method_(P0, P1, P2, P3, P4, P5, P6, P7, P8);
 
@@ -161,7 +152,7 @@ namespace behaviac {
     BEHAVIAC_ACCESS_PROPERTY												\
     bool _Object_Equal_(const className& rhs)	const						\
     {																		\
-        return behaviac::Equal_Struct((const behaviac::CTagObject*)this, (const behaviac::CTagObject*)&rhs); \
+        return behaviac::Equal_Struct(this, &rhs, this->GetClassTypeName());\
     }																		\
     bool ParseString(const char* str)										\
     {																		\
@@ -177,20 +168,20 @@ namespace behaviac {
 //classFullNameWithNamespace is the class full name with namespace, like test_ns::AgentTest,
 //even the class is delared in a namespace, it is still advised to use the full name with the name space.
 //the corresponding BEHAVIAC_BEGIN_STRUCT/BEHAVIAC_END_STRUCT in the cpp can be put in or out of that namespace.
-#define DECLARE_BEHAVIAC_OBJECT_STRUCT_V2(classFullNameWithNamespace, bRefType)	\
-    DECLARE_BEHAVIAC_STRUCT_BASE_(classFullNameWithNamespace, bRefType)			\
-    void Load(const behaviac::IIONode* node)									\
-    {                                                                           \
-        const char* szClassName = behaviac::GetClassTypeName((classFullNameWithNamespace*)0);	\
-        behaviac::CTagObject::Load(szClassName, (behaviac::CTagObject*)this, node);	\
-    }                                                                           \
-    void Save(behaviac::IIONode* node) const									\
-    {                                                                           \
-        const char* szClassName = behaviac::GetClassTypeName((classFullNameWithNamespace*)0);	\
-        behaviac::CTagObject::Save(szClassName, (behaviac::CTagObject*)this, node);	\
-    }                                                                           \
-    static bool IsOfMyKind(const behaviac::CTagObject*)							\
-    { return true; }															\
+#define DECLARE_BEHAVIAC_OBJECT_STRUCT_V2(classFullNameWithNamespace, bRefType)		\
+    DECLARE_BEHAVIAC_STRUCT_BASE_(classFullNameWithNamespace, bRefType)				\
+    void Load(const behaviac::IIONode* node)										\
+    {																				\
+        const char* szClassName = behaviac::GetClassTypeName((classFullNameWithNamespace*)0);\
+        behaviac::CTagObject::Load((behaviac::CTagObject*)this, node, szClassName);	\
+    }																				\
+    void Save(behaviac::IIONode* node) const										\
+    {																				\
+        const char* szClassName = behaviac::GetClassTypeName((classFullNameWithNamespace*)0);\
+        behaviac::CTagObject::Save((behaviac::CTagObject*)this, node, szClassName);	\
+    }																				\
+    static bool IsOfMyKind(const behaviac::CTagObject*)								\
+    { return true; }																\
     static const char* GetClassTypeName() { return #classFullNameWithNamespace; }
 
 #define DECLARE_BEHAVIAC_OBJECT_STRUCT_V1(classFullNameWithNamespace) DECLARE_BEHAVIAC_OBJECT_STRUCT_V2(classFullNameWithNamespace, false)
@@ -202,12 +193,14 @@ namespace behaviac {
 //the corresponding BEHAVIAC_BEGIN_STRUCT/BEHAVIAC_END_STRUCT in the cpp can be put in or out of that namespace.
 //
 //the 2nd param is true or false indicating if the class is a ref type. a ref type is used as a pointer.
-#define DECLARE_BEHAVIAC_STRUCT(...) _BEHAVIAC_ARGUMENT_SELECTOR2_((__VA_ARGS__, DECLARE_BEHAVIAC_OBJECT_STRUCT_V2, DECLARE_BEHAVIAC_OBJECT_STRUCT_V1))(__VA_ARGS__)
+#define DECLARE_BEHAVIAC_STRUCT(...)
+#define DECLARE_BEHAVIAC_STRUCT_EX(...) _BEHAVIAC_ARGUMENT_SELECTOR2_((__VA_ARGS__, DECLARE_BEHAVIAC_OBJECT_STRUCT_V2, DECLARE_BEHAVIAC_OBJECT_STRUCT_V1))(__VA_ARGS__)
 #define _BEHAVIAC_ARGUMENT_SELECTOR2_(__args) _BEHAVIAC_GET_2TH_ARGUMENT_ __args
 #define _BEHAVIAC_GET_2TH_ARGUMENT_(__p1,__p2,__n,...) __n
 
-#define BEHAVIAC_EXTEND_EXISTING_TYPE(existingType, bRefType)	\
-    BEHAVIAC_OVERRIDE_TYPE_NAME(existingType);					\
+#define BEHAVIAC_EXTEND_EXISTING_TYPE(existingType, bRefType)
+#define BEHAVIAC_EXTEND_EXISTING_TYPE_EX(existingType, bRefType)\
+	BEHAVIAC_OVERRIDE_TYPE_NAME(existingType);					\
     namespace behaviac											\
     {															\
         namespace Meta {										\
@@ -217,6 +210,18 @@ namespace behaviac {
                     Result = bRefType							\
                 };												\
             };													\
+            template <>											\
+			struct HasToString<existingType> {					\
+				enum {											\
+					Result = 1									\
+				};												\
+			};													\
+            template <>											\
+			struct HasFromString<existingType> {				\
+				enum {											\
+					Result = 1									\
+				};												\
+			};													\
         }														\
     }
 
@@ -329,7 +334,7 @@ namespace behaviac {
 //you need to accompany DECLARE_BEHAVIAC_ENUM(ENUMCLASS_FullNameWithNamespace)
 //in the cpp, BEHAVIAC_BEGIN_ENUM/BEHAVIAC_END_ENUM
 //DECLARE_BEHAVIAC_ENUM(namespace::ENUMCLASS_FullNameWithNamespace, EnumClass) should be defined in the global namespace.
-#define DECLARE_BEHAVIAC_ENUM(ENUMCLASS_FullNameWithNamespace, EnumClassName)														\
+#define DECLARE_BEHAVIAC_ENUM_EX(ENUMCLASS_FullNameWithNamespace, EnumClassName)														\
     BEHAVIAC_OVERRIDE_TYPE_NAME(ENUMCLASS_FullNameWithNamespace);																	\
     BEHAVIAC_API behaviac::EnumClassDescriptionAuto_t& EnumClassName##GetEnumClassValueNames();\
     BEHAVIAC_API void RegisterEnumClass(ENUMCLASS_FullNameWithNamespace*);		\
@@ -350,7 +355,7 @@ namespace behaviac {
         s = (ENUMCLASS_FullNameWithNamespace)t;									\
     }
 
-#define BEHAVIAC_BEGIN_ENUM(ENUMCLASS, EnumClassName)							\
+#define BEHAVIAC_BEGIN_ENUM_EX(ENUMCLASS, EnumClassName)							\
     behaviac::EnumClassDescriptionAuto_t& EnumClassName##GetEnumClassValueNames()\
     {																			\
         static behaviac::EnumClassDescriptionAuto_t s_ValueNameMap;				\
@@ -373,7 +378,7 @@ namespace behaviac {
         maps[enumClassName] = &enumClassDescAuto;								\
         behaviac::EnumClassDescription_t& enumClassDesc = *enumClassDescAuto.descriptor;
 
-#define BEHAVIAC_ENUMCLASS_DISPLAY_INFO(displayName_, desc_)		\
+#define BEHAVIAC_ENUMCLASS_DISPLAY_INFO_EX(displayName_, desc_)		\
     enumClassDesc.m_displayName = displayName_;						\
     if (desc_) {enumClassDesc.m_desc = desc_;}						\
     else {enumClassDesc.m_desc = displayName_;}
@@ -388,12 +393,23 @@ namespace behaviac {
     }
 }
 
-#define BEHAVIAC_ENUM_ITEM(value, name)	behaviac::_defineEnumName(enumClassDesc, value, #value, name)
-#define BEHAVIAC_END_ENUM()         }
+#define BEHAVIAC_ENUMCLASS_DISPLAYNAME_EX(displayName_)    enumClassDesc.m_displayName = displayName_;
+#define BEHAVIAC_ENUMCLASS_DESC_EX(desc_)    enumClassDesc.m_desc = desc_;
+
+#define BEHAVIAC_ENUM_ITEM_EX(value, name)	behaviac::_defineEnumName(enumClassDesc, value, #value, name)
+#define BEHAVIAC_END_ENUM_EX()         }
 
 /////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 // deprecated
+#define DECLARE_BEHAVIAC_ENUM(ENUMCLASS_FullNameWithNamespace, EnumClassName)	
+#define BEHAVIAC_BEGIN_ENUM(ENUMCLASS, EnumClassName) namespace behaviac
+#define BEHAVIAC_ENUMCLASS_DISPLAY_INFO(displayName_, desc_)
+#define BEHAVIAC_ENUMCLASS_DISPLAYNAME(displayName_)
+#define BEHAVIAC_ENUMCLASS_DESC(desc_)
+#define BEHAVIAC_ENUM_ITEM(value, name)
+#define BEHAVIAC_END_ENUM()
+
 #define BEGIN_ENUM_DESCRIPTION BEHAVIAC_BEGIN_ENUM
 #define END_ENUM_DESCRIPTION BEHAVIAC_END_ENUM
 #define DEFINE_ENUM_VALUE BEHAVIAC_ENUM_ITEM
@@ -412,13 +428,5 @@ namespace behaviac {
 
 //deprecated, to use DECLARE_BEHAVIAC_ENUM
 #define DECLARE_BEHAVIAC_OBJECT_ENUM DECLARE_BEHAVIAC_ENUM
-
-//deprecated, to use BEHAVIAC_ENUMCLASS_DISPLAY_INFO
-#define BEHAVIAC_ENUMCLASS_DISPLAYNAME(displayName_)    enumClassDesc.m_displayName = displayName_;
-#define BEHAVIAC_ENUMCLASS_DESC(desc_)    enumClassDesc.m_desc = desc_;
-
-/////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-
 
 #endif // #ifndef _BEHAVIAC_COMMON_OBJECT_TAGOBJECT_H_

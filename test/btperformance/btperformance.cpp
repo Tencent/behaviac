@@ -254,10 +254,8 @@ int main(int argc, char** argv)
 
     //behaviac::Socket::ShutdownConnection();
 
-    if (bWait) {
-        printf("\npress any key to end.\n");
-        getchar();
-    }
+	int ret = system("pause");
+	BEHAVIAC_UNUSED_VAR(ret);
 
     return 0;
 }

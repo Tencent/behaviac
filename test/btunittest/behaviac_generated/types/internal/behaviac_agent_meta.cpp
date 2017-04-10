@@ -2988,6 +2988,84 @@ namespace behaviac
 			AgentMeta* meta = NULL;
 			BEHAVIAC_UNUSED_VAR(meta);
 
+			// Act
+			meta = BEHAVIAC_NEW AgentMeta(4164412862u);
+			AgentMeta::GetAgentMetas()[1708689290u] = meta;
+			meta->RegisterMemberProperty(879668377u, BEHAVIAC_NEW CMemberProperty< bool >("Var_B_Loop", Set_Act_Var_B_Loop, Get_Act_Var_B_Loop));
+			meta->RegisterMemberProperty(777627639u, BEHAVIAC_NEW CMemberProperty< behaviac::vector<EnumTest> >("Var_List_EnumTest", Set_Act_Var_List_EnumTest, Get_Act_Var_List_EnumTest));
+
+			// BSASN::SpatialCoord
+			meta = BEHAVIAC_NEW AgentMeta(2373809916u);
+			AgentMeta::GetAgentMetas()[523496196u] = meta;
+			meta->RegisterMemberProperty(803492456u, BEHAVIAC_NEW CMemberProperty< float >("coordX", Set_BSASN_SpatialCoord_coordX, Get_BSASN_SpatialCoord_coordX));
+			meta->RegisterMemberProperty(922706729u, BEHAVIAC_NEW CMemberProperty< float >("coordY", Set_BSASN_SpatialCoord_coordY, Get_BSASN_SpatialCoord_coordY));
+
+			// BSASN::TransitPlan
+			meta = BEHAVIAC_NEW AgentMeta(3437919186u);
+			AgentMeta::GetAgentMetas()[2904160241u] = meta;
+			meta->RegisterMemberProperty(2036675677u, BEHAVIAC_NEW CMemberProperty< behaviac::string >("plan_ID", Set_BSASN_TransitPlan_plan_ID, Get_BSASN_TransitPlan_plan_ID));
+			meta->RegisterMemberProperty(1944844085u, BEHAVIAC_NEW CMemberProperty< int >("plan_selection_precedence", Set_BSASN_TransitPlan_plan_selection_precedence, Get_BSASN_TransitPlan_plan_selection_precedence));
+			meta->RegisterMemberProperty(1010032415u, BEHAVIAC_NEW CMemberProperty< behaviac::vector<BSASN::SpatialCoord> >("transit_points", Set_BSASN_TransitPlan_transit_points, Get_BSASN_TransitPlan_transit_points));
+
+			// TestNamespace::ClassAsValueType
+			meta = BEHAVIAC_NEW AgentMeta(2014054411u);
+			AgentMeta::GetAgentMetas()[3326707682u] = meta;
+			meta->RegisterMemberProperty(784805480u, BEHAVIAC_NEW CMemberProperty< float >("x", Set_TestNamespace_ClassAsValueType_x, Get_TestNamespace_ClassAsValueType_x));
+			meta->RegisterMemberProperty(937172777u, BEHAVIAC_NEW CMemberProperty< float >("y", Set_TestNamespace_ClassAsValueType_y, Get_TestNamespace_ClassAsValueType_y));
+
+			// TestNamespace::Float2
+			meta = BEHAVIAC_NEW AgentMeta(897181567u);
+			AgentMeta::GetAgentMetas()[3170849958u] = meta;
+			meta->RegisterMemberProperty(784805480u, BEHAVIAC_NEW CMemberProperty< float >("x", Set_TestNamespace_Float2_x, Get_TestNamespace_Float2_x));
+			meta->RegisterMemberProperty(937172777u, BEHAVIAC_NEW CMemberProperty< float >("y", Set_TestNamespace_Float2_y, Get_TestNamespace_Float2_y));
+
+			// TestNS::Float2
+			meta = BEHAVIAC_NEW AgentMeta(2486493641u);
+			AgentMeta::GetAgentMetas()[3840899829u] = meta;
+			meta->RegisterMemberProperty(784805480u, BEHAVIAC_NEW CMemberProperty< float >("x", Set_TestNS_Float2_x, Get_TestNS_Float2_x));
+			meta->RegisterMemberProperty(937172777u, BEHAVIAC_NEW CMemberProperty< float >("y", Set_TestNS_Float2_y, Get_TestNS_Float2_y));
+
+			// TestNS::Node
+			meta = BEHAVIAC_NEW AgentMeta(2638158808u);
+			AgentMeta::GetAgentMetas()[2940513725u] = meta;
+			meta->RegisterMemberProperty(3282915872u, BEHAVIAC_NEW CMemberProperty< behaviac::string >("name", Set_TestNS_Node_name, Get_TestNS_Node_name));
+
+			// TNS::ST::kCar
+			meta = BEHAVIAC_NEW AgentMeta(4254401389u);
+			AgentMeta::GetAgentMetas()[3621191481u] = meta;
+			meta->RegisterMemberProperty(943419330u, BEHAVIAC_NEW CMemberProperty< behaviac::string >("brand", Set_TNS_ST_kCar_brand, Get_TNS_ST_kCar_brand));
+			meta->RegisterMemberProperty(2723301039u, BEHAVIAC_NEW CMemberProperty< int >("price", Set_TNS_ST_kCar_price, Get_TNS_ST_kCar_price));
+			meta->RegisterMemberProperty(2217207913u, BEHAVIAC_NEW CMemberProperty< TNS::NE::NAT::eColor >("color", Set_TNS_ST_kCar_color, Get_TNS_ST_kCar_color));
+
+			// TNS::ST::PER::WRK::kEmployee
+			meta = BEHAVIAC_NEW AgentMeta(1914775611u);
+			AgentMeta::GetAgentMetas()[1210997610u] = meta;
+			meta->RegisterMemberProperty(2821134797u, BEHAVIAC_NEW CMemberProperty< int >("id", Set_TNS_ST_PER_WRK_kEmployee_id, Get_TNS_ST_PER_WRK_kEmployee_id));
+			meta->RegisterMemberProperty(3282915872u, BEHAVIAC_NEW CMemberProperty< behaviac::string >("name", Set_TNS_ST_PER_WRK_kEmployee_name, Get_TNS_ST_PER_WRK_kEmployee_name));
+			meta->RegisterMemberProperty(3560167981u, BEHAVIAC_NEW CMemberProperty< char >("code", Set_TNS_ST_PER_WRK_kEmployee_code, Get_TNS_ST_PER_WRK_kEmployee_code));
+			meta->RegisterMemberProperty(3309439252u, BEHAVIAC_NEW CMemberProperty< float >("weight", Set_TNS_ST_PER_WRK_kEmployee_weight, Get_TNS_ST_PER_WRK_kEmployee_weight));
+			meta->RegisterMemberProperty(1658213077u, BEHAVIAC_NEW CMemberProperty< bool >("isMale", Set_TNS_ST_PER_WRK_kEmployee_isMale, Get_TNS_ST_PER_WRK_kEmployee_isMale));
+			meta->RegisterMemberProperty(252757355u, BEHAVIAC_NEW CMemberProperty< TNS::NE::NAT::eColor >("skinColor", Set_TNS_ST_PER_WRK_kEmployee_skinColor, Get_TNS_ST_PER_WRK_kEmployee_skinColor));
+			meta->RegisterMemberProperty(977114071u, BEHAVIAC_NEW CMemberProperty< TNS::ST::kCar >("car", Set_TNS_ST_PER_WRK_kEmployee_car, Get_TNS_ST_PER_WRK_kEmployee_car));
+			meta->RegisterMemberProperty(3970102207u, BEHAVIAC_NEW CMemberProperty< behaviac::Agent* >("boss", Set_TNS_ST_PER_WRK_kEmployee_boss, Get_TNS_ST_PER_WRK_kEmployee_boss));
+
+			// UnityEngine::GameObject
+			meta = BEHAVIAC_NEW AgentMeta(2945205550u);
+			AgentMeta::GetAgentMetas()[3863054874u] = meta;
+			meta->RegisterMemberProperty(3282915872u, BEHAVIAC_NEW CMemberProperty< behaviac::string >("name", Set_UnityEngine_GameObject_name, Get_UnityEngine_GameObject_name));
+
+			// UnityEngine::Vector3
+			meta = BEHAVIAC_NEW AgentMeta(3184093255u);
+			AgentMeta::GetAgentMetas()[1701462301u] = meta;
+			meta->RegisterMemberProperty(784805480u, BEHAVIAC_NEW CMemberProperty< float >("x", Set_UnityEngine_Vector3_x, Get_UnityEngine_Vector3_x));
+			meta->RegisterMemberProperty(937172777u, BEHAVIAC_NEW CMemberProperty< float >("y", Set_UnityEngine_Vector3_y, Get_UnityEngine_Vector3_y));
+			meta->RegisterMemberProperty(485575914u, BEHAVIAC_NEW CMemberProperty< float >("z", Set_UnityEngine_Vector3_z, Get_UnityEngine_Vector3_z));
+
+			// StructTest
+			meta = BEHAVIAC_NEW AgentMeta(2864333320u);
+			AgentMeta::GetAgentMetas()[2798931971u] = meta;
+			meta->RegisterMemberProperty(3049752432u, BEHAVIAC_NEW CMemberProperty< bool >("a", Set_StructTest_a, Get_StructTest_a));
+
 			// behaviac::Agent
 			meta = BEHAVIAC_NEW AgentMeta(24743406u);
 			AgentMeta::GetAgentMetas()[1770892321u] = meta;
@@ -3764,84 +3842,6 @@ namespace behaviac
 			meta->RegisterMethod(3483755530u, BEHAVIAC_NEW CMethod_behaviac_Agent_VectorContains());
 			meta->RegisterMethod(505785840u, BEHAVIAC_NEW CMethod_behaviac_Agent_VectorLength());
 			meta->RegisterMethod(502968959u, BEHAVIAC_NEW CMethod_behaviac_Agent_VectorRemove());
-
-			// Act
-			meta = BEHAVIAC_NEW AgentMeta(4164412862u);
-			AgentMeta::GetAgentMetas()[1708689290u] = meta;
-			meta->RegisterMemberProperty(879668377u, BEHAVIAC_NEW CMemberProperty< bool >("Var_B_Loop", Set_Act_Var_B_Loop, Get_Act_Var_B_Loop));
-			meta->RegisterMemberProperty(777627639u, BEHAVIAC_NEW CMemberProperty< behaviac::vector<EnumTest> >("Var_List_EnumTest", Set_Act_Var_List_EnumTest, Get_Act_Var_List_EnumTest));
-
-			// BSASN::SpatialCoord
-			meta = BEHAVIAC_NEW AgentMeta(2373809916u);
-			AgentMeta::GetAgentMetas()[523496196u] = meta;
-			meta->RegisterMemberProperty(803492456u, BEHAVIAC_NEW CMemberProperty< float >("coordX", Set_BSASN_SpatialCoord_coordX, Get_BSASN_SpatialCoord_coordX));
-			meta->RegisterMemberProperty(922706729u, BEHAVIAC_NEW CMemberProperty< float >("coordY", Set_BSASN_SpatialCoord_coordY, Get_BSASN_SpatialCoord_coordY));
-
-			// BSASN::TransitPlan
-			meta = BEHAVIAC_NEW AgentMeta(3437919186u);
-			AgentMeta::GetAgentMetas()[2904160241u] = meta;
-			meta->RegisterMemberProperty(2036675677u, BEHAVIAC_NEW CMemberProperty< behaviac::string >("plan_ID", Set_BSASN_TransitPlan_plan_ID, Get_BSASN_TransitPlan_plan_ID));
-			meta->RegisterMemberProperty(1944844085u, BEHAVIAC_NEW CMemberProperty< int >("plan_selection_precedence", Set_BSASN_TransitPlan_plan_selection_precedence, Get_BSASN_TransitPlan_plan_selection_precedence));
-			meta->RegisterMemberProperty(1010032415u, BEHAVIAC_NEW CMemberProperty< behaviac::vector<BSASN::SpatialCoord> >("transit_points", Set_BSASN_TransitPlan_transit_points, Get_BSASN_TransitPlan_transit_points));
-
-			// TestNamespace::ClassAsValueType
-			meta = BEHAVIAC_NEW AgentMeta(2014054411u);
-			AgentMeta::GetAgentMetas()[3326707682u] = meta;
-			meta->RegisterMemberProperty(784805480u, BEHAVIAC_NEW CMemberProperty< float >("x", Set_TestNamespace_ClassAsValueType_x, Get_TestNamespace_ClassAsValueType_x));
-			meta->RegisterMemberProperty(937172777u, BEHAVIAC_NEW CMemberProperty< float >("y", Set_TestNamespace_ClassAsValueType_y, Get_TestNamespace_ClassAsValueType_y));
-
-			// TestNamespace::Float2
-			meta = BEHAVIAC_NEW AgentMeta(897181567u);
-			AgentMeta::GetAgentMetas()[3170849958u] = meta;
-			meta->RegisterMemberProperty(784805480u, BEHAVIAC_NEW CMemberProperty< float >("x", Set_TestNamespace_Float2_x, Get_TestNamespace_Float2_x));
-			meta->RegisterMemberProperty(937172777u, BEHAVIAC_NEW CMemberProperty< float >("y", Set_TestNamespace_Float2_y, Get_TestNamespace_Float2_y));
-
-			// TestNS::Float2
-			meta = BEHAVIAC_NEW AgentMeta(2486493641u);
-			AgentMeta::GetAgentMetas()[3840899829u] = meta;
-			meta->RegisterMemberProperty(784805480u, BEHAVIAC_NEW CMemberProperty< float >("x", Set_TestNS_Float2_x, Get_TestNS_Float2_x));
-			meta->RegisterMemberProperty(937172777u, BEHAVIAC_NEW CMemberProperty< float >("y", Set_TestNS_Float2_y, Get_TestNS_Float2_y));
-
-			// TestNS::Node
-			meta = BEHAVIAC_NEW AgentMeta(2638158808u);
-			AgentMeta::GetAgentMetas()[2940513725u] = meta;
-			meta->RegisterMemberProperty(3282915872u, BEHAVIAC_NEW CMemberProperty< behaviac::string >("name", Set_TestNS_Node_name, Get_TestNS_Node_name));
-
-			// TNS::ST::kCar
-			meta = BEHAVIAC_NEW AgentMeta(4254401389u);
-			AgentMeta::GetAgentMetas()[3621191481u] = meta;
-			meta->RegisterMemberProperty(943419330u, BEHAVIAC_NEW CMemberProperty< behaviac::string >("brand", Set_TNS_ST_kCar_brand, Get_TNS_ST_kCar_brand));
-			meta->RegisterMemberProperty(2723301039u, BEHAVIAC_NEW CMemberProperty< int >("price", Set_TNS_ST_kCar_price, Get_TNS_ST_kCar_price));
-			meta->RegisterMemberProperty(2217207913u, BEHAVIAC_NEW CMemberProperty< TNS::NE::NAT::eColor >("color", Set_TNS_ST_kCar_color, Get_TNS_ST_kCar_color));
-
-			// TNS::ST::PER::WRK::kEmployee
-			meta = BEHAVIAC_NEW AgentMeta(1914775611u);
-			AgentMeta::GetAgentMetas()[1210997610u] = meta;
-			meta->RegisterMemberProperty(2821134797u, BEHAVIAC_NEW CMemberProperty< int >("id", Set_TNS_ST_PER_WRK_kEmployee_id, Get_TNS_ST_PER_WRK_kEmployee_id));
-			meta->RegisterMemberProperty(3282915872u, BEHAVIAC_NEW CMemberProperty< behaviac::string >("name", Set_TNS_ST_PER_WRK_kEmployee_name, Get_TNS_ST_PER_WRK_kEmployee_name));
-			meta->RegisterMemberProperty(3560167981u, BEHAVIAC_NEW CMemberProperty< char >("code", Set_TNS_ST_PER_WRK_kEmployee_code, Get_TNS_ST_PER_WRK_kEmployee_code));
-			meta->RegisterMemberProperty(3309439252u, BEHAVIAC_NEW CMemberProperty< float >("weight", Set_TNS_ST_PER_WRK_kEmployee_weight, Get_TNS_ST_PER_WRK_kEmployee_weight));
-			meta->RegisterMemberProperty(1658213077u, BEHAVIAC_NEW CMemberProperty< bool >("isMale", Set_TNS_ST_PER_WRK_kEmployee_isMale, Get_TNS_ST_PER_WRK_kEmployee_isMale));
-			meta->RegisterMemberProperty(252757355u, BEHAVIAC_NEW CMemberProperty< TNS::NE::NAT::eColor >("skinColor", Set_TNS_ST_PER_WRK_kEmployee_skinColor, Get_TNS_ST_PER_WRK_kEmployee_skinColor));
-			meta->RegisterMemberProperty(977114071u, BEHAVIAC_NEW CMemberProperty< TNS::ST::kCar >("car", Set_TNS_ST_PER_WRK_kEmployee_car, Get_TNS_ST_PER_WRK_kEmployee_car));
-			meta->RegisterMemberProperty(3970102207u, BEHAVIAC_NEW CMemberProperty< behaviac::Agent* >("boss", Set_TNS_ST_PER_WRK_kEmployee_boss, Get_TNS_ST_PER_WRK_kEmployee_boss));
-
-			// UnityEngine::GameObject
-			meta = BEHAVIAC_NEW AgentMeta(2945205550u);
-			AgentMeta::GetAgentMetas()[3863054874u] = meta;
-			meta->RegisterMemberProperty(3282915872u, BEHAVIAC_NEW CMemberProperty< behaviac::string >("name", Set_UnityEngine_GameObject_name, Get_UnityEngine_GameObject_name));
-
-			// UnityEngine::Vector3
-			meta = BEHAVIAC_NEW AgentMeta(3184093255u);
-			AgentMeta::GetAgentMetas()[1701462301u] = meta;
-			meta->RegisterMemberProperty(784805480u, BEHAVIAC_NEW CMemberProperty< float >("x", Set_UnityEngine_Vector3_x, Get_UnityEngine_Vector3_x));
-			meta->RegisterMemberProperty(937172777u, BEHAVIAC_NEW CMemberProperty< float >("y", Set_UnityEngine_Vector3_y, Get_UnityEngine_Vector3_y));
-			meta->RegisterMemberProperty(485575914u, BEHAVIAC_NEW CMemberProperty< float >("z", Set_UnityEngine_Vector3_z, Get_UnityEngine_Vector3_z));
-
-			// StructTest
-			meta = BEHAVIAC_NEW AgentMeta(2864333320u);
-			AgentMeta::GetAgentMetas()[2798931971u] = meta;
-			meta->RegisterMemberProperty(3049752432u, BEHAVIAC_NEW CMemberProperty< bool >("a", Set_StructTest_a, Get_StructTest_a));
 
 			AgentMeta::Register<behaviac::Agent>("behaviac::Agent");
 			AgentMeta::Register<HTNAgentHouseBase>("HTNAgentHouseBase");

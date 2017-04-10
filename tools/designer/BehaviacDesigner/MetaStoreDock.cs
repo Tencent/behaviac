@@ -1233,15 +1233,14 @@ namespace Behaviac.Design
                 {
                     AgentType agentType = typeDialog.GetCustomizedAgent();
                     Debug.Check(agentType != null);
+                    if (agentType != null)
+                    {
+                        Plugin.AgentTypes.Add(agentType);
 
-                    Plugin.AgentTypes.Add(agentType);
+                        resetAllTypes(agentType.Name);
 
-                    resetAllTypes(agentType.Name);
-
-                    _lastSelectedType = agentType.Name;
-
-                    // refresh the workspace to load the type
-                    save(true);
+                        _lastSelectedType = agentType.Name;
+                    }
                 }
                 else if (metaType == MetaTypePanel.MetaTypes.Enum)
                 {
@@ -1254,9 +1253,6 @@ namespace Behaviac.Design
                         resetAllTypes(enumType.Fullname);
 
                         _lastSelectedType = enumType.Fullname;
-
-                        // refresh the workspace to load the type
-                        save(true);
                     }
                 }
                 else if (metaType == MetaTypePanel.MetaTypes.Struct)
@@ -1270,11 +1266,11 @@ namespace Behaviac.Design
                         resetAllTypes(structType.Fullname);
 
                         _lastSelectedType = structType.Fullname;
-
-                        // refresh the workspace to load the type
-                        save(true);
                     }
                 }
+
+                // refresh the workspace to load the type
+                save(true);
             }
         }
 
@@ -1417,6 +1413,7 @@ namespace Behaviac.Design
             if (index > -1)
             {
                 bool bAdded = false;
+                bool bAddAgent = false;
 
                 // agent
                 if (index < Plugin.AgentTypes.Count)
@@ -1436,6 +1433,7 @@ namespace Behaviac.Design
                             if (prop != null && agent.AddProperty(prop) >= 0)
                             {
                                 bAdded = true;
+                                bAddAgent = true;
 
                                 if (prop.IsPar)
                                 {
@@ -1545,8 +1543,11 @@ namespace Behaviac.Design
 
                     PropertiesDock.UpdatePropertyGrids();
 
-                    // refresh the workspace to load the type
-                    //save(true);
+                    if (!bAddAgent)
+                    {
+                        // refresh the workspace to load the type
+                        save(true);
+                    }
                 }
             }
         }
@@ -1988,7 +1989,7 @@ namespace Behaviac.Design
                                     StructType structType = TypeManager.Instance.Structs[index - Plugin.AgentTypes.Count - TypeManager.Instance.Enums.Count];
                                     if (structType != null)
                                     {
-                                        structType.Properties[memberIndex] = prop;
+                                        structType.Properties[memberIndex].CopyFrom(prop);
 
                                         string preStr = structType.IsCustomized ? Customized_Str : Member_Str;
                                         this.memberListBox.Items[memberIndex] = preStr + prop.DisplayName;

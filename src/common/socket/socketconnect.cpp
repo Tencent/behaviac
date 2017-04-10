@@ -261,7 +261,7 @@ namespace behaviac {
                     LogManager::GetInstance()->LogWorkspace(true, msg);
 
                     Workspace::EFileFormat format = Workspace::GetInstance()->GetFileFormat();
-                    const char* formatString = (format == Workspace::EFF_xml ? "xml" : "bson");
+					const char* formatString = (format == Workspace::EFF_bson ? "bson.bytes" : (format == Workspace::EFF_cpp ? "cpp" : "xml"));
 
                     string_sprintf(msg, "[workspace] %s \"%s\"\n", formatString, "");
                     LogManager::GetInstance()->LogWorkspace(true, msg);

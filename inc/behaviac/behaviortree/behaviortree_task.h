@@ -401,6 +401,4 @@ namespace behaviac {
     };
 } // namespace behaviac
 
-DECLARE_BEHAVIAC_ENUM(behaviac::EBTStatus, EBTStatus);
-
 #endif//_BEHAVIAC_BEHAVIORTREE_TASK_H_

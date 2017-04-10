@@ -68,6 +68,7 @@ OBJECTS := \
 	$(OBJDIR)/demo_running.o \
 	$(OBJDIR)/behaviac_generated_behaviors.o \
 	$(OBJDIR)/behaviac_agent_meta.o \
+	$(OBJDIR)/behaviac_customized_types.o \
 
 RESOURCES := \
 
@@ -141,6 +142,10 @@ $(OBJDIR)/behaviac_generated_behaviors.o: ../../test/demo_running/behaviac/expor
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 
 $(OBJDIR)/behaviac_agent_meta.o: ../../test/demo_running/behaviac/exported/behaviac_generated/types/internal/behaviac_agent_meta.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+
+$(OBJDIR)/behaviac_customized_types.o: ../../test/demo_running/behaviac/exported/behaviac_generated/types/internal/behaviac_customized_types.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 

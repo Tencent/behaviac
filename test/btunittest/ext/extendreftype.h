@@ -40,24 +40,24 @@ BEHAVIAC_EXTEND_EXISTING_TYPE(TestNS::Node, true);
 //////////////////////////////////////////////////////////////////////////
 
 // SwapByteImplement helpers
-template< typename SWAPPER >
-inline void SwapByteImplement(TestNS::Node& v)
-{
-}
+//template< typename SWAPPER >
+//inline void SwapByteImplement(TestNS::Node& v)
+//{
+//}
 
 //operators
-namespace behaviac
-{
-	namespace PrivateDetails
-	{
-		//------------------------------------------------------------------------
-		template<>
-		inline bool Equal(const TestNS::Node& lhs, const TestNS::Node& rhs)
-		{
-			return &lhs == &rhs;
-		}
-	}
-}
+//namespace behaviac
+//{
+//	namespace PrivateDetails
+//	{
+//		//------------------------------------------------------------------------
+//		template<>
+//		inline bool Equal(const TestNS::Node& lhs, const TestNS::Node& rhs)
+//		{
+//			return &lhs == &rhs;
+//		}
+//	}
+//}
 
 //add the following to a cpp
 //BEHAVIAC_BEGIN_STRUCT(myNode)

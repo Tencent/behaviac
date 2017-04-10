@@ -11,6 +11,18 @@
 // Customized enums
 // -------------------
 
+DECLARE_BEHAVIAC_ENUM_EX(EnumTest, EnumTest);
+BEHAVIAC_DECLARE_TYPE_VECTOR_HANDLER(EnumTest);
+
+
+DECLARE_BEHAVIAC_ENUM_EX(FSMAgentTest::EMessage, EMessage);
+BEHAVIAC_DECLARE_TYPE_VECTOR_HANDLER(FSMAgentTest::EMessage);
+
+
+DECLARE_BEHAVIAC_ENUM_EX(TNS::NE::NAT::eColor, eColor);
+BEHAVIAC_DECLARE_TYPE_VECTOR_HANDLER(TNS::NE::NAT::eColor);
+
+
 enum ETest
 {
 	EA,
@@ -18,7 +30,7 @@ enum ETest
 	EC,
 };
 
-DECLARE_BEHAVIAC_ENUM(ETest, ETest);
+DECLARE_BEHAVIAC_ENUM_EX(ETest, ETest);
 BEHAVIAC_DECLARE_TYPE_VECTOR_HANDLER(ETest);
 
 
@@ -26,12 +38,339 @@ BEHAVIAC_DECLARE_TYPE_VECTOR_HANDLER(ETest);
 // Customized structs
 // -------------------
 
+BEHAVIAC_EXTEND_EXISTING_TYPE_EX(Act, false);
+BEHAVIAC_DECLARE_TYPE_VECTOR_HANDLER(Act);
+
+template< typename SWAPPER >
+inline void SwapByteImplement(Act& v)
+{
+	SwapByteImplement< SWAPPER >(v.Var_B_Loop);
+	SwapByteImplement< SWAPPER >(v.Var_List_EnumTest);
+}
+
+namespace behaviac
+{
+	namespace PrivateDetails
+	{
+		template<>
+		inline bool Equal(const Act& lhs, const Act& rhs)
+		{
+			return Equal(lhs.Var_B_Loop, rhs.Var_B_Loop)
+				&& Equal(lhs.Var_List_EnumTest, rhs.Var_List_EnumTest);
+		}
+	}
+}
+
+BEHAVIAC_EXTEND_EXISTING_TYPE_EX(BSASN::SpatialCoord, false);
+BEHAVIAC_DECLARE_TYPE_VECTOR_HANDLER(BSASN::SpatialCoord);
+
+template< typename SWAPPER >
+inline void SwapByteImplement(BSASN::SpatialCoord& v)
+{
+	SwapByteImplement< SWAPPER >(v.coordX);
+	SwapByteImplement< SWAPPER >(v.coordY);
+}
+
+namespace behaviac
+{
+	namespace PrivateDetails
+	{
+		template<>
+		inline bool Equal(const BSASN::SpatialCoord& lhs, const BSASN::SpatialCoord& rhs)
+		{
+			return Equal(lhs.coordX, rhs.coordX)
+				&& Equal(lhs.coordY, rhs.coordY);
+		}
+	}
+}
+
+BEHAVIAC_EXTEND_EXISTING_TYPE_EX(BSASN::TransitPlan, false);
+BEHAVIAC_DECLARE_TYPE_VECTOR_HANDLER(BSASN::TransitPlan);
+
+template< typename SWAPPER >
+inline void SwapByteImplement(BSASN::TransitPlan& v)
+{
+	SwapByteImplement< SWAPPER >(v.plan_ID);
+	SwapByteImplement< SWAPPER >(v.plan_selection_precedence);
+	SwapByteImplement< SWAPPER >(v.transit_points);
+}
+
+namespace behaviac
+{
+	namespace PrivateDetails
+	{
+		template<>
+		inline bool Equal(const BSASN::TransitPlan& lhs, const BSASN::TransitPlan& rhs)
+		{
+			return Equal(lhs.plan_ID, rhs.plan_ID)
+				&& Equal(lhs.plan_selection_precedence, rhs.plan_selection_precedence)
+				&& Equal(lhs.transit_points, rhs.transit_points);
+		}
+	}
+}
+
+BEHAVIAC_EXTEND_EXISTING_TYPE_EX(IList, false);
+BEHAVIAC_DECLARE_TYPE_VECTOR_HANDLER(IList);
+
+template< typename SWAPPER >
+inline void SwapByteImplement(IList& v)
+{
+}
+
+namespace behaviac
+{
+	namespace PrivateDetails
+	{
+		template<>
+		inline bool Equal(const IList& lhs, const IList& rhs)
+		{
+			return &lhs == &rhs;
+		}
+	}
+}
+
+BEHAVIAC_EXTEND_EXISTING_TYPE_EX(System::Object, false);
+BEHAVIAC_DECLARE_TYPE_VECTOR_HANDLER(System::Object);
+
+template< typename SWAPPER >
+inline void SwapByteImplement(System::Object& v)
+{
+}
+
+namespace behaviac
+{
+	namespace PrivateDetails
+	{
+		template<>
+		inline bool Equal(const System::Object& lhs, const System::Object& rhs)
+		{
+			return &lhs == &rhs;
+		}
+	}
+}
+
+BEHAVIAC_EXTEND_EXISTING_TYPE_EX(TestClassA, true);
+BEHAVIAC_DECLARE_TYPE_VECTOR_HANDLER(TestClassA);
+
+template< typename SWAPPER >
+inline void SwapByteImplement(TestClassA& v)
+{
+}
+
+namespace behaviac
+{
+	namespace PrivateDetails
+	{
+		template<>
+		inline bool Equal(const TestClassA& lhs, const TestClassA& rhs)
+		{
+			return &lhs == &rhs;
+		}
+	}
+}
+
+BEHAVIAC_EXTEND_EXISTING_TYPE_EX(TestNamespace::ClassAsValueType, false);
+BEHAVIAC_DECLARE_TYPE_VECTOR_HANDLER(TestNamespace::ClassAsValueType);
+
+template< typename SWAPPER >
+inline void SwapByteImplement(TestNamespace::ClassAsValueType& v)
+{
+	SwapByteImplement< SWAPPER >(v.x);
+	SwapByteImplement< SWAPPER >(v.y);
+}
+
+namespace behaviac
+{
+	namespace PrivateDetails
+	{
+		template<>
+		inline bool Equal(const TestNamespace::ClassAsValueType& lhs, const TestNamespace::ClassAsValueType& rhs)
+		{
+			return Equal(lhs.x, rhs.x)
+				&& Equal(lhs.y, rhs.y);
+		}
+	}
+}
+
+BEHAVIAC_EXTEND_EXISTING_TYPE_EX(TestNamespace::Float2, false);
+BEHAVIAC_DECLARE_TYPE_VECTOR_HANDLER(TestNamespace::Float2);
+
+template< typename SWAPPER >
+inline void SwapByteImplement(TestNamespace::Float2& v)
+{
+	SwapByteImplement< SWAPPER >(v.x);
+	SwapByteImplement< SWAPPER >(v.y);
+}
+
+namespace behaviac
+{
+	namespace PrivateDetails
+	{
+		template<>
+		inline bool Equal(const TestNamespace::Float2& lhs, const TestNamespace::Float2& rhs)
+		{
+			return Equal(lhs.x, rhs.x)
+				&& Equal(lhs.y, rhs.y);
+		}
+	}
+}
+
+BEHAVIAC_EXTEND_EXISTING_TYPE_EX(TestNS::Float2, false);
+BEHAVIAC_DECLARE_TYPE_VECTOR_HANDLER(TestNS::Float2);
+
+template< typename SWAPPER >
+inline void SwapByteImplement(TestNS::Float2& v)
+{
+	SwapByteImplement< SWAPPER >(v.x);
+	SwapByteImplement< SWAPPER >(v.y);
+}
+
+namespace behaviac
+{
+	namespace PrivateDetails
+	{
+		template<>
+		inline bool Equal(const TestNS::Float2& lhs, const TestNS::Float2& rhs)
+		{
+			return Equal(lhs.x, rhs.x)
+				&& Equal(lhs.y, rhs.y);
+		}
+	}
+}
+
+BEHAVIAC_EXTEND_EXISTING_TYPE_EX(TestNS::Node, true);
+BEHAVIAC_DECLARE_TYPE_VECTOR_HANDLER(TestNS::Node);
+
+template< typename SWAPPER >
+inline void SwapByteImplement(TestNS::Node& v)
+{
+	SwapByteImplement< SWAPPER >(v.name);
+}
+
+namespace behaviac
+{
+	namespace PrivateDetails
+	{
+		template<>
+		inline bool Equal(const TestNS::Node& lhs, const TestNS::Node& rhs)
+		{
+			return &lhs == &rhs;
+		}
+	}
+}
+
+BEHAVIAC_EXTEND_EXISTING_TYPE_EX(TNS::ST::kCar, false);
+BEHAVIAC_DECLARE_TYPE_VECTOR_HANDLER(TNS::ST::kCar);
+
+template< typename SWAPPER >
+inline void SwapByteImplement(TNS::ST::kCar& v)
+{
+	SwapByteImplement< SWAPPER >(v.brand);
+	SwapByteImplement< SWAPPER >(v.price);
+	SwapByteImplement< SWAPPER >(v.color);
+}
+
+namespace behaviac
+{
+	namespace PrivateDetails
+	{
+		template<>
+		inline bool Equal(const TNS::ST::kCar& lhs, const TNS::ST::kCar& rhs)
+		{
+			return Equal(lhs.brand, rhs.brand)
+				&& Equal(lhs.price, rhs.price)
+				&& Equal(lhs.color, rhs.color);
+		}
+	}
+}
+
+BEHAVIAC_EXTEND_EXISTING_TYPE_EX(TNS::ST::PER::WRK::kEmployee, false);
+BEHAVIAC_DECLARE_TYPE_VECTOR_HANDLER(TNS::ST::PER::WRK::kEmployee);
+
+template< typename SWAPPER >
+inline void SwapByteImplement(TNS::ST::PER::WRK::kEmployee& v)
+{
+	SwapByteImplement< SWAPPER >(v.id);
+	SwapByteImplement< SWAPPER >(v.name);
+	SwapByteImplement< SWAPPER >(v.code);
+	SwapByteImplement< SWAPPER >(v.weight);
+	SwapByteImplement< SWAPPER >(v.isMale);
+	SwapByteImplement< SWAPPER >(v.skinColor);
+	SwapByteImplement< SWAPPER >(v.car);
+	SwapByteImplement< SWAPPER >(v.boss);
+}
+
+namespace behaviac
+{
+	namespace PrivateDetails
+	{
+		template<>
+		inline bool Equal(const TNS::ST::PER::WRK::kEmployee& lhs, const TNS::ST::PER::WRK::kEmployee& rhs)
+		{
+			return Equal(lhs.id, rhs.id)
+				&& Equal(lhs.name, rhs.name)
+				&& Equal(lhs.code, rhs.code)
+				&& Equal(lhs.weight, rhs.weight)
+				&& Equal(lhs.isMale, rhs.isMale)
+				&& Equal(lhs.skinColor, rhs.skinColor)
+				&& Equal(lhs.car, rhs.car)
+				&& Equal(lhs.boss, rhs.boss);
+		}
+	}
+}
+
+BEHAVIAC_EXTEND_EXISTING_TYPE_EX(UnityEngine::GameObject, true);
+BEHAVIAC_DECLARE_TYPE_VECTOR_HANDLER(UnityEngine::GameObject);
+
+template< typename SWAPPER >
+inline void SwapByteImplement(UnityEngine::GameObject& v)
+{
+	SwapByteImplement< SWAPPER >(v.name);
+}
+
+namespace behaviac
+{
+	namespace PrivateDetails
+	{
+		template<>
+		inline bool Equal(const UnityEngine::GameObject& lhs, const UnityEngine::GameObject& rhs)
+		{
+			return &lhs == &rhs;
+		}
+	}
+}
+
+BEHAVIAC_EXTEND_EXISTING_TYPE_EX(UnityEngine::Vector3, false);
+BEHAVIAC_DECLARE_TYPE_VECTOR_HANDLER(UnityEngine::Vector3);
+
+template< typename SWAPPER >
+inline void SwapByteImplement(UnityEngine::Vector3& v)
+{
+	SwapByteImplement< SWAPPER >(v.x);
+	SwapByteImplement< SWAPPER >(v.y);
+	SwapByteImplement< SWAPPER >(v.z);
+}
+
+namespace behaviac
+{
+	namespace PrivateDetails
+	{
+		template<>
+		inline bool Equal(const UnityEngine::Vector3& lhs, const UnityEngine::Vector3& rhs)
+		{
+			return Equal(lhs.x, rhs.x)
+				&& Equal(lhs.y, rhs.y)
+				&& Equal(lhs.z, rhs.z);
+		}
+	}
+}
+
 struct StructTest
 {
 	bool a;
 };
 
-BEHAVIAC_EXTEND_EXISTING_TYPE(StructTest, false);
+BEHAVIAC_EXTEND_EXISTING_TYPE_EX(StructTest, false);
 BEHAVIAC_DECLARE_TYPE_VECTOR_HANDLER(StructTest);
 
 template< typename SWAPPER >

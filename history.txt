@@ -1,3 +1,9 @@
+2017-4-10  3.6.28
+    Improve generating the codes for the struct.
+    Add tutorial_8 and tutorial_9.
+    Fix a bug for editting the member of the struct.
+    Fix a bug for creating an enum as a property.
+
 2017-4-1  3.6.27
     Improve setting the properties of the node.
     Supporpt removing all instances when debugging.

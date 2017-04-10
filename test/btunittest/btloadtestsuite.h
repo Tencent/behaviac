@@ -30,6 +30,8 @@
 
 #include "BehaviacWorkspace.h"
 
+#include "behaviac_generated/types/behaviac_types.h"
+
 void RegisterTypes();
 void UnRegisterTypes();
 

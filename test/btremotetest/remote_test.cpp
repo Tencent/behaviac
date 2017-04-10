@@ -125,10 +125,8 @@ int main(int argc, char** argv)
     CleanupPlayer();
     CleanupBehaviac();
 
-#if defined(BEHAVIAC_CCDEFINE_MSVC)
-    printf("\npress any key to exit\n");
-    getchar();
-#endif
+	int ret = system("pause");
+	BEHAVIAC_UNUSED_VAR(ret);
 
     return 0;
 }

@@ -246,7 +246,8 @@ namespace behaviac {
             template<typename T>
             struct ToStringStructHanler<T, true> {
                 static behaviac::string ToString(const T& val) {
-                    return val.ToString();
+					const char* szClassName = behaviac::GetClassTypeName((T*)0);
+					return behaviac::StringUtils::ToString_Struct(val, szClassName);
                 }
             };
         }//namespace Detail

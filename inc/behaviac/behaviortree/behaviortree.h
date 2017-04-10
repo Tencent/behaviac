@@ -392,4 +392,7 @@ namespace behaviac {
     };
 } // namespace behaviac
 
+DECLARE_BEHAVIAC_ENUM_EX(behaviac::EBTStatus, EBTStatus);
+BEHAVIAC_DECLARE_TYPE_VECTOR_HANDLER(behaviac::EBTStatus);
+
 #endif//_BEHAVIAC_BEHAVIORTREE_NODE_H_

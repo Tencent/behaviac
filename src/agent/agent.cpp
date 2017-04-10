@@ -269,7 +269,7 @@ namespace behaviac {
         CTextNode node(xmlInfo);
 
         if (node.LoadFromFile(fileName)) {
-            this->Load(&node);
+			CTagObject::Load(this, &node, className);
             return true;
         }
 
@@ -290,7 +290,7 @@ namespace behaviac {
         CTextNode node(xmlInfo);
 
         if (node.LoadFromFile(file)) {
-            this->Load(&node);
+			CTagObject::Load(this, &node, className);
             return true;
         }
 
@@ -299,13 +299,16 @@ namespace behaviac {
 
     void behaviac::Agent::LoadFromXML(const behaviac::XmlConstNodeRef& xmlNode) {
         behaviac::CTextNode textNode(xmlNode);
+		const char* className = this->GetObjectTypeName();
 
-        this->Load(&textNode);
+		CTagObject::Load(this, &textNode, className);
     }
 
     void behaviac::Agent::SaveToXML(const behaviac::XmlNodeReference& xmlNode) {
         behaviac::CTextNode textNode(xmlNode);
-        this->Save(&textNode);
+		const char* className = this->GetObjectTypeName();
+
+		CTagObject::Save(this, &textNode, className);
     }
 
     behaviac::map<uint32_t, IInstantiatedVariable*> Agent::GetCustomizedVariables() {
@@ -493,15 +496,12 @@ namespace behaviac {
         this->ResetChangedVariables();
 
 #if !BEHAVIAC_RELEASE
-
         if (Config::IsLoggingOrSocketing()) {
             const char* className = this->GetObjectTypeName();
-
             CPropertyNode properyNode(this, className);
 
-            this->Save(&properyNode);
+			CTagObject::Save(this, &properyNode, className);
         }
-
 #endif
     }
 

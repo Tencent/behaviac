@@ -23,6 +23,18 @@
 #include "behaviac/common/meta.h"
 #include "behaviac/common/member.h"
 
+BEHAVIAC_BEGIN_ENUM_EX(behaviac::EBTStatus, EBTStatus)
+{
+	BEHAVIAC_ENUMCLASS_DISPLAYNAME_EX(L"BT״̬");
+	BEHAVIAC_ENUMCLASS_DESC_EX(L"BT״̬");
+
+	BEHAVIAC_ENUM_ITEM_EX(behaviac::BT_INVALID, "BT_INVALID");
+	BEHAVIAC_ENUM_ITEM_EX(behaviac::BT_SUCCESS, "BT_SUCCESS");
+	BEHAVIAC_ENUM_ITEM_EX(behaviac::BT_FAILURE, "BT_FAILURE");
+	BEHAVIAC_ENUM_ITEM_EX(behaviac::BT_RUNNING, "BT_RUNNING");
+}
+BEHAVIAC_END_ENUM_EX()
+
 namespace behaviac {
     namespace rapidxml {
         //! When exceptions are disabled by defining RAPIDXML_NO_EXCEPTIONS,

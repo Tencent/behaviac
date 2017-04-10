@@ -187,12 +187,8 @@ int main(int argc, char** argv)
     bool bVerbose = false;
     int result = my_main(bVerbose);
 
-    if (bWait)
-    {
-        //BEHAVIAC_ASSERT(allPassed);
-        printf("\npress any key to end.\n");
-        getchar();
-    }
+	int ret = system("pause");
+	BEHAVIAC_UNUSED_VAR(ret);
 
     return result;
 }

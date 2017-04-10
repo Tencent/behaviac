@@ -66,5 +66,6 @@
 
 #include "internal/behaviac_agent_headers.h"
 #include "internal/behaviac_agent_member_visitor.h"
+#include "internal/behaviac_customized_types.h"
 
 #endif // _BEHAVIAC_TYPES_H_

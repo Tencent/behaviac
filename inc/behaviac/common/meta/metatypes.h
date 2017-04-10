@@ -97,13 +97,13 @@ namespace behaviac {
             };
         };
 
-        template <typename T>
-        class IsRefTypeStruct<T, true> {
-        public:
-            enum {
-                Result = T::ms_bIsRefType
-            };
-        };
+        //template <typename T>
+        //class IsRefTypeStruct<T, true> {
+        //public:
+        //    enum {
+        //        Result = T::ms_bIsRefType
+        //    };
+        //};
 
         template <typename T>
         struct IsRefType {

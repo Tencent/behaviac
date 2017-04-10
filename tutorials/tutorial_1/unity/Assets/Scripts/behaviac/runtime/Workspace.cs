@@ -739,7 +739,7 @@ namespace behaviac
             LogManager.Instance.LogWorkspace(msg);
 
             Workspace.EFileFormat format = this.FileFormat;
-            string formatString = (format == Workspace.EFileFormat.EFF_xml ? "xml" : "bson");
+            string formatString = (format == Workspace.EFileFormat.EFF_bson ? "bson.bytes" : (format == Workspace.EFileFormat.EFF_cs ? "cs" : "xml"));
 
             msg = string.Format("[workspace] {0} \"{1}\"\n", formatString, "");
             LogManager.Instance.LogWorkspace(msg);

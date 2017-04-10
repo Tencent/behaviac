@@ -128,7 +128,8 @@ namespace behaviac
         {
             static bool Equal(const T& lhs, const T& rhs)
             {
-				return lhs._Object_Equal_(rhs);
+				const char* szClassName = GetClassTypeName((T*)0);
+				return behaviac::Equal_Struct(lhs, rhs, szClassName);
             }
 
             static bool Greater(const T& lhs, const T& rhs)

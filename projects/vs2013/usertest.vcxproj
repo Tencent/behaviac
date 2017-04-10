@@ -223,6 +223,7 @@
     <ClInclude Include="..\..\test\usertest\behaviac\exported\behaviac_generated\types\internal\behaviac_agent_headers.h" />
     <ClInclude Include="..\..\test\usertest\behaviac\exported\behaviac_generated\types\internal\behaviac_agent_member_visitor.h" />
     <ClInclude Include="..\..\test\usertest\behaviac\exported\behaviac_generated\types\internal\behaviac_agent_meta.h" />
+    <ClInclude Include="..\..\test\usertest\behaviac\exported\behaviac_generated\types\internal\behaviac_customized_types.h" />
     <ClInclude Include="..\..\test\usertest\behaviac\exported\behaviac_generated\types\internal\behaviac_headers.h" />
   </ItemGroup>
   <ItemGroup>
@@ -233,6 +234,8 @@
     <ClCompile Include="..\..\test\usertest\behaviac\exported\behaviac_generated\behaviors\behaviac_generated_behaviors.cpp">
     </ClCompile>
     <ClCompile Include="..\..\test\usertest\behaviac\exported\behaviac_generated\types\internal\behaviac_agent_meta.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\test\usertest\behaviac\exported\behaviac_generated\types\internal\behaviac_customized_types.cpp">
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

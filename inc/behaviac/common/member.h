@@ -559,10 +559,11 @@ namespace behaviac {
 			BEHAVIAC_ASSERT(false);
         }
 
-        virtual bool Equal(const behaviac::CTagObject* lhs, const behaviac::CTagObject* rhs) const {
+		virtual bool Equal(const behaviac::Agent* lhs, const behaviac::Agent* rhs) const {
 			BEHAVIAC_UNUSED_VAR(lhs);
 			BEHAVIAC_UNUSED_VAR(rhs);
 			BEHAVIAC_ASSERT(false);
+
             return false;
         }
 
@@ -849,6 +850,13 @@ namespace behaviac {
 
             return result;
         }
+
+		virtual bool Equal(const behaviac::Agent* lhs, const behaviac::Agent* rhs) const {
+			T* lhsValue = (T*)this->GetValue(lhs);
+			T* rhsValue = (T*)this->GetValue(rhs);
+
+			return behaviac::PrivateDetails::Equal(*lhsValue, *rhsValue);
+		}
 
         virtual void SetValueFromString(behaviac::Agent* self, const char* valueStr) const {
             T value;

@@ -36,30 +36,30 @@ namespace TestNS
     };
 }
 
-BEHAVIAC_EXTEND_EXISTING_TYPE(TestNS::Float2, false);
-//////////////////////////////////////////////////////////////////////////
-
-// SwapByteImplement helpers
-template< typename SWAPPER >
-inline void SwapByteImplement(TestNS::Float2& v)
-{
-    SwapByteImplement< SWAPPER >(v.x);
-    SwapByteImplement< SWAPPER >(v.y);
-}
-
-//operators
-namespace behaviac
-{
-    namespace PrivateDetails
-    {
-        //------------------------------------------------------------------------
-        template<>
-        inline bool Equal(const TestNS::Float2& lhs, const TestNS::Float2& rhs)
-        {
-            return behaviac::IsEqualWithEpsilon(lhs.x, rhs.x) && behaviac::IsEqualWithEpsilon(lhs.y, rhs.y);
-        }
-   }
-}
+//BEHAVIAC_EXTEND_EXISTING_TYPE(TestNS::Float2, false);
+////////////////////////////////////////////////////////////////////////////
+//
+//// SwapByteImplement helpers
+//template< typename SWAPPER >
+//inline void SwapByteImplement(TestNS::Float2& v)
+//{
+//    SwapByteImplement< SWAPPER >(v.x);
+//    SwapByteImplement< SWAPPER >(v.y);
+//}
+//
+////operators
+//namespace behaviac
+//{
+//    namespace PrivateDetails
+//    {
+//        //------------------------------------------------------------------------
+//        template<>
+//        inline bool Equal(const TestNS::Float2& lhs, const TestNS::Float2& rhs)
+//        {
+//            return behaviac::IsEqualWithEpsilon(lhs.x, rhs.x) && behaviac::IsEqualWithEpsilon(lhs.y, rhs.y);
+//        }
+//   }
+//}
 
 //add the following to a cpp
 //BEHAVIAC_BEGIN_STRUCT(myFloat2)

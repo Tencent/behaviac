@@ -399,7 +399,7 @@ namespace behaviac {
             template<typename T>
             struct FromStringStructHanler<T, true> {
                 static bool ParseString(const char* str, T& val) {
-                    return val.ParseString(str);
+					return behaviac::StringUtils::FromString_Struct(str, val);
                 }
             };
         }//namespace Detail

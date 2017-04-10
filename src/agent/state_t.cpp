@@ -58,7 +58,7 @@ namespace behaviac {
         if (pAgent) {
             CIOID  membersId("members");
             IIONode* membersNode = node.newNodeChild(membersId);
-            pAgent->Save(membersNode);
+			CTagObject::Save(pAgent, membersNode, pAgent->GetObjectTypeName());
         }
 
         this->m_vars.Save(&node);
@@ -74,7 +74,7 @@ namespace behaviac {
         if (pAgent) {
             CIOID  membersId("members");
             IIONode* membersNode = node.findNodeChild(membersId);
-            pAgent->Load(membersNode);
+			CTagObject::Load(pAgent, membersNode, pAgent->GetObjectTypeName());
         }
 
         this->m_vars.Load(&node);

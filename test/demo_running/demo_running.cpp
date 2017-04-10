@@ -118,6 +118,23 @@ void CleanupBehaviac()
 	behaviac::Workspace::GetInstance()->Cleanup();
 }
 
+void Run()
+{
+	const char* szTreeName = "demo_running";
+
+	LOGI("bt: %s\n\n", szTreeName);
+
+	behaviac::Workspace::EFileFormat ff = behaviac::Workspace::EFF_xml;
+
+	InitBehavic(ff);
+	InitPlayer(szTreeName);
+
+	UpdateLoop();
+
+	CleanupPlayer();
+	CleanupBehaviac();
+}
+
 #if !BEHAVIAC_CCDEFINE_ANDROID
 //cmdline: behaviorTreePath Count ifprint fileformat
 int main(int argc, char** argv)
@@ -129,24 +146,10 @@ int main(int argc, char** argv)
 
 	LOGI("BEHAVIAC_CCDEFINE_NAME=%s\n", BEHAVIAC_CCDEFINE_NAME);
 
-	const char* szTreeName = "demo_running";
+	Run();
 
-	LOGI("bt: %s\n\n", szTreeName);
-
-    behaviac::Workspace::EFileFormat ff = behaviac::Workspace::EFF_xml;
-
-    InitBehavic(ff);
-    InitPlayer(szTreeName);
-
-    UpdateLoop();
-
-    CleanupPlayer();
-    CleanupBehaviac();
-
-#if defined(BEHAVIAC_CCDEFINE_MSVC)
-    LOGI("\npress any key to exit\n");
-    getchar();
-#endif
+	int ret = system("pause");
+	BEHAVIAC_UNUSED_VAR(ret);
 
     return 0;
 }

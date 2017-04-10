@@ -44,10 +44,8 @@ namespace behaviac {
         }
     }
 
-    void CTagObject::Load(const behaviac::IIONode* node, const char* szClassName) {
-        const char* szObjectAgentName = (szClassName == 0 ? this->GetObjectTypeName() : szClassName);
-        CStringCRC agentId(szObjectAgentName);
-
+	void CTagObject::Load(const void* pObject, const behaviac::IIONode* node, const char* szClassName) {
+		CStringCRC agentId(szClassName);
         AgentMeta* pAgentMeta = AgentMeta::GetMeta(agentId.GetUniqueID());
 
 		if (pAgentMeta) {
@@ -63,15 +61,15 @@ namespace behaviac {
 				const char* valueStr = node->getAttrRaw(ioid);
 
 				if (valueStr) {
-					pProperty->SetValueFromString((behaviac::Agent*)this, valueStr);
+					pProperty->SetValueFromString((behaviac::Agent*)pObject, valueStr);
 				}
 				else {
 					const behaviac::IIONode* childNode = node->findNodeChild(ioid);
 
 					if (childNode) {
-						CTagObject* pChildObject = (CTagObject*)pProperty->GetValue((behaviac::Agent*)this);
+						CTagObject* pChildObject = (CTagObject*)pProperty->GetValue((behaviac::Agent*)pObject);
 						const char* szPropertyClassName = pProperty->GetClassNameString();
-						pChildObject->Load(childNode, szPropertyClassName);
+						CTagObject::Load(pChildObject, childNode, szPropertyClassName);
 					}
 					else {
 						BEHAVIAC_ASSERT(false);
@@ -81,10 +79,8 @@ namespace behaviac {
 		}
     }
 
-    void CTagObject::Save(behaviac::IIONode* node, const char* szClassName) const {
-        const char* szObjectAgentName = (szClassName == 0 ? this->GetObjectTypeName() : szClassName);
-        CStringCRC agentId(szObjectAgentName);
-
+	void CTagObject::Save(const void* pObject, behaviac::IIONode* node, const char* szClassName) {
+		CStringCRC agentId(szClassName);
         AgentMeta* pAgentMeta = AgentMeta::GetMeta(agentId.GetUniqueID());
 
 		if (pAgentMeta) {
@@ -94,31 +90,19 @@ namespace behaviac {
 				//uint32_t memberId = it->first;
 				const IProperty* pProperty = it->second;
 
-				behaviac::string valueStr = pProperty->GetValueToString((behaviac::Agent*)this);
+				behaviac::string valueStr = pProperty->GetValueToString((behaviac::Agent*)pObject);
 				CIOID  attrId(pProperty->Name());
 				node->setAttr(attrId, valueStr.c_str());
 			}
 		}
     }
 
+	bool Equal_Struct(void* lhs, void* rhs, const char* szClassName) {
+		BEHAVIAC_UNUSED_VAR(lhs);
+		BEHAVIAC_UNUSED_VAR(rhs);
+		BEHAVIAC_UNUSED_VAR(szClassName);
 
-    void CTagObject::Load(const char* szClassName, CTagObject* pObject, const behaviac::IIONode* node) {
-        pObject->Load(node, szClassName);
-    }
-
-    void CTagObject::Save(const char* szClassName, const CTagObject* pObject, behaviac::IIONode* node) {
-        pObject->Save(node, szClassName);
-    }
-
-
-	bool Equal_Struct(const behaviac::CTagObject* lhs, const behaviac::CTagObject* rhs) {
-		const char* szTypeName_l = lhs->GetClassTypeName();
-		const char* szTypeName_r = rhs->GetClassTypeName();
-		BEHAVIAC_UNUSED_VAR(szTypeName_l);
-		BEHAVIAC_UNUSED_VAR(szTypeName_r);
-		BEHAVIAC_ASSERT(StringUtils::StringEqual(szTypeName_l, szTypeName_r));
-
-		CStringCRC type_id(szTypeName_l);
+		CStringCRC type_id(szClassName);
 		AgentMeta* pAgentMeta = AgentMeta::GetMeta(type_id.GetUniqueID());
 
 		if (pAgentMeta) {
@@ -127,7 +111,7 @@ namespace behaviac {
 			for (behaviac::map<uint32_t, IProperty*>::const_iterator it = members.begin(); it != members.end(); ++it) {
 				const IProperty* pProperty = it->second;
 
-				bool bEqual = pProperty->Equal(lhs, rhs);
+				bool bEqual = pProperty->Equal((behaviac::Agent*)lhs, (behaviac::Agent*)rhs);
 
 				if (!bEqual) {
 					return false;
