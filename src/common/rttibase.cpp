@@ -14,14 +14,14 @@
 #include "behaviac/common/rttibase.h"
 
 namespace behaviac {
-    char* GenerateString1(const char* aT1, const char* aT2) {
+    char* MakeStringName1(const char* aT1, const char* aT2) {
         size_t size = strlen(aT1) + strlen(aT2);
         char* str = (char*)BEHAVIAC_MALLOC_WITHTAG(size + 1, "CRTTIBase");
         string_cpy(str, aT1);
         string_cat(str, aT2);
         return str;
     }
-    char* GenerateString2(const char* aT1, const char* aT2, const char* aT3) {
+    char* MakeStringName2(const char* aT1, const char* aT2, const char* aT3) {
         size_t size = strlen(aT1) + strlen(aT2) + strlen(aT3);
         char* str = (char*)BEHAVIAC_MALLOC_WITHTAG(size + 1, "CRTTIBase");
         string_cpy(str, aT1);
@@ -29,7 +29,7 @@ namespace behaviac {
         string_cat(str, aT3);
         return str;
     }
-    char* GenerateString3(const char* aT1, const char* aT2, const char* aT3, const char* aT4) {
+    char* MakeStringName3(const char* aT1, const char* aT2, const char* aT3, const char* aT4) {
         size_t size = strlen(aT1) + strlen(aT2) + strlen(aT3) + strlen(aT4);
         char* str = (char*)BEHAVIAC_MALLOC_WITHTAG(size + 1, "CRTTIBase");
         string_cpy(str, aT1);
@@ -38,7 +38,7 @@ namespace behaviac {
         string_cat(str, aT4);
         return str;
     }
-    char* GenerateString4(const char* aT1, const char* aT2, const char* aT3, const char* aT4, const char* aT5) {
+    char* MakeStringName4(const char* aT1, const char* aT2, const char* aT3, const char* aT4, const char* aT5) {
         size_t size = strlen(aT1) + strlen(aT2) + strlen(aT3) + strlen(aT4) + strlen(aT5);
         char* str = (char*)BEHAVIAC_MALLOC_WITHTAG(size + 1, "CRTTIBase");
         string_cpy(str, aT1);
@@ -48,7 +48,7 @@ namespace behaviac {
         string_cat(str, aT5);
         return str;
     }
-    char* GenerateString5(const char* aT1, const char* aT2, const char* aT3, const char* aT4, const char* aT5, const char* aT6) {
+    char* MakeStringName5(const char* aT1, const char* aT2, const char* aT3, const char* aT4, const char* aT5, const char* aT6) {
         size_t size = strlen(aT1) + strlen(aT2) + strlen(aT3) + strlen(aT4) + strlen(aT5) + strlen(aT6);
         char* str = (char*)BEHAVIAC_MALLOC_WITHTAG(size + 1, "CRTTIBase");
         string_cpy(str, aT1);
@@ -58,10 +58,6 @@ namespace behaviac {
         string_cat(str, aT5);
         string_cat(str, aT6);
         return str;
-    }
-
-    CRTTIBaseAutoFreeChar::~CRTTIBaseAutoFreeChar() {
-        BEHAVIAC_FREE(m_str);
     }
 
     template<>

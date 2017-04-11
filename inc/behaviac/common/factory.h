@@ -67,7 +67,7 @@ namespace behaviac {
         }
     };
 
-    typedef FactoryContainer_t::iterator CreatorIt;
+    typedef FactoryContainer_t::iterator IteratorCreator;
 
     BEHAVIAC_API bool FactoryRegister_(FactoryContainer_t* creators, const CStringCRC& typeID, void* typeConstructor);
     BEHAVIAC_API bool FactoryUnregister_(FactoryContainer_t* creators, const CStringCRC& typeID);
@@ -90,21 +90,20 @@ namespace behaviac {
 
     public:
         virtual ~CFactory() {
-            CreatorIt it(creators_.begin());
-            CreatorIt itEnd(creators_.end());
+            IteratorCreator it(creators_list_.begin());
+            IteratorCreator itEnd(creators_list_.end());
 
             while (it != itEnd) {
                 SFactoryBag_t& item = *it++;
                 BEHAVIAC_FREE(item.m_typeConstructor);
             }
 
-            creators_.m_vector.clear();
+            creators_list_.m_vector.clear();
         }
-
-        virtual T* CreateObject(const CStringCRC& typeID);
 
         typedef T* (*InstantiateFunctionPointer)(const CStringCRC& typeID);
 
+        bool IsRegistered(const CStringCRC& typeID);
         bool Register(const CStringCRC& typeID, InstantiateFunctionPointer instantiate, bool overwrite = false);
         bool UnRegister(const CStringCRC& typeID);
 
@@ -113,97 +112,98 @@ namespace behaviac {
             typedef CConstructType<FINAL_TYPE> FinalType;
             void* p = BEHAVIAC_MALLOC(sizeof(FinalType));
             IConstructType* typeConstructor = new(p)FinalType;
-            return FactoryRegister_(&creators_, FINAL_TYPE::GetClassTypeId(), typeConstructor);
+            return FactoryRegister_(&creators_list_, FINAL_TYPE::GetClassTypeId(), typeConstructor);
         }
 
         template< typename FINAL_TYPE >
         bool UnRegister() {
-            return FactoryUnregister_(&creators_, FINAL_TYPE::GetClassTypeId());
+            return FactoryUnregister_(&creators_list_, FINAL_TYPE::GetClassTypeId());
         }
 
-        bool IsRegistered(const CStringCRC& typeID);
-
+        virtual T* CreateObject(const CStringCRC& typeID);
     private:
-        FactoryContainer_t creators_;
+        FactoryContainer_t creators_list_;
     };
 
     template< typename T >
     BEHAVIAC_FORCEINLINE bool CFactory<T>::IsRegistered(const CStringCRC& typeID) {
-        creators_.Lock();
+        creators_list_.Lock();
         SFactoryBag_t bucket(typeID, NULL);
-        CreatorIt itEnd(creators_.end());
-        CreatorIt itFound(std::find(creators_.begin(), itEnd, bucket));
+        IteratorCreator itEnd(creators_list_.end());
+        IteratorCreator itFound(std::find(creators_list_.begin(), itEnd, bucket));
 
         if (itFound != itEnd) {
-            creators_.Unlock();
+            creators_list_.Unlock();
             return true;
         } else {
-            creators_.Unlock();
+            creators_list_.Unlock();
             return false;
         }
     }
 
     template< typename T >
-    T* CFactory<T>::CreateObject(const CStringCRC& typeID) {
-        creators_.Lock();
-        SFactoryBag_t bucket(typeID, NULL);
-        CreatorIt itEnd(creators_.end());
-        CreatorIt itFound(std::find(creators_.begin(), itEnd, bucket));
-
-        if (itFound != itEnd) {
-            IConstructType* contructType = (IConstructType*)(*itFound).m_typeConstructor;
-            creators_.Unlock();
-            return contructType->Create();
-
-        } else {
-            BEHAVIAC_LOGWARNING("Trying to create an unregister type 0x%08X", typeID.GetUniqueID());
-
-            creators_.Unlock();
-            return NULL;
-        }
-    }
-
-    template< typename T >
     bool CFactory<T>::Register(const CStringCRC& typeID, InstantiateFunctionPointer instantiate, bool overwrite) {
-        creators_.Lock();
+        creators_list_.Lock();
         BEHAVIAC_ASSERT(instantiate);
         SFactoryBag_t bucket(typeID, (void*)instantiate);
-        CreatorIt itEnd(creators_.end());
-        CreatorIt itFound(std::find(creators_.begin(), itEnd, bucket));
+        IteratorCreator itEnd(creators_list_.end());
+        IteratorCreator itFound(std::find(creators_list_.begin(), itEnd, bucket));
         bool wasThere = (itFound != itEnd);
 
         if (!wasThere) {
-            creators_.push_back(bucket);
+            creators_list_.push_back(bucket);
 
         } else if (overwrite) {
             *itFound = bucket;
-            creators_.Unlock();
+            creators_list_.Unlock();
             return true;
 
         } else {
             BEHAVIAC_ASSERT(0, "Trying to register an already registered type %d", typeID.GetUniqueID());
         }
 
-        creators_.Unlock();
+        creators_list_.Unlock();
         return !wasThere;
     }
 
     template< typename T >
     bool CFactory<T>::UnRegister(const CStringCRC& typeID) {
-        creators_.Lock();
+        creators_list_.Lock();
         SFactoryBag_t bucket(typeID, NULL);
-        CreatorIt itEnd(creators_.end());
-        CreatorIt itFound(std::find(creators_.begin(), itEnd, bucket));
+        IteratorCreator itEnd(creators_list_.end());
+        IteratorCreator itFound(std::find(creators_list_.begin(), itEnd, bucket));
 
         if (itFound != itEnd) {
-            creators_.erase(itFound);
-            creators_.Unlock();
+            creators_list_.erase(itFound);
+            creators_list_.Unlock();
             return true;
         }
 
         BEHAVIAC_ASSERT("Cannot find the specified factory entry\n");
-        creators_.Unlock();
+        creators_list_.Unlock();
         return false;
     }
+
+	template< typename T >
+	T* CFactory<T>::CreateObject(const CStringCRC& typeID) {
+		creators_list_.Lock();
+		SFactoryBag_t bucket(typeID, NULL);
+		IteratorCreator itEnd(creators_list_.end());
+		IteratorCreator itFound(std::find(creators_list_.begin(), itEnd, bucket));
+
+		if (itFound != itEnd) {
+			IConstructType* contructType = (IConstructType*)(*itFound).m_typeConstructor;
+			creators_list_.Unlock();
+			return contructType->Create();
+
+		}
+		else {
+			BEHAVIAC_LOGWARNING("Trying to create an unregister type 0x%08X", typeID.GetUniqueID());
+
+			creators_list_.Unlock();
+			return NULL;
+		}
+	}
+
 }//
 #endif //_BEHAVIAC_COMMON_FACTORY_H_

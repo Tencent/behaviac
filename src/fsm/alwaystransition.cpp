@@ -48,6 +48,8 @@ namespace behaviac {
     }
 
     bool AlwaysTransition::Evaluate(Agent* pAgent, EBTStatus status) {
+		BEHAVIAC_UNUSED_VAR(pAgent);
+
         if (this->m_transitionPhase == ETP_Always) {
             return true;
         } else if (status == BT_SUCCESS && (this->m_transitionPhase == ETP_Success || this->m_transitionPhase == ETP_Exit)) {

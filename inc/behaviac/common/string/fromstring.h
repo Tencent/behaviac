@@ -32,6 +32,9 @@ namespace behaviac {
         template<typename T>
         bool ParseString(const char* str, T& val);
 
+		template<typename T>
+		inline bool FromString_Struct(const char* str, T& val);
+
         namespace internal {
             template<typename T, bool bAgent>
             struct FromStringSelector {

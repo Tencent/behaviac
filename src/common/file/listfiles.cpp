@@ -15,9 +15,6 @@
 #include "./listfiles.h"
 
 #ifndef _MSC_VER
-#ifndef _LISTFILES_USE_READDIR
-size_t _listfiles_dir_tent_buf_size(_LISTFILES_DIR* dirp);
-#endif
 #else
 # pragma warning(push)
 # pragma warning (disable : 4996)
@@ -31,10 +28,6 @@ static void _listfiles_get_ext(listfiles_file_t* pFile);
 
 int listfiles_open(listfiles_dir_t* pDir, const char* szPath) {
 #ifndef _MSC_VER
-#ifndef _LISTFILES_USE_READDIR
-    int error;
-    int size;
-#endif
 #else
     char path_buf[_LISTFILES_PATH_MAX];
 #endif
@@ -55,9 +48,6 @@ int listfiles_open(listfiles_dir_t* pDir, const char* szPath) {
     pDir->_h = INVALID_HANDLE_VALUE;
 #else
     pDir->_d = NULL;
-#ifndef _LISTFILES_USE_READDIR
-    pDir->_ep = NULL;
-#endif
 #endif
     listfiles_close(pDir);
 
@@ -88,30 +78,7 @@ int listfiles_open(listfiles_dir_t* pDir, const char* szPath) {
     // read first pFile
     pDir->has_next = 1;
 #ifndef _MSC_VER
-#ifdef _LISTFILES_USE_READDIR
     pDir->_e = _listfiles_readdir(pDir->_d);
-#else
-    // allocate dirent buffer for readdir_r
-    // conversion to int
-    size = _listfiles_dir_tent_buf_size(pDir->_d);
-
-    if (size == -1) {
-        return -1;
-    }
-
-    pDir->_ep = (struct _listfiles_dir_tent*)_LISTFILES_MALLOC(size);
-
-    if (pDir->_ep == NULL) {
-        return -1;
-    }
-
-    error = readdir_r(pDir->_d, pDir->_ep, &pDir->_e);
-
-    if (error != 0) {
-        return -1;
-    }
-
-#endif
 
     if (pDir->_e == NULL) {
         pDir->has_next = 0;
@@ -151,10 +118,6 @@ void listfiles_close(listfiles_dir_t* pDir) {
 
     pDir->_d = NULL;
     pDir->_e = NULL;
-#ifndef _LISTFILES_USE_READDIR
-    _LISTFILES_FREE(pDir->_ep);
-    pDir->_ep = NULL;
-#endif
 #endif
 }
 
@@ -173,20 +136,8 @@ int listfiles_next(listfiles_dir_t* pDir) {
 
     if (FindNextFile(pDir->_h, &pDir->_f) == 0)
 #else
-#ifdef _LISTFILES_USE_READDIR
+
     pDir->_e = _listfiles_readdir(pDir->_d);
-
-#else
-
-    if (pDir->_ep == NULL) {
-        return -1;
-    }
-
-    if (readdir_r(pDir->_d, pDir->_ep, &pDir->_e) != 0) {
-        return -1;
-    }
-
-#endif
 
     if (pDir->_e == NULL)
 #endif
@@ -300,36 +251,6 @@ void _listfiles_get_ext(listfiles_file_t* pFile) {
         pFile->extension = period + 1;
     }
 }
-
-#ifndef _MSC_VER
-#ifndef _LISTFILES_USE_READDIR
-
-size_t _listfiles_dir_tent_buf_size(_LISTFILES_DIR* dirp) {
-    long name_max = 0;
-    size_t name_end = 0;
-    (void)dirp;
-
-#if defined _LISTFILES_USE_FPATHCONF
-    name_max = fpathconf(dirfd(dirp), _PC_NAME_MAX);
-
-    if (name_max == -1)
-#if defined(NAME_MAX)
-        name_max = (NAME_MAX > 255) ? NAME_MAX : 255;
-
-#else
-        return (size_t)(-1);
-#endif
-#elif defined(NAME_MAX)
-    name_max = (NAME_MAX > 255) ? NAME_MAX : 255;
-#else
-#error "buffer size for readdir_r cannot be determined"
-#endif
-    name_end = (size_t)offsetof(struct _listfiles_dir_tent, d_name) + name_max + 1;
-    return (name_end > sizeof(struct _listfiles_dir_tent) ?
-            name_end : sizeof(struct _listfiles_dir_tent));
-}
-#endif
-#endif
 
 # if defined (_MSC_VER)
 # pragma warning(pop)

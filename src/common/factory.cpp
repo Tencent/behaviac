@@ -20,8 +20,8 @@ namespace behaviac {
     bool FactoryUnregister_(FactoryContainer_t* creators, const behaviac::CStringCRC& typeID) {
         creators->Lock();
         SFactoryBag_t bucket(typeID, NULL);
-        CreatorIt itEnd(creators->end());
-        CreatorIt itFound(std::find(creators->begin(), itEnd, bucket));
+        IteratorCreator itEnd(creators->end());
+        IteratorCreator itFound(std::find(creators->begin(), itEnd, bucket));
 
         if (itFound != itEnd) {
             SFactoryBag_t& item = *itFound;
@@ -39,8 +39,8 @@ namespace behaviac {
     bool FactoryRegister_(FactoryContainer_t* creators, const behaviac::CStringCRC& typeID, void* typeConstructor) {
         SFactoryBag_t bucket(typeID, typeConstructor);
         creators->Lock();
-        CreatorIt itEnd(creators->end());
-        CreatorIt itFound(std::find(creators->begin(), itEnd, bucket));
+        IteratorCreator itEnd(creators->end());
+        IteratorCreator itFound(std::find(creators->begin(), itEnd, bucket));
         bool wasThere = (itFound != itEnd);
 
         //Add it only once

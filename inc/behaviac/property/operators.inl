@@ -18,6 +18,8 @@
 
 namespace behaviac
 {
+	bool Equal_Struct(void* lhs, void* rhs, const char* szClassName);
+
 	namespace PrivateDetails
     {
         namespace Meta

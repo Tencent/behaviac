@@ -31,7 +31,7 @@ namespace behaviac
 			public CInstanceConst_FirstStruct(string typeName, string valueStr) : base(typeName, valueStr)
 			{
 				List<string> paramStrs = behaviac.StringUtils.SplitTokensForStruct(valueStr);
-				Debug.Check(paramStrs.Count == 2);
+				Debug.Check(paramStrs != null && paramStrs.Count == 2);
 
 				_s1 = (CInstanceMember<int>)AgentMeta.ParseProperty<int>(paramStrs[0]);
 				_s2 = (CInstanceMember<float>)AgentMeta.ParseProperty<float>(paramStrs[1]);

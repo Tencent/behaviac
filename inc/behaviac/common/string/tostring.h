@@ -28,9 +28,15 @@ namespace behaviac {
     template<typename T>
     behaviac::string EnumValueToString(const T& v);
 
+	template<typename T>
+	inline const char* GetClassTypeName(T*);
+
     namespace StringUtils {
         template<typename T>
         behaviac::string ToString(const T& val);
+
+		template<typename T>
+		inline behaviac::string ToString_Struct(T& val, const char* szClassName);
 
         namespace internal {
             template<typename T>

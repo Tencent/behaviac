@@ -1279,7 +1279,7 @@ namespace PluginBehaviac.Exporters
                     }
                 }
 
-                file.WriteLine("\t\t\t\tDebug.Check(paramStrs.Count == {0});", validPropCount);
+                file.WriteLine("\t\t\t\tDebug.Check(paramStrs != null && paramStrs.Count == {0});", validPropCount);
                 file.WriteLine();
 
                 validPropCount = 0;

@@ -31,7 +31,7 @@ cmake_minimum_required (VERSION 2.8)
 # set(CMAKE_CONFIGURATION_TYPES "Debug;Release;Profile" CACHE STRING "" FORCE) 
 set(CMAKE_CONFIGURATION_TYPES "Debug;Release" CACHE STRING "" FORCE) 
 
-set (BEHAVIAC_PACKAGE_VERSION 3.6.28)
+set (BEHAVIAC_PACKAGE_VERSION 3.6.29)
 
 #option( BUILD_SHARED_LIBS "set to OFF to build static libraries" ON )
 SET(BUILD_SHARED_LIBS ON CACHE BOOL "set to OFF to build static libraries")
@@ -267,11 +267,12 @@ set (COMPILE_POSTFIX "")
 if(MSVC OR BEHAVIAC_ANDROID_ON)
 	message(STATUS "set msvc flags")
 	# Force to always compile with W4
-	if(CMAKE_CXX_FLAGS MATCHES "/W[0-4]")
-		STRING(REGEX REPLACE "/W[0-4]" "/W4" CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
-	else()
-		set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /W4")
-	endif()
+	# if(CMAKE_CXX_FLAGS MATCHES "/W[0-4]")
+		# STRING(REGEX REPLACE "/W[0-4]" "/W4" CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
+	# else()
+		# set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /W4")
+	# endif()
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /W4")
 	
 	#warning treated as error
 	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /WX")

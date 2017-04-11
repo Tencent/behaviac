@@ -114,13 +114,6 @@ namespace behaviac {
             return other;
         }
 
-        static CRTTIBase* StaticCast(CRTTIBase* other) {
-            return other;
-        }
-        static const CRTTIBase* StaticCast(const CRTTIBase* other) {
-            return other;
-        }
-
         bool IsAKindOf(const behaviac::CStringCRC& typeId) const {
             const CLayerInfo* info = GetHierarchyInfo();
 
@@ -152,9 +145,6 @@ namespace behaviac {
             return false;
         }
 
-        template <class T> inline static bool CallParent(T handler) {
-            return false;
-        }
     };
 
     template<int NumLayers>
@@ -307,57 +297,14 @@ namespace behaviac {
         return ret;
     }
 
-#ifdef BEHAVIAC_DEBUG_DEFINED
-    template <class T> class TTemplateClassDetector {};
-
-    template <typename T1, template <typename> class TClass>
-    class TTemplateClassDetector< TClass<T1> > {
-        typename TClass<T1>::You_are_using_the_wrong_macro__use__BEHAVIAC_DECLARE_TEMPLATE_DYNAMIC_TYPE1__instead m_member;
-    };
-
-    template <typename T1, typename T2, template <typename, typename> class TClass>
-    class TTemplateClassDetector< TClass<T1, T2> > {
-        typename TClass<T1, T2>::You_are_using_the_wrong_macro__use__BEHAVIAC_DECLARE_TEMPLATE_DYNAMIC_TYPE2__instead m_member;
-    };
-
-    template <typename T1, typename T2, typename T3, template <typename, typename, typename> class TClass>
-    class TTemplateClassDetector< TClass<T1, T2, T3> > {
-        typename TClass<T1, T2, T3>::You_are_using_the_wrong_macro__use__BEHAVIAC_DECLARE_TEMPLATE_DYNAMIC_TYPE3__instead m_member;
-    };
-
-    template <typename T1, typename T2, typename T3, typename T4, template <typename, typename, typename, typename> class TClass>
-    class TTemplateClassDetector< TClass<T1, T2, T3, T4> > {
-        typename TClass<T1, T2, T3, T4>::You_are_using_the_wrong_macro__use__BEHAVIAC_DECLARE_TEMPLATE_DYNAMIC_TYPE4__instead m_member;
-    };
-
-    template <typename T1, typename T2, typename T3, typename T4, typename T5, template <typename, typename, typename, typename, typename> class TClass>
-    class TTemplateClassDetector< TClass<T1, T2, T3, T4, T5> > {
-        typename TClass<T1, T2, T3, T4, T5>::You_are_using_the_wrong_macro__use__BEHAVIAC_DECLARE_TEMPLATE_DYNAMIC_TYPE5__instead m_member;
-    };
-#endif
 }//
 
-#ifdef BEHAVIAC_DEBUG_DEFINED
-#define BEHAVIAC_INTERNAL_DECLARE_DYNAMIC_TYPE_COMPOSER(__type) \
-    public: \
-    static const char* GetClassTypeName() \
-    { \
-        behaviac::TTemplateClassDetector< __type > templateClassDetector; \
-        BEHAVIAC_UNUSED_VAR(templateClassDetector); \
-        \
-        return #__type; \
-    }
-
-#else  // #ifdef BEHAVIAC_DEBUG_DEFINED
-
 #define BEHAVIAC_INTERNAL_DECLARE_DYNAMIC_TYPE_COMPOSER(__type) \
     public: \
     static const char* GetClassTypeName() \
     { \
         return #__type; \
     }
-
-#endif  // #ifdef BEHAVIAC_DEBUG_DEFINED
 
 //BEHAVIAC_OVERRIDE_TYPE_NAME_ can't be placed in a namespace
 #define BEHAVIAC_OVERRIDE_TYPE_NAME_(typeFullClassNameWithNamespace, szCassTypeName)																		\
@@ -370,79 +317,12 @@ namespace behaviac {
 #define BEHAVIAC_OVERRIDE_TYPE_NAME(typeFullNameWithNamespace)    BEHAVIAC_OVERRIDE_TYPE_NAME_(typeFullNameWithNamespace, typeFullNameWithNamespace)
 
 namespace behaviac {
-    BEHAVIAC_API char* GenerateString1(const char* aT1, const char* aT2);
-    BEHAVIAC_API char* GenerateString2(const char* aT1, const char* aT2, const char* aT3);
-    BEHAVIAC_API char* GenerateString3(const char* aT1, const char* aT2, const char* aT3, const char* aT4);
-    BEHAVIAC_API char* GenerateString4(const char* aT1, const char* aT2, const char* aT3, const char* aT4, const char* aT5);
-    BEHAVIAC_API char* GenerateString5(const char* aT1, const char* aT2, const char* aT3, const char* aT4, const char* aT5, const char* aT6);
-
-    class CRTTIBaseAutoFreeChar {
-    public:
-        CRTTIBaseAutoFreeChar(char* str) : m_str(str) {}
-        BEHAVIAC_API ~CRTTIBaseAutoFreeChar();
-        char* m_str;
-    };
+    BEHAVIAC_API char* MakeStringName1(const char* aT1, const char* aT2);
+    BEHAVIAC_API char* MakeStringName2(const char* aT1, const char* aT2, const char* aT3);
+    BEHAVIAC_API char* MakeStringName3(const char* aT1, const char* aT2, const char* aT3, const char* aT4);
+    BEHAVIAC_API char* MakeStringName4(const char* aT1, const char* aT2, const char* aT3, const char* aT4, const char* aT5);
+    BEHAVIAC_API char* MakeStringName5(const char* aT1, const char* aT2, const char* aT3, const char* aT4, const char* aT5, const char* aT6);
 }
-
-#define BEHAVIAC_INTERNAL_DECLARE_TEMPLATE_DYNAMIC_TYPE_COMPOSER1(__type, ARG1) \
-    public: \
-    static const char* GetClassTypeName() \
-    { \
-        static CRTTIBaseAutoFreeChar szCassTypeName(GenerateString1(#__type, behaviac::GetClassTypeName((ARG1*)0))); \
-        return szCassTypeName.m_str; \
-    }
-
-#define BEHAVIAC_INTERNAL_DECLARE_TEMPLATE_DYNAMIC_TYPE_COMPOSER2(__type, ARG1, ARG2) \
-    public: \
-    static const char* GetClassTypeName() \
-    { \
-        static CRTTIBaseAutoFreeChar szCassTypeName(GenerateString2(#__type, behaviac::GetClassTypeName((ARG1*)0), behaviac::GetClassTypeName((ARG2*)0))); \
-        return szCassTypeName.m_str; \
-    }
-
-#define BEHAVIAC_INTERNAL_DECLARE_TEMPLATE_DYNAMIC_TYPE_COMPOSER3(__type, ARG1, ARG2, ARG3) \
-    public: \
-    static const char* GetClassTypeName() \
-    { \
-        static CRTTIBaseAutoFreeChar szCassTypeName(GenerateString3(#__type, behaviac::GetClassTypeName((ARG1*)0), behaviac::GetClassTypeName((ARG2*)0), behaviac::GetClassTypeName((ARG3*)0))); \
-        return szCassTypeName.m_str; \
-    }
-
-#define BEHAVIAC_INTERNAL_DECLARE_TEMPLATE_DYNAMIC_TYPE_COMPOSER4(__type, ARG1, ARG2, ARG3, ARG4) \
-    public: \
-    static const char* GetClassTypeName() \
-    { \
-        static CRTTIBaseAutoFreeChar szCassTypeName(GenerateString4(#__type, behaviac::GetClassTypeName((ARG1*)0), behaviac::GetClassTypeName((ARG2*)0), behaviac::GetClassTypeName((ARG3*)0), behaviac::GetClassTypeName((ARG4*)0))); \
-        return szCassTypeName.m_str; \
-    }
-
-#define BEHAVIAC_INTERNAL_DECLARE_TEMPLATE_DYNAMIC_TYPE_COMPOSER5(__type, ARG1, ARG2, ARG3, ARG4, ARG5) \
-    public: \
-    static const char* GetClassTypeName() \
-    { \
-        static CRTTIBaseAutoFreeChar szCassTypeName(GenerateString5(#__type, behaviac::GetClassTypeName((ARG1*)0), behaviac::GetClassTypeName((ARG2*)0), behaviac::GetClassTypeName((ARG3*)0), behaviac::GetClassTypeName((ARG4*)0), behaviac::GetClassTypeName((ARG5*)0))); \
-        return szCassTypeName.m_str(); \
-    }
-
-#define BEHAVIAC_DECLARE_TEMPLATE_DYNAMIC_TYPE1(__template, ARG1, __parent) \
-    BEHAVIAC_INTERNAL_DECLARE_TEMPLATE_DYNAMIC_TYPE_COMPOSER1(__template, ARG1); \
-    BEHAVIAC_INTERNAL_DECLARE_DYNAMIC_PUBLIC_METHODES(__template, __parent);
-
-#define BEHAVIAC_DECLARE_TEMPLATE_DYNAMIC_TYPE2(__template, ARG1,ARG2, __parent) \
-    BEHAVIAC_INTERNAL_DECLARE_TEMPLATE_DYNAMIC_TYPE_COMPOSER2(__template, ARG1, ARG2); \
-    BEHAVIAC_INTERNAL_DECLARE_DYNAMIC_PUBLIC_METHODES(__template, __parent);
-
-#define BEHAVIAC_DECLARE_TEMPLATE_DYNAMIC_TYPE3(__template, ARG1,ARG2, ARG3, __parent) \
-    BEHAVIAC_INTERNAL_DECLARE_TEMPLATE_DYNAMIC_TYPE_COMPOSER3(__template, ARG1, ARG2, ARG3); \
-    BEHAVIAC_INTERNAL_DECLARE_DYNAMIC_PUBLIC_METHODES(__template, __parent);
-
-#define BEHAVIAC_DECLARE_TEMPLATE_DYNAMIC_TYPE4(__template, ARG1,ARG2,ARG3,ARG4, __parent) \
-    BEHAVIAC_INTERNAL_DECLARE_TEMPLATE_DYNAMIC_TYPE_COMPOSER4(__template, ARG1, ARG2,ARG3,ARG4); \
-    BEHAVIAC_INTERNAL_DECLARE_DYNAMIC_PUBLIC_METHODES(__template, __parent);
-
-#define BEHAVIAC_DECLARE_TEMPLATE_DYNAMIC_TYPE5(__template, ARG1,ARG2,ARG3,ARG4,ARG5, __parent) \
-    BEHAVIAC_INTERNAL_DECLARE_TEMPLATE_DYNAMIC_TYPE_COMPOSER5(__template, ARG1, ARG2,ARG3, ARG4, ARG5); \
-    BEHAVIAC_INTERNAL_DECLARE_DYNAMIC_PUBLIC_METHODES(__template, __parent);
 
 #define BEHAVIAC_INTERNAL_DECLARE_DYNAMIC_PUBLIC_METHODES(__type, __parent) \
     protected: \
@@ -496,38 +376,7 @@ namespace behaviac {
             return static_cast< const __type * >( other ); \
         } \
         return NULL; \
-    } \
-    static __type *StaticCast( CRTTIBase *other ) \
-    { \
-        BEHAVIAC_ASSERT(!other || DynamicCast(other));\
-        return static_cast< __type * >( other ); \
-    } \
-    static const __type *StaticCast( const CRTTIBase *other ) \
-    { \
-        BEHAVIAC_ASSERT(!other || DynamicCast(other));\
-        return static_cast< const __type * >( other ); \
-    } \
-    inline static bool IsOfMyKind( CRTTIBase *other ) \
-    { \
-        return (DynamicCast( other ) != NULL); \
-    } \
-    inline static bool IsOfMyKind( const CRTTIBase *other ) \
-    { \
-        return (DynamicCast( other ) != NULL); \
-    } \
-    inline static bool IsOfMyKind( CRTTIBase & other ) \
-    { \
-        return IsOfMyKind(&other); \
-    } \
-    inline static bool IsOfMyKind( const CRTTIBase & other ) \
-    { \
-        return IsOfMyKind(&other); \
-    }\
-    template <class __TypeOfHandler> inline static bool CallParent(__TypeOfHandler handler)\
-    {\
-        handler.template Call<super>();\
-        return true;\
-    }
+    } 
 
 #define BEHAVIAC_DECLARE_DYNAMIC_TYPE(__type, __parent)						\
     BEHAVIAC_INTERNAL_DECLARE_DYNAMIC_TYPE_COMPOSER(__type);				\

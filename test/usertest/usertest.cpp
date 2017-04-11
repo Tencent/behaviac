@@ -16,6 +16,7 @@
 
 #if BEHAVIAC_CCDEFINE_MSVC
 #include <windows.h>
+#include <tchar.h>
 #endif
 
 #include <time.h>
@@ -33,21 +34,21 @@ unsigned int g_uiRunCount = 0;
 static void SetExePath()
 {
 #if BEHAVIAC_CCDEFINE_MSVC
-    TCHAR szCurPath[_MAX_PATH];
+	TCHAR szCurPath[_MAX_PATH];
 
-    GetModuleFileName(NULL, szCurPath, _MAX_PATH);
+	GetModuleFileName(NULL, szCurPath, _MAX_PATH);
 
-    char* p = szCurPath;
+	TCHAR* p = szCurPath;
 
-    while (strchr(p, '\\'))
-    {
-        p = strchr(p, '\\');
-        p++;
-    }
+	while (_tcschr(p, L'\\'))
+	{
+		p = _tcschr(p, L'\\');
+		p++;
+	}
 
-    *p = '\0';
+	*p = L'\0';
 
-    SetCurrentDirectory(szCurPath);
+	SetCurrentDirectory(szCurPath);
 #endif
 }
 
@@ -166,7 +167,8 @@ int main(int argc, char** argv)
     CleanupPlayer();
     CleanupBehaviac();
 
-	int ret = system("pause");
+	printf("Press any key to continue...");
+	int ret = getchar();
 	BEHAVIAC_UNUSED_VAR(ret);
 
     return 0;

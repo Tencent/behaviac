@@ -1,3 +1,6 @@
+2017-4-11  3.6.29   
+    Fix a bug of compiling error for GCC.
+
 2017-4-10  3.6.28
     Improve generating the codes for the struct.
     Add tutorial_8 and tutorial_9.

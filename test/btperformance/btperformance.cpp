@@ -225,6 +225,7 @@ int main(int argc, char** argv)
     CommandLineParameterParser CLPP(argc, argv);
     //if to wait for the key to end
     bool bWait = CLPP.ParameterExist("-wait");
+	BEHAVIAC_UNUSED_VAR(bWait);
 
     int countAgents = CLPP.ParameterEqualExist("-agents=");
 
@@ -254,7 +255,8 @@ int main(int argc, char** argv)
 
     //behaviac::Socket::ShutdownConnection();
 
-	int ret = system("pause");
+	printf("Press any key to continue...");
+	int ret = getchar();
 	BEHAVIAC_UNUSED_VAR(ret);
 
     return 0;

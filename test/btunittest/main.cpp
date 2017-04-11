@@ -161,6 +161,7 @@ int main(int argc, char** argv)
     CommandLineParameterParser CLPP(argc, argv);
     //if to wait for the key to end
     bool bWait = CLPP.ParameterExist("-wait");
+	BEHAVIAC_UNUSED_VAR(bWait);
 
     //CConfig::GetInstance()->LoadConfig("setting.xml");
 
@@ -184,10 +185,10 @@ int main(int argc, char** argv)
     _CrtSetBreakAlloc(s_breakalloc);
 #endif
 
-    bool bVerbose = false;
-    int result = my_main(bVerbose);
+	int result = my_main(false);
 
-	int ret = system("pause");
+	printf("Press any key to continue...");
+	int ret = getchar();
 	BEHAVIAC_UNUSED_VAR(ret);
 
     return result;

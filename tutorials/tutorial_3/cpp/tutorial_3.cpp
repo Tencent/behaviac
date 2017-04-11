@@ -13,21 +13,17 @@
 
 #include "behaviac_generated/types/behaviac_types.h"
 
-#if BEHAVIAC_CCDEFINE_MSVC
-#include <windows.h>
-#endif
-
 #if BEHAVIAC_CCDEFINE_ANDROID
 	#define LOGI(...) ((void)__android_log_print(ANDROID_LOG_INFO, "tutorial_3", __VA_ARGS__))
 #else
 	#define LOGI printf
+
+#if BEHAVIAC_CCDEFINE_MSVC
+	#include <windows.h>
+	#include <tchar.h>
 #endif
 
-using namespace std;
-
-FirstAgent* g_FirstAgent = NULL;
-SecondAgent* g_SecondAgent = NULL;
-SecondAgent* g_ThirdAgent = NULL;
+#endif
 
 #if !BEHAVIAC_CCDEFINE_ANDROID
 static void SetExePath()
@@ -37,20 +33,26 @@ static void SetExePath()
 
     GetModuleFileName(NULL, szCurPath, _MAX_PATH);
 
-    char* p = szCurPath;
+	TCHAR* p = szCurPath;
 
-    while (strchr(p, '\\'))
+	while (_tcschr(p, L'\\'))
     {
-        p = strchr(p, '\\');
+		p = _tcschr(p, L'\\');
         p++;
     }
 
-    *p = '\0';
+    *p = L'\0';
 
     SetCurrentDirectory(szCurPath);
 #endif
 }
 #endif
+
+using namespace std;
+
+FirstAgent* g_FirstAgent = NULL;
+SecondAgent* g_SecondAgent = NULL;
+SecondAgent* g_ThirdAgent = NULL;
 
 bool InitBehavic()
 {
@@ -130,7 +132,8 @@ int main(int argc, char** argv)
 
     CleanupBehaviac();
 
-	int ret = system("pause");
+	printf("Press any key to continue...");
+	int ret = getchar();
 	BEHAVIAC_UNUSED_VAR(ret);
 
     return 0;

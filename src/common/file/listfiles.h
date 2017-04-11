@@ -57,13 +57,6 @@
 #define _listfiles_strrchr strrchr
 #define _listfiles_strncmp strncmp
 
-#ifdef _LISTFILES_USE_READDIR_R
-// Use readdir by default
-#else
-# define _LISTFILES_USE_READDIR
-#endif
-
-// mingw32 has two versions of dirent, ASCII and UNICODE
 #ifndef _MSC_VER
 #define _LISTFILES_DIR DIR
 #define _listfiles_dir_tent dirent
@@ -96,9 +89,6 @@ typedef struct listfiles_dir_t {
 #else
     _LISTFILES_DIR* _d;
     struct _listfiles_dir_tent* _e;
-#ifndef _LISTFILES_USE_READDIR
-    struct _listfiles_dir_tent* _ep;
-#endif
 #endif
 } listfiles_dir_t;
 

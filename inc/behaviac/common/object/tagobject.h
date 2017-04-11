@@ -160,7 +160,7 @@ namespace behaviac {
     }																		\
     behaviac::string ToString() const										\
     {																		\
-        return behaviac::StringUtils::ToString_Struct(*this);				\
+        return behaviac::StringUtils::ToString_Struct(*this, this->GetClassTypeName());\
     }
 
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -180,8 +180,6 @@ namespace behaviac {
         const char* szClassName = behaviac::GetClassTypeName((classFullNameWithNamespace*)0);\
         behaviac::CTagObject::Save((behaviac::CTagObject*)this, node, szClassName);	\
     }																				\
-    static bool IsOfMyKind(const behaviac::CTagObject*)								\
-    { return true; }																\
     static const char* GetClassTypeName() { return #classFullNameWithNamespace; }
 
 #define DECLARE_BEHAVIAC_OBJECT_STRUCT_V1(classFullNameWithNamespace) DECLARE_BEHAVIAC_OBJECT_STRUCT_V2(classFullNameWithNamespace, false)
@@ -230,8 +228,6 @@ namespace behaviac {
 //in general, please use DECLARE_BEHAVIAC_STRUCT, unless you know what you are doing
 #define BEHAVIAC_DECLARE_OBJECT(classFullNameWithNamespace)					\
     DECLARE_BEHAVIAC_OBJECT_BASE(classFullNameWithNamespace, false)			\
-    static bool IsOfMyKind(const behaviac::CTagObject*)						\
-    { return true; }														\
     static const char* GetClassTypeName()									\
     { return #classFullNameWithNamespace; }
 

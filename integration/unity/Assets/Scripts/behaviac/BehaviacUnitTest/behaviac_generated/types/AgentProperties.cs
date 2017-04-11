@@ -315,7 +315,7 @@ namespace behaviac
 			public CInstanceConst_Act(string typeName, string valueStr) : base(typeName, valueStr)
 			{
 				List<string> paramStrs = behaviac.StringUtils.SplitTokensForStruct(valueStr);
-				Debug.Check(paramStrs.Count == 2);
+				Debug.Check(paramStrs != null && paramStrs.Count == 2);
 
 				_Var_B_Loop = (CInstanceMember<bool>)AgentMeta.ParseProperty<bool>(paramStrs[0]);
 				_Var_List_EnumTest = (CInstanceMember<List<EnumTest>>)AgentMeta.ParseProperty<List<EnumTest>>(paramStrs[1]);
@@ -339,7 +339,7 @@ namespace behaviac
 			public CInstanceConst_TestNS_Float2(string typeName, string valueStr) : base(typeName, valueStr)
 			{
 				List<string> paramStrs = behaviac.StringUtils.SplitTokensForStruct(valueStr);
-				Debug.Check(paramStrs.Count == 2);
+				Debug.Check(paramStrs != null && paramStrs.Count == 2);
 
 				_x = (CInstanceMember<float>)AgentMeta.ParseProperty<float>(paramStrs[0]);
 				_y = (CInstanceMember<float>)AgentMeta.ParseProperty<float>(paramStrs[1]);
@@ -364,7 +364,7 @@ namespace behaviac
 			public CInstanceConst_BSASN_TransitPlan(string typeName, string valueStr) : base(typeName, valueStr)
 			{
 				List<string> paramStrs = behaviac.StringUtils.SplitTokensForStruct(valueStr);
-				Debug.Check(paramStrs.Count == 3);
+				Debug.Check(paramStrs != null && paramStrs.Count == 3);
 
 				_plan_ID = (CInstanceMember<string>)AgentMeta.ParseProperty<string>(paramStrs[0]);
 				_plan_selection_precedence = (CInstanceMember<int>)AgentMeta.ParseProperty<int>(paramStrs[1]);
@@ -391,7 +391,7 @@ namespace behaviac
 			public CInstanceConst_BSASN_SpatialCoord(string typeName, string valueStr) : base(typeName, valueStr)
 			{
 				List<string> paramStrs = behaviac.StringUtils.SplitTokensForStruct(valueStr);
-				Debug.Check(paramStrs.Count == 2);
+				Debug.Check(paramStrs != null && paramStrs.Count == 2);
 
 				_coordX = (CInstanceMember<float>)AgentMeta.ParseProperty<float>(paramStrs[0]);
 				_coordY = (CInstanceMember<float>)AgentMeta.ParseProperty<float>(paramStrs[1]);
@@ -416,7 +416,7 @@ namespace behaviac
 			public CInstanceConst_UnityEngine_Vector3(string typeName, string valueStr) : base(typeName, valueStr)
 			{
 				List<string> paramStrs = behaviac.StringUtils.SplitTokensForStruct(valueStr);
-				Debug.Check(paramStrs.Count == 3);
+				Debug.Check(paramStrs != null && paramStrs.Count == 3);
 
 				_x = (CInstanceMember<float>)AgentMeta.ParseProperty<float>(paramStrs[0]);
 				_y = (CInstanceMember<float>)AgentMeta.ParseProperty<float>(paramStrs[1]);
@@ -443,7 +443,7 @@ namespace behaviac
 			public CInstanceConst_TestNamespace_Float2(string typeName, string valueStr) : base(typeName, valueStr)
 			{
 				List<string> paramStrs = behaviac.StringUtils.SplitTokensForStruct(valueStr);
-				Debug.Check(paramStrs.Count == 2);
+				Debug.Check(paramStrs != null && paramStrs.Count == 2);
 
 				_x = (CInstanceMember<float>)AgentMeta.ParseProperty<float>(paramStrs[0]);
 				_y = (CInstanceMember<float>)AgentMeta.ParseProperty<float>(paramStrs[1]);
@@ -467,7 +467,7 @@ namespace behaviac
 			public CInstanceConst_TestNamespace_ClassAsValueType(string typeName, string valueStr) : base(typeName, valueStr)
 			{
 				List<string> paramStrs = behaviac.StringUtils.SplitTokensForStruct(valueStr);
-				Debug.Check(paramStrs.Count == 2);
+				Debug.Check(paramStrs != null && paramStrs.Count == 2);
 
 				_x = (CInstanceMember<float>)AgentMeta.ParseProperty<float>(paramStrs[0]);
 				_y = (CInstanceMember<float>)AgentMeta.ParseProperty<float>(paramStrs[1]);
@@ -497,7 +497,7 @@ namespace behaviac
 			public CInstanceConst_TNS_ST_PER_WRK_kEmployee(string typeName, string valueStr) : base(typeName, valueStr)
 			{
 				List<string> paramStrs = behaviac.StringUtils.SplitTokensForStruct(valueStr);
-				Debug.Check(paramStrs.Count == 8);
+				Debug.Check(paramStrs != null && paramStrs.Count == 8);
 
 				_id = (CInstanceMember<int>)AgentMeta.ParseProperty<int>(paramStrs[0]);
 				_name = (CInstanceMember<string>)AgentMeta.ParseProperty<string>(paramStrs[1]);
@@ -540,7 +540,7 @@ namespace behaviac
 			public CInstanceConst_TNS_ST_kCar(string typeName, string valueStr) : base(typeName, valueStr)
 			{
 				List<string> paramStrs = behaviac.StringUtils.SplitTokensForStruct(valueStr);
-				Debug.Check(paramStrs.Count == 3);
+				Debug.Check(paramStrs != null && paramStrs.Count == 3);
 
 				_brand = (CInstanceMember<string>)AgentMeta.ParseProperty<string>(paramStrs[0]);
 				_price = (CInstanceMember<int>)AgentMeta.ParseProperty<int>(paramStrs[1]);
@@ -566,7 +566,7 @@ namespace behaviac
 			public CInstanceConst_StructTest(string typeName, string valueStr) : base(typeName, valueStr)
 			{
 				List<string> paramStrs = behaviac.StringUtils.SplitTokensForStruct(valueStr);
-				Debug.Check(paramStrs.Count == 1);
+				Debug.Check(paramStrs != null && paramStrs.Count == 1);
 
 				_a = (CInstanceMember<bool>)AgentMeta.ParseProperty<bool>(paramStrs[0]);
 			}
