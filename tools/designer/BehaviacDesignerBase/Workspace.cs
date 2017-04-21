@@ -1931,6 +1931,12 @@ namespace Behaviac.Design
                 {
                     XmlElement memberEle = bbfile.CreateElement("enum");
 
+                    member.Namespace = enumType.Namespace;
+                    if (!string.IsNullOrEmpty(enumType.Namespace) && !member.NativeValue.Contains("::"))
+                    {
+                        member.NativeValue = enumType.Namespace + "::" + member.NativeValue;
+                    }
+
                     memberEle.SetAttribute("NativeValue", member.NativeValue);
                     memberEle.SetAttribute("Value", member.Name);
                     memberEle.SetAttribute("DisplayName", member.DisplayName);

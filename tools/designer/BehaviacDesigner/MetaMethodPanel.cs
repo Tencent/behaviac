@@ -554,8 +554,8 @@ namespace Behaviac.Design
                 rowControl.NameTextBox.TextChanged += new EventHandler(NameTextBox_TextChanged);
                 this.tableLayoutPanel.Controls.Add(rowControl.NameTextBox, 1, rowIndex);
 
-                bool isParamArray = Plugin.IsArrayType(param.Type);
-                Type paramType = isParamArray ? param.Type.GetGenericArguments()[0] : param.Type;
+                bool isParamArray = Plugin.IsArrayType(param.Type) || param.Type == typeof(System.Collections.IList);
+                Type paramType = isParamArray && param.Type.GetGenericArguments().Length > 0 ? param.Type.GetGenericArguments()[0] : param.Type;
 
                 rowControl.TypeComboBox = new System.Windows.Forms.ComboBox();
                 rowControl.TypeComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));

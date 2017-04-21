@@ -14,13 +14,15 @@
 #include "behaviac_generated/types/behaviac_types.h"
 
 #if BEHAVIAC_CCDEFINE_ANDROID
-	#define LOGI(...) ((void)__android_log_print(ANDROID_LOG_INFO, "tutorial_3", __VA_ARGS__))
+#include <android/log.h>
+
+#define LOGI(...) ((void)__android_log_print(ANDROID_LOG_INFO, "tutorial_3", __VA_ARGS__))
 #else
-	#define LOGI printf
+#define LOGI printf
 
 #if BEHAVIAC_CCDEFINE_MSVC
-	#include <windows.h>
-	#include <tchar.h>
+#include <windows.h>
+#include <tchar.h>
 #endif
 
 #endif
@@ -47,8 +49,6 @@ static void SetExePath()
 #endif
 }
 #endif
-
-using namespace std;
 
 FirstAgent* g_FirstAgent = NULL;
 SecondAgent* g_SecondAgent = NULL;

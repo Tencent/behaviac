@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tutorial_8", "..\tutorial_8
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tutorial_9", "..\tutorial_9\cs\tutorial_9.csproj", "{E795F145-9985-4A6A-87D4-385310734A21}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tutorial_10", "..\tutorial_10\cs\tutorial_10.csproj", "{E866894F-8921-4BFB-8023-3BC10A7AFBA0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -157,6 +159,16 @@ Global
 		{E795F145-9985-4A6A-87D4-385310734A21}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{E795F145-9985-4A6A-87D4-385310734A21}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{E795F145-9985-4A6A-87D4-385310734A21}.Release|Win32.ActiveCfg = Release|Any CPU
+		{E866894F-8921-4BFB-8023-3BC10A7AFBA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E866894F-8921-4BFB-8023-3BC10A7AFBA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E866894F-8921-4BFB-8023-3BC10A7AFBA0}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{E866894F-8921-4BFB-8023-3BC10A7AFBA0}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{E866894F-8921-4BFB-8023-3BC10A7AFBA0}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{E866894F-8921-4BFB-8023-3BC10A7AFBA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E866894F-8921-4BFB-8023-3BC10A7AFBA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E866894F-8921-4BFB-8023-3BC10A7AFBA0}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{E866894F-8921-4BFB-8023-3BC10A7AFBA0}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{E866894F-8921-4BFB-8023-3BC10A7AFBA0}.Release|Win32.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

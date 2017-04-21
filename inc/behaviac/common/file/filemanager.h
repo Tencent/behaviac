@@ -17,11 +17,9 @@
 #include "behaviac/common/base.h"
 #include "behaviac/common/container/string.h"
 #include "behaviac/common/thread/mutex_lock.h"
-#include "behaviac/common/file/filesystem.h"
+#include "behaviac/common/file/file.h"
 
 namespace behaviac {
-    class IFile;
-
     //CFileManager is used to access files.
 
     //CFileManager is used internally as a singleton.
@@ -46,7 +44,7 @@ namespace behaviac {
 
         virtual void FileClose(IFile* file);
         virtual bool FileExists(const char* fileName);
-        virtual bool FileExists(behaviac::string filePath, behaviac::string ext);
+		virtual bool FileExists(const behaviac::string& filePath, const behaviac::string& ext);
 
         virtual uint64_t FileGetSize(const char* fileName);
         virtual behaviac::wstring GetCurrentWorkingDirectory();

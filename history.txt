@@ -1,4 +1,10 @@
-2017-4-11  3.6.29   
+2017-4-20  3.6.30
+    Supporot the hot reload of the meta file.
+    Ignore the System_Object as the type of the property.
+    Fix a bug for the IfElse node.
+    Fix a bug for generating the namespace of the enum.
+
+2017-4-11  3.6.29
     Fix a bug of compiling error for GCC.
 
 2017-4-10  3.6.28

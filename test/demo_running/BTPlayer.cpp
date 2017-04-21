@@ -14,15 +14,13 @@
 #include "BTPlayer.h"
 #include <iostream>
 
-using namespace std;
-using namespace behaviac;
-
 #if BEHAVIAC_CCDEFINE_ANDROID
-	#define LOGI(...) ((void)__android_log_print(ANDROID_LOG_INFO, "demo_running", __VA_ARGS__))
-#else
-	#define LOGI printf
-#endif
+#include <android/log.h>
 
+#define LOGI(...) ((void)__android_log_print(ANDROID_LOG_INFO, "demo_running", __VA_ARGS__))
+#else
+#define LOGI printf
+#endif
 
 CBTPlayer::CBTPlayer()
 {

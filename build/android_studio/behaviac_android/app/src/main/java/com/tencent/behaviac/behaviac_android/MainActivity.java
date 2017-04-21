@@ -8,7 +8,8 @@ public class MainActivity extends AppCompatActivity {
 
     // Used to load the 'native-lib' library on application startup.
     static {
-        System.loadLibrary("native-lib");
+        System.loadLibrary("behaviac_gcc_debug");
+        System.loadLibrary("tutorial_11_gcc_debug");
     }
 
     @Override

@@ -81,10 +81,12 @@ namespace behaviac {
     void CFileManager::FileClose(IFile* file) {
         BEHAVIAC_DELETE(file);
     }
-    bool CFileManager::FileExists(behaviac::string filePath, behaviac::string ext) {
+
+	bool CFileManager::FileExists(const behaviac::string& filePath, const behaviac::string& ext) {
         behaviac::string strFilename = filePath + ext;
         return this->FileExists(strFilename.c_str());
     }
+
     bool CFileManager::FileExists(const char* fileName) {
         if (CFileSystem::FileExist(fileName)) {
             return true;
@@ -116,6 +118,4 @@ namespace behaviac {
 
         return fileSize;
     }
-
-
 }//namespace behaviac

@@ -2,28 +2,28 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="test">
-      <UniqueIdentifier>{FEA27D04-3F4E-F441-B49D-628790C9893C}</UniqueIdentifier>
+      <UniqueIdentifier>{647BCC6E-30B1-CD4D-9C79-99F16925BB63}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running">
-      <UniqueIdentifier>{B5CFDC3F-9DBA-214B-90AD-8C33DD80BAD3}</UniqueIdentifier>
+      <UniqueIdentifier>{DF5E5FB1-BB2B-974C-B523-595D3E5ADBBB}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac">
-      <UniqueIdentifier>{3DB9AC87-0AD1-7540-BED4-226BE698CF97}</UniqueIdentifier>
+      <UniqueIdentifier>{EC22B888-2618-974A-B318-9FF5033AFFD8}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac\exported">
-      <UniqueIdentifier>{5A2BE01F-A721-5143-9F72-08B36A3E81CA}</UniqueIdentifier>
+      <UniqueIdentifier>{834D122B-5B76-1740-BE38-157D032A4076}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac\exported\behaviac_generated">
-      <UniqueIdentifier>{69EBED2B-81AD-7447-BAE8-DAE056A11970}</UniqueIdentifier>
+      <UniqueIdentifier>{ABCAC552-850E-3645-9DB1-01DEF95B4B9D}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac\exported\behaviac_generated\behaviors">
-      <UniqueIdentifier>{9D08404C-A443-9640-8101-BE8843913EA7}</UniqueIdentifier>
+      <UniqueIdentifier>{4DCCE6D6-6E62-7B4C-8A33-AD66D4121B23}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac\exported\behaviac_generated\types">
-      <UniqueIdentifier>{188815DE-8585-AB4E-B9B4-732C53A84440}</UniqueIdentifier>
+      <UniqueIdentifier>{6549CB60-87D4-334C-B3A5-4E986CB8EE1B}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac\exported\behaviac_generated\types\internal">
-      <UniqueIdentifier>{6B53B211-1599-AA44-AD59-4C7F06FB4C42}</UniqueIdentifier>
+      <UniqueIdentifier>{ACB2691C-F7A9-3E43-9018-EC96DB302597}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

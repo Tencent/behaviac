@@ -780,9 +780,12 @@ namespace Behaviac.Design
                         Thread.Sleep(100);
                     }
                 }
+                else if (behaviorFilename.EndsWith(".meta.xml") || behaviorFilename.EndsWith(".bb.xml"))
+                {
+                    this.Invoke(new System.EventHandler(reloadWorkspaceMenuItem_Click));
+                }
 
                 ms_onchanged_flag++;
-
             }
             else
             {

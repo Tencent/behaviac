@@ -233,12 +233,6 @@
     </Compile>
     <Compile Include="MessageHandler.cs" />
     <Compile Include="MruMenu.cs" />
-    <Compile Include="ParSettingsDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ParSettingsDialog.Designer.cs">
-      <DependentUpon>ParSettingsDialog.cs</DependentUpon>
-    </Compile>
     <Compile Include="TimelineDock.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -507,12 +501,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NodeTreeList.zh-CN.resx">
       <DependentUpon>NodeTreeList.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ParSettingsDialog.resx">
-      <DependentUpon>ParSettingsDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ParSettingsDialog.zh-CN.resx">
-      <DependentUpon>ParSettingsDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.zh-CN.resx">
       <SubType>Designer</SubType>

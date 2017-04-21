@@ -31,7 +31,7 @@ cmake_minimum_required (VERSION 2.8)
 # set(CMAKE_CONFIGURATION_TYPES "Debug;Release;Profile" CACHE STRING "" FORCE) 
 set(CMAKE_CONFIGURATION_TYPES "Debug;Release" CACHE STRING "" FORCE) 
 
-set (BEHAVIAC_PACKAGE_VERSION 3.6.29)
+set (BEHAVIAC_PACKAGE_VERSION 3.6.30)
 
 #option( BUILD_SHARED_LIBS "set to OFF to build static libraries" ON )
 SET(BUILD_SHARED_LIBS ON CACHE BOOL "set to OFF to build static libraries")
@@ -333,12 +333,16 @@ configure_file (
   NEWLINE_STYLE WIN32
   )
 
-set(LIB_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
+if (NOT BEHAVIAC_ANDROID_STUDIO)
+    set(LIB_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
+endif()
 set(BINARY_PATH ${PROJECT_SOURCE_DIR}/bin)
 
 set( CMAKE_RUNTIME_OUTPUT_DIRECTORY ${BINARY_PATH} )
-set( CMAKE_LIBRARY_OUTPUT_DIRECTORY ${LIB_OUTPUT_PATH} )
-set( CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${LIB_OUTPUT_PATH} )
+if (NOT BEHAVIAC_ANDROID_STUDIO)
+    set( CMAKE_LIBRARY_OUTPUT_DIRECTORY ${LIB_OUTPUT_PATH} )
+    set( CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${LIB_OUTPUT_PATH} )
+endif()
 
 set( CMAKE_DEBUG_POSTFIX "_${COMPILE_POSTFIX}_debug" )
 set( CMAKE_RELEASE_POSTFIX "_${COMPILE_POSTFIX}_release" )
@@ -347,8 +351,10 @@ foreach( OUTPUTCONFIG ${CMAKE_CONFIGURATION_TYPES} )
     string( TOUPPER ${OUTPUTCONFIG} OUTPUTCONFIG )
     set( CMAKE_RUNTIME_OUTPUT_DIRECTORY_${OUTPUTCONFIG} ${BINARY_PATH} )
 
+if (NOT BEHAVIAC_ANDROID_STUDIO)
     set( CMAKE_LIBRARY_OUTPUT_DIRECTORY_${OUTPUTCONFIG} ${LIB_OUTPUT_PATH} )
     set( CMAKE_ARCHIVE_OUTPUT_DIRECTORY_${OUTPUTCONFIG} ${LIB_OUTPUT_PATH} )
+endif()
 endforeach( OUTPUTCONFIG CMAKE_CONFIGURATION_TYPES )
 
 set( SHARED_LIB "" )
@@ -434,4 +440,8 @@ if (NOT BEHAVIAC_ANDROID_STUDIO)
 	add_subdirectory ("${PROJECT_SOURCE_DIR}/tutorials/tutorial_7/cpp")
 	add_subdirectory ("${PROJECT_SOURCE_DIR}/tutorials/tutorial_8/cpp")
 	add_subdirectory ("${PROJECT_SOURCE_DIR}/tutorials/tutorial_9/cpp")
+	add_subdirectory ("${PROJECT_SOURCE_DIR}/tutorials/tutorial_10/cpp")
+	add_subdirectory ("${PROJECT_SOURCE_DIR}/tutorials/tutorial_11/cpp")
+else()
+	add_subdirectory ("${PROJECT_SOURCE_DIR}/tutorials/tutorial_11/cpp")
 endif()

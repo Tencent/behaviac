@@ -26,14 +26,14 @@ public class FirstAgent : behaviac.Agent
 		return p1;
 	}
 
-	private void Start()
+	public void Start()
 	{
 ///<<< BEGIN WRITING YOUR CODE Start
         count = 0;
 ///<<< END WRITING YOUR CODE
 	}
 
-	private behaviac.EBTStatus Wait()
+	public behaviac.EBTStatus Wait()
 	{
 ///<<< BEGIN WRITING YOUR CODE Wait
         count++;

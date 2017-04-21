@@ -73,27 +73,26 @@ namespace behaviac {
     EBTStatus IfElseTask::update(Agent* pAgent, EBTStatus childStatus) {
         BEHAVIAC_ASSERT(this->m_children.size() == 3);
 
-        //called by tickCurrentNode
-        if (childStatus != BT_RUNNING) {
-            return childStatus;
-        }
+		EBTStatus conditionResult = BT_INVALID;
 
-        if (this->m_activeChildIndex == CompositeTask::InvalidChildIndex) {
+		if (childStatus == BT_SUCCESS || childStatus == BT_FAILURE) {
+			// if the condition returned running then ended with childStatus
+			conditionResult = childStatus;
+		}
+
+		if (this->m_activeChildIndex == CompositeTask::InvalidChildIndex || conditionResult != BT_INVALID) {
             BehaviorTask* pCondition = this->m_children[0];
 
-            EBTStatus conditionResult = pCondition->exec(pAgent);
-
-            //BEHAVIAC_ASSERT (conditionResult == BT_SUCCESS || conditionResult == BT_FAILURE,
-            //	"conditionResult should be either BT_SUCCESS of BT_FAILURE");
+			if (conditionResult == BT_INVALID) {
+				// condition has not been checked
+				conditionResult = pCondition->exec(pAgent);
+			}
 
             if (conditionResult == BT_SUCCESS) {
-                //BehaviorTask* pIf = this->m_children[1];
-
+				// if
                 this->m_activeChildIndex = 1;
-
             } else if (conditionResult == BT_FAILURE) {
-                //BehaviorTask* pElse = this->m_children[2];
-
+				// else
                 this->m_activeChildIndex = 2;
             }
         }

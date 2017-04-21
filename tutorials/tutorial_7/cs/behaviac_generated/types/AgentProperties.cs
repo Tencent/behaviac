@@ -188,7 +188,7 @@ namespace behaviac
 
 		public override bool Load()
 		{
-			AgentMeta.TotalSignature = 1768708687;
+			AgentMeta.TotalSignature = 3155468577;
 
 			AgentMeta meta;
 
@@ -203,18 +203,18 @@ namespace behaviac
 			meta.RegisterMethod(502968959, new CMethod_behaviac_Agent_VectorRemove());
 
 			// FirstAgent
-			meta = new AgentMeta(1318449072);
+			meta = new AgentMeta(2701430383);
 			AgentMeta._AgentMetas_[1778122110] = meta;
 			meta.RegisterMemberProperty(2082220067, new CMemberProperty<int>("p1", delegate(Agent self, int value) { ((FirstAgent)self)._set_p1(value); }, delegate(Agent self) { return ((FirstAgent)self)._get_p1(); }));
-			meta.RegisterMethod(3345343196, new CAgentMethodVoid<int>(delegate(Agent self, int param0) { }) /* event_task */);
 			meta.RegisterMethod(1045109914, new CAgentStaticMethodVoid<string>(delegate(string param0) { FirstAgent.LogMessage(param0); }));
-			meta.RegisterMethod(664995375, new CAgentMethodVoid(delegate(Agent self) { AgentMetaVisitor.ExecuteMethod(self, "Start", null); }));
+			meta.RegisterMethod(664995375, new CAgentMethodVoid(delegate(Agent self) { ((FirstAgent)self).Start(); }));
+			meta.RegisterMethod(2065006847, new CAgentMethodVoid<int>(delegate(Agent self, int param0) { }) /* t1 */);
 			meta.RegisterMethod(2521019022, new CMethod_behaviac_Agent_VectorAdd());
 			meta.RegisterMethod(2306090221, new CMethod_behaviac_Agent_VectorClear());
 			meta.RegisterMethod(3483755530, new CMethod_behaviac_Agent_VectorContains());
 			meta.RegisterMethod(505785840, new CMethod_behaviac_Agent_VectorLength());
 			meta.RegisterMethod(502968959, new CMethod_behaviac_Agent_VectorRemove());
-			meta.RegisterMethod(994837275, new CAgentMethod<behaviac.EBTStatus>(delegate(Agent self) { return (behaviac.EBTStatus)AgentMetaVisitor.ExecuteMethod(self, "Wait", null); }));
+			meta.RegisterMethod(994837275, new CAgentMethod<behaviac.EBTStatus>(delegate(Agent self) { return ((FirstAgent)self).Wait(); }));
 
 			AgentMeta.Register<behaviac.Agent>("behaviac.Agent");
 			AgentMeta.Register<FirstAgent>("FirstAgent");

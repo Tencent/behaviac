@@ -101,32 +101,32 @@ namespace behaviac
             {
                 Debug.Check(this.m_children.Count == 3);
 
-                if (childStatus != EBTStatus.BT_RUNNING)
-                {
-                    Debug.Check(this.m_activeChildIndex != CompositeTask.InvalidChildIndex);
+                EBTStatus conditionResult = EBTStatus.BT_INVALID;
 
-                    return childStatus;
+                if (childStatus == EBTStatus.BT_SUCCESS || childStatus == EBTStatus.BT_FAILURE)
+                {
+                    // if the condition returned running then ended with childStatus
+                    conditionResult = childStatus;
                 }
 
-                if (this.m_activeChildIndex == CompositeTask.InvalidChildIndex)
+                if (this.m_activeChildIndex == CompositeTask.InvalidChildIndex || conditionResult != EBTStatus.BT_INVALID)
                 {
                     BehaviorTask pCondition = this.m_children[0];
 
-                    EBTStatus conditionResult = pCondition.exec(pAgent);
-
-                    //Debug.Check (conditionResult == EBTStatus.BT_SUCCESS || conditionResult == EBTStatus.BT_FAILURE,
-                    //	"conditionResult should be either EBTStatus.BT_SUCCESS of EBTStatus.BT_FAILURE");
+                    if (conditionResult == EBTStatus.BT_INVALID)
+                    {
+                        // condition has not been checked
+                        conditionResult = pCondition.exec(pAgent);
+                    }
 
                     if (conditionResult == EBTStatus.BT_SUCCESS)
                     {
-                        //BehaviorTask pIf = this.m_children[1];
-
+                        // if
                         this.m_activeChildIndex = 1;
                     }
                     else if (conditionResult == EBTStatus.BT_FAILURE)
                     {
-                        //BehaviorTask pElse = this.m_children[2];
-
+                        // else
                         this.m_activeChildIndex = 2;
                     }
                 }
