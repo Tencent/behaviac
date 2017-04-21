@@ -41,7 +41,9 @@ namespace PluginBehaviac.NodeExporters
 
             if (task.Prototype != null)
             {
-                stream.WriteLine("{0}\t\t\tthis->m_task = AgentMeta::ParseMethod(\"{1}\");", indent, task.Prototype.GetExportValue());
+                string method = task.Prototype.GetExportValue();
+                method = method.Replace("\"", "\\\"");
+                stream.WriteLine("{0}\t\t\tthis->m_task = AgentMeta::ParseMethod(\"{1}\");", indent, method);
                 stream.WriteLine("{0}\t\t\tBEHAVIAC_ASSERT(this->m_task != NULL);", indent);
                 stream.WriteLine("{0}\t\t\tthis->m_bHTN = {1};", indent, task.IsHTN ? "true" : "false");
             }

@@ -109,7 +109,9 @@ namespace PluginBehaviac.NodeExporters
 
             if (referencedBehavior.Task != null)
             {
-                stream.WriteLine("{0}\t\t\tm_taskMethod = AgentMeta::ParseMethod(\"{1}\");", indent, referencedBehavior.Task.GetExportValue());
+                string method = referencedBehavior.Task.GetExportValue();
+                method = method.Replace("\"", "\\\"");
+                stream.WriteLine("{0}\t\t\tm_taskMethod = AgentMeta::ParseMethod(\"{1}\");", indent, method);
                 stream.WriteLine("{0}\t\t\tBEHAVIAC_ASSERT(m_taskMethod);", indent);
             }
         }
