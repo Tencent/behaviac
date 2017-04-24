@@ -652,6 +652,15 @@ namespace Behaviac.Design.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Error.
+        /// </summary>
+        internal static string Error {
+            get {
+                return ResourceManager.GetString("Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Error Check.
         /// </summary>
         internal static string ErrorCheck {
@@ -1324,6 +1333,15 @@ namespace Behaviac.Design.Properties {
         internal static string NormalMode {
             get {
                 return ResourceManager.GetString("NormalMode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You should create or load a workspace firstly!.
+        /// </summary>
+        internal static string NullWorkspace {
+            get {
+                return ResourceManager.GetString("NullWorkspace", resourceCulture);
             }
         }
         

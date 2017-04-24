@@ -1,8 +1,14 @@
+2017-4-24  3.6.31
+    Fix a bug for generating the codes of the Task and Event.
+    Fix a bug for the hotreload of the meta file.
+    Add the tutorial_12.
+
 2017-4-20  3.6.30
     Supporot the hot reload of the meta file.
     Ignore the System_Object as the type of the property.
     Fix a bug for the IfElse node.
     Fix a bug for generating the namespace of the enum.
+    Add the tutorial_10 and tutorial_11.
 
 2017-4-11  3.6.29
     Fix a bug of compiling error for GCC.

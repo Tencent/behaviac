@@ -179,13 +179,6 @@ namespace Behaviac.Design
             }
         }
 
-        private System.IO.FileSystemWatcher m_Watcher = new FileSystemWatcher();
-
-        public void EnableFileWatcher(bool bEnable)
-        {
-            m_Watcher.EnableRaisingEvents = bEnable;
-        }
-
         private void MainWindow_Shown(object sender, EventArgs e)
         {
             this.WindowState = Settings.Default.MainWindowState;
@@ -694,15 +687,7 @@ namespace Behaviac.Design
                     behaviorTreeList.BehaviorFolder = workspace.SourceFolder;
                     Behavior.BehaviorPath = behaviorTreeList.BehaviorFolder;
 
-                    m_Watcher.Path = behaviorTreeList.BehaviorFolder;
-                    m_Watcher.Filter = "*.xml";
-                    m_Watcher.IncludeSubdirectories = true;
-                    m_Watcher.NotifyFilter = NotifyFilters.LastWrite;
-                    //m_Watcher.SynchronizingObject = behaviorTreeList;
-
-                    m_Watcher.Changed -= OnChanged;
-                    m_Watcher.Changed += OnChanged;
-                    m_Watcher.EnableRaisingEvents = true;
+                    Workspace.InitFileWatcher(behaviorTreeList.BehaviorFolder, OnChanged);
 
                     postSetWorkspace();
 
@@ -780,10 +765,10 @@ namespace Behaviac.Design
                         Thread.Sleep(100);
                     }
                 }
-                //else if (behaviorFilename.EndsWith(".meta.xml") || behaviorFilename.EndsWith(".bb.xml"))
-                //{
-                //    this.Invoke(new System.EventHandler(reloadWorkspaceMenuItem_Click));
-                //}
+                else if (behaviorFilename.EndsWith(".meta.xml") || behaviorFilename.EndsWith(".bb.xml"))
+                {
+                    this.Invoke(new System.EventHandler(reloadWorkspaceMenuItem_Click));
+                }
 
                 ms_onchanged_flag++;
             }
@@ -1854,6 +1839,10 @@ namespace Behaviac.Design
         private void editWorkspaceToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Workspace ws = Workspace.Current;
+            if (ws == null)
+            {
+                return;
+            }
 
             using(EditWorkspaceDialog dialog = new EditWorkspaceDialog())
             {

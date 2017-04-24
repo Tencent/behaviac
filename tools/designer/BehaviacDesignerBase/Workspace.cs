@@ -1706,6 +1706,27 @@ namespace Behaviac.Design
             }
         }
 
+        private static System.IO.FileSystemWatcher _fileWatcher = new FileSystemWatcher();
+
+        public static void EnableFileWatcher(bool bEnable)
+        {
+            _fileWatcher.EnableRaisingEvents = bEnable;
+        }
+
+        public static void InitFileWatcher(string folder, FileSystemEventHandler eventHandler)
+        {
+            _fileWatcher.Path = folder;
+            _fileWatcher.Filter = "*.xml";
+            _fileWatcher.IncludeSubdirectories = true;
+            _fileWatcher.NotifyFilter = NotifyFilters.LastWrite;
+            //_fileWatcher.SynchronizingObject = behaviorTreeList;
+
+            _fileWatcher.Changed -= eventHandler;
+            _fileWatcher.Changed += eventHandler;
+
+            EnableFileWatcher(true);
+        }
+
         public static bool SaveMeta(Workspace ws)
         {
             string metaPath = ws.getSourceMetaPath(true);
@@ -1729,16 +1750,17 @@ namespace Behaviac.Design
                 XmlDeclaration declaration = metaFile.CreateXmlDeclaration("1.0", "utf-8", null);
                 metaFile.AppendChild(declaration);
 
-                //XmlComment comment = metaFile.CreateComment("EXPORTED BY TOOL, DON'T MODIFY IT!");
-                //metaFile.AppendChild(comment);
-
                 XmlElement meta = metaFile.CreateElement("meta");
                 metaFile.AppendChild(meta);
 
                 SaveTypes(metaFile, meta);
                 SaveAgents(metaFile, meta);
 
+                EnableFileWatcher(false);
+
                 metaFile.Save(metaPath);
+
+                EnableFileWatcher(true);
 
                 ws.IsBlackboardDirty = false;
 
@@ -1749,6 +1771,8 @@ namespace Behaviac.Design
                 string msgError = string.Format(Resources.SaveFileError, metaPath, ex.Message);
                 MessageBox.Show(msgError, Resources.SaveError, MessageBoxButtons.OK);
             }
+
+            EnableFileWatcher(true);
 
             return false;
         }

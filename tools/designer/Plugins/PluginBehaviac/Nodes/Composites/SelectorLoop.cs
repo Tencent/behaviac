@@ -29,6 +29,14 @@ namespace PluginBehaviac.Nodes
         {
         }
 
+        public override string DocLink
+        {
+            get
+            {
+                return "http://www.behaviac.com/selectormonitor/";
+            }
+        }
+
         protected override void CreateInterruptChild()
         {
         }

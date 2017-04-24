@@ -2,25 +2,25 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="test">
-      <UniqueIdentifier>{232FC832-3051-044C-A3E4-4BDBFD8AC1AF}</UniqueIdentifier>
+      <UniqueIdentifier>{DBB26D27-2A1C-7748-8EBA-9273E68CFF92}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\btremotetest">
-      <UniqueIdentifier>{2A87E192-7E83-DF43-9EA8-10CD665A89EF}</UniqueIdentifier>
+      <UniqueIdentifier>{826A4A56-DD5C-C347-A9BF-33AA710E635A}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\btremotetest\workspace">
-      <UniqueIdentifier>{9019AF34-12C1-8D45-BF1F-AD9D508D5D81}</UniqueIdentifier>
+      <UniqueIdentifier>{122AB4CB-7E97-184D-B306-47863172FDD6}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\btremotetest\workspace\exported">
-      <UniqueIdentifier>{EAC2464D-D974-EA47-8380-6ED13092C491}</UniqueIdentifier>
+      <UniqueIdentifier>{8063D98B-D5FF-0842-965D-52A511E0BA3A}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\btremotetest\workspace\exported\behaviac_generated">
-      <UniqueIdentifier>{E9551AF8-1D44-8C4F-8457-F875E5F25179}</UniqueIdentifier>
+      <UniqueIdentifier>{04E4A572-A448-A043-93D2-EF0FE6FECC44}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\btremotetest\workspace\exported\behaviac_generated\types">
-      <UniqueIdentifier>{3EB8389F-9772-5747-88C1-0C20AE1418A6}</UniqueIdentifier>
+      <UniqueIdentifier>{F248A0E8-F505-F640-9A3C-9CF9216AA8DC}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\btremotetest\workspace\exported\behaviac_generated\types\internal">
-      <UniqueIdentifier>{8A3177B8-992A-CE4D-B981-8E3C47EFB388}</UniqueIdentifier>
+      <UniqueIdentifier>{26FA38ED-8639-E645-9300-21F2E6BC89C8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

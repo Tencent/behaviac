@@ -41,8 +41,11 @@ namespace PluginBehaviac.NodeExporters
             string triggerMode = (evt.TriggerMode == TriggerMode.Transfer) ? "TriggerMode.TM_Transfer" : "TriggerMode.TM_Return";
             string triggeredOnce = evt.TriggeredOnce ? "true" : "false";
 
+            string method = evt.Task.GetExportValue();
+            method = method.Replace("\"", "\\\"");
+
             stream.WriteLine("{0}\t\t\tthis.Initialize(\"{1}\", \"{2}\", {3}, {4});",
-                             indent, evt.Task.GetExportValue(), evt.ReferenceFilename, triggerMode, triggeredOnce);
+                             indent, method, evt.ReferenceFilename, triggerMode, triggeredOnce);
         }
 
         protected override void GenerateMethod(Attachment attachment, StringWriter stream, string indent)

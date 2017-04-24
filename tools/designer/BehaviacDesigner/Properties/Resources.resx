@@ -756,4 +756,10 @@ You should export all files with the latest designer.
     <value>This type has already been used.
 Are you sure to continue?</value>
   </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="NullWorkspace" xml:space="preserve">
+    <value>You should create or load a workspace firstly!</value>
+  </data>
 </root>

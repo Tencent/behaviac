@@ -1075,6 +1075,12 @@ namespace Behaviac.Design
 
         public void NewBehavior()
         {
+            if (Workspace.Current == null)
+            {
+                MessageBox.Show(Resources.NullWorkspace, Resources.Error, MessageBoxButtons.OK);
+                return;
+            }
+
             // create a new behavior node with a unique label
             string label = GetUniqueLabel("NewBehavior", _lastNewBehavior, out _lastNewBehavior);
             BehaviorNode behavior = Node.CreateBehaviorNode(label);
@@ -1556,7 +1562,7 @@ namespace Behaviac.Design
 
             try
             {
-                MainWindow.Instance.EnableFileWatcher(false);
+                Workspace.EnableFileWatcher(false);
 
                 // store which behavior is currently shown
                 BehaviorNode currNode = BehaviorTreeViewDock.LastFocused == null ? null : BehaviorTreeViewDock.LastFocused.BehaviorTreeView.RootNode;
@@ -1701,7 +1707,7 @@ namespace Behaviac.Design
 
             finally
             {
-                MainWindow.Instance.EnableFileWatcher(true);
+                Workspace.EnableFileWatcher(true);
             }
 
             return FileManagers.SaveResult.Succeeded;
@@ -2569,6 +2575,12 @@ namespace Behaviac.Design
         /// <returns>Returns true if the user did not abort and all behaviors could be exported.</returns>
         internal bool ExportBehavior(BehaviorNode node, string format = "", bool ignoreErrors = false, TreeNode selectedTreeRoot = null)
         {
+            if (Workspace.Current == null)
+            {
+                MessageBox.Show(Resources.NullWorkspace, Resources.Error, MessageBoxButtons.OK);
+                return false;
+            }
+
             DateTime preTime = DateTime.Now;
 
             // save modified behaviors
@@ -3321,7 +3333,7 @@ namespace Behaviac.Design
             // save all the newly created behaviors
             foreach (BehaviorNode node in _newBehaviors)
             {
-                MainWindow.Instance.EnableFileWatcher(false);
+                Workspace.EnableFileWatcher(false);
 
                 try
                 {
@@ -3339,7 +3351,7 @@ namespace Behaviac.Design
 
                 finally
                 {
-                    MainWindow.Instance.EnableFileWatcher(true);
+                    Workspace.EnableFileWatcher(true);
                 }
             }
 
@@ -3348,7 +3360,7 @@ namespace Behaviac.Design
             {
                 try
                 {
-                    MainWindow.Instance.EnableFileWatcher(false);
+                    Workspace.EnableFileWatcher(false);
 
                     //SaveBehavior(node, false);
                     if (node.FileManager != null)
@@ -3364,7 +3376,7 @@ namespace Behaviac.Design
 
                 finally
                 {
-                    MainWindow.Instance.EnableFileWatcher(true);
+                    Workspace.EnableFileWatcher(true);
                 }
             }
         }

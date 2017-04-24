@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="tutorials">
+      <UniqueIdentifier>{839DDFB4-6CCA-9F4F-A255-510357EBFB69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tutorials\tutorial_12">
+      <UniqueIdentifier>{90720E00-B522-2546-A109-C05590A89CB9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tutorials\tutorial_12\cpp">
+      <UniqueIdentifier>{81A6529B-7349-CE4C-AECB-454A5D0987DA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tutorials\tutorial_12\cpp\behaviac_generated">
+      <UniqueIdentifier>{34A3486A-F71C-9B46-B5FD-1030352D7AE2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tutorials\tutorial_12\cpp\behaviac_generated\types">
+      <UniqueIdentifier>{3D886EBD-0537-4A45-AE6F-4112E5D94D05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tutorials\tutorial_12\cpp\behaviac_generated\types\internal">
+      <UniqueIdentifier>{ABC65A5C-3F66-4D4B-827B-5DF39963C556}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\tutorials\tutorial_12\cpp\behaviac_generated\types\behaviac_types.h">
+      <Filter>tutorials\tutorial_12\cpp\behaviac_generated\types</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tutorials\tutorial_12\cpp\behaviac_generated\types\internal\behaviac_agent_headers.h">
+      <Filter>tutorials\tutorial_12\cpp\behaviac_generated\types\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tutorials\tutorial_12\cpp\behaviac_generated\types\internal\behaviac_agent_member_visitor.h">
+      <Filter>tutorials\tutorial_12\cpp\behaviac_generated\types\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tutorials\tutorial_12\cpp\behaviac_generated\types\internal\behaviac_agent_meta.h">
+      <Filter>tutorials\tutorial_12\cpp\behaviac_generated\types\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tutorials\tutorial_12\cpp\behaviac_generated\types\internal\behaviac_headers.h">
+      <Filter>tutorials\tutorial_12\cpp\behaviac_generated\types\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tutorials\tutorial_12\cpp\behaviac_generated\types\internal\FirstAgent.h">
+      <Filter>tutorials\tutorial_12\cpp\behaviac_generated\types\internal</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\tutorials\tutorial_12\cpp\tutorial_12.cpp">
+      <Filter>tutorials\tutorial_12\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tutorials\tutorial_12\cpp\behaviac_generated\types\internal\behaviac_agent_meta.cpp">
+      <Filter>tutorials\tutorial_12\cpp\behaviac_generated\types\internal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tutorials\tutorial_12\cpp\behaviac_generated\types\internal\FirstAgent.cpp">
+      <Filter>tutorials\tutorial_12\cpp\behaviac_generated\types\internal</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

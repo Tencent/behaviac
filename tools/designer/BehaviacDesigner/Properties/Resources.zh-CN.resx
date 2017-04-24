@@ -746,4 +746,10 @@
   <data name="ModifyTypeWarning" xml:space="preserve">
     <value>该类型已被使用中，确定继续吗？</value>
   </data>
+  <data name="Error" xml:space="preserve">
+    <value>错误</value>
+  </data>
+  <data name="NullWorkspace" xml:space="preserve">
+    <value>首先需要加载或创建工作区！</value>
+  </data>
 </root>

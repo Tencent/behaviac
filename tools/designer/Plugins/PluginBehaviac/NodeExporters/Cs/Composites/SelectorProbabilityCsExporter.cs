@@ -43,8 +43,10 @@ namespace PluginBehaviac.NodeExporters
 
             if (sel.RandomGenerator != null)
             {
-                stream.WriteLine("{0}\t\t\tthis.Initialize(\"{1}\");",
-                                 indent, sel.RandomGenerator.GetExportValue());
+                string method = sel.RandomGenerator.GetExportValue();
+                method = method.Replace("\"", "\\\"");
+
+                stream.WriteLine("{0}\t\t\tthis.Initialize(\"{1}\");", indent, method);
             }
         }
 
