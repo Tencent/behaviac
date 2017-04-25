@@ -700,8 +700,8 @@ namespace behaviac {
         }
 
         virtual bool Compare(behaviac::Agent* self, IInstanceMember* right, EOperatorType comparisonType) const {
-            const RealBaseType* leftValue = (const RealBaseType*)this->GetValue(self);
-            const RealBaseType* rightValue = (const RealBaseType*)right->GetValue(self);
+			const RealBaseType* leftValue = (const RealBaseType*)this->GetValue(self, behaviac::Meta::IsVector<RealBaseType>::Result, behaviac::GetClassTypeNumberId<RealBaseType>());
+			const RealBaseType* rightValue = (const RealBaseType*)right->GetValue(self, behaviac::Meta::IsVector<RealBaseType>::Result, behaviac::GetClassTypeNumberId<RealBaseType>());
 
             return OperationUtils::Compare(*leftValue, *rightValue, comparisonType);
         }
