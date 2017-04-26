@@ -16,11 +16,14 @@
 #include "behaviac/behaviortree/nodes/composites/withprecondition.h"
 
 namespace behaviac {
-    SelectorLoop::SelectorLoop()// : m_preconditions(0), m_actions(0)
-    {}
+    SelectorLoop::SelectorLoop()
+		: m_bResetChildren(false)
+    {
+	}
 
     SelectorLoop::~SelectorLoop()
-    {}
+    {
+	}
 
     bool SelectorLoop::IsManagingChildrenAsSubTrees() const {
         return true;
@@ -28,6 +31,15 @@ namespace behaviac {
 
     void SelectorLoop::load(int version, const char* agentType, const properties_t& properties) {
         super::load(version, agentType, properties);
+
+		for (propertie_const_iterator_t it = properties.begin(); it != properties.end(); ++it) {
+			const property_t& p = (*it);
+
+			if (StringUtils::StringEqual(p.name, "ResetChildren")) {
+				this->m_bResetChildren = StringUtils::StringEqualNoCase(p.value, "true");
+				break;
+			}
+		}
     }
 
     bool SelectorLoop::IsValid(Agent* pAgent, BehaviorTask* pTask) const {
@@ -134,13 +146,28 @@ namespace behaviac {
 
         //clean up the current ticking action tree
         if (index != (uint32_t) - 1) {
-            if (this->m_activeChildIndex != CompositeTask::InvalidChildIndex &&
-                this->m_activeChildIndex != (int)index) {
-                WithPreconditionTask* pCurrentSubTree = (WithPreconditionTask*)this->m_children[this->m_activeChildIndex];
-                BEHAVIAC_ASSERT(WithPreconditionTask::DynamicCast(pCurrentSubTree));
-                BehaviorTask* action = pCurrentSubTree->ActionNode();
-                BEHAVIAC_UNUSED_VAR(action);
-                pCurrentSubTree->abort(pAgent);
+            if (this->m_activeChildIndex != CompositeTask::InvalidChildIndex)
+			{
+				bool abortChild = (this->m_activeChildIndex != (int)index);
+				if (!abortChild)
+				{
+					const SelectorLoop* pSelectorLoop = SelectorLoop::DynamicCast(this->GetNode());
+					BEHAVIAC_ASSERT(pSelectorLoop);
+
+					if (pSelectorLoop)
+					{
+						abortChild = pSelectorLoop->m_bResetChildren;
+					}
+				}
+
+				if (abortChild)
+				{
+					WithPreconditionTask* pCurrentSubTree = (WithPreconditionTask*)this->m_children[this->m_activeChildIndex];
+					BEHAVIAC_ASSERT(WithPreconditionTask::DynamicCast(pCurrentSubTree));
+					//BehaviorTask* action = pCurrentSubTree->ActionNode();
+					//BEHAVIAC_UNUSED_VAR(action);
+					pCurrentSubTree->abort(pAgent);
+				}
             }
 
             for (uint32_t i = index; i < this->m_children.size(); ++i) {

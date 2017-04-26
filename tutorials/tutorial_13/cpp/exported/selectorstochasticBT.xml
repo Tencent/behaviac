@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: selectorstochasticBT.xml-->
+<behavior name="selectorstochasticBT" agenttype="FirstAgent" version="5">
+  <node class="SelectorStochastic" id="0">
+    <node class="Action" id="1">
+      <property Method="Self.FirstAgent::Say(&quot;A&quot;)" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+    <node class="Action" id="2">
+      <property Method="Self.FirstAgent::Say(&quot;B&quot;)" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+    <node class="Action" id="3">
+      <property Method="Self.FirstAgent::Say(&quot;C&quot;)" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+  </node>
+</behavior>

@@ -49,6 +49,20 @@ namespace PluginBehaviac.Nodes
             }
         }
 
+        protected bool _resetChildren = false;
+        [DesignerBoolean("ResetChildren", "ResetChildrenDesc", "SelectorLoop", DesignerProperty.DisplayMode.NoDisplay, 0, DesignerProperty.DesignerFlags.NoFlags)]
+        public bool ResetChildren
+        {
+            get
+            {
+                return _resetChildren;
+            }
+            set
+            {
+                _resetChildren = value;
+            }
+        }
+
         public override bool AddChild(Connector connector, Node node)
         {
             if (node is WithPrecondition)

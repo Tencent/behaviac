@@ -687,7 +687,7 @@ namespace Behaviac.Design
                     behaviorTreeList.BehaviorFolder = workspace.SourceFolder;
                     Behavior.BehaviorPath = behaviorTreeList.BehaviorFolder;
 
-                    Workspace.InitFileWatcher(behaviorTreeList.BehaviorFolder, OnChanged);
+                    Workspace.InitFileWatcher(behaviorTreeList.BehaviorFolder, this.OnChanged);
 
                     postSetWorkspace();
 
@@ -741,40 +741,29 @@ namespace Behaviac.Design
         }
 
         delegate BehaviorNode ForceLoadBehavior_t(BehaviorNode behavior, string behaviorFilename);
-        static int ms_onchanged_flag = 0;
 
         private void OnChanged(object sender, FileSystemEventArgs e)
         {
-            //don't know why the same file is notified twice
-            if ((ms_onchanged_flag & 0x01) == 0)
+            string behaviorFilename = e.FullPath;
+
+            BehaviorNode behavior = BehaviorManager.Instance.GetBehavior(behaviorFilename);
+
+            if (behavior != null)
             {
-                string behaviorFilename = e.FullPath;
+                BehaviorTreeList behaviorTreeList = BehaviorManager.Instance as BehaviorTreeList;
 
-                BehaviorNode behavior = BehaviorManager.Instance.GetBehavior(behaviorFilename);
-
-                if (behavior != null)
+                if (behaviorTreeList != null)
                 {
-                    BehaviorTreeList behaviorTreeList = BehaviorManager.Instance as BehaviorTreeList;
+                    ForceLoadBehavior_t d = new ForceLoadBehavior_t(ForceLoadBehavior);
+                    object[] parms = new object[] { behavior, behaviorFilename };
+                    behaviorTreeList.Invoke(d, parms);
 
-                    if (behaviorTreeList != null)
-                    {
-                        ForceLoadBehavior_t d = new ForceLoadBehavior_t(ForceLoadBehavior);
-                        object[] parms = new object[] { behavior, behaviorFilename };
-                        behaviorTreeList.Invoke(d, parms);
-
-                        Thread.Sleep(100);
-                    }
+                    Thread.Sleep(100);
                 }
-                else if (behaviorFilename.EndsWith(".meta.xml") || behaviorFilename.EndsWith(".bb.xml"))
-                {
-                    this.Invoke(new System.EventHandler(reloadWorkspaceMenuItem_Click));
-                }
-
-                ms_onchanged_flag++;
             }
-            else
+            else if (behaviorFilename.EndsWith(".meta.xml") || behaviorFilename.EndsWith(".bb.xml"))
             {
-                ms_onchanged_flag = 0;
+                this.Invoke(new System.EventHandler(reloadWorkspaceMenuItem_Click));
             }
         }
 

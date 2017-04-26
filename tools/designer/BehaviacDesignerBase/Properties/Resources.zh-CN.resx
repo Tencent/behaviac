@@ -871,4 +871,7 @@
   <data name="ReferencedBehaviorFilename" xml:space="preserve">
     <value>引用文件名</value>
   </data>
+  <data name="Debug" xml:space="preserve">
+    <value>调试</value>
+  </data>
 </root>

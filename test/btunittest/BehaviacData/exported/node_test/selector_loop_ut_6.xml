@@ -7,6 +7,7 @@
     <property DecorateWhenChildEnds="false" />
     <property DoneWithinFrame="false" />
     <node class="SelectorLoop" id="0">
+      <property ResetChildren="false" />
       <node class="WithPrecondition" id="1">
         <node class="Condition" id="4">
           <property Operator="Equal" />

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: selectorprobabilityBT.xml-->
+<behavior name="selectorprobabilityBT" agenttype="FirstAgent" version="5">
+  <node class="SelectorProbability" id="0">
+    <node class="DecoratorWeight" id="4">
+      <property DecorateWhenChildEnds="false" />
+      <property Weight="const int 20" />
+      <node class="Action" id="1">
+        <property Method="Self.FirstAgent::Say(&quot;A&quot;)" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+    </node>
+    <node class="DecoratorWeight" id="5">
+      <property DecorateWhenChildEnds="false" />
+      <property Weight="const int 30" />
+      <node class="Action" id="2">
+        <property Method="Self.FirstAgent::Say(&quot;B&quot;)" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+    </node>
+    <node class="DecoratorWeight" id="6">
+      <property DecorateWhenChildEnds="false" />
+      <property Weight="const int 50" />
+      <node class="Action" id="3">
+        <property Method="Self.FirstAgent::Say(&quot;C&quot;)" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+    </node>
+  </node>
+</behavior>

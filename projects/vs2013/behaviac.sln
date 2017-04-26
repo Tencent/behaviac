@@ -98,6 +98,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tutorial_12", "tutorial_12.
 		{332CEEDC-7568-D84C-B9C6-B710915836ED} = {332CEEDC-7568-D84C-B9C6-B710915836ED}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tutorial_13", "tutorial_13.vcxproj", "{5F434F31-A60F-6F4F-8FF2-645F2A8D1B90}"
+	ProjectSection(ProjectDependencies) = postProject
+		{332CEEDC-7568-D84C-B9C6-B710915836ED} = {332CEEDC-7568-D84C-B9C6-B710915836ED}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		DebugStatic|Win32 = DebugStatic|Win32
@@ -266,6 +271,14 @@ Global
 		{B56BC190-EEC3-A24E-88BB-6D6DE97345CB}.DebugDLL|Win32.Build.0 = DebugDLL|Win32
 		{B56BC190-EEC3-A24E-88BB-6D6DE97345CB}.ReleaseDLL|Win32.ActiveCfg = ReleaseDLL|Win32
 		{B56BC190-EEC3-A24E-88BB-6D6DE97345CB}.ReleaseDLL|Win32.Build.0 = ReleaseDLL|Win32
+		{5F434F31-A60F-6F4F-8FF2-645F2A8D1B90}.DebugStatic|Win32.ActiveCfg = DebugStatic|Win32
+		{5F434F31-A60F-6F4F-8FF2-645F2A8D1B90}.DebugStatic|Win32.Build.0 = DebugStatic|Win32
+		{5F434F31-A60F-6F4F-8FF2-645F2A8D1B90}.ReleaseStatic|Win32.ActiveCfg = ReleaseStatic|Win32
+		{5F434F31-A60F-6F4F-8FF2-645F2A8D1B90}.ReleaseStatic|Win32.Build.0 = ReleaseStatic|Win32
+		{5F434F31-A60F-6F4F-8FF2-645F2A8D1B90}.DebugDLL|Win32.ActiveCfg = DebugDLL|Win32
+		{5F434F31-A60F-6F4F-8FF2-645F2A8D1B90}.DebugDLL|Win32.Build.0 = DebugDLL|Win32
+		{5F434F31-A60F-6F4F-8FF2-645F2A8D1B90}.ReleaseDLL|Win32.ActiveCfg = ReleaseDLL|Win32
+		{5F434F31-A60F-6F4F-8FF2-645F2A8D1B90}.ReleaseDLL|Win32.Build.0 = ReleaseDLL|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

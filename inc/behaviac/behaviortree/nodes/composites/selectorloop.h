@@ -39,13 +39,17 @@ namespace behaviac {
         virtual ~SelectorLoop();
         virtual void load(int version, const char* agentType, const properties_t& properties);
         virtual bool IsManagingChildrenAsSubTrees() const;
+
     protected:
         virtual bool IsValid(Agent* pAgent, BehaviorTask* pTask) const;
+
     private:
         virtual BehaviorTask* createTask() const;
-        //protected:
-        //	Nodes*		m_preconditions;
-        //	Nodes*		m_actions;
+
+    protected:
+		bool    m_bResetChildren;
+
+		friend class SelectorLoopTask;
     };
 
     class BEHAVIAC_API SelectorLoopTask : public CompositeTask {

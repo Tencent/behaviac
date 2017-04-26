@@ -1,3 +1,7 @@
+2017-4-26  3.6.32
+    Support resetting the children for the SelectorLoop node.
+    Add the tutorial_13.
+
 2017-4-24  3.6.31
     Fix a bug for generating the codes of the Task and Event.
     Fix a bug for the hotreload of the meta file.

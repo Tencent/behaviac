@@ -17,9 +17,22 @@ namespace behaviac
 {
     public class SelectorLoop : BehaviorNode
     {
+        protected bool m_bResetChildren = false;
+
         protected override void load(int version, string agentType, List<property_t> properties)
         {
             base.load(version, agentType, properties);
+
+            for (int i = 0; i < properties.Count; ++i)
+            {
+                property_t p = properties[i];
+
+                if (p.name == "ResetChildren")
+                {
+                    this.m_bResetChildren = (p.value == "true");
+                    break;
+                }
+            }
         }
 
         public override bool IsValid(Agent pAgent, BehaviorTask pTask)
@@ -43,9 +56,6 @@ namespace behaviac
 
             return pTask;
         }
-
-        //List<BehaviorNode> m_preconditions;
-        //List<BehaviorNode> m_actions;
 
         // ============================================================================
         /**
@@ -157,15 +167,29 @@ namespace behaviac
                 //clean up the current ticking action tree
                 if (index != (int) - 1)
                 {
-                    if (this.m_activeChildIndex != CompositeTask.InvalidChildIndex &&
-                        this.m_activeChildIndex != index)
+                    if (this.m_activeChildIndex != CompositeTask.InvalidChildIndex)
                     {
-                        WithPreconditionTask pCurrentSubTree = (WithPreconditionTask)this.m_children[this.m_activeChildIndex];
-                        //BehaviorTask action = pCurrentSubTree.ActionNode;
-                        pCurrentSubTree.abort(pAgent);
+                        bool abortChild = (this.m_activeChildIndex != index);
+                        if (!abortChild)
+                        {
+                            SelectorLoop pSelectorLoop = (SelectorLoop)(this.GetNode());
+                            Debug.Check(pSelectorLoop != null);
 
-                        //don't set it here
-                        //this.m_activeChildIndex = index;
+                            if (pSelectorLoop != null)
+                            {
+                                abortChild = pSelectorLoop.m_bResetChildren;
+                            }
+                        }
+
+                        if (abortChild)
+                        {
+                            WithPreconditionTask pCurrentSubTree = (WithPreconditionTask)this.m_children[this.m_activeChildIndex];
+                            //BehaviorTask action = pCurrentSubTree.ActionNode;
+                            pCurrentSubTree.abort(pAgent);
+
+                            //don't set it here
+                            //this.m_activeChildIndex = index;
+                        }
                     }
 
                     for (int i = index; i < this.m_children.Count; ++i)

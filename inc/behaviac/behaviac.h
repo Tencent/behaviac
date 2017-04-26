@@ -24,5 +24,6 @@
 #include "behaviac/behaviortree/behaviortree.h"
 #include "behaviac/common/workspace.h"
 #include "behaviac/common/file/filemanager.h"
+#include "behaviac/common/randomgenerator/randomgenerator.h"
 
 #endif // _BEHAVIAC_BEHAVIAC_H_

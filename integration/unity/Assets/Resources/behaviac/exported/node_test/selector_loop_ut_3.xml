@@ -3,6 +3,7 @@
 <!--Source File: node_test\selector_loop_ut_3.xml-->
 <behavior name="node_test/selector_loop_ut_3" agenttype="AgentNodeTest" version="5">
   <node class="SelectorLoop" id="0">
+    <property ResetChildren="false" />
     <node class="WithPrecondition" id="1">
       <node class="False" id="4" />
       <node class="Action" id="5">

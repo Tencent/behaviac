@@ -8,11 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PluginBehaviac.Properties
-{
+namespace PluginBehaviac.Properties {
     using System;
-
-
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -23,2844 +22,2349 @@ namespace PluginBehaviac.Properties
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources
-    {
-
+    internal class Resources {
+        
         private static global::System.Resources.ResourceManager resourceMan;
-
+        
         private static global::System.Globalization.CultureInfo resourceCulture;
-
+        
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources()
-        {
+        internal Resources() {
         }
-
+        
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager
-        {
-            get
-            {
-                if (object.ReferenceEquals(resourceMan, null))
-                {
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("PluginBehaviac.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
-
                 return resourceMan;
             }
         }
-
+        
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture
-        {
-            get
-            {
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
                 return resourceCulture;
             }
-            set
-            {
+            set {
                 resourceCulture = value;
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Action.
         /// </summary>
-        internal static string Action
-        {
-            get
-            {
+        internal static string Action {
+            get {
                 return ResourceManager.GetString("Action", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Primitive action.
         /// </summary>
-        internal static string ActionDesc
-        {
-            get
-            {
+        internal static string ActionDesc {
+            get {
                 return ResourceManager.GetString("ActionDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap alwaysFailure_ico
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap alwaysFailure_ico {
+            get {
                 object obj = ResourceManager.GetObject("alwaysFailure_ico", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap alwaysSuccess_ico
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap alwaysSuccess_ico {
+            get {
                 object obj = ResourceManager.GetObject("alwaysSuccess_ico", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to AlwaysTransition.
         /// </summary>
-        internal static string AlwaysTransition
-        {
-            get
-            {
+        internal static string AlwaysTransition {
+            get {
                 return ResourceManager.GetString("AlwaysTransition", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Always Transition.
         /// </summary>
-        internal static string AlwaysTransitionDesc
-        {
-            get
-            {
+        internal static string AlwaysTransitionDesc {
+            get {
                 return ResourceManager.GetString("AlwaysTransitionDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to And.
         /// </summary>
-        internal static string And
-        {
-            get
-            {
+        internal static string And {
+            get {
                 return ResourceManager.GetString("And", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to true if all children are true.
         /// </summary>
-        internal static string AndDesc
-        {
-            get
-            {
+        internal static string AndDesc {
+            get {
                 return ResourceManager.GetString("AndDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to And and Or are only valid for bool!.
         /// </summary>
-        internal static string AndOrOnlyValidForBool
-        {
-            get
-            {
+        internal static string AndOrOnlyValidForBool {
+            get {
                 return ResourceManager.GetString("AndOrOnlyValidForBool", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Assignment.
         /// </summary>
-        internal static string Assignment
-        {
-            get
-            {
+        internal static string Assignment {
+            get {
                 return ResourceManager.GetString("Assignment", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to assign the right to the left.
         /// </summary>
-        internal static string AssignmentDesc
-        {
-            get
-            {
+        internal static string AssignmentDesc {
+            get {
                 return ResourceManager.GetString("AssignmentDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Attribute.
         /// </summary>
-        internal static string Attribute
-        {
-            get
-            {
+        internal static string Attribute {
+            get {
                 return ResourceManager.GetString("Attribute", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Attribute.
         /// </summary>
-        internal static string AttributeDesc
-        {
-            get
-            {
+        internal static string AttributeDesc {
+            get {
                 return ResourceManager.GetString("AttributeDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Domain.
         /// </summary>
-        internal static string BehaviorDomain
-        {
-            get
-            {
+        internal static string BehaviorDomain {
+            get {
                 return ResourceManager.GetString("BehaviorDomain", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to tag to indicate the type, purpose, etc..
         /// </summary>
-        internal static string BehaviorDomainDesc
-        {
-            get
-            {
+        internal static string BehaviorDomainDesc {
+            get {
                 return ResourceManager.GetString("BehaviorDomainDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Blocked.
         /// </summary>
-        internal static string Blocked
-        {
-            get
-            {
+        internal static string Blocked {
+            get {
                 return ResourceManager.GetString("Blocked", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to the impulse blocks the execution and waits for all the events.
         /// </summary>
-        internal static string BlockedDesc
-        {
-            get
-            {
+        internal static string BlockedDesc {
+            get {
                 return ResourceManager.GetString("BlockedDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Branch.
         /// </summary>
-        internal static string Branch
-        {
-            get
-            {
+        internal static string Branch {
+            get {
                 return ResourceManager.GetString("Branch", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Branch.
         /// </summary>
-        internal static string BranchDesc
-        {
-            get
-            {
+        internal static string BranchDesc {
+            get {
                 return ResourceManager.GetString("BranchDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Preconditions.
         /// </summary>
-        internal static string BranchPreconditions
-        {
-            get
-            {
+        internal static string BranchPreconditions {
+            get {
                 return ResourceManager.GetString("BranchPreconditions", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Tasks.
         /// </summary>
-        internal static string BranchTasks
-        {
-            get
-            {
+        internal static string BranchTasks {
+            get {
                 return ResourceManager.GetString("BranchTasks", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Cast.
         /// </summary>
-        internal static string CastRight
-        {
-            get
-            {
+        internal static string CastRight {
+            get {
                 return ResourceManager.GetString("CastRight", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to the right operand is cast to the left type.
         /// </summary>
-        internal static string CastRightDesc
-        {
-            get
-            {
+        internal static string CastRightDesc {
+            get {
                 return ResourceManager.GetString("CastRightDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to ChildFinishPolicy.
         /// </summary>
-        internal static string ChildFinishPolicy
-        {
-            get
-            {
+        internal static string ChildFinishPolicy {
+            get {
                 return ResourceManager.GetString("ChildFinishPolicy", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to how to continue if a child node finishes..
         /// </summary>
-        internal static string ChildFinishPolicyDesc
-        {
-            get
-            {
+        internal static string ChildFinishPolicyDesc {
+            get {
                 return ResourceManager.GetString("ChildFinishPolicyDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to CompareGetter.
         /// </summary>
-        internal static string CompareGetter
-        {
-            get
-            {
+        internal static string CompareGetter {
+            get {
                 return ResourceManager.GetString("CompareGetter", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to call a getter and compare its return value to the right operand.
         /// </summary>
-        internal static string CompareGetterDesc
-        {
-            get
-            {
+        internal static string CompareGetterDesc {
+            get {
                 return ResourceManager.GetString("CompareGetterDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Compute.
         /// </summary>
-        internal static string Compute
-        {
-            get
-            {
+        internal static string Compute {
+            get {
                 return ResourceManager.GetString("Compute", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap compute_ico
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap compute_ico {
+            get {
                 object obj = ResourceManager.GetObject("compute_ico", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Compute the result of Operand1 and Operand2 and assign it to the Left Operand.
         /// </summary>
-        internal static string ComputeDesc
-        {
-            get
-            {
+        internal static string ComputeDesc {
+            get {
                 return ResourceManager.GetString("ComputeDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Condition.
         /// </summary>
-        internal static string Condition
-        {
-            get
-            {
+        internal static string Condition {
+            get {
                 return ResourceManager.GetString("Condition", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to condition is usually represented by the agent&apos;s properties, pars, etc..
         /// </summary>
-        internal static string ConditionDesc
-        {
-            get
-            {
+        internal static string ConditionDesc {
+            get {
                 return ResourceManager.GetString("ConditionDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to ConditionGetter.
         /// </summary>
-        internal static string ConditionGetter
-        {
-            get
-            {
+        internal static string ConditionGetter {
+            get {
                 return ResourceManager.GetString("ConditionGetter", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to call a getter function and compare the return value to the right operand.
         /// </summary>
-        internal static string ConditionGetterDesc
-        {
-            get
-            {
+        internal static string ConditionGetterDesc {
+            get {
                 return ResourceManager.GetString("ConditionGetterDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Found the customized method : Please firstly integrate the generated source files of the customized method of the agent into your game project. Then export it as meta info into the editor, reload the current workspace. At last, export the behaviors..
         /// </summary>
-        internal static string CustomizedMethodError
-        {
-            get
-            {
+        internal static string CustomizedMethodError {
+            get {
                 return ResourceManager.GetString("CustomizedMethodError", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to AlwaysFailure.
         /// </summary>
-        internal static string DecoratorAlwaysFailure
-        {
-            get
-            {
+        internal static string DecoratorAlwaysFailure {
+            get {
                 return ResourceManager.GetString("DecoratorAlwaysFailure", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to it always returns failure no matter what result the child returns.
         /// </summary>
-        internal static string DecoratorAlwaysFailureDesc
-        {
-            get
-            {
+        internal static string DecoratorAlwaysFailureDesc {
+            get {
                 return ResourceManager.GetString("DecoratorAlwaysFailureDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to AlwaysRunning.
         /// </summary>
-        internal static string DecoratorAlwaysRunning
-        {
-            get
-            {
+        internal static string DecoratorAlwaysRunning {
+            get {
                 return ResourceManager.GetString("DecoratorAlwaysRunning", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to it always returns running no matter what result the child returns.
         /// </summary>
-        internal static string DecoratorAlwaysRunningDesc
-        {
-            get
-            {
+        internal static string DecoratorAlwaysRunningDesc {
+            get {
                 return ResourceManager.GetString("DecoratorAlwaysRunningDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to AlwaysSuccess.
         /// </summary>
-        internal static string DecoratorAlwaysSuccess
-        {
-            get
-            {
+        internal static string DecoratorAlwaysSuccess {
+            get {
                 return ResourceManager.GetString("DecoratorAlwaysSuccess", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to it always returns success no matter what result the child returns.
         /// </summary>
-        internal static string DecoratorAlwaysSuccessDesc
-        {
-            get
-            {
+        internal static string DecoratorAlwaysSuccessDesc {
+            get {
                 return ResourceManager.GetString("DecoratorAlwaysSuccessDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to CountLimit.
         /// </summary>
-        internal static string DecoratorCountLimit
-        {
-            get
-            {
+        internal static string DecoratorCountLimit {
+            get {
                 return ResourceManager.GetString("DecoratorCountLimit", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to limit the count of the exucution.
         /// </summary>
-        internal static string DecoratorCountLimitDesc
-        {
-            get
-            {
+        internal static string DecoratorCountLimitDesc {
+            get {
                 return ResourceManager.GetString("DecoratorCountLimitDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Delay.
         /// </summary>
-        internal static string DecoratorDelay
-        {
-            get
-            {
+        internal static string DecoratorDelay {
+            get {
                 return ResourceManager.GetString("DecoratorDelay", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Delay.
         /// </summary>
-        internal static string DecoratorDelayDesc
-        {
-            get
-            {
+        internal static string DecoratorDelayDesc {
+            get {
                 return ResourceManager.GetString("DecoratorDelayDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to FailureAfter.
         /// </summary>
-        internal static string DecoratorFailureAfter
-        {
-            get
-            {
+        internal static string DecoratorFailureAfter {
+            get {
                 return ResourceManager.GetString("DecoratorFailureAfter", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Failue After the specified count.
         /// </summary>
-        internal static string DecoratorFailureAfterDesc
-        {
-            get
-            {
+        internal static string DecoratorFailureAfterDesc {
+            get {
                 return ResourceManager.GetString("DecoratorFailureAfterDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to FailureUntil.
         /// </summary>
-        internal static string DecoratorFailureUntil
-        {
-            get
-            {
+        internal static string DecoratorFailureUntil {
+            get {
                 return ResourceManager.GetString("DecoratorFailureUntil", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Failure until the specified count.
         /// </summary>
-        internal static string DecoratorFailureUntilDesc
-        {
-            get
-            {
+        internal static string DecoratorFailureUntilDesc {
+            get {
                 return ResourceManager.GetString("DecoratorFailureUntilDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Frames.
         /// </summary>
-        internal static string DecoratorFrames
-        {
-            get
-            {
+        internal static string DecoratorFrames {
+            get {
                 return ResourceManager.GetString("DecoratorFrames", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to This decorator calls its child within the specified Frames..
         /// </summary>
-        internal static string DecoratorFramesDesc
-        {
-            get
-            {
+        internal static string DecoratorFramesDesc {
+            get {
                 return ResourceManager.GetString("DecoratorFramesDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Try.
         /// </summary>
-        internal static string DecoratorIterator
-        {
-            get
-            {
+        internal static string DecoratorIterator {
+            get {
                 return ResourceManager.GetString("DecoratorIterator", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to try each element in the specified array.
         /// </summary>
-        internal static string DecoratorIteratorDesc
-        {
-            get
-            {
+        internal static string DecoratorIteratorDesc {
+            get {
                 return ResourceManager.GetString("DecoratorIteratorDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Log.
         /// </summary>
-        internal static string DecoratorLog
-        {
-            get
-            {
+        internal static string DecoratorLog {
+            get {
                 return ResourceManager.GetString("DecoratorLog", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Logging.
         /// </summary>
-        internal static string DecoratorLogDesc
-        {
-            get
-            {
+        internal static string DecoratorLogDesc {
+            get {
                 return ResourceManager.GetString("DecoratorLogDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Log Message.
         /// </summary>
-        internal static string DecoratorLogMessage
-        {
-            get
-            {
+        internal static string DecoratorLogMessage {
+            get {
                 return ResourceManager.GetString("DecoratorLogMessage", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Log message.
         /// </summary>
-        internal static string DecoratorLogMessageDesc
-        {
-            get
-            {
+        internal static string DecoratorLogMessageDesc {
+            get {
                 return ResourceManager.GetString("DecoratorLogMessageDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Loop.
         /// </summary>
-        internal static string DecoratorLoop
-        {
-            get
-            {
+        internal static string DecoratorLoop {
+            get {
                 return ResourceManager.GetString("DecoratorLoop", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Count.
         /// </summary>
-        internal static string DecoratorLoopCount
-        {
-            get
-            {
+        internal static string DecoratorLoopCount {
+            get {
                 return ResourceManager.GetString("DecoratorLoopCount", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Determines how often the child will be called. If the child fails, the loop is aborted and fails..
         /// </summary>
-        internal static string DecoratorLoopCountDesc
-        {
-            get
-            {
+        internal static string DecoratorLoopCountDesc {
+            get {
                 return ResourceManager.GetString("DecoratorLoopCountDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to This decorator calls its child n times. -1 is for endless..
         /// </summary>
-        internal static string DecoratorLoopDesc
-        {
-            get
-            {
+        internal static string DecoratorLoopDesc {
+            get {
                 return ResourceManager.GetString("DecoratorLoopDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to LoopUntil.
         /// </summary>
-        internal static string DecoratorLoopUntil
-        {
-            get
-            {
+        internal static string DecoratorLoopUntil {
+            get {
                 return ResourceManager.GetString("DecoratorLoopUntil", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to loop until the child returns success/failure or loop for the specified count..
         /// </summary>
-        internal static string DecoratorLoopUntilDesc
-        {
-            get
-            {
+        internal static string DecoratorLoopUntilDesc {
+            get {
                 return ResourceManager.GetString("DecoratorLoopUntilDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Not.
         /// </summary>
-        internal static string DecoratorNot
-        {
-            get
-            {
+        internal static string DecoratorNot {
+            get {
                 return ResourceManager.GetString("DecoratorNot", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to This decorator inverts the return value of the attached node. If the attached node fails, it will appear as it has succedded and vice versa..
         /// </summary>
-        internal static string DecoratorNotDesc
-        {
-            get
-            {
+        internal static string DecoratorNotDesc {
+            get {
                 return ResourceManager.GetString("DecoratorNotDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Repeat.
         /// </summary>
-        internal static string DecoratorRepeat
-        {
-            get
-            {
+        internal static string DecoratorRepeat {
+            get {
                 return ResourceManager.GetString("DecoratorRepeat", resourceCulture);
             }
         }
-
+        
         /// <summary>
-        ///   Looks up a localized string similar to repeat the child node for the specified count to return success,
-        ///or return failure until the child node fails. if the child node keeps running,
+        ///   Looks up a localized string similar to repeat the child node for the specified count to return success, 
+        ///or return failure until the child node fails. if the child node keeps running, 
         ///it keeps blocked. but, if the &apos;DecorateChildEnds&apos; is false, it is not blocked.
-        ///it only returns success or failure and never returns running.
+        ///it only returns success or failure and never returns running. 
         ///.
         /// </summary>
-        internal static string DecoratorRepeatDesc
-        {
-            get
-            {
+        internal static string DecoratorRepeatDesc {
+            get {
                 return ResourceManager.GetString("DecoratorRepeatDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to SuccessAfter.
         /// </summary>
-        internal static string DecoratorSuccessAfter
-        {
-            get
-            {
+        internal static string DecoratorSuccessAfter {
+            get {
                 return ResourceManager.GetString("DecoratorSuccessAfter", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Success After the specified count.
         /// </summary>
-        internal static string DecoratorSuccessAfterDesc
-        {
-            get
-            {
+        internal static string DecoratorSuccessAfterDesc {
+            get {
                 return ResourceManager.GetString("DecoratorSuccessAfterDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to SuccessUntil.
         /// </summary>
-        internal static string DecoratorSuccessUntil
-        {
-            get
-            {
+        internal static string DecoratorSuccessUntil {
+            get {
                 return ResourceManager.GetString("DecoratorSuccessUntil", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Succeed until the specified count.
         /// </summary>
-        internal static string DecoratorSuccessUntilDesc
-        {
-            get
-            {
+        internal static string DecoratorSuccessUntilDesc {
+            get {
                 return ResourceManager.GetString("DecoratorSuccessUntilDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Time.
         /// </summary>
-        internal static string DecoratorTime
-        {
-            get
-            {
+        internal static string DecoratorTime {
+            get {
                 return ResourceManager.GetString("DecoratorTime", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to This decorator calls its child within the specified time(milliseconds)..
         /// </summary>
-        internal static string DecoratorTimeDesc
-        {
-            get
-            {
+        internal static string DecoratorTimeDesc {
+            get {
                 return ResourceManager.GetString("DecoratorTimeDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Until.
         /// </summary>
-        internal static string DecoratorUntil
-        {
-            get
-            {
+        internal static string DecoratorUntil {
+            get {
                 return ResourceManager.GetString("DecoratorUntil", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to by default, the decorator loops until the child returns success. if &apos;until&apos; is false, the decorator loops until the child returns failure..
         /// </summary>
-        internal static string DecoratorUntilDesc
-        {
-            get
-            {
+        internal static string DecoratorUntilDesc {
+            get {
                 return ResourceManager.GetString("DecoratorUntilDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Wait.
         /// </summary>
-        internal static string DecoratorWait
-        {
-            get
-            {
+        internal static string DecoratorWait {
+            get {
                 return ResourceManager.GetString("DecoratorWait", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to It will wait for a given time to execute the child.
         /// </summary>
-        internal static string DecoratorWaitDesc
-        {
-            get
-            {
+        internal static string DecoratorWaitDesc {
+            get {
                 return ResourceManager.GetString("DecoratorWaitDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Weight.
         /// </summary>
-        internal static string DecoratorWeight
-        {
-            get
-            {
+        internal static string DecoratorWeight {
+            get {
                 return ResourceManager.GetString("DecoratorWeight", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Weight.
         /// </summary>
-        internal static string DecoratorWeightDesc
-        {
-            get
-            {
+        internal static string DecoratorWeightDesc {
+            get {
                 return ResourceManager.GetString("DecoratorWeightDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Descriptor.
         /// </summary>
-        internal static string Descriptor
-        {
-            get
-            {
+        internal static string Descriptor {
+            get {
                 return ResourceManager.GetString("Descriptor", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Descriptor.
         /// </summary>
-        internal static string DescriptorDesc
-        {
-            get
-            {
+        internal static string DescriptorDesc {
+            get {
                 return ResourceManager.GetString("DescriptorDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Descriptors.
         /// </summary>
-        internal static string Descriptors
-        {
-            get
-            {
+        internal static string Descriptors {
+            get {
                 return ResourceManager.GetString("Descriptors", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Descriptors.
         /// </summary>
-        internal static string DescriptorsDesc
-        {
-            get
-            {
+        internal static string DescriptorsDesc {
+            get {
                 return ResourceManager.GetString("DescriptorsDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to DescriptorWeight.
         /// </summary>
-        internal static string DescriptorWeightDesc
-        {
-            get
-            {
+        internal static string DescriptorWeightDesc {
+            get {
                 return ResourceManager.GetString("DescriptorWeightDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to DoneWithinFrame.
         /// </summary>
-        internal static string DoneWithinFrame
-        {
-            get
-            {
+        internal static string DoneWithinFrame {
+            get {
                 return ResourceManager.GetString("DoneWithinFrame", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to if true, the whole Loop will be blocked until the loop is done within a frame.
         /// </summary>
-        internal static string DoneWithinFrameDesc
-        {
-            get
-            {
+        internal static string DoneWithinFrameDesc {
+            get {
                 return ResourceManager.GetString("DoneWithinFrameDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Duration.
         /// </summary>
-        internal static string Duration
-        {
-            get
-            {
+        internal static string Duration {
+            get {
                 return ResourceManager.GetString("Duration", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Duration.
         /// </summary>
-        internal static string DurationDesc
-        {
-            get
-            {
+        internal static string DurationDesc {
+            get {
                 return ResourceManager.GetString("DurationDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to PostAction.
         /// </summary>
-        internal static string Effector
-        {
-            get
-            {
+        internal static string Effector {
+            get {
                 return ResourceManager.GetString("Effector", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap effector_icon
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap effector_icon {
+            get {
                 object obj = ResourceManager.GetObject("effector_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to it takes effect when the Node ends..
         /// </summary>
-        internal static string EffectorDesc
-        {
-            get
-            {
+        internal static string EffectorDesc {
+            get {
                 return ResourceManager.GetString("EffectorDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Effectors.
         /// </summary>
-        internal static string Effectors
-        {
-            get
-            {
+        internal static string Effectors {
+            get {
                 return ResourceManager.GetString("Effectors", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Effectors.
         /// </summary>
-        internal static string EffectorsDesc
-        {
-            get
-            {
+        internal static string EffectorsDesc {
+            get {
                 return ResourceManager.GetString("EffectorsDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to EndTransition.
         /// </summary>
-        internal static string EndTransition
-        {
-            get
-            {
+        internal static string EndTransition {
+            get {
                 return ResourceManager.GetString("EndTransition", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to EndTransition.
         /// </summary>
-        internal static string EndTransitionDesc
-        {
-            get
-            {
+        internal static string EndTransitionDesc {
+            get {
                 return ResourceManager.GetString("EndTransitionDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Enter.
         /// </summary>
-        internal static string Enter
-        {
-            get
-            {
+        internal static string Enter {
+            get {
                 return ResourceManager.GetString("Enter", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to EnterTo.
         /// </summary>
-        internal static string EnterTo
-        {
-            get
-            {
+        internal static string EnterTo {
+            get {
                 return ResourceManager.GetString("EnterTo", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Event.
         /// </summary>
-        internal static string Event
-        {
-            get
-            {
+        internal static string Event {
+            get {
                 return ResourceManager.GetString("Event", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Event.
         /// </summary>
-        internal static string EventDesc
-        {
-            get
-            {
+        internal static string EventDesc {
+            get {
                 return ResourceManager.GetString("EventDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Exit.
         /// </summary>
-        internal static string Exit
-        {
-            get
-            {
+        internal static string Exit {
+            get {
                 return ResourceManager.GetString("Exit", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to ExitFrom.
         /// </summary>
-        internal static string ExitFrom
-        {
-            get
-            {
+        internal static string ExitFrom {
+            get {
                 return ResourceManager.GetString("ExitFrom", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to ExitPolicy.
         /// </summary>
-        internal static string ExitPolicy
-        {
-            get
-            {
+        internal static string ExitPolicy {
+            get {
                 return ResourceManager.GetString("ExitPolicy", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to ExitPolicy, to determine what to do when exiting.
         /// </summary>
-        internal static string ExitPolicyDesc
-        {
-            get
-            {
+        internal static string ExitPolicyDesc {
+            get {
                 return ResourceManager.GetString("ExitPolicyDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Export File Warning.
         /// </summary>
-        internal static string ExportFileWarning
-        {
-            get
-            {
+        internal static string ExportFileWarning {
+            get {
                 return ResourceManager.GetString("ExportFileWarning", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to FailurePolicy.
         /// </summary>
-        internal static string FailurePolicy
-        {
-            get
-            {
+        internal static string FailurePolicy {
+            get {
                 return ResourceManager.GetString("FailurePolicy", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to the policy to return FAILURE.
         /// </summary>
-        internal static string FailurePolicyDesc
-        {
-            get
-            {
+        internal static string FailurePolicyDesc {
+            get {
                 return ResourceManager.GetString("FailurePolicyDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap failureUntil_ico
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap failureUntil_ico {
+            get {
                 object obj = ResourceManager.GetObject("failureUntil_ico", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to False.
         /// </summary>
-        internal static string False
-        {
-            get
-            {
+        internal static string False {
+            get {
                 return ResourceManager.GetString("False", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to False.
         /// </summary>
-        internal static string FalseDesc
-        {
-            get
-            {
+        internal static string FalseDesc {
+            get {
                 return ResourceManager.GetString("FalseDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Frames.
         /// </summary>
-        internal static string Frames
-        {
-            get
-            {
+        internal static string Frames {
+            get {
                 return ResourceManager.GetString("Frames", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Frames.
         /// </summary>
-        internal static string FramesDesc
-        {
-            get
-            {
+        internal static string FramesDesc {
+            get {
                 return ResourceManager.GetString("FramesDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to FSM.
         /// </summary>
-        internal static string FSM
-        {
-            get
-            {
+        internal static string FSM {
+            get {
                 return ResourceManager.GetString("FSM", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Getter.
         /// </summary>
-        internal static string Getter
-        {
-            get
-            {
+        internal static string Getter {
+            get {
                 return ResourceManager.GetString("Getter", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Gettter.
         /// </summary>
-        internal static string GetterDesc
-        {
-            get
-            {
+        internal static string GetterDesc {
+            get {
                 return ResourceManager.GetString("GetterDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IfElse.
         /// </summary>
-        internal static string IfElse
-        {
-            get
-            {
+        internal static string IfElse {
+            get {
                 return ResourceManager.GetString("IfElse", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Condition.
         /// </summary>
-        internal static string IfElseCondition
-        {
-            get
-            {
+        internal static string IfElseCondition {
+            get {
                 return ResourceManager.GetString("IfElseCondition", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to if condition is true, the &apos;If&apos; is ticked, if condition is false, the &apos;Else&apos; is ticked.
         /// </summary>
-        internal static string IfElseDesc
-        {
-            get
-            {
+        internal static string IfElseDesc {
+            get {
                 return ResourceManager.GetString("IfElseDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Else.
         /// </summary>
-        internal static string IfElseElse
-        {
-            get
-            {
+        internal static string IfElseElse {
+            get {
                 return ResourceManager.GetString("IfElseElse", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to If.
         /// </summary>
-        internal static string IfElseIf
-        {
-            get
-            {
+        internal static string IfElseIf {
+            get {
                 return ResourceManager.GetString("IfElseIf", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Impulse.
         /// </summary>
-        internal static string Impulse
-        {
-            get
-            {
+        internal static string Impulse {
+            get {
                 return ResourceManager.GetString("Impulse", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to This node is only visible when one of the associated events were fired..
         /// </summary>
-        internal static string ImpulseDesc
-        {
-            get
-            {
+        internal static string ImpulseDesc {
+            get {
                 return ResourceManager.GetString("ImpulseDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Impulse can only be children of Selector.
         /// </summary>
-        internal static string ImpulseParentError
-        {
-            get
-            {
+        internal static string ImpulseParentError {
+            get {
                 return ResourceManager.GetString("ImpulseParentError", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to no signal specified.
         /// </summary>
-        internal static string ImpulseWithoutEventError
-        {
-            get
-            {
+        internal static string ImpulseWithoutEventError {
+            get {
                 return ResourceManager.GetString("ImpulseWithoutEventError", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IsEndState.
         /// </summary>
-        internal static string IsEndState
-        {
-            get
-            {
+        internal static string IsEndState {
+            get {
                 return ResourceManager.GetString("IsEndState", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to when an &apos;End State&apos; is entered, the FSM is ended..
         /// </summary>
-        internal static string IsEndStateDesc
-        {
-            get
-            {
+        internal static string IsEndStateDesc {
+            get {
                 return ResourceManager.GetString("IsEndStateDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Method.
         /// </summary>
-        internal static string Method
-        {
-            get
-            {
+        internal static string Method {
+            get {
                 return ResourceManager.GetString("Method", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap method_icon
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap method_icon {
+            get {
                 object obj = ResourceManager.GetObject("method_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Method&apos;s child can only be Branch node.
         /// </summary>
-        internal static string MethodChildChildError
-        {
-            get
-            {
+        internal static string MethodChildChildError {
+            get {
                 return ResourceManager.GetString("MethodChildChildError", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Methods can only be Tasks&apos; sub nodes..
         /// </summary>
-        internal static string MethodDesc
-        {
-            get
-            {
+        internal static string MethodDesc {
+            get {
                 return ResourceManager.GetString("MethodDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Effectors.
         /// </summary>
-        internal static string MethodEffectors
-        {
-            get
-            {
+        internal static string MethodEffectors {
+            get {
                 return ResourceManager.GetString("MethodEffectors", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Method has no children.
         /// </summary>
-        internal static string MethodNoChildrenError
-        {
-            get
-            {
+        internal static string MethodNoChildrenError {
+            get {
                 return ResourceManager.GetString("MethodNoChildrenError", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Method&apos;s parent must be a Task..
         /// </summary>
-        internal static string MethodParentError
-        {
-            get
-            {
+        internal static string MethodParentError {
+            get {
                 return ResourceManager.GetString("MethodParentError", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Preconditions.
         /// </summary>
-        internal static string MethodPreconditions
-        {
-            get
-            {
+        internal static string MethodPreconditions {
+            get {
                 return ResourceManager.GetString("MethodPreconditions", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Tasks.
         /// </summary>
-        internal static string MethodTasks
-        {
-            get
-            {
+        internal static string MethodTasks {
+            get {
                 return ResourceManager.GetString("MethodTasks", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to No action branch is specified.
         /// </summary>
-        internal static string NoActionError
-        {
-            get
-            {
+        internal static string NoActionError {
+            get {
                 return ResourceManager.GetString("NoActionError", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to no condition specified!.
         /// </summary>
-        internal static string NoConditionError
-        {
-            get
-            {
+        internal static string NoConditionError {
+            get {
                 return ResourceManager.GetString("NoConditionError", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Actions.
         /// </summary>
-        internal static string NodeGroupActions
-        {
-            get
-            {
+        internal static string NodeGroupActions {
+            get {
                 return ResourceManager.GetString("NodeGroupActions", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Attachments.
         /// </summary>
-        internal static string NodeGroupAttachments
-        {
-            get
-            {
+        internal static string NodeGroupAttachments {
+            get {
                 return ResourceManager.GetString("NodeGroupAttachments", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Branches.
         /// </summary>
-        internal static string NodeGroupBranches
-        {
-            get
-            {
+        internal static string NodeGroupBranches {
+            get {
                 return ResourceManager.GetString("NodeGroupBranches", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Composites.
         /// </summary>
-        internal static string NodeGroupComposites
-        {
-            get
-            {
+        internal static string NodeGroupComposites {
+            get {
                 return ResourceManager.GetString("NodeGroupComposites", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Conditions.
         /// </summary>
-        internal static string NodeGroupConditions
-        {
-            get
-            {
+        internal static string NodeGroupConditions {
+            get {
                 return ResourceManager.GetString("NodeGroupConditions", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Decorators.
         /// </summary>
-        internal static string NodeGroupDecorators
-        {
-            get
-            {
+        internal static string NodeGroupDecorators {
+            get {
                 return ResourceManager.GetString("NodeGroupDecorators", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Events.
         /// </summary>
-        internal static string NodeGroupEvents
-        {
-            get
-            {
+        internal static string NodeGroupEvents {
+            get {
                 return ResourceManager.GetString("NodeGroupEvents", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Impulses.
         /// </summary>
-        internal static string NodeGroupImpulses
-        {
-            get
-            {
+        internal static string NodeGroupImpulses {
+            get {
                 return ResourceManager.GetString("NodeGroupImpulses", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Leaves.
         /// </summary>
-        internal static string NodeGroupLeaves
-        {
-            get
-            {
+        internal static string NodeGroupLeaves {
+            get {
                 return ResourceManager.GetString("NodeGroupLeaves", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to No effector branch is specified.
         /// </summary>
-        internal static string NoEffectorError
-        {
-            get
-            {
+        internal static string NoEffectorError {
+            get {
                 return ResourceManager.GetString("NoEffectorError", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to no child specified.
         /// </summary>
-        internal static string NoMethosError
-        {
-            get
-            {
+        internal static string NoMethosError {
+            get {
                 return ResourceManager.GetString("NoMethosError", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Noop.
         /// </summary>
-        internal static string Noop
-        {
-            get
-            {
+        internal static string Noop {
+            get {
                 return ResourceManager.GetString("Noop", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to no operation.
         /// </summary>
-        internal static string NoopDesc
-        {
-            get
-            {
+        internal static string NoopDesc {
+            get {
                 return ResourceManager.GetString("NoopDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Task&apos;s param not specified.
         /// </summary>
-        internal static string NoParam
-        {
-            get
-            {
+        internal static string NoParam {
+            get {
                 return ResourceManager.GetString("NoParam", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to No Precondition branch is specified.
         /// </summary>
-        internal static string NoPreconditionError
-        {
-            get
-            {
+        internal static string NoPreconditionError {
+            get {
                 return ResourceManager.GetString("NoPreconditionError", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to No task specified.
         /// </summary>
-        internal static string NoTask
-        {
-            get
-            {
+        internal static string NoTask {
+            get {
                 return ResourceManager.GetString("NoTask", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Operand is not complete!.
         /// </summary>
-        internal static string OperandError
-        {
-            get
-            {
+        internal static string OperandError {
+            get {
                 return ResourceManager.GetString("OperandError", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Operand is not complete!.
         /// </summary>
-        internal static string OperatandIsNotComplete
-        {
-            get
-            {
+        internal static string OperatandIsNotComplete {
+            get {
                 return ResourceManager.GetString("OperatandIsNotComplete", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Or.
         /// </summary>
-        internal static string Or
-        {
-            get
-            {
+        internal static string Or {
+            get {
                 return ResourceManager.GetString("Or", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to true if any one of the children is true.
         /// </summary>
-        internal static string OrDesc
-        {
-            get
-            {
+        internal static string OrDesc {
+            get {
                 return ResourceManager.GetString("OrDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Parallel.
         /// </summary>
-        internal static string Parallel
-        {
-            get
-            {
+        internal static string Parallel {
+            get {
                 return ResourceManager.GetString("Parallel", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to all the children are updated in parallel.
         /// </summary>
-        internal static string ParallelDesc
-        {
-            get
-            {
+        internal static string ParallelDesc {
+            get {
                 return ResourceManager.GetString("ParallelDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to PreAction.
         /// </summary>
-        internal static string PreAction
-        {
-            get
-            {
+        internal static string PreAction {
+            get {
                 return ResourceManager.GetString("PreAction", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to to check a precondition before taking action.
         /// </summary>
-        internal static string PreActionDesc
-        {
-            get
-            {
+        internal static string PreActionDesc {
+            get {
                 return ResourceManager.GetString("PreActionDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to PreAction.
         /// </summary>
-        internal static string Precondition
-        {
-            get
-            {
+        internal static string Precondition {
+            get {
                 return ResourceManager.GetString("Precondition", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap precondition_icon
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap precondition_icon {
+            get {
                 object obj = ResourceManager.GetObject("precondition_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to PreAction is an action or precondition which is executed/evaluated before &apos;entering&apos; a node. .
         /// </summary>
-        internal static string PreconditionDesc
-        {
-            get
-            {
+        internal static string PreconditionDesc {
+            get {
                 return ResourceManager.GetString("PreconditionDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to When.
         /// </summary>
-        internal static string PreconditionPhase
-        {
-            get
-            {
+        internal static string PreconditionPhase {
+            get {
                 return ResourceManager.GetString("PreconditionPhase", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to when to evalute the precondition.
         /// </summary>
-        internal static string PreconditionPhaseDesc
-        {
-            get
-            {
+        internal static string PreconditionPhaseDesc {
+            get {
                 return ResourceManager.GetString("PreconditionPhaseDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Predicate.
         /// </summary>
-        internal static string Predicate
-        {
-            get
-            {
+        internal static string Predicate {
+            get {
                 return ResourceManager.GetString("Predicate", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to compare properties/pars with the right operand.
         /// </summary>
-        internal static string PredicateDesc
-        {
-            get
-            {
+        internal static string PredicateDesc {
+            get {
                 return ResourceManager.GetString("PredicateDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Proposition.
         /// </summary>
-        internal static string Proposition
-        {
-            get
-            {
+        internal static string Proposition {
+            get {
                 return ResourceManager.GetString("Proposition", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Proposition.
         /// </summary>
-        internal static string PropositionDesc
-        {
-            get
-            {
+        internal static string PropositionDesc {
+            get {
                 return ResourceManager.GetString("PropositionDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Query.
         /// </summary>
-        internal static string Query
-        {
-            get
-            {
+        internal static string Query {
+            get {
                 return ResourceManager.GetString("Query", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap query_icon
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap query_icon {
+            get {
                 object obj = ResourceManager.GetObject("query_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to sub trees are queried.
         /// </summary>
-        internal static string QueryDesc
-        {
-            get
-            {
+        internal static string QueryDesc {
+            get {
                 return ResourceManager.GetString("QueryDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to RandomGenerator.
         /// </summary>
-        internal static string RandomGenerator
-        {
-            get
-            {
+        internal static string RandomGenerator {
+            get {
                 return ResourceManager.GetString("RandomGenerator", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to You can specify a method to return a float value between 0.0 and 1.0 as the random number..
         /// </summary>
-        internal static string RandomGeneratorDesc
-        {
-            get
-            {
+        internal static string RandomGeneratorDesc {
+            get {
                 return ResourceManager.GetString("RandomGeneratorDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to RandomGenerator is not specified， the default one is used!.
         /// </summary>
-        internal static string RandomGeneratorNotSpecified
-        {
-            get
-            {
+        internal static string RandomGeneratorNotSpecified {
+            get {
                 return ResourceManager.GetString("RandomGeneratorNotSpecified", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Reference.
         /// </summary>
-        internal static string Reference
-        {
-            get
-            {
+        internal static string Reference {
+            get {
                 return ResourceManager.GetString("Reference", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Reference.
         /// </summary>
-        internal static string ReferenceDesc
-        {
-            get
-            {
+        internal static string ReferenceDesc {
+            get {
                 return ResourceManager.GetString("ReferenceDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Reinit.
         /// </summary>
-        internal static string Reinit
-        {
-            get
-            {
+        internal static string Reinit {
+            get {
                 return ResourceManager.GetString("Reinit", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap repeat_icon
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap repeat_icon {
+            get {
                 object obj = ResourceManager.GetObject("repeat_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Requery.
         /// </summary>
-        internal static string Requery
-        {
-            get
-            {
+        internal static string Requery {
+            get {
                 return ResourceManager.GetString("Requery", resourceCulture);
             }
         }
-
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reset Children.
+        /// </summary>
+        internal static string ResetChildren {
+            get {
+                return ResourceManager.GetString("ResetChildren", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reset the running children.
+        /// </summary>
+        internal static string ResetChildrenDesc {
+            get {
+                return ResourceManager.GetString("ResetChildrenDesc", resourceCulture);
+            }
+        }
+        
         /// <summary>
         ///   Looks up a localized string similar to Right.
         /// </summary>
-        internal static string Right
-        {
-            get
-            {
+        internal static string Right {
+            get {
                 return ResourceManager.GetString("Right", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Selector.
         /// </summary>
-        internal static string Selector
-        {
-            get
-            {
+        internal static string Selector {
+            get {
                 return ResourceManager.GetString("Selector", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to This node will call its attached nodes in the given order until one succeeds. If all attached nodes fail, this node fails, too..
         /// </summary>
-        internal static string SelectorDesc
-        {
-            get
-            {
+        internal static string SelectorDesc {
+            get {
                 return ResourceManager.GetString("SelectorDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to SelectorMonitor.
         /// </summary>
-        internal static string SelectorLoop
-        {
-            get
-            {
+        internal static string SelectorLoop {
+            get {
                 return ResourceManager.GetString("SelectorLoop", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap selectorLoop_ico
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap selectorLoop_ico {
+            get {
                 object obj = ResourceManager.GetObject("selectorLoop_ico", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Children are not WithPrecondition.
         /// </summary>
-        internal static string SelectorLoopChildChildError
-        {
-            get
-            {
+        internal static string SelectorLoopChildChildError {
+            get {
                 return ResourceManager.GetString("SelectorLoopChildChildError", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Dynamic Selector, it keep selecting from the children nodes until one succeeds..
         /// </summary>
-        internal static string SelectorLoopDesc
-        {
-            get
-            {
+        internal static string SelectorLoopDesc {
+            get {
                 return ResourceManager.GetString("SelectorLoopDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to SelectorProbability.
         /// </summary>
-        internal static string SelectorProbability
-        {
-            get
-            {
+        internal static string SelectorProbability {
+            get {
                 return ResourceManager.GetString("SelectorProbability", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap selectorProbability_ico
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap selectorProbability_ico {
+            get {
                 object obj = ResourceManager.GetObject("selectorProbability_ico", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Selector by probability.
         /// </summary>
-        internal static string SelectorProbabilityDesc
-        {
-            get
-            {
+        internal static string SelectorProbabilityDesc {
+            get {
                 return ResourceManager.GetString("SelectorProbabilityDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to SelectorStochastic.
         /// </summary>
-        internal static string SelectorStochastic
-        {
-            get
-            {
+        internal static string SelectorStochastic {
+            get {
                 return ResourceManager.GetString("SelectorStochastic", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap selectorStochastic_ico
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap selectorStochastic_ico {
+            get {
                 object obj = ResourceManager.GetObject("selectorStochastic_ico", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Selector Stochastic.
         /// </summary>
-        internal static string SelectorStochasticDesc
-        {
-            get
-            {
+        internal static string SelectorStochasticDesc {
+            get {
                 return ResourceManager.GetString("SelectorStochasticDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Sequence.
         /// </summary>
-        internal static string Sequence
-        {
-            get
-            {
+        internal static string Sequence {
+            get {
                 return ResourceManager.GetString("Sequence", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to This node will call its attached nodes in the given order. If any of the attached nodes fails, this node fails as well..
         /// </summary>
-        internal static string SequenceDesc
-        {
-            get
-            {
+        internal static string SequenceDesc {
+            get {
                 return ResourceManager.GetString("SequenceDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to SequenceStochastic.
         /// </summary>
-        internal static string SequenceStochastic
-        {
-            get
-            {
+        internal static string SequenceStochastic {
+            get {
                 return ResourceManager.GetString("SequenceStochastic", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap sequenceStochastic_ico
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap sequenceStochastic_ico {
+            get {
                 object obj = ResourceManager.GetObject("sequenceStochastic_ico", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Sequence Stochastic.
         /// </summary>
-        internal static string SequenceStochasticDesc
-        {
-            get
-            {
+        internal static string SequenceStochasticDesc {
+            get {
                 return ResourceManager.GetString("SequenceStochasticDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Start.
         /// </summary>
-        internal static string StartCondition
-        {
-            get
-            {
+        internal static string StartCondition {
+            get {
                 return ResourceManager.GetString("StartCondition", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Start.
         /// </summary>
-        internal static string StartConditionDesc
-        {
-            get
-            {
+        internal static string StartConditionDesc {
+            get {
                 return ResourceManager.GetString("StartConditionDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to State.
         /// </summary>
-        internal static string State
-        {
-            get
-            {
+        internal static string State {
+            get {
                 return ResourceManager.GetString("State", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap state_icon
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap state_icon {
+            get {
                 object obj = ResourceManager.GetObject("state_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to State.
         /// </summary>
-        internal static string StateDesc
-        {
-            get
-            {
+        internal static string StateDesc {
+            get {
                 return ResourceManager.GetString("StateDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to StatusTransition.
         /// </summary>
-        internal static string StatusTransition
-        {
-            get
-            {
+        internal static string StatusTransition {
+            get {
                 return ResourceManager.GetString("StatusTransition", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to for a subtree state, to transition or not based on its returnning status .
         /// </summary>
-        internal static string StatusTransitionDesc
-        {
-            get
-            {
+        internal static string StatusTransitionDesc {
+            get {
                 return ResourceManager.GetString("StatusTransitionDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to SuccessPolicy.
         /// </summary>
-        internal static string SuccessPolicy
-        {
-            get
-            {
+        internal static string SuccessPolicy {
+            get {
                 return ResourceManager.GetString("SuccessPolicy", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to the policy to return SUCESS.
         /// </summary>
-        internal static string SuccessPolicyDesc
-        {
-            get
-            {
+        internal static string SuccessPolicyDesc {
+            get {
                 return ResourceManager.GetString("SuccessPolicyDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap successUntil_ico
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap successUntil_ico {
+            get {
                 object obj = ResourceManager.GetObject("successUntil_ico", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Target Id.
         /// </summary>
-        internal static string TargetId
-        {
-            get
-            {
+        internal static string TargetId {
+            get {
                 return ResourceManager.GetString("TargetId", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Target Id.
         /// </summary>
-        internal static string TargetIdDesc
-        {
-            get
-            {
+        internal static string TargetIdDesc {
+            get {
                 return ResourceManager.GetString("TargetIdDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Task.
         /// </summary>
-        internal static string Task
-        {
-            get
-            {
+        internal static string Task {
+            get {
                 return ResourceManager.GetString("Task", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap task_icon
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap task_icon {
+            get {
                 object obj = ResourceManager.GetObject("task_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Children are not Method.
         /// </summary>
-        internal static string TaskChildChildError
-        {
-            get
-            {
+        internal static string TaskChildChildError {
+            get {
                 return ResourceManager.GetString("TaskChildChildError", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to A Task can be expanded into other tasks or actions on the runtime..
         /// </summary>
-        internal static string TaskDesc
-        {
-            get
-            {
+        internal static string TaskDesc {
+            get {
                 return ResourceManager.GetString("TaskDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to task has no children..
         /// </summary>
-        internal static string TaskNoChildrenError
-        {
-            get
-            {
+        internal static string TaskNoChildrenError {
+            get {
                 return ResourceManager.GetString("TaskNoChildrenError", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Task is not specified.
         /// </summary>
-        internal static string TaskNoMethod
-        {
-            get
-            {
+        internal static string TaskNoMethod {
+            get {
                 return ResourceManager.GetString("TaskNoMethod", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Task.
         /// </summary>
-        internal static string TaskPrototype
-        {
-            get
-            {
+        internal static string TaskPrototype {
+            get {
                 return ResourceManager.GetString("TaskPrototype", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Task.
         /// </summary>
-        internal static string TaskPrototypeDesc
-        {
-            get
-            {
+        internal static string TaskPrototypeDesc {
+            get {
                 return ResourceManager.GetString("TaskPrototypeDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Transition.
         /// </summary>
-        internal static string Transition
-        {
-            get
-            {
+        internal static string Transition {
+            get {
                 return ResourceManager.GetString("Transition", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap transition_icon
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap transition_icon {
+            get {
                 object obj = ResourceManager.GetObject("transition_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Transition.
         /// </summary>
-        internal static string TransitionCondition
-        {
-            get
-            {
+        internal static string TransitionCondition {
+            get {
                 return ResourceManager.GetString("TransitionCondition", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Transition.
         /// </summary>
-        internal static string TransitionConditionDesc
-        {
-            get
-            {
+        internal static string TransitionConditionDesc {
+            get {
                 return ResourceManager.GetString("TransitionConditionDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Transition Mode.
         /// </summary>
-        internal static string TransitionMode
-        {
-            get
-            {
+        internal static string TransitionMode {
+            get {
                 return ResourceManager.GetString("TransitionMode", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to it determines how the transition works: 1. when the condition is true, it transitions. 2. when the method succeeds/fails/ends it transitions..
         /// </summary>
-        internal static string TransitionModeDesc
-        {
-            get
-            {
+        internal static string TransitionModeDesc {
+            get {
                 return ResourceManager.GetString("TransitionModeDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to transition can only link from a state to another state..
         /// </summary>
-        internal static string TransitionParentError
-        {
-            get
-            {
+        internal static string TransitionParentError {
+            get {
                 return ResourceManager.GetString("TransitionParentError", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to TransitionPhase.
         /// </summary>
-        internal static string TransitionPhase
-        {
-            get
-            {
+        internal static string TransitionPhase {
+            get {
                 return ResourceManager.GetString("TransitionPhase", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to in which case to transition.
         /// </summary>
-        internal static string TransitionPhaseDesc
-        {
-            get
-            {
+        internal static string TransitionPhaseDesc {
+            get {
                 return ResourceManager.GetString("TransitionPhaseDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to True.
         /// </summary>
-        internal static string True
-        {
-            get
-            {
+        internal static string True {
+            get {
                 return ResourceManager.GetString("True", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to True.
         /// </summary>
-        internal static string TrueDesc
-        {
-            get
-            {
+        internal static string TrueDesc {
+            get {
                 return ResourceManager.GetString("TrueDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap try_icon
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap try_icon {
+            get {
                 object obj = ResourceManager.GetObject("try_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Update.
         /// </summary>
-        internal static string Update
-        {
-            get
-            {
+        internal static string Update {
+            get {
                 return ResourceManager.GetString("Update", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Wait.
         /// </summary>
-        internal static string Wait
-        {
-            get
-            {
+        internal static string Wait {
+            get {
                 return ResourceManager.GetString("Wait", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Wait for the specified miliseconds.
         /// </summary>
-        internal static string WaitDesc
-        {
-            get
-            {
+        internal static string WaitDesc {
+            get {
                 return ResourceManager.GetString("WaitDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to WaitforSignal.
         /// </summary>
-        internal static string WaitforSignal
-        {
-            get
-            {
+        internal static string WaitforSignal {
+            get {
                 return ResourceManager.GetString("WaitforSignal", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap waitforSignal_ico
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap waitforSignal_ico {
+            get {
                 object obj = ResourceManager.GetObject("waitforSignal_ico", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to blocked until the predicates are true.
         /// </summary>
-        internal static string WaitforSignalDesc
-        {
-            get
-            {
+        internal static string WaitforSignalDesc {
+            get {
                 return ResourceManager.GetString("WaitforSignalDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to WaitFrames.
         /// </summary>
-        internal static string WaitFrames
-        {
-            get
-            {
+        internal static string WaitFrames {
+            get {
                 return ResourceManager.GetString("WaitFrames", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Wait for the specified frames.
         /// </summary>
-        internal static string WaitFramesDesc
-        {
-            get
-            {
+        internal static string WaitFramesDesc {
+            get {
                 return ResourceManager.GetString("WaitFramesDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to WaitFramesState.
         /// </summary>
-        internal static string WaitFramesState
-        {
-            get
-            {
+        internal static string WaitFramesState {
+            get {
                 return ResourceManager.GetString("WaitFramesState", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to WaitFramesState.
         /// </summary>
-        internal static string WaitFramesStateDesc
-        {
-            get
-            {
+        internal static string WaitFramesStateDesc {
+            get {
                 return ResourceManager.GetString("WaitFramesStateDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to WaitState.
         /// </summary>
-        internal static string WaitState
-        {
-            get
-            {
+        internal static string WaitState {
+            get {
                 return ResourceManager.GetString("WaitState", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to WaitState.
         /// </summary>
-        internal static string WaitStateDesc
-        {
-            get
-            {
+        internal static string WaitStateDesc {
+            get {
                 return ResourceManager.GetString("WaitStateDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to WaitTransition.
         /// </summary>
-        internal static string WaitTransition
-        {
-            get
-            {
+        internal static string WaitTransition {
+            get {
                 return ResourceManager.GetString("WaitTransition", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to WaitTransition can only be appended to WaitState or WaitFramesState.
         /// </summary>
-        internal static string WaitTransitionDesc
-        {
-            get
-            {
+        internal static string WaitTransitionDesc {
+            get {
                 return ResourceManager.GetString("WaitTransitionDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Weight.
         /// </summary>
-        internal static string Weight
-        {
-            get
-            {
+        internal static string Weight {
+            get {
                 return ResourceManager.GetString("Weight", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Weight.
         /// </summary>
-        internal static string WeightDesc
-        {
-            get
-            {
+        internal static string WeightDesc {
+            get {
                 return ResourceManager.GetString("WeightDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Its parent node is not SelectorProbability..
         /// </summary>
-        internal static string WeightParentError
-        {
-            get
-            {
+        internal static string WeightParentError {
+            get {
                 return ResourceManager.GetString("WeightParentError", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to WithPrecondition.
         /// </summary>
-        internal static string WithPrecondition
-        {
-            get
-            {
+        internal static string WithPrecondition {
+            get {
                 return ResourceManager.GetString("WithPrecondition", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Action.
         /// </summary>
-        internal static string WithPreconditionAction
-        {
-            get
-            {
+        internal static string WithPreconditionAction {
+            get {
                 return ResourceManager.GetString("WithPreconditionAction", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to it has two branches:precondition and action. action branch can only be called if the precondition branch returns success..
         /// </summary>
-        internal static string WithPreconditionDesc
-        {
-            get
-            {
+        internal static string WithPreconditionDesc {
+            get {
                 return ResourceManager.GetString("WithPreconditionDesc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to WithPrecondition can only be inserted to SelectorLoop..
         /// </summary>
-        internal static string WithPreconditionParentError
-        {
-            get
-            {
+        internal static string WithPreconditionParentError {
+            get {
                 return ResourceManager.GetString("WithPreconditionParentError", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Precondition.
         /// </summary>
-        internal static string WithPreconditionPrecondition
-        {
-            get
-            {
+        internal static string WithPreconditionPrecondition {
+            get {
                 return ResourceManager.GetString("WithPreconditionPrecondition", resourceCulture);
             }
         }

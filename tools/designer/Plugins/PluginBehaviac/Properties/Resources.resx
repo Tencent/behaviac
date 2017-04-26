@@ -878,4 +878,10 @@ it only returns success or failure and never returns running.
   <data name="CastRightDesc" xml:space="preserve">
     <value>the right operand is cast to the left type</value>
   </data>
+  <data name="ResetChildren" xml:space="preserve">
+    <value>Reset Children</value>
+  </data>
+  <data name="ResetChildrenDesc" xml:space="preserve">
+    <value>Reset the running children</value>
+  </data>
 </root>

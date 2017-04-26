@@ -22,7 +22,7 @@
 #endif//#if _SYS_RANDOM_
 
 namespace behaviac {
-    class RandomGenerator {
+	class BEHAVIAC_API RandomGenerator {
     public:
         static RandomGenerator* GetInstance() {
             RandomGenerator* pRandomGenerator = RandomGenerator::_GetInstance();

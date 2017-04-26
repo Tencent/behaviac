@@ -821,4 +821,10 @@
   <data name="CastRightDesc" xml:space="preserve">
     <value>右值被转换到左值的类型</value>
   </data>
+  <data name="ResetChildren" xml:space="preserve">
+    <value>重置子节点</value>
+  </data>
+  <data name="ResetChildrenDesc" xml:space="preserve">
+    <value>重置正在运行的子节点，并从头开始执行分支子节点</value>
+  </data>
 </root>

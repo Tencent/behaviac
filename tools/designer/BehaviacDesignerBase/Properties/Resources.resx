@@ -873,4 +873,7 @@ Please reexport the meta with the latest runtime!</value>
   <data name="ReferencedBehaviorFilename" xml:space="preserve">
     <value>Behavior Filename</value>
   </data>
+  <data name="Debug" xml:space="preserve">
+    <value>Debug</value>
+  </data>
 </root>
