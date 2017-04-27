@@ -41,6 +41,11 @@ namespace PluginBehaviac.NodeExporters
                 return;
             }
 
+            if (assignment.IsCasting)
+            {
+                stream.WriteLine("{0}\t\t\tm_bCast = true;", indent);
+            }
+
             if (assignment.Opr != null)
             {
                 RightValueCppExporter.GenerateClassConstructor(node, assignment.Opr, stream, indent, "opr");

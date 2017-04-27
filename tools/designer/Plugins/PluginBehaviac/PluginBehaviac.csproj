@@ -95,6 +95,7 @@
     <Compile Include="NodeExporters\Cpp\Attachments\AttachActionCppExporter.cs" />
     <Compile Include="NodeExporters\Cpp\Attachments\EffectorCppExporter.cs" />
     <Compile Include="NodeExporters\Cpp\Attachments\PreconditionCppExporter.cs" />
+    <Compile Include="NodeExporters\Cpp\Composites\SelectorLoopCppExporter.cs" />
     <Compile Include="NodeExporters\Cpp\Decorators\DecoratorIteratorCppExporter.cs" />
     <Compile Include="NodeExporters\Cpp\Decorators\DecoratorLoopCppExporter.cs" />
     <Compile Include="NodeExporters\Cpp\FSM\AlwaysTransitionCppExporter.cs" />
@@ -114,6 +115,7 @@
     <Compile Include="NodeExporters\Cs\Attachments\PreconditionCsExporter.cs" />
     <Compile Include="NodeExporters\Cs\Attachments\EffectorCsExporter.cs" />
     <Compile Include="NodeExporters\Cs\Attachments\EventCsExporter.cs" />
+    <Compile Include="NodeExporters\Cs\Composites\SelectorLoopCsExporter.cs" />
     <Compile Include="NodeExporters\Cs\Composites\ParallelCsExporter.cs" />
     <Compile Include="NodeExporters\Cs\Composites\QueryCsExporter.cs" />
     <Compile Include="NodeExporters\Cs\Composites\ReferencedBehaviorCsExporter.cs" />

@@ -834,6 +834,7 @@ namespace behaviac
 		BEHAVIAC_DECLARE_DYNAMIC_TYPE(Assignment_bt_par_test_cast_param_node1, Assignment);
 		Assignment_bt_par_test_cast_param_node1()
 		{
+			m_bCast = true;
 			opr_p0 = 0;
 		}
 	protected:
@@ -855,6 +856,7 @@ namespace behaviac
 		BEHAVIAC_DECLARE_DYNAMIC_TYPE(Assignment_bt_par_test_cast_param_node0, Assignment);
 		Assignment_bt_par_test_cast_param_node0()
 		{
+			m_bCast = true;
 		}
 	protected:
 		virtual EBTStatus update_impl(Agent* pAgent, EBTStatus childStatus)
@@ -874,6 +876,7 @@ namespace behaviac
 		BEHAVIAC_DECLARE_DYNAMIC_TYPE(Assignment_bt_par_test_cast_param_node2, Assignment);
 		Assignment_bt_par_test_cast_param_node2()
 		{
+			m_bCast = true;
 		}
 	protected:
 		virtual EBTStatus update_impl(Agent* pAgent, EBTStatus childStatus)
