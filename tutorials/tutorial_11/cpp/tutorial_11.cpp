@@ -12,11 +12,15 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "behaviac_generated/types/behaviac_types.h"
-#include "behaviac_generated/behaviors/behaviac_generated_behaviors.h"
 
 #if BEHAVIAC_CCDEFINE_ANDROID
 #include <android/log.h>
 #include <jni.h>
+
+#if (BEHAVIAC_CCDEFINE_ANDROID_VER > 8)
+#include <android/asset_manager.h>
+#include <android/asset_manager_jni.h>
+#endif
 
 //#define LOGI(...) ((void)__android_log_print(ANDROID_LOG_INFO, "tutorial_11", __VA_ARGS__))
 #define LOGI(...)
@@ -59,15 +63,13 @@ const char* InitBehavic()
 {
 	LOGI("InitBehavic\n");
 
-	behaviac::Workspace::GetInstance()->RegisterBehaviorTreeCreator("FirstBT", behaviac::bt_FirstBT::Create);
-
 #if !BEHAVIAC_CCDEFINE_ANDROID
 	behaviac::Workspace::GetInstance()->SetFilePath("../tutorials/tutorial_11/cpp/exported");
 #else
     behaviac::Workspace::GetInstance()->SetFilePath("assets:/behaviac/exported");
 #endif
 
-	behaviac::Workspace::GetInstance()->SetFileFormat(behaviac::Workspace::EFF_cpp);
+    behaviac::Workspace::GetInstance()->SetFileFormat(behaviac::Workspace::EFF_xml);
 
     return "InitBehavic\n";
 }
@@ -169,8 +171,13 @@ std::string TestBehaviac()
 
 extern "C"
 JNIEXPORT jstring JNICALL
-Java_com_tencent_behaviac_behaviac_1android_MainActivity_stringFromJNI( JNIEnv *env, jobject /* this */)
+Java_com_tencent_behaviac_behaviac_1android_MainActivity_TestMain(JNIEnv* env, jclass cls, jobject assetManager)
 {
+    AAssetManager* mgr = AAssetManager_fromJava(env, assetManager);
+    BEHAVIAC_ASSERT(mgr);
+
+    behaviac::CFileManager::GetInstance()->SetAssetManager(mgr);
+
     std::string str = TestBehaviac();
 
     return env->NewStringUTF(str.c_str());

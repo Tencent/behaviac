@@ -219,8 +219,58 @@ namespace behaviac {
         umask(old);
     }
 
+	void ListFiles_android(behaviac::vector<behaviac::string>& files, const char* szDirName, bool bRecurrsive)
+	{
+        AAssetManager* mgr = behaviac::CFileManager::GetInstance()->GetAssetManager();
+		if (mgr != NULL)
+		{
+			const char* validDir = szDirName;
+            //skip "assets:/"
+			if (behaviac::StringUtils::StartsWith(validDir, "assets:/"))
+			{
+				validDir = validDir + 8;
+			}
+
+			AAssetDir* dir = AAssetManager_openDir(mgr, validDir);
+			if (dir != NULL)
+			{
+				bool bEndsWithSlash = behaviac::StringUtils::EndsWith(szDirName, "/");
+				if (!bEndsWithSlash)
+				{
+					bEndsWithSlash = behaviac::StringUtils::EndsWith(szDirName, "\\");
+				}
+
+				while (true)
+				{
+					const char* fileName = AAssetDir_getNextFileName(dir);
+					if (fileName == NULL)
+					{
+						break;
+					}
+
+                    if (bEndsWithSlash)
+					{
+						fileName = behaviac::FormatString("%s%s", szDirName, fileName);
+					}
+					else
+					{
+						fileName = behaviac::FormatString("%s/%s", szDirName, fileName);
+					}
+
+					files.push_back(fileName);
+				}
+
+				AAssetDir_close(dir);
+			}
+		}
+	}
+
     void CFileSystem::ListFiles(behaviac::vector<behaviac::string>& files, const char* szDirName, bool bRecurrsive) {
+#if BEHAVIAC_CCDEFINE_ANDROID && (BEHAVIAC_CCDEFINE_ANDROID_VER > 8)
+		ListFiles_android(files, szDirName, bRecurrsive);
+#else
         ListFiles_internal(files, szDirName, bRecurrsive);
+#endif
     }
 
     void CFileSystem::HandleSeekError(const char* szFilename) {

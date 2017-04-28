@@ -6,7 +6,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    // Used to load the 'native-lib' library on application startup.
+    // Used to load the libraries on application startup.
     static {
         System.loadLibrary("behaviac_gcc_debug");
         System.loadLibrary("tutorial_11_gcc_debug");
@@ -19,12 +19,12 @@ public class MainActivity extends AppCompatActivity {
 
         // Example of a call to a native method
         TextView tv = (TextView) findViewById(R.id.sample_text);
-        tv.setText(stringFromJNI());
+        tv.setText(TestMain(getApplication().getAssets()));
     }
 
     /**
-     * A native method that is implemented by the 'native-lib' native library,
+     * A native method that is implemented by the native library,
      * which is packaged with this application.
      */
-    public native String stringFromJNI();
+    public native String TestMain(android.content.res.AssetManager assetManager);
 }
