@@ -26,12 +26,19 @@ public class FirstAgent : behaviac.Agent
 		return p1;
 	}
 
-	public void Say(string value)
+	public behaviac.EBTStatus Say(string value, bool isLatent)
 	{
 ///<<< BEGIN WRITING YOUR CODE Say
-        Console.WriteLine();
-        Console.WriteLine("{0}", value);
-        Console.WriteLine();
+        if (isLatent && behaviac.Workspace.Instance.FrameSinceStartup < 3)
+        {
+            Console.WriteLine("\n{0} [Running]\n", value);
+
+            return behaviac.EBTStatus.BT_RUNNING;
+        }
+
+        Console.WriteLine("\n{0} [Success]\n", value);
+
+        return behaviac.EBTStatus.BT_SUCCESS;
 ///<<< END WRITING YOUR CODE
 	}
 

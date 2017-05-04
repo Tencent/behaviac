@@ -237,22 +237,24 @@ namespace behaviac
 				}
 			};
 
-			class CMethod_FirstAgent_Say : public CAgentMethodVoidBase
+			class CMethod_FirstAgent_Say : public CAgentMethodBase<behaviac::EBTStatus>
 			{
 				IInstanceMember* _value;
+				IInstanceMember* _isLatent;
 
 			public: 
-				CMethod_FirstAgent_Say() : _value(0) 
+				CMethod_FirstAgent_Say() : _value(0) , _isLatent(0) 
 				{
 				}
 
-				CMethod_FirstAgent_Say(CMethod_FirstAgent_Say &rhs) : CAgentMethodVoidBase(rhs) , _value(0) 
+				CMethod_FirstAgent_Say(CMethod_FirstAgent_Say &rhs) : CAgentMethodBase<behaviac::EBTStatus>(rhs) , _value(0) , _isLatent(0) 
 				{
 				}
 
 				~CMethod_FirstAgent_Say()
 				{
 					BEHAVIAC_DELETE _value;
+					BEHAVIAC_DELETE _isLatent;
 				}
 
 				virtual IInstanceMember* clone()
@@ -262,24 +264,27 @@ namespace behaviac
 
 				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
 				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
+					BEHAVIAC_ASSERT(paramStrs.size() == 2);
 
 					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
 					_value = AgentMeta::TParseProperty<behaviac::string >(paramStrs[0].c_str());
+					_isLatent = AgentMeta::TParseProperty<bool >(paramStrs[1].c_str());
 				}
 
 				virtual void run(Agent* self)
 				{
 					BEHAVIAC_ASSERT(_value != NULL);
+					BEHAVIAC_ASSERT(_isLatent != NULL);
 
 					behaviac::string& pValue_value = *(behaviac::string*)_value->GetValue(self, behaviac::Meta::IsVector<behaviac::string >::Result, behaviac::GetClassTypeNumberId<behaviac::string >());
+					bool& pValue_isLatent = *(bool*)_isLatent->GetValue(self, behaviac::Meta::IsVector<bool >::Result, behaviac::GetClassTypeNumberId<bool >());
 					self = Agent::GetParentAgent(self, _instance);
 
-					((FirstAgent*)self)->Say(pValue_value);
+					_returnValue->value = ((FirstAgent*)self)->Say(pValue_value, pValue_isLatent);
 				}
 			};
 
-			AgentMeta::SetTotalSignature(1464207575u);
+			AgentMeta::SetTotalSignature(2864967521u);
 
 			AgentMeta* meta = NULL;
 			BEHAVIAC_UNUSED_VAR(meta);
@@ -295,7 +300,7 @@ namespace behaviac
 			meta->RegisterMethod(502968959u, BEHAVIAC_NEW CMethod_behaviac_Agent_VectorRemove());
 
 			// FirstAgent
-			meta = BEHAVIAC_NEW AgentMeta(427122144u);
+			meta = BEHAVIAC_NEW AgentMeta(1360583836u);
 			AgentMeta::GetAgentMetas()[1778122110u] = meta;
 			meta->RegisterMemberProperty(2082220067u, BEHAVIAC_NEW CMemberProperty< int >("p1", Set_FirstAgent_p1, Get_FirstAgent_p1));
 			meta->RegisterMethod(1045109914u, BEHAVIAC_NEW CAgentStaticMethodVoid_1<char*>(FunctionPointer_FirstAgent_LogMessage));

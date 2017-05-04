@@ -188,7 +188,7 @@ namespace behaviac
 
 		public override bool Load()
 		{
-			AgentMeta.TotalSignature = 2205687817;
+			AgentMeta.TotalSignature = 4151713378;
 
 			AgentMeta meta;
 
@@ -203,11 +203,11 @@ namespace behaviac
 			meta.RegisterMethod(502968959, new CMethod_behaviac_Agent_VectorRemove());
 
 			// FirstAgent
-			meta = new AgentMeta(2417680568);
+			meta = new AgentMeta(246456501);
 			AgentMeta._AgentMetas_[1778122110] = meta;
 			meta.RegisterMemberProperty(2082220067, new CMemberProperty<int>("p1", delegate(Agent self, int value) { ((FirstAgent)self)._set_p1(value); }, delegate(Agent self) { return ((FirstAgent)self)._get_p1(); }));
 			meta.RegisterMethod(1045109914, new CAgentStaticMethodVoid<string>(delegate(string param0) { FirstAgent.LogMessage(param0); }));
-			meta.RegisterMethod(702722749, new CAgentMethodVoid<string>(delegate(Agent self, string value) { ((FirstAgent)self).Say(value); }));
+			meta.RegisterMethod(702722749, new CAgentMethod<behaviac.EBTStatus, string, bool>(delegate(Agent self, string value, bool isLatent) { return ((FirstAgent)self).Say(value, isLatent); }));
 			meta.RegisterMethod(2521019022, new CMethod_behaviac_Agent_VectorAdd());
 			meta.RegisterMethod(2306090221, new CMethod_behaviac_Agent_VectorClear());
 			meta.RegisterMethod(3483755530, new CMethod_behaviac_Agent_VectorContains());

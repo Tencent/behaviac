@@ -38,12 +38,15 @@ namespace tutorial_12
         {
             Console.WriteLine("UpdateLoop");
 
-            int frames = 0;
+            behaviac.Workspace.Instance.FrameSinceStartup = 0;
+
             behaviac.EBTStatus status = behaviac.EBTStatus.BT_RUNNING;
 
             while (status == behaviac.EBTStatus.BT_RUNNING)
             {
-                Console.WriteLine("frame {0}", ++frames);
+                behaviac.Workspace.Instance.FrameSinceStartup++;
+
+                Console.WriteLine("frame {0}", behaviac.Workspace.Instance.FrameSinceStartup);
 
                 status = g_FirstAgent.btexec();
             }

@@ -25,7 +25,7 @@ public:
 
 	private: int p1;
 
-	public: void Say(behaviac::string& value);
+	public: behaviac::EBTStatus Say(behaviac::string& value, bool isLatent);
 
 ///<<< BEGIN WRITING YOUR CODE CLASS_PART
 

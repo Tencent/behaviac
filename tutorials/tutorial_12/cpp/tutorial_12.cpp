@@ -80,12 +80,15 @@ void UpdateLoop()
 {
 	LOGI("UpdateLoop\n");
 
-	int frames = 0;
+	behaviac::Workspace::GetInstance()->SetFrameSinceStartup(0);
+
 	behaviac::EBTStatus status = behaviac::BT_RUNNING;
 
 	while (status == behaviac::BT_RUNNING)
 	{
-		LOGI("frame %d\n", ++frames);
+		behaviac::Workspace::GetInstance()->SetFrameSinceStartup(behaviac::Workspace::GetInstance()->GetFrameSinceStartup() + 1);
+
+		LOGI("frame %d\n", behaviac::Workspace::GetInstance()->GetFrameSinceStartup());
 
 		status = g_FirstAgent->btexec();
 	}

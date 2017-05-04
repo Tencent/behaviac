@@ -27,8 +27,9 @@
     </agent>
     <agent classfullname="FirstAgent" base="behaviac::Agent" DisplayName="FirstAgent" Desc="FirstAgent" IsRefType="true" IsCustomized="true">
       <Member Name="p1" DisplayName="p1" Desc="p1" Class="FirstAgent" Type="int" TypeFullName="System.Int32" defaultvalue="0" Static="false" Public="false" Readonly="false" />
-      <Method Name="Say" DisplayName="Say" Desc="Say" Class="FirstAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
+      <Method Name="Say" DisplayName="Say" Desc="Say" Class="FirstAgent" ReturnType="behaviac::EBTStatus" ReturnTypeFullName="XMLPluginBehaviac.behaviac_EBTStatus" Static="false" Public="true" istask="false">
         <Param Name="value" Type="string" TypeFullName="System.String" DisplayName="value" Desc="value" />
+        <Param Name="isLatent" Type="bool" TypeFullName="System.Boolean" DisplayName="isLatent" Desc="isLatent" />
       </Method>
     </agent>
   </agents>

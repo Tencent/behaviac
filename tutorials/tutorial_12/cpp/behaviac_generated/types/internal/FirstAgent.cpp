@@ -25,10 +25,19 @@ FirstAgent::~FirstAgent()
 ///<<< END WRITING YOUR CODE
 }
 
-void FirstAgent::Say(behaviac::string& value)
+behaviac::EBTStatus FirstAgent::Say(behaviac::string& value, bool isLatent)
 {
 ///<<< BEGIN WRITING YOUR CODE Say
-	printf("\n%s\n\n", value.c_str());
+	if (isLatent && behaviac::Workspace::GetInstance()->GetFrameSinceStartup() < 3)
+	{
+		printf("\n%s [Running]\n\n", value.c_str());
+
+		return behaviac::BT_RUNNING;
+	}
+
+	printf("\n%s [Success]\n\n", value.c_str());
+
+	return behaviac::BT_SUCCESS;
 ///<<< END WRITING YOUR CODE
 }
 

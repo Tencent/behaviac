@@ -99,6 +99,7 @@ namespace behaviac
 
             protected override EBTStatus update(Agent pAgent, EBTStatus childStatus)
             {
+                Debug.Check(childStatus != EBTStatus.BT_INVALID);
                 Debug.Check(this.m_children.Count == 3);
 
                 EBTStatus conditionResult = EBTStatus.BT_INVALID;
@@ -109,7 +110,7 @@ namespace behaviac
                     conditionResult = childStatus;
                 }
 
-                if (this.m_activeChildIndex == CompositeTask.InvalidChildIndex || conditionResult != EBTStatus.BT_INVALID)
+                if (this.m_activeChildIndex == CompositeTask.InvalidChildIndex)
                 {
                     BehaviorTask pCondition = this.m_children[0];
 
@@ -129,6 +130,10 @@ namespace behaviac
                         // else
                         this.m_activeChildIndex = 2;
                     }
+                }
+                else
+                {
+                    return childStatus;
                 }
 
                 if (this.m_activeChildIndex != CompositeTask.InvalidChildIndex)

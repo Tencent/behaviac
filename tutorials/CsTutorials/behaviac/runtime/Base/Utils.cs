@@ -1800,7 +1800,7 @@ namespace behaviac
 
             if (ret.StartsWith(kQuotStr))
             {
-                Debug.Check(ret.EndsWith(kQuotStr));
+                //Debug.Check(ret.EndsWith(kQuotStr));
                 ret = ret.Replace(kQuotStr, "\"");
             }
 

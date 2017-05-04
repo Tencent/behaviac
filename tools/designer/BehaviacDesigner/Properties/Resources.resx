@@ -538,7 +538,7 @@ Are your sure add it?</value>
     <value>This is a referenced tree.</value>
   </data>
   <data name="AgentErrorInfo" xml:space="preserve">
-    <value>{0} in {1} is not derived from {2} in {3}. Please try another behavior file again!</value>
+    <value>{0} in {1} is not derived from or the same as or does not inherit {2} in {3}. Please try another behavior file again!</value>
   </data>
   <data name="OpenPrefab" xml:space="preserve">
     <value>Open Prefab</value>

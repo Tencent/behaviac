@@ -10,7 +10,7 @@
     </node>
     <node class="DecoratorLoop" id="5">
       <property Count="const int 3" />
-      <property DecorateWhenChildEnds="true" />
+      <property DecorateWhenChildEnds="false" />
       <property DoneWithinFrame="false" />
       <node class="Sequence" id="6">
         <node class="Parallel" id="1">
@@ -21,16 +21,20 @@
           <node class="Condition" id="2">
             <property Operator="Equal" />
             <property Opl="int Self.FirstAgent::p1" />
-            <property Opr="const int 1" />
+            <property Opr="const int 2" />
+          </node>
+          <node class="Action" id="7">
+            <property Method="Self.FirstAgent::Say(&quot;In Parallel 1&quot;,false)" />
+            <property ResultOption="BT_INVALID" />
           </node>
           <node class="Action" id="0">
-            <property Method="Self.FirstAgent::Say(&quot;In Parallel&quot;)" />
-            <property ResultOption="BT_SUCCESS" />
+            <property Method="Self.FirstAgent::Say(&quot;In Parallel 2&quot;,true)" />
+            <property ResultOption="BT_INVALID" />
           </node>
         </node>
         <node class="Action" id="8">
-          <property Method="Self.FirstAgent::Say(&quot;Out of Parallel&quot;)" />
-          <property ResultOption="BT_SUCCESS" />
+          <property Method="Self.FirstAgent::Say(&quot;Out of Parallel&quot;,false)" />
+          <property ResultOption="BT_INVALID" />
         </node>
       </node>
     </node>

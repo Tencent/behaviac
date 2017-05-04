@@ -71,7 +71,8 @@ namespace behaviac {
     }
 
     EBTStatus IfElseTask::update(Agent* pAgent, EBTStatus childStatus) {
-        BEHAVIAC_ASSERT(this->m_children.size() == 3);
+		BEHAVIAC_ASSERT(childStatus != BT_INVALID);
+		BEHAVIAC_ASSERT(this->m_children.size() == 3);
 
 		EBTStatus conditionResult = BT_INVALID;
 
@@ -80,7 +81,7 @@ namespace behaviac {
 			conditionResult = childStatus;
 		}
 
-		if (this->m_activeChildIndex == CompositeTask::InvalidChildIndex || conditionResult != BT_INVALID) {
+		if (this->m_activeChildIndex == CompositeTask::InvalidChildIndex) {
             BehaviorTask* pCondition = this->m_children[0];
 
 			if (conditionResult == BT_INVALID) {
@@ -96,6 +97,9 @@ namespace behaviac {
                 this->m_activeChildIndex = 2;
             }
         }
+		else {
+			return childStatus;
+		}
 
         if (this->m_activeChildIndex != CompositeTask::InvalidChildIndex) {
             BehaviorTask* pBehavior = this->m_children[this->m_activeChildIndex];

@@ -187,7 +187,7 @@ namespace Behaviac.Design.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} in {1} is not derived from {2} in {3}. Please try another behavior file again!.
+        ///   Looks up a localized string similar to {0} in {1} is not derived from or the same as or does not inherit {2} in {3}. Please try another behavior file again!.
         /// </summary>
         internal static string AgentErrorInfo {
             get {

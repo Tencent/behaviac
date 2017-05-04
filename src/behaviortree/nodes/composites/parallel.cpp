@@ -223,6 +223,13 @@ namespace behaviac {
 
         BEHAVIAC_ASSERT(this->m_activeChildIndex == CompositeTask::InvalidChildIndex);
 
+		// reset the status cache of the children
+		for (uint32_t i = 0; i < this->m_children.size(); ++i) {
+			BehaviorTask* pChild = this->m_children[i];
+
+			pChild->reset(pAgent);
+		}
+
         return true;
     }
 

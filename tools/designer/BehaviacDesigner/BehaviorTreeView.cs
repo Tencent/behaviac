@@ -654,7 +654,7 @@ namespace Behaviac.Design
         private enum NodeAttachMode { None, Left, Right, Top, Bottom, Attachment, Center };
 
         //return true if rootBehavior's agent type is derived from the agent type of childBehavior.
-        public static bool IsCompatibleAgentType(Behavior rootBehavior, Behavior childBehavior)
+        private static bool IsCompatibleAgentType(Behavior rootBehavior, Behavior childBehavior)
         {
             if (rootBehavior != null && childBehavior != null && rootBehavior.AgentType != null && childBehavior.AgentType != null)
             {
@@ -662,7 +662,7 @@ namespace Behaviac.Design
                 string childBTAgent = childBehavior.AgentType.ToString();
 
                 // the agent type specified at root bt should be derived from the agent type at child bt
-                if (!Plugin.IsAgentDerived(rootBTAgent, childBTAgent))
+                if (!Plugin.IsAgentDerived(rootBTAgent, childBTAgent) && !Plugin.IsAgentDerived(childBTAgent, rootBTAgent))
                 {
                     string errorMsg = string.Format(Resources.AgentErrorInfo, rootBTAgent, rootBehavior.Label, childBTAgent, childBehavior.Label);
                     MessageBox.Show(errorMsg, Resources.DesignerError, MessageBoxButtons.OK);

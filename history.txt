@@ -1,3 +1,8 @@
+2017-5-4  3.6.33
+    Remove the inheritance for the agent type of the referenced behaviors.
+    Fix a bug for the Parallel node.
+    Fix a bug for the IfElse node.
+
 2017-4-26  3.6.32
     Support resetting the children for the SelectorLoop node.
     Add the tutorial_13.
