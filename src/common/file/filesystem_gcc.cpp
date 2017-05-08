@@ -219,6 +219,7 @@ namespace behaviac {
         umask(old);
     }
 
+#if BEHAVIAC_CCDEFINE_ANDROID && (BEHAVIAC_CCDEFINE_ANDROID_VER > 8)
 	void ListFiles_android(behaviac::vector<behaviac::string>& files, const char* szDirName, bool bRecurrsive)
 	{
         AAssetManager* mgr = behaviac::CFileManager::GetInstance()->GetAssetManager();
@@ -264,6 +265,7 @@ namespace behaviac {
 			}
 		}
 	}
+#endif
 
     void CFileSystem::ListFiles(behaviac::vector<behaviac::string>& files, const char* szDirName, bool bRecurrsive) {
 #if BEHAVIAC_CCDEFINE_ANDROID && (BEHAVIAC_CCDEFINE_ANDROID_VER > 8)
