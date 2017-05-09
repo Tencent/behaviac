@@ -108,30 +108,10 @@ namespace Behaviac.Design.Nodes
             }
         }
 
-        public override void OnPropertyValueChanged(DesignerPropertyInfo property)
+        public void CollectTaskPars(ref List<ParInfo> pars)
         {
-            if (property.Property.Name == "Prototype")
+            if (this._task != null)
             {
-                List <ParInfo> pars = ((Behavior)(this.Behavior)).LocalVars;
-
-                bool bLoop = true;
-
-                //remove old added local variables
-                while (bLoop)
-                {
-                    int index = pars.FindIndex((p) => p.Name.IndexOf(LOCAL_TASK_PARAM_PRE) != -1);
-
-                    if (index != -1)
-                    {
-                        pars.RemoveAt(index);
-
-                    }
-                    else
-                    {
-                        bLoop = false;
-                    }
-                }
-
                 for (int i = 0; i < this._task.Params.Count; ++i)
                 {
                     var param = this._task.Params[i];
@@ -149,9 +129,35 @@ namespace Behaviac.Design.Nodes
 
                     pars.Add(par);
                 }
+            }
+        }
 
-                this.Behavior.AgentType.ClearPars();
-                this.Behavior.AgentType.AddPars(pars);
+        public override void OnPropertyValueChanged(DesignerPropertyInfo property)
+        {
+            if (property.Property.Name == "Prototype")
+            {
+                List<ParInfo> pars = ((Behavior)(this.Behavior)).LocalVars;
+
+                bool bLoop = true;
+
+                //remove old added local variables
+                while (bLoop)
+                {
+                    int index = pars.FindIndex((p) => p.Name.IndexOf(LOCAL_TASK_PARAM_PRE) != -1);
+
+                    if (index != -1)
+                    {
+                        pars.RemoveAt(index);
+                    }
+                    else
+                    {
+                        bLoop = false;
+                    }
+                }
+
+                CollectTaskPars(ref pars);
+
+                this.Behavior.AgentType.ResetPars(pars);
 
                 if (Plugin.UpdateMetaStoreHandler != null)
                 {

@@ -305,7 +305,7 @@ namespace Behaviac.Design
             return types;
         }
 
-        public void AddPars(IList<ParInfo> pars)
+        public void ResetPars(IList<ParInfo> pars)
         {
             this.ClearPars();
 

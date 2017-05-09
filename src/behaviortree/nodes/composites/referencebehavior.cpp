@@ -200,10 +200,15 @@ namespace behaviac {
         return NULL;
     }
 
-    ReferencedBehaviorTask::ReferencedBehaviorTask() : SingeChildTask(), m_nextStateId(-1), m_subTree(0) {
+	ReferencedBehaviorTask::ReferencedBehaviorTask() : SingeChildTask(), m_nextStateId(-1), m_subTree(NULL) {
     }
 
     ReferencedBehaviorTask::~ReferencedBehaviorTask() {
+		if (this->m_subTree)
+		{
+			behaviac::Workspace::GetInstance()->DestroyBehaviorTreeTask(this->m_subTree, NULL);
+			this->m_subTree = NULL;
+		}
     }
 
     void ReferencedBehaviorTask::copyto(BehaviorTask* target) const {
@@ -247,8 +252,22 @@ namespace behaviac {
         this->m_nextStateId = -1;
 
         const char* szTreePath = pNode->GetReferencedTree(pAgent);
-        this->m_subTree = Workspace::GetInstance()->CreateBehaviorTreeTask(szTreePath);
-        pNode->SetTaskParams(pAgent, this->m_subTree);
+
+		//to create the task on demand
+		if (szTreePath && (this->m_subTree == NULL || !StringUtils::Compare(szTreePath, this->m_subTree->GetName().c_str())))
+		{
+			if (this->m_subTree)
+			{
+				behaviac::Workspace::GetInstance()->DestroyBehaviorTreeTask(this->m_subTree, pAgent);
+			}
+
+			this->m_subTree = Workspace::GetInstance()->CreateBehaviorTreeTask(szTreePath);
+			pNode->SetTaskParams(pAgent, this->m_subTree);
+		}
+		else if (this->m_subTree)
+		{
+			this->m_subTree->reset(pAgent);
+		}
 
         return true;
     }
@@ -257,9 +276,7 @@ namespace behaviac {
 #if BEHAVIAC_USE_HTN
         BEHAVIAC_ASSERT(this->m_currentState != NULL);
         this->m_currentState->Pop();
-#endif//
-        behaviac::Workspace::GetInstance()->DestroyBehaviorTreeTask(this->m_subTree, pAgent);
-        this->m_subTree = 0;
+#endif
         BEHAVIAC_UNUSED_VAR(pAgent);
         BEHAVIAC_UNUSED_VAR(s);
     }

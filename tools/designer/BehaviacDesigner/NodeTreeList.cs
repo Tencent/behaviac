@@ -542,7 +542,7 @@ namespace Behaviac.Design
 
                 if (b != null && b.PlanningProcess != null)
                 {
-                    b.AgentType.AddPars(b.LocalVars);
+                    b.AgentType.ResetPars(b.LocalVars);
 
                     FrameStatePool.PlanningState nodeState = b.PlanningProcess._rootState;
 

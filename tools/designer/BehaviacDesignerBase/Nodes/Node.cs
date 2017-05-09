@@ -787,7 +787,7 @@ namespace Behaviac.Design.Nodes
         /// Is called after the behaviour was loaded.
         /// </summary>
         /// <param name="behavior">The behaviour this node belongs to.</param>
-        public void PostLoad(BehaviorNode behavior)
+        public virtual void PostLoad(BehaviorNode behavior)
         {
             checkId();
         }
@@ -1194,7 +1194,7 @@ namespace Behaviac.Design.Nodes
 
                         if (b != null)
                         {
-                            b.AgentType.AddPars(b.LocalVars);
+                            b.AgentType.ResetPars(b.LocalVars);
                         }
 
                         root.ClearPrefabDirty(prefabName);
@@ -1236,7 +1236,7 @@ namespace Behaviac.Design.Nodes
 
                         if (b != null)
                         {
-                            b.AgentType.AddPars(b.LocalVars);
+                            b.AgentType.ResetPars(b.LocalVars);
                         }
 
                         root.ResetByPrefab(prefabName, (Node)prefabBehavior);

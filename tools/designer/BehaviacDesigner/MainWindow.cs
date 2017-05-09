@@ -1161,7 +1161,7 @@ namespace Behaviac.Design
                     dock.BehaviorTreeView.RootNode != null &&
                     dock.BehaviorTreeView.RootNode.AgentType != null)
                 {
-                    dock.BehaviorTreeView.RootNode.AgentType.AddPars(((Behavior)dock.BehaviorTreeView.RootNode).LocalVars);
+                    dock.BehaviorTreeView.RootNode.AgentType.ResetPars(((Behavior)dock.BehaviorTreeView.RootNode).LocalVars);
                 }
 
                 if (Plugin.UpdateMetaStoreHandler != null)
@@ -1541,7 +1541,7 @@ namespace Behaviac.Design
 
                             if (behaviorTreeView != null && behaviorTreeView.RootNode != null && behaviorTreeView.RootNode.AgentType != null)
                             {
-                                behaviorTreeView.RootNode.AgentType.AddPars(((Behavior)behaviorTreeView.RootNode).LocalVars);
+                                behaviorTreeView.RootNode.AgentType.ResetPars(((Behavior)behaviorTreeView.RootNode).LocalVars);
                             }
                         }
                     }

@@ -155,7 +155,7 @@ namespace Behaviac.Design.Attachments
                 Behavior b = this.Behavior as Behavior;
                 Debug.Check(b != null);
 
-                b.AgentType.AddPars(b.LocalVars);
+                b.AgentType.ResetPars(b.LocalVars);
 
                 //((Node)_referencedBehavior).WasModified += new WasModifiedEventDelegate(referencedBehavior_WasModified);
                 //_referencedBehavior.WasRenamed += new Behavior.WasRenamedEventDelegate(referencedBehavior_WasRenamed);

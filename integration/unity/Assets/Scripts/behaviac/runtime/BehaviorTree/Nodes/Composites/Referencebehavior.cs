@@ -260,13 +260,20 @@ namespace behaviac
                 {
                     this.m_nextStateId = -1;
 
+                    string szTreePath = pNode.GetReferencedTree(pAgent);
+
                     //to create the task on demand
-                    if (this.m_subTree == null)
+                    if (this.m_subTree == null || szTreePath != this.m_subTree.GetName())
                     {
-                        string szTreePath = pNode.GetReferencedTree(pAgent);
+                        if (this.m_subTree != null)
+                        {
+                            Workspace.Instance.DestroyBehaviorTreeTask(this.m_subTree, pAgent);
+                        }
+
                         this.m_subTree = Workspace.Instance.CreateBehaviorTreeTask(szTreePath);
+                        pNode.SetTaskParams(pAgent, this.m_subTree);
                     }
-                    else
+                    else if (this.m_subTree != null)
                     {
                         this.m_subTree.reset(pAgent);
                     }
@@ -284,7 +291,7 @@ namespace behaviac
 #if BEHAVIAC_USE_HTN
                 Debug.Check(this.currentState != null);
                 this.currentState.Pop();
-#endif//
+#endif
                 base.onexit(pAgent, s);
             }
 

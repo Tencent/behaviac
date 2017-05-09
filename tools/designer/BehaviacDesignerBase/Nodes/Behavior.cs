@@ -501,8 +501,33 @@ namespace Behaviac.Design.Nodes
         {
             if (this.AgentType != null)
             {
-                this.AgentType.AddPars(this.LocalVars);
+                this.AgentType.ResetPars(this.LocalVars);
             }
+        }
+
+        public override void PostLoad(BehaviorNode behavior)
+        {
+            if (this.LocalVars != null && this.Children.Count > 0)
+            {
+                BaseNode child = this.Children[0];
+                if (child is Task)
+                {
+                    Task task = child as Task;
+                    List<ParInfo> pars = new List<ParInfo>();
+
+                    task.CollectTaskPars(ref pars);
+
+                    foreach (ParInfo par in pars)
+                    {
+                        if (this.LocalVars.Find((p) => p.Name == par.Name) == null)
+                        {
+                            this.LocalVars.Add(par);
+                        }
+                    }
+                }
+            }
+
+            base.PostLoad(behavior);
         }
 
         public void PreSave()
@@ -529,10 +554,7 @@ namespace Behaviac.Design.Nodes
 
         public void PreExport()
         {
-            if (this.AgentType != null)
-            {
-                this.AgentType.AddPars(this.LocalVars);
-            }
+            PostLoadPars();
         }
 
         public void PostExport()

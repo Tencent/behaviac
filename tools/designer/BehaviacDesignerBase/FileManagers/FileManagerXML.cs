@@ -451,7 +451,7 @@ namespace Behaviac.Design.FileManagers
 
                         if (b.AgentType != null)
                         {
-                            b.AgentType.AddPars(b.LocalVars);
+                            b.AgentType.ResetPars(b.LocalVars);
                         }
                     }
                 }

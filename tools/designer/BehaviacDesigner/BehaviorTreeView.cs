@@ -276,7 +276,7 @@ namespace Behaviac.Design
 
                     if (this.RootNode.AgentType != null)
                     {
-                        this.RootNode.AgentType.AddPars(((Behavior)this.RootNode).LocalVars);
+                        this.RootNode.AgentType.ResetPars(((Behavior)this.RootNode).LocalVars);
                     }
 
                     if (MetaStoreDock.IsVisible())
