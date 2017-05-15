@@ -308,12 +308,12 @@ namespace behaviac
                 Debug.Check(this.m_activeChildIndex == CompositeTask.InvalidChildIndex);
 
                 // reset the status cache of the children
-                for (int i = 0; i < this.m_children.Count; ++i)
-                {
-                    BehaviorTask pChild = this.m_children[i];
+                //for (int i = 0; i < this.m_children.Count; ++i)
+                //{
+                //    BehaviorTask pChild = this.m_children[i];
 
-                    pChild.reset(pAgent);
-                }
+                //    pChild.reset(pAgent);
+                //}
 
                 return true;
             }

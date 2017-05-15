@@ -190,7 +190,7 @@ namespace behaviac {
             if (pPrecond != NULL) {
                 Precondition::EPhase ph = pPrecond->GetPhase();
 
-                if (phase == Precondition::E_BOTH || ph == Precondition::E_BOTH || ph == phase) {
+                if (ph == Precondition::E_BOTH || ph == phase) {
                     bool taskBoolean = pPrecond->Evaluate((Agent*)pAgent);
 
                     CombineResults(firstValidPrecond, lastCombineValue, pPrecond, taskBoolean);

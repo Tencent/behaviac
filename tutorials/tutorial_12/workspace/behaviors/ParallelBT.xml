@@ -10,30 +10,25 @@
           <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="4" Opl="int Self.FirstAgent::p1" Opr="const int 2" PrefabName="" PrefabNodeId="-1">
             <Comment Background="NoColor" Text="" />
           </Node>
-          <Node Class="PluginBehaviac.Nodes.DecoratorLoop" Count="const int 3" DecorateWhenChildEnds="false" DoneWithinFrame="false" Enable="true" HasOwnPrefabData="false" Id="5" PrefabName="" PrefabNodeId="-1">
+          <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="6" PrefabName="" PrefabNodeId="-1">
             <Comment Background="NoColor" Text="" />
             <Connector Identifier="GenericChildren">
-              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="6" PrefabName="" PrefabNodeId="-1">
+              <Node Class="PluginBehaviac.Nodes.Parallel" ChildFinishPolicy="CHILDFINISH_LOOP" Enable="true" ExitPolicy="EXIT_ABORT_RUNNINGSIBLINGS" FailurePolicy="FAIL_ON_ONE" HasOwnPrefabData="false" Id="1" PrefabName="" PrefabNodeId="-1" SuccessPolicy="SUCCEED_ON_ALL">
                 <Comment Background="NoColor" Text="" />
                 <Connector Identifier="GenericChildren">
-                  <Node Class="PluginBehaviac.Nodes.Parallel" ChildFinishPolicy="CHILDFINISH_LOOP" Enable="true" ExitPolicy="EXIT_ABORT_RUNNINGSIBLINGS" FailurePolicy="FAIL_ON_ONE" HasOwnPrefabData="false" Id="1" PrefabName="" PrefabNodeId="-1" SuccessPolicy="SUCCEED_ON_ALL">
+                  <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="2" Operator="Equal" Opl="int Self.FirstAgent::p1" Opr="const int 2" PrefabName="" PrefabNodeId="-1">
                     <Comment Background="NoColor" Text="" />
-                    <Connector Identifier="GenericChildren">
-                      <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="2" Operator="Equal" Opl="int Self.FirstAgent::p1" Opr="const int 2" PrefabName="" PrefabNodeId="-1">
-                        <Comment Background="NoColor" Text="" />
-                      </Node>
-                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="7" Method="Self.FirstAgent::Say(&quot;In Parallel 1&quot;,false)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_INVALID">
-                        <Comment Background="NoColor" Text="" />
-                      </Node>
-                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="0" Method="Self.FirstAgent::Say(&quot;In Parallel 2&quot;,true)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_INVALID">
-                        <Comment Background="NoColor" Text="" />
-                      </Node>
-                    </Connector>
                   </Node>
-                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="8" Method="Self.FirstAgent::Say(&quot;Out of Parallel&quot;,false)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_INVALID">
+                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="7" Method="Self.FirstAgent::Say(&quot;In Parallel 1&quot;,false)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_INVALID">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="0" Method="Self.FirstAgent::Say(&quot;In Parallel 2&quot;,true)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_INVALID">
                     <Comment Background="NoColor" Text="" />
                   </Node>
                 </Connector>
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="8" Method="Self.FirstAgent::Say(&quot;Out of Parallel&quot;,false)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_INVALID">
+                <Comment Background="NoColor" Text="" />
               </Node>
             </Connector>
           </Node>
