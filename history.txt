@@ -1,5 +1,7 @@
-2017-5-15  3.6.34
+2017-5-16  3.6.34
     Fix a bug for the Parallel node.
+    Fix a bug for exporting the return type of the method.
+    Fix a bug for exporting the local vars.
 
 2017-5-4  3.6.33
     Remove the inheritance for the agent type of the referenced behaviors.

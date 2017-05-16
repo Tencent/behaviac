@@ -68,6 +68,14 @@ namespace Behaviac.Design
                 typeName = typeName.Replace("vector<", "List<");
             }
 
+            if (Plugin.TypeRenames.Count > 0)
+            {
+                foreach (KeyValuePair<string, string> typePair in Plugin.TypeRenames)
+                {
+                    typeName = typeName.Replace(typePair.Key, typePair.Value);
+                }
+            }
+
             return typeName;
         }
 

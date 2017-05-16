@@ -1198,6 +1198,11 @@ namespace PluginBehaviac.Exporters
                             }
 
                             string methodReturnType = DataCppExporter.GetGeneratedNativeType(method.NativeReturnType);
+                            if (Plugin.IsRefType(method.ReturnType) && !methodReturnType.EndsWith("*"))
+                            {
+                                methodReturnType += "*";
+                            }
+
                             string baseClass = (methodReturnType == "void") ? "CAgentMethodVoidBase" : string.Format("CAgentMethodBase<{0}>", methodReturnType);
 
                             // class
@@ -1618,10 +1623,10 @@ namespace PluginBehaviac.Exporters
 
                                 if (prop.IsArrayElement)
                                 {
-                                    if (prop.IsProperty)
+                                    if (prop.IsPar)
                                     {
-                                        str_setter = string.Format("\n\tinline void Set_{0}(Agent* self, {1} value, int index) {{ self->SetVariable(\"{2}\",{3}u,value); }};", propName, propType, propBasicName, CRC32.CalcCRC(propBasicName));
-                                        str_getter = string.Format("\n\tinline const void* Get_{1}(Agent* self, int index ){{ return &self->GetVariable<{0}>({2}u); }};", propType, propName, CRC32.CalcCRC(propBasicName));
+                                        //str_setter = string.Format("\n\tinline void Set_{0}(Agent* self, {1} value, int index) {{ self->SetVariable(\"{2}\",{3}u,value); }};", propName, propType, propBasicName, CRC32.CalcCRC(propBasicName));
+                                        //str_getter = string.Format("\n\tinline const void* Get_{1}(Agent* self, int index ){{ return &self->GetVariable<{0}>({2}u); }};", propType, propName, CRC32.CalcCRC(propBasicName));
                                     }
                                     else
                                     {
@@ -1639,10 +1644,10 @@ namespace PluginBehaviac.Exporters
                                 }
                                 else
                                 {
-                                    if (prop.IsProperty)
+                                    if (prop.IsPar)
                                     {
-                                        str_setter = string.Format("\n\tinline void Set_{0}(Agent* self, {1} value) {{ self->SetVariable(\"{2}\",{3}u,value); }};", propName, propType, prop.BasicName, CRC32.CalcCRC(propBasicName));
-                                        str_getter = string.Format("\n\tinline const void* Get_{1}(Agent* self){{ return &self->GetVariable<{0}>({2}u); }};", propType, propName, CRC32.CalcCRC(propBasicName));
+                                        //str_setter = string.Format("\n\tinline void Set_{0}(Agent* self, {1} value) {{ self->SetVariable(\"{2}\",{3}u,value); }};", propName, propType, prop.BasicName, CRC32.CalcCRC(propBasicName));
+                                        //str_getter = string.Format("\n\tinline const void* Get_{1}(Agent* self){{ return &self->GetVariable<{0}>({2}u); }};", propType, propName, CRC32.CalcCRC(propBasicName));
                                     }
                                     else
                                     {
