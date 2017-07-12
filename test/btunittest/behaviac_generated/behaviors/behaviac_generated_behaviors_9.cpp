@@ -2435,7 +2435,7 @@ namespace behaviac
 			pBT->AddLocal("EmployeeParTestAgent", "vector<bool>", "par0_boolean_list_0", "2:false|true");
 			pBT->AddLocal("EmployeeParTestAgent", "TNS::NE::NAT::eColor", "par0_ecolor_0", "YELLOW");
 			pBT->AddLocal("EmployeeParTestAgent", "vector<TNS::NE::NAT::eColor>", "par0_ecolor_list_0", "2:RED|GREEN");
-			pBT->AddLocal("EmployeeParTestAgent", "behaviac::Agent", "par2_agent_0", "null");
+			pBT->AddLocal("EmployeeParTestAgent", "behaviac::Agent*", "par2_agent_0", "null");
 			pBT->AddLocal("EmployeeParTestAgent", "vector<behaviac::Agent>", "par2_agent_list_0", "2:null|null");
 			pBT->AddLocal("EmployeeParTestAgent", "char", "par0_char_0", "A");
 			pBT->AddLocal("EmployeeParTestAgent", "TNS::ST::PER::WRK::kEmployee", "par1_kemployee_0", "{id=83;name=\"Tom\";code=A;weight=97.3;isMale=false;skinColor=RED;car={brand=\"Alpha\";price=5700;color=WHITE;};boss=null;}");
@@ -2444,7 +2444,7 @@ namespace behaviac
 			pBT->AddLocal("EmployeeParTestAgent", "vector<char>", "par0_char_list_0", "4:d|j|F|A");
 			pBT->AddLocal("EmployeeParTestAgent", "vector<sbyte>", "par0_sbyte_list_0", "3:127|-128|0");
 			pBT->AddLocal("EmployeeParTestAgent", "vector<ubyte>", "par0_byte_list_0", "3:167|23|152");
-			pBT->AddLocal("EmployeeParTestAgent", "ParTestAgentBase", "par2_ParTestAgentBase_0", "null");
+			pBT->AddLocal("EmployeeParTestAgent", "ParTestAgentBase*", "par2_ParTestAgentBase_0", "null");
 			pBT->AddLocal("EmployeeParTestAgent", "vector<ParTestAgentBase>", "par2_ParTestAgentBaseList_0", "2:null|null");
 			pBT->AddLocal("EmployeeParTestAgent", "llong", "par2_longlong_0", "-666");
 			pBT->AddLocal("EmployeeParTestAgent", "ullong", "par2_ulonglong_0", "666");
@@ -3508,7 +3508,7 @@ namespace behaviac
 			pBT->AddLocal("EmployeeParTestAgent", "TNS::ST::PER::WRK::kEmployee", "par1_kemployee_0", "{id=0;name=\"tomlp\";code=c;weight=0;isMale=false;skinColor=RED;car={brand=\"\";price=0;color=RED;};boss=null;}");
 			pBT->AddLocal("EmployeeParTestAgent", "vector<TNS::ST::PER::WRK::kEmployee>", "par1_kemployee_list_0", "0:");
 			pBT->AddLocal("EmployeeParTestAgent", "ushort", "par1_ushort_0", "0");
-			pBT->AddLocal("EmployeeParTestAgent", "behaviac::Agent", "par2_agent_0", "null");
+			pBT->AddLocal("EmployeeParTestAgent", "behaviac::Agent*", "par2_agent_0", "null");
 			pBT->AddLocal("EmployeeParTestAgent", "vector<behaviac::Agent>", "par2_agent_list_0", "0:");
 			pBT->AddLocal("EmployeeParTestAgent", "double", "par2_double_0", "0");
 			pBT->AddLocal("EmployeeParTestAgent", "float", "par2_single_0", "0");
@@ -4508,7 +4508,7 @@ namespace behaviac
 			pBT->AddLocal("EmployeeParTestAgent", "vector<bool>", "par0_boolean_list_0", "2:false|true");
 			pBT->AddLocal("EmployeeParTestAgent", "TNS::NE::NAT::eColor", "par0_ecolor_0", "YELLOW");
 			pBT->AddLocal("EmployeeParTestAgent", "vector<TNS::NE::NAT::eColor>", "par0_ecolor_list_0", "2:RED|GREEN");
-			pBT->AddLocal("EmployeeParTestAgent", "behaviac::Agent", "par2_agent_0", "null");
+			pBT->AddLocal("EmployeeParTestAgent", "behaviac::Agent*", "par2_agent_0", "null");
 			pBT->AddLocal("EmployeeParTestAgent", "vector<behaviac::Agent>", "par2_agent_list_0", "2:null|null");
 			pBT->AddLocal("EmployeeParTestAgent", "char", "par0_char_0", "A");
 			pBT->AddLocal("EmployeeParTestAgent", "TNS::ST::PER::WRK::kEmployee", "par1_kemployee_0", "{id=83;name=\"Tom\";code=A;weight=97.3;isMale=false;skinColor=RED;car={brand=\"Alpha\";price=5700;color=WHITE;};boss=null;}");

@@ -88,6 +88,11 @@ namespace PluginBehaviac.Nodes
             }
         }
 
+        public override Behaviac.Design.ObjectUI.ObjectUIPolicy CreateUIPolicy()
+        {
+            return new Behaviac.Design.ObjectUI.ConditionUIPolicy();
+        }
+
         public override bool ResetMembers(MetaOperations metaOperation, AgentType agentType, BaseType baseType, MethodDef method, PropertyDef property)
         {
             bool bReset = false;

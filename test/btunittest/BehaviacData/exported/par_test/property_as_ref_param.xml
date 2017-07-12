@@ -11,7 +11,7 @@
     <par name="par2_single_0" type="float" value="0" />
     <par name="par2_double_0" type="double" value="0" />
     <par name="par2_agent_list_0" type="vector&lt;behaviac::Agent&gt;" value="0:" />
-    <par name="par2_agent_0" type="behaviac::Agent" value="null" />
+    <par name="par2_agent_0" type="behaviac::Agent*" value="null" />
     <par name="par1_ushort_0" type="ushort" value="65535" />
     <par name="par1_kemployee_list_0" type="vector&lt;TNS::ST::PER::WRK::kEmployee&gt;" value="0:" />
     <par name="par1_kemployee_0" type="TNS::ST::PER::WRK::kEmployee" value="{id=0;name=&quot;tomlp&quot;;code=c;weight=0;isMale=false;skinColor=RED;car={brand=&quot;&quot;;price=0;color=RED;};boss=null;}" />

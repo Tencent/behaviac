@@ -21,6 +21,7 @@
 #include "behaviac/common/thread/wrapper.h"
 #include "behaviac/common/container/string.h"
 
+
 #include <string>
 
 #define USING_BEHAVIAC_SEQUENTIAL	1
@@ -106,11 +107,11 @@ namespace behaviac {
 #endif
 
     struct ModuleInfo {
-        enum { MAX_PATH_LEN = 128 };
+        enum { BEHAVIAC_MAX_PATH_LEN = 128 };
 
         unsigned long	moduleBase;
         unsigned long	moduleSize;
-        char			debugInfoFile[MAX_PATH_LEN];
+		char			debugInfoFile[BEHAVIAC_MAX_PATH_LEN];
     };
 
     namespace CommandId {

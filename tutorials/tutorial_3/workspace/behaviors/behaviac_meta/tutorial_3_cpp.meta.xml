@@ -27,7 +27,7 @@
     </agent>
     <agent classfullname="FirstAgent" base="behaviac::Agent" DisplayName="FirstAgent" Desc="FirstAgent" IsRefType="true" IsCustomized="true">
       <Member Name="p1" DisplayName="p1" Desc="p1" Class="FirstAgent" Type="int" TypeFullName="System.Int32" defaultvalue="0" Static="false" Public="false" Readonly="false" />
-      <Member Name="pInstance" DisplayName="pInstance" Desc="pInstance" Class="FirstAgent" Type="SecondAgent" TypeFullName="XMLPluginBehaviac.SecondAgent" defaultvalue="null" Static="false" Public="false" Readonly="false" />
+      <Member Name="pInstance" DisplayName="pInstance" Desc="pInstance" Class="FirstAgent" Type="SecondAgent*" TypeFullName="XMLPluginBehaviac.SecondAgent" defaultvalue="null" Static="false" Public="false" Readonly="false" />
       <Method Name="SayHello" DisplayName="SayHello" Desc="SayHello" Class="FirstAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false" />
     </agent>
     <agent classfullname="SecondAgent" base="behaviac::Agent" DisplayName="SecondAgent" Desc="SecondAgent" IsRefType="true" IsCustomized="true">

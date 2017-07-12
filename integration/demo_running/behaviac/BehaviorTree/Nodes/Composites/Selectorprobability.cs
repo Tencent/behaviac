@@ -93,7 +93,12 @@ namespace behaviac
             protected override bool onenter(Agent pAgent)
             {
                 Debug.Check(this.m_children.Count > 0);
-                Debug.Check(this.m_activeChildIndex == CompositeTask.InvalidChildIndex);
+				
+				//if the following assert failed, just comment it out
+                //Debug.Check(this.m_activeChildIndex == CompositeTask.InvalidChildIndex);
+
+				//to reset it anyway in case onexit is not called for some reason
+				this.m_activeChildIndex = CompositeTask.InvalidChildIndex;
 
                 //SelectorProbability pSelectorProbabilityNode = this.GetNode() is SelectorProbability;
 

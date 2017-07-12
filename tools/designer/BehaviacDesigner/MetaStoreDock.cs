@@ -1350,7 +1350,7 @@ namespace Behaviac.Design
                 {
                     AgentType agent = Plugin.AgentTypes[index];
 
-                    if (agent != null && agent.IsCustomized)
+                    if (agent != null)
                     {
                         Workspace.Current.IsBlackboardDirty = true;
 
@@ -1358,7 +1358,6 @@ namespace Behaviac.Design
 
                         this.typeListBox.Items.RemoveAt(index);
                     }
-
                 }
                 else
                 {
@@ -1367,7 +1366,6 @@ namespace Behaviac.Design
                         TypeManager.Instance.Enums.RemoveAt(index - Plugin.AgentTypes.Count);
 
                         this.typeListBox.Items.RemoveAt(index);
-
                     }
                     else
                     {
@@ -1402,7 +1400,6 @@ namespace Behaviac.Design
                 if (item.Property != null && item.Property.IsPar)
                 {
                     index++;
-
                 }
                 else
                 {

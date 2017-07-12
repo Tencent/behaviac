@@ -798,7 +798,7 @@ namespace behaviac
 			pBT->SetAgentType("AgentNodeTest");
 #endif
 			// locals
-			pBT->AddLocal("AgentNodeTest", "AgentNodeTest", "_$local_task_param_$_0", "null");
+			pBT->AddLocal("AgentNodeTest", "AgentNodeTest*", "_$local_task_param_$_0", "null");
 			// children
 			{
 				Task_bt_node_test_event_subtree_4_node0* node0 = BEHAVIAC_NEW Task_bt_node_test_event_subtree_4_node0;

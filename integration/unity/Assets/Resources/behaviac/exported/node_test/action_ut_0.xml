@@ -6,7 +6,7 @@
     <par name="par_int_type_0" type="int" value="0" />
     <par name="par_int_type_1" type="int" value="0" />
     <par name="par_int_type_2" type="int" value="300" />
-    <par name="par_go" type="UnityEngine::GameObject" value="null" />
+    <par name="par_go" type="UnityEngine::GameObject*" value="null" />
   </pars>
   <node class="Sequence" id="0">
     <attachment class="Precondition" id="15" flag="precondition">

@@ -8,6 +8,2967 @@
 
 namespace behaviac
 {
+	class CInstanceConst_Act : public CInstanceConstBase<Act>
+	{
+		IInstanceMember* _Var_B_Loop;
+		IInstanceMember* _Var_List_EnumTest;
+
+	public: 
+		CInstanceConst_Act(const char* valueStr) : CInstanceConstBase<Act>(valueStr)
+		{
+			behaviac::vector<behaviac::string> paramStrs = behaviac::StringUtils::SplitTokensForStruct(valueStr);
+			BEHAVIAC_ASSERT(paramStrs.size() == 2);
+
+			_Var_B_Loop = AgentMeta::TParseProperty<bool >(paramStrs[0].c_str());
+			_Var_List_EnumTest = AgentMeta::TParseProperty<behaviac::vector<EnumTest> >(paramStrs[1].c_str());
+		}
+
+		~CInstanceConst_Act()
+		{
+			BEHAVIAC_DELETE _Var_B_Loop;
+			BEHAVIAC_DELETE _Var_List_EnumTest;
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_Var_B_Loop != NULL);
+			BEHAVIAC_ASSERT(_Var_List_EnumTest != NULL);
+
+			_value.Var_B_Loop = *(bool*)_Var_B_Loop->GetValue(self, behaviac::Meta::IsVector<bool >::Result, behaviac::GetClassTypeNumberId<bool >());
+			_value.Var_List_EnumTest = *(behaviac::vector<EnumTest>*)_Var_List_EnumTest->GetValue(self, behaviac::Meta::IsVector<behaviac::vector<EnumTest> >::Result, behaviac::GetClassTypeNumberId<behaviac::vector<EnumTest> >());
+		}
+	};
+
+	class CInstanceConst_BSASN_SpatialCoord : public CInstanceConstBase<BSASN::SpatialCoord>
+	{
+		IInstanceMember* _coordX;
+		IInstanceMember* _coordY;
+
+	public: 
+		CInstanceConst_BSASN_SpatialCoord(const char* valueStr) : CInstanceConstBase<BSASN::SpatialCoord>(valueStr)
+		{
+			behaviac::vector<behaviac::string> paramStrs = behaviac::StringUtils::SplitTokensForStruct(valueStr);
+			BEHAVIAC_ASSERT(paramStrs.size() == 2);
+
+			_coordX = AgentMeta::TParseProperty<float >(paramStrs[0].c_str());
+			_coordY = AgentMeta::TParseProperty<float >(paramStrs[1].c_str());
+		}
+
+		~CInstanceConst_BSASN_SpatialCoord()
+		{
+			BEHAVIAC_DELETE _coordX;
+			BEHAVIAC_DELETE _coordY;
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_coordX != NULL);
+			BEHAVIAC_ASSERT(_coordY != NULL);
+
+			_value.coordX = *(float*)_coordX->GetValue(self, behaviac::Meta::IsVector<float >::Result, behaviac::GetClassTypeNumberId<float >());
+			_value.coordY = *(float*)_coordY->GetValue(self, behaviac::Meta::IsVector<float >::Result, behaviac::GetClassTypeNumberId<float >());
+		}
+	};
+
+	class CInstanceConst_BSASN_TransitPlan : public CInstanceConstBase<BSASN::TransitPlan>
+	{
+		IInstanceMember* _plan_ID;
+		IInstanceMember* _plan_selection_precedence;
+		IInstanceMember* _transit_points;
+
+	public: 
+		CInstanceConst_BSASN_TransitPlan(const char* valueStr) : CInstanceConstBase<BSASN::TransitPlan>(valueStr)
+		{
+			behaviac::vector<behaviac::string> paramStrs = behaviac::StringUtils::SplitTokensForStruct(valueStr);
+			BEHAVIAC_ASSERT(paramStrs.size() == 3);
+
+			_plan_ID = AgentMeta::TParseProperty<behaviac::string >(paramStrs[0].c_str());
+			_plan_selection_precedence = AgentMeta::TParseProperty<int >(paramStrs[1].c_str());
+			_transit_points = AgentMeta::TParseProperty<behaviac::vector<BSASN::SpatialCoord> >(paramStrs[2].c_str());
+		}
+
+		~CInstanceConst_BSASN_TransitPlan()
+		{
+			BEHAVIAC_DELETE _plan_ID;
+			BEHAVIAC_DELETE _plan_selection_precedence;
+			BEHAVIAC_DELETE _transit_points;
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_plan_ID != NULL);
+			BEHAVIAC_ASSERT(_plan_selection_precedence != NULL);
+			BEHAVIAC_ASSERT(_transit_points != NULL);
+
+			_value.plan_ID = *(behaviac::string*)_plan_ID->GetValue(self, behaviac::Meta::IsVector<behaviac::string >::Result, behaviac::GetClassTypeNumberId<behaviac::string >());
+			_value.plan_selection_precedence = *(int*)_plan_selection_precedence->GetValue(self, behaviac::Meta::IsVector<int >::Result, behaviac::GetClassTypeNumberId<int >());
+			_value.transit_points = *(behaviac::vector<BSASN::SpatialCoord>*)_transit_points->GetValue(self, behaviac::Meta::IsVector<behaviac::vector<BSASN::SpatialCoord> >::Result, behaviac::GetClassTypeNumberId<behaviac::vector<BSASN::SpatialCoord> >());
+		}
+	};
+
+	class CInstanceConst_TestNamespace_ClassAsValueType : public CInstanceConstBase<TestNamespace::ClassAsValueType>
+	{
+		IInstanceMember* _x;
+		IInstanceMember* _y;
+
+	public: 
+		CInstanceConst_TestNamespace_ClassAsValueType(const char* valueStr) : CInstanceConstBase<TestNamespace::ClassAsValueType>(valueStr)
+		{
+			behaviac::vector<behaviac::string> paramStrs = behaviac::StringUtils::SplitTokensForStruct(valueStr);
+			BEHAVIAC_ASSERT(paramStrs.size() == 2);
+
+			_x = AgentMeta::TParseProperty<float >(paramStrs[0].c_str());
+			_y = AgentMeta::TParseProperty<float >(paramStrs[1].c_str());
+		}
+
+		~CInstanceConst_TestNamespace_ClassAsValueType()
+		{
+			BEHAVIAC_DELETE _x;
+			BEHAVIAC_DELETE _y;
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_x != NULL);
+			BEHAVIAC_ASSERT(_y != NULL);
+
+			_value.x = *(float*)_x->GetValue(self, behaviac::Meta::IsVector<float >::Result, behaviac::GetClassTypeNumberId<float >());
+			_value.y = *(float*)_y->GetValue(self, behaviac::Meta::IsVector<float >::Result, behaviac::GetClassTypeNumberId<float >());
+		}
+	};
+
+	class CInstanceConst_TestNamespace_Float2 : public CInstanceConstBase<TestNamespace::Float2>
+	{
+		IInstanceMember* _x;
+		IInstanceMember* _y;
+
+	public: 
+		CInstanceConst_TestNamespace_Float2(const char* valueStr) : CInstanceConstBase<TestNamespace::Float2>(valueStr)
+		{
+			behaviac::vector<behaviac::string> paramStrs = behaviac::StringUtils::SplitTokensForStruct(valueStr);
+			BEHAVIAC_ASSERT(paramStrs.size() == 2);
+
+			_x = AgentMeta::TParseProperty<float >(paramStrs[0].c_str());
+			_y = AgentMeta::TParseProperty<float >(paramStrs[1].c_str());
+		}
+
+		~CInstanceConst_TestNamespace_Float2()
+		{
+			BEHAVIAC_DELETE _x;
+			BEHAVIAC_DELETE _y;
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_x != NULL);
+			BEHAVIAC_ASSERT(_y != NULL);
+
+			_value.x = *(float*)_x->GetValue(self, behaviac::Meta::IsVector<float >::Result, behaviac::GetClassTypeNumberId<float >());
+			_value.y = *(float*)_y->GetValue(self, behaviac::Meta::IsVector<float >::Result, behaviac::GetClassTypeNumberId<float >());
+		}
+	};
+
+	class CInstanceConst_TestNS_Float2 : public CInstanceConstBase<TestNS::Float2>
+	{
+		IInstanceMember* _x;
+		IInstanceMember* _y;
+
+	public: 
+		CInstanceConst_TestNS_Float2(const char* valueStr) : CInstanceConstBase<TestNS::Float2>(valueStr)
+		{
+			behaviac::vector<behaviac::string> paramStrs = behaviac::StringUtils::SplitTokensForStruct(valueStr);
+			BEHAVIAC_ASSERT(paramStrs.size() == 2);
+
+			_x = AgentMeta::TParseProperty<float >(paramStrs[0].c_str());
+			_y = AgentMeta::TParseProperty<float >(paramStrs[1].c_str());
+		}
+
+		~CInstanceConst_TestNS_Float2()
+		{
+			BEHAVIAC_DELETE _x;
+			BEHAVIAC_DELETE _y;
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_x != NULL);
+			BEHAVIAC_ASSERT(_y != NULL);
+
+			_value.x = *(float*)_x->GetValue(self, behaviac::Meta::IsVector<float >::Result, behaviac::GetClassTypeNumberId<float >());
+			_value.y = *(float*)_y->GetValue(self, behaviac::Meta::IsVector<float >::Result, behaviac::GetClassTypeNumberId<float >());
+		}
+	};
+
+	class CInstanceConst_TNS_ST_kCar : public CInstanceConstBase<TNS::ST::kCar>
+	{
+		IInstanceMember* _brand;
+		IInstanceMember* _price;
+		IInstanceMember* _color;
+
+	public: 
+		CInstanceConst_TNS_ST_kCar(const char* valueStr) : CInstanceConstBase<TNS::ST::kCar>(valueStr)
+		{
+			behaviac::vector<behaviac::string> paramStrs = behaviac::StringUtils::SplitTokensForStruct(valueStr);
+			BEHAVIAC_ASSERT(paramStrs.size() == 3);
+
+			_brand = AgentMeta::TParseProperty<behaviac::string >(paramStrs[0].c_str());
+			_price = AgentMeta::TParseProperty<int >(paramStrs[1].c_str());
+			_color = AgentMeta::TParseProperty<TNS::NE::NAT::eColor >(paramStrs[2].c_str());
+		}
+
+		~CInstanceConst_TNS_ST_kCar()
+		{
+			BEHAVIAC_DELETE _brand;
+			BEHAVIAC_DELETE _price;
+			BEHAVIAC_DELETE _color;
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_brand != NULL);
+			BEHAVIAC_ASSERT(_price != NULL);
+			BEHAVIAC_ASSERT(_color != NULL);
+
+			_value.brand = *(behaviac::string*)_brand->GetValue(self, behaviac::Meta::IsVector<behaviac::string >::Result, behaviac::GetClassTypeNumberId<behaviac::string >());
+			_value.price = *(int*)_price->GetValue(self, behaviac::Meta::IsVector<int >::Result, behaviac::GetClassTypeNumberId<int >());
+			_value.color = *(TNS::NE::NAT::eColor*)_color->GetValue(self, behaviac::Meta::IsVector<TNS::NE::NAT::eColor >::Result, behaviac::GetClassTypeNumberId<TNS::NE::NAT::eColor >());
+		}
+	};
+
+	class CInstanceConst_TNS_ST_PER_WRK_kEmployee : public CInstanceConstBase<TNS::ST::PER::WRK::kEmployee>
+	{
+		IInstanceMember* _id;
+		IInstanceMember* _name;
+		IInstanceMember* _code;
+		IInstanceMember* _weight;
+		IInstanceMember* _isMale;
+		IInstanceMember* _skinColor;
+		IInstanceMember* _car;
+		IInstanceMember* _boss;
+
+	public: 
+		CInstanceConst_TNS_ST_PER_WRK_kEmployee(const char* valueStr) : CInstanceConstBase<TNS::ST::PER::WRK::kEmployee>(valueStr)
+		{
+			behaviac::vector<behaviac::string> paramStrs = behaviac::StringUtils::SplitTokensForStruct(valueStr);
+			BEHAVIAC_ASSERT(paramStrs.size() == 8);
+
+			_id = AgentMeta::TParseProperty<int >(paramStrs[0].c_str());
+			_name = AgentMeta::TParseProperty<behaviac::string >(paramStrs[1].c_str());
+			_code = AgentMeta::TParseProperty<char >(paramStrs[2].c_str());
+			_weight = AgentMeta::TParseProperty<float >(paramStrs[3].c_str());
+			_isMale = AgentMeta::TParseProperty<bool >(paramStrs[4].c_str());
+			_skinColor = AgentMeta::TParseProperty<TNS::NE::NAT::eColor >(paramStrs[5].c_str());
+			_car = AgentMeta::TParseProperty<TNS::ST::kCar >(paramStrs[6].c_str());
+			_boss = AgentMeta::TParseProperty<behaviac::Agent* >(paramStrs[7].c_str());
+		}
+
+		~CInstanceConst_TNS_ST_PER_WRK_kEmployee()
+		{
+			BEHAVIAC_DELETE _id;
+			BEHAVIAC_DELETE _name;
+			BEHAVIAC_DELETE _code;
+			BEHAVIAC_DELETE _weight;
+			BEHAVIAC_DELETE _isMale;
+			BEHAVIAC_DELETE _skinColor;
+			BEHAVIAC_DELETE _car;
+			BEHAVIAC_DELETE _boss;
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_id != NULL);
+			BEHAVIAC_ASSERT(_name != NULL);
+			BEHAVIAC_ASSERT(_code != NULL);
+			BEHAVIAC_ASSERT(_weight != NULL);
+			BEHAVIAC_ASSERT(_isMale != NULL);
+			BEHAVIAC_ASSERT(_skinColor != NULL);
+			BEHAVIAC_ASSERT(_car != NULL);
+			BEHAVIAC_ASSERT(_boss != NULL);
+
+			_value.id = *(int*)_id->GetValue(self, behaviac::Meta::IsVector<int >::Result, behaviac::GetClassTypeNumberId<int >());
+			_value.name = *(behaviac::string*)_name->GetValue(self, behaviac::Meta::IsVector<behaviac::string >::Result, behaviac::GetClassTypeNumberId<behaviac::string >());
+			_value.code = *(char*)_code->GetValue(self, behaviac::Meta::IsVector<char >::Result, behaviac::GetClassTypeNumberId<char >());
+			_value.weight = *(float*)_weight->GetValue(self, behaviac::Meta::IsVector<float >::Result, behaviac::GetClassTypeNumberId<float >());
+			_value.isMale = *(bool*)_isMale->GetValue(self, behaviac::Meta::IsVector<bool >::Result, behaviac::GetClassTypeNumberId<bool >());
+			_value.skinColor = *(TNS::NE::NAT::eColor*)_skinColor->GetValue(self, behaviac::Meta::IsVector<TNS::NE::NAT::eColor >::Result, behaviac::GetClassTypeNumberId<TNS::NE::NAT::eColor >());
+			_value.car = *(TNS::ST::kCar*)_car->GetValue(self, behaviac::Meta::IsVector<TNS::ST::kCar >::Result, behaviac::GetClassTypeNumberId<TNS::ST::kCar >());
+			_value.boss = (behaviac::Agent*)_boss->GetValue(self, behaviac::Meta::IsVector<behaviac::Agent >::Result, behaviac::GetClassTypeNumberId<behaviac::Agent >());
+		}
+	};
+
+	class CInstanceConst_UnityEngine_Vector3 : public CInstanceConstBase<UnityEngine::Vector3>
+	{
+		IInstanceMember* _x;
+		IInstanceMember* _y;
+		IInstanceMember* _z;
+
+	public: 
+		CInstanceConst_UnityEngine_Vector3(const char* valueStr) : CInstanceConstBase<UnityEngine::Vector3>(valueStr)
+		{
+			behaviac::vector<behaviac::string> paramStrs = behaviac::StringUtils::SplitTokensForStruct(valueStr);
+			BEHAVIAC_ASSERT(paramStrs.size() == 3);
+
+			_x = AgentMeta::TParseProperty<float >(paramStrs[0].c_str());
+			_y = AgentMeta::TParseProperty<float >(paramStrs[1].c_str());
+			_z = AgentMeta::TParseProperty<float >(paramStrs[2].c_str());
+		}
+
+		~CInstanceConst_UnityEngine_Vector3()
+		{
+			BEHAVIAC_DELETE _x;
+			BEHAVIAC_DELETE _y;
+			BEHAVIAC_DELETE _z;
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_x != NULL);
+			BEHAVIAC_ASSERT(_y != NULL);
+			BEHAVIAC_ASSERT(_z != NULL);
+
+			_value.x = *(float*)_x->GetValue(self, behaviac::Meta::IsVector<float >::Result, behaviac::GetClassTypeNumberId<float >());
+			_value.y = *(float*)_y->GetValue(self, behaviac::Meta::IsVector<float >::Result, behaviac::GetClassTypeNumberId<float >());
+			_value.z = *(float*)_z->GetValue(self, behaviac::Meta::IsVector<float >::Result, behaviac::GetClassTypeNumberId<float >());
+		}
+	};
+
+	class CInstanceConst_StructTest : public CInstanceConstBase<StructTest>
+	{
+		IInstanceMember* _a;
+
+	public: 
+		CInstanceConst_StructTest(const char* valueStr) : CInstanceConstBase<StructTest>(valueStr)
+		{
+			behaviac::vector<behaviac::string> paramStrs = behaviac::StringUtils::SplitTokensForStruct(valueStr);
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			_a = AgentMeta::TParseProperty<bool >(paramStrs[0].c_str());
+		}
+
+		~CInstanceConst_StructTest()
+		{
+			BEHAVIAC_DELETE _a;
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_a != NULL);
+
+			_value.a = *(bool*)_a->GetValue(self, behaviac::Meta::IsVector<bool >::Result, behaviac::GetClassTypeNumberId<bool >());
+		}
+	};
+
+	class CMethod_behaviac_Agent_VectorAdd : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+		IInstanceMember* _param1;
+
+	public: 
+		CMethod_behaviac_Agent_VectorAdd() : _param0(0) , _param1(0) 
+		{
+		}
+
+		CMethod_behaviac_Agent_VectorAdd(CMethod_behaviac_Agent_VectorAdd &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) , _param1(0) 
+		{
+		}
+
+		~CMethod_behaviac_Agent_VectorAdd()
+		{
+			BEHAVIAC_DELETE _param0;
+			BEHAVIAC_DELETE _param1;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_behaviac_Agent_VectorAdd(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 2);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<IList >(paramStrs[0].c_str());
+			_param1 = AgentMeta::TParseProperty<System::Object >(paramStrs[1].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+			BEHAVIAC_ASSERT(_param1 != NULL);
+
+			IList& pValue_param0 = *(IList*)_param0->GetValue(self, behaviac::Meta::IsVector<IList >::Result, behaviac::GetClassTypeNumberId<IList >());
+			System::Object& pValue_param1 = *(System::Object*)_param1->GetValue(self, behaviac::Meta::IsVector<System::Object >::Result, behaviac::GetClassTypeNumberId<System::Object >());
+			behaviac::Agent::VectorAdd(pValue_param0, pValue_param1);
+		}
+	};
+
+	class CMethod_behaviac_Agent_VectorClear : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_behaviac_Agent_VectorClear() : _param0(0) 
+		{
+		}
+
+		CMethod_behaviac_Agent_VectorClear(CMethod_behaviac_Agent_VectorClear &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_behaviac_Agent_VectorClear()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_behaviac_Agent_VectorClear(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<IList >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			IList& pValue_param0 = *(IList*)_param0->GetValue(self, behaviac::Meta::IsVector<IList >::Result, behaviac::GetClassTypeNumberId<IList >());
+			behaviac::Agent::VectorClear(pValue_param0);
+		}
+	};
+
+	class CMethod_behaviac_Agent_VectorContains : public CAgentMethodBase<bool>
+	{
+		IInstanceMember* _param0;
+		IInstanceMember* _param1;
+
+	public: 
+		CMethod_behaviac_Agent_VectorContains() : _param0(0) , _param1(0) 
+		{
+		}
+
+		CMethod_behaviac_Agent_VectorContains(CMethod_behaviac_Agent_VectorContains &rhs) : CAgentMethodBase<bool>(rhs) , _param0(0) , _param1(0) 
+		{
+		}
+
+		~CMethod_behaviac_Agent_VectorContains()
+		{
+			BEHAVIAC_DELETE _param0;
+			BEHAVIAC_DELETE _param1;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_behaviac_Agent_VectorContains(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 2);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<IList >(paramStrs[0].c_str());
+			_param1 = AgentMeta::TParseProperty<System::Object >(paramStrs[1].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+			BEHAVIAC_ASSERT(_param1 != NULL);
+
+			IList& pValue_param0 = *(IList*)_param0->GetValue(self, behaviac::Meta::IsVector<IList >::Result, behaviac::GetClassTypeNumberId<IList >());
+			System::Object& pValue_param1 = *(System::Object*)_param1->GetValue(self, behaviac::Meta::IsVector<System::Object >::Result, behaviac::GetClassTypeNumberId<System::Object >());
+			_returnValue->value = behaviac::Agent::VectorContains(pValue_param0, pValue_param1);
+		}
+	};
+
+	class CMethod_behaviac_Agent_VectorLength : public CAgentMethodBase<int>
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_behaviac_Agent_VectorLength() : _param0(0) 
+		{
+		}
+
+		CMethod_behaviac_Agent_VectorLength(CMethod_behaviac_Agent_VectorLength &rhs) : CAgentMethodBase<int>(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_behaviac_Agent_VectorLength()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_behaviac_Agent_VectorLength(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<IList >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			IList& pValue_param0 = *(IList*)_param0->GetValue(self, behaviac::Meta::IsVector<IList >::Result, behaviac::GetClassTypeNumberId<IList >());
+			_returnValue->value = behaviac::Agent::VectorLength(pValue_param0);
+		}
+	};
+
+	class CMethod_behaviac_Agent_VectorRemove : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+		IInstanceMember* _param1;
+
+	public: 
+		CMethod_behaviac_Agent_VectorRemove() : _param0(0) , _param1(0) 
+		{
+		}
+
+		CMethod_behaviac_Agent_VectorRemove(CMethod_behaviac_Agent_VectorRemove &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) , _param1(0) 
+		{
+		}
+
+		~CMethod_behaviac_Agent_VectorRemove()
+		{
+			BEHAVIAC_DELETE _param0;
+			BEHAVIAC_DELETE _param1;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_behaviac_Agent_VectorRemove(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 2);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<IList >(paramStrs[0].c_str());
+			_param1 = AgentMeta::TParseProperty<System::Object >(paramStrs[1].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+			BEHAVIAC_ASSERT(_param1 != NULL);
+
+			IList& pValue_param0 = *(IList*)_param0->GetValue(self, behaviac::Meta::IsVector<IList >::Result, behaviac::GetClassTypeNumberId<IList >());
+			System::Object& pValue_param1 = *(System::Object*)_param1->GetValue(self, behaviac::Meta::IsVector<System::Object >::Result, behaviac::GetClassTypeNumberId<System::Object >());
+			behaviac::Agent::VectorRemove(pValue_param0, pValue_param1);
+		}
+	};
+
+	class CMethod_ParTestAgentBase_Func_BooleanRef : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_ParTestAgentBase_Func_BooleanRef() : _param0(0) 
+		{
+		}
+
+		CMethod_ParTestAgentBase_Func_BooleanRef(CMethod_ParTestAgentBase_Func_BooleanRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_ParTestAgentBase_Func_BooleanRef()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_ParTestAgentBase_Func_BooleanRef(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<bool >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			bool& pValue_param0 = *(bool*)_param0->GetValue(self, behaviac::Meta::IsVector<bool >::Result, behaviac::GetClassTypeNumberId<bool >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			((ParTestAgentBase*)self)->_Execute_Method_<METHOD_TYPE_ParTestAgentBase_Func_BooleanRef, void, bool& >(pValue_param0);
+		}
+	};
+
+	class CMethod_ParTestAgentBase_Func_BooleanListRef : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_ParTestAgentBase_Func_BooleanListRef() : _param0(0) 
+		{
+		}
+
+		CMethod_ParTestAgentBase_Func_BooleanListRef(CMethod_ParTestAgentBase_Func_BooleanListRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_ParTestAgentBase_Func_BooleanListRef()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_ParTestAgentBase_Func_BooleanListRef(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<behaviac::vector<bool> >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			behaviac::vector<bool>& pValue_param0 = *(behaviac::vector<bool>*)_param0->GetValue(self, behaviac::Meta::IsVector<behaviac::vector<bool> >::Result, behaviac::GetClassTypeNumberId<behaviac::vector<bool> >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			((ParTestAgentBase*)self)->_Execute_Method_<METHOD_TYPE_ParTestAgentBase_Func_BooleanListRef, void, behaviac::vector<bool>& >(pValue_param0);
+		}
+	};
+
+	class CMethod_ParTestAgentBase_Func_ByteRef : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_ParTestAgentBase_Func_ByteRef() : _param0(0) 
+		{
+		}
+
+		CMethod_ParTestAgentBase_Func_ByteRef(CMethod_ParTestAgentBase_Func_ByteRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_ParTestAgentBase_Func_ByteRef()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_ParTestAgentBase_Func_ByteRef(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<unsigned char >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			unsigned char& pValue_param0 = *(unsigned char*)_param0->GetValue(self, behaviac::Meta::IsVector<unsigned char >::Result, behaviac::GetClassTypeNumberId<unsigned char >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			((ParTestAgentBase*)self)->_Execute_Method_<METHOD_TYPE_ParTestAgentBase_Func_ByteRef, void, unsigned char& >(pValue_param0);
+		}
+	};
+
+	class CMethod_ParTestAgentBase_Func_ByteListRef : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_ParTestAgentBase_Func_ByteListRef() : _param0(0) 
+		{
+		}
+
+		CMethod_ParTestAgentBase_Func_ByteListRef(CMethod_ParTestAgentBase_Func_ByteListRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_ParTestAgentBase_Func_ByteListRef()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_ParTestAgentBase_Func_ByteListRef(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<behaviac::vector<unsigned char> >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			behaviac::vector<unsigned char>& pValue_param0 = *(behaviac::vector<unsigned char>*)_param0->GetValue(self, behaviac::Meta::IsVector<behaviac::vector<unsigned char> >::Result, behaviac::GetClassTypeNumberId<behaviac::vector<unsigned char> >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			((ParTestAgentBase*)self)->_Execute_Method_<METHOD_TYPE_ParTestAgentBase_Func_ByteListRef, void, behaviac::vector<unsigned char>& >(pValue_param0);
+		}
+	};
+
+	class CMethod_ParTestAgentBase_Func_CharRef : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_ParTestAgentBase_Func_CharRef() : _param0(0) 
+		{
+		}
+
+		CMethod_ParTestAgentBase_Func_CharRef(CMethod_ParTestAgentBase_Func_CharRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_ParTestAgentBase_Func_CharRef()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_ParTestAgentBase_Func_CharRef(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<char >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			char& pValue_param0 = *(char*)_param0->GetValue(self, behaviac::Meta::IsVector<char >::Result, behaviac::GetClassTypeNumberId<char >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			((ParTestAgentBase*)self)->_Execute_Method_<METHOD_TYPE_ParTestAgentBase_Func_CharRef, void, char& >(pValue_param0);
+		}
+	};
+
+	class CMethod_ParTestAgentBase_Func_CharListRef : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_ParTestAgentBase_Func_CharListRef() : _param0(0) 
+		{
+		}
+
+		CMethod_ParTestAgentBase_Func_CharListRef(CMethod_ParTestAgentBase_Func_CharListRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_ParTestAgentBase_Func_CharListRef()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_ParTestAgentBase_Func_CharListRef(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<behaviac::vector<char> >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			behaviac::vector<char>& pValue_param0 = *(behaviac::vector<char>*)_param0->GetValue(self, behaviac::Meta::IsVector<behaviac::vector<char> >::Result, behaviac::GetClassTypeNumberId<behaviac::vector<char> >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			((ParTestAgentBase*)self)->_Execute_Method_<METHOD_TYPE_ParTestAgentBase_Func_CharListRef, void, behaviac::vector<char>& >(pValue_param0);
+		}
+	};
+
+	class CMethod_ParTestAgentBase_Func_eColorRef : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_ParTestAgentBase_Func_eColorRef() : _param0(0) 
+		{
+		}
+
+		CMethod_ParTestAgentBase_Func_eColorRef(CMethod_ParTestAgentBase_Func_eColorRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_ParTestAgentBase_Func_eColorRef()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_ParTestAgentBase_Func_eColorRef(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<TNS::NE::NAT::eColor >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			TNS::NE::NAT::eColor& pValue_param0 = *(TNS::NE::NAT::eColor*)_param0->GetValue(self, behaviac::Meta::IsVector<TNS::NE::NAT::eColor >::Result, behaviac::GetClassTypeNumberId<TNS::NE::NAT::eColor >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			((ParTestAgentBase*)self)->_Execute_Method_<METHOD_TYPE_ParTestAgentBase_Func_eColorRef, void, TNS::NE::NAT::eColor& >(pValue_param0);
+		}
+	};
+
+	class CMethod_ParTestAgentBase_Func_eColorListRef : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_ParTestAgentBase_Func_eColorListRef() : _param0(0) 
+		{
+		}
+
+		CMethod_ParTestAgentBase_Func_eColorListRef(CMethod_ParTestAgentBase_Func_eColorListRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_ParTestAgentBase_Func_eColorListRef()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_ParTestAgentBase_Func_eColorListRef(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<behaviac::vector<TNS::NE::NAT::eColor> >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			behaviac::vector<TNS::NE::NAT::eColor>& pValue_param0 = *(behaviac::vector<TNS::NE::NAT::eColor>*)_param0->GetValue(self, behaviac::Meta::IsVector<behaviac::vector<TNS::NE::NAT::eColor> >::Result, behaviac::GetClassTypeNumberId<behaviac::vector<TNS::NE::NAT::eColor> >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			((ParTestAgentBase*)self)->_Execute_Method_<METHOD_TYPE_ParTestAgentBase_Func_eColorListRef, void, behaviac::vector<TNS::NE::NAT::eColor>& >(pValue_param0);
+		}
+	};
+
+	class CMethod_ParTestAgentBase_Func_SByteRef : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_ParTestAgentBase_Func_SByteRef() : _param0(0) 
+		{
+		}
+
+		CMethod_ParTestAgentBase_Func_SByteRef(CMethod_ParTestAgentBase_Func_SByteRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_ParTestAgentBase_Func_SByteRef()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_ParTestAgentBase_Func_SByteRef(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<signed char >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			signed char& pValue_param0 = *(signed char*)_param0->GetValue(self, behaviac::Meta::IsVector<signed char >::Result, behaviac::GetClassTypeNumberId<signed char >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			((ParTestAgentBase*)self)->_Execute_Method_<METHOD_TYPE_ParTestAgentBase_Func_SByteRef, void, signed char& >(pValue_param0);
+		}
+	};
+
+	class CMethod_ParTestAgentBase_Func_SByteListRef : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_ParTestAgentBase_Func_SByteListRef() : _param0(0) 
+		{
+		}
+
+		CMethod_ParTestAgentBase_Func_SByteListRef(CMethod_ParTestAgentBase_Func_SByteListRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_ParTestAgentBase_Func_SByteListRef()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_ParTestAgentBase_Func_SByteListRef(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<behaviac::vector<signed char> >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			behaviac::vector<signed char>& pValue_param0 = *(behaviac::vector<signed char>*)_param0->GetValue(self, behaviac::Meta::IsVector<behaviac::vector<signed char> >::Result, behaviac::GetClassTypeNumberId<behaviac::vector<signed char> >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			((ParTestAgentBase*)self)->_Execute_Method_<METHOD_TYPE_ParTestAgentBase_Func_SByteListRef, void, behaviac::vector<signed char>& >(pValue_param0);
+		}
+	};
+
+	class CMethod_ParTestAgent_Func_kEmployeeIR : public CAgentMethodBase<TNS::ST::PER::WRK::kEmployee>
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_ParTestAgent_Func_kEmployeeIR() : _param0(0) 
+		{
+		}
+
+		CMethod_ParTestAgent_Func_kEmployeeIR(CMethod_ParTestAgent_Func_kEmployeeIR &rhs) : CAgentMethodBase<TNS::ST::PER::WRK::kEmployee>(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_ParTestAgent_Func_kEmployeeIR()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_ParTestAgent_Func_kEmployeeIR(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			if (behaviac::StringUtils::StartsWith(paramStrs[0].c_str(), "{"))
+			{
+				_param0 = BEHAVIAC_NEW CInstanceConst_TNS_ST_PER_WRK_kEmployee(paramStrs[0].c_str());
+			}
+			else
+			{
+				_param0 = AgentMeta::TParseProperty<TNS::ST::PER::WRK::kEmployee >(paramStrs[0].c_str());
+			}
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			_param0->run(self);
+			TNS::ST::PER::WRK::kEmployee& pValue_param0 = *(TNS::ST::PER::WRK::kEmployee*)_param0->GetValue(self, behaviac::Meta::IsVector<TNS::ST::PER::WRK::kEmployee >::Result, behaviac::GetClassTypeNumberId<TNS::ST::PER::WRK::kEmployee >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			_returnValue->value = ((ParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_ParTestAgent_Func_kEmployeeIR, TNS::ST::PER::WRK::kEmployee, TNS::ST::PER::WRK::kEmployee >(pValue_param0);
+		}
+	};
+
+	class CMethod_ParTestAgent_Func_kEmployeeSMF : public CAgentMethodBase<TNS::ST::PER::WRK::kEmployee>
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_ParTestAgent_Func_kEmployeeSMF() : _param0(0) 
+		{
+		}
+
+		CMethod_ParTestAgent_Func_kEmployeeSMF(CMethod_ParTestAgent_Func_kEmployeeSMF &rhs) : CAgentMethodBase<TNS::ST::PER::WRK::kEmployee>(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_ParTestAgent_Func_kEmployeeSMF()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_ParTestAgent_Func_kEmployeeSMF(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			if (behaviac::StringUtils::StartsWith(paramStrs[0].c_str(), "{"))
+			{
+				_param0 = BEHAVIAC_NEW CInstanceConst_TNS_ST_PER_WRK_kEmployee(paramStrs[0].c_str());
+			}
+			else
+			{
+				_param0 = AgentMeta::TParseProperty<TNS::ST::PER::WRK::kEmployee >(paramStrs[0].c_str());
+			}
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			_param0->run(self);
+			TNS::ST::PER::WRK::kEmployee& pValue_param0 = *(TNS::ST::PER::WRK::kEmployee*)_param0->GetValue(self, behaviac::Meta::IsVector<TNS::ST::PER::WRK::kEmployee >::Result, behaviac::GetClassTypeNumberId<TNS::ST::PER::WRK::kEmployee >());
+			_returnValue->value = ((ParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_ParTestAgent_Func_kEmployeeSMF, TNS::ST::PER::WRK::kEmployee, TNS::ST::PER::WRK::kEmployee >(pValue_param0);
+		}
+	};
+
+	class CMethod_ParTestAgent_Func_IntRef : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_ParTestAgent_Func_IntRef() : _param0(0) 
+		{
+		}
+
+		CMethod_ParTestAgent_Func_IntRef(CMethod_ParTestAgent_Func_IntRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_ParTestAgent_Func_IntRef()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_ParTestAgent_Func_IntRef(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<int >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			int& pValue_param0 = *(int*)_param0->GetValue(self, behaviac::Meta::IsVector<int >::Result, behaviac::GetClassTypeNumberId<int >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			((ParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_ParTestAgent_Func_IntRef, void, int& >(pValue_param0);
+		}
+	};
+
+	class CMethod_ParTestAgent_Func_IntListRef : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_ParTestAgent_Func_IntListRef() : _param0(0) 
+		{
+		}
+
+		CMethod_ParTestAgent_Func_IntListRef(CMethod_ParTestAgent_Func_IntListRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_ParTestAgent_Func_IntListRef()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_ParTestAgent_Func_IntListRef(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<behaviac::vector<int> >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			behaviac::vector<int>& pValue_param0 = *(behaviac::vector<int>*)_param0->GetValue(self, behaviac::Meta::IsVector<behaviac::vector<int> >::Result, behaviac::GetClassTypeNumberId<behaviac::vector<int> >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			((ParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_ParTestAgent_Func_IntListRef, void, behaviac::vector<int>& >(pValue_param0);
+		}
+	};
+
+	class CMethod_ParTestAgent_Func_kEmployeeRef : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_ParTestAgent_Func_kEmployeeRef() : _param0(0) 
+		{
+		}
+
+		CMethod_ParTestAgent_Func_kEmployeeRef(CMethod_ParTestAgent_Func_kEmployeeRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_ParTestAgent_Func_kEmployeeRef()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_ParTestAgent_Func_kEmployeeRef(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			if (behaviac::StringUtils::StartsWith(paramStrs[0].c_str(), "{"))
+			{
+				_param0 = BEHAVIAC_NEW CInstanceConst_TNS_ST_PER_WRK_kEmployee(paramStrs[0].c_str());
+			}
+			else
+			{
+				_param0 = AgentMeta::TParseProperty<TNS::ST::PER::WRK::kEmployee >(paramStrs[0].c_str());
+			}
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			_param0->run(self);
+			TNS::ST::PER::WRK::kEmployee& pValue_param0 = *(TNS::ST::PER::WRK::kEmployee*)_param0->GetValue(self, behaviac::Meta::IsVector<TNS::ST::PER::WRK::kEmployee >::Result, behaviac::GetClassTypeNumberId<TNS::ST::PER::WRK::kEmployee >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			((ParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_ParTestAgent_Func_kEmployeeRef, void, TNS::ST::PER::WRK::kEmployee& >(pValue_param0);
+		}
+	};
+
+	class CMethod_ParTestAgent_Func_kEmployeeListRef : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_ParTestAgent_Func_kEmployeeListRef() : _param0(0) 
+		{
+		}
+
+		CMethod_ParTestAgent_Func_kEmployeeListRef(CMethod_ParTestAgent_Func_kEmployeeListRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_ParTestAgent_Func_kEmployeeListRef()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_ParTestAgent_Func_kEmployeeListRef(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<behaviac::vector<TNS::ST::PER::WRK::kEmployee> >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			behaviac::vector<TNS::ST::PER::WRK::kEmployee>& pValue_param0 = *(behaviac::vector<TNS::ST::PER::WRK::kEmployee>*)_param0->GetValue(self, behaviac::Meta::IsVector<behaviac::vector<TNS::ST::PER::WRK::kEmployee> >::Result, behaviac::GetClassTypeNumberId<behaviac::vector<TNS::ST::PER::WRK::kEmployee> >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			((ParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_ParTestAgent_Func_kEmployeeListRef, void, behaviac::vector<TNS::ST::PER::WRK::kEmployee>& >(pValue_param0);
+		}
+	};
+
+	class CMethod_ParTestAgent_Func_LongRef : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_ParTestAgent_Func_LongRef() : _param0(0) 
+		{
+		}
+
+		CMethod_ParTestAgent_Func_LongRef(CMethod_ParTestAgent_Func_LongRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_ParTestAgent_Func_LongRef()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_ParTestAgent_Func_LongRef(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<long >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			long& pValue_param0 = *(long*)_param0->GetValue(self, behaviac::Meta::IsVector<long >::Result, behaviac::GetClassTypeNumberId<long >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			((ParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_ParTestAgent_Func_LongRef, void, long& >(pValue_param0);
+		}
+	};
+
+	class CMethod_ParTestAgent_Func_ShortRef : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_ParTestAgent_Func_ShortRef() : _param0(0) 
+		{
+		}
+
+		CMethod_ParTestAgent_Func_ShortRef(CMethod_ParTestAgent_Func_ShortRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_ParTestAgent_Func_ShortRef()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_ParTestAgent_Func_ShortRef(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<short >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			short& pValue_param0 = *(short*)_param0->GetValue(self, behaviac::Meta::IsVector<short >::Result, behaviac::GetClassTypeNumberId<short >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			((ParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_ParTestAgent_Func_ShortRef, void, short& >(pValue_param0);
+		}
+	};
+
+	class CMethod_ParTestAgent_Func_UShortRef : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_ParTestAgent_Func_UShortRef() : _param0(0) 
+		{
+		}
+
+		CMethod_ParTestAgent_Func_UShortRef(CMethod_ParTestAgent_Func_UShortRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_ParTestAgent_Func_UShortRef()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_ParTestAgent_Func_UShortRef(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<unsigned short >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			unsigned short& pValue_param0 = *(unsigned short*)_param0->GetValue(self, behaviac::Meta::IsVector<unsigned short >::Result, behaviac::GetClassTypeNumberId<unsigned short >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			((ParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_ParTestAgent_Func_UShortRef, void, unsigned short& >(pValue_param0);
+		}
+	};
+
+	class CMethod_AgentNodeTest_return_status : public CAgentMethodBase<behaviac::EBTStatus>
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_AgentNodeTest_return_status() : _param0(0) 
+		{
+		}
+
+		CMethod_AgentNodeTest_return_status(CMethod_AgentNodeTest_return_status &rhs) : CAgentMethodBase<behaviac::EBTStatus>(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_AgentNodeTest_return_status()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_AgentNodeTest_return_status(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			if (behaviac::StringUtils::StartsWith(paramStrs[0].c_str(), "{"))
+			{
+				_param0 = BEHAVIAC_NEW CInstanceConst_TestNS_Float2(paramStrs[0].c_str());
+			}
+			else
+			{
+				_param0 = AgentMeta::TParseProperty<TestNS::Float2 >(paramStrs[0].c_str());
+			}
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			_param0->run(self);
+			TestNS::Float2& pValue_param0 = *(TestNS::Float2*)_param0->GetValue(self, behaviac::Meta::IsVector<TestNS::Float2 >::Result, behaviac::GetClassTypeNumberId<TestNS::Float2 >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			_returnValue->value = ((AgentNodeTest*)self)->_Execute_Method_<METHOD_TYPE_AgentNodeTest_return_status, behaviac::EBTStatus, TestNS::Float2& >(pValue_param0);
+		}
+	};
+
+	class CMethod_AgentNodeTest_setEventVarAgent : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_AgentNodeTest_setEventVarAgent() : _param0(0) 
+		{
+		}
+
+		CMethod_AgentNodeTest_setEventVarAgent(CMethod_AgentNodeTest_setEventVarAgent &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_AgentNodeTest_setEventVarAgent()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_AgentNodeTest_setEventVarAgent(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<AgentNodeTest >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			AgentNodeTest*& pValue_param0 = *(AgentNodeTest**)_param0->GetValue(self, behaviac::Meta::IsVector<AgentNodeTest* >::Result, behaviac::GetClassTypeNumberId<AgentNodeTest* >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			((AgentNodeTest*)self)->_Execute_Method_<METHOD_TYPE_AgentNodeTest_setEventVarAgent, void, AgentNodeTest* >(pValue_param0);
+		}
+	};
+
+	class CMethod_AgentNodeTest_switchRef : public CAgentMethodBase<behaviac::EBTStatus>
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_AgentNodeTest_switchRef() : _param0(0) 
+		{
+		}
+
+		CMethod_AgentNodeTest_switchRef(CMethod_AgentNodeTest_switchRef &rhs) : CAgentMethodBase<behaviac::EBTStatus>(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_AgentNodeTest_switchRef()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_AgentNodeTest_switchRef(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<behaviac::string >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			behaviac::string& pValue_param0 = *(behaviac::string*)_param0->GetValue(self, behaviac::Meta::IsVector<behaviac::string >::Result, behaviac::GetClassTypeNumberId<behaviac::string >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			_returnValue->value = ((AgentNodeTest*)self)->_Execute_Method_<METHOD_TYPE_AgentNodeTest_switchRef, behaviac::EBTStatus, behaviac::string& >(pValue_param0);
+		}
+	};
+
+	class CMethod_AgentNodeTest_testExtendedRefType : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_AgentNodeTest_testExtendedRefType() : _param0(0) 
+		{
+		}
+
+		CMethod_AgentNodeTest_testExtendedRefType(CMethod_AgentNodeTest_testExtendedRefType &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_AgentNodeTest_testExtendedRefType()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_AgentNodeTest_testExtendedRefType(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<TestNS::Node >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			TestNS::Node*& pValue_param0 = *(TestNS::Node**)_param0->GetValue(self, behaviac::Meta::IsVector<TestNS::Node* >::Result, behaviac::GetClassTypeNumberId<TestNS::Node* >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			((AgentNodeTest*)self)->_Execute_Method_<METHOD_TYPE_AgentNodeTest_testExtendedRefType, void, TestNS::Node* >(pValue_param0);
+		}
+	};
+
+	class CMethod_AgentNodeTest_testExtendedStruct : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_AgentNodeTest_testExtendedStruct() : _param0(0) 
+		{
+		}
+
+		CMethod_AgentNodeTest_testExtendedStruct(CMethod_AgentNodeTest_testExtendedStruct &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_AgentNodeTest_testExtendedStruct()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_AgentNodeTest_testExtendedStruct(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			if (behaviac::StringUtils::StartsWith(paramStrs[0].c_str(), "{"))
+			{
+				_param0 = BEHAVIAC_NEW CInstanceConst_TestNS_Float2(paramStrs[0].c_str());
+			}
+			else
+			{
+				_param0 = AgentMeta::TParseProperty<TestNS::Float2 >(paramStrs[0].c_str());
+			}
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			_param0->run(self);
+			TestNS::Float2& pValue_param0 = *(TestNS::Float2*)_param0->GetValue(self, behaviac::Meta::IsVector<TestNS::Float2 >::Result, behaviac::GetClassTypeNumberId<TestNS::Float2 >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			((AgentNodeTest*)self)->_Execute_Method_<METHOD_TYPE_AgentNodeTest_testExtendedStruct, void, TestNS::Float2& >(pValue_param0);
+		}
+	};
+
+	class CMethod_AgentNodeTest_TestFuncD : public CAgentMethodBase<behaviac::EBTStatus>
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_AgentNodeTest_TestFuncD() : _param0(0) 
+		{
+		}
+
+		CMethod_AgentNodeTest_TestFuncD(CMethod_AgentNodeTest_TestFuncD &rhs) : CAgentMethodBase<behaviac::EBTStatus>(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_AgentNodeTest_TestFuncD()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_AgentNodeTest_TestFuncD(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<TestClassA >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			TestClassA*& pValue_param0 = *(TestClassA**)_param0->GetValue(self, behaviac::Meta::IsVector<TestClassA* >::Result, behaviac::GetClassTypeNumberId<TestClassA* >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			_returnValue->value = ((AgentNodeTest*)self)->_Execute_Method_<METHOD_TYPE_AgentNodeTest_TestFuncD, behaviac::EBTStatus, TestClassA* >(pValue_param0);
+		}
+	};
+
+	class CMethod_AgentNodeTest_testGameObject : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_AgentNodeTest_testGameObject() : _param0(0) 
+		{
+		}
+
+		CMethod_AgentNodeTest_testGameObject(CMethod_AgentNodeTest_testGameObject &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_AgentNodeTest_testGameObject()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_AgentNodeTest_testGameObject(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<UnityEngine::GameObject >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			UnityEngine::GameObject*& pValue_param0 = *(UnityEngine::GameObject**)_param0->GetValue(self, behaviac::Meta::IsVector<UnityEngine::GameObject* >::Result, behaviac::GetClassTypeNumberId<UnityEngine::GameObject* >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			((AgentNodeTest*)self)->_Execute_Method_<METHOD_TYPE_AgentNodeTest_testGameObject, void, UnityEngine::GameObject* >(pValue_param0);
+		}
+	};
+
+	class CMethod_AgentNodeTest_testVectorStruct : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_AgentNodeTest_testVectorStruct() : _param0(0) 
+		{
+		}
+
+		CMethod_AgentNodeTest_testVectorStruct(CMethod_AgentNodeTest_testVectorStruct &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_AgentNodeTest_testVectorStruct()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_AgentNodeTest_testVectorStruct(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<behaviac::vector<TestNS::Float2> >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			behaviac::vector<TestNS::Float2>& pValue_param0 = *(behaviac::vector<TestNS::Float2>*)_param0->GetValue(self, behaviac::Meta::IsVector<behaviac::vector<TestNS::Float2> >::Result, behaviac::GetClassTypeNumberId<behaviac::vector<TestNS::Float2> >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			((AgentNodeTest*)self)->_Execute_Method_<METHOD_TYPE_AgentNodeTest_testVectorStruct, void, behaviac::vector<TestNS::Float2>& >(pValue_param0);
+		}
+	};
+
+	class CMethod_AgentNodeTest_transitPlanTactics : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+		IInstanceMember* _param1;
+		IInstanceMember* _param2;
+
+	public: 
+		CMethod_AgentNodeTest_transitPlanTactics() : _param0(0) , _param1(0) , _param2(0) 
+		{
+		}
+
+		CMethod_AgentNodeTest_transitPlanTactics(CMethod_AgentNodeTest_transitPlanTactics &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) , _param1(0) , _param2(0) 
+		{
+		}
+
+		~CMethod_AgentNodeTest_transitPlanTactics()
+		{
+			BEHAVIAC_DELETE _param0;
+			BEHAVIAC_DELETE _param1;
+			BEHAVIAC_DELETE _param2;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_AgentNodeTest_transitPlanTactics(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 3);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			if (behaviac::StringUtils::StartsWith(paramStrs[0].c_str(), "{"))
+			{
+				_param0 = BEHAVIAC_NEW CInstanceConst_BSASN_TransitPlan(paramStrs[0].c_str());
+			}
+			else
+			{
+				_param0 = AgentMeta::TParseProperty<BSASN::TransitPlan >(paramStrs[0].c_str());
+			}
+			_param1 = AgentMeta::TParseProperty<EnumTest >(paramStrs[1].c_str());
+			_param2 = AgentMeta::TParseProperty<behaviac::string >(paramStrs[2].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+			BEHAVIAC_ASSERT(_param1 != NULL);
+			BEHAVIAC_ASSERT(_param2 != NULL);
+
+			_param0->run(self);
+			BSASN::TransitPlan& pValue_param0 = *(BSASN::TransitPlan*)_param0->GetValue(self, behaviac::Meta::IsVector<BSASN::TransitPlan >::Result, behaviac::GetClassTypeNumberId<BSASN::TransitPlan >());
+			EnumTest& pValue_param1 = *(EnumTest*)_param1->GetValue(self, behaviac::Meta::IsVector<EnumTest >::Result, behaviac::GetClassTypeNumberId<EnumTest >());
+			behaviac::string& pValue_param2 = *(behaviac::string*)_param2->GetValue(self, behaviac::Meta::IsVector<behaviac::string >::Result, behaviac::GetClassTypeNumberId<behaviac::string >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			((AgentNodeTest*)self)->_Execute_Method_<METHOD_TYPE_AgentNodeTest_transitPlanTactics, void, BSASN::TransitPlan, EnumTest, behaviac::string& >(pValue_param0, pValue_param1, pValue_param2);
+		}
+	};
+
+	class CMethod_CustomPropertyAgent_FnWithOutParam : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_CustomPropertyAgent_FnWithOutParam() : _param0(0) 
+		{
+		}
+
+		CMethod_CustomPropertyAgent_FnWithOutParam(CMethod_CustomPropertyAgent_FnWithOutParam &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_CustomPropertyAgent_FnWithOutParam()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_CustomPropertyAgent_FnWithOutParam(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<int >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			int& pValue_param0 = *(int*)_param0->GetValue(self, behaviac::Meta::IsVector<int >::Result, behaviac::GetClassTypeNumberId<int >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			((CustomPropertyAgent*)self)->_Execute_Method_<METHOD_TYPE_CustomPropertyAgent_FnWithOutParam, void, int& >(pValue_param0);
+		}
+	};
+
+	class CMethod_CustomPropertyAgent_TestFn1 : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_CustomPropertyAgent_TestFn1() : _param0(0) 
+		{
+		}
+
+		CMethod_CustomPropertyAgent_TestFn1(CMethod_CustomPropertyAgent_TestFn1 &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_CustomPropertyAgent_TestFn1()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_CustomPropertyAgent_TestFn1(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			if (behaviac::StringUtils::StartsWith(paramStrs[0].c_str(), "{"))
+			{
+				_param0 = BEHAVIAC_NEW CInstanceConst_TestNamespace_Float2(paramStrs[0].c_str());
+			}
+			else
+			{
+				_param0 = AgentMeta::TParseProperty<TestNamespace::Float2 >(paramStrs[0].c_str());
+			}
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			_param0->run(self);
+			TestNamespace::Float2& pValue_param0 = *(TestNamespace::Float2*)_param0->GetValue(self, behaviac::Meta::IsVector<TestNamespace::Float2 >::Result, behaviac::GetClassTypeNumberId<TestNamespace::Float2 >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			((CustomPropertyAgent*)self)->_Execute_Method_<METHOD_TYPE_CustomPropertyAgent_TestFn1, void, TestNamespace::Float2& >(pValue_param0);
+		}
+	};
+
+	class CMethod_CustomPropertyAgent_TestFn2 : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_CustomPropertyAgent_TestFn2() : _param0(0) 
+		{
+		}
+
+		CMethod_CustomPropertyAgent_TestFn2(CMethod_CustomPropertyAgent_TestFn2 &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_CustomPropertyAgent_TestFn2()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_CustomPropertyAgent_TestFn2(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			if (behaviac::StringUtils::StartsWith(paramStrs[0].c_str(), "{"))
+			{
+				_param0 = BEHAVIAC_NEW CInstanceConst_TestNamespace_ClassAsValueType(paramStrs[0].c_str());
+			}
+			else
+			{
+				_param0 = AgentMeta::TParseProperty<TestNamespace::ClassAsValueType* >(paramStrs[0].c_str());
+			}
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			_param0->run(self);
+			TestNamespace::ClassAsValueType*& pValue_param0 = *(TestNamespace::ClassAsValueType**)_param0->GetValue(self, behaviac::Meta::IsVector<TestNamespace::ClassAsValueType* >::Result, behaviac::GetClassTypeNumberId<TestNamespace::ClassAsValueType* >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			((CustomPropertyAgent*)self)->_Execute_Method_<METHOD_TYPE_CustomPropertyAgent_TestFn2, void, TestNamespace::ClassAsValueType* >(pValue_param0);
+		}
+	};
+
+	class CMethod_EmployeeParTestAgent_Func_AgentIR : public CAgentMethodBase<behaviac::Agent*>
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_EmployeeParTestAgent_Func_AgentIR() : _param0(0) 
+		{
+		}
+
+		CMethod_EmployeeParTestAgent_Func_AgentIR(CMethod_EmployeeParTestAgent_Func_AgentIR &rhs) : CAgentMethodBase<behaviac::Agent*>(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_EmployeeParTestAgent_Func_AgentIR()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_EmployeeParTestAgent_Func_AgentIR(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<behaviac::Agent >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			behaviac::Agent*& pValue_param0 = *(behaviac::Agent**)_param0->GetValue(self, behaviac::Meta::IsVector<behaviac::Agent* >::Result, behaviac::GetClassTypeNumberId<behaviac::Agent* >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			_returnValue->value = ((EmployeeParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_EmployeeParTestAgent_Func_AgentIR, behaviac::Agent*, behaviac::Agent* >(pValue_param0);
+		}
+	};
+
+	class CMethod_EmployeeParTestAgent_Func_ParTestAgentBaseIR : public CAgentMethodBase<ParTestAgentBase*>
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_EmployeeParTestAgent_Func_ParTestAgentBaseIR() : _param0(0) 
+		{
+		}
+
+		CMethod_EmployeeParTestAgent_Func_ParTestAgentBaseIR(CMethod_EmployeeParTestAgent_Func_ParTestAgentBaseIR &rhs) : CAgentMethodBase<ParTestAgentBase*>(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_EmployeeParTestAgent_Func_ParTestAgentBaseIR()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_EmployeeParTestAgent_Func_ParTestAgentBaseIR(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<ParTestAgentBase >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			ParTestAgentBase*& pValue_param0 = *(ParTestAgentBase**)_param0->GetValue(self, behaviac::Meta::IsVector<ParTestAgentBase* >::Result, behaviac::GetClassTypeNumberId<ParTestAgentBase* >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			_returnValue->value = ((EmployeeParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_EmployeeParTestAgent_Func_ParTestAgentBaseIR, ParTestAgentBase*, ParTestAgentBase* >(pValue_param0);
+		}
+	};
+
+	class CMethod_EmployeeParTestAgent_Func_StringIR : public CAgentMethodBase<behaviac::string>
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_EmployeeParTestAgent_Func_StringIR() : _param0(0) 
+		{
+		}
+
+		CMethod_EmployeeParTestAgent_Func_StringIR(CMethod_EmployeeParTestAgent_Func_StringIR &rhs) : CAgentMethodBase<behaviac::string>(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_EmployeeParTestAgent_Func_StringIR()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_EmployeeParTestAgent_Func_StringIR(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<behaviac::string >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			behaviac::string& pValue_param0 = *(behaviac::string*)_param0->GetValue(self, behaviac::Meta::IsVector<behaviac::string >::Result, behaviac::GetClassTypeNumberId<behaviac::string >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			_returnValue->value = ((EmployeeParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_EmployeeParTestAgent_Func_StringIR, behaviac::string, behaviac::string& >(pValue_param0);
+		}
+	};
+
+	class CMethod_EmployeeParTestAgent_Func_AgentSMF : public CAgentMethodBase<behaviac::Agent*>
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_EmployeeParTestAgent_Func_AgentSMF() : _param0(0) 
+		{
+		}
+
+		CMethod_EmployeeParTestAgent_Func_AgentSMF(CMethod_EmployeeParTestAgent_Func_AgentSMF &rhs) : CAgentMethodBase<behaviac::Agent*>(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_EmployeeParTestAgent_Func_AgentSMF()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_EmployeeParTestAgent_Func_AgentSMF(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<behaviac::Agent >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			behaviac::Agent*& pValue_param0 = *(behaviac::Agent**)_param0->GetValue(self, behaviac::Meta::IsVector<behaviac::Agent* >::Result, behaviac::GetClassTypeNumberId<behaviac::Agent* >());
+			_returnValue->value = ((EmployeeParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_EmployeeParTestAgent_Func_AgentSMF, behaviac::Agent*, behaviac::Agent* >(pValue_param0);
+		}
+	};
+
+	class CMethod_EmployeeParTestAgent_Func_StringSMF : public CAgentMethodBase<behaviac::string>
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_EmployeeParTestAgent_Func_StringSMF() : _param0(0) 
+		{
+		}
+
+		CMethod_EmployeeParTestAgent_Func_StringSMF(CMethod_EmployeeParTestAgent_Func_StringSMF &rhs) : CAgentMethodBase<behaviac::string>(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_EmployeeParTestAgent_Func_StringSMF()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_EmployeeParTestAgent_Func_StringSMF(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<behaviac::string >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			behaviac::string& pValue_param0 = *(behaviac::string*)_param0->GetValue(self, behaviac::Meta::IsVector<behaviac::string >::Result, behaviac::GetClassTypeNumberId<behaviac::string >());
+			_returnValue->value = ((EmployeeParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_EmployeeParTestAgent_Func_StringSMF, behaviac::string, behaviac::string& >(pValue_param0);
+		}
+	};
+
+	class CMethod_EmployeeParTestAgent_Func_AgentListRef : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_EmployeeParTestAgent_Func_AgentListRef() : _param0(0) 
+		{
+		}
+
+		CMethod_EmployeeParTestAgent_Func_AgentListRef(CMethod_EmployeeParTestAgent_Func_AgentListRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_EmployeeParTestAgent_Func_AgentListRef()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_EmployeeParTestAgent_Func_AgentListRef(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<behaviac::vector<behaviac::Agent*> >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			behaviac::vector<behaviac::Agent*>& pValue_param0 = *(behaviac::vector<behaviac::Agent*>*)_param0->GetValue(self, behaviac::Meta::IsVector<behaviac::vector<behaviac::Agent*> >::Result, behaviac::GetClassTypeNumberId<behaviac::vector<behaviac::Agent*> >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			((EmployeeParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_EmployeeParTestAgent_Func_AgentListRef, void, behaviac::vector<behaviac::Agent*>& >(pValue_param0);
+		}
+	};
+
+	class CMethod_EmployeeParTestAgent_Func_AgentRef : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_EmployeeParTestAgent_Func_AgentRef() : _param0(0) 
+		{
+		}
+
+		CMethod_EmployeeParTestAgent_Func_AgentRef(CMethod_EmployeeParTestAgent_Func_AgentRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_EmployeeParTestAgent_Func_AgentRef()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_EmployeeParTestAgent_Func_AgentRef(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<behaviac::Agent* >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			behaviac::Agent*& pValue_param0 = *(behaviac::Agent**)_param0->GetValue(self, behaviac::Meta::IsVector<behaviac::Agent* >::Result, behaviac::GetClassTypeNumberId<behaviac::Agent* >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			((EmployeeParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_EmployeeParTestAgent_Func_AgentRef, void, behaviac::Agent*& >(pValue_param0);
+		}
+	};
+
+	class CMethod_EmployeeParTestAgent_Func_DoubleRef : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_EmployeeParTestAgent_Func_DoubleRef() : _param0(0) 
+		{
+		}
+
+		CMethod_EmployeeParTestAgent_Func_DoubleRef(CMethod_EmployeeParTestAgent_Func_DoubleRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_EmployeeParTestAgent_Func_DoubleRef()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_EmployeeParTestAgent_Func_DoubleRef(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<double >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			double& pValue_param0 = *(double*)_param0->GetValue(self, behaviac::Meta::IsVector<double >::Result, behaviac::GetClassTypeNumberId<double >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			((EmployeeParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_EmployeeParTestAgent_Func_DoubleRef, void, double& >(pValue_param0);
+		}
+	};
+
+	class CMethod_EmployeeParTestAgent_Func_LongLongRef : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_EmployeeParTestAgent_Func_LongLongRef() : _param0(0) 
+		{
+		}
+
+		CMethod_EmployeeParTestAgent_Func_LongLongRef(CMethod_EmployeeParTestAgent_Func_LongLongRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_EmployeeParTestAgent_Func_LongLongRef()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_EmployeeParTestAgent_Func_LongLongRef(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<long long >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			long long& pValue_param0 = *(long long*)_param0->GetValue(self, behaviac::Meta::IsVector<long long >::Result, behaviac::GetClassTypeNumberId<long long >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			((EmployeeParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_EmployeeParTestAgent_Func_LongLongRef, void, long long& >(pValue_param0);
+		}
+	};
+
+	class CMethod_EmployeeParTestAgent_Func_SingleListRef : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_EmployeeParTestAgent_Func_SingleListRef() : _param0(0) 
+		{
+		}
+
+		CMethod_EmployeeParTestAgent_Func_SingleListRef(CMethod_EmployeeParTestAgent_Func_SingleListRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_EmployeeParTestAgent_Func_SingleListRef()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_EmployeeParTestAgent_Func_SingleListRef(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<behaviac::vector<float> >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			behaviac::vector<float>& pValue_param0 = *(behaviac::vector<float>*)_param0->GetValue(self, behaviac::Meta::IsVector<behaviac::vector<float> >::Result, behaviac::GetClassTypeNumberId<behaviac::vector<float> >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			((EmployeeParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_EmployeeParTestAgent_Func_SingleListRef, void, behaviac::vector<float>& >(pValue_param0);
+		}
+	};
+
+	class CMethod_EmployeeParTestAgent_Func_SingleRef : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_EmployeeParTestAgent_Func_SingleRef() : _param0(0) 
+		{
+		}
+
+		CMethod_EmployeeParTestAgent_Func_SingleRef(CMethod_EmployeeParTestAgent_Func_SingleRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_EmployeeParTestAgent_Func_SingleRef()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_EmployeeParTestAgent_Func_SingleRef(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<float >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			float& pValue_param0 = *(float*)_param0->GetValue(self, behaviac::Meta::IsVector<float >::Result, behaviac::GetClassTypeNumberId<float >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			((EmployeeParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_EmployeeParTestAgent_Func_SingleRef, void, float& >(pValue_param0);
+		}
+	};
+
+	class CMethod_EmployeeParTestAgent_Func_StringListRef : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_EmployeeParTestAgent_Func_StringListRef() : _param0(0) 
+		{
+		}
+
+		CMethod_EmployeeParTestAgent_Func_StringListRef(CMethod_EmployeeParTestAgent_Func_StringListRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_EmployeeParTestAgent_Func_StringListRef()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_EmployeeParTestAgent_Func_StringListRef(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<behaviac::vector<behaviac::string> >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			behaviac::vector<behaviac::string>& pValue_param0 = *(behaviac::vector<behaviac::string>*)_param0->GetValue(self, behaviac::Meta::IsVector<behaviac::vector<behaviac::string> >::Result, behaviac::GetClassTypeNumberId<behaviac::vector<behaviac::string> >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			((EmployeeParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_EmployeeParTestAgent_Func_StringListRef, void, behaviac::vector<behaviac::string>& >(pValue_param0);
+		}
+	};
+
+	class CMethod_EmployeeParTestAgent_Func_StringRef : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_EmployeeParTestAgent_Func_StringRef() : _param0(0) 
+		{
+		}
+
+		CMethod_EmployeeParTestAgent_Func_StringRef(CMethod_EmployeeParTestAgent_Func_StringRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_EmployeeParTestAgent_Func_StringRef()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_EmployeeParTestAgent_Func_StringRef(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<behaviac::string >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			behaviac::string& pValue_param0 = *(behaviac::string*)_param0->GetValue(self, behaviac::Meta::IsVector<behaviac::string >::Result, behaviac::GetClassTypeNumberId<behaviac::string >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			((EmployeeParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_EmployeeParTestAgent_Func_StringRef, void, behaviac::string& >(pValue_param0);
+		}
+	};
+
+	class CMethod_EmployeeParTestAgent_Func_SzStringRef : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_EmployeeParTestAgent_Func_SzStringRef() : _param0(0) 
+		{
+		}
+
+		CMethod_EmployeeParTestAgent_Func_SzStringRef(CMethod_EmployeeParTestAgent_Func_SzStringRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_EmployeeParTestAgent_Func_SzStringRef()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_EmployeeParTestAgent_Func_SzStringRef(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<char* >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			char* pValue_param0 = (char*)_param0->GetValue(self, behaviac::Meta::IsVector<char* >::Result, behaviac::GetClassTypeNumberId<char* >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			((EmployeeParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_EmployeeParTestAgent_Func_SzStringRef, void, char*& >(pValue_param0);
+		}
+	};
+
+	class CMethod_EmployeeParTestAgent_Func_UIntRef : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_EmployeeParTestAgent_Func_UIntRef() : _param0(0) 
+		{
+		}
+
+		CMethod_EmployeeParTestAgent_Func_UIntRef(CMethod_EmployeeParTestAgent_Func_UIntRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_EmployeeParTestAgent_Func_UIntRef()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_EmployeeParTestAgent_Func_UIntRef(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<unsigned int >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			unsigned int& pValue_param0 = *(unsigned int*)_param0->GetValue(self, behaviac::Meta::IsVector<unsigned int >::Result, behaviac::GetClassTypeNumberId<unsigned int >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			((EmployeeParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_EmployeeParTestAgent_Func_UIntRef, void, unsigned int& >(pValue_param0);
+		}
+	};
+
+	class CMethod_EmployeeParTestAgent_Func_ULongLongRef : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_EmployeeParTestAgent_Func_ULongLongRef() : _param0(0) 
+		{
+		}
+
+		CMethod_EmployeeParTestAgent_Func_ULongLongRef(CMethod_EmployeeParTestAgent_Func_ULongLongRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_EmployeeParTestAgent_Func_ULongLongRef()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_EmployeeParTestAgent_Func_ULongLongRef(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<unsigned long long >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			unsigned long long& pValue_param0 = *(unsigned long long*)_param0->GetValue(self, behaviac::Meta::IsVector<unsigned long long >::Result, behaviac::GetClassTypeNumberId<unsigned long long >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			((EmployeeParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_EmployeeParTestAgent_Func_ULongLongRef, void, unsigned long long& >(pValue_param0);
+		}
+	};
+
+	class CMethod_EmployeeParTestAgent_Func_ULongRef : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_EmployeeParTestAgent_Func_ULongRef() : _param0(0) 
+		{
+		}
+
+		CMethod_EmployeeParTestAgent_Func_ULongRef(CMethod_EmployeeParTestAgent_Func_ULongRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_EmployeeParTestAgent_Func_ULongRef()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_EmployeeParTestAgent_Func_ULongRef(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<unsigned long >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			unsigned long& pValue_param0 = *(unsigned long*)_param0->GetValue(self, behaviac::Meta::IsVector<unsigned long >::Result, behaviac::GetClassTypeNumberId<unsigned long >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			((EmployeeParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_EmployeeParTestAgent_Func_ULongRef, void, unsigned long& >(pValue_param0);
+		}
+	};
+
+	class CMethod_HTNAgentTravel_exist_airport : public CAgentMethodBase<bool>
+	{
+		IInstanceMember* _param0;
+		IInstanceMember* _param1;
+
+	public: 
+		CMethod_HTNAgentTravel_exist_airport() : _param0(0) , _param1(0) 
+		{
+		}
+
+		CMethod_HTNAgentTravel_exist_airport(CMethod_HTNAgentTravel_exist_airport &rhs) : CAgentMethodBase<bool>(rhs) , _param0(0) , _param1(0) 
+		{
+		}
+
+		~CMethod_HTNAgentTravel_exist_airport()
+		{
+			BEHAVIAC_DELETE _param0;
+			BEHAVIAC_DELETE _param1;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_HTNAgentTravel_exist_airport(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 2);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<int >(paramStrs[0].c_str());
+			_param1 = AgentMeta::TParseProperty<int >(paramStrs[1].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+			BEHAVIAC_ASSERT(_param1 != NULL);
+
+			int& pValue_param0 = *(int*)_param0->GetValue(self, behaviac::Meta::IsVector<int >::Result, behaviac::GetClassTypeNumberId<int >());
+			int& pValue_param1 = *(int*)_param1->GetValue(self, behaviac::Meta::IsVector<int >::Result, behaviac::GetClassTypeNumberId<int >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			_returnValue->value = ((HTNAgentTravel*)self)->_Execute_Method_<METHOD_TYPE_HTNAgentTravel_exist_airport, bool, int, int& >(pValue_param0, pValue_param1);
+		}
+	};
+
+	class CMethod_HTNAgentTravel_exist_airports : public CAgentMethodBase<bool>
+	{
+		IInstanceMember* _param0;
+		IInstanceMember* _param1;
+
+	public: 
+		CMethod_HTNAgentTravel_exist_airports() : _param0(0) , _param1(0) 
+		{
+		}
+
+		CMethod_HTNAgentTravel_exist_airports(CMethod_HTNAgentTravel_exist_airports &rhs) : CAgentMethodBase<bool>(rhs) , _param0(0) , _param1(0) 
+		{
+		}
+
+		~CMethod_HTNAgentTravel_exist_airports()
+		{
+			BEHAVIAC_DELETE _param0;
+			BEHAVIAC_DELETE _param1;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_HTNAgentTravel_exist_airports(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 2);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<int >(paramStrs[0].c_str());
+			_param1 = AgentMeta::TParseProperty<behaviac::vector<int> >(paramStrs[1].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+			BEHAVIAC_ASSERT(_param1 != NULL);
+
+			int& pValue_param0 = *(int*)_param0->GetValue(self, behaviac::Meta::IsVector<int >::Result, behaviac::GetClassTypeNumberId<int >());
+			behaviac::vector<int>& pValue_param1 = *(behaviac::vector<int>*)_param1->GetValue(self, behaviac::Meta::IsVector<behaviac::vector<int> >::Result, behaviac::GetClassTypeNumberId<behaviac::vector<int> >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			_returnValue->value = ((HTNAgentTravel*)self)->_Execute_Method_<METHOD_TYPE_HTNAgentTravel_exist_airports, bool, int, behaviac::vector<int>& >(pValue_param0, pValue_param1);
+		}
+	};
+
+	class CMethod_HTNAgentTravel_exist_finish : public CAgentMethodBase<bool>
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_HTNAgentTravel_exist_finish() : _param0(0) 
+		{
+		}
+
+		CMethod_HTNAgentTravel_exist_finish(CMethod_HTNAgentTravel_exist_finish &rhs) : CAgentMethodBase<bool>(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_HTNAgentTravel_exist_finish()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_HTNAgentTravel_exist_finish(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<int >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			int& pValue_param0 = *(int*)_param0->GetValue(self, behaviac::Meta::IsVector<int >::Result, behaviac::GetClassTypeNumberId<int >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			_returnValue->value = ((HTNAgentTravel*)self)->_Execute_Method_<METHOD_TYPE_HTNAgentTravel_exist_finish, bool, int& >(pValue_param0);
+		}
+	};
+
+	class CMethod_HTNAgentTravel_exist_start : public CAgentMethodBase<bool>
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_HTNAgentTravel_exist_start() : _param0(0) 
+		{
+		}
+
+		CMethod_HTNAgentTravel_exist_start(CMethod_HTNAgentTravel_exist_start &rhs) : CAgentMethodBase<bool>(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_HTNAgentTravel_exist_start()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_HTNAgentTravel_exist_start(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<int >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			int& pValue_param0 = *(int*)_param0->GetValue(self, behaviac::Meta::IsVector<int >::Result, behaviac::GetClassTypeNumberId<int >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			_returnValue->value = ((HTNAgentTravel*)self)->_Execute_Method_<METHOD_TYPE_HTNAgentTravel_exist_start, bool, int& >(pValue_param0);
+		}
+	};
+
+	class CMethod_ParTestRegNameAgent_Func_AgentIR : public CAgentMethodBase<behaviac::Agent*>
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_ParTestRegNameAgent_Func_AgentIR() : _param0(0) 
+		{
+		}
+
+		CMethod_ParTestRegNameAgent_Func_AgentIR(CMethod_ParTestRegNameAgent_Func_AgentIR &rhs) : CAgentMethodBase<behaviac::Agent*>(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_ParTestRegNameAgent_Func_AgentIR()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_ParTestRegNameAgent_Func_AgentIR(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<behaviac::Agent >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			behaviac::Agent*& pValue_param0 = *(behaviac::Agent**)_param0->GetValue(self, behaviac::Meta::IsVector<behaviac::Agent* >::Result, behaviac::GetClassTypeNumberId<behaviac::Agent* >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			_returnValue->value = ((ParTestRegNameAgent*)self)->_Execute_Method_<METHOD_TYPE_ParTestRegNameAgent_Func_AgentIR, behaviac::Agent*, behaviac::Agent* >(pValue_param0);
+		}
+	};
+
+	class CMethod_ParTestRegNameAgent_Func_kEmployeeIR : public CAgentMethodBase<TNS::ST::PER::WRK::kEmployee>
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_ParTestRegNameAgent_Func_kEmployeeIR() : _param0(0) 
+		{
+		}
+
+		CMethod_ParTestRegNameAgent_Func_kEmployeeIR(CMethod_ParTestRegNameAgent_Func_kEmployeeIR &rhs) : CAgentMethodBase<TNS::ST::PER::WRK::kEmployee>(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_ParTestRegNameAgent_Func_kEmployeeIR()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_ParTestRegNameAgent_Func_kEmployeeIR(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			if (behaviac::StringUtils::StartsWith(paramStrs[0].c_str(), "{"))
+			{
+				_param0 = BEHAVIAC_NEW CInstanceConst_TNS_ST_PER_WRK_kEmployee(paramStrs[0].c_str());
+			}
+			else
+			{
+				_param0 = AgentMeta::TParseProperty<TNS::ST::PER::WRK::kEmployee >(paramStrs[0].c_str());
+			}
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			_param0->run(self);
+			TNS::ST::PER::WRK::kEmployee& pValue_param0 = *(TNS::ST::PER::WRK::kEmployee*)_param0->GetValue(self, behaviac::Meta::IsVector<TNS::ST::PER::WRK::kEmployee >::Result, behaviac::GetClassTypeNumberId<TNS::ST::PER::WRK::kEmployee >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			_returnValue->value = ((ParTestRegNameAgent*)self)->_Execute_Method_<METHOD_TYPE_ParTestRegNameAgent_Func_kEmployeeIR, TNS::ST::PER::WRK::kEmployee, TNS::ST::PER::WRK::kEmployee >(pValue_param0);
+		}
+	};
+
+	class CMethod_PropertyReadonlyAgent_FnWithOutParam : public CAgentMethodVoidBase
+	{
+		IInstanceMember* _param0;
+
+	public: 
+		CMethod_PropertyReadonlyAgent_FnWithOutParam() : _param0(0) 
+		{
+		}
+
+		CMethod_PropertyReadonlyAgent_FnWithOutParam(CMethod_PropertyReadonlyAgent_FnWithOutParam &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
+		{
+		}
+
+		~CMethod_PropertyReadonlyAgent_FnWithOutParam()
+		{
+			BEHAVIAC_DELETE _param0;
+		}
+
+		virtual IInstanceMember* clone()
+		{
+			return BEHAVIAC_NEW CMethod_PropertyReadonlyAgent_FnWithOutParam(*this);
+		}
+
+		virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
+		{
+			BEHAVIAC_ASSERT(paramStrs.size() == 1);
+
+			behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
+			_param0 = AgentMeta::TParseProperty<int >(paramStrs[0].c_str());
+		}
+
+		virtual void run(Agent* self)
+		{
+			BEHAVIAC_ASSERT(_param0 != NULL);
+
+			int& pValue_param0 = *(int*)_param0->GetValue(self, behaviac::Meta::IsVector<int >::Result, behaviac::GetClassTypeNumberId<int >());
+			self = Agent::GetParentAgent(self, _instance);
+
+			((PropertyReadonlyAgent*)self)->_Execute_Method_<METHOD_TYPE_PropertyReadonlyAgent_FnWithOutParam, void, int& >(pValue_param0);
+		}
+	};
+
 	class BehaviorLoaderImplement : BehaviorLoader
 	{
 	public:
@@ -22,2968 +2983,7 @@ namespace behaviac
 
 		virtual bool load()
 		{
-			class CInstanceConst_Act : public CInstanceConstBase<Act>
-			{
-				IInstanceMember* _Var_B_Loop;
-				IInstanceMember* _Var_List_EnumTest;
-
-			public: 
-				CInstanceConst_Act(const char* valueStr) : CInstanceConstBase<Act>(valueStr)
-				{
-					behaviac::vector<behaviac::string> paramStrs = behaviac::StringUtils::SplitTokensForStruct(valueStr);
-					BEHAVIAC_ASSERT(paramStrs.size() == 2);
-
-					_Var_B_Loop = AgentMeta::TParseProperty<bool >(paramStrs[0].c_str());
-					_Var_List_EnumTest = AgentMeta::TParseProperty<behaviac::vector<EnumTest> >(paramStrs[1].c_str());
-				}
-
-				~CInstanceConst_Act()
-				{
-					BEHAVIAC_DELETE _Var_B_Loop;
-					BEHAVIAC_DELETE _Var_List_EnumTest;
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_Var_B_Loop != NULL);
-					BEHAVIAC_ASSERT(_Var_List_EnumTest != NULL);
-
-					_value.Var_B_Loop = *(bool*)_Var_B_Loop->GetValue(self, behaviac::Meta::IsVector<bool >::Result, behaviac::GetClassTypeNumberId<bool >());
-					_value.Var_List_EnumTest = *(behaviac::vector<EnumTest>*)_Var_List_EnumTest->GetValue(self, behaviac::Meta::IsVector<behaviac::vector<EnumTest> >::Result, behaviac::GetClassTypeNumberId<behaviac::vector<EnumTest> >());
-				}
-			};
-
-			class CInstanceConst_BSASN_SpatialCoord : public CInstanceConstBase<BSASN::SpatialCoord>
-			{
-				IInstanceMember* _coordX;
-				IInstanceMember* _coordY;
-
-			public: 
-				CInstanceConst_BSASN_SpatialCoord(const char* valueStr) : CInstanceConstBase<BSASN::SpatialCoord>(valueStr)
-				{
-					behaviac::vector<behaviac::string> paramStrs = behaviac::StringUtils::SplitTokensForStruct(valueStr);
-					BEHAVIAC_ASSERT(paramStrs.size() == 2);
-
-					_coordX = AgentMeta::TParseProperty<float >(paramStrs[0].c_str());
-					_coordY = AgentMeta::TParseProperty<float >(paramStrs[1].c_str());
-				}
-
-				~CInstanceConst_BSASN_SpatialCoord()
-				{
-					BEHAVIAC_DELETE _coordX;
-					BEHAVIAC_DELETE _coordY;
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_coordX != NULL);
-					BEHAVIAC_ASSERT(_coordY != NULL);
-
-					_value.coordX = *(float*)_coordX->GetValue(self, behaviac::Meta::IsVector<float >::Result, behaviac::GetClassTypeNumberId<float >());
-					_value.coordY = *(float*)_coordY->GetValue(self, behaviac::Meta::IsVector<float >::Result, behaviac::GetClassTypeNumberId<float >());
-				}
-			};
-
-			class CInstanceConst_BSASN_TransitPlan : public CInstanceConstBase<BSASN::TransitPlan>
-			{
-				IInstanceMember* _plan_ID;
-				IInstanceMember* _plan_selection_precedence;
-				IInstanceMember* _transit_points;
-
-			public: 
-				CInstanceConst_BSASN_TransitPlan(const char* valueStr) : CInstanceConstBase<BSASN::TransitPlan>(valueStr)
-				{
-					behaviac::vector<behaviac::string> paramStrs = behaviac::StringUtils::SplitTokensForStruct(valueStr);
-					BEHAVIAC_ASSERT(paramStrs.size() == 3);
-
-					_plan_ID = AgentMeta::TParseProperty<behaviac::string >(paramStrs[0].c_str());
-					_plan_selection_precedence = AgentMeta::TParseProperty<int >(paramStrs[1].c_str());
-					_transit_points = AgentMeta::TParseProperty<behaviac::vector<BSASN::SpatialCoord> >(paramStrs[2].c_str());
-				}
-
-				~CInstanceConst_BSASN_TransitPlan()
-				{
-					BEHAVIAC_DELETE _plan_ID;
-					BEHAVIAC_DELETE _plan_selection_precedence;
-					BEHAVIAC_DELETE _transit_points;
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_plan_ID != NULL);
-					BEHAVIAC_ASSERT(_plan_selection_precedence != NULL);
-					BEHAVIAC_ASSERT(_transit_points != NULL);
-
-					_value.plan_ID = *(behaviac::string*)_plan_ID->GetValue(self, behaviac::Meta::IsVector<behaviac::string >::Result, behaviac::GetClassTypeNumberId<behaviac::string >());
-					_value.plan_selection_precedence = *(int*)_plan_selection_precedence->GetValue(self, behaviac::Meta::IsVector<int >::Result, behaviac::GetClassTypeNumberId<int >());
-					_value.transit_points = *(behaviac::vector<BSASN::SpatialCoord>*)_transit_points->GetValue(self, behaviac::Meta::IsVector<behaviac::vector<BSASN::SpatialCoord> >::Result, behaviac::GetClassTypeNumberId<behaviac::vector<BSASN::SpatialCoord> >());
-				}
-			};
-
-			class CInstanceConst_TestNamespace_ClassAsValueType : public CInstanceConstBase<TestNamespace::ClassAsValueType>
-			{
-				IInstanceMember* _x;
-				IInstanceMember* _y;
-
-			public: 
-				CInstanceConst_TestNamespace_ClassAsValueType(const char* valueStr) : CInstanceConstBase<TestNamespace::ClassAsValueType>(valueStr)
-				{
-					behaviac::vector<behaviac::string> paramStrs = behaviac::StringUtils::SplitTokensForStruct(valueStr);
-					BEHAVIAC_ASSERT(paramStrs.size() == 2);
-
-					_x = AgentMeta::TParseProperty<float >(paramStrs[0].c_str());
-					_y = AgentMeta::TParseProperty<float >(paramStrs[1].c_str());
-				}
-
-				~CInstanceConst_TestNamespace_ClassAsValueType()
-				{
-					BEHAVIAC_DELETE _x;
-					BEHAVIAC_DELETE _y;
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_x != NULL);
-					BEHAVIAC_ASSERT(_y != NULL);
-
-					_value.x = *(float*)_x->GetValue(self, behaviac::Meta::IsVector<float >::Result, behaviac::GetClassTypeNumberId<float >());
-					_value.y = *(float*)_y->GetValue(self, behaviac::Meta::IsVector<float >::Result, behaviac::GetClassTypeNumberId<float >());
-				}
-			};
-
-			class CInstanceConst_TestNamespace_Float2 : public CInstanceConstBase<TestNamespace::Float2>
-			{
-				IInstanceMember* _x;
-				IInstanceMember* _y;
-
-			public: 
-				CInstanceConst_TestNamespace_Float2(const char* valueStr) : CInstanceConstBase<TestNamespace::Float2>(valueStr)
-				{
-					behaviac::vector<behaviac::string> paramStrs = behaviac::StringUtils::SplitTokensForStruct(valueStr);
-					BEHAVIAC_ASSERT(paramStrs.size() == 2);
-
-					_x = AgentMeta::TParseProperty<float >(paramStrs[0].c_str());
-					_y = AgentMeta::TParseProperty<float >(paramStrs[1].c_str());
-				}
-
-				~CInstanceConst_TestNamespace_Float2()
-				{
-					BEHAVIAC_DELETE _x;
-					BEHAVIAC_DELETE _y;
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_x != NULL);
-					BEHAVIAC_ASSERT(_y != NULL);
-
-					_value.x = *(float*)_x->GetValue(self, behaviac::Meta::IsVector<float >::Result, behaviac::GetClassTypeNumberId<float >());
-					_value.y = *(float*)_y->GetValue(self, behaviac::Meta::IsVector<float >::Result, behaviac::GetClassTypeNumberId<float >());
-				}
-			};
-
-			class CInstanceConst_TestNS_Float2 : public CInstanceConstBase<TestNS::Float2>
-			{
-				IInstanceMember* _x;
-				IInstanceMember* _y;
-
-			public: 
-				CInstanceConst_TestNS_Float2(const char* valueStr) : CInstanceConstBase<TestNS::Float2>(valueStr)
-				{
-					behaviac::vector<behaviac::string> paramStrs = behaviac::StringUtils::SplitTokensForStruct(valueStr);
-					BEHAVIAC_ASSERT(paramStrs.size() == 2);
-
-					_x = AgentMeta::TParseProperty<float >(paramStrs[0].c_str());
-					_y = AgentMeta::TParseProperty<float >(paramStrs[1].c_str());
-				}
-
-				~CInstanceConst_TestNS_Float2()
-				{
-					BEHAVIAC_DELETE _x;
-					BEHAVIAC_DELETE _y;
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_x != NULL);
-					BEHAVIAC_ASSERT(_y != NULL);
-
-					_value.x = *(float*)_x->GetValue(self, behaviac::Meta::IsVector<float >::Result, behaviac::GetClassTypeNumberId<float >());
-					_value.y = *(float*)_y->GetValue(self, behaviac::Meta::IsVector<float >::Result, behaviac::GetClassTypeNumberId<float >());
-				}
-			};
-
-			class CInstanceConst_TNS_ST_kCar : public CInstanceConstBase<TNS::ST::kCar>
-			{
-				IInstanceMember* _brand;
-				IInstanceMember* _price;
-				IInstanceMember* _color;
-
-			public: 
-				CInstanceConst_TNS_ST_kCar(const char* valueStr) : CInstanceConstBase<TNS::ST::kCar>(valueStr)
-				{
-					behaviac::vector<behaviac::string> paramStrs = behaviac::StringUtils::SplitTokensForStruct(valueStr);
-					BEHAVIAC_ASSERT(paramStrs.size() == 3);
-
-					_brand = AgentMeta::TParseProperty<behaviac::string >(paramStrs[0].c_str());
-					_price = AgentMeta::TParseProperty<int >(paramStrs[1].c_str());
-					_color = AgentMeta::TParseProperty<TNS::NE::NAT::eColor >(paramStrs[2].c_str());
-				}
-
-				~CInstanceConst_TNS_ST_kCar()
-				{
-					BEHAVIAC_DELETE _brand;
-					BEHAVIAC_DELETE _price;
-					BEHAVIAC_DELETE _color;
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_brand != NULL);
-					BEHAVIAC_ASSERT(_price != NULL);
-					BEHAVIAC_ASSERT(_color != NULL);
-
-					_value.brand = *(behaviac::string*)_brand->GetValue(self, behaviac::Meta::IsVector<behaviac::string >::Result, behaviac::GetClassTypeNumberId<behaviac::string >());
-					_value.price = *(int*)_price->GetValue(self, behaviac::Meta::IsVector<int >::Result, behaviac::GetClassTypeNumberId<int >());
-					_value.color = *(TNS::NE::NAT::eColor*)_color->GetValue(self, behaviac::Meta::IsVector<TNS::NE::NAT::eColor >::Result, behaviac::GetClassTypeNumberId<TNS::NE::NAT::eColor >());
-				}
-			};
-
-			class CInstanceConst_TNS_ST_PER_WRK_kEmployee : public CInstanceConstBase<TNS::ST::PER::WRK::kEmployee>
-			{
-				IInstanceMember* _id;
-				IInstanceMember* _name;
-				IInstanceMember* _code;
-				IInstanceMember* _weight;
-				IInstanceMember* _isMale;
-				IInstanceMember* _skinColor;
-				IInstanceMember* _car;
-				IInstanceMember* _boss;
-
-			public: 
-				CInstanceConst_TNS_ST_PER_WRK_kEmployee(const char* valueStr) : CInstanceConstBase<TNS::ST::PER::WRK::kEmployee>(valueStr)
-				{
-					behaviac::vector<behaviac::string> paramStrs = behaviac::StringUtils::SplitTokensForStruct(valueStr);
-					BEHAVIAC_ASSERT(paramStrs.size() == 8);
-
-					_id = AgentMeta::TParseProperty<int >(paramStrs[0].c_str());
-					_name = AgentMeta::TParseProperty<behaviac::string >(paramStrs[1].c_str());
-					_code = AgentMeta::TParseProperty<char >(paramStrs[2].c_str());
-					_weight = AgentMeta::TParseProperty<float >(paramStrs[3].c_str());
-					_isMale = AgentMeta::TParseProperty<bool >(paramStrs[4].c_str());
-					_skinColor = AgentMeta::TParseProperty<TNS::NE::NAT::eColor >(paramStrs[5].c_str());
-					_car = AgentMeta::TParseProperty<TNS::ST::kCar >(paramStrs[6].c_str());
-					_boss = AgentMeta::TParseProperty<behaviac::Agent* >(paramStrs[7].c_str());
-				}
-
-				~CInstanceConst_TNS_ST_PER_WRK_kEmployee()
-				{
-					BEHAVIAC_DELETE _id;
-					BEHAVIAC_DELETE _name;
-					BEHAVIAC_DELETE _code;
-					BEHAVIAC_DELETE _weight;
-					BEHAVIAC_DELETE _isMale;
-					BEHAVIAC_DELETE _skinColor;
-					BEHAVIAC_DELETE _car;
-					BEHAVIAC_DELETE _boss;
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_id != NULL);
-					BEHAVIAC_ASSERT(_name != NULL);
-					BEHAVIAC_ASSERT(_code != NULL);
-					BEHAVIAC_ASSERT(_weight != NULL);
-					BEHAVIAC_ASSERT(_isMale != NULL);
-					BEHAVIAC_ASSERT(_skinColor != NULL);
-					BEHAVIAC_ASSERT(_car != NULL);
-					BEHAVIAC_ASSERT(_boss != NULL);
-
-					_value.id = *(int*)_id->GetValue(self, behaviac::Meta::IsVector<int >::Result, behaviac::GetClassTypeNumberId<int >());
-					_value.name = *(behaviac::string*)_name->GetValue(self, behaviac::Meta::IsVector<behaviac::string >::Result, behaviac::GetClassTypeNumberId<behaviac::string >());
-					_value.code = *(char*)_code->GetValue(self, behaviac::Meta::IsVector<char >::Result, behaviac::GetClassTypeNumberId<char >());
-					_value.weight = *(float*)_weight->GetValue(self, behaviac::Meta::IsVector<float >::Result, behaviac::GetClassTypeNumberId<float >());
-					_value.isMale = *(bool*)_isMale->GetValue(self, behaviac::Meta::IsVector<bool >::Result, behaviac::GetClassTypeNumberId<bool >());
-					_value.skinColor = *(TNS::NE::NAT::eColor*)_skinColor->GetValue(self, behaviac::Meta::IsVector<TNS::NE::NAT::eColor >::Result, behaviac::GetClassTypeNumberId<TNS::NE::NAT::eColor >());
-					_value.car = *(TNS::ST::kCar*)_car->GetValue(self, behaviac::Meta::IsVector<TNS::ST::kCar >::Result, behaviac::GetClassTypeNumberId<TNS::ST::kCar >());
-					_value.boss = (behaviac::Agent*)_boss->GetValue(self, behaviac::Meta::IsVector<behaviac::Agent >::Result, behaviac::GetClassTypeNumberId<behaviac::Agent >());
-				}
-			};
-
-			class CInstanceConst_UnityEngine_Vector3 : public CInstanceConstBase<UnityEngine::Vector3>
-			{
-				IInstanceMember* _x;
-				IInstanceMember* _y;
-				IInstanceMember* _z;
-
-			public: 
-				CInstanceConst_UnityEngine_Vector3(const char* valueStr) : CInstanceConstBase<UnityEngine::Vector3>(valueStr)
-				{
-					behaviac::vector<behaviac::string> paramStrs = behaviac::StringUtils::SplitTokensForStruct(valueStr);
-					BEHAVIAC_ASSERT(paramStrs.size() == 3);
-
-					_x = AgentMeta::TParseProperty<float >(paramStrs[0].c_str());
-					_y = AgentMeta::TParseProperty<float >(paramStrs[1].c_str());
-					_z = AgentMeta::TParseProperty<float >(paramStrs[2].c_str());
-				}
-
-				~CInstanceConst_UnityEngine_Vector3()
-				{
-					BEHAVIAC_DELETE _x;
-					BEHAVIAC_DELETE _y;
-					BEHAVIAC_DELETE _z;
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_x != NULL);
-					BEHAVIAC_ASSERT(_y != NULL);
-					BEHAVIAC_ASSERT(_z != NULL);
-
-					_value.x = *(float*)_x->GetValue(self, behaviac::Meta::IsVector<float >::Result, behaviac::GetClassTypeNumberId<float >());
-					_value.y = *(float*)_y->GetValue(self, behaviac::Meta::IsVector<float >::Result, behaviac::GetClassTypeNumberId<float >());
-					_value.z = *(float*)_z->GetValue(self, behaviac::Meta::IsVector<float >::Result, behaviac::GetClassTypeNumberId<float >());
-				}
-			};
-
-			class CInstanceConst_StructTest : public CInstanceConstBase<StructTest>
-			{
-				IInstanceMember* _a;
-
-			public: 
-				CInstanceConst_StructTest(const char* valueStr) : CInstanceConstBase<StructTest>(valueStr)
-				{
-					behaviac::vector<behaviac::string> paramStrs = behaviac::StringUtils::SplitTokensForStruct(valueStr);
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					_a = AgentMeta::TParseProperty<bool >(paramStrs[0].c_str());
-				}
-
-				~CInstanceConst_StructTest()
-				{
-					BEHAVIAC_DELETE _a;
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_a != NULL);
-
-					_value.a = *(bool*)_a->GetValue(self, behaviac::Meta::IsVector<bool >::Result, behaviac::GetClassTypeNumberId<bool >());
-				}
-			};
-
-			class CMethod_behaviac_Agent_VectorAdd : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-				IInstanceMember* _param1;
-
-			public: 
-				CMethod_behaviac_Agent_VectorAdd() : _param0(0) , _param1(0) 
-				{
-				}
-
-				CMethod_behaviac_Agent_VectorAdd(CMethod_behaviac_Agent_VectorAdd &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) , _param1(0) 
-				{
-				}
-
-				~CMethod_behaviac_Agent_VectorAdd()
-				{
-					BEHAVIAC_DELETE _param0;
-					BEHAVIAC_DELETE _param1;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_behaviac_Agent_VectorAdd(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 2);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<IList >(paramStrs[0].c_str());
-					_param1 = AgentMeta::TParseProperty<System::Object >(paramStrs[1].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-					BEHAVIAC_ASSERT(_param1 != NULL);
-
-					IList& pValue_param0 = *(IList*)_param0->GetValue(self, behaviac::Meta::IsVector<IList >::Result, behaviac::GetClassTypeNumberId<IList >());
-					System::Object& pValue_param1 = *(System::Object*)_param1->GetValue(self, behaviac::Meta::IsVector<System::Object >::Result, behaviac::GetClassTypeNumberId<System::Object >());
-					behaviac::Agent::VectorAdd(pValue_param0, pValue_param1);
-				}
-			};
-
-			class CMethod_behaviac_Agent_VectorClear : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_behaviac_Agent_VectorClear() : _param0(0) 
-				{
-				}
-
-				CMethod_behaviac_Agent_VectorClear(CMethod_behaviac_Agent_VectorClear &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_behaviac_Agent_VectorClear()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_behaviac_Agent_VectorClear(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<IList >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					IList& pValue_param0 = *(IList*)_param0->GetValue(self, behaviac::Meta::IsVector<IList >::Result, behaviac::GetClassTypeNumberId<IList >());
-					behaviac::Agent::VectorClear(pValue_param0);
-				}
-			};
-
-			class CMethod_behaviac_Agent_VectorContains : public CAgentMethodBase<bool>
-			{
-				IInstanceMember* _param0;
-				IInstanceMember* _param1;
-
-			public: 
-				CMethod_behaviac_Agent_VectorContains() : _param0(0) , _param1(0) 
-				{
-				}
-
-				CMethod_behaviac_Agent_VectorContains(CMethod_behaviac_Agent_VectorContains &rhs) : CAgentMethodBase<bool>(rhs) , _param0(0) , _param1(0) 
-				{
-				}
-
-				~CMethod_behaviac_Agent_VectorContains()
-				{
-					BEHAVIAC_DELETE _param0;
-					BEHAVIAC_DELETE _param1;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_behaviac_Agent_VectorContains(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 2);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<IList >(paramStrs[0].c_str());
-					_param1 = AgentMeta::TParseProperty<System::Object >(paramStrs[1].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-					BEHAVIAC_ASSERT(_param1 != NULL);
-
-					IList& pValue_param0 = *(IList*)_param0->GetValue(self, behaviac::Meta::IsVector<IList >::Result, behaviac::GetClassTypeNumberId<IList >());
-					System::Object& pValue_param1 = *(System::Object*)_param1->GetValue(self, behaviac::Meta::IsVector<System::Object >::Result, behaviac::GetClassTypeNumberId<System::Object >());
-					_returnValue->value = behaviac::Agent::VectorContains(pValue_param0, pValue_param1);
-				}
-			};
-
-			class CMethod_behaviac_Agent_VectorLength : public CAgentMethodBase<int>
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_behaviac_Agent_VectorLength() : _param0(0) 
-				{
-				}
-
-				CMethod_behaviac_Agent_VectorLength(CMethod_behaviac_Agent_VectorLength &rhs) : CAgentMethodBase<int>(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_behaviac_Agent_VectorLength()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_behaviac_Agent_VectorLength(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<IList >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					IList& pValue_param0 = *(IList*)_param0->GetValue(self, behaviac::Meta::IsVector<IList >::Result, behaviac::GetClassTypeNumberId<IList >());
-					_returnValue->value = behaviac::Agent::VectorLength(pValue_param0);
-				}
-			};
-
-			class CMethod_behaviac_Agent_VectorRemove : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-				IInstanceMember* _param1;
-
-			public: 
-				CMethod_behaviac_Agent_VectorRemove() : _param0(0) , _param1(0) 
-				{
-				}
-
-				CMethod_behaviac_Agent_VectorRemove(CMethod_behaviac_Agent_VectorRemove &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) , _param1(0) 
-				{
-				}
-
-				~CMethod_behaviac_Agent_VectorRemove()
-				{
-					BEHAVIAC_DELETE _param0;
-					BEHAVIAC_DELETE _param1;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_behaviac_Agent_VectorRemove(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 2);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<IList >(paramStrs[0].c_str());
-					_param1 = AgentMeta::TParseProperty<System::Object >(paramStrs[1].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-					BEHAVIAC_ASSERT(_param1 != NULL);
-
-					IList& pValue_param0 = *(IList*)_param0->GetValue(self, behaviac::Meta::IsVector<IList >::Result, behaviac::GetClassTypeNumberId<IList >());
-					System::Object& pValue_param1 = *(System::Object*)_param1->GetValue(self, behaviac::Meta::IsVector<System::Object >::Result, behaviac::GetClassTypeNumberId<System::Object >());
-					behaviac::Agent::VectorRemove(pValue_param0, pValue_param1);
-				}
-			};
-
-			class CMethod_ParTestAgentBase_Func_BooleanRef : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_ParTestAgentBase_Func_BooleanRef() : _param0(0) 
-				{
-				}
-
-				CMethod_ParTestAgentBase_Func_BooleanRef(CMethod_ParTestAgentBase_Func_BooleanRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_ParTestAgentBase_Func_BooleanRef()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_ParTestAgentBase_Func_BooleanRef(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<bool >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					bool& pValue_param0 = *(bool*)_param0->GetValue(self, behaviac::Meta::IsVector<bool >::Result, behaviac::GetClassTypeNumberId<bool >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					((ParTestAgentBase*)self)->_Execute_Method_<METHOD_TYPE_ParTestAgentBase_Func_BooleanRef, void, bool& >(pValue_param0);
-				}
-			};
-
-			class CMethod_ParTestAgentBase_Func_BooleanListRef : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_ParTestAgentBase_Func_BooleanListRef() : _param0(0) 
-				{
-				}
-
-				CMethod_ParTestAgentBase_Func_BooleanListRef(CMethod_ParTestAgentBase_Func_BooleanListRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_ParTestAgentBase_Func_BooleanListRef()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_ParTestAgentBase_Func_BooleanListRef(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<behaviac::vector<bool> >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					behaviac::vector<bool>& pValue_param0 = *(behaviac::vector<bool>*)_param0->GetValue(self, behaviac::Meta::IsVector<behaviac::vector<bool> >::Result, behaviac::GetClassTypeNumberId<behaviac::vector<bool> >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					((ParTestAgentBase*)self)->_Execute_Method_<METHOD_TYPE_ParTestAgentBase_Func_BooleanListRef, void, behaviac::vector<bool>& >(pValue_param0);
-				}
-			};
-
-			class CMethod_ParTestAgentBase_Func_ByteRef : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_ParTestAgentBase_Func_ByteRef() : _param0(0) 
-				{
-				}
-
-				CMethod_ParTestAgentBase_Func_ByteRef(CMethod_ParTestAgentBase_Func_ByteRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_ParTestAgentBase_Func_ByteRef()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_ParTestAgentBase_Func_ByteRef(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<unsigned char >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					unsigned char& pValue_param0 = *(unsigned char*)_param0->GetValue(self, behaviac::Meta::IsVector<unsigned char >::Result, behaviac::GetClassTypeNumberId<unsigned char >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					((ParTestAgentBase*)self)->_Execute_Method_<METHOD_TYPE_ParTestAgentBase_Func_ByteRef, void, unsigned char& >(pValue_param0);
-				}
-			};
-
-			class CMethod_ParTestAgentBase_Func_ByteListRef : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_ParTestAgentBase_Func_ByteListRef() : _param0(0) 
-				{
-				}
-
-				CMethod_ParTestAgentBase_Func_ByteListRef(CMethod_ParTestAgentBase_Func_ByteListRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_ParTestAgentBase_Func_ByteListRef()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_ParTestAgentBase_Func_ByteListRef(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<behaviac::vector<unsigned char> >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					behaviac::vector<unsigned char>& pValue_param0 = *(behaviac::vector<unsigned char>*)_param0->GetValue(self, behaviac::Meta::IsVector<behaviac::vector<unsigned char> >::Result, behaviac::GetClassTypeNumberId<behaviac::vector<unsigned char> >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					((ParTestAgentBase*)self)->_Execute_Method_<METHOD_TYPE_ParTestAgentBase_Func_ByteListRef, void, behaviac::vector<unsigned char>& >(pValue_param0);
-				}
-			};
-
-			class CMethod_ParTestAgentBase_Func_CharRef : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_ParTestAgentBase_Func_CharRef() : _param0(0) 
-				{
-				}
-
-				CMethod_ParTestAgentBase_Func_CharRef(CMethod_ParTestAgentBase_Func_CharRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_ParTestAgentBase_Func_CharRef()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_ParTestAgentBase_Func_CharRef(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<char >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					char& pValue_param0 = *(char*)_param0->GetValue(self, behaviac::Meta::IsVector<char >::Result, behaviac::GetClassTypeNumberId<char >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					((ParTestAgentBase*)self)->_Execute_Method_<METHOD_TYPE_ParTestAgentBase_Func_CharRef, void, char& >(pValue_param0);
-				}
-			};
-
-			class CMethod_ParTestAgentBase_Func_CharListRef : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_ParTestAgentBase_Func_CharListRef() : _param0(0) 
-				{
-				}
-
-				CMethod_ParTestAgentBase_Func_CharListRef(CMethod_ParTestAgentBase_Func_CharListRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_ParTestAgentBase_Func_CharListRef()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_ParTestAgentBase_Func_CharListRef(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<behaviac::vector<char> >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					behaviac::vector<char>& pValue_param0 = *(behaviac::vector<char>*)_param0->GetValue(self, behaviac::Meta::IsVector<behaviac::vector<char> >::Result, behaviac::GetClassTypeNumberId<behaviac::vector<char> >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					((ParTestAgentBase*)self)->_Execute_Method_<METHOD_TYPE_ParTestAgentBase_Func_CharListRef, void, behaviac::vector<char>& >(pValue_param0);
-				}
-			};
-
-			class CMethod_ParTestAgentBase_Func_eColorRef : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_ParTestAgentBase_Func_eColorRef() : _param0(0) 
-				{
-				}
-
-				CMethod_ParTestAgentBase_Func_eColorRef(CMethod_ParTestAgentBase_Func_eColorRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_ParTestAgentBase_Func_eColorRef()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_ParTestAgentBase_Func_eColorRef(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<TNS::NE::NAT::eColor >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					TNS::NE::NAT::eColor& pValue_param0 = *(TNS::NE::NAT::eColor*)_param0->GetValue(self, behaviac::Meta::IsVector<TNS::NE::NAT::eColor >::Result, behaviac::GetClassTypeNumberId<TNS::NE::NAT::eColor >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					((ParTestAgentBase*)self)->_Execute_Method_<METHOD_TYPE_ParTestAgentBase_Func_eColorRef, void, TNS::NE::NAT::eColor& >(pValue_param0);
-				}
-			};
-
-			class CMethod_ParTestAgentBase_Func_eColorListRef : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_ParTestAgentBase_Func_eColorListRef() : _param0(0) 
-				{
-				}
-
-				CMethod_ParTestAgentBase_Func_eColorListRef(CMethod_ParTestAgentBase_Func_eColorListRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_ParTestAgentBase_Func_eColorListRef()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_ParTestAgentBase_Func_eColorListRef(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<behaviac::vector<TNS::NE::NAT::eColor> >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					behaviac::vector<TNS::NE::NAT::eColor>& pValue_param0 = *(behaviac::vector<TNS::NE::NAT::eColor>*)_param0->GetValue(self, behaviac::Meta::IsVector<behaviac::vector<TNS::NE::NAT::eColor> >::Result, behaviac::GetClassTypeNumberId<behaviac::vector<TNS::NE::NAT::eColor> >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					((ParTestAgentBase*)self)->_Execute_Method_<METHOD_TYPE_ParTestAgentBase_Func_eColorListRef, void, behaviac::vector<TNS::NE::NAT::eColor>& >(pValue_param0);
-				}
-			};
-
-			class CMethod_ParTestAgentBase_Func_SByteRef : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_ParTestAgentBase_Func_SByteRef() : _param0(0) 
-				{
-				}
-
-				CMethod_ParTestAgentBase_Func_SByteRef(CMethod_ParTestAgentBase_Func_SByteRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_ParTestAgentBase_Func_SByteRef()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_ParTestAgentBase_Func_SByteRef(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<signed char >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					signed char& pValue_param0 = *(signed char*)_param0->GetValue(self, behaviac::Meta::IsVector<signed char >::Result, behaviac::GetClassTypeNumberId<signed char >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					((ParTestAgentBase*)self)->_Execute_Method_<METHOD_TYPE_ParTestAgentBase_Func_SByteRef, void, signed char& >(pValue_param0);
-				}
-			};
-
-			class CMethod_ParTestAgentBase_Func_SByteListRef : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_ParTestAgentBase_Func_SByteListRef() : _param0(0) 
-				{
-				}
-
-				CMethod_ParTestAgentBase_Func_SByteListRef(CMethod_ParTestAgentBase_Func_SByteListRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_ParTestAgentBase_Func_SByteListRef()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_ParTestAgentBase_Func_SByteListRef(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<behaviac::vector<signed char> >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					behaviac::vector<signed char>& pValue_param0 = *(behaviac::vector<signed char>*)_param0->GetValue(self, behaviac::Meta::IsVector<behaviac::vector<signed char> >::Result, behaviac::GetClassTypeNumberId<behaviac::vector<signed char> >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					((ParTestAgentBase*)self)->_Execute_Method_<METHOD_TYPE_ParTestAgentBase_Func_SByteListRef, void, behaviac::vector<signed char>& >(pValue_param0);
-				}
-			};
-
-			class CMethod_ParTestAgent_Func_kEmployeeIR : public CAgentMethodBase<TNS::ST::PER::WRK::kEmployee>
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_ParTestAgent_Func_kEmployeeIR() : _param0(0) 
-				{
-				}
-
-				CMethod_ParTestAgent_Func_kEmployeeIR(CMethod_ParTestAgent_Func_kEmployeeIR &rhs) : CAgentMethodBase<TNS::ST::PER::WRK::kEmployee>(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_ParTestAgent_Func_kEmployeeIR()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_ParTestAgent_Func_kEmployeeIR(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					if (behaviac::StringUtils::StartsWith(paramStrs[0].c_str(), "{"))
-					{
-						_param0 = BEHAVIAC_NEW CInstanceConst_TNS_ST_PER_WRK_kEmployee(paramStrs[0].c_str());
-					}
-					else
-					{
-						_param0 = AgentMeta::TParseProperty<TNS::ST::PER::WRK::kEmployee >(paramStrs[0].c_str());
-					}
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					_param0->run(self);
-					TNS::ST::PER::WRK::kEmployee& pValue_param0 = *(TNS::ST::PER::WRK::kEmployee*)_param0->GetValue(self, behaviac::Meta::IsVector<TNS::ST::PER::WRK::kEmployee >::Result, behaviac::GetClassTypeNumberId<TNS::ST::PER::WRK::kEmployee >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					_returnValue->value = ((ParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_ParTestAgent_Func_kEmployeeIR, TNS::ST::PER::WRK::kEmployee, TNS::ST::PER::WRK::kEmployee >(pValue_param0);
-				}
-			};
-
-			class CMethod_ParTestAgent_Func_kEmployeeSMF : public CAgentMethodBase<TNS::ST::PER::WRK::kEmployee>
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_ParTestAgent_Func_kEmployeeSMF() : _param0(0) 
-				{
-				}
-
-				CMethod_ParTestAgent_Func_kEmployeeSMF(CMethod_ParTestAgent_Func_kEmployeeSMF &rhs) : CAgentMethodBase<TNS::ST::PER::WRK::kEmployee>(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_ParTestAgent_Func_kEmployeeSMF()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_ParTestAgent_Func_kEmployeeSMF(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					if (behaviac::StringUtils::StartsWith(paramStrs[0].c_str(), "{"))
-					{
-						_param0 = BEHAVIAC_NEW CInstanceConst_TNS_ST_PER_WRK_kEmployee(paramStrs[0].c_str());
-					}
-					else
-					{
-						_param0 = AgentMeta::TParseProperty<TNS::ST::PER::WRK::kEmployee >(paramStrs[0].c_str());
-					}
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					_param0->run(self);
-					TNS::ST::PER::WRK::kEmployee& pValue_param0 = *(TNS::ST::PER::WRK::kEmployee*)_param0->GetValue(self, behaviac::Meta::IsVector<TNS::ST::PER::WRK::kEmployee >::Result, behaviac::GetClassTypeNumberId<TNS::ST::PER::WRK::kEmployee >());
-					_returnValue->value = ((ParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_ParTestAgent_Func_kEmployeeSMF, TNS::ST::PER::WRK::kEmployee, TNS::ST::PER::WRK::kEmployee >(pValue_param0);
-				}
-			};
-
-			class CMethod_ParTestAgent_Func_IntRef : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_ParTestAgent_Func_IntRef() : _param0(0) 
-				{
-				}
-
-				CMethod_ParTestAgent_Func_IntRef(CMethod_ParTestAgent_Func_IntRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_ParTestAgent_Func_IntRef()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_ParTestAgent_Func_IntRef(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<int >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					int& pValue_param0 = *(int*)_param0->GetValue(self, behaviac::Meta::IsVector<int >::Result, behaviac::GetClassTypeNumberId<int >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					((ParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_ParTestAgent_Func_IntRef, void, int& >(pValue_param0);
-				}
-			};
-
-			class CMethod_ParTestAgent_Func_IntListRef : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_ParTestAgent_Func_IntListRef() : _param0(0) 
-				{
-				}
-
-				CMethod_ParTestAgent_Func_IntListRef(CMethod_ParTestAgent_Func_IntListRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_ParTestAgent_Func_IntListRef()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_ParTestAgent_Func_IntListRef(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<behaviac::vector<int> >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					behaviac::vector<int>& pValue_param0 = *(behaviac::vector<int>*)_param0->GetValue(self, behaviac::Meta::IsVector<behaviac::vector<int> >::Result, behaviac::GetClassTypeNumberId<behaviac::vector<int> >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					((ParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_ParTestAgent_Func_IntListRef, void, behaviac::vector<int>& >(pValue_param0);
-				}
-			};
-
-			class CMethod_ParTestAgent_Func_kEmployeeRef : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_ParTestAgent_Func_kEmployeeRef() : _param0(0) 
-				{
-				}
-
-				CMethod_ParTestAgent_Func_kEmployeeRef(CMethod_ParTestAgent_Func_kEmployeeRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_ParTestAgent_Func_kEmployeeRef()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_ParTestAgent_Func_kEmployeeRef(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					if (behaviac::StringUtils::StartsWith(paramStrs[0].c_str(), "{"))
-					{
-						_param0 = BEHAVIAC_NEW CInstanceConst_TNS_ST_PER_WRK_kEmployee(paramStrs[0].c_str());
-					}
-					else
-					{
-						_param0 = AgentMeta::TParseProperty<TNS::ST::PER::WRK::kEmployee >(paramStrs[0].c_str());
-					}
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					_param0->run(self);
-					TNS::ST::PER::WRK::kEmployee& pValue_param0 = *(TNS::ST::PER::WRK::kEmployee*)_param0->GetValue(self, behaviac::Meta::IsVector<TNS::ST::PER::WRK::kEmployee >::Result, behaviac::GetClassTypeNumberId<TNS::ST::PER::WRK::kEmployee >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					((ParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_ParTestAgent_Func_kEmployeeRef, void, TNS::ST::PER::WRK::kEmployee& >(pValue_param0);
-				}
-			};
-
-			class CMethod_ParTestAgent_Func_kEmployeeListRef : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_ParTestAgent_Func_kEmployeeListRef() : _param0(0) 
-				{
-				}
-
-				CMethod_ParTestAgent_Func_kEmployeeListRef(CMethod_ParTestAgent_Func_kEmployeeListRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_ParTestAgent_Func_kEmployeeListRef()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_ParTestAgent_Func_kEmployeeListRef(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<behaviac::vector<TNS::ST::PER::WRK::kEmployee> >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					behaviac::vector<TNS::ST::PER::WRK::kEmployee>& pValue_param0 = *(behaviac::vector<TNS::ST::PER::WRK::kEmployee>*)_param0->GetValue(self, behaviac::Meta::IsVector<behaviac::vector<TNS::ST::PER::WRK::kEmployee> >::Result, behaviac::GetClassTypeNumberId<behaviac::vector<TNS::ST::PER::WRK::kEmployee> >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					((ParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_ParTestAgent_Func_kEmployeeListRef, void, behaviac::vector<TNS::ST::PER::WRK::kEmployee>& >(pValue_param0);
-				}
-			};
-
-			class CMethod_ParTestAgent_Func_LongRef : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_ParTestAgent_Func_LongRef() : _param0(0) 
-				{
-				}
-
-				CMethod_ParTestAgent_Func_LongRef(CMethod_ParTestAgent_Func_LongRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_ParTestAgent_Func_LongRef()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_ParTestAgent_Func_LongRef(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<long >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					long& pValue_param0 = *(long*)_param0->GetValue(self, behaviac::Meta::IsVector<long >::Result, behaviac::GetClassTypeNumberId<long >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					((ParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_ParTestAgent_Func_LongRef, void, long& >(pValue_param0);
-				}
-			};
-
-			class CMethod_ParTestAgent_Func_ShortRef : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_ParTestAgent_Func_ShortRef() : _param0(0) 
-				{
-				}
-
-				CMethod_ParTestAgent_Func_ShortRef(CMethod_ParTestAgent_Func_ShortRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_ParTestAgent_Func_ShortRef()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_ParTestAgent_Func_ShortRef(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<short >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					short& pValue_param0 = *(short*)_param0->GetValue(self, behaviac::Meta::IsVector<short >::Result, behaviac::GetClassTypeNumberId<short >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					((ParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_ParTestAgent_Func_ShortRef, void, short& >(pValue_param0);
-				}
-			};
-
-			class CMethod_ParTestAgent_Func_UShortRef : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_ParTestAgent_Func_UShortRef() : _param0(0) 
-				{
-				}
-
-				CMethod_ParTestAgent_Func_UShortRef(CMethod_ParTestAgent_Func_UShortRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_ParTestAgent_Func_UShortRef()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_ParTestAgent_Func_UShortRef(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<unsigned short >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					unsigned short& pValue_param0 = *(unsigned short*)_param0->GetValue(self, behaviac::Meta::IsVector<unsigned short >::Result, behaviac::GetClassTypeNumberId<unsigned short >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					((ParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_ParTestAgent_Func_UShortRef, void, unsigned short& >(pValue_param0);
-				}
-			};
-
-			class CMethod_AgentNodeTest_return_status : public CAgentMethodBase<behaviac::EBTStatus>
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_AgentNodeTest_return_status() : _param0(0) 
-				{
-				}
-
-				CMethod_AgentNodeTest_return_status(CMethod_AgentNodeTest_return_status &rhs) : CAgentMethodBase<behaviac::EBTStatus>(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_AgentNodeTest_return_status()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_AgentNodeTest_return_status(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					if (behaviac::StringUtils::StartsWith(paramStrs[0].c_str(), "{"))
-					{
-						_param0 = BEHAVIAC_NEW CInstanceConst_TestNS_Float2(paramStrs[0].c_str());
-					}
-					else
-					{
-						_param0 = AgentMeta::TParseProperty<TestNS::Float2 >(paramStrs[0].c_str());
-					}
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					_param0->run(self);
-					TestNS::Float2& pValue_param0 = *(TestNS::Float2*)_param0->GetValue(self, behaviac::Meta::IsVector<TestNS::Float2 >::Result, behaviac::GetClassTypeNumberId<TestNS::Float2 >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					_returnValue->value = ((AgentNodeTest*)self)->_Execute_Method_<METHOD_TYPE_AgentNodeTest_return_status, behaviac::EBTStatus, TestNS::Float2& >(pValue_param0);
-				}
-			};
-
-			class CMethod_AgentNodeTest_setEventVarAgent : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_AgentNodeTest_setEventVarAgent() : _param0(0) 
-				{
-				}
-
-				CMethod_AgentNodeTest_setEventVarAgent(CMethod_AgentNodeTest_setEventVarAgent &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_AgentNodeTest_setEventVarAgent()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_AgentNodeTest_setEventVarAgent(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<AgentNodeTest >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					AgentNodeTest*& pValue_param0 = *(AgentNodeTest**)_param0->GetValue(self, behaviac::Meta::IsVector<AgentNodeTest* >::Result, behaviac::GetClassTypeNumberId<AgentNodeTest* >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					((AgentNodeTest*)self)->_Execute_Method_<METHOD_TYPE_AgentNodeTest_setEventVarAgent, void, AgentNodeTest* >(pValue_param0);
-				}
-			};
-
-			class CMethod_AgentNodeTest_switchRef : public CAgentMethodBase<behaviac::EBTStatus>
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_AgentNodeTest_switchRef() : _param0(0) 
-				{
-				}
-
-				CMethod_AgentNodeTest_switchRef(CMethod_AgentNodeTest_switchRef &rhs) : CAgentMethodBase<behaviac::EBTStatus>(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_AgentNodeTest_switchRef()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_AgentNodeTest_switchRef(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<behaviac::string >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					behaviac::string& pValue_param0 = *(behaviac::string*)_param0->GetValue(self, behaviac::Meta::IsVector<behaviac::string >::Result, behaviac::GetClassTypeNumberId<behaviac::string >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					_returnValue->value = ((AgentNodeTest*)self)->_Execute_Method_<METHOD_TYPE_AgentNodeTest_switchRef, behaviac::EBTStatus, behaviac::string& >(pValue_param0);
-				}
-			};
-
-			class CMethod_AgentNodeTest_testExtendedRefType : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_AgentNodeTest_testExtendedRefType() : _param0(0) 
-				{
-				}
-
-				CMethod_AgentNodeTest_testExtendedRefType(CMethod_AgentNodeTest_testExtendedRefType &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_AgentNodeTest_testExtendedRefType()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_AgentNodeTest_testExtendedRefType(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<TestNS::Node >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					TestNS::Node*& pValue_param0 = *(TestNS::Node**)_param0->GetValue(self, behaviac::Meta::IsVector<TestNS::Node* >::Result, behaviac::GetClassTypeNumberId<TestNS::Node* >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					((AgentNodeTest*)self)->_Execute_Method_<METHOD_TYPE_AgentNodeTest_testExtendedRefType, void, TestNS::Node* >(pValue_param0);
-				}
-			};
-
-			class CMethod_AgentNodeTest_testExtendedStruct : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_AgentNodeTest_testExtendedStruct() : _param0(0) 
-				{
-				}
-
-				CMethod_AgentNodeTest_testExtendedStruct(CMethod_AgentNodeTest_testExtendedStruct &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_AgentNodeTest_testExtendedStruct()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_AgentNodeTest_testExtendedStruct(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					if (behaviac::StringUtils::StartsWith(paramStrs[0].c_str(), "{"))
-					{
-						_param0 = BEHAVIAC_NEW CInstanceConst_TestNS_Float2(paramStrs[0].c_str());
-					}
-					else
-					{
-						_param0 = AgentMeta::TParseProperty<TestNS::Float2 >(paramStrs[0].c_str());
-					}
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					_param0->run(self);
-					TestNS::Float2& pValue_param0 = *(TestNS::Float2*)_param0->GetValue(self, behaviac::Meta::IsVector<TestNS::Float2 >::Result, behaviac::GetClassTypeNumberId<TestNS::Float2 >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					((AgentNodeTest*)self)->_Execute_Method_<METHOD_TYPE_AgentNodeTest_testExtendedStruct, void, TestNS::Float2& >(pValue_param0);
-				}
-			};
-
-			class CMethod_AgentNodeTest_TestFuncD : public CAgentMethodBase<behaviac::EBTStatus>
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_AgentNodeTest_TestFuncD() : _param0(0) 
-				{
-				}
-
-				CMethod_AgentNodeTest_TestFuncD(CMethod_AgentNodeTest_TestFuncD &rhs) : CAgentMethodBase<behaviac::EBTStatus>(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_AgentNodeTest_TestFuncD()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_AgentNodeTest_TestFuncD(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<TestClassA >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					TestClassA*& pValue_param0 = *(TestClassA**)_param0->GetValue(self, behaviac::Meta::IsVector<TestClassA* >::Result, behaviac::GetClassTypeNumberId<TestClassA* >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					_returnValue->value = ((AgentNodeTest*)self)->_Execute_Method_<METHOD_TYPE_AgentNodeTest_TestFuncD, behaviac::EBTStatus, TestClassA* >(pValue_param0);
-				}
-			};
-
-			class CMethod_AgentNodeTest_testGameObject : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_AgentNodeTest_testGameObject() : _param0(0) 
-				{
-				}
-
-				CMethod_AgentNodeTest_testGameObject(CMethod_AgentNodeTest_testGameObject &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_AgentNodeTest_testGameObject()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_AgentNodeTest_testGameObject(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<UnityEngine::GameObject >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					UnityEngine::GameObject*& pValue_param0 = *(UnityEngine::GameObject**)_param0->GetValue(self, behaviac::Meta::IsVector<UnityEngine::GameObject* >::Result, behaviac::GetClassTypeNumberId<UnityEngine::GameObject* >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					((AgentNodeTest*)self)->_Execute_Method_<METHOD_TYPE_AgentNodeTest_testGameObject, void, UnityEngine::GameObject* >(pValue_param0);
-				}
-			};
-
-			class CMethod_AgentNodeTest_testVectorStruct : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_AgentNodeTest_testVectorStruct() : _param0(0) 
-				{
-				}
-
-				CMethod_AgentNodeTest_testVectorStruct(CMethod_AgentNodeTest_testVectorStruct &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_AgentNodeTest_testVectorStruct()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_AgentNodeTest_testVectorStruct(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<behaviac::vector<TestNS::Float2> >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					behaviac::vector<TestNS::Float2>& pValue_param0 = *(behaviac::vector<TestNS::Float2>*)_param0->GetValue(self, behaviac::Meta::IsVector<behaviac::vector<TestNS::Float2> >::Result, behaviac::GetClassTypeNumberId<behaviac::vector<TestNS::Float2> >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					((AgentNodeTest*)self)->_Execute_Method_<METHOD_TYPE_AgentNodeTest_testVectorStruct, void, behaviac::vector<TestNS::Float2>& >(pValue_param0);
-				}
-			};
-
-			class CMethod_AgentNodeTest_transitPlanTactics : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-				IInstanceMember* _param1;
-				IInstanceMember* _param2;
-
-			public: 
-				CMethod_AgentNodeTest_transitPlanTactics() : _param0(0) , _param1(0) , _param2(0) 
-				{
-				}
-
-				CMethod_AgentNodeTest_transitPlanTactics(CMethod_AgentNodeTest_transitPlanTactics &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) , _param1(0) , _param2(0) 
-				{
-				}
-
-				~CMethod_AgentNodeTest_transitPlanTactics()
-				{
-					BEHAVIAC_DELETE _param0;
-					BEHAVIAC_DELETE _param1;
-					BEHAVIAC_DELETE _param2;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_AgentNodeTest_transitPlanTactics(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 3);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					if (behaviac::StringUtils::StartsWith(paramStrs[0].c_str(), "{"))
-					{
-						_param0 = BEHAVIAC_NEW CInstanceConst_BSASN_TransitPlan(paramStrs[0].c_str());
-					}
-					else
-					{
-						_param0 = AgentMeta::TParseProperty<BSASN::TransitPlan >(paramStrs[0].c_str());
-					}
-					_param1 = AgentMeta::TParseProperty<EnumTest >(paramStrs[1].c_str());
-					_param2 = AgentMeta::TParseProperty<behaviac::string >(paramStrs[2].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-					BEHAVIAC_ASSERT(_param1 != NULL);
-					BEHAVIAC_ASSERT(_param2 != NULL);
-
-					_param0->run(self);
-					BSASN::TransitPlan& pValue_param0 = *(BSASN::TransitPlan*)_param0->GetValue(self, behaviac::Meta::IsVector<BSASN::TransitPlan >::Result, behaviac::GetClassTypeNumberId<BSASN::TransitPlan >());
-					EnumTest& pValue_param1 = *(EnumTest*)_param1->GetValue(self, behaviac::Meta::IsVector<EnumTest >::Result, behaviac::GetClassTypeNumberId<EnumTest >());
-					behaviac::string& pValue_param2 = *(behaviac::string*)_param2->GetValue(self, behaviac::Meta::IsVector<behaviac::string >::Result, behaviac::GetClassTypeNumberId<behaviac::string >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					((AgentNodeTest*)self)->_Execute_Method_<METHOD_TYPE_AgentNodeTest_transitPlanTactics, void, BSASN::TransitPlan, EnumTest, behaviac::string& >(pValue_param0, pValue_param1, pValue_param2);
-				}
-			};
-
-			class CMethod_CustomPropertyAgent_FnWithOutParam : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_CustomPropertyAgent_FnWithOutParam() : _param0(0) 
-				{
-				}
-
-				CMethod_CustomPropertyAgent_FnWithOutParam(CMethod_CustomPropertyAgent_FnWithOutParam &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_CustomPropertyAgent_FnWithOutParam()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_CustomPropertyAgent_FnWithOutParam(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<int >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					int& pValue_param0 = *(int*)_param0->GetValue(self, behaviac::Meta::IsVector<int >::Result, behaviac::GetClassTypeNumberId<int >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					((CustomPropertyAgent*)self)->_Execute_Method_<METHOD_TYPE_CustomPropertyAgent_FnWithOutParam, void, int& >(pValue_param0);
-				}
-			};
-
-			class CMethod_CustomPropertyAgent_TestFn1 : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_CustomPropertyAgent_TestFn1() : _param0(0) 
-				{
-				}
-
-				CMethod_CustomPropertyAgent_TestFn1(CMethod_CustomPropertyAgent_TestFn1 &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_CustomPropertyAgent_TestFn1()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_CustomPropertyAgent_TestFn1(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					if (behaviac::StringUtils::StartsWith(paramStrs[0].c_str(), "{"))
-					{
-						_param0 = BEHAVIAC_NEW CInstanceConst_TestNamespace_Float2(paramStrs[0].c_str());
-					}
-					else
-					{
-						_param0 = AgentMeta::TParseProperty<TestNamespace::Float2 >(paramStrs[0].c_str());
-					}
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					_param0->run(self);
-					TestNamespace::Float2& pValue_param0 = *(TestNamespace::Float2*)_param0->GetValue(self, behaviac::Meta::IsVector<TestNamespace::Float2 >::Result, behaviac::GetClassTypeNumberId<TestNamespace::Float2 >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					((CustomPropertyAgent*)self)->_Execute_Method_<METHOD_TYPE_CustomPropertyAgent_TestFn1, void, TestNamespace::Float2& >(pValue_param0);
-				}
-			};
-
-			class CMethod_CustomPropertyAgent_TestFn2 : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_CustomPropertyAgent_TestFn2() : _param0(0) 
-				{
-				}
-
-				CMethod_CustomPropertyAgent_TestFn2(CMethod_CustomPropertyAgent_TestFn2 &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_CustomPropertyAgent_TestFn2()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_CustomPropertyAgent_TestFn2(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					if (behaviac::StringUtils::StartsWith(paramStrs[0].c_str(), "{"))
-					{
-						_param0 = BEHAVIAC_NEW CInstanceConst_TestNamespace_ClassAsValueType(paramStrs[0].c_str());
-					}
-					else
-					{
-						_param0 = AgentMeta::TParseProperty<TestNamespace::ClassAsValueType* >(paramStrs[0].c_str());
-					}
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					_param0->run(self);
-					TestNamespace::ClassAsValueType*& pValue_param0 = *(TestNamespace::ClassAsValueType**)_param0->GetValue(self, behaviac::Meta::IsVector<TestNamespace::ClassAsValueType* >::Result, behaviac::GetClassTypeNumberId<TestNamespace::ClassAsValueType* >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					((CustomPropertyAgent*)self)->_Execute_Method_<METHOD_TYPE_CustomPropertyAgent_TestFn2, void, TestNamespace::ClassAsValueType* >(pValue_param0);
-				}
-			};
-
-			class CMethod_EmployeeParTestAgent_Func_AgentIR : public CAgentMethodBase<behaviac::Agent*>
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_EmployeeParTestAgent_Func_AgentIR() : _param0(0) 
-				{
-				}
-
-				CMethod_EmployeeParTestAgent_Func_AgentIR(CMethod_EmployeeParTestAgent_Func_AgentIR &rhs) : CAgentMethodBase<behaviac::Agent*>(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_EmployeeParTestAgent_Func_AgentIR()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_EmployeeParTestAgent_Func_AgentIR(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<behaviac::Agent >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					behaviac::Agent*& pValue_param0 = *(behaviac::Agent**)_param0->GetValue(self, behaviac::Meta::IsVector<behaviac::Agent* >::Result, behaviac::GetClassTypeNumberId<behaviac::Agent* >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					_returnValue->value = ((EmployeeParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_EmployeeParTestAgent_Func_AgentIR, behaviac::Agent*, behaviac::Agent* >(pValue_param0);
-				}
-			};
-
-			class CMethod_EmployeeParTestAgent_Func_ParTestAgentBaseIR : public CAgentMethodBase<ParTestAgentBase*>
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_EmployeeParTestAgent_Func_ParTestAgentBaseIR() : _param0(0) 
-				{
-				}
-
-				CMethod_EmployeeParTestAgent_Func_ParTestAgentBaseIR(CMethod_EmployeeParTestAgent_Func_ParTestAgentBaseIR &rhs) : CAgentMethodBase<ParTestAgentBase*>(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_EmployeeParTestAgent_Func_ParTestAgentBaseIR()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_EmployeeParTestAgent_Func_ParTestAgentBaseIR(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<ParTestAgentBase >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					ParTestAgentBase*& pValue_param0 = *(ParTestAgentBase**)_param0->GetValue(self, behaviac::Meta::IsVector<ParTestAgentBase* >::Result, behaviac::GetClassTypeNumberId<ParTestAgentBase* >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					_returnValue->value = ((EmployeeParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_EmployeeParTestAgent_Func_ParTestAgentBaseIR, ParTestAgentBase*, ParTestAgentBase* >(pValue_param0);
-				}
-			};
-
-			class CMethod_EmployeeParTestAgent_Func_StringIR : public CAgentMethodBase<behaviac::string>
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_EmployeeParTestAgent_Func_StringIR() : _param0(0) 
-				{
-				}
-
-				CMethod_EmployeeParTestAgent_Func_StringIR(CMethod_EmployeeParTestAgent_Func_StringIR &rhs) : CAgentMethodBase<behaviac::string>(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_EmployeeParTestAgent_Func_StringIR()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_EmployeeParTestAgent_Func_StringIR(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<behaviac::string >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					behaviac::string& pValue_param0 = *(behaviac::string*)_param0->GetValue(self, behaviac::Meta::IsVector<behaviac::string >::Result, behaviac::GetClassTypeNumberId<behaviac::string >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					_returnValue->value = ((EmployeeParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_EmployeeParTestAgent_Func_StringIR, behaviac::string, behaviac::string& >(pValue_param0);
-				}
-			};
-
-			class CMethod_EmployeeParTestAgent_Func_AgentSMF : public CAgentMethodBase<behaviac::Agent*>
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_EmployeeParTestAgent_Func_AgentSMF() : _param0(0) 
-				{
-				}
-
-				CMethod_EmployeeParTestAgent_Func_AgentSMF(CMethod_EmployeeParTestAgent_Func_AgentSMF &rhs) : CAgentMethodBase<behaviac::Agent*>(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_EmployeeParTestAgent_Func_AgentSMF()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_EmployeeParTestAgent_Func_AgentSMF(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<behaviac::Agent >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					behaviac::Agent*& pValue_param0 = *(behaviac::Agent**)_param0->GetValue(self, behaviac::Meta::IsVector<behaviac::Agent* >::Result, behaviac::GetClassTypeNumberId<behaviac::Agent* >());
-					_returnValue->value = ((EmployeeParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_EmployeeParTestAgent_Func_AgentSMF, behaviac::Agent*, behaviac::Agent* >(pValue_param0);
-				}
-			};
-
-			class CMethod_EmployeeParTestAgent_Func_StringSMF : public CAgentMethodBase<behaviac::string>
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_EmployeeParTestAgent_Func_StringSMF() : _param0(0) 
-				{
-				}
-
-				CMethod_EmployeeParTestAgent_Func_StringSMF(CMethod_EmployeeParTestAgent_Func_StringSMF &rhs) : CAgentMethodBase<behaviac::string>(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_EmployeeParTestAgent_Func_StringSMF()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_EmployeeParTestAgent_Func_StringSMF(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<behaviac::string >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					behaviac::string& pValue_param0 = *(behaviac::string*)_param0->GetValue(self, behaviac::Meta::IsVector<behaviac::string >::Result, behaviac::GetClassTypeNumberId<behaviac::string >());
-					_returnValue->value = ((EmployeeParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_EmployeeParTestAgent_Func_StringSMF, behaviac::string, behaviac::string& >(pValue_param0);
-				}
-			};
-
-			class CMethod_EmployeeParTestAgent_Func_AgentListRef : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_EmployeeParTestAgent_Func_AgentListRef() : _param0(0) 
-				{
-				}
-
-				CMethod_EmployeeParTestAgent_Func_AgentListRef(CMethod_EmployeeParTestAgent_Func_AgentListRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_EmployeeParTestAgent_Func_AgentListRef()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_EmployeeParTestAgent_Func_AgentListRef(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<behaviac::vector<behaviac::Agent*> >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					behaviac::vector<behaviac::Agent*>& pValue_param0 = *(behaviac::vector<behaviac::Agent*>*)_param0->GetValue(self, behaviac::Meta::IsVector<behaviac::vector<behaviac::Agent*> >::Result, behaviac::GetClassTypeNumberId<behaviac::vector<behaviac::Agent*> >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					((EmployeeParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_EmployeeParTestAgent_Func_AgentListRef, void, behaviac::vector<behaviac::Agent*>& >(pValue_param0);
-				}
-			};
-
-			class CMethod_EmployeeParTestAgent_Func_AgentRef : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_EmployeeParTestAgent_Func_AgentRef() : _param0(0) 
-				{
-				}
-
-				CMethod_EmployeeParTestAgent_Func_AgentRef(CMethod_EmployeeParTestAgent_Func_AgentRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_EmployeeParTestAgent_Func_AgentRef()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_EmployeeParTestAgent_Func_AgentRef(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<behaviac::Agent* >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					behaviac::Agent*& pValue_param0 = *(behaviac::Agent**)_param0->GetValue(self, behaviac::Meta::IsVector<behaviac::Agent* >::Result, behaviac::GetClassTypeNumberId<behaviac::Agent* >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					((EmployeeParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_EmployeeParTestAgent_Func_AgentRef, void, behaviac::Agent*& >(pValue_param0);
-				}
-			};
-
-			class CMethod_EmployeeParTestAgent_Func_DoubleRef : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_EmployeeParTestAgent_Func_DoubleRef() : _param0(0) 
-				{
-				}
-
-				CMethod_EmployeeParTestAgent_Func_DoubleRef(CMethod_EmployeeParTestAgent_Func_DoubleRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_EmployeeParTestAgent_Func_DoubleRef()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_EmployeeParTestAgent_Func_DoubleRef(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<double >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					double& pValue_param0 = *(double*)_param0->GetValue(self, behaviac::Meta::IsVector<double >::Result, behaviac::GetClassTypeNumberId<double >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					((EmployeeParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_EmployeeParTestAgent_Func_DoubleRef, void, double& >(pValue_param0);
-				}
-			};
-
-			class CMethod_EmployeeParTestAgent_Func_LongLongRef : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_EmployeeParTestAgent_Func_LongLongRef() : _param0(0) 
-				{
-				}
-
-				CMethod_EmployeeParTestAgent_Func_LongLongRef(CMethod_EmployeeParTestAgent_Func_LongLongRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_EmployeeParTestAgent_Func_LongLongRef()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_EmployeeParTestAgent_Func_LongLongRef(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<long long >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					long long& pValue_param0 = *(long long*)_param0->GetValue(self, behaviac::Meta::IsVector<long long >::Result, behaviac::GetClassTypeNumberId<long long >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					((EmployeeParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_EmployeeParTestAgent_Func_LongLongRef, void, long long& >(pValue_param0);
-				}
-			};
-
-			class CMethod_EmployeeParTestAgent_Func_SingleListRef : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_EmployeeParTestAgent_Func_SingleListRef() : _param0(0) 
-				{
-				}
-
-				CMethod_EmployeeParTestAgent_Func_SingleListRef(CMethod_EmployeeParTestAgent_Func_SingleListRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_EmployeeParTestAgent_Func_SingleListRef()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_EmployeeParTestAgent_Func_SingleListRef(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<behaviac::vector<float> >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					behaviac::vector<float>& pValue_param0 = *(behaviac::vector<float>*)_param0->GetValue(self, behaviac::Meta::IsVector<behaviac::vector<float> >::Result, behaviac::GetClassTypeNumberId<behaviac::vector<float> >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					((EmployeeParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_EmployeeParTestAgent_Func_SingleListRef, void, behaviac::vector<float>& >(pValue_param0);
-				}
-			};
-
-			class CMethod_EmployeeParTestAgent_Func_SingleRef : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_EmployeeParTestAgent_Func_SingleRef() : _param0(0) 
-				{
-				}
-
-				CMethod_EmployeeParTestAgent_Func_SingleRef(CMethod_EmployeeParTestAgent_Func_SingleRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_EmployeeParTestAgent_Func_SingleRef()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_EmployeeParTestAgent_Func_SingleRef(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<float >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					float& pValue_param0 = *(float*)_param0->GetValue(self, behaviac::Meta::IsVector<float >::Result, behaviac::GetClassTypeNumberId<float >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					((EmployeeParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_EmployeeParTestAgent_Func_SingleRef, void, float& >(pValue_param0);
-				}
-			};
-
-			class CMethod_EmployeeParTestAgent_Func_StringListRef : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_EmployeeParTestAgent_Func_StringListRef() : _param0(0) 
-				{
-				}
-
-				CMethod_EmployeeParTestAgent_Func_StringListRef(CMethod_EmployeeParTestAgent_Func_StringListRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_EmployeeParTestAgent_Func_StringListRef()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_EmployeeParTestAgent_Func_StringListRef(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<behaviac::vector<behaviac::string> >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					behaviac::vector<behaviac::string>& pValue_param0 = *(behaviac::vector<behaviac::string>*)_param0->GetValue(self, behaviac::Meta::IsVector<behaviac::vector<behaviac::string> >::Result, behaviac::GetClassTypeNumberId<behaviac::vector<behaviac::string> >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					((EmployeeParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_EmployeeParTestAgent_Func_StringListRef, void, behaviac::vector<behaviac::string>& >(pValue_param0);
-				}
-			};
-
-			class CMethod_EmployeeParTestAgent_Func_StringRef : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_EmployeeParTestAgent_Func_StringRef() : _param0(0) 
-				{
-				}
-
-				CMethod_EmployeeParTestAgent_Func_StringRef(CMethod_EmployeeParTestAgent_Func_StringRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_EmployeeParTestAgent_Func_StringRef()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_EmployeeParTestAgent_Func_StringRef(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<behaviac::string >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					behaviac::string& pValue_param0 = *(behaviac::string*)_param0->GetValue(self, behaviac::Meta::IsVector<behaviac::string >::Result, behaviac::GetClassTypeNumberId<behaviac::string >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					((EmployeeParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_EmployeeParTestAgent_Func_StringRef, void, behaviac::string& >(pValue_param0);
-				}
-			};
-
-			class CMethod_EmployeeParTestAgent_Func_SzStringRef : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_EmployeeParTestAgent_Func_SzStringRef() : _param0(0) 
-				{
-				}
-
-				CMethod_EmployeeParTestAgent_Func_SzStringRef(CMethod_EmployeeParTestAgent_Func_SzStringRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_EmployeeParTestAgent_Func_SzStringRef()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_EmployeeParTestAgent_Func_SzStringRef(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<char* >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					char* pValue_param0 = (char*)_param0->GetValue(self, behaviac::Meta::IsVector<char* >::Result, behaviac::GetClassTypeNumberId<char* >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					((EmployeeParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_EmployeeParTestAgent_Func_SzStringRef, void, char*& >(pValue_param0);
-				}
-			};
-
-			class CMethod_EmployeeParTestAgent_Func_UIntRef : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_EmployeeParTestAgent_Func_UIntRef() : _param0(0) 
-				{
-				}
-
-				CMethod_EmployeeParTestAgent_Func_UIntRef(CMethod_EmployeeParTestAgent_Func_UIntRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_EmployeeParTestAgent_Func_UIntRef()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_EmployeeParTestAgent_Func_UIntRef(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<unsigned int >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					unsigned int& pValue_param0 = *(unsigned int*)_param0->GetValue(self, behaviac::Meta::IsVector<unsigned int >::Result, behaviac::GetClassTypeNumberId<unsigned int >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					((EmployeeParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_EmployeeParTestAgent_Func_UIntRef, void, unsigned int& >(pValue_param0);
-				}
-			};
-
-			class CMethod_EmployeeParTestAgent_Func_ULongLongRef : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_EmployeeParTestAgent_Func_ULongLongRef() : _param0(0) 
-				{
-				}
-
-				CMethod_EmployeeParTestAgent_Func_ULongLongRef(CMethod_EmployeeParTestAgent_Func_ULongLongRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_EmployeeParTestAgent_Func_ULongLongRef()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_EmployeeParTestAgent_Func_ULongLongRef(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<unsigned long long >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					unsigned long long& pValue_param0 = *(unsigned long long*)_param0->GetValue(self, behaviac::Meta::IsVector<unsigned long long >::Result, behaviac::GetClassTypeNumberId<unsigned long long >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					((EmployeeParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_EmployeeParTestAgent_Func_ULongLongRef, void, unsigned long long& >(pValue_param0);
-				}
-			};
-
-			class CMethod_EmployeeParTestAgent_Func_ULongRef : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_EmployeeParTestAgent_Func_ULongRef() : _param0(0) 
-				{
-				}
-
-				CMethod_EmployeeParTestAgent_Func_ULongRef(CMethod_EmployeeParTestAgent_Func_ULongRef &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_EmployeeParTestAgent_Func_ULongRef()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_EmployeeParTestAgent_Func_ULongRef(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<unsigned long >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					unsigned long& pValue_param0 = *(unsigned long*)_param0->GetValue(self, behaviac::Meta::IsVector<unsigned long >::Result, behaviac::GetClassTypeNumberId<unsigned long >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					((EmployeeParTestAgent*)self)->_Execute_Method_<METHOD_TYPE_EmployeeParTestAgent_Func_ULongRef, void, unsigned long& >(pValue_param0);
-				}
-			};
-
-			class CMethod_HTNAgentTravel_exist_airport : public CAgentMethodBase<bool>
-			{
-				IInstanceMember* _param0;
-				IInstanceMember* _param1;
-
-			public: 
-				CMethod_HTNAgentTravel_exist_airport() : _param0(0) , _param1(0) 
-				{
-				}
-
-				CMethod_HTNAgentTravel_exist_airport(CMethod_HTNAgentTravel_exist_airport &rhs) : CAgentMethodBase<bool>(rhs) , _param0(0) , _param1(0) 
-				{
-				}
-
-				~CMethod_HTNAgentTravel_exist_airport()
-				{
-					BEHAVIAC_DELETE _param0;
-					BEHAVIAC_DELETE _param1;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_HTNAgentTravel_exist_airport(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 2);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<int >(paramStrs[0].c_str());
-					_param1 = AgentMeta::TParseProperty<int >(paramStrs[1].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-					BEHAVIAC_ASSERT(_param1 != NULL);
-
-					int& pValue_param0 = *(int*)_param0->GetValue(self, behaviac::Meta::IsVector<int >::Result, behaviac::GetClassTypeNumberId<int >());
-					int& pValue_param1 = *(int*)_param1->GetValue(self, behaviac::Meta::IsVector<int >::Result, behaviac::GetClassTypeNumberId<int >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					_returnValue->value = ((HTNAgentTravel*)self)->_Execute_Method_<METHOD_TYPE_HTNAgentTravel_exist_airport, bool, int, int& >(pValue_param0, pValue_param1);
-				}
-			};
-
-			class CMethod_HTNAgentTravel_exist_airports : public CAgentMethodBase<bool>
-			{
-				IInstanceMember* _param0;
-				IInstanceMember* _param1;
-
-			public: 
-				CMethod_HTNAgentTravel_exist_airports() : _param0(0) , _param1(0) 
-				{
-				}
-
-				CMethod_HTNAgentTravel_exist_airports(CMethod_HTNAgentTravel_exist_airports &rhs) : CAgentMethodBase<bool>(rhs) , _param0(0) , _param1(0) 
-				{
-				}
-
-				~CMethod_HTNAgentTravel_exist_airports()
-				{
-					BEHAVIAC_DELETE _param0;
-					BEHAVIAC_DELETE _param1;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_HTNAgentTravel_exist_airports(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 2);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<int >(paramStrs[0].c_str());
-					_param1 = AgentMeta::TParseProperty<behaviac::vector<int> >(paramStrs[1].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-					BEHAVIAC_ASSERT(_param1 != NULL);
-
-					int& pValue_param0 = *(int*)_param0->GetValue(self, behaviac::Meta::IsVector<int >::Result, behaviac::GetClassTypeNumberId<int >());
-					behaviac::vector<int>& pValue_param1 = *(behaviac::vector<int>*)_param1->GetValue(self, behaviac::Meta::IsVector<behaviac::vector<int> >::Result, behaviac::GetClassTypeNumberId<behaviac::vector<int> >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					_returnValue->value = ((HTNAgentTravel*)self)->_Execute_Method_<METHOD_TYPE_HTNAgentTravel_exist_airports, bool, int, behaviac::vector<int>& >(pValue_param0, pValue_param1);
-				}
-			};
-
-			class CMethod_HTNAgentTravel_exist_finish : public CAgentMethodBase<bool>
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_HTNAgentTravel_exist_finish() : _param0(0) 
-				{
-				}
-
-				CMethod_HTNAgentTravel_exist_finish(CMethod_HTNAgentTravel_exist_finish &rhs) : CAgentMethodBase<bool>(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_HTNAgentTravel_exist_finish()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_HTNAgentTravel_exist_finish(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<int >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					int& pValue_param0 = *(int*)_param0->GetValue(self, behaviac::Meta::IsVector<int >::Result, behaviac::GetClassTypeNumberId<int >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					_returnValue->value = ((HTNAgentTravel*)self)->_Execute_Method_<METHOD_TYPE_HTNAgentTravel_exist_finish, bool, int& >(pValue_param0);
-				}
-			};
-
-			class CMethod_HTNAgentTravel_exist_start : public CAgentMethodBase<bool>
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_HTNAgentTravel_exist_start() : _param0(0) 
-				{
-				}
-
-				CMethod_HTNAgentTravel_exist_start(CMethod_HTNAgentTravel_exist_start &rhs) : CAgentMethodBase<bool>(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_HTNAgentTravel_exist_start()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_HTNAgentTravel_exist_start(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<int >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					int& pValue_param0 = *(int*)_param0->GetValue(self, behaviac::Meta::IsVector<int >::Result, behaviac::GetClassTypeNumberId<int >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					_returnValue->value = ((HTNAgentTravel*)self)->_Execute_Method_<METHOD_TYPE_HTNAgentTravel_exist_start, bool, int& >(pValue_param0);
-				}
-			};
-
-			class CMethod_ParTestRegNameAgent_Func_AgentIR : public CAgentMethodBase<behaviac::Agent*>
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_ParTestRegNameAgent_Func_AgentIR() : _param0(0) 
-				{
-				}
-
-				CMethod_ParTestRegNameAgent_Func_AgentIR(CMethod_ParTestRegNameAgent_Func_AgentIR &rhs) : CAgentMethodBase<behaviac::Agent*>(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_ParTestRegNameAgent_Func_AgentIR()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_ParTestRegNameAgent_Func_AgentIR(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<behaviac::Agent >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					behaviac::Agent*& pValue_param0 = *(behaviac::Agent**)_param0->GetValue(self, behaviac::Meta::IsVector<behaviac::Agent* >::Result, behaviac::GetClassTypeNumberId<behaviac::Agent* >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					_returnValue->value = ((ParTestRegNameAgent*)self)->_Execute_Method_<METHOD_TYPE_ParTestRegNameAgent_Func_AgentIR, behaviac::Agent*, behaviac::Agent* >(pValue_param0);
-				}
-			};
-
-			class CMethod_ParTestRegNameAgent_Func_kEmployeeIR : public CAgentMethodBase<TNS::ST::PER::WRK::kEmployee>
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_ParTestRegNameAgent_Func_kEmployeeIR() : _param0(0) 
-				{
-				}
-
-				CMethod_ParTestRegNameAgent_Func_kEmployeeIR(CMethod_ParTestRegNameAgent_Func_kEmployeeIR &rhs) : CAgentMethodBase<TNS::ST::PER::WRK::kEmployee>(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_ParTestRegNameAgent_Func_kEmployeeIR()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_ParTestRegNameAgent_Func_kEmployeeIR(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					if (behaviac::StringUtils::StartsWith(paramStrs[0].c_str(), "{"))
-					{
-						_param0 = BEHAVIAC_NEW CInstanceConst_TNS_ST_PER_WRK_kEmployee(paramStrs[0].c_str());
-					}
-					else
-					{
-						_param0 = AgentMeta::TParseProperty<TNS::ST::PER::WRK::kEmployee >(paramStrs[0].c_str());
-					}
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					_param0->run(self);
-					TNS::ST::PER::WRK::kEmployee& pValue_param0 = *(TNS::ST::PER::WRK::kEmployee*)_param0->GetValue(self, behaviac::Meta::IsVector<TNS::ST::PER::WRK::kEmployee >::Result, behaviac::GetClassTypeNumberId<TNS::ST::PER::WRK::kEmployee >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					_returnValue->value = ((ParTestRegNameAgent*)self)->_Execute_Method_<METHOD_TYPE_ParTestRegNameAgent_Func_kEmployeeIR, TNS::ST::PER::WRK::kEmployee, TNS::ST::PER::WRK::kEmployee >(pValue_param0);
-				}
-			};
-
-			class CMethod_PropertyReadonlyAgent_FnWithOutParam : public CAgentMethodVoidBase
-			{
-				IInstanceMember* _param0;
-
-			public: 
-				CMethod_PropertyReadonlyAgent_FnWithOutParam() : _param0(0) 
-				{
-				}
-
-				CMethod_PropertyReadonlyAgent_FnWithOutParam(CMethod_PropertyReadonlyAgent_FnWithOutParam &rhs) : CAgentMethodVoidBase(rhs) , _param0(0) 
-				{
-				}
-
-				~CMethod_PropertyReadonlyAgent_FnWithOutParam()
-				{
-					BEHAVIAC_DELETE _param0;
-				}
-
-				virtual IInstanceMember* clone()
-				{
-					return BEHAVIAC_NEW CMethod_PropertyReadonlyAgent_FnWithOutParam(*this);
-				}
-
-				virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs)
-				{
-					BEHAVIAC_ASSERT(paramStrs.size() == 1);
-
-					behaviac::StringUtils::StringCopySafe(kInstanceNameMax, _instance, instance);
-					_param0 = AgentMeta::TParseProperty<int >(paramStrs[0].c_str());
-				}
-
-				virtual void run(Agent* self)
-				{
-					BEHAVIAC_ASSERT(_param0 != NULL);
-
-					int& pValue_param0 = *(int*)_param0->GetValue(self, behaviac::Meta::IsVector<int >::Result, behaviac::GetClassTypeNumberId<int >());
-					self = Agent::GetParentAgent(self, _instance);
-
-					((PropertyReadonlyAgent*)self)->_Execute_Method_<METHOD_TYPE_PropertyReadonlyAgent_FnWithOutParam, void, int& >(pValue_param0);
-				}
-			};
-
-			AgentMeta::SetTotalSignature(803555873u);
+			AgentMeta::SetTotalSignature(3904190936u);
 
 			AgentMeta* meta = NULL;
 			BEHAVIAC_UNUSED_VAR(meta);
@@ -3150,7 +3150,7 @@ namespace behaviac
 			meta->RegisterMethod(502968959u, BEHAVIAC_NEW CMethod_behaviac_Agent_VectorRemove());
 
 			// ParTestAgent
-			meta = BEHAVIAC_NEW AgentMeta(1905727749u);
+			meta = BEHAVIAC_NEW AgentMeta(1963086387u);
 			AgentMeta::GetAgentMetas()[2466883229u] = meta;
 			meta->RegisterMemberProperty(907888646u, BEHAVIAC_NEW CStaticMemberProperty< bool >("STV_BOOL_0", Set_ParTestAgentBase_STV_BOOL_0, Get_ParTestAgentBase_STV_BOOL_0));
 			meta->RegisterMemberProperty(2191125959u, BEHAVIAC_NEW CStaticMemberProperty< char >("STV_CHAR_0", Set_ParTestAgentBase_STV_CHAR_0, Get_ParTestAgentBase_STV_CHAR_0));
@@ -3244,7 +3244,7 @@ namespace behaviac
 			meta->RegisterMethod(502968959u, BEHAVIAC_NEW CMethod_behaviac_Agent_VectorRemove());
 
 			// AgentNodeTest
-			meta = BEHAVIAC_NEW AgentMeta(884024470u);
+			meta = BEHAVIAC_NEW AgentMeta(4180184543u);
 			AgentMeta::GetAgentMetas()[1457925020u] = meta;
 			meta->RegisterCustomizedProperty(257770974u, BEHAVIAC_NEW CCustomizedProperty< TestNS::Float2 >(257770974u, "c_ReturnFloat2", "{x=0;y=0;}"));
 			meta->RegisterCustomizedProperty(2482280992u, BEHAVIAC_NEW CCustomizedProperty< TestNS::Float2 >(2482280992u, "c_ReturnFloat2Const", "{x=0;y=0;}"));
@@ -3323,7 +3323,7 @@ namespace behaviac
 			meta->RegisterMethod(502968959u, BEHAVIAC_NEW CMethod_behaviac_Agent_VectorRemove());
 
 			// ChildNodeTest
-			meta = BEHAVIAC_NEW AgentMeta(2859093673u);
+			meta = BEHAVIAC_NEW AgentMeta(3199543696u);
 			AgentMeta::GetAgentMetas()[3929034668u] = meta;
 			meta->RegisterCustomizedProperty(257770974u, BEHAVIAC_NEW CCustomizedProperty< TestNS::Float2 >(257770974u, "c_ReturnFloat2", "{x=0;y=0;}"));
 			meta->RegisterCustomizedProperty(2482280992u, BEHAVIAC_NEW CCustomizedProperty< TestNS::Float2 >(2482280992u, "c_ReturnFloat2Const", "{x=0;y=0;}"));
@@ -3404,7 +3404,7 @@ namespace behaviac
 			meta->RegisterMethod(502968959u, BEHAVIAC_NEW CMethod_behaviac_Agent_VectorRemove());
 
 			// ChildNodeTestSub
-			meta = BEHAVIAC_NEW AgentMeta(3577543776u);
+			meta = BEHAVIAC_NEW AgentMeta(3248964132u);
 			AgentMeta::GetAgentMetas()[2999848163u] = meta;
 			meta->RegisterCustomizedProperty(257770974u, BEHAVIAC_NEW CCustomizedProperty< TestNS::Float2 >(257770974u, "c_ReturnFloat2", "{x=0;y=0;}"));
 			meta->RegisterCustomizedProperty(2482280992u, BEHAVIAC_NEW CCustomizedProperty< TestNS::Float2 >(2482280992u, "c_ReturnFloat2Const", "{x=0;y=0;}"));
@@ -3515,7 +3515,7 @@ namespace behaviac
 			meta->RegisterMethod(502968959u, BEHAVIAC_NEW CMethod_behaviac_Agent_VectorRemove());
 
 			// EmployeeParTestAgent
-			meta = BEHAVIAC_NEW AgentMeta(794251523u);
+			meta = BEHAVIAC_NEW AgentMeta(1290732412u);
 			AgentMeta::GetAgentMetas()[1673745146u] = meta;
 			meta->RegisterMemberProperty(907888646u, BEHAVIAC_NEW CStaticMemberProperty< bool >("STV_BOOL_0", Set_ParTestAgentBase_STV_BOOL_0, Get_ParTestAgentBase_STV_BOOL_0));
 			meta->RegisterMemberProperty(2191125959u, BEHAVIAC_NEW CStaticMemberProperty< char >("STV_CHAR_0", Set_ParTestAgentBase_STV_CHAR_0, Get_ParTestAgentBase_STV_CHAR_0));

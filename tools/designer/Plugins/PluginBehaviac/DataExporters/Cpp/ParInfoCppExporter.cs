@@ -36,7 +36,7 @@ namespace PluginBehaviac.DataExporters
                 typename = property.NativeType;
             }
 
-            if (!typename.EndsWith("*") && Plugin.IsRefType(property.Type))
+            if (!typename.Contains("*") && Plugin.IsRefType(property.Type))
             {
                 typename += "*";
             }
@@ -121,7 +121,7 @@ namespace PluginBehaviac.DataExporters
             {
                 string typename = DataCppExporter.GetGeneratedNativeType(property.NativeType);
 
-                if (!typename.EndsWith("*") && Plugin.IsRefType(property.Type))
+                if (!typename.Contains("*") && Plugin.IsRefType(property.Type))
                 {
                     typename += "*";
                 }

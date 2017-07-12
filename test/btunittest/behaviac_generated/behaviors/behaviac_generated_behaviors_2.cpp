@@ -385,7 +385,7 @@ namespace behaviac
 			pBT->SetAgentType("AgentNodeTest");
 #endif
 			// locals
-			pBT->AddLocal("AgentNodeTest", "ParTestAgent", "par_agent", "null");
+			pBT->AddLocal("AgentNodeTest", "ParTestAgent*", "par_agent", "null");
 			// children
 			{
 				Sequence* node0 = BEHAVIAC_NEW Sequence;

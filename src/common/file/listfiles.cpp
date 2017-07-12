@@ -63,7 +63,7 @@ int listfiles_open(listfiles_dir_t* pDir, const char* szPath) {
 #ifdef _MSC_VER
     _listfiles_strcpy(path_buf, pDir->path);
     _listfiles_strcat(path_buf, _LISTFILES_STRING("\\*"));
-    pDir->_h = FindFirstFile(path_buf, &pDir->_f);
+    pDir->_h = FindFirstFileA(path_buf, &pDir->_f);
 
     if (pDir->_h == INVALID_HANDLE_VALUE) {
         errno = ENOENT;
@@ -134,7 +134,7 @@ int listfiles_next(listfiles_dir_t* pDir) {
 
 #ifdef _MSC_VER
 
-    if (FindNextFile(pDir->_h, &pDir->_f) == 0)
+    if (FindNextFileA(pDir->_h, &pDir->_f) == 0)
 #else
 
     pDir->_e = _listfiles_readdir(pDir->_d);

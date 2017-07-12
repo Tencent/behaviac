@@ -176,7 +176,7 @@ namespace behaviac
 			pBT->SetAgentType("AgentNodeTest");
 #endif
 			// locals
-			pBT->AddLocal("AgentNodeTest", "UnityEngine::GameObject", "par_go", "null");
+			pBT->AddLocal("AgentNodeTest", "UnityEngine::GameObject*", "par_go", "null");
 			pBT->AddLocal("AgentNodeTest", "float", "par_float_type_0", "0");
 			pBT->AddLocal("AgentNodeTest", "float", "par_float_type_1", "0");
 			pBT->AddLocal("AgentNodeTest", "float", "par_float_type_2", "2.7");

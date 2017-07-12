@@ -1969,6 +1969,16 @@ namespace Behaviac.Design
                     ms_namesInNamespace["behaviac_EBTStatus"] = "behaviac::EBTStatus";
                 }
 
+                if (!ms_namesInNamespace.ContainsKey("System_Object"))
+                {
+                    ms_namesInNamespace["System_Object"] = "System::Object";
+                }
+
+                if (!ms_namesInNamespace.ContainsKey("Object"))
+                {
+                    ms_namesInNamespace["Object"] = "System::Object";
+                }
+
                 return ms_namesInNamespace;
             }
         }
@@ -2075,7 +2085,7 @@ namespace Behaviac.Design
                 Type itemType = type.GetGenericArguments()[0];
                 string itemTypeStr = Plugin.GetNativeTypeName(itemType, bForDisplay);
 
-                //if (!itemTypeStr.EndsWith("*") && Plugin.IsRefType(itemType))
+                //if (!itemTypeStr.Contains("*") && Plugin.IsRefType(itemType))
                 //{
                 //    itemTypeStr += "*";
                 //}
@@ -2085,7 +2095,7 @@ namespace Behaviac.Design
 
             string typeStr = GetNativeTypeName(type.Name, false, bForDisplay);
 
-            //if (!typeStr.EndsWith("*") && Plugin.IsRefType(type))
+            //if (!typeStr.Contains("*") && Plugin.IsRefType(type))
             //{
             //    typeStr += "*";
             //}

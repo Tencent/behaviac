@@ -191,14 +191,18 @@ namespace Behaviac.Design
 
             // create the given behavior folder if it does not exist
             string behaviorFolder = this.sourceTextBox.Text;
-
             if (string.IsNullOrEmpty(behaviorFolder))
             {
                 behaviorFolder = Path.Combine(wksLocation, "behaviors");
             }
 
             string driveStr1 = Path.GetPathRoot(behaviorFolder);
-            Debug.Check(driveStr1 == driveStr0);
+            //Debug.Check(driveStr1 == driveStr0);
+            if (driveStr1 != driveStr0)
+            {
+                MessageBox.Show(Resources.WorkspaceSourceRootWarning, Resources.Warning, MessageBoxButtons.OK);
+                return;
+            }
 
             if (!Directory.Exists(behaviorFolder))
             {
@@ -207,14 +211,18 @@ namespace Behaviac.Design
 
             // create the given export folder if it does not exist
             string exportFolder = this.exportTextBox.Text;
-
             if (string.IsNullOrEmpty(exportFolder))
             {
                 exportFolder = Path.Combine(wksLocation, "exported");
             }
 
-            string driveStr2 = Path.GetPathRoot(behaviorFolder);
-            Debug.Check(driveStr2 == driveStr0);
+            string driveStr2 = Path.GetPathRoot(exportFolder);
+            //Debug.Check(driveStr2 == driveStr0);
+            if (driveStr2!= driveStr0)
+            {
+                MessageBox.Show(Resources.WorkspaceExportRootWarning, Resources.Warning, MessageBoxButtons.OK);
+                return;
+            }
 
             if (!Directory.Exists(exportFolder))
             {
@@ -244,6 +252,13 @@ namespace Behaviac.Design
 
             // create the types export folder if it does not exist
             string typesExportFolder = this.typesExportTextBox.Text;
+            string driveStr3 = Path.GetPathRoot(typesExportFolder);
+            //Debug.Check(driveStr3 == driveStr0);
+            if (driveStr3 != driveStr0)
+            {
+                MessageBox.Show(Resources.WorkspaceExportRootWarning, Resources.Warning, MessageBoxButtons.OK);
+                return;
+            }
 
             if (string.IsNullOrEmpty(typesExportFolder))
             {
@@ -455,6 +470,15 @@ namespace Behaviac.Design
             // assign the path selected by the user to the textbox
             if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
             {
+                string driveStr0 = Path.GetPathRoot(this.workspaceTextBox.Text);
+                string driveStr1 = Path.GetPathRoot(folderBrowserDialog.SelectedPath);
+
+                if (driveStr1 != driveStr0)
+                {
+                    MessageBox.Show(Resources.WorkspaceExportRootWarning, Resources.Warning, MessageBoxButtons.OK);
+                    return;
+                }
+
                 this.typesExportTextBox.Text = folderBrowserDialog.SelectedPath;
             }
 

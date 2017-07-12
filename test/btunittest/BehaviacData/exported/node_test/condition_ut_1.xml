@@ -3,7 +3,7 @@
 <!--Source File: node_test\condition_ut_1.xml-->
 <behavior name="node_test/condition_ut_1" agenttype="AgentNodeTest" version="5">
   <pars>
-    <par name="par_agent" type="ParTestAgent" value="null" />
+    <par name="par_agent" type="ParTestAgent*" value="null" />
   </pars>
   <node class="Sequence" id="0">
     <node class="Or" id="9">

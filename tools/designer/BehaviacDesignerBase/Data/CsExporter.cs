@@ -137,6 +137,13 @@ namespace Behaviac.Design
             {
                 value = "(char)0";
             }
+            else if (type == typeof(float))
+            {
+                if (!string.IsNullOrEmpty(value) && !value.ToLowerInvariant().EndsWith("f"))
+                {
+                    value += "f";
+                }
+            }
             else if (Plugin.IsStringType(type))
             {
                 value = "\"" + value + "\"";

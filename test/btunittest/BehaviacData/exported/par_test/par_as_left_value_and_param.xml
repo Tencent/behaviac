@@ -20,7 +20,7 @@
     <par name="par0_boolean_list_0" type="vector&lt;bool&gt;" value="2:false|true" />
     <par name="par0_ecolor_0" type="TNS::NE::NAT::eColor" value="YELLOW" />
     <par name="par0_ecolor_list_0" type="vector&lt;TNS::NE::NAT::eColor&gt;" value="2:RED|GREEN" />
-    <par name="par2_agent_0" type="behaviac::Agent" value="null" />
+    <par name="par2_agent_0" type="behaviac::Agent*" value="null" />
     <par name="par2_agent_list_0" type="vector&lt;behaviac::Agent&gt;" value="2:null|null" />
     <par name="par0_char_0" type="char" value="A" />
     <par name="par1_kemployee_0" type="TNS::ST::PER::WRK::kEmployee" value="{id=83;name=&quot;Tom&quot;;code=A;weight=97.3;isMale=false;skinColor=RED;car={brand=&quot;Alpha&quot;;price=5700;color=WHITE;};boss=null;}" />
@@ -29,7 +29,7 @@
     <par name="par0_char_list_0" type="vector&lt;char&gt;" value="4:d|j|F|A" />
     <par name="par0_sbyte_list_0" type="vector&lt;sbyte&gt;" value="3:127|-128|0" />
     <par name="par0_byte_list_0" type="vector&lt;ubyte&gt;" value="3:167|23|152" />
-    <par name="par2_ParTestAgentBase_0" type="ParTestAgentBase" value="null" />
+    <par name="par2_ParTestAgentBase_0" type="ParTestAgentBase*" value="null" />
     <par name="par2_ParTestAgentBaseList_0" type="vector&lt;ParTestAgentBase&gt;" value="2:null|null" />
     <par name="par2_longlong_0" type="llong" value="-666" />
     <par name="par2_ulonglong_0" type="ullong" value="666" />

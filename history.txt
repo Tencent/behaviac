@@ -1,3 +1,10 @@
+2017-7-11  3.6.35
+    Improve the C++ types generation.
+    Fix a bug of time edition of the Wait node.
+    Fix a bug of renaming the agent.
+    Fix a bug of reentering the SelectorProbability node.
+    Fix other bugs of the editor.
+
 2017-5-16  3.6.34
     Fix a bug for the Parallel node.
     Fix a bug for exporting the return type of the method.

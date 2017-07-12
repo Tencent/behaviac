@@ -91,14 +91,6 @@ namespace behaviac {
         return m_signature;
     }
 
-    bool AgentMeta::TypeNameIsRegistered(const char* typeName) {
-        if (_Creators.find(typeName) != _Creators.end()) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
     void AgentMeta::Register() {
         RegisterBasicTypes();
 
@@ -229,89 +221,108 @@ namespace behaviac {
         return NULL;
     };
 
-    IProperty* AgentMeta::CreateProperty(const behaviac::string& typeName, uint32_t propId, const char* propName, const char* valueStr) {
-        //StringUtils::ReplaceStringInPlace(str, "::", ".");
-        if (_Creators.find(typeName) != _Creators.end()) {
-            TypeCreator* creator = _Creators[typeName];
-            return creator->CreateProperty(propId, propName, valueStr);
-        }
+	static string GetTypeName(const char* typeName) {
+		string typeNameStr = typeName;
+		
+		if (!StringUtils::Compare(typeName, "char*") && !StringUtils::Compare(typeName, "const char*") &&
+			!StringUtils::Compare(typeName, "vector<char*>") && !StringUtils::Compare(typeName, "vector<const char*>")) {
+			StringUtils::ReplaceStringInPlace(typeNameStr, "*", "");
+		}
 
-        BEHAVIAC_ASSERT(false);
+		return typeNameStr;
+	}
+
+	bool AgentMeta::TypeNameIsRegistered(const char* typeName) {
+		string typeNameStr = GetTypeName(typeName);
+
+		if (_Creators.find(typeNameStr) != _Creators.end()) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+
+	TypeCreator* AgentMeta::GetTypeCreator(const char* typeName) {
+		string typeNameStr = GetTypeName(typeName);
+
+		if (_Creators.find(typeNameStr) != _Creators.end()) {
+			return _Creators[typeNameStr];
+		}
+
+		BEHAVIAC_ASSERT(false);
+		return NULL;
+	}
+
+	void AgentMeta::AddTypeCreator(const char* typeName, TypeCreator* tc) {
+		string typeNameStr = GetTypeName(typeName);
+
+		if (_Creators.find(typeNameStr) == _Creators.end()) {
+			_Creators[typeNameStr] = tc;
+		}
+	}
+
+	void AgentMeta::RemoveTypeCreator(const char* typeName) {
+		string typeNameStr = GetTypeName(typeName);
+
+		if (_Creators.find(typeNameStr) != _Creators.end()) {
+			BEHAVIAC_DELETE _Creators[typeNameStr];
+			_Creators.erase(typeNameStr);
+		}
+	}
+
+	IProperty* AgentMeta::CreateProperty(const char* typeName, uint32_t propId, const char* propName, const char* valueStr) {
+		TypeCreator* creator = GetTypeCreator(typeName);
+		if (creator) {
+			return creator->CreateProperty(propId, propName, valueStr);
+		}
+
         return NULL;
     }
 
-    IProperty* AgentMeta::CreateArrayItemProperty(const behaviac::string& typeName, uint32_t parentId, const char* parentName) {
-        if (_Creators.find(typeName) != _Creators.end()) {
-            TypeCreator* creator = _Creators[typeName];
-            return creator->CreateArrayItemProperty(parentId, parentName);
-        }
+	IProperty* AgentMeta::CreateArrayItemProperty(const char* typeName, uint32_t parentId, const char* parentName) {
+		TypeCreator* creator = GetTypeCreator(typeName);
+		if (creator) {
+			return creator->CreateArrayItemProperty(parentId, parentName);
+		}
 
-        BEHAVIAC_ASSERT(false);
         return NULL;
     }
 
-    IInstanceMember* AgentMeta::CreateInstanceProperty(const behaviac::string& typeName, const char* instance, IInstanceMember* indexMember, uint32_t varId) {
-        if (_Creators.find(typeName) != _Creators.end()) {
-            TypeCreator* creator = _Creators[typeName];
-            return creator->CreateInstanceProperty(instance, indexMember, varId);
-        }
+	IInstanceMember* AgentMeta::CreateInstanceProperty(const char* typeName, const char* instance, IInstanceMember* indexMember, uint32_t varId) {
+		TypeCreator* creator = GetTypeCreator(typeName);
+		if (creator) {
+			return creator->CreateInstanceProperty(instance, indexMember, varId);
+		}
 
-        BEHAVIAC_ASSERT(false);
         return NULL;
     }
 
-    IInstanceMember* AgentMeta::CreateInstanceConst(const behaviac::string& typeName, const char* valueStr) {
-        if (_Creators.find(typeName) != _Creators.end()) {
-            TypeCreator* creator = _Creators[typeName];
-            //void* value = ParseTypeValue(typeName, valueStr);
+	IInstanceMember* AgentMeta::CreateInstanceConst(const char* typeName, const char* valueStr) {
+		TypeCreator* creator = GetTypeCreator(typeName);
+		if (creator) {
+			return creator->CreateInstanceConst(valueStr);
+		}
 
-            return creator->CreateInstanceConst(valueStr);
-        }
-
-        BEHAVIAC_ASSERT(false);
         return NULL;
     }
 
-    IProperty* AgentMeta::CreateCustomizedProperty(const behaviac::string& typeName, uint32_t propId, const char* propName, const char* valueStr) {
-        if (_Creators.find(typeName) != _Creators.end()) {
-            TypeCreator* creator = _Creators[typeName];
+	IProperty* AgentMeta::CreateCustomizedProperty(const char* typeName, uint32_t propId, const char* propName, const char* valueStr) {
+		TypeCreator* creator = GetTypeCreator(typeName);
+		if (creator) {
+			return creator->CreateCustomizedProperty(propId, propName, valueStr);
+		}
 
-            return creator->CreateCustomizedProperty(propId, propName, valueStr);
-        }
-
-        BEHAVIAC_ASSERT(false);
         return NULL;
     }
 
-    IProperty* AgentMeta::CreateCustomizedArrayItemProperty(const behaviac::string& typeName, uint32_t parentId, const char* parentName) {
-        if (_Creators.find(typeName) != _Creators.end()) {
-            TypeCreator* creator = _Creators[typeName];
+	IProperty* AgentMeta::CreateCustomizedArrayItemProperty(const char* typeName, uint32_t parentId, const char* parentName) {
+		TypeCreator* creator = GetTypeCreator(typeName);
+		if (creator) {
+			return creator->CreateCustomizedArrayItemProperty(parentId, parentName);
+		}
 
-            return creator->CreateCustomizedArrayItemProperty(parentId, parentName);
-        }
-
-        BEHAVIAC_ASSERT(false);
         return NULL;
-    }
-
-    void AgentMeta::CreatorAddElement(const behaviac::string& typeName, TypeCreator* tc) {
-        if (_Creators.find(typeName) == _Creators.end()) {
-            _Creators[typeName] = tc;
-        } else {
-            BEHAVIAC_ASSERT(false);
-        }
-    }
-
-    void AgentMeta::CreatorRemoveElement(const behaviac::string& typeName) {
-        behaviac::map<behaviac::string, TypeCreator*>::iterator it = _Creators.find(typeName);
-
-        if (it != _Creators.end()) {
-            TypeCreator* p = it->second;
-            BEHAVIAC_DELETE p;
-            _Creators.erase(typeName);
-        } else {
-            BEHAVIAC_ASSERT(true);
-        }
     }
 
     const char* AgentMeta::ParseInstanceNameProperty(const char* fullName, char* instanceName, char* agentType) {
@@ -455,7 +466,7 @@ namespace behaviac {
             const char* strVale = (p + 1);
 
             // const
-            return AgentMeta::CreateInstanceConst(typeName, strVale);
+            return AgentMeta::CreateInstanceConst(typeName.c_str(), strVale);
         } else {
             behaviac::string propStr = "";
             behaviac::string indexPropStr = "";
@@ -748,7 +759,7 @@ namespace behaviac {
         uint32_t nameId = MakeVariableId(propName);
 		IProperty* prop = meta->GetProperty(nameId);
 		string typeNameStr = typeName;
-		IProperty* newProp = AgentMeta::CreateCustomizedProperty(typeNameStr, nameId, propName, valueStr);
+		IProperty* newProp = AgentMeta::CreateCustomizedProperty(typeName, nameId, propName, valueStr);
 
 		if (prop && newProp)
 		{
@@ -776,7 +787,7 @@ namespace behaviac {
             // Get item type, i.e. vector<int>
             const size_t kVecLen = ::strlen("vector<");
             typeNameStr = typeNameStr.substr(kVecLen, typeNameStr.length() - kVecLen - 1); // item type
-            IProperty* arrayItemProp = AgentMeta::CreateCustomizedArrayItemProperty(typeNameStr, nameId, propName);
+            IProperty* arrayItemProp = AgentMeta::CreateCustomizedArrayItemProperty(typeNameStr.c_str(), nameId, propName);
             string araryItemPropName = propName;
             araryItemPropName += "[]";
             nameId = MakeVariableId(araryItemPropName.c_str());

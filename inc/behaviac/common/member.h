@@ -1702,6 +1702,10 @@ namespace behaviac {
             return NULL;
         }
 
+		virtual bool IsMethod() const {
+			return true;
+		}
+
         virtual void load(const char* instance, behaviac::vector<behaviac::string>& paramStrs) {
 			BEHAVIAC_UNUSED_VAR(instance);
 			BEHAVIAC_UNUSED_VAR(paramStrs);
@@ -1734,7 +1738,10 @@ namespace behaviac {
         }
 
         virtual IValue* GetIValueFrom(behaviac::Agent* self, IInstanceMember* firstParam) {
-			BEHAVIAC_UNUSED_VAR(firstParam);
+			BEHAVIAC_ASSERT(firstParam->IsMethod());
+			Agent* agent = Agent::GetParentAgent(self, this->_instance);
+			firstParam->run(agent);
+
 			return GetIValue(self);
         }
 

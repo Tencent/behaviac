@@ -87,9 +87,9 @@ namespace Behaviac.Design
             this.useIntValueCheckBox = new System.Windows.Forms.CheckBox();
             this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.SuspendLayout();
-            //
+            // 
             // doneButton
-            //
+            // 
             resources.ApplyResources(this.doneButton, "doneButton");
             this.doneButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.doneButton.DialogResult = System.Windows.Forms.DialogResult.OK;
@@ -98,9 +98,9 @@ namespace Behaviac.Design
             this.doneButton.Name = "doneButton";
             this.doneButton.UseVisualStyleBackColor = false;
             this.doneButton.Click += new System.EventHandler(this.doneButton_Click);
-            //
+            // 
             // cancelButton
-            //
+            // 
             resources.ApplyResources(this.cancelButton, "cancelButton");
             this.cancelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
@@ -109,23 +109,23 @@ namespace Behaviac.Design
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.UseVisualStyleBackColor = false;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
-            //
+            // 
             // nameLabel
-            //
+            // 
             resources.ApplyResources(this.nameLabel, "nameLabel");
             this.nameLabel.Name = "nameLabel";
-            //
+            // 
             // nameTextBox
-            //
+            // 
             resources.ApplyResources(this.nameTextBox, "nameTextBox");
             this.nameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.nameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nameTextBox.ForeColor = System.Drawing.Color.LightGray;
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.TextChanged += new System.EventHandler(this.nameTextBox_TextChanged);
-            //
+            // 
             // XMLButton
-            //
+            // 
             resources.ApplyResources(this.XMLButton, "XMLButton");
             this.XMLButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.XMLButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
@@ -133,18 +133,17 @@ namespace Behaviac.Design
             this.XMLButton.Name = "XMLButton";
             this.XMLButton.UseVisualStyleBackColor = false;
             this.XMLButton.Click += new System.EventHandler(this.XMLButton_Click);
-            //
+            // 
             // XMLTextBox
-            //
+            // 
             resources.ApplyResources(this.XMLTextBox, "XMLTextBox");
             this.XMLTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.XMLTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.XMLTextBox.ForeColor = System.Drawing.Color.LightGray;
             this.XMLTextBox.Name = "XMLTextBox";
-            this.XMLTextBox.ReadOnly = true;
-            //
+            // 
             // workspaceButton
-            //
+            // 
             resources.ApplyResources(this.workspaceButton, "workspaceButton");
             this.workspaceButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.workspaceButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
@@ -152,39 +151,37 @@ namespace Behaviac.Design
             this.workspaceButton.Name = "workspaceButton";
             this.workspaceButton.UseVisualStyleBackColor = false;
             this.workspaceButton.Click += new System.EventHandler(this.workspaceButton_Click);
-            //
+            // 
             // workspaceTextBox
-            //
+            // 
             resources.ApplyResources(this.workspaceTextBox, "workspaceTextBox");
             this.workspaceTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.workspaceTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.workspaceTextBox.ForeColor = System.Drawing.Color.LightGray;
             this.workspaceTextBox.Name = "workspaceTextBox";
-            this.workspaceTextBox.ReadOnly = true;
-            //
+            // 
             // locationLabel
-            //
+            // 
             resources.ApplyResources(this.locationLabel, "locationLabel");
             this.locationLabel.Name = "locationLabel";
             this.locationLabel.DoubleClick += new System.EventHandler(this.locationLabel_DoubleClick);
-            //
+            // 
             // sourceTextBox
-            //
+            // 
             resources.ApplyResources(this.sourceTextBox, "sourceTextBox");
             this.sourceTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.sourceTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.sourceTextBox.ForeColor = System.Drawing.Color.LightGray;
             this.sourceTextBox.Name = "sourceTextBox";
-            this.sourceTextBox.ReadOnly = true;
-            //
+            // 
             // sourceLabel
-            //
+            // 
             resources.ApplyResources(this.sourceLabel, "sourceLabel");
             this.sourceLabel.Name = "sourceLabel";
             this.sourceLabel.DoubleClick += new System.EventHandler(this.sourceLabel_DoubleClick);
-            //
+            // 
             // sourceButton
-            //
+            // 
             resources.ApplyResources(this.sourceButton, "sourceButton");
             this.sourceButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.sourceButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
@@ -192,24 +189,23 @@ namespace Behaviac.Design
             this.sourceButton.Name = "sourceButton";
             this.sourceButton.UseVisualStyleBackColor = false;
             this.sourceButton.Click += new System.EventHandler(this.buttonSource_Click);
-            //
+            // 
             // exportTextBox
-            //
+            // 
             resources.ApplyResources(this.exportTextBox, "exportTextBox");
             this.exportTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.exportTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.exportTextBox.ForeColor = System.Drawing.Color.LightGray;
             this.exportTextBox.Name = "exportTextBox";
-            this.exportTextBox.ReadOnly = true;
-            //
+            // 
             // exportLabel
-            //
+            // 
             resources.ApplyResources(this.exportLabel, "exportLabel");
             this.exportLabel.Name = "exportLabel";
             this.exportLabel.DoubleClick += new System.EventHandler(this.exportLabel_DoubleClick);
-            //
+            // 
             // exportButton
-            //
+            // 
             resources.ApplyResources(this.exportButton, "exportButton");
             this.exportButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.exportButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
@@ -217,24 +213,23 @@ namespace Behaviac.Design
             this.exportButton.Name = "exportButton";
             this.exportButton.UseVisualStyleBackColor = false;
             this.exportButton.Click += new System.EventHandler(this.buttonExport_Click);
-            //
+            // 
             // typesExportTextBox
-            //
+            // 
             resources.ApplyResources(this.typesExportTextBox, "typesExportTextBox");
             this.typesExportTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.typesExportTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.typesExportTextBox.ForeColor = System.Drawing.Color.LightGray;
             this.typesExportTextBox.Name = "typesExportTextBox";
-            this.typesExportTextBox.ReadOnly = true;
-            //
+            // 
             // generateLabel
-            //
+            // 
             resources.ApplyResources(this.generateLabel, "generateLabel");
             this.generateLabel.Name = "generateLabel";
             this.generateLabel.DoubleClick += new System.EventHandler(this.generateLabel_DoubleClick);
-            //
+            // 
             // typesExportButton
-            //
+            // 
             resources.ApplyResources(this.typesExportButton, "typesExportButton");
             this.typesExportButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.typesExportButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
@@ -242,34 +237,32 @@ namespace Behaviac.Design
             this.typesExportButton.Name = "typesExportButton";
             this.typesExportButton.UseVisualStyleBackColor = false;
             this.typesExportButton.Click += new System.EventHandler(this.typesExportButton_Click);
-            //
+            // 
             // languageLabel
-            //
+            // 
             resources.ApplyResources(this.languageLabel, "languageLabel");
             this.languageLabel.Name = "languageLabel";
-            //
+            // 
             // languageComboBox
-            //
+            // 
             resources.ApplyResources(this.languageComboBox, "languageComboBox");
             this.languageComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.languageComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.languageComboBox.ForeColor = System.Drawing.Color.LightGray;
             this.languageComboBox.FormattingEnabled = true;
-            this.languageComboBox.Items.AddRange(new object[]
-            {
-                resources.GetString("languageComboBox.Items"),
-                resources.GetString("languageComboBox.Items1")
-            });
+            this.languageComboBox.Items.AddRange(new object[] {
+            resources.GetString("languageComboBox.Items"),
+            resources.GetString("languageComboBox.Items1")});
             this.languageComboBox.Name = "languageComboBox";
-            //
+            // 
             // metaFileLabel
-            //
+            // 
             resources.ApplyResources(this.metaFileLabel, "metaFileLabel");
             this.metaFileLabel.Name = "metaFileLabel";
             this.metaFileLabel.DoubleClick += new System.EventHandler(this.metaFileLabel_DoubleClick);
-            //
+            // 
             // useIntValueCheckBox
-            //
+            // 
             resources.ApplyResources(this.useIntValueCheckBox, "useIntValueCheckBox");
             this.useIntValueCheckBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.useIntValueCheckBox.Name = "useIntValueCheckBox";
@@ -277,9 +270,9 @@ namespace Behaviac.Design
             this.useIntValueCheckBox.CheckedChanged += new System.EventHandler(this.useIntValueCheckBox_CheckedChanged);
             this.useIntValueCheckBox.MouseEnter += new System.EventHandler(this.useIntValueCheckBox_MouseEnter);
             this.useIntValueCheckBox.MouseLeave += new System.EventHandler(this.useIntValueCheckBox_MouseLeave);
-            //
+            // 
             // EditWorkspaceDialog
-            //
+            // 
             this.AcceptButton = this.doneButton;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

@@ -137,7 +137,6 @@ namespace behaviac {
         static BehaviorLoader*                                  ms_behaviorLoader;
 
         static behaviac::map<behaviac::string, TypeCreator*>    _Creators;
-        //static behaviac::map<behaviac::string, Type*>           _typesRegistered;
 
     public:
         BEHAVIAC_DECLARE_MEMORY_OPERATORS(AgentMeta);
@@ -165,15 +164,16 @@ namespace behaviac {
         const behaviac::map<uint32_t, IProperty*>& GetMemberProperties();
         IInstanceMember* GetMethod(uint32_t methodId);
 
-        static IProperty* CreateProperty(const behaviac::string& typeName, uint32_t propId, const char* propName, const char* valueStr);
-        static IProperty* CreateArrayItemProperty(const behaviac::string& typeName, uint32_t parentId, const char* parentName);
-        static IInstanceMember* CreateInstanceProperty(const behaviac::string& typeName, const char* instance, IInstanceMember* indexMember, uint32_t varId);
-        static IInstanceMember* CreateInstanceConst(const behaviac::string& typeName, const char* valueStr);
-        static IProperty* CreateCustomizedProperty(const behaviac::string& typeName, uint32_t propId, const char* propName, const char* valueStr);
-        static IProperty* CreateCustomizedArrayItemProperty(const behaviac::string& typeName, uint32_t parentId, const char* parentName);
+        static IProperty* CreateProperty(const char* typeName, uint32_t propId, const char* propName, const char* valueStr);
+		static IProperty* CreateArrayItemProperty(const char* typeName, uint32_t parentId, const char* parentName);
+		static IInstanceMember* CreateInstanceProperty(const char* typeName, const char* instance, IInstanceMember* indexMember, uint32_t varId);
+		static IInstanceMember* CreateInstanceConst(const char* typeName, const char* valueStr);
+		static IProperty* CreateCustomizedProperty(const char* typeName, uint32_t propId, const char* propName, const char* valueStr);
+		static IProperty* CreateCustomizedArrayItemProperty(const char* typeName, uint32_t parentId, const char* parentName);
 
-        static void CreatorAddElement(const behaviac::string& typeName, TypeCreator* tc);
-        static void CreatorRemoveElement(const behaviac::string& typeName);
+		static TypeCreator* GetTypeCreator(const char* typeName);
+		static void AddTypeCreator(const char* typeName, TypeCreator* tc);
+		static void RemoveTypeCreator(const char* typeName);
 
         static const char* ParseInstanceNameProperty(const char* fullName, char* instanceName, char* agentType);
 
@@ -214,8 +214,9 @@ namespace behaviac {
                                       &CreatorCustomizedProperty<RegisteredType>,
                                       &CreatorCustomizedArrayItemProperty<RegisteredType>
                                   );
-                //_Creators[typeName] = tc;
-                CreatorAddElement(typeName, tc);
+
+				AddTypeCreator(typeName, tc);
+
                 char vectorTypeName[1024];
                 string_sprintf(vectorTypeName, "vector<%s>", typeName);
 
@@ -226,8 +227,8 @@ namespace behaviac {
                                        CreatorInstanceConst<behaviac::vector<RegisteredType> >,
                                        &CreatorCustomizedProperty<behaviac::vector<RegisteredType> >,
                                        &CreatorCustomizedArrayItemProperty<behaviac::vector<RegisteredType> >);
-                //_Creators[vectorTypeName] = tcl;
-                CreatorAddElement(vectorTypeName, tcl);
+
+				AddTypeCreator(vectorTypeName, tcl);
             }
 
             return true;
@@ -235,16 +236,12 @@ namespace behaviac {
 
         template<typename T>
         static void UnRegister(const char* typeName) {
-            //_typesRegistered.Remove(typeName);
-
-            //_Creators.erase(typeName);
-            CreatorRemoveElement(typeName);
+			RemoveTypeCreator(typeName);
 
             char vectorTypeName[1024];
             string_sprintf(vectorTypeName, "vector<%s>", typeName);
 
-            //_Creators.erase(vectorTypeName);
-            CreatorRemoveElement(vectorTypeName);
+			RemoveTypeCreator(vectorTypeName);
         }
 
     private:
@@ -278,7 +275,7 @@ namespace behaviac {
 
 				behaviac::string typeName = behaviac::GetTypeDescString<Type>();
 
-                return AgentMeta::CreateInstanceConst(typeName, value);
+				return AgentMeta::CreateInstanceConst(typeName.c_str(), value);
             }
 
             return ParseProperty(value);

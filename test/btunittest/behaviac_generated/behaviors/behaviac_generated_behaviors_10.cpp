@@ -1503,7 +1503,7 @@ namespace behaviac
 			pBT->AddLocal("EmployeeParTestAgent", "float", "par2_single_0", "0");
 			pBT->AddLocal("EmployeeParTestAgent", "double", "par2_double_0", "0");
 			pBT->AddLocal("EmployeeParTestAgent", "vector<behaviac::Agent>", "par2_agent_list_0", "0:");
-			pBT->AddLocal("EmployeeParTestAgent", "behaviac::Agent", "par2_agent_0", "null");
+			pBT->AddLocal("EmployeeParTestAgent", "behaviac::Agent*", "par2_agent_0", "null");
 			pBT->AddLocal("EmployeeParTestAgent", "ushort", "par1_ushort_0", "65535");
 			pBT->AddLocal("EmployeeParTestAgent", "vector<TNS::ST::PER::WRK::kEmployee>", "par1_kemployee_list_0", "0:");
 			pBT->AddLocal("EmployeeParTestAgent", "TNS::ST::PER::WRK::kEmployee", "par1_kemployee_0", "{id=0;name=\"tomlp\";code=c;weight=0;isMale=false;skinColor=RED;car={brand=\"\";price=0;color=RED;};boss=null;}");

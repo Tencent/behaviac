@@ -1027,6 +1027,9 @@ namespace behaviac
 
         public virtual IValue GetIValue(Agent self, IInstanceMember firstParam)
         {
+            Agent agent = Utils.GetParentAgent(self, _instance);
+            firstParam.Run(agent);
+
             return GetIValue(self);
         }
 
@@ -3988,6 +3991,9 @@ namespace behaviac
 
         public IValue GetIValue(Agent self, IInstanceMember firstParam)
         {
+            //Agent agent = Utils.GetParentAgent(self, _instance);
+            //firstParam.Run(agent);
+
             return GetIValue(self);
         }
 

@@ -30,7 +30,7 @@ void FirstAgent::SayHello()
 	_content = "\nHello Behaviac!\n\n";
 
 #if !BEHAVIAC_CCDEFINE_ANDROID
-	printf(_content.c_str());
+	printf("%s", _content.c_str());
 #endif
 ///<<< END WRITING YOUR CODE
 }

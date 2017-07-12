@@ -85,7 +85,7 @@ typedef struct listfiles_dir_t {
     listfiles_file_t* _files;
 #ifdef _MSC_VER
     HANDLE _h;
-    WIN32_FIND_DATA _f;
+	WIN32_FIND_DATAA _f;
 #else
     _LISTFILES_DIR* _d;
     struct _listfiles_dir_tent* _e;

@@ -3,7 +3,7 @@
 <!--Source File: node_test\event_subtree_4.xml-->
 <behavior name="node_test/event_subtree_4" agenttype="AgentNodeTest" version="5">
   <pars>
-    <par name="_$local_task_param_$_0" type="AgentNodeTest" value="null" />
+    <par name="_$local_task_param_$_0" type="AgentNodeTest*" value="null" />
   </pars>
   <node class="Task" id="0">
     <property Prototype="Self.AgentNodeTest::event_test_agent(null)" />

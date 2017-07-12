@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
-<agents version="1" signature="803555873">
+<agents version="1" signature="3904190936">
   <agent type="HTNAgentHouseBase" base="behaviac::Agent" signature="1561560191">
     <properties>
       <property name="Money" type="int" member="false" static="false" defaultvalue="0" />
@@ -27,7 +27,7 @@
       <property name="TV_SBYTE_0" type="sbyte" member="true" static="false" agent="ParTestAgentBase" />
     </properties>
   </agent>
-  <agent type="ParTestAgent" base="ParTestAgentBase" signature="1905727749">
+  <agent type="ParTestAgent" base="ParTestAgentBase" signature="1963086387">
     <properties>
       <property name="STV_BOOL_0" type="bool" member="true" static="true" agent="ParTestAgentBase" />
       <property name="STV_CHAR_0" type="char" member="true" static="true" agent="ParTestAgentBase" />
@@ -57,16 +57,16 @@
       <property name="TV_LONG_0" type="long" member="true" static="false" agent="ParTestAgent" />
       <property name="TV_SHORT_0" type="short" member="true" static="false" agent="ParTestAgent" />
       <property name="TV_USHORT_0" type="ushort" member="true" static="false" agent="ParTestAgent" />
-      <property name="C_Agent" type="ParTestAgent" member="false" static="false" defaultvalue="null" />
-      <property name="C_GameObject" type="UnityEngine::GameObject" member="false" static="false" defaultvalue="null" />
+      <property name="C_Agent" type="ParTestAgent*" member="false" static="false" defaultvalue="null" />
+      <property name="C_GameObject" type="UnityEngine::GameObject*" member="false" static="false" defaultvalue="null" />
     </properties>
   </agent>
-  <agent type="AgentNodeTest" base="behaviac::Agent" signature="884024470">
+  <agent type="AgentNodeTest" base="behaviac::Agent" signature="4180184543">
     <properties>
       <property name="c_ReturnFloat2" type="TestNS::Float2" member="false" static="false" defaultvalue="{x=0;y=0;}" />
       <property name="c_ReturnFloat2Const" type="TestNS::Float2" member="false" static="false" defaultvalue="{x=0;y=0;}" />
       <property name="par_child" type="ChildNodeTest*" member="true" static="false" agent="AgentNodeTest" />
-      <property name="par_child_agent_1" type="ChildNodeTest" member="false" static="false" defaultvalue="null" />
+      <property name="par_child_agent_1" type="ChildNodeTest*" member="false" static="false" defaultvalue="null" />
       <property name="redirectCount" type="uint" member="false" static="false" defaultvalue="0" />
       <property name="redirectTime" type="uint" member="false" static="false" defaultvalue="0" />
       <property name="test_int_array" type="vector&lt;int&gt;" member="false" static="false" defaultvalue="3:1|2|3" />
@@ -82,12 +82,12 @@
       <property name="waiting_timeout_interval" type="int" member="true" static="false" agent="AgentNodeTest" />
     </properties>
   </agent>
-  <agent type="ChildNodeTest" base="AgentNodeTest" signature="2859093673">
+  <agent type="ChildNodeTest" base="AgentNodeTest" signature="3199543696">
     <properties>
       <property name="c_ReturnFloat2" type="TestNS::Float2" member="false" static="false" defaultvalue="{x=0;y=0;}" />
       <property name="c_ReturnFloat2Const" type="TestNS::Float2" member="false" static="false" defaultvalue="{x=0;y=0;}" />
       <property name="par_child" type="ChildNodeTest*" member="true" static="false" agent="AgentNodeTest" />
-      <property name="par_child_agent_1" type="ChildNodeTest" member="false" static="false" defaultvalue="null" />
+      <property name="par_child_agent_1" type="ChildNodeTest*" member="false" static="false" defaultvalue="null" />
       <property name="redirectCount" type="uint" member="false" static="false" defaultvalue="0" />
       <property name="redirectTime" type="uint" member="false" static="false" defaultvalue="0" />
       <property name="test_int_array" type="vector&lt;int&gt;" member="false" static="false" defaultvalue="3:1|2|3" />
@@ -103,13 +103,13 @@
       <property name="waiting_timeout_interval" type="int" member="true" static="false" agent="AgentNodeTest" />
     </properties>
   </agent>
-  <agent type="ChildNodeTestSub" base="ChildNodeTest" signature="3577543776">
+  <agent type="ChildNodeTestSub" base="ChildNodeTest" signature="3248964132">
     <properties>
       <property name="c_ReturnFloat2" type="TestNS::Float2" member="false" static="false" defaultvalue="{x=0;y=0;}" />
       <property name="c_ReturnFloat2Const" type="TestNS::Float2" member="false" static="false" defaultvalue="{x=0;y=0;}" />
       <property name="IntValue" type="int" member="true" static="false" agent="ChildNodeTestSub" />
       <property name="par_child" type="ChildNodeTest*" member="true" static="false" agent="AgentNodeTest" />
-      <property name="par_child_agent_1" type="ChildNodeTest" member="false" static="false" defaultvalue="null" />
+      <property name="par_child_agent_1" type="ChildNodeTest*" member="false" static="false" defaultvalue="null" />
       <property name="redirectCount" type="uint" member="false" static="false" defaultvalue="0" />
       <property name="redirectTime" type="uint" member="false" static="false" defaultvalue="0" />
       <property name="test_int_array" type="vector&lt;int&gt;" member="false" static="false" defaultvalue="3:1|2|3" />
@@ -142,7 +142,7 @@
       <property name="TestMember2" type="TestNamespace::Float2" member="false" static="false" defaultvalue="{x=0;y=0;}" />
     </properties>
   </agent>
-  <agent type="EmployeeParTestAgent" base="ParTestAgent" signature="794251523">
+  <agent type="EmployeeParTestAgent" base="ParTestAgent" signature="1290732412">
     <properties>
       <property name="STV_BOOL_0" type="bool" member="true" static="true" agent="ParTestAgentBase" />
       <property name="STV_CHAR_0" type="char" member="true" static="true" agent="ParTestAgentBase" />
@@ -191,9 +191,9 @@
       <property name="TV_UINT_0" type="uint" member="true" static="false" agent="EmployeeParTestAgent" />
       <property name="TV_ULL_0" type="ullong" member="true" static="false" agent="EmployeeParTestAgent" />
       <property name="TV_ULONG_0" type="ulong" member="true" static="false" agent="EmployeeParTestAgent" />
-      <property name="C_Agent" type="ParTestAgent" member="false" static="false" defaultvalue="null" />
-      <property name="C_GameObject" type="UnityEngine::GameObject" member="false" static="false" defaultvalue="null" />
-      <property name="target" type="ParTestAgent" member="false" static="false" defaultvalue="null" />
+      <property name="C_Agent" type="ParTestAgent*" member="false" static="false" defaultvalue="null" />
+      <property name="C_GameObject" type="UnityEngine::GameObject*" member="false" static="false" defaultvalue="null" />
+      <property name="target" type="ParTestAgent*" member="false" static="false" defaultvalue="null" />
     </properties>
   </agent>
   <agent type="FSMAgentTest" base="behaviac::Agent" signature="3125537989">

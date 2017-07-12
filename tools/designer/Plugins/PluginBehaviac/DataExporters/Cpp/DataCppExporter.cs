@@ -35,7 +35,7 @@ namespace PluginBehaviac.DataExporters
         {
             string typeName = Plugin.GetNativeTypeName(type);
 
-            if (!typeName.EndsWith("*") && Plugin.IsRefType(type))
+            if (!typeName.Contains("*") && Plugin.IsRefType(type))
             {
                 typeName += "*";
             }
@@ -102,7 +102,7 @@ namespace PluginBehaviac.DataExporters
 
         public static string GetGeneratedNativeType(Type type, string nativeTypeName)
         {
-            if (!nativeTypeName.EndsWith("*"))
+            if (!nativeTypeName.Contains("*"))
             {
                 if (Plugin.IsRefType(type))
                 {
@@ -161,6 +161,13 @@ namespace PluginBehaviac.DataExporters
             {
                 value = "(char)0";
             }
+            else if (type == typeof(float))
+            {
+                if (!string.IsNullOrEmpty(value) && !value.ToLowerInvariant().EndsWith("f"))
+                {
+                    value += "f";
+                }
+            }
             else if (Plugin.IsStringType(type))
             {
                 if (typename.EndsWith("char*"))
@@ -188,7 +195,7 @@ namespace PluginBehaviac.DataExporters
             }
             else if (Plugin.IsCustomClassType(type))
             {
-                if (Plugin.IsRefType(type) || typename.EndsWith("*"))
+                if (Plugin.IsRefType(type) || typename.Contains("*"))
                 {
                     value = "NULL";
                 }
@@ -233,7 +240,7 @@ namespace PluginBehaviac.DataExporters
         public static bool IsPtr(string typeName)
         {
             typeName = DataCppExporter.GetBasicGeneratedNativeType(typeName);
-            return (typeName.EndsWith("*") && typeName != "char*" && typeName != "char *");
+            return (typeName.Contains("*") && typeName != "char*" && typeName != "char *");
         }
 
         public static bool IsAgentPtr(string typeName)
@@ -325,7 +332,7 @@ namespace PluginBehaviac.DataExporters
 
                     if (!string.IsNullOrEmpty(typename))
                     {
-                        if (typename.EndsWith("*"))
+                        if (typename.Contains("*"))
                         {
                             stream.WriteLine("{0}{1} {2} = NULL;", indent, DataCppExporter.GetBasicGeneratedNativeType(typename), var);
                         }

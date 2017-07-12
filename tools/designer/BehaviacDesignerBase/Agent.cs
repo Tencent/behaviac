@@ -265,12 +265,13 @@ namespace Behaviac.Design
         public void Reset(bool isImplemented, string name, string oldName, AgentType baseAgent, string exportLocation, string disp, string desc)
         {
             _isImplemented = isImplemented;
-            _fullname = name;
             _oldName = oldName;
             _base = baseAgent;
             _exportLocation = exportLocation;
             _displayName = disp;
             _description = desc;
+
+            setFullname(name);
         }
 
         private List<Type> getHierarchyTypes(Type type)
@@ -492,7 +493,8 @@ namespace Behaviac.Design
         {
             if (!string.IsNullOrEmpty(methodName))
             {
-                foreach (MethodDef method in this.GetMethods())
+                IList<MethodDef> methods = this.GetMethods();
+                foreach (MethodDef method in methods)
                 {
                     if (method.BasicName.ToLowerInvariant() == methodName.ToLowerInvariant())
                     {
@@ -508,7 +510,8 @@ namespace Behaviac.Design
         {
             if (method != null)
             {
-                foreach (MethodDef m in this.GetMethods())
+                IList<MethodDef> methods = this.GetMethods();
+                foreach (MethodDef m in methods)
                 {
                     if (m == method || m.BasicName == method.BasicName)
                     {
@@ -636,16 +639,45 @@ namespace Behaviac.Design
             }
         }
 
+        private void setFullname(string fullname)
+        {
+            fullname = fullname.Replace(".", "::");
+
+            if (this._fullname != fullname)
+            {
+                foreach (PropertyDef prop in this._propertyList)
+                {
+                    if (prop.ClassName == this._fullname)
+                    {
+                        prop.ClassName = fullname;
+                        prop.Name = prop.ClassName + "::" + prop.BasicName;
+                    }
+                }
+
+                foreach (MethodDef method in this._methodsList)
+                {
+                    if (method.ClassName == this._fullname)
+                    {
+                        method.ClassName = fullname;
+                        method.Name = method.ClassName + "::" + method.BasicName;
+                    }
+                }
+
+                this._fullname = fullname;
+            }
+        }
+
         private string _fullname = "";
         public string Name
         {
             get
             {
+                this._fullname = this._fullname.Replace(".", "::");
                 return this._fullname;
             }
             set
             {
-                this._fullname = value;
+                setFullname(value);
             }
         }
 

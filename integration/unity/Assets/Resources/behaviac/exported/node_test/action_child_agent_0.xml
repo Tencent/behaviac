@@ -3,7 +3,7 @@
 <!--Source File: node_test\action_child_agent_0.xml-->
 <behavior name="node_test/action_child_agent_0" agenttype="AgentNodeTest" version="5">
   <pars>
-    <par name="par_child_agent" type="AgentNodeTest" value="null" />
+    <par name="par_child_agent" type="AgentNodeTest*" value="null" />
   </pars>
   <node class="Sequence" id="0">
     <node class="Action" id="3">

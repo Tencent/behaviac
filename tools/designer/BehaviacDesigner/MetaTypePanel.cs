@@ -563,7 +563,45 @@ namespace Behaviac.Design
             {
                 _isNamespaceModified = false;
 
-                this.IsModified = true;
+                this.namespaceTextBox.Text = this.namespaceTextBox.Text.Replace(".", "::");
+
+                if (this.GetMetaType() == MetaTypes.Agent)
+                {
+                    Debug.Check(_customizedAgent != null);
+
+                    if (_customizedAgent != null)
+                    {
+                        _customizedAgent.OldName = _customizedAgent.Name;
+
+                        this.IsModified = true;
+                    }
+                }
+                else if (this.GetMetaType() == MetaTypes.Enum)
+                {
+                    Debug.Check(_enumType != null);
+
+                    if (_enumType != null)
+                    {
+                        _enumType.OldName = _enumType.Fullname;
+
+                        TypeManager.Instance.MapName(_enumType.OldName, _enumType.Fullname);
+
+                        this.IsModified = true;
+                    }
+                }
+                else if (this.GetMetaType() == MetaTypes.Struct)
+                {
+                    Debug.Check(_structType != null);
+
+                    if (_structType != null)
+                    {
+                        _structType.OldName = _structType.Fullname;
+
+                        TypeManager.Instance.MapName(_structType.OldName, _structType.Fullname);
+
+                        this.IsModified = true;
+                    }
+                }
             }
         }
 

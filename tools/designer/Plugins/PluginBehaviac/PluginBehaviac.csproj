@@ -218,6 +218,7 @@
     <Compile Include="Nodes\HTN\Method.cs" />
     <Compile Include="Nodes\HTN\Task.cs" />
     <Compile Include="NodeUI\AlwaysTransitionUIPolicy.cs" />
+    <Compile Include="NodeUI\ConditionUIPolicy.cs" />
     <Compile Include="NodeUI\ComputeUIPolicy.cs" />
     <Compile Include="NodeUI\EffectorUIPolicy.cs" />
     <Compile Include="NodeUI\AssignmentUIPolicy.cs" />

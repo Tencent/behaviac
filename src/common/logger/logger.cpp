@@ -208,7 +208,7 @@ namespace behaviac {
 #endif//#if _MSC_VER >= 1500
 
         if (s_debugger && (EnableMask & ELOG_VCOUTPUT)) {
-            OutputDebugString(temp);
+            OutputDebugStringA(temp);
         }
 
 #endif//

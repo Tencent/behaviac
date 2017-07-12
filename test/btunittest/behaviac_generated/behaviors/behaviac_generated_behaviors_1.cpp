@@ -1406,7 +1406,7 @@ namespace behaviac
 			pBT->SetAgentType("AgentNodeTest");
 #endif
 			// locals
-			pBT->AddLocal("AgentNodeTest", "AgentNodeTest", "par_child_agent", "null");
+			pBT->AddLocal("AgentNodeTest", "AgentNodeTest*", "par_child_agent", "null");
 			// children
 			{
 				Sequence* node0 = BEHAVIAC_NEW Sequence;
@@ -1934,7 +1934,7 @@ namespace behaviac
 			pBT->AddLocal("AgentNodeTest", "int", "par_int_type_0", "0");
 			pBT->AddLocal("AgentNodeTest", "int", "par_int_type_1", "0");
 			pBT->AddLocal("AgentNodeTest", "int", "par_int_type_2", "300");
-			pBT->AddLocal("AgentNodeTest", "UnityEngine::GameObject", "par_go", "null");
+			pBT->AddLocal("AgentNodeTest", "UnityEngine::GameObject*", "par_go", "null");
 			// children
 			{
 				Sequence* node0 = BEHAVIAC_NEW Sequence;
@@ -2417,11 +2417,11 @@ namespace behaviac
 			pBT->SetAgentType("AgentNodeTest");
 #endif
 			// locals
-			pBT->AddLocal("AgentNodeTest", "UnityEngine::GameObject", "par_go", "null");
+			pBT->AddLocal("AgentNodeTest", "UnityEngine::GameObject*", "par_go", "null");
 			pBT->AddLocal("AgentNodeTest", "float", "par_float_type_0", "0");
 			pBT->AddLocal("AgentNodeTest", "float", "par_float_type_1", "0");
 			pBT->AddLocal("AgentNodeTest", "float", "par_float_type_2", "2.7");
-			pBT->AddLocal("AgentNodeTest", "TestNS::Node", "local_node", "null");
+			pBT->AddLocal("AgentNodeTest", "TestNS::Node*", "local_node", "null");
 			// children
 			{
 				Sequence* node0 = BEHAVIAC_NEW Sequence;

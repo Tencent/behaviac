@@ -2753,7 +2753,7 @@ namespace behaviac
 
 		public override bool Load()
 		{
-			AgentMeta.TotalSignature = 2352269984;
+			AgentMeta.TotalSignature = 3051046410;
 
 			AgentMeta meta;
 
@@ -2768,7 +2768,7 @@ namespace behaviac
 			meta.RegisterMethod(502968959, new CMethod_behaviac_Agent_VectorRemove());
 
 			// AgentNodeTest
-			meta = new AgentMeta(1170745505);
+			meta = new AgentMeta(2154231183);
 			AgentMeta._AgentMetas_[1457925020] = meta;
 			meta.RegisterCustomizedProperty(257770974, new CCustomizedProperty<TestNS.Float2>(257770974, "c_ReturnFloat2", "{x=0;y=0;}"));
 			meta.RegisterCustomizedProperty(2482280992, new CCustomizedProperty<TestNS.Float2>(2482280992, "c_ReturnFloat2Const", "{x=0;y=0;}"));
@@ -2848,7 +2848,7 @@ namespace behaviac
 			meta.RegisterMethod(502968959, new CMethod_behaviac_Agent_VectorRemove());
 
 			// ChildNodeTest
-			meta = new AgentMeta(504541392);
+			meta = new AgentMeta(758083215);
 			AgentMeta._AgentMetas_[3929034668] = meta;
 			meta.RegisterCustomizedProperty(257770974, new CCustomizedProperty<TestNS.Float2>(257770974, "c_ReturnFloat2", "{x=0;y=0;}"));
 			meta.RegisterCustomizedProperty(2482280992, new CCustomizedProperty<TestNS.Float2>(2482280992, "c_ReturnFloat2Const", "{x=0;y=0;}"));
@@ -2930,7 +2930,7 @@ namespace behaviac
 			meta.RegisterMethod(502968959, new CMethod_behaviac_Agent_VectorRemove());
 
 			// ChildNodeTestSub
-			meta = new AgentMeta(2943698288);
+			meta = new AgentMeta(769599473);
 			AgentMeta._AgentMetas_[2999848163] = meta;
 			meta.RegisterCustomizedProperty(257770974, new CCustomizedProperty<TestNS.Float2>(257770974, "c_ReturnFloat2", "{x=0;y=0;}"));
 			meta.RegisterCustomizedProperty(2482280992, new CCustomizedProperty<TestNS.Float2>(2482280992, "c_ReturnFloat2Const", "{x=0;y=0;}"));
@@ -3103,7 +3103,7 @@ namespace behaviac
 			meta.RegisterMethod(502968959, new CMethod_behaviac_Agent_VectorRemove());
 
 			// ParTestAgent
-			meta = new AgentMeta(1095947230);
+			meta = new AgentMeta(414054132);
 			AgentMeta._AgentMetas_[2466883229] = meta;
 			meta.RegisterMemberProperty(907888646, new CStaticMemberProperty<bool>("STV_BOOL_0", delegate(bool value) { ParTestAgent.STV_BOOL_0 = value; }, delegate() { return ParTestAgent.STV_BOOL_0; }));
 			meta.RegisterMemberProperty(2191125959, new CStaticMemberProperty<char>("STV_CHAR_0", delegate(char value) { ParTestAgent.STV_CHAR_0 = value; }, delegate() { return ParTestAgent.STV_CHAR_0; }));
@@ -3197,7 +3197,7 @@ namespace behaviac
 			meta.RegisterMethod(502968959, new CMethod_behaviac_Agent_VectorRemove());
 
 			// EmployeeParTestAgent
-			meta = new AgentMeta(4248282271);
+			meta = new AgentMeta(1460341221);
 			AgentMeta._AgentMetas_[1673745146] = meta;
 			meta.RegisterMemberProperty(907888646, new CStaticMemberProperty<bool>("STV_BOOL_0", delegate(bool value) { EmployeeParTestAgent.STV_BOOL_0 = value; }, delegate() { return EmployeeParTestAgent.STV_BOOL_0; }));
 			meta.RegisterMemberProperty(2191125959, new CStaticMemberProperty<char>("STV_CHAR_0", delegate(char value) { EmployeeParTestAgent.STV_CHAR_0 = value; }, delegate() { return EmployeeParTestAgent.STV_CHAR_0; }));

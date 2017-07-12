@@ -116,7 +116,7 @@
       <Member Name="testFloat2" DisplayName="testFloat2" Desc="local_node" Class="AgentNodeTest" Type="TestNS::Float2" TypeFullName="XMLPluginBehaviac.TestNS_Float2" IsCustomized="true" defaultvalue="{x=0;y=0;}" Static="false" Public="true" Readonly="false" />
       <Member Name="c_ReturnFloat2" DisplayName="c_ReturnFloat2" Desc="c_ReturnFloat2" Class="AgentNodeTest" Type="TestNS::Float2" TypeFullName="XMLPluginBehaviac.TestNS_Float2" IsCustomized="true" defaultvalue="{x=0;y=0;}" Static="false" Public="true" Readonly="false" />
       <Member Name="c_ReturnFloat2Const" DisplayName="c_ReturnFloat2Const" Desc="c_ReturnFloat2Const" Class="AgentNodeTest" Type="TestNS::Float2" TypeFullName="XMLPluginBehaviac.TestNS_Float2" IsCustomized="true" defaultvalue="{x=0;y=0;}" Static="false" Public="true" Readonly="false" />
-      <Member Name="par_child_agent_1" DisplayName="par_child_agent_1" Desc="par_child_agent_1" Class="AgentNodeTest" Type="ChildNodeTest" TypeFullName="XMLPluginBehaviac.ChildNodeTest" IsCustomized="true" defaultvalue="null" Static="false" Public="true" Readonly="false" />
+      <Member Name="par_child_agent_1" DisplayName="par_child_agent_1" Desc="par_child_agent_1" Class="AgentNodeTest" Type="ChildNodeTest*" TypeFullName="XMLPluginBehaviac.ChildNodeTest" IsCustomized="true" defaultvalue="null" Static="false" Public="true" Readonly="false" />
       <Member Name="redirectCount" DisplayName="redirectCount" Desc="redirectCount" Class="AgentNodeTest" Type="uint" TypeFullName="System.UInt32" IsCustomized="true" defaultvalue="0" Static="false" Public="true" Readonly="false" />
       <Member Name="testVar_str_1" DisplayName="testVar_str_1" Desc="testVar_str_1" Class="AgentNodeTest" Type="string" TypeFullName="System.String" defaultvalue="" Static="false" Public="true" Readonly="false" />
       <Member Name="testVar_str_0" DisplayName="testVar_str_0" Desc="testVar_str_0" Class="AgentNodeTest" Type="string" TypeFullName="System.String" defaultvalue="" Static="false" Public="true" Readonly="false" />
@@ -200,7 +200,7 @@
         <Param Name="param0" Type="int" TypeFullName="System.Int32" DisplayName="param" Desc="param0" />
       </Method>
       <Method Name="event_test_agent" DisplayName="event_test_agent" Desc="event_test_agent" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="true">
-        <Param Name="param0" Type="AgentNodeTest" TypeFullName="XMLPluginBehaviac.AgentNodeTest" DisplayName="agent" Desc="param0" />
+        <Param Name="param0" Type="AgentNodeTest*" TypeFullName="XMLPluginBehaviac.AgentNodeTest" DisplayName="agent" Desc="param0" />
       </Method>
       <Method Name="event_test_a" DisplayName="event_test_a" Desc="event_test_0" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="true">
         <Param Name="param0" Type="int" TypeFullName="System.Int32" DisplayName="param" Desc="param0" />
@@ -384,8 +384,8 @@
       </Method>
     </agent>
     <agent classfullname="ParTestAgent" base="ParTestAgentBase" DisplayName="ParTestAgent" Desc="ParTestAgent" IsRefType="true" IsImplemented="true">
-      <Member Name="C_Agent" DisplayName="C_Agent" Desc="C_Agent" Class="ParTestAgent" Type="ParTestAgent" TypeFullName="XMLPluginBehaviac.ParTestAgent" IsCustomized="true" defaultvalue="null" Static="false" Public="true" Readonly="false" />
-      <Member Name="C_GameObject" DisplayName="C_GameObject" Desc="C_GameObject" Class="ParTestAgent" Type="UnityEngine::GameObject" TypeFullName="XMLPluginBehaviac.UnityEngine_GameObject" IsCustomized="true" defaultvalue="null" Static="false" Public="true" Readonly="false" />
+      <Member Name="C_Agent" DisplayName="C_Agent" Desc="C_Agent" Class="ParTestAgent" Type="ParTestAgent*" TypeFullName="XMLPluginBehaviac.ParTestAgent" IsCustomized="true" defaultvalue="null" Static="false" Public="true" Readonly="false" />
+      <Member Name="C_GameObject" DisplayName="C_GameObject" Desc="C_GameObject" Class="ParTestAgent" Type="UnityEngine::GameObject*" TypeFullName="XMLPluginBehaviac.UnityEngine_GameObject" IsCustomized="true" defaultvalue="null" Static="false" Public="true" Readonly="false" />
       <Member Name="STV_LIST_KEMPLOYEE_0" DisplayName="1 # STV_LIST_KEMPLOYEE_0" Desc="A" Class="ParTestAgent" Type="vector&lt;TNS::ST::PER::WRK::kEmployee&gt;" TypeFullName="System.Collections.Generic.List`1[[XMLPluginBehaviac.TNS_ST_PER_WRK_kEmployee, XMLPluginBehaviac, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]" defaultvalue="0:" Static="true" Public="true" Readonly="false" />
       <Member Name="TV_KEMPLOYEE_0" DisplayName="1 # TV_KEMPLOYEE_0" Desc="A" Class="ParTestAgent" Type="TNS::ST::PER::WRK::kEmployee" TypeFullName="XMLPluginBehaviac.TNS_ST_PER_WRK_kEmployee" defaultvalue="{id=0;name=&quot;&quot;;code=A;weight=0;isMale=false;skinColor=RED;car={brand=&quot;&quot;;price=0;color=RED;};boss=null;}" Static="false" Public="true" Readonly="false" />
       <Member Name="TV_LONG_0" DisplayName="1 # TV_LONG_0" Desc="A" Class="ParTestAgent" Type="long" TypeFullName="System.Int64" defaultvalue="0" Static="false" Public="true" Readonly="false" />
@@ -447,7 +447,7 @@
       </Method>
     </agent>
     <agent classfullname="EmployeeParTestAgent" base="ParTestAgent" DisplayName="EmployeeParTestAgent" Desc="EmployeeParTestAgent" IsRefType="true" IsImplemented="true">
-      <Member Name="target" DisplayName="target" Desc="target" Class="EmployeeParTestAgent" Type="ParTestAgent" TypeFullName="XMLPluginBehaviac.ParTestAgent" IsCustomized="true" defaultvalue="null" Static="false" Public="true" Readonly="false" />
+      <Member Name="target" DisplayName="target" Desc="target" Class="EmployeeParTestAgent" Type="ParTestAgent*" TypeFullName="XMLPluginBehaviac.ParTestAgent" IsCustomized="true" defaultvalue="null" Static="false" Public="true" Readonly="false" />
       <Member Name="STV_LIST_F_0" DisplayName="2 # STV_LIST_F_0" Desc="A" Class="EmployeeParTestAgent" Type="vector&lt;float&gt;" TypeFullName="System.Collections.Generic.List`1[[System.Single, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" defaultvalue="0:" Static="true" Public="true" Readonly="false" />
       <Member Name="TV_F_0" DisplayName="2 # TV_F_0" Desc="A" Class="EmployeeParTestAgent" Type="float" TypeFullName="System.Single" defaultvalue="0" Static="false" Public="true" Readonly="false" />
       <Member Name="TV_LIST_F_0" DisplayName="2 # TV_LIST_F_0" Desc="A" Class="EmployeeParTestAgent" Type="vector&lt;float&gt;" TypeFullName="System.Collections.Generic.List`1[[System.Single, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" defaultvalue="0:" Static="false" Public="true" Readonly="false" />

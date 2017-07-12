@@ -3,7 +3,7 @@
 <!--Source File: node_test\fsm\action_ut_1_2.xml-->
 <behavior name="node_test/fsm/action_ut_1_2" agenttype="AgentNodeTest" version="5">
   <pars>
-    <par name="par_go" type="UnityEngine::GameObject" value="null" />
+    <par name="par_go" type="UnityEngine::GameObject*" value="null" />
     <par name="par_float_type_0" type="float" value="0" />
     <par name="par_float_type_1" type="float" value="0" />
     <par name="par_float_type_2" type="float" value="2.7" />

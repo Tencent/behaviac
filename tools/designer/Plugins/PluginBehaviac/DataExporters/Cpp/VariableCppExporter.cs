@@ -67,7 +67,7 @@ namespace PluginBehaviac.DataExporters
 
                 if (Plugin.IsRefType(type))
                 {
-                    if (!nativeType.EndsWith("*"))
+                    if (!nativeType.Contains("*"))
                     {
                         nativeType += "*";
                     }
