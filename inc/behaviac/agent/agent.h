@@ -442,10 +442,6 @@ namespace behaviac {
         static bool VectorContains(IList& vector, const System::Object& element);
         static void VectorClear(IList& vector);
 
-        void  CurrentBT(BehaviorTreeTask* value) {
-            m_currentBT = value;
-            m_excutingTreeTask = m_currentBT;
-        }
 
     protected:
         Agent();
@@ -483,6 +479,11 @@ namespace behaviac {
         EBTStatus btexec_();
 
         void _btsetcurrent(const char* relativePath, TriggerMode triggerMode = TM_Transfer, bool bByEvent = false);
+
+        void  _setCurrentTreeTask(BehaviorTreeTask* value) {
+            m_currentBT = value;
+            //m_excutingTreeTask = m_currentBT;
+        }
 
         void btunload_pars(const BehaviorTree* bt);
 

@@ -397,7 +397,7 @@ namespace behaviac {
 
     private:
         bool load(const char* file);
-
+		BehaviorTreeTask* m_lastTreeTask;
     };
 } // namespace behaviac
 

@@ -614,7 +614,7 @@ namespace behaviac {
                     this->m_behaviorTreeTasks.push_back(pTask);
                 }
 
-                this->CurrentBT(pTask);
+                this->_setCurrentTreeTask(pTask);
 
                 //this->_balckboard_bound = false;
                 //this->GetVariables()->Clear(false);
@@ -654,7 +654,7 @@ namespace behaviac {
                     //get the last one
                     BehaviorTreeStackItem_t& lastOne = this->m_btStack.back();
                     this->m_btStack.pop_back();
-                    this->CurrentBT(lastOne.bt);
+                    this->_setCurrentTreeTask(lastOne.bt);
 
                     bool bExecCurrent = false;
 
@@ -683,6 +683,10 @@ namespace behaviac {
                     break;
                 }
             }
+
+			if (s != BT_RUNNING) {
+				this->m_excutingTreeTask = 0;
+			}
 
             return s;
         } else {
@@ -779,7 +783,7 @@ namespace behaviac {
             const BehaviorTree* bt = (const BehaviorTree*)btNode;
             this->btunload_pars(bt);
 
-            this->CurrentBT(0);
+            this->_setCurrentTreeTask(0);
         }
 
         //remove it from stack
@@ -862,7 +866,7 @@ namespace behaviac {
 
         this->m_behaviorTreeTasks.clear();
 
-        this->CurrentBT(0);
+        this->_setCurrentTreeTask(0);
         this->m_btStack.clear();
 
         this->GetVariables()->Unload();
@@ -870,7 +874,7 @@ namespace behaviac {
     }
 
     void Agent::btreloadall() {
-        this->CurrentBT(0);
+        this->_setCurrentTreeTask(0);
         this->m_btStack.clear();
 
         behaviac::vector<behaviac::string> bts;

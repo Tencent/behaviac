@@ -1342,7 +1342,7 @@ namespace behaviac {
 		handler(this, pAgent, user_data);
     }
 
-    BehaviorTreeTask::BehaviorTreeTask() : SingeChildTask()
+	BehaviorTreeTask::BehaviorTreeTask() : SingeChildTask(), m_lastTreeTask(0)
     {
 	}
 
@@ -1429,7 +1429,7 @@ namespace behaviac {
     }
 
     void BehaviorTreeTask::onexit(Agent* pAgent, EBTStatus status) {
-        pAgent->m_excutingTreeTask = NULL;
+		pAgent->m_excutingTreeTask = this->m_lastTreeTask;
         pAgent->LogReturnTree(this->GetName());
         super::onexit(pAgent, status);
     }
@@ -1438,6 +1438,7 @@ namespace behaviac {
         BEHAVIAC_ASSERT(this->m_node != 0);
         BEHAVIAC_ASSERT(BehaviorTree::DynamicCast(this->m_node) != 0);
 
+		this->m_lastTreeTask = pAgent->m_excutingTreeTask;
         pAgent->m_excutingTreeTask = this;
 
         BehaviorTree* tree = (BehaviorTree*)this->m_node;

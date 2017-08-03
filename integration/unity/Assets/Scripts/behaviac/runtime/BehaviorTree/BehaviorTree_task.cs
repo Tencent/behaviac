@@ -1340,6 +1340,7 @@ namespace behaviac
     public class BehaviorTreeTask : SingeChildTask
     {
         private Dictionary<uint, IInstantiatedVariable> m_localVars = new Dictionary<uint, IInstantiatedVariable>();
+        private BehaviorTreeTask m_excutingTreeTask = null;
         public Dictionary<uint, IInstantiatedVariable> LocalVars
         {
             get
@@ -1462,7 +1463,7 @@ namespace behaviac
 
         protected override void onexit(Agent pAgent, EBTStatus s)
         {
-            pAgent.ExcutingTreeTask = null;
+            pAgent.ExcutingTreeTask = this.m_excutingTreeTask;
             pAgent.LogReturnTree(this.GetName());
 
             base.onexit(pAgent, s);
@@ -1495,6 +1496,7 @@ namespace behaviac
             Debug.Check(this.m_node != null);
             Debug.Check(this.m_node is BehaviorTree);
 
+            this.m_excutingTreeTask = pAgent.ExcutingTreeTask;
             pAgent.ExcutingTreeTask = this;
 
             BehaviorTree tree = (BehaviorTree)this.m_node;

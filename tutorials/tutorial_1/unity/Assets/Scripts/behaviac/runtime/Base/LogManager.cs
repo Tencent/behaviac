@@ -298,7 +298,7 @@ namespace behaviac
                         //string agentClassName = pAgent.GetObjectTypeName();
                         //string agentInstanceName = pAgent.GetName();
 
-                        BehaviorTreeTask bt = !System.Object.ReferenceEquals(pAgent, null) ? pAgent.CurrentBT : null;
+                        BehaviorTreeTask bt = !System.Object.ReferenceEquals(pAgent, null) ? pAgent.CurrentTreeTask : null;
 
                         string btName;
 

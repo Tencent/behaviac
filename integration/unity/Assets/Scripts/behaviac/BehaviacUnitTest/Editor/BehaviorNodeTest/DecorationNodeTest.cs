@@ -75,7 +75,7 @@ namespace BehaviorNodeUnitTest
 		        Assert.AreEqual(behaviac.EBTStatus.BT_RUNNING, status);
                 Assert.AreEqual(0, testAgent.testVar_0);
 
-                behaviac.BehaviorTreeTask btTask = testAgent.CurrentBT;
+                behaviac.BehaviorTreeTask btTask = testAgent.CurrentTreeTask;
                 Assert.AreNotEqual(null, btTask);
 
                 List<behaviac.BehaviorTask> nodes = btTask.GetRunningNodes(false);

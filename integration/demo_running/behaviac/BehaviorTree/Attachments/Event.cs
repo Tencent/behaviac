@@ -93,8 +93,8 @@ namespace behaviac
 
                     pAgent.bteventtree(pAgent, this.m_referencedBehaviorPath, tm);
 
-                    Debug.Check(pAgent.CurrentBT != null);
-                    pAgent.CurrentBT.AddVariables(eventParams);
+                    Debug.Check(pAgent.CurrentTreeTask != null);
+                    pAgent.CurrentTreeTask.AddVariables(eventParams);
 
                     pAgent.btexec();
                 }
