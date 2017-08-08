@@ -89,10 +89,11 @@ namespace behaviac {
 			for (behaviac::map<uint32_t, IProperty*>::const_iterator it = members.begin(); it != members.end(); ++it) {
 				//uint32_t memberId = it->first;
 				const IProperty* pProperty = it->second;
-
-				behaviac::string valueStr = pProperty->GetValueToString((behaviac::Agent*)pObject);
-				CIOID  attrId(pProperty->Name());
-				node->setAttr(attrId, valueStr.c_str());
+				if (!pProperty->IsArrayItem()) {
+					behaviac::string valueStr = pProperty->GetValueToString((behaviac::Agent*)pObject);
+					CIOID  attrId(pProperty->Name());
+					node->setAttr(attrId, valueStr.c_str());
+				}
 			}
 		}
     }

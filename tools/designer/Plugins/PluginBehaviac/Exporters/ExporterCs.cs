@@ -581,7 +581,8 @@ namespace PluginBehaviac.Exporters
                     {
                         string staticStr = prop.IsStatic ? "static " : "";
                         string propType = DataCsExporter.GetGeneratedNativeType(prop.Type);
-                        string defaultValue = DataCsExporter.GetGeneratedPropertyDefaultValue(prop, propType);
+                        //string defaultValue = DataCsExporter.GetGeneratedPropertyDefaultValue(prop, propType);
+                        string defaultValue = DataCsExporter.GetGeneratedPropertyDefaultValue(prop);
 
                         if (defaultValue != null)
                         {

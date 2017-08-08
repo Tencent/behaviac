@@ -339,6 +339,8 @@ namespace behaviac
         public static string GetTypeName(string typeName)
         {
             typeName = typeName.Replace("*", "");
+            //typeName = typeName.Replace("&lt;", "<");
+            //typeName = typeName.Replace("&gt;", ">");
             return typeName;
         }
 

@@ -176,6 +176,29 @@ namespace Behaviac.Design
             return (prop != null) ? GetGeneratedDefaultValue(prop.Type, typename, prop.DefaultValue) : null;
         }
 
+        public static string GetGeneratedPropertyDefaultValue(PropertyDef prop)
+        {
+            string propType = GetGeneratedNativeType(prop.Type);
+            string defaultValue = GetGeneratedDefaultValue(prop.Type, propType, prop.DefaultValue);
+
+            if (!string.IsNullOrEmpty(prop.DefaultValue) && Plugin.IsArrayType(prop.Type))
+            {
+                int index = prop.DefaultValue.IndexOf(":");
+                if (index > 0)
+                {
+                    Type itemType = prop.Type.GetGenericArguments()[0];
+                    if (!Plugin.IsArrayType(itemType) && !Plugin.IsCustomClassType(itemType))
+                    {
+                        string itemsCount = prop.DefaultValue.Substring(0, index);
+                        string items = prop.DefaultValue.Substring(index + 1).Replace("|", ", ");
+                        defaultValue = string.Format("new {0}({1}) {{{2}}}", propType, itemsCount, items);
+                    }
+                }
+            }
+
+            return defaultValue;
+        }
+
         public static string GetPropertyBasicName(Behaviac.Design.PropertyDef property, MethodDef.Param arrayIndexElement)
         {
             if (property != null)

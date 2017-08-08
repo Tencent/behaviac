@@ -1,5 +1,8 @@
+2017-08-08  3.6.37
+    Support generating the codes for initializing the member array.
+
 2017-08-03  3.6.36
-	fix a bug of accessing task params when calling a sub tree
+    Fix a bug of accessing task params when calling a sub tree
 
 2017-7-11  3.6.35
     Improve the C++ types generation.

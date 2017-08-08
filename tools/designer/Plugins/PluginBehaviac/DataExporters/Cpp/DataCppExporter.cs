@@ -213,6 +213,35 @@ namespace PluginBehaviac.DataExporters
             return (prop != null) ? GetGeneratedDefaultValue(prop.Type, typename, prop.DefaultValue) : null;
         }
 
+        public static void GeneratedPropertyDefaultValue(StringWriter file, string indent, PropertyDef prop)
+        {
+            string propType = GetGeneratedNativeType(prop.Type);
+            string defaultValue = GetGeneratedDefaultValue(prop.Type, propType, prop.DefaultValue);
+
+            if (defaultValue != null)
+            {
+                file.WriteLine("{0}{1} = {2};", indent, prop.BasicName, defaultValue);
+            }
+            else if (!string.IsNullOrEmpty(prop.DefaultValue) && Plugin.IsArrayType(prop.Type))
+            {
+                int index = prop.DefaultValue.IndexOf(":");
+                if (index > 0)
+                {
+                    Type itemType = prop.Type.GetGenericArguments()[0];
+                    if (!Plugin.IsArrayType(itemType) && !Plugin.IsCustomClassType(itemType))
+                    {
+                        string itemTypename = GetGeneratedNativeType(itemType);
+                        string[] items = prop.DefaultValue.Substring(index + 1).Split('|');
+                        for (int i = 0; i < items.Length; ++i)
+                        {
+                            string defaultItemValue = GetGeneratedDefaultValue(itemType, itemTypename, items[i]);
+                            file.WriteLine("{0}{1}.push_back({2});", indent, prop.BasicName, defaultItemValue);
+                        }
+                    }
+                }
+            }
+        }
+
         public static string GetPropertyBasicName(Behaviac.Design.PropertyDef property, MethodDef.Param arrayIndexElement)
         {
             if (property != null)

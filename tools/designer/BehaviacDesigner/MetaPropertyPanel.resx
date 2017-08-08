@@ -140,9 +140,6 @@
   <data name="&gt;&gt;isPublicCheckBox.Parent" xml:space="preserve">
     <value>descGroupBox</value>
   </data>
-  <data name="&gt;&gt;nameTextBox.Parent" xml:space="preserve">
-    <value>descGroupBox</value>
-  </data>
   <data name="arrayCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>415, 45</value>
   </data>
@@ -150,8 +147,8 @@
   <data name="customizedCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="dispLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>35</value>
+  <data name="typeComboBox.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
   </data>
   <data name="&gt;&gt;isConstCheckBox.ZOrder" xml:space="preserve">
     <value>10</value>
@@ -168,6 +165,9 @@
   <data name="nameLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="descGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
   <data name="&gt;&gt;valueLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -176,6 +176,9 @@
   </data>
   <data name="descLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
+  </data>
+  <data name="descTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>91, 144</value>
   </data>
   <data name="&gt;&gt;isStaticCheckBox.Name" xml:space="preserve">
     <value>isStaticCheckBox</value>
@@ -195,6 +198,9 @@
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
+  <data name="&gt;&gt;dispTextBox.Parent" xml:space="preserve">
+    <value>descGroupBox</value>
+  </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
   </data>
@@ -207,8 +213,8 @@
   <data name="isPublicCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="customizedCheckBox.Text" xml:space="preserve">
-    <value>Customized?</value>
+  <data name="&gt;&gt;nameTextBox.ZOrder" xml:space="preserve">
+    <value>9</value>
   </data>
   <data name="&gt;&gt;descLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -228,8 +234,8 @@
   <data name="customizedCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
-  <data name="&gt;&gt;dispTextBox.Parent" xml:space="preserve">
-    <value>descGroupBox</value>
+  <data name="&gt;&gt;arrayCheckBox.ZOrder" xml:space="preserve">
+    <value>13</value>
   </data>
   <data name="descLabel.Text" xml:space="preserve">
     <value>Description:</value>
@@ -255,8 +261,8 @@
   <data name="dispLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
-  <data name="typeComboBox.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Popup</value>
+  <data name="dispTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>91, 117</value>
   </data>
   <data name="valueLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -273,8 +279,8 @@
   <data name="&gt;&gt;arrayCheckBox.Parent" xml:space="preserve">
     <value>descGroupBox</value>
   </data>
-  <data name="nameTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>91, 15</value>
+  <data name="isConstCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>244, 65</value>
   </data>
   <data name="&gt;&gt;nameLabel.Parent" xml:space="preserve">
     <value>descGroupBox</value>
@@ -306,9 +312,6 @@
   <data name="&gt;&gt;isConstCheckBox.Parent" xml:space="preserve">
     <value>descGroupBox</value>
   </data>
-  <data name="&gt;&gt;arrayCheckBox.Name" xml:space="preserve">
-    <value>arrayCheckBox</value>
-  </data>
   <data name="&gt;&gt;isPublicCheckBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -329,9 +332,6 @@
   </data>
   <data name="nameLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>35, 12</value>
-  </data>
-  <data name="&gt;&gt;customizedCheckBox.Name" xml:space="preserve">
-    <value>customizedCheckBox</value>
   </data>
   <data name="isPublicCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>91, 69</value>
@@ -360,6 +360,12 @@
   <data name="&gt;&gt;descTextBox.Name" xml:space="preserve">
     <value>descTextBox</value>
   </data>
+  <data name="&gt;&gt;typeComboBox.Name" xml:space="preserve">
+    <value>typeComboBox</value>
+  </data>
+  <data name="dispTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
   <data name="arrayCheckBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -371,9 +377,6 @@
   </data>
   <data name="&gt;&gt;valueLabel.Parent" xml:space="preserve">
     <value>descGroupBox</value>
-  </data>
-  <data name="&gt;&gt;nameTextBox.ZOrder" xml:space="preserve">
-    <value>9</value>
   </data>
   <data name="&gt;&gt;isStaticCheckBox.ZOrder" xml:space="preserve">
     <value>14</value>
@@ -392,9 +395,6 @@
   </data>
   <data name="dispLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="&gt;&gt;descGroupBox.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="typeComboBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -435,9 +435,6 @@
   <data name="dispLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="dispTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>91, 117</value>
-  </data>
   <data name="arrayCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
@@ -446,6 +443,9 @@
   </data>
   <data name="&gt;&gt;nameTextBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;isLocalCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="valueLabel.Text" xml:space="preserve">
     <value>Default Value:</value>
@@ -471,8 +471,8 @@
   <data name="descGroupBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="descGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="&gt;&gt;descGroupBox.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="isLocalCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -504,8 +504,8 @@
   <data name="&gt;&gt;isPublicCheckBox.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="&gt;&gt;isLocalCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;nameTextBox.Parent" xml:space="preserve">
+    <value>descGroupBox</value>
   </data>
   <data name="$this.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -519,11 +519,8 @@
   <data name="&gt;&gt;dispTextBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;arrayCheckBox.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;isStaticCheckBox.Parent" xml:space="preserve">
-    <value>descGroupBox</value>
+  <data name="&gt;&gt;customizedCheckBox.Name" xml:space="preserve">
+    <value>customizedCheckBox</value>
   </data>
   <data name="&gt;&gt;descLabel.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -531,11 +528,11 @@
   <data name="valueLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 12</value>
   </data>
-  <data name="&gt;&gt;typeComboBox.ZOrder" xml:space="preserve">
-    <value>12</value>
+  <data name="&gt;&gt;isStaticCheckBox.Parent" xml:space="preserve">
+    <value>descGroupBox</value>
   </data>
-  <data name="&gt;&gt;typeComboBox.Name" xml:space="preserve">
-    <value>typeComboBox</value>
+  <data name="customizedCheckBox.Text" xml:space="preserve">
+    <value>Customized?</value>
   </data>
   <data name="descTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -552,14 +549,14 @@
   <data name="&gt;&gt;descLabel.Name" xml:space="preserve">
     <value>descLabel</value>
   </data>
-  <data name="isConstCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>244, 65</value>
+  <data name="dispLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
   </data>
   <data name="descLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="descTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>91, 144</value>
+  <data name="nameTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>91, 15</value>
   </data>
   <data name="&gt;&gt;descTextBox.Parent" xml:space="preserve">
     <value>descGroupBox</value>
@@ -573,11 +570,14 @@
   <data name="valueLabel.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
   </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="&gt;&gt;isConstCheckBox.Name" xml:space="preserve">
     <value>isConstCheckBox</value>
   </data>
-  <data name="dispTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+  <data name="&gt;&gt;typeComboBox.ZOrder" xml:space="preserve">
+    <value>12</value>
   </data>
   <data name="isStaticCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>168, 69</value>
@@ -597,8 +597,8 @@
   <data name="dispTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;arrayCheckBox.Name" xml:space="preserve">
+    <value>arrayCheckBox</value>
   </data>
   <data name="valueLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>

@@ -1981,17 +1981,20 @@ namespace Behaviac.Design
         {
             get
             {
-                if (this.IsArrayElement && !string.IsNullOrEmpty(this.NativeType))
-                {
-                    int startIndex = this.NativeType.IndexOf("<");
+                string nativeType = this.NativeType;
 
-                    if (startIndex > 0)
+                if (this.IsArrayElement && !string.IsNullOrEmpty(nativeType))
+                {
+                    int startIndex = nativeType.IndexOf("<");
+                    int endIndex = nativeType.IndexOf(">");
+
+                    if (startIndex > 0 && endIndex > 0)
                     {
-                        return this.NativeType.Substring(startIndex + 1, this.NativeType.Length - startIndex - 2);
+                        return nativeType.Substring(startIndex + 1, endIndex - startIndex - 1);
                     }
                 }
 
-                return this.NativeType;
+                return nativeType;
             }
         }
 

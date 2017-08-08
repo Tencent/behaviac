@@ -1569,7 +1569,7 @@ namespace PluginBehaviac.Exporters
 
                                     if (String.Compare(prop.NativeItemType, "bool", true) == 0)
                                     {
-                                        str_getter = string.Format("\n\tinline const void* Get_{1}(int index)\n\t{{\n#if _MSC_VER\n\t\treturn {2}._Getptr();\n#else\n\t\tstatic ThreadBool buffer;\n\t\tbool b = {2};\n\t\tbuffer.set(b);\n\t\treturn buffer.value();\n#endif\n\t}}", propType, propName, getValue);
+                                        str_getter = string.Format("\n\tinline const void* Get_{0}(int index)\n\t{{\n#if _MSC_VER\n\t\treturn {1}._Getptr();\n#else\n\t\tstatic ThreadBool buffer;\n\t\tbool b = {1};\n\t\tbuffer.set(b);\n\t\treturn buffer.value();\n#endif\n\t}}", propName, getValue);
                                     }
                                     else
                                     {
@@ -2239,13 +2239,7 @@ namespace PluginBehaviac.Exporters
                     {
                         if (!prop.IsStatic && (prop.IsCustomized || !agent.IsImplemented) && !prop.IsInherited && !prop.IsPar && !prop.IsArrayElement)
                         {
-                            string propType = DataCppExporter.GetGeneratedNativeType(prop.Type);
-                            string defaultValue = DataCppExporter.GetGeneratedPropertyDefaultValue(prop, propType);
-
-                            if (defaultValue != null)
-                            {
-                                file.WriteLine("{0}\t{1} = {2};", indent, prop.BasicName, defaultValue);
-                            }
+                            DataCppExporter.GeneratedPropertyDefaultValue(file, indent + "\t", prop);
                         }
                     }
 

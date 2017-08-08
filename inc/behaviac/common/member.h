@@ -590,11 +590,11 @@ namespace behaviac {
             return NULL;
         }
 
-#if !BEHAVIAC_RELEASE
-        virtual bool IsArrayItem() {
+//#if !BEHAVIAC_RELEASE
+        virtual bool IsArrayItem() const {
             return false;
         }
-#endif
+//#endif
     };
 
     template<typename T, bool bTypeIsVector>
@@ -815,12 +815,12 @@ namespace behaviac {
             return this->_name.c_str();
         }
 
-#if !BEHAVIAC_RELEASE
+//#if !BEHAVIAC_RELEASE
     public:
-        virtual bool IsArrayItem() {
+		virtual bool IsArrayItem() const {
             return false;
         }
-#endif
+//#endif
 
     public:
         CProperty(const char* name) {
@@ -995,12 +995,12 @@ namespace behaviac {
             _gfp = gfp;
         }
 
-#if !BEHAVIAC_RELEASE
+//#if !BEHAVIAC_RELEASE
     public:
-        virtual bool IsArrayItem() {
+		virtual bool IsArrayItem() const {
             return true;
         }
-#endif
+//#endif
 
     public:
         virtual const void* GetValueElement(const behaviac::Agent* self, int index) const {
@@ -1096,12 +1096,12 @@ namespace behaviac {
             _gfp = gfp;
         }
 
-#if !BEHAVIAC_RELEASE
+//#if !BEHAVIAC_RELEASE
     public:
-        virtual bool IsArrayItem() {
+		virtual bool IsArrayItem() const {
             return true;
         }
-#endif
+//#endif
 
     public:
         virtual const void* GetValueElement(const behaviac::Agent* self, int index) const {
@@ -1476,12 +1476,12 @@ namespace behaviac {
             _parentId = parentId;
         }
 
-#if !BEHAVIAC_RELEASE
+//#if !BEHAVIAC_RELEASE
     public:
-        virtual bool IsArrayItem() {
+		virtual bool IsArrayItem() const {
             return true;
         }
-#endif
+//#endif
 
     public:
         virtual bool IsCustomized() const {
@@ -1527,12 +1527,12 @@ namespace behaviac {
             _parentId = parentId;
         }
 
-#if !BEHAVIAC_RELEASE
+//#if !BEHAVIAC_RELEASE
     public:
-        virtual bool IsArrayItem() {
+		virtual bool IsArrayItem() const {
             return true;
         }
-#endif
+//#endif
 
     public:
         virtual bool IsCustomized() const {
