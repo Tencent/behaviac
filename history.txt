@@ -1,3 +1,6 @@
+2017-08-17  3.6.38
+    Improve the GC for the C#.
+
 2017-08-08  3.6.37
     Support generating the codes for initializing the member array.
 

@@ -1365,7 +1365,6 @@ namespace behaviac
                     }
                 }
             }
-
 #endif
         }
 
@@ -1375,9 +1374,11 @@ namespace behaviac
             if (Config.IsLoggingOrSocketing && this.m_currentBT != null)
             {
                 List<BehaviorTask> runningNodes = this.m_currentBT.GetRunningNodes(false);
+                var e = runningNodes.GetEnumerator();
 
-                foreach (BehaviorTask behaviorTask in runningNodes)
+                while (e.MoveNext())
                 {
+                    BehaviorTask behaviorTask = e.Current;
                     string btStr = BehaviorTask.GetTickInfo(this, behaviorTask, "enter");
 
                     //empty btStr is for internal BehaviorTreeTask

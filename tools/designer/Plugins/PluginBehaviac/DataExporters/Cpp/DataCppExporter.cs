@@ -163,6 +163,11 @@ namespace PluginBehaviac.DataExporters
             }
             else if (type == typeof(float))
             {
+                if (value == "0")
+                {
+                    value = "0.0";
+                }
+
                 if (!string.IsNullOrEmpty(value) && !value.ToLowerInvariant().EndsWith("f"))
                 {
                     value += "f";

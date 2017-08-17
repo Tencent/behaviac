@@ -1,4 +1,4 @@
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+﻿/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Tencent is pleased to support the open source community by making behaviac available.
 //
 // Copyright (C) 2015-2017 THL A29 Limited, a Tencent company. All rights reserved.
@@ -1818,37 +1818,41 @@ namespace behaviac
 
         public static bool Compare<T>(T left, T right, EOperatorType comparisonType)
         {
-            bool bLeftNull = (left == null);
-            bool bRightNull = (right == null);
+            Type type = typeof(T);
+            if (!type.IsValueType)
+            {
+                bool bLeftNull = (left == null);
+                bool bRightNull = (right == null);
 
-            if (bLeftNull && bRightNull) // both are null
-            {
-                if (comparisonType == EOperatorType.E_EQUAL)
+                if (bLeftNull && bRightNull) // both are null
                 {
-                    return true;
+                    if (comparisonType == EOperatorType.E_EQUAL)
+                    {
+                        return true;
+                    }
+                    else if (comparisonType == EOperatorType.E_NOTEQUAL)
+                    {
+                        return false;
+                    }
+                    else
+                    {
+                        Debug.Check(false);
+                    }
                 }
-                else if (comparisonType == EOperatorType.E_NOTEQUAL)
+                else if (bLeftNull || bRightNull) // one is null and the other is not null
                 {
-                    return false;
-                }
-                else
-                {
-                    Debug.Check(false);
-                }
-            }
-            else if (bLeftNull || bRightNull) // one is null and ther other one is not null
-            {
-                if (comparisonType == EOperatorType.E_EQUAL)
-                {
-                    return false;
-                }
-                else if (comparisonType == EOperatorType.E_NOTEQUAL)
-                {
-                    return true;
-                }
-                else
-                {
-                    Debug.Check(false);
+                    if (comparisonType == EOperatorType.E_EQUAL)
+                    {
+                        return false;
+                    }
+                    else if (comparisonType == EOperatorType.E_NOTEQUAL)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        Debug.Check(false);
+                    }
                 }
             }
 
@@ -1878,15 +1882,9 @@ namespace behaviac
                 }
             }
 
-            Type type = typeof(T);
-
             if (!type.IsValueType)
             {
-                // reference type
-                object l = (object)left;
-                object r = (object)right;
-
-                bool bEqual = Object.ReferenceEquals(l, r);
+                bool bEqual = Object.ReferenceEquals(left, right);
 
                 if (bEqual)
                 {

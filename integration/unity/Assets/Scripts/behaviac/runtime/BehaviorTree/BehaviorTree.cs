@@ -1494,9 +1494,12 @@ namespace behaviac
         {
             if (this.m_localProps != null)
             {
-                foreach (KeyValuePair<uint, ICustomizedProperty> pair in this.m_localProps)
+                var e = this.m_localProps.Keys.GetEnumerator();
+
+                while (e.MoveNext())
                 {
-                    vars[pair.Key] = pair.Value.Instantiate();
+                    uint varId = e.Current;
+                    vars[varId] = this.m_localProps[varId].Instantiate();
                 }
             }
         }
@@ -1505,8 +1508,11 @@ namespace behaviac
         {
             if (this.m_localProps != null)
             {
-                foreach (uint varId in this.m_localProps.Keys)
+                var e = this.m_localProps.Keys.GetEnumerator();
+
+                while (e.MoveNext())
                 {
+                    uint varId = e.Current;
                     vars.Remove(varId);
                 }
             }
