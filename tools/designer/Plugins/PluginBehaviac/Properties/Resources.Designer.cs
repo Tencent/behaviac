@@ -906,6 +906,60 @@ namespace PluginBehaviac.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to End.
+        /// </summary>
+        internal static string End {
+            get {
+                return ResourceManager.GetString("End", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to End.
+        /// </summary>
+        internal static string EndDesc {
+            get {
+                return ResourceManager.GetString("EndDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to End Outside.
+        /// </summary>
+        internal static string EndOutside {
+            get {
+                return ResourceManager.GetString("EndOutside", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to End all outside trees.
+        /// </summary>
+        internal static string EndOutsideDesc {
+            get {
+                return ResourceManager.GetString("EndOutsideDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to End Status.
+        /// </summary>
+        internal static string EndStatus {
+            get {
+                return ResourceManager.GetString("EndStatus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to End Status.
+        /// </summary>
+        internal static string EndStatusDesc {
+            get {
+                return ResourceManager.GetString("EndStatusDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to EndTransition.
         /// </summary>
         internal static string EndTransition {

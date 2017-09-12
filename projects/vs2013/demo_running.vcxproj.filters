@@ -2,28 +2,28 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="test">
-      <UniqueIdentifier>{39AFB45F-4E17-BE42-88DC-0ADE10FECF0F}</UniqueIdentifier>
+      <UniqueIdentifier>{62F734EE-C4A2-144B-966E-82C4E8F1994F}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running">
-      <UniqueIdentifier>{75D793C6-30BC-2E48-B6E0-0A5D641017F0}</UniqueIdentifier>
+      <UniqueIdentifier>{2EC53637-1818-884A-8E07-AA5A513EDC13}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac">
-      <UniqueIdentifier>{959EABD3-2914-204D-BB17-9F79B51E185A}</UniqueIdentifier>
+      <UniqueIdentifier>{336344EA-F327-5448-B5E8-2902AE09A084}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac\exported">
-      <UniqueIdentifier>{8CB72F5A-3941-B846-B9E6-7C7EF3F01ABD}</UniqueIdentifier>
+      <UniqueIdentifier>{825A7D74-9E6F-8A44-9B49-3EA8792F291F}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac\exported\behaviac_generated">
-      <UniqueIdentifier>{41C37ED0-46D6-4D40-87AD-5007B0C516E1}</UniqueIdentifier>
+      <UniqueIdentifier>{16DE84AC-4C91-D04F-9A6D-39E5E6FA6402}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac\exported\behaviac_generated\behaviors">
-      <UniqueIdentifier>{7B51A54D-B023-DA47-A790-7D6862A2E7A7}</UniqueIdentifier>
+      <UniqueIdentifier>{296147ED-51AA-834C-8C7B-C51853728366}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac\exported\behaviac_generated\types">
-      <UniqueIdentifier>{8529F58E-D219-CA4A-A2DA-3D17FAF41AF6}</UniqueIdentifier>
+      <UniqueIdentifier>{9160A91E-4DC1-4744-B31E-DE3B535FB0EF}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac\exported\behaviac_generated\types\internal">
-      <UniqueIdentifier>{7F8363EC-2EE1-704A-BB23-81FF35AC1FBB}</UniqueIdentifier>
+      <UniqueIdentifier>{4BED10CD-1B10-3F4B-9F6E-823AB2560721}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

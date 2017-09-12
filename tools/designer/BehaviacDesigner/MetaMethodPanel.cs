@@ -445,6 +445,7 @@ namespace Behaviac.Design
 
                 rowControl.IsArrayCheckBox.Enabled = true;
                 rowControl.ByReferrenceCheckBox.Enabled = true;
+                rowControl.IsConstCheckBox.Enabled = true;
 
                 this.IsModified = true;
             }

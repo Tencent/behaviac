@@ -89,7 +89,7 @@ namespace Behaviac.Design.Nodes
         {
             get
             {
-                return "http://www.behaviac.com/language/zh/condition/";
+                return "http://www.behaviac.com/condition/";
             }
         }
 

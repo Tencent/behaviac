@@ -353,7 +353,7 @@
       <Method Name="Move" DisplayName="Move" Desc="Move" Class="AgentNodeTest" ReturnType="behaviac::EBTStatus" ReturnTypeFullName="XMLPluginBehaviac.behaviac_EBTStatus" Static="false" Public="false" istask="false" />
       <Method Name="MoveToTarget" DisplayName="MoveToTarget" Desc="MoveToTarget" Class="AgentNodeTest" ReturnType="behaviac::EBTStatus" ReturnTypeFullName="XMLPluginBehaviac.behaviac_EBTStatus" Static="false" Public="false" istask="false" />
       <Method Name="return_status" DisplayName="return_status" Desc="return_status" Class="AgentNodeTest" ReturnType="behaviac::EBTStatus" ReturnTypeFullName="XMLPluginBehaviac.behaviac_EBTStatus" Static="false" Public="false" istask="false">
-        <Param Name="param0" Type="const TestNS::Float2&amp;" TypeFullName="XMLPluginBehaviac.TestNS_Float2" IsRef="true" DisplayName="param0" Desc="param0" />
+        <Param Name="param0" Type="const TestNS::Float2&amp;" TypeFullName="XMLPluginBehaviac.TestNS_Float2" IsRef="true" IsConst="true" DisplayName="param0" Desc="param0" />
       </Method>
       <Method Name="SelectTarget" DisplayName="SelectTarget" Desc="SelectTarget" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="false" istask="false" />
       <Method Name="setEventVarAgent" DisplayName="setEventVarAgent" Desc="setEventVarAgent" Class="AgentNodeTest" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="false" istask="false">

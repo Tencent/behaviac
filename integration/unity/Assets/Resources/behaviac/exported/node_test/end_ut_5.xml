@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: node_test\end_ut_5.xml-->
+<behavior name="node_test/end_ut_5" agenttype="AgentNodeTest" version="5">
+  <pars>
+    <par name="_$local_task_param_$_0" type="int" value="0" />
+  </pars>
+  <node class="Sequence" id="1">
+    <node class="Assignment" id="4">
+      <property CastRight="false" />
+      <property Opl="int Self.AgentNodeTest::testVar_1" />
+      <property Opr="const int 1" />
+    </node>
+    <node class="Selector" id="0">
+      <node class="ReferencedBehavior" id="5">
+        <property ReferenceBehavior="const string &quot;node_test/end_ut_2&quot;" />
+      </node>
+      <node class="Action" id="2">
+        <property Method="Self.AgentNodeTest::setTestVar_1(2)" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+    </node>
+  </node>
+</behavior>

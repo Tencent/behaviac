@@ -119,7 +119,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			UnityEngine.GameObject opr = (UnityEngine.GameObject)((AgentNodeTest)pAgent).createGameObject();
+			UnityEngine.GameObject opr = ((AgentNodeTest)pAgent).createGameObject();
 			Debug.Check(behaviac.Utils.MakeVariableId("par_go") == 464621558u);
 			pAgent.SetVariable<UnityEngine.GameObject>("par_go", 464621558u, opr);
 			return result;
@@ -3238,7 +3238,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("start") == 537854745u);
 			int opl_p0 = pAgent.GetVariable<int>(537854745u);
-			bool opl = (bool)((HTNAgentTravel)pAgent).exist_start(ref opl_p0);
+			bool opl = ((HTNAgentTravel)pAgent).exist_start(ref opl_p0);
 			Debug.Check(behaviac.Utils.MakeVariableId("start") == 537854745u);
 			pAgent.SetVariable<int>("HTNAgentTravel::start", 537854745u, (int)opl_p0);
 			bool opr2 = true;
@@ -3262,7 +3262,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("finish") == 3620922618u);
 			int opl_p0 = pAgent.GetVariable<int>(3620922618u);
-			bool opl = (bool)((HTNAgentTravel)pAgent).exist_finish(ref opl_p0);
+			bool opl = ((HTNAgentTravel)pAgent).exist_finish(ref opl_p0);
 			Debug.Check(behaviac.Utils.MakeVariableId("finish") == 3620922618u);
 			pAgent.SetVariable<int>("HTNAgentTravel::finish", 3620922618u, (int)opl_p0);
 			bool opr2 = true;
@@ -3391,7 +3391,7 @@ namespace behaviac
 			int opl_p0 = pAgent.GetVariable<int>(2009726548u);
 			Debug.Check(behaviac.Utils.MakeVariableId("_$local_task_param_$_1") == 1859309333u);
 			int opl_p1 = pAgent.GetVariable<int>(1859309333u);
-			bool opl = (bool)((HTNAgentTravel)pAgent).short_distance(opl_p0, opl_p1);
+			bool opl = ((HTNAgentTravel)pAgent).short_distance(opl_p0, opl_p1);
 			bool opr2 = true;
 			bool op = (opl == opr2);
 			if (!op)
@@ -3433,7 +3433,7 @@ namespace behaviac
 			int opl_p0 = pAgent.GetVariable<int>(2009726548u);
 			Debug.Check(behaviac.Utils.MakeVariableId("_$local_task_param_$_1") == 1859309333u);
 			int opl_p1 = pAgent.GetVariable<int>(1859309333u);
-			bool opl = (bool)((HTNAgentTravel)pAgent).long_distance(opl_p0, opl_p1);
+			bool opl = ((HTNAgentTravel)pAgent).long_distance(opl_p0, opl_p1);
 			bool opr2 = true;
 			bool op = (opl == opr2);
 			if (!op)
@@ -3581,7 +3581,7 @@ namespace behaviac
 			int opl_p0 = pAgent.GetVariable<int>(2009726548u);
 			Debug.Check(behaviac.Utils.MakeVariableId("as") == 2746731747u);
 			List<int> opl_p1 = pAgent.GetVariable<List<int>>(2746731747u);
-			bool opl = (bool)((HTNAgentTravel)pAgent).exist_airports(opl_p0, ref opl_p1);
+			bool opl = ((HTNAgentTravel)pAgent).exist_airports(opl_p0, ref opl_p1);
 			Debug.Check(behaviac.Utils.MakeVariableId("as") == 2746731747u);
 			pAgent.SetVariable<List<int>>("HTNAgentTravel::as", 2746731747u, (List<int>)opl_p1);
 			bool opr2 = true;
@@ -3607,7 +3607,7 @@ namespace behaviac
 			int opl_p0 = pAgent.GetVariable<int>(1859309333u);
 			Debug.Check(behaviac.Utils.MakeVariableId("ay") == 1498948713u);
 			int opl_p1 = pAgent.GetVariable<int>(1498948713u);
-			bool opl = (bool)((HTNAgentTravel)pAgent).exist_airport(opl_p0, ref opl_p1);
+			bool opl = ((HTNAgentTravel)pAgent).exist_airport(opl_p0, ref opl_p1);
 			Debug.Check(behaviac.Utils.MakeVariableId("ay") == 1498948713u);
 			pAgent.SetVariable<int>("HTNAgentTravel::ay", 1498948713u, (int)opl_p1);
 			bool opr2 = true;
@@ -4159,7 +4159,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			int opr2 = (int)((PreconEffectorAgent)pAgent).fn_return();
+			int opr2 = ((PreconEffectorAgent)pAgent).fn_return();
 			((PreconEffectorAgent)pAgent).ret = opr2;
 			return result;
 		}
@@ -5787,7 +5787,7 @@ namespace behaviac
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			behaviac.Agent pAgent_opr = ((AgentNodeTest)pAgent).par_child;
-			int opr = (int)((AgentNodeTest)pAgent_opr).getConstOne();
+			int opr = ((AgentNodeTest)pAgent_opr).getConstOne();
 			((AgentNodeTest)pAgent).testVar_0 = opr;
 			return result;
 		}
@@ -6345,7 +6345,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			UnityEngine.GameObject opr = (UnityEngine.GameObject)((AgentNodeTest)pAgent).createGameObject();
+			UnityEngine.GameObject opr = ((AgentNodeTest)pAgent).createGameObject();
 			Debug.Check(behaviac.Utils.MakeVariableId("par_go") == 464621558u);
 			pAgent.SetVariable<UnityEngine.GameObject>("par_go", 464621558u, opr);
 			return result;
@@ -6485,7 +6485,7 @@ namespace behaviac
 		}
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
-			TestClassA result = (TestClassA)((AgentNodeTest)pAgent).TestFunC();
+			TestClassA result = ((AgentNodeTest)pAgent).TestFunC();
 			return (EBTStatus)((AgentNodeTest)pAgent).TestFuncD(result);
 		}
 	}
@@ -8046,7 +8046,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			int opl = ((AgentNodeTest)pAgent).testVar_0;
-			int opr = (int)((AgentNodeTest)pAgent).getConstOne();
+			int opr = ((AgentNodeTest)pAgent).getConstOne();
 			bool op = opl == opr;
 			return op ? EBTStatus.BT_SUCCESS : EBTStatus.BT_FAILURE;
 		}
@@ -11746,6 +11746,793 @@ namespace behaviac
 		}
 	}
 
+	// Source file: node_test/end_ut_0
+
+	[behaviac.GeneratedTypeMetaInfo()]
+	class Assignment_bt_node_test_end_ut_0_node4 : behaviac.Assignment
+	{
+		public Assignment_bt_node_test_end_ut_0_node4()
+		{
+		}
+		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
+		{
+			EBTStatus result = EBTStatus.BT_SUCCESS;
+			int opr = 1;
+			((AgentNodeTest)pAgent).testVar_0 = opr;
+			return result;
+		}
+	}
+
+	[behaviac.GeneratedTypeMetaInfo()]
+	class Condition_bt_node_test_end_ut_0_node1 : behaviac.Condition
+	{
+		public Condition_bt_node_test_end_ut_0_node1()
+		{
+		}
+		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
+		{
+			int opl = ((AgentNodeTest)pAgent).testVar_0;
+			int opr = 1;
+			bool op = opl == opr;
+			return op ? EBTStatus.BT_SUCCESS : EBTStatus.BT_FAILURE;
+		}
+	}
+
+	[behaviac.GeneratedTypeMetaInfo()]
+	class End_bt_node_test_end_ut_0_node3 : behaviac.End
+	{
+		public End_bt_node_test_end_ut_0_node3()
+		{
+		}
+		protected override EBTStatus GetStatus(Agent pAgent)
+		{
+			return behaviac.EBTStatus.BT_SUCCESS;
+		}
+	}
+
+	[behaviac.GeneratedTypeMetaInfo()]
+	class Action_bt_node_test_end_ut_0_node2 : behaviac.Action
+	{
+		public Action_bt_node_test_end_ut_0_node2()
+		{
+			this.m_resultOption = EBTStatus.BT_SUCCESS;
+			method_p0 = 2;
+		}
+		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
+		{
+			((AgentNodeTest)pAgent).setTestVar_0(method_p0);
+			return EBTStatus.BT_SUCCESS;
+		}
+		int method_p0;
+	}
+
+	public static class bt_node_test_end_ut_0
+	{
+		public static bool build_behavior_tree(BehaviorTree bt)
+		{
+			bt.SetClassNameString("BehaviorTree");
+			bt.SetId(-1);
+			bt.SetName("node_test/end_ut_0");
+			bt.IsFSM = false;
+#if !BEHAVIAC_RELEASE
+			bt.SetAgentType("AgentNodeTest");
+#endif
+			// locals
+			bt.AddLocal("AgentNodeTest", "int", "_$local_task_param_$_0", "0");
+			// children
+			{
+				Sequence node0 = new Sequence();
+				node0.SetClassNameString("Sequence");
+				node0.SetId(0);
+#if !BEHAVIAC_RELEASE
+				node0.SetAgentType("AgentNodeTest");
+#endif
+				bt.AddChild(node0);
+				{
+					Assignment_bt_node_test_end_ut_0_node4 node4 = new Assignment_bt_node_test_end_ut_0_node4();
+					node4.SetClassNameString("Assignment");
+					node4.SetId(4);
+#if !BEHAVIAC_RELEASE
+					node4.SetAgentType("AgentNodeTest");
+#endif
+					node0.AddChild(node4);
+					node0.SetHasEvents(node0.HasEvents() | node4.HasEvents());
+				}
+				{
+					Condition_bt_node_test_end_ut_0_node1 node1 = new Condition_bt_node_test_end_ut_0_node1();
+					node1.SetClassNameString("Condition");
+					node1.SetId(1);
+#if !BEHAVIAC_RELEASE
+					node1.SetAgentType("AgentNodeTest");
+#endif
+					node0.AddChild(node1);
+					node0.SetHasEvents(node0.HasEvents() | node1.HasEvents());
+				}
+				{
+					End_bt_node_test_end_ut_0_node3 node3 = new End_bt_node_test_end_ut_0_node3();
+					node3.SetClassNameString("End");
+					node3.SetId(3);
+#if !BEHAVIAC_RELEASE
+					node3.SetAgentType("AgentNodeTest");
+#endif
+					node0.AddChild(node3);
+					node0.SetHasEvents(node0.HasEvents() | node3.HasEvents());
+				}
+				{
+					Action_bt_node_test_end_ut_0_node2 node2 = new Action_bt_node_test_end_ut_0_node2();
+					node2.SetClassNameString("Action");
+					node2.SetId(2);
+#if !BEHAVIAC_RELEASE
+					node2.SetAgentType("AgentNodeTest");
+#endif
+					node0.AddChild(node2);
+					node0.SetHasEvents(node0.HasEvents() | node2.HasEvents());
+				}
+				bt.SetHasEvents(bt.HasEvents() | node0.HasEvents());
+			}
+			return true;
+		}
+	}
+
+	// Source file: node_test/end_ut_1
+
+	[behaviac.GeneratedTypeMetaInfo()]
+	class Assignment_bt_node_test_end_ut_1_node4 : behaviac.Assignment
+	{
+		public Assignment_bt_node_test_end_ut_1_node4()
+		{
+		}
+		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
+		{
+			EBTStatus result = EBTStatus.BT_SUCCESS;
+			int opr = 1;
+			((AgentNodeTest)pAgent).testVar_0 = opr;
+			return result;
+		}
+	}
+
+	[behaviac.GeneratedTypeMetaInfo()]
+	class Condition_bt_node_test_end_ut_1_node1 : behaviac.Condition
+	{
+		public Condition_bt_node_test_end_ut_1_node1()
+		{
+		}
+		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
+		{
+			int opl = ((AgentNodeTest)pAgent).testVar_0;
+			int opr = 1;
+			bool op = opl == opr;
+			return op ? EBTStatus.BT_SUCCESS : EBTStatus.BT_FAILURE;
+		}
+	}
+
+	[behaviac.GeneratedTypeMetaInfo()]
+	class End_bt_node_test_end_ut_1_node3 : behaviac.End
+	{
+		public End_bt_node_test_end_ut_1_node3()
+		{
+			m_endOutside = true;
+		}
+		protected override EBTStatus GetStatus(Agent pAgent)
+		{
+			return pAgent.GetVariable<behaviac.EBTStatus>(3504662893u);
+		}
+	}
+
+	[behaviac.GeneratedTypeMetaInfo()]
+	class Action_bt_node_test_end_ut_1_node2 : behaviac.Action
+	{
+		public Action_bt_node_test_end_ut_1_node2()
+		{
+			this.m_resultOption = EBTStatus.BT_SUCCESS;
+			method_p0 = 2;
+		}
+		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
+		{
+			((AgentNodeTest)pAgent).setTestVar_0(method_p0);
+			return EBTStatus.BT_SUCCESS;
+		}
+		int method_p0;
+	}
+
+	public static class bt_node_test_end_ut_1
+	{
+		public static bool build_behavior_tree(BehaviorTree bt)
+		{
+			bt.SetClassNameString("BehaviorTree");
+			bt.SetId(-1);
+			bt.SetName("node_test/end_ut_1");
+			bt.IsFSM = false;
+#if !BEHAVIAC_RELEASE
+			bt.SetAgentType("AgentNodeTest");
+#endif
+			// locals
+			bt.AddLocal("AgentNodeTest", "int", "_$local_task_param_$_0", "0");
+			bt.AddLocal("AgentNodeTest", "behaviac.EBTStatus", "status", "BT_FAILURE");
+			// children
+			{
+				Sequence node0 = new Sequence();
+				node0.SetClassNameString("Sequence");
+				node0.SetId(0);
+#if !BEHAVIAC_RELEASE
+				node0.SetAgentType("AgentNodeTest");
+#endif
+				bt.AddChild(node0);
+				{
+					Assignment_bt_node_test_end_ut_1_node4 node4 = new Assignment_bt_node_test_end_ut_1_node4();
+					node4.SetClassNameString("Assignment");
+					node4.SetId(4);
+#if !BEHAVIAC_RELEASE
+					node4.SetAgentType("AgentNodeTest");
+#endif
+					node0.AddChild(node4);
+					node0.SetHasEvents(node0.HasEvents() | node4.HasEvents());
+				}
+				{
+					Condition_bt_node_test_end_ut_1_node1 node1 = new Condition_bt_node_test_end_ut_1_node1();
+					node1.SetClassNameString("Condition");
+					node1.SetId(1);
+#if !BEHAVIAC_RELEASE
+					node1.SetAgentType("AgentNodeTest");
+#endif
+					node0.AddChild(node1);
+					node0.SetHasEvents(node0.HasEvents() | node1.HasEvents());
+				}
+				{
+					End_bt_node_test_end_ut_1_node3 node3 = new End_bt_node_test_end_ut_1_node3();
+					node3.SetClassNameString("End");
+					node3.SetId(3);
+#if !BEHAVIAC_RELEASE
+					node3.SetAgentType("AgentNodeTest");
+#endif
+					node0.AddChild(node3);
+					node0.SetHasEvents(node0.HasEvents() | node3.HasEvents());
+				}
+				{
+					Action_bt_node_test_end_ut_1_node2 node2 = new Action_bt_node_test_end_ut_1_node2();
+					node2.SetClassNameString("Action");
+					node2.SetId(2);
+#if !BEHAVIAC_RELEASE
+					node2.SetAgentType("AgentNodeTest");
+#endif
+					node0.AddChild(node2);
+					node0.SetHasEvents(node0.HasEvents() | node2.HasEvents());
+				}
+				bt.SetHasEvents(bt.HasEvents() | node0.HasEvents());
+			}
+			return true;
+		}
+	}
+
+	// Source file: node_test/end_ut_2
+
+	[behaviac.GeneratedTypeMetaInfo()]
+	class Assignment_bt_node_test_end_ut_2_node4 : behaviac.Assignment
+	{
+		public Assignment_bt_node_test_end_ut_2_node4()
+		{
+		}
+		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
+		{
+			EBTStatus result = EBTStatus.BT_SUCCESS;
+			int opr = 1;
+			((AgentNodeTest)pAgent).testVar_0 = opr;
+			return result;
+		}
+	}
+
+	[behaviac.GeneratedTypeMetaInfo()]
+	class Condition_bt_node_test_end_ut_2_node1 : behaviac.Condition
+	{
+		public Condition_bt_node_test_end_ut_2_node1()
+		{
+		}
+		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
+		{
+			int opl = ((AgentNodeTest)pAgent).testVar_0;
+			int opr = 1;
+			bool op = opl == opr;
+			return op ? EBTStatus.BT_SUCCESS : EBTStatus.BT_FAILURE;
+		}
+	}
+
+	[behaviac.GeneratedTypeMetaInfo()]
+	class End_bt_node_test_end_ut_2_node3 : behaviac.End
+	{
+		public End_bt_node_test_end_ut_2_node3()
+		{
+			EndStatus_params = new object[1];
+			EndStatus_p0 = new TestNS.Float2();
+			EndStatus_p0.x = 0f;
+			EndStatus_p0.y = 0f;
+			EndStatus_params[0] = EndStatus_p0;
+			m_endOutside = true;
+		}
+		protected override EBTStatus GetStatus(Agent pAgent)
+		{
+			return (behaviac.EBTStatus)AgentMetaVisitor.ExecuteMethod(pAgent, "return_status", EndStatus_params);
+		}
+		object[] EndStatus_params;
+		TestNS.Float2 EndStatus_p0;
+	}
+
+	[behaviac.GeneratedTypeMetaInfo()]
+	class Action_bt_node_test_end_ut_2_node2 : behaviac.Action
+	{
+		public Action_bt_node_test_end_ut_2_node2()
+		{
+			this.m_resultOption = EBTStatus.BT_SUCCESS;
+			method_p0 = 2;
+		}
+		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
+		{
+			((AgentNodeTest)pAgent).setTestVar_0(method_p0);
+			return EBTStatus.BT_SUCCESS;
+		}
+		int method_p0;
+	}
+
+	public static class bt_node_test_end_ut_2
+	{
+		public static bool build_behavior_tree(BehaviorTree bt)
+		{
+			bt.SetClassNameString("BehaviorTree");
+			bt.SetId(-1);
+			bt.SetName("node_test/end_ut_2");
+			bt.IsFSM = false;
+#if !BEHAVIAC_RELEASE
+			bt.SetAgentType("AgentNodeTest");
+#endif
+			// locals
+			bt.AddLocal("AgentNodeTest", "int", "_$local_task_param_$_0", "0");
+			// children
+			{
+				Sequence node0 = new Sequence();
+				node0.SetClassNameString("Sequence");
+				node0.SetId(0);
+#if !BEHAVIAC_RELEASE
+				node0.SetAgentType("AgentNodeTest");
+#endif
+				bt.AddChild(node0);
+				{
+					Assignment_bt_node_test_end_ut_2_node4 node4 = new Assignment_bt_node_test_end_ut_2_node4();
+					node4.SetClassNameString("Assignment");
+					node4.SetId(4);
+#if !BEHAVIAC_RELEASE
+					node4.SetAgentType("AgentNodeTest");
+#endif
+					node0.AddChild(node4);
+					node0.SetHasEvents(node0.HasEvents() | node4.HasEvents());
+				}
+				{
+					Condition_bt_node_test_end_ut_2_node1 node1 = new Condition_bt_node_test_end_ut_2_node1();
+					node1.SetClassNameString("Condition");
+					node1.SetId(1);
+#if !BEHAVIAC_RELEASE
+					node1.SetAgentType("AgentNodeTest");
+#endif
+					node0.AddChild(node1);
+					node0.SetHasEvents(node0.HasEvents() | node1.HasEvents());
+				}
+				{
+					End_bt_node_test_end_ut_2_node3 node3 = new End_bt_node_test_end_ut_2_node3();
+					node3.SetClassNameString("End");
+					node3.SetId(3);
+#if !BEHAVIAC_RELEASE
+					node3.SetAgentType("AgentNodeTest");
+#endif
+					node0.AddChild(node3);
+					node0.SetHasEvents(node0.HasEvents() | node3.HasEvents());
+				}
+				{
+					Action_bt_node_test_end_ut_2_node2 node2 = new Action_bt_node_test_end_ut_2_node2();
+					node2.SetClassNameString("Action");
+					node2.SetId(2);
+#if !BEHAVIAC_RELEASE
+					node2.SetAgentType("AgentNodeTest");
+#endif
+					node0.AddChild(node2);
+					node0.SetHasEvents(node0.HasEvents() | node2.HasEvents());
+				}
+				bt.SetHasEvents(bt.HasEvents() | node0.HasEvents());
+			}
+			return true;
+		}
+	}
+
+	// Source file: node_test/end_ut_3
+
+	[behaviac.GeneratedTypeMetaInfo()]
+	class Assignment_bt_node_test_end_ut_3_node4 : behaviac.Assignment
+	{
+		public Assignment_bt_node_test_end_ut_3_node4()
+		{
+		}
+		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
+		{
+			EBTStatus result = EBTStatus.BT_SUCCESS;
+			int opr = 1;
+			((AgentNodeTest)pAgent).testVar_1 = opr;
+			return result;
+		}
+	}
+
+	[behaviac.GeneratedTypeMetaInfo()]
+	class Condition_bt_node_test_end_ut_3_node1 : behaviac.Condition
+	{
+		public Condition_bt_node_test_end_ut_3_node1()
+		{
+		}
+		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
+		{
+			int opl = ((AgentNodeTest)pAgent).testVar_1;
+			int opr = 1;
+			bool op = opl == opr;
+			return op ? EBTStatus.BT_SUCCESS : EBTStatus.BT_FAILURE;
+		}
+	}
+
+	[behaviac.GeneratedTypeMetaInfo()]
+	class ReferencedBehavior_bt_node_test_end_ut_3_node5 : behaviac.ReferencedBehavior
+	{
+		public ReferencedBehavior_bt_node_test_end_ut_3_node5()
+		{
+			string szTreePath = this.GetReferencedTree(null);
+			if (!string.IsNullOrEmpty(szTreePath)) {
+			BehaviorTree behaviorTree = Workspace.Instance.LoadBehaviorTree(szTreePath);
+			if (behaviorTree != null)
+			{
+				this.m_bHasEvents |= behaviorTree.HasEvents();
+			}
+			}
+		}
+		public override string GetReferencedTree(Agent pAgent)
+		{
+			return "node_test/end_ut_0";
+		}
+	}
+
+	[behaviac.GeneratedTypeMetaInfo()]
+	class Action_bt_node_test_end_ut_3_node2 : behaviac.Action
+	{
+		public Action_bt_node_test_end_ut_3_node2()
+		{
+			this.m_resultOption = EBTStatus.BT_SUCCESS;
+			method_p0 = 2;
+		}
+		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
+		{
+			((AgentNodeTest)pAgent).setTestVar_1(method_p0);
+			return EBTStatus.BT_SUCCESS;
+		}
+		int method_p0;
+	}
+
+	public static class bt_node_test_end_ut_3
+	{
+		public static bool build_behavior_tree(BehaviorTree bt)
+		{
+			bt.SetClassNameString("BehaviorTree");
+			bt.SetId(-1);
+			bt.SetName("node_test/end_ut_3");
+			bt.IsFSM = false;
+#if !BEHAVIAC_RELEASE
+			bt.SetAgentType("AgentNodeTest");
+#endif
+			// locals
+			bt.AddLocal("AgentNodeTest", "int", "_$local_task_param_$_0", "0");
+			// children
+			{
+				Sequence node0 = new Sequence();
+				node0.SetClassNameString("Sequence");
+				node0.SetId(0);
+#if !BEHAVIAC_RELEASE
+				node0.SetAgentType("AgentNodeTest");
+#endif
+				bt.AddChild(node0);
+				{
+					Assignment_bt_node_test_end_ut_3_node4 node4 = new Assignment_bt_node_test_end_ut_3_node4();
+					node4.SetClassNameString("Assignment");
+					node4.SetId(4);
+#if !BEHAVIAC_RELEASE
+					node4.SetAgentType("AgentNodeTest");
+#endif
+					node0.AddChild(node4);
+					node0.SetHasEvents(node0.HasEvents() | node4.HasEvents());
+				}
+				{
+					Condition_bt_node_test_end_ut_3_node1 node1 = new Condition_bt_node_test_end_ut_3_node1();
+					node1.SetClassNameString("Condition");
+					node1.SetId(1);
+#if !BEHAVIAC_RELEASE
+					node1.SetAgentType("AgentNodeTest");
+#endif
+					node0.AddChild(node1);
+					node0.SetHasEvents(node0.HasEvents() | node1.HasEvents());
+				}
+				{
+					ReferencedBehavior_bt_node_test_end_ut_3_node5 node5 = new ReferencedBehavior_bt_node_test_end_ut_3_node5();
+					node5.SetClassNameString("ReferencedBehavior");
+					node5.SetId(5);
+#if !BEHAVIAC_RELEASE
+					node5.SetAgentType("AgentNodeTest");
+#endif
+					node0.AddChild(node5);
+					node0.SetHasEvents(node0.HasEvents() | node5.HasEvents());
+				}
+				{
+					Action_bt_node_test_end_ut_3_node2 node2 = new Action_bt_node_test_end_ut_3_node2();
+					node2.SetClassNameString("Action");
+					node2.SetId(2);
+#if !BEHAVIAC_RELEASE
+					node2.SetAgentType("AgentNodeTest");
+#endif
+					node0.AddChild(node2);
+					node0.SetHasEvents(node0.HasEvents() | node2.HasEvents());
+				}
+				bt.SetHasEvents(bt.HasEvents() | node0.HasEvents());
+			}
+			return true;
+		}
+	}
+
+	// Source file: node_test/end_ut_4
+
+	[behaviac.GeneratedTypeMetaInfo()]
+	class Assignment_bt_node_test_end_ut_4_node4 : behaviac.Assignment
+	{
+		public Assignment_bt_node_test_end_ut_4_node4()
+		{
+		}
+		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
+		{
+			EBTStatus result = EBTStatus.BT_SUCCESS;
+			int opr = 1;
+			((AgentNodeTest)pAgent).testVar_1 = opr;
+			return result;
+		}
+	}
+
+	[behaviac.GeneratedTypeMetaInfo()]
+	class Condition_bt_node_test_end_ut_4_node1 : behaviac.Condition
+	{
+		public Condition_bt_node_test_end_ut_4_node1()
+		{
+		}
+		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
+		{
+			int opl = ((AgentNodeTest)pAgent).testVar_1;
+			int opr = 1;
+			bool op = opl == opr;
+			return op ? EBTStatus.BT_SUCCESS : EBTStatus.BT_FAILURE;
+		}
+	}
+
+	[behaviac.GeneratedTypeMetaInfo()]
+	class ReferencedBehavior_bt_node_test_end_ut_4_node5 : behaviac.ReferencedBehavior
+	{
+		public ReferencedBehavior_bt_node_test_end_ut_4_node5()
+		{
+			string szTreePath = this.GetReferencedTree(null);
+			if (!string.IsNullOrEmpty(szTreePath)) {
+			BehaviorTree behaviorTree = Workspace.Instance.LoadBehaviorTree(szTreePath);
+			if (behaviorTree != null)
+			{
+				this.m_bHasEvents |= behaviorTree.HasEvents();
+			}
+			}
+		}
+		public override string GetReferencedTree(Agent pAgent)
+		{
+			return "node_test/end_ut_1";
+		}
+	}
+
+	[behaviac.GeneratedTypeMetaInfo()]
+	class Action_bt_node_test_end_ut_4_node2 : behaviac.Action
+	{
+		public Action_bt_node_test_end_ut_4_node2()
+		{
+			this.m_resultOption = EBTStatus.BT_SUCCESS;
+			method_p0 = 2;
+		}
+		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
+		{
+			((AgentNodeTest)pAgent).setTestVar_1(method_p0);
+			return EBTStatus.BT_SUCCESS;
+		}
+		int method_p0;
+	}
+
+	public static class bt_node_test_end_ut_4
+	{
+		public static bool build_behavior_tree(BehaviorTree bt)
+		{
+			bt.SetClassNameString("BehaviorTree");
+			bt.SetId(-1);
+			bt.SetName("node_test/end_ut_4");
+			bt.IsFSM = false;
+#if !BEHAVIAC_RELEASE
+			bt.SetAgentType("AgentNodeTest");
+#endif
+			// locals
+			bt.AddLocal("AgentNodeTest", "int", "_$local_task_param_$_0", "0");
+			// children
+			{
+				Sequence node0 = new Sequence();
+				node0.SetClassNameString("Sequence");
+				node0.SetId(0);
+#if !BEHAVIAC_RELEASE
+				node0.SetAgentType("AgentNodeTest");
+#endif
+				bt.AddChild(node0);
+				{
+					Assignment_bt_node_test_end_ut_4_node4 node4 = new Assignment_bt_node_test_end_ut_4_node4();
+					node4.SetClassNameString("Assignment");
+					node4.SetId(4);
+#if !BEHAVIAC_RELEASE
+					node4.SetAgentType("AgentNodeTest");
+#endif
+					node0.AddChild(node4);
+					node0.SetHasEvents(node0.HasEvents() | node4.HasEvents());
+				}
+				{
+					Condition_bt_node_test_end_ut_4_node1 node1 = new Condition_bt_node_test_end_ut_4_node1();
+					node1.SetClassNameString("Condition");
+					node1.SetId(1);
+#if !BEHAVIAC_RELEASE
+					node1.SetAgentType("AgentNodeTest");
+#endif
+					node0.AddChild(node1);
+					node0.SetHasEvents(node0.HasEvents() | node1.HasEvents());
+				}
+				{
+					ReferencedBehavior_bt_node_test_end_ut_4_node5 node5 = new ReferencedBehavior_bt_node_test_end_ut_4_node5();
+					node5.SetClassNameString("ReferencedBehavior");
+					node5.SetId(5);
+#if !BEHAVIAC_RELEASE
+					node5.SetAgentType("AgentNodeTest");
+#endif
+					node0.AddChild(node5);
+					node0.SetHasEvents(node0.HasEvents() | node5.HasEvents());
+				}
+				{
+					Action_bt_node_test_end_ut_4_node2 node2 = new Action_bt_node_test_end_ut_4_node2();
+					node2.SetClassNameString("Action");
+					node2.SetId(2);
+#if !BEHAVIAC_RELEASE
+					node2.SetAgentType("AgentNodeTest");
+#endif
+					node0.AddChild(node2);
+					node0.SetHasEvents(node0.HasEvents() | node2.HasEvents());
+				}
+				bt.SetHasEvents(bt.HasEvents() | node0.HasEvents());
+			}
+			return true;
+		}
+	}
+
+	// Source file: node_test/end_ut_5
+
+	[behaviac.GeneratedTypeMetaInfo()]
+	class Assignment_bt_node_test_end_ut_5_node4 : behaviac.Assignment
+	{
+		public Assignment_bt_node_test_end_ut_5_node4()
+		{
+		}
+		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
+		{
+			EBTStatus result = EBTStatus.BT_SUCCESS;
+			int opr = 1;
+			((AgentNodeTest)pAgent).testVar_1 = opr;
+			return result;
+		}
+	}
+
+	[behaviac.GeneratedTypeMetaInfo()]
+	class ReferencedBehavior_bt_node_test_end_ut_5_node5 : behaviac.ReferencedBehavior
+	{
+		public ReferencedBehavior_bt_node_test_end_ut_5_node5()
+		{
+			string szTreePath = this.GetReferencedTree(null);
+			if (!string.IsNullOrEmpty(szTreePath)) {
+			BehaviorTree behaviorTree = Workspace.Instance.LoadBehaviorTree(szTreePath);
+			if (behaviorTree != null)
+			{
+				this.m_bHasEvents |= behaviorTree.HasEvents();
+			}
+			}
+		}
+		public override string GetReferencedTree(Agent pAgent)
+		{
+			return "node_test/end_ut_2";
+		}
+	}
+
+	[behaviac.GeneratedTypeMetaInfo()]
+	class Action_bt_node_test_end_ut_5_node2 : behaviac.Action
+	{
+		public Action_bt_node_test_end_ut_5_node2()
+		{
+			this.m_resultOption = EBTStatus.BT_SUCCESS;
+			method_p0 = 2;
+		}
+		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
+		{
+			((AgentNodeTest)pAgent).setTestVar_1(method_p0);
+			return EBTStatus.BT_SUCCESS;
+		}
+		int method_p0;
+	}
+
+	public static class bt_node_test_end_ut_5
+	{
+		public static bool build_behavior_tree(BehaviorTree bt)
+		{
+			bt.SetClassNameString("BehaviorTree");
+			bt.SetId(-1);
+			bt.SetName("node_test/end_ut_5");
+			bt.IsFSM = false;
+#if !BEHAVIAC_RELEASE
+			bt.SetAgentType("AgentNodeTest");
+#endif
+			// locals
+			bt.AddLocal("AgentNodeTest", "int", "_$local_task_param_$_0", "0");
+			// children
+			{
+				Sequence node1 = new Sequence();
+				node1.SetClassNameString("Sequence");
+				node1.SetId(1);
+#if !BEHAVIAC_RELEASE
+				node1.SetAgentType("AgentNodeTest");
+#endif
+				bt.AddChild(node1);
+				{
+					Assignment_bt_node_test_end_ut_5_node4 node4 = new Assignment_bt_node_test_end_ut_5_node4();
+					node4.SetClassNameString("Assignment");
+					node4.SetId(4);
+#if !BEHAVIAC_RELEASE
+					node4.SetAgentType("AgentNodeTest");
+#endif
+					node1.AddChild(node4);
+					node1.SetHasEvents(node1.HasEvents() | node4.HasEvents());
+				}
+				{
+					Selector node0 = new Selector();
+					node0.SetClassNameString("Selector");
+					node0.SetId(0);
+#if !BEHAVIAC_RELEASE
+					node0.SetAgentType("AgentNodeTest");
+#endif
+					node1.AddChild(node0);
+					{
+						ReferencedBehavior_bt_node_test_end_ut_5_node5 node5 = new ReferencedBehavior_bt_node_test_end_ut_5_node5();
+						node5.SetClassNameString("ReferencedBehavior");
+						node5.SetId(5);
+#if !BEHAVIAC_RELEASE
+						node5.SetAgentType("AgentNodeTest");
+#endif
+						node0.AddChild(node5);
+						node0.SetHasEvents(node0.HasEvents() | node5.HasEvents());
+					}
+					{
+						Action_bt_node_test_end_ut_5_node2 node2 = new Action_bt_node_test_end_ut_5_node2();
+						node2.SetClassNameString("Action");
+						node2.SetId(2);
+#if !BEHAVIAC_RELEASE
+						node2.SetAgentType("AgentNodeTest");
+#endif
+						node0.AddChild(node2);
+						node0.SetHasEvents(node0.HasEvents() | node2.HasEvents());
+					}
+					node1.SetHasEvents(node1.HasEvents() | node0.HasEvents());
+				}
+				bt.SetHasEvents(bt.HasEvents() | node1.HasEvents());
+			}
+			return true;
+		}
+	}
+
 	// Source file: node_test/enter_exit_action_ut_0
 
 	[behaviac.GeneratedTypeMetaInfo()]
@@ -11760,7 +12547,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			bool opl = (bool)((AgentNodeTest)pAgent).enter_action_1(opl_p0);
+			bool opl = ((AgentNodeTest)pAgent).enter_action_1(opl_p0);
 			bool opr2 = true;
 			bool op = (opl == opr2);
 			if (!op)
@@ -11800,7 +12587,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			bool opl = (bool)((AgentNodeTest)pAgent).enter_action_2(opl_p0, opl_p1);
+			bool opl = ((AgentNodeTest)pAgent).enter_action_2(opl_p0, opl_p1);
 			bool opr2 = true;
 			bool op = (opl == opr2);
 			if (!op)
@@ -11985,7 +12772,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			bool opl = (bool)((AgentNodeTest)pAgent).enter_action_1(opl_p0);
+			bool opl = ((AgentNodeTest)pAgent).enter_action_1(opl_p0);
 			bool opr2 = true;
 			bool op = (opl == opr2);
 			if (!op)
@@ -12025,7 +12812,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			bool opl = (bool)((AgentNodeTest)pAgent).enter_action_2(opl_p0, opl_p1);
+			bool opl = ((AgentNodeTest)pAgent).enter_action_2(opl_p0, opl_p1);
 			bool opr2 = true;
 			bool op = (opl == opr2);
 			if (!op)
@@ -12190,7 +12977,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			bool opl = (bool)((AgentNodeTest)pAgent).enter_action_1(opl_p0);
+			bool opl = ((AgentNodeTest)pAgent).enter_action_1(opl_p0);
 			bool opr2 = true;
 			bool op = (opl == opr2);
 			if (!op)
@@ -12230,7 +13017,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			bool opl = (bool)((AgentNodeTest)pAgent).enter_action_2(opl_p0, opl_p1);
+			bool opl = ((AgentNodeTest)pAgent).enter_action_2(opl_p0, opl_p1);
 			bool opr2 = true;
 			bool op = (opl == opr2);
 			if (!op)
@@ -12302,7 +13089,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			bool opl = (bool)((AgentNodeTest)pAgent).enter_action_0();
+			bool opl = ((AgentNodeTest)pAgent).enter_action_0();
 			bool opr2 = true;
 			bool op = (opl == opr2);
 			if (!op)
@@ -18659,7 +19446,7 @@ namespace behaviac
 		}
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
-			behaviac.EBTStatus result = (behaviac.EBTStatus)((AgentNodeTest)pAgent).switchRef(method_p0);
+			behaviac.EBTStatus result = ((AgentNodeTest)pAgent).switchRef(method_p0);
 			return result;
 		}
 		string method_p0;
@@ -23723,7 +24510,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			float opr = (float)((EmployeeParTestAgent)pAgent).Func_SingleIR(opr_p0);
+			float opr = ((EmployeeParTestAgent)pAgent).Func_SingleIR(opr_p0);
 			((ParTestAgentBase)pAgent).TV_BYTE_0 = (byte)opr;
 			return result;
 		}
@@ -23831,7 +24618,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			bool opr = (bool)((ParTestAgentBase)pAgent).Func_BooleanIR(opr_p0);
+			bool opr = ((ParTestAgentBase)pAgent).Func_BooleanIR(opr_p0);
 			((ParTestAgentBase)pAgent).TV_BOOL_0 = opr;
 			return result;
 		}
@@ -23848,7 +24635,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			byte opr = (byte)((ParTestAgentBase)pAgent).Func_ByteIR(opr_p0);
+			byte opr = ((ParTestAgentBase)pAgent).Func_ByteIR(opr_p0);
 			((ParTestAgentBase)pAgent).TV_BYTE_0 = opr;
 			return result;
 		}
@@ -23870,7 +24657,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			List<bool> opr = (List<bool>)((ParTestAgentBase)pAgent).Func_BooleanListIR(opr_p0);
+			List<bool> opr = ((ParTestAgentBase)pAgent).Func_BooleanListIR(opr_p0);
 			((ParTestAgentBase)pAgent).TV_LIST_BOOL_0 = opr;
 			return result;
 		}
@@ -24535,7 +25322,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par2_agent_0") == 3876418331u);
 			behaviac.Agent opr_p0 = pAgent.GetVariable<behaviac.Agent>(3876418331u);
-			behaviac.Agent opr = (behaviac.Agent)((EmployeeParTestAgent)pAgent).Func_AgentIR(opr_p0);
+			behaviac.Agent opr = ((EmployeeParTestAgent)pAgent).Func_AgentIR(opr_p0);
 			Debug.Check(behaviac.Utils.MakeVariableId("par2_agent_0") == 3876418331u);
 			pAgent.SetVariable<behaviac.Agent>("par2_agent_0", 3876418331u, opr);
 			return result;
@@ -24553,7 +25340,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par2_ParTestAgentBase_0") == 2489994139u);
 			ParTestAgentBase opr_p0 = pAgent.GetVariable<ParTestAgentBase>(2489994139u);
-			ParTestAgentBase opr = (ParTestAgentBase)((EmployeeParTestAgent)pAgent).Func_ParTestAgentBaseIR(opr_p0);
+			ParTestAgentBase opr = ((EmployeeParTestAgent)pAgent).Func_ParTestAgentBaseIR(opr_p0);
 			Debug.Check(behaviac.Utils.MakeVariableId("par2_ParTestAgentBase_0") == 2489994139u);
 			pAgent.SetVariable<ParTestAgentBase>("par2_ParTestAgentBase_0", 2489994139u, opr);
 			return result;
@@ -24571,7 +25358,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par2_agent_list_0") == 1126732011u);
 			List<behaviac.Agent> opr_p0 = pAgent.GetVariable<List<behaviac.Agent>>(1126732011u);
-			List<behaviac.Agent> opr = (List<behaviac.Agent>)((EmployeeParTestAgent)pAgent).Func_AgentListIR(opr_p0);
+			List<behaviac.Agent> opr = ((EmployeeParTestAgent)pAgent).Func_AgentListIR(opr_p0);
 			Debug.Check(behaviac.Utils.MakeVariableId("par2_agent_list_0") == 1126732011u);
 			pAgent.SetVariable<List<behaviac.Agent>>("par2_agent_list_0", 1126732011u, opr);
 			return result;
@@ -24589,7 +25376,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par2_ParTestAgentBaseList_0") == 3110436684u);
 			List<ParTestAgentBase> opr_p0 = pAgent.GetVariable<List<ParTestAgentBase>>(3110436684u);
-			List<ParTestAgentBase> opr = (List<ParTestAgentBase>)((EmployeeParTestAgent)pAgent).Func_ParTestAgentBaseListIR(opr_p0);
+			List<ParTestAgentBase> opr = ((EmployeeParTestAgent)pAgent).Func_ParTestAgentBaseListIR(opr_p0);
 			Debug.Check(behaviac.Utils.MakeVariableId("par2_ParTestAgentBaseList_0") == 3110436684u);
 			pAgent.SetVariable<List<ParTestAgentBase>>("par2_ParTestAgentBaseList_0", 3110436684u, opr);
 			return result;
@@ -24607,7 +25394,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par2_double_0") == 2183367433u);
 			double opr_p0 = pAgent.GetVariable<double>(2183367433u);
-			double opr = (double)((EmployeeParTestAgent)pAgent).Func_DoubleIR(opr_p0);
+			double opr = ((EmployeeParTestAgent)pAgent).Func_DoubleIR(opr_p0);
 			Debug.Check(behaviac.Utils.MakeVariableId("par2_double_0") == 2183367433u);
 			pAgent.SetVariable<double>("par2_double_0", 2183367433u, opr);
 			return result;
@@ -24625,7 +25412,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par2_single_0") == 3120166065u);
 			float opr_p0 = pAgent.GetVariable<float>(3120166065u);
-			float opr = (float)((EmployeeParTestAgent)pAgent).Func_SingleIR(opr_p0);
+			float opr = ((EmployeeParTestAgent)pAgent).Func_SingleIR(opr_p0);
 			Debug.Check(behaviac.Utils.MakeVariableId("par2_single_0") == 3120166065u);
 			pAgent.SetVariable<float>("par2_single_0", 3120166065u, opr);
 			return result;
@@ -24643,7 +25430,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par2_single_list_0") == 3448877207u);
 			List<float> opr_p0 = pAgent.GetVariable<List<float>>(3448877207u);
-			List<float> opr = (List<float>)((EmployeeParTestAgent)pAgent).Func_SingleListIR(opr_p0);
+			List<float> opr = ((EmployeeParTestAgent)pAgent).Func_SingleListIR(opr_p0);
 			Debug.Check(behaviac.Utils.MakeVariableId("par2_single_list_0") == 3448877207u);
 			pAgent.SetVariable<List<float>>("par2_single_list_0", 3448877207u, opr);
 			return result;
@@ -24661,7 +25448,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par2_string_0") == 351984746u);
 			string opr_p0 = pAgent.GetVariable<string>(351984746u);
-			string opr = (string)((EmployeeParTestAgent)pAgent).Func_StringIR(opr_p0);
+			string opr = ((EmployeeParTestAgent)pAgent).Func_StringIR(opr_p0);
 			Debug.Check(behaviac.Utils.MakeVariableId("par2_string_0") == 351984746u);
 			pAgent.SetVariable<string>("par2_string_0", 351984746u, opr);
 			return result;
@@ -24679,7 +25466,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par2_string_list_0") == 1339885043u);
 			List<string> opr_p0 = pAgent.GetVariable<List<string>>(1339885043u);
-			List<string> opr = (List<string>)((EmployeeParTestAgent)pAgent).Func_StringListIR(opr_p0);
+			List<string> opr = ((EmployeeParTestAgent)pAgent).Func_StringListIR(opr_p0);
 			Debug.Check(behaviac.Utils.MakeVariableId("par2_string_list_0") == 1339885043u);
 			pAgent.SetVariable<List<string>>("par2_string_list_0", 1339885043u, opr);
 			return result;
@@ -24697,7 +25484,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par2_uint_0") == 868709384u);
 			uint opr_p0 = pAgent.GetVariable<uint>(868709384u);
-			uint opr = (uint)((EmployeeParTestAgent)pAgent).Func_UIntIR(opr_p0);
+			uint opr = ((EmployeeParTestAgent)pAgent).Func_UIntIR(opr_p0);
 			Debug.Check(behaviac.Utils.MakeVariableId("par2_uint_0") == 868709384u);
 			pAgent.SetVariable<uint>("par2_uint_0", 868709384u, opr);
 			return result;
@@ -24715,7 +25502,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par2_ulong_0") == 4274832167u);
 			ulong opr_p0 = pAgent.GetVariable<ulong>(4274832167u);
-			ulong opr = (ulong)((EmployeeParTestAgent)pAgent).Func_ULongIR(opr_p0);
+			ulong opr = ((EmployeeParTestAgent)pAgent).Func_ULongIR(opr_p0);
 			Debug.Check(behaviac.Utils.MakeVariableId("par2_ulong_0") == 4274832167u);
 			pAgent.SetVariable<ulong>("par2_ulong_0", 4274832167u, opr);
 			return result;
@@ -24733,7 +25520,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par2_longlong_0") == 1021248696u);
 			long opr_p0 = pAgent.GetVariable<long>(1021248696u);
-			long opr = (long)((EmployeeParTestAgent)pAgent).Func_LongLongIR(opr_p0);
+			long opr = ((EmployeeParTestAgent)pAgent).Func_LongLongIR(opr_p0);
 			Debug.Check(behaviac.Utils.MakeVariableId("par2_longlong_0") == 1021248696u);
 			pAgent.SetVariable<long>("par2_longlong_0", 1021248696u, opr);
 			return result;
@@ -24751,7 +25538,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par2_ulonglong_0") == 386357671u);
 			ulong opr_p0 = pAgent.GetVariable<ulong>(386357671u);
-			ulong opr = (ulong)((EmployeeParTestAgent)pAgent).Func_ULongLongIR(opr_p0);
+			ulong opr = ((EmployeeParTestAgent)pAgent).Func_ULongLongIR(opr_p0);
 			Debug.Check(behaviac.Utils.MakeVariableId("par2_ulonglong_0") == 386357671u);
 			pAgent.SetVariable<ulong>("par2_ulonglong_0", 386357671u, opr);
 			return result;
@@ -24769,7 +25556,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par2_SzString_0") == 2318984205u);
 			string opr_p0 = pAgent.GetVariable<string>(2318984205u);
-			string opr = (string)((EmployeeParTestAgent)pAgent).Func_StringIR(opr_p0);
+			string opr = ((EmployeeParTestAgent)pAgent).Func_StringIR(opr_p0);
 			Debug.Check(behaviac.Utils.MakeVariableId("par2_SzString_0") == 2318984205u);
 			pAgent.SetVariable<string>("par2_SzString_0", 2318984205u, opr);
 			return result;
@@ -24787,7 +25574,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par1_short_0") == 3228030786u);
 			short opr_p0 = pAgent.GetVariable<short>(3228030786u);
-			short opr = (short)((ParTestAgent)pAgent).Func_ShortIR(opr_p0);
+			short opr = ((ParTestAgent)pAgent).Func_ShortIR(opr_p0);
 			Debug.Check(behaviac.Utils.MakeVariableId("par1_short_0") == 3228030786u);
 			pAgent.SetVariable<short>("par1_short_0", 3228030786u, opr);
 			return result;
@@ -24805,7 +25592,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par1_int_0") == 2735162453u);
 			int opr_p0 = pAgent.GetVariable<int>(2735162453u);
-			int opr = (int)((ParTestAgent)pAgent).Func_IntIR(opr_p0);
+			int opr = ((ParTestAgent)pAgent).Func_IntIR(opr_p0);
 			Debug.Check(behaviac.Utils.MakeVariableId("par1_int_0") == 2735162453u);
 			pAgent.SetVariable<int>("par1_int_0", 2735162453u, opr);
 			return result;
@@ -24823,7 +25610,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par1_int_list_0") == 2093180786u);
 			List<int> opr_p0 = pAgent.GetVariable<List<int>>(2093180786u);
-			List<int> opr = (List<int>)((ParTestAgent)pAgent).Func_IntListIR(opr_p0);
+			List<int> opr = ((ParTestAgent)pAgent).Func_IntListIR(opr_p0);
 			Debug.Check(behaviac.Utils.MakeVariableId("par1_int_list_0") == 2093180786u);
 			pAgent.SetVariable<List<int>>("par1_int_list_0", 2093180786u, opr);
 			return result;
@@ -24841,7 +25628,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par1_long_0") == 1828293308u);
 			long opr_p0 = pAgent.GetVariable<long>(1828293308u);
-			long opr = (long)((ParTestAgent)pAgent).Func_LongIR(opr_p0);
+			long opr = ((ParTestAgent)pAgent).Func_LongIR(opr_p0);
 			Debug.Check(behaviac.Utils.MakeVariableId("par1_long_0") == 1828293308u);
 			pAgent.SetVariable<long>("par1_long_0", 1828293308u, opr);
 			return result;
@@ -24859,7 +25646,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par1_kemployee_0") == 4045482770u);
 			TNS.ST.PER.WRK.kEmployee opr_p0 = pAgent.GetVariable<TNS.ST.PER.WRK.kEmployee>(4045482770u);
-			TNS.ST.PER.WRK.kEmployee opr = (TNS.ST.PER.WRK.kEmployee)((ParTestAgent)pAgent).Func_kEmployeeIR(opr_p0);
+			TNS.ST.PER.WRK.kEmployee opr = ((ParTestAgent)pAgent).Func_kEmployeeIR(opr_p0);
 			Debug.Check(behaviac.Utils.MakeVariableId("par1_kemployee_0") == 4045482770u);
 			pAgent.SetVariable<TNS.ST.PER.WRK.kEmployee>("par1_kemployee_0", 4045482770u, opr);
 			return result;
@@ -24877,7 +25664,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par1_kemployee_list_0") == 506976637u);
 			List<TNS.ST.PER.WRK.kEmployee> opr_p0 = pAgent.GetVariable<List<TNS.ST.PER.WRK.kEmployee>>(506976637u);
-			List<TNS.ST.PER.WRK.kEmployee> opr = (List<TNS.ST.PER.WRK.kEmployee>)((ParTestAgent)pAgent).Func_kEmployeeListIR(opr_p0);
+			List<TNS.ST.PER.WRK.kEmployee> opr = ((ParTestAgent)pAgent).Func_kEmployeeListIR(opr_p0);
 			Debug.Check(behaviac.Utils.MakeVariableId("par1_kemployee_list_0") == 506976637u);
 			pAgent.SetVariable<List<TNS.ST.PER.WRK.kEmployee>>("par1_kemployee_list_0", 506976637u, opr);
 			return result;
@@ -24895,7 +25682,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par1_ushort_0") == 109865111u);
 			ushort opr_p0 = pAgent.GetVariable<ushort>(109865111u);
-			ushort opr = (ushort)((ParTestAgent)pAgent).Func_UShortIR(opr_p0);
+			ushort opr = ((ParTestAgent)pAgent).Func_UShortIR(opr_p0);
 			Debug.Check(behaviac.Utils.MakeVariableId("par1_ushort_0") == 109865111u);
 			pAgent.SetVariable<ushort>("par1_ushort_0", 109865111u, opr);
 			return result;
@@ -24913,7 +25700,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par0_boolean_0") == 1912381985u);
 			bool opr_p0 = pAgent.GetVariable<bool>(1912381985u);
-			bool opr = (bool)((ParTestAgentBase)pAgent).Func_BooleanIR(opr_p0);
+			bool opr = ((ParTestAgentBase)pAgent).Func_BooleanIR(opr_p0);
 			Debug.Check(behaviac.Utils.MakeVariableId("par0_boolean_0") == 1912381985u);
 			pAgent.SetVariable<bool>("par0_boolean_0", 1912381985u, opr);
 			return result;
@@ -24931,7 +25718,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par0_boolean_list_0") == 109714028u);
 			List<bool> opr_p0 = pAgent.GetVariable<List<bool>>(109714028u);
-			List<bool> opr = (List<bool>)((ParTestAgentBase)pAgent).Func_BooleanListIR(opr_p0);
+			List<bool> opr = ((ParTestAgentBase)pAgent).Func_BooleanListIR(opr_p0);
 			Debug.Check(behaviac.Utils.MakeVariableId("par0_boolean_list_0") == 109714028u);
 			pAgent.SetVariable<List<bool>>("par0_boolean_list_0", 109714028u, opr);
 			return result;
@@ -24949,7 +25736,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par0_byte_0") == 2120958860u);
 			byte opr_p0 = pAgent.GetVariable<byte>(2120958860u);
-			byte opr = (byte)((ParTestAgentBase)pAgent).Func_ByteIR(opr_p0);
+			byte opr = ((ParTestAgentBase)pAgent).Func_ByteIR(opr_p0);
 			Debug.Check(behaviac.Utils.MakeVariableId("par0_byte_0") == 2120958860u);
 			pAgent.SetVariable<byte>("par0_byte_0", 2120958860u, opr);
 			return result;
@@ -24967,7 +25754,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par0_byte_list_0") == 1459492261u);
 			List<byte> opr_p0 = pAgent.GetVariable<List<byte>>(1459492261u);
-			List<byte> opr = (List<byte>)((ParTestAgentBase)pAgent).Func_ByteListIR(opr_p0);
+			List<byte> opr = ((ParTestAgentBase)pAgent).Func_ByteListIR(opr_p0);
 			Debug.Check(behaviac.Utils.MakeVariableId("par0_byte_list_0") == 1459492261u);
 			pAgent.SetVariable<List<byte>>("par0_byte_list_0", 1459492261u, opr);
 			return result;
@@ -24985,7 +25772,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par0_char_0") == 1968762578u);
 			char opr_p0 = pAgent.GetVariable<char>(1968762578u);
-			char opr = (char)((ParTestAgentBase)pAgent).Func_CharIR(opr_p0);
+			char opr = ((ParTestAgentBase)pAgent).Func_CharIR(opr_p0);
 			Debug.Check(behaviac.Utils.MakeVariableId("par0_char_0") == 1968762578u);
 			pAgent.SetVariable<char>("par0_char_0", 1968762578u, opr);
 			return result;
@@ -25003,7 +25790,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par0_char_list_0") == 2869241813u);
 			List<char> opr_p0 = pAgent.GetVariable<List<char>>(2869241813u);
-			List<char> opr = (List<char>)((ParTestAgentBase)pAgent).Func_CharListIR(opr_p0);
+			List<char> opr = ((ParTestAgentBase)pAgent).Func_CharListIR(opr_p0);
 			Debug.Check(behaviac.Utils.MakeVariableId("par0_char_list_0") == 2869241813u);
 			pAgent.SetVariable<List<char>>("par0_char_list_0", 2869241813u, opr);
 			return result;
@@ -25021,7 +25808,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par0_ecolor_0") == 3914433730u);
 			TNS.NE.NAT.eColor opr_p0 = pAgent.GetVariable<TNS.NE.NAT.eColor>(3914433730u);
-			TNS.NE.NAT.eColor opr = (TNS.NE.NAT.eColor)((ParTestAgentBase)pAgent).Func_eColorIR(opr_p0);
+			TNS.NE.NAT.eColor opr = ((ParTestAgentBase)pAgent).Func_eColorIR(opr_p0);
 			Debug.Check(behaviac.Utils.MakeVariableId("par0_ecolor_0") == 3914433730u);
 			pAgent.SetVariable<TNS.NE.NAT.eColor>("par0_ecolor_0", 3914433730u, opr);
 			return result;
@@ -25039,7 +25826,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par0_ecolor_list_0") == 1963776920u);
 			List<TNS.NE.NAT.eColor> opr_p0 = pAgent.GetVariable<List<TNS.NE.NAT.eColor>>(1963776920u);
-			List<TNS.NE.NAT.eColor> opr = (List<TNS.NE.NAT.eColor>)((ParTestAgentBase)pAgent).Func_eColorListIR(opr_p0);
+			List<TNS.NE.NAT.eColor> opr = ((ParTestAgentBase)pAgent).Func_eColorListIR(opr_p0);
 			Debug.Check(behaviac.Utils.MakeVariableId("par0_ecolor_list_0") == 1963776920u);
 			pAgent.SetVariable<List<TNS.NE.NAT.eColor>>("par0_ecolor_list_0", 1963776920u, opr);
 			return result;
@@ -25057,7 +25844,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par0_sbyte_0") == 968869870u);
 			sbyte opr_p0 = pAgent.GetVariable<sbyte>(968869870u);
-			sbyte opr = (sbyte)((ParTestAgentBase)pAgent).Func_SByteIR(opr_p0);
+			sbyte opr = ((ParTestAgentBase)pAgent).Func_SByteIR(opr_p0);
 			Debug.Check(behaviac.Utils.MakeVariableId("par0_sbyte_0") == 968869870u);
 			pAgent.SetVariable<sbyte>("par0_sbyte_0", 968869870u, opr);
 			return result;
@@ -25075,7 +25862,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par0_sbyte_list_0") == 2290963684u);
 			List<sbyte> opr_p0 = pAgent.GetVariable<List<sbyte>>(2290963684u);
-			List<sbyte> opr = (List<sbyte>)((ParTestAgentBase)pAgent).Func_SByteListIR(opr_p0);
+			List<sbyte> opr = ((ParTestAgentBase)pAgent).Func_SByteListIR(opr_p0);
 			Debug.Check(behaviac.Utils.MakeVariableId("par0_sbyte_list_0") == 2290963684u);
 			pAgent.SetVariable<List<sbyte>>("par0_sbyte_list_0", 2290963684u, opr);
 			return result;
@@ -26511,7 +27298,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par2_agent_0") == 3876418331u);
 			behaviac.Agent opr_p0 = pAgent.GetVariable<behaviac.Agent>(3876418331u);
-			behaviac.Agent opr = (behaviac.Agent)((EmployeeParTestAgent)pAgent).Func_AgentIR(opr_p0);
+			behaviac.Agent opr = ((EmployeeParTestAgent)pAgent).Func_AgentIR(opr_p0);
 			((EmployeeParTestAgent)pAgent).TV_AGENT_0 = opr;
 			return result;
 		}
@@ -26528,7 +27315,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par2_agent_list_0") == 1126732011u);
 			List<behaviac.Agent> opr_p0 = pAgent.GetVariable<List<behaviac.Agent>>(1126732011u);
-			List<behaviac.Agent> opr = (List<behaviac.Agent>)((EmployeeParTestAgent)pAgent).Func_AgentListIR(opr_p0);
+			List<behaviac.Agent> opr = ((EmployeeParTestAgent)pAgent).Func_AgentListIR(opr_p0);
 			((EmployeeParTestAgent)pAgent).TV_LIST_AGENT_0 = opr;
 			return result;
 		}
@@ -26545,7 +27332,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par2_double_0") == 2183367433u);
 			double opr_p0 = pAgent.GetVariable<double>(2183367433u);
-			double opr = (double)((EmployeeParTestAgent)pAgent).Func_DoubleIR(opr_p0);
+			double opr = ((EmployeeParTestAgent)pAgent).Func_DoubleIR(opr_p0);
 			((EmployeeParTestAgent)pAgent).TV_D_0 = opr;
 			return result;
 		}
@@ -26562,7 +27349,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par2_single_0") == 3120166065u);
 			float opr_p0 = pAgent.GetVariable<float>(3120166065u);
-			float opr = (float)((EmployeeParTestAgent)pAgent).Func_SingleIR(opr_p0);
+			float opr = ((EmployeeParTestAgent)pAgent).Func_SingleIR(opr_p0);
 			((EmployeeParTestAgent)pAgent).TV_F_0 = opr;
 			return result;
 		}
@@ -26579,7 +27366,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par2_single_list_0") == 3448877207u);
 			List<float> opr_p0 = pAgent.GetVariable<List<float>>(3448877207u);
-			List<float> opr = (List<float>)((EmployeeParTestAgent)pAgent).Func_SingleListIR(opr_p0);
+			List<float> opr = ((EmployeeParTestAgent)pAgent).Func_SingleListIR(opr_p0);
 			((EmployeeParTestAgent)pAgent).TV_LIST_F_0 = opr;
 			return result;
 		}
@@ -26596,7 +27383,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par2_string_0") == 351984746u);
 			string opr_p0 = pAgent.GetVariable<string>(351984746u);
-			string opr = (string)((EmployeeParTestAgent)pAgent).Func_StringIR(opr_p0);
+			string opr = ((EmployeeParTestAgent)pAgent).Func_StringIR(opr_p0);
 			((EmployeeParTestAgent)pAgent).TV_STR_0 = opr;
 			return result;
 		}
@@ -26613,7 +27400,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par2_string_list_0") == 1339885043u);
 			List<string> opr_p0 = pAgent.GetVariable<List<string>>(1339885043u);
-			List<string> opr = (List<string>)((EmployeeParTestAgent)pAgent).Func_StringListIR(opr_p0);
+			List<string> opr = ((EmployeeParTestAgent)pAgent).Func_StringListIR(opr_p0);
 			((EmployeeParTestAgent)pAgent).TV_LIST_STR_0 = opr;
 			return result;
 		}
@@ -26630,7 +27417,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par2_uint_0") == 868709384u);
 			uint opr_p0 = pAgent.GetVariable<uint>(868709384u);
-			uint opr = (uint)((EmployeeParTestAgent)pAgent).Func_UIntIR(opr_p0);
+			uint opr = ((EmployeeParTestAgent)pAgent).Func_UIntIR(opr_p0);
 			((EmployeeParTestAgent)pAgent).TV_UINT_0 = opr;
 			return result;
 		}
@@ -26647,7 +27434,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par2_ulong_0") == 4274832167u);
 			ulong opr_p0 = pAgent.GetVariable<ulong>(4274832167u);
-			ulong opr = (ulong)((EmployeeParTestAgent)pAgent).Func_ULongIR(opr_p0);
+			ulong opr = ((EmployeeParTestAgent)pAgent).Func_ULongIR(opr_p0);
 			((EmployeeParTestAgent)pAgent).TV_ULONG_0 = opr;
 			return result;
 		}
@@ -26694,7 +27481,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par1_short_0") == 3228030786u);
 			short opr_p0 = pAgent.GetVariable<short>(3228030786u);
-			short opr = (short)((ParTestAgent)pAgent).Func_ShortIR(opr_p0);
+			short opr = ((ParTestAgent)pAgent).Func_ShortIR(opr_p0);
 			((ParTestAgent)pAgent).TV_SHORT_0 = opr;
 			return result;
 		}
@@ -26711,7 +27498,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par1_int_0") == 2735162453u);
 			int opr_p0 = pAgent.GetVariable<int>(2735162453u);
-			int opr = (int)((ParTestAgent)pAgent).Func_IntIR(opr_p0);
+			int opr = ((ParTestAgent)pAgent).Func_IntIR(opr_p0);
 			((ParTestAgent)pAgent).TV_INT_0 = opr;
 			return result;
 		}
@@ -26728,7 +27515,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par1_int_list_0") == 2093180786u);
 			List<int> opr_p0 = pAgent.GetVariable<List<int>>(2093180786u);
-			List<int> opr = (List<int>)((ParTestAgent)pAgent).Func_IntListIR(opr_p0);
+			List<int> opr = ((ParTestAgent)pAgent).Func_IntListIR(opr_p0);
 			((ParTestAgent)pAgent).TV_LIST_INT_0 = opr;
 			return result;
 		}
@@ -26745,7 +27532,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par1_long_0") == 1828293308u);
 			long opr_p0 = pAgent.GetVariable<long>(1828293308u);
-			long opr = (long)((ParTestAgent)pAgent).Func_LongIR(opr_p0);
+			long opr = ((ParTestAgent)pAgent).Func_LongIR(opr_p0);
 			((ParTestAgent)pAgent).TV_LONG_0 = opr;
 			return result;
 		}
@@ -26762,7 +27549,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par1_kemployee_0") == 4045482770u);
 			TNS.ST.PER.WRK.kEmployee opr_p0 = pAgent.GetVariable<TNS.ST.PER.WRK.kEmployee>(4045482770u);
-			TNS.ST.PER.WRK.kEmployee opr = (TNS.ST.PER.WRK.kEmployee)((ParTestAgent)pAgent).Func_kEmployeeIR(opr_p0);
+			TNS.ST.PER.WRK.kEmployee opr = ((ParTestAgent)pAgent).Func_kEmployeeIR(opr_p0);
 			((ParTestAgent)pAgent).TV_KEMPLOYEE_0 = opr;
 			return result;
 		}
@@ -26779,7 +27566,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par1_kemployee_list_0") == 506976637u);
 			List<TNS.ST.PER.WRK.kEmployee> opr_p0 = pAgent.GetVariable<List<TNS.ST.PER.WRK.kEmployee>>(506976637u);
-			List<TNS.ST.PER.WRK.kEmployee> opr = (List<TNS.ST.PER.WRK.kEmployee>)((ParTestAgent)pAgent).Func_kEmployeeListIR(opr_p0);
+			List<TNS.ST.PER.WRK.kEmployee> opr = ((ParTestAgent)pAgent).Func_kEmployeeListIR(opr_p0);
 			((ParTestAgent)pAgent).TV_LIST_KEMPLOYEE_0 = opr;
 			return result;
 		}
@@ -26796,7 +27583,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par1_ushort_0") == 109865111u);
 			ushort opr_p0 = pAgent.GetVariable<ushort>(109865111u);
-			ushort opr = (ushort)((ParTestAgent)pAgent).Func_UShortIR(opr_p0);
+			ushort opr = ((ParTestAgent)pAgent).Func_UShortIR(opr_p0);
 			((ParTestAgent)pAgent).TV_USHORT_0 = opr;
 			return result;
 		}
@@ -26813,7 +27600,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par0_boolean_0") == 1912381985u);
 			bool opr_p0 = pAgent.GetVariable<bool>(1912381985u);
-			bool opr = (bool)((ParTestAgentBase)pAgent).Func_BooleanIR(opr_p0);
+			bool opr = ((ParTestAgentBase)pAgent).Func_BooleanIR(opr_p0);
 			((ParTestAgentBase)pAgent).TV_BOOL_0 = opr;
 			return result;
 		}
@@ -26830,7 +27617,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par0_boolean_list_0") == 109714028u);
 			List<bool> opr_p0 = pAgent.GetVariable<List<bool>>(109714028u);
-			List<bool> opr = (List<bool>)((ParTestAgentBase)pAgent).Func_BooleanListIR(opr_p0);
+			List<bool> opr = ((ParTestAgentBase)pAgent).Func_BooleanListIR(opr_p0);
 			((ParTestAgentBase)pAgent).TV_LIST_BOOL_0 = opr;
 			return result;
 		}
@@ -26847,7 +27634,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par0_byte_0") == 2120958860u);
 			byte opr_p0 = pAgent.GetVariable<byte>(2120958860u);
-			byte opr = (byte)((ParTestAgentBase)pAgent).Func_ByteIR(opr_p0);
+			byte opr = ((ParTestAgentBase)pAgent).Func_ByteIR(opr_p0);
 			((ParTestAgentBase)pAgent).TV_BYTE_0 = opr;
 			return result;
 		}
@@ -26864,7 +27651,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par0_byte_list_0") == 1459492261u);
 			List<byte> opr_p0 = pAgent.GetVariable<List<byte>>(1459492261u);
-			List<byte> opr = (List<byte>)((ParTestAgentBase)pAgent).Func_ByteListIR(opr_p0);
+			List<byte> opr = ((ParTestAgentBase)pAgent).Func_ByteListIR(opr_p0);
 			((ParTestAgentBase)pAgent).TV_LIST_BYTE_0 = opr;
 			return result;
 		}
@@ -26881,7 +27668,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par0_char_0") == 1968762578u);
 			char opr_p0 = pAgent.GetVariable<char>(1968762578u);
-			char opr = (char)((ParTestAgentBase)pAgent).Func_CharIR(opr_p0);
+			char opr = ((ParTestAgentBase)pAgent).Func_CharIR(opr_p0);
 			((ParTestAgentBase)pAgent).TV_CHAR_0 = opr;
 			return result;
 		}
@@ -26898,7 +27685,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par0_char_list_0") == 2869241813u);
 			List<char> opr_p0 = pAgent.GetVariable<List<char>>(2869241813u);
-			List<char> opr = (List<char>)((ParTestAgentBase)pAgent).Func_CharListIR(opr_p0);
+			List<char> opr = ((ParTestAgentBase)pAgent).Func_CharListIR(opr_p0);
 			((ParTestAgentBase)pAgent).TV_LIST_CHAR_0 = opr;
 			return result;
 		}
@@ -26915,7 +27702,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par0_ecolor_0") == 3914433730u);
 			TNS.NE.NAT.eColor opr_p0 = pAgent.GetVariable<TNS.NE.NAT.eColor>(3914433730u);
-			TNS.NE.NAT.eColor opr = (TNS.NE.NAT.eColor)((ParTestAgentBase)pAgent).Func_eColorIR(opr_p0);
+			TNS.NE.NAT.eColor opr = ((ParTestAgentBase)pAgent).Func_eColorIR(opr_p0);
 			((ParTestAgentBase)pAgent).TV_ECOLOR_0 = opr;
 			return result;
 		}
@@ -26932,7 +27719,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par0_ecolor_list_0") == 1963776920u);
 			List<TNS.NE.NAT.eColor> opr_p0 = pAgent.GetVariable<List<TNS.NE.NAT.eColor>>(1963776920u);
-			List<TNS.NE.NAT.eColor> opr = (List<TNS.NE.NAT.eColor>)((ParTestAgentBase)pAgent).Func_eColorListIR(opr_p0);
+			List<TNS.NE.NAT.eColor> opr = ((ParTestAgentBase)pAgent).Func_eColorListIR(opr_p0);
 			((ParTestAgentBase)pAgent).TV_LIST_ECOLOR_0 = opr;
 			return result;
 		}
@@ -26949,7 +27736,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par0_sbyte_0") == 968869870u);
 			sbyte opr_p0 = pAgent.GetVariable<sbyte>(968869870u);
-			sbyte opr = (sbyte)((ParTestAgentBase)pAgent).Func_SByteIR(opr_p0);
+			sbyte opr = ((ParTestAgentBase)pAgent).Func_SByteIR(opr_p0);
 			((ParTestAgentBase)pAgent).TV_SBYTE_0 = opr;
 			return result;
 		}
@@ -26966,7 +27753,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("par0_sbyte_list_0") == 2290963684u);
 			List<sbyte> opr_p0 = pAgent.GetVariable<List<sbyte>>(2290963684u);
-			List<sbyte> opr = (List<sbyte>)((ParTestAgentBase)pAgent).Func_SByteListIR(opr_p0);
+			List<sbyte> opr = ((ParTestAgentBase)pAgent).Func_SByteListIR(opr_p0);
 			((ParTestAgentBase)pAgent).TV_LIST_SBYTE_0 = opr;
 			return result;
 		}
@@ -27346,7 +28133,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			behaviac.Agent opr = (behaviac.Agent)((EmployeeParTestAgent)pAgent).Func_AgentIR(((EmployeeParTestAgent)pAgent).TV_AGENT_0);
+			behaviac.Agent opr = ((EmployeeParTestAgent)pAgent).Func_AgentIR(((EmployeeParTestAgent)pAgent).TV_AGENT_0);
 			((EmployeeParTestAgent)pAgent).TV_AGENT_0 = opr;
 			return result;
 		}
@@ -27361,7 +28148,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			List<behaviac.Agent> opr = (List<behaviac.Agent>)((EmployeeParTestAgent)pAgent).Func_AgentListIR(((EmployeeParTestAgent)pAgent).TV_LIST_AGENT_0);
+			List<behaviac.Agent> opr = ((EmployeeParTestAgent)pAgent).Func_AgentListIR(((EmployeeParTestAgent)pAgent).TV_LIST_AGENT_0);
 			((EmployeeParTestAgent)pAgent).TV_LIST_AGENT_0 = opr;
 			return result;
 		}
@@ -27376,7 +28163,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			double opr = (double)((EmployeeParTestAgent)pAgent).Func_DoubleIR(((EmployeeParTestAgent)pAgent).TV_D_0);
+			double opr = ((EmployeeParTestAgent)pAgent).Func_DoubleIR(((EmployeeParTestAgent)pAgent).TV_D_0);
 			((EmployeeParTestAgent)pAgent).TV_D_0 = opr;
 			return result;
 		}
@@ -27391,7 +28178,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			float opr = (float)((EmployeeParTestAgent)pAgent).Func_SingleIR(((EmployeeParTestAgent)pAgent).TV_F_0);
+			float opr = ((EmployeeParTestAgent)pAgent).Func_SingleIR(((EmployeeParTestAgent)pAgent).TV_F_0);
 			((EmployeeParTestAgent)pAgent).TV_F_0 = opr;
 			return result;
 		}
@@ -27406,7 +28193,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			List<float> opr = (List<float>)((EmployeeParTestAgent)pAgent).Func_SingleListIR(((EmployeeParTestAgent)pAgent).TV_LIST_F_0);
+			List<float> opr = ((EmployeeParTestAgent)pAgent).Func_SingleListIR(((EmployeeParTestAgent)pAgent).TV_LIST_F_0);
 			((EmployeeParTestAgent)pAgent).TV_LIST_F_0 = opr;
 			return result;
 		}
@@ -27421,7 +28208,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			string opr = (string)((EmployeeParTestAgent)pAgent).Func_StringIR(((EmployeeParTestAgent)pAgent).TV_STR_0);
+			string opr = ((EmployeeParTestAgent)pAgent).Func_StringIR(((EmployeeParTestAgent)pAgent).TV_STR_0);
 			((EmployeeParTestAgent)pAgent).TV_STR_0 = opr;
 			return result;
 		}
@@ -27436,7 +28223,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			List<string> opr = (List<string>)((EmployeeParTestAgent)pAgent).Func_StringListIR(((EmployeeParTestAgent)pAgent).TV_LIST_STR_0);
+			List<string> opr = ((EmployeeParTestAgent)pAgent).Func_StringListIR(((EmployeeParTestAgent)pAgent).TV_LIST_STR_0);
 			((EmployeeParTestAgent)pAgent).TV_LIST_STR_0 = opr;
 			return result;
 		}
@@ -27451,7 +28238,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			uint opr = (uint)((EmployeeParTestAgent)pAgent).Func_UIntIR(((EmployeeParTestAgent)pAgent).TV_UINT_0);
+			uint opr = ((EmployeeParTestAgent)pAgent).Func_UIntIR(((EmployeeParTestAgent)pAgent).TV_UINT_0);
 			((EmployeeParTestAgent)pAgent).TV_UINT_0 = opr;
 			return result;
 		}
@@ -27466,7 +28253,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			ulong opr = (ulong)((EmployeeParTestAgent)pAgent).Func_ULongIR(((EmployeeParTestAgent)pAgent).TV_ULONG_0);
+			ulong opr = ((EmployeeParTestAgent)pAgent).Func_ULongIR(((EmployeeParTestAgent)pAgent).TV_ULONG_0);
 			((EmployeeParTestAgent)pAgent).TV_ULONG_0 = opr;
 			return result;
 		}
@@ -27481,7 +28268,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			long opr = (long)((EmployeeParTestAgent)pAgent).Func_LongLongIR(((EmployeeParTestAgent)pAgent).TV_LL_0);
+			long opr = ((EmployeeParTestAgent)pAgent).Func_LongLongIR(((EmployeeParTestAgent)pAgent).TV_LL_0);
 			((EmployeeParTestAgent)pAgent).TV_LL_0 = opr;
 			return result;
 		}
@@ -27496,7 +28283,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			ulong opr = (ulong)((EmployeeParTestAgent)pAgent).Func_ULongLongIR(((EmployeeParTestAgent)pAgent).TV_ULL_0);
+			ulong opr = ((EmployeeParTestAgent)pAgent).Func_ULongLongIR(((EmployeeParTestAgent)pAgent).TV_ULL_0);
 			((EmployeeParTestAgent)pAgent).TV_ULL_0 = opr;
 			return result;
 		}
@@ -27511,7 +28298,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			short opr = (short)((ParTestAgent)pAgent).Func_ShortIR(((ParTestAgent)pAgent).TV_SHORT_0);
+			short opr = ((ParTestAgent)pAgent).Func_ShortIR(((ParTestAgent)pAgent).TV_SHORT_0);
 			((ParTestAgent)pAgent).TV_SHORT_0 = opr;
 			return result;
 		}
@@ -27526,7 +28313,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			int opr = (int)((ParTestAgent)pAgent).Func_IntIR(((ParTestAgent)pAgent).TV_INT_0);
+			int opr = ((ParTestAgent)pAgent).Func_IntIR(((ParTestAgent)pAgent).TV_INT_0);
 			((ParTestAgent)pAgent).TV_INT_0 = opr;
 			return result;
 		}
@@ -27541,7 +28328,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			List<int> opr = (List<int>)((ParTestAgent)pAgent).Func_IntListIR(((ParTestAgent)pAgent).TV_LIST_INT_0);
+			List<int> opr = ((ParTestAgent)pAgent).Func_IntListIR(((ParTestAgent)pAgent).TV_LIST_INT_0);
 			((ParTestAgent)pAgent).TV_LIST_INT_0 = opr;
 			return result;
 		}
@@ -27556,7 +28343,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			long opr = (long)((ParTestAgent)pAgent).Func_LongIR(((ParTestAgent)pAgent).TV_LONG_0);
+			long opr = ((ParTestAgent)pAgent).Func_LongIR(((ParTestAgent)pAgent).TV_LONG_0);
 			((ParTestAgent)pAgent).TV_LONG_0 = opr;
 			return result;
 		}
@@ -27571,7 +28358,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			TNS.ST.PER.WRK.kEmployee opr = (TNS.ST.PER.WRK.kEmployee)((ParTestAgent)pAgent).Func_kEmployeeIR(((ParTestAgent)pAgent).TV_KEMPLOYEE_0);
+			TNS.ST.PER.WRK.kEmployee opr = ((ParTestAgent)pAgent).Func_kEmployeeIR(((ParTestAgent)pAgent).TV_KEMPLOYEE_0);
 			((ParTestAgent)pAgent).TV_KEMPLOYEE_0 = opr;
 			return result;
 		}
@@ -27586,7 +28373,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			List<TNS.ST.PER.WRK.kEmployee> opr = (List<TNS.ST.PER.WRK.kEmployee>)((ParTestAgent)pAgent).Func_kEmployeeListIR(((ParTestAgent)pAgent).TV_LIST_KEMPLOYEE_0);
+			List<TNS.ST.PER.WRK.kEmployee> opr = ((ParTestAgent)pAgent).Func_kEmployeeListIR(((ParTestAgent)pAgent).TV_LIST_KEMPLOYEE_0);
 			((ParTestAgent)pAgent).TV_LIST_KEMPLOYEE_0 = opr;
 			return result;
 		}
@@ -27601,7 +28388,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			ushort opr = (ushort)((ParTestAgent)pAgent).Func_UShortIR(((ParTestAgent)pAgent).TV_USHORT_0);
+			ushort opr = ((ParTestAgent)pAgent).Func_UShortIR(((ParTestAgent)pAgent).TV_USHORT_0);
 			((ParTestAgent)pAgent).TV_USHORT_0 = opr;
 			return result;
 		}
@@ -27616,7 +28403,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			bool opr = (bool)((ParTestAgentBase)pAgent).Func_BooleanIR(((ParTestAgentBase)pAgent).TV_BOOL_0);
+			bool opr = ((ParTestAgentBase)pAgent).Func_BooleanIR(((ParTestAgentBase)pAgent).TV_BOOL_0);
 			((ParTestAgentBase)pAgent).TV_BOOL_0 = opr;
 			return result;
 		}
@@ -27631,7 +28418,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			List<bool> opr = (List<bool>)((ParTestAgentBase)pAgent).Func_BooleanListIR(((ParTestAgentBase)pAgent).TV_LIST_BOOL_0);
+			List<bool> opr = ((ParTestAgentBase)pAgent).Func_BooleanListIR(((ParTestAgentBase)pAgent).TV_LIST_BOOL_0);
 			((ParTestAgentBase)pAgent).TV_LIST_BOOL_0 = opr;
 			return result;
 		}
@@ -27646,7 +28433,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			byte opr = (byte)((ParTestAgentBase)pAgent).Func_ByteIR(((ParTestAgentBase)pAgent).TV_BYTE_0);
+			byte opr = ((ParTestAgentBase)pAgent).Func_ByteIR(((ParTestAgentBase)pAgent).TV_BYTE_0);
 			((ParTestAgentBase)pAgent).TV_BYTE_0 = opr;
 			return result;
 		}
@@ -27661,7 +28448,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			List<byte> opr = (List<byte>)((ParTestAgentBase)pAgent).Func_ByteListIR(((ParTestAgentBase)pAgent).TV_LIST_BYTE_0);
+			List<byte> opr = ((ParTestAgentBase)pAgent).Func_ByteListIR(((ParTestAgentBase)pAgent).TV_LIST_BYTE_0);
 			((ParTestAgentBase)pAgent).TV_LIST_BYTE_0 = opr;
 			return result;
 		}
@@ -27676,7 +28463,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			char opr = (char)((ParTestAgentBase)pAgent).Func_CharIR(((ParTestAgentBase)pAgent).TV_CHAR_0);
+			char opr = ((ParTestAgentBase)pAgent).Func_CharIR(((ParTestAgentBase)pAgent).TV_CHAR_0);
 			((ParTestAgentBase)pAgent).TV_CHAR_0 = opr;
 			return result;
 		}
@@ -27691,7 +28478,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			List<char> opr = (List<char>)((ParTestAgentBase)pAgent).Func_CharListIR(((ParTestAgentBase)pAgent).TV_LIST_CHAR_0);
+			List<char> opr = ((ParTestAgentBase)pAgent).Func_CharListIR(((ParTestAgentBase)pAgent).TV_LIST_CHAR_0);
 			((ParTestAgentBase)pAgent).TV_LIST_CHAR_0 = opr;
 			return result;
 		}
@@ -27706,7 +28493,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			TNS.NE.NAT.eColor opr = (TNS.NE.NAT.eColor)((ParTestAgentBase)pAgent).Func_eColorIR(((ParTestAgentBase)pAgent).TV_ECOLOR_0);
+			TNS.NE.NAT.eColor opr = ((ParTestAgentBase)pAgent).Func_eColorIR(((ParTestAgentBase)pAgent).TV_ECOLOR_0);
 			((ParTestAgentBase)pAgent).TV_ECOLOR_0 = opr;
 			return result;
 		}
@@ -27721,7 +28508,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			List<TNS.NE.NAT.eColor> opr = (List<TNS.NE.NAT.eColor>)((ParTestAgentBase)pAgent).Func_eColorListIR(((ParTestAgentBase)pAgent).TV_LIST_ECOLOR_0);
+			List<TNS.NE.NAT.eColor> opr = ((ParTestAgentBase)pAgent).Func_eColorListIR(((ParTestAgentBase)pAgent).TV_LIST_ECOLOR_0);
 			((ParTestAgentBase)pAgent).TV_LIST_ECOLOR_0 = opr;
 			return result;
 		}
@@ -27736,7 +28523,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			sbyte opr = (sbyte)((ParTestAgentBase)pAgent).Func_SByteIR(((ParTestAgentBase)pAgent).TV_SBYTE_0);
+			sbyte opr = ((ParTestAgentBase)pAgent).Func_SByteIR(((ParTestAgentBase)pAgent).TV_SBYTE_0);
 			((ParTestAgentBase)pAgent).TV_SBYTE_0 = opr;
 			return result;
 		}
@@ -27751,7 +28538,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			List<sbyte> opr = (List<sbyte>)((ParTestAgentBase)pAgent).Func_SByteListIR(((ParTestAgentBase)pAgent).TV_LIST_SBYTE_0);
+			List<sbyte> opr = ((ParTestAgentBase)pAgent).Func_SByteListIR(((ParTestAgentBase)pAgent).TV_LIST_SBYTE_0);
 			((ParTestAgentBase)pAgent).TV_LIST_SBYTE_0 = opr;
 			return result;
 		}
@@ -29078,7 +29865,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			behaviac.Agent pAgent_opr_p0 = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
 			behaviac.Agent pAgent_opr = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
-			TNS.ST.PER.WRK.kEmployee opr = (TNS.ST.PER.WRK.kEmployee)((ParTestRegNameAgent)pAgent_opr).Func_kEmployeeIR(ParTestRegNameAgent.STV_KEMPLOYEE_0);
+			TNS.ST.PER.WRK.kEmployee opr = ((ParTestRegNameAgent)pAgent_opr).Func_kEmployeeIR(ParTestRegNameAgent.STV_KEMPLOYEE_0);
 			behaviac.Agent pAgent_opl = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
 			ParTestRegNameAgent.STV_KEMPLOYEE_0 = opr;
 			return result;
@@ -29096,7 +29883,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			behaviac.Agent pAgent_opr_p0 = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
 			behaviac.Agent pAgent_opr = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
-			List<TNS.ST.PER.WRK.kEmployee> opr = (List<TNS.ST.PER.WRK.kEmployee>)((ParTestRegNameAgent)pAgent_opr).Func_kEmployeeListIR(ParTestRegNameAgent.STV_LIST_KEMPLOYEE_0);
+			List<TNS.ST.PER.WRK.kEmployee> opr = ((ParTestRegNameAgent)pAgent_opr).Func_kEmployeeListIR(ParTestRegNameAgent.STV_LIST_KEMPLOYEE_0);
 			behaviac.Agent pAgent_opl = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
 			ParTestRegNameAgent.STV_LIST_KEMPLOYEE_0 = opr;
 			return result;
@@ -29114,7 +29901,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			behaviac.Agent pAgent_opr_p0 = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
 			behaviac.Agent pAgent_opr = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
-			List<sbyte> opr = (List<sbyte>)((ParTestRegNameAgent)pAgent_opr).Func_SByteListIR(ParTestRegNameAgent.STV_LIST_SBYTE_0);
+			List<sbyte> opr = ((ParTestRegNameAgent)pAgent_opr).Func_SByteListIR(ParTestRegNameAgent.STV_LIST_SBYTE_0);
 			behaviac.Agent pAgent_opl = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
 			ParTestRegNameAgent.STV_LIST_SBYTE_0 = opr;
 			return result;
@@ -29132,7 +29919,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			behaviac.Agent pAgent_opr_p0 = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
 			behaviac.Agent pAgent_opr = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
-			behaviac.Agent opr = (behaviac.Agent)((ParTestRegNameAgent)pAgent_opr).Func_AgentIR(((ParTestRegNameAgent)pAgent_opr_p0).TV_AGENT_0);
+			behaviac.Agent opr = ((ParTestRegNameAgent)pAgent_opr).Func_AgentIR(((ParTestRegNameAgent)pAgent_opr_p0).TV_AGENT_0);
 			behaviac.Agent pAgent_opl = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
 			((ParTestRegNameAgent)pAgent_opl).TV_AGENT_0 = opr;
 			return result;
@@ -29150,7 +29937,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			behaviac.Agent pAgent_opr_p0 = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
 			behaviac.Agent pAgent_opr = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
-			byte opr = (byte)((ParTestRegNameAgent)pAgent_opr).Func_ByteIR(((ParTestRegNameAgent)pAgent_opr_p0).TV_BYTE_0);
+			byte opr = ((ParTestRegNameAgent)pAgent_opr).Func_ByteIR(((ParTestRegNameAgent)pAgent_opr_p0).TV_BYTE_0);
 			behaviac.Agent pAgent_opl = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
 			((ParTestRegNameAgent)pAgent_opl).TV_BYTE_0 = opr;
 			return result;
@@ -29168,7 +29955,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			behaviac.Agent pAgent_opr_p0 = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
 			behaviac.Agent pAgent_opr = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
-			char opr = (char)((ParTestRegNameAgent)pAgent_opr).Func_CharIR(((ParTestRegNameAgent)pAgent_opr_p0).TV_CHAR_0);
+			char opr = ((ParTestRegNameAgent)pAgent_opr).Func_CharIR(((ParTestRegNameAgent)pAgent_opr_p0).TV_CHAR_0);
 			behaviac.Agent pAgent_opl = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
 			((ParTestRegNameAgent)pAgent_opl).TV_CHAR_0 = opr;
 			return result;
@@ -29186,7 +29973,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			behaviac.Agent pAgent_opr_p0 = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
 			behaviac.Agent pAgent_opr = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
-			TNS.ST.PER.WRK.kEmployee opr = (TNS.ST.PER.WRK.kEmployee)((ParTestRegNameAgent)pAgent_opr).Func_kEmployeeIR(((ParTestRegNameAgent)pAgent_opr_p0).TV_KEMPLOYEE_0);
+			TNS.ST.PER.WRK.kEmployee opr = ((ParTestRegNameAgent)pAgent_opr).Func_kEmployeeIR(((ParTestRegNameAgent)pAgent_opr_p0).TV_KEMPLOYEE_0);
 			behaviac.Agent pAgent_opl = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
 			((ParTestRegNameAgent)pAgent_opl).TV_KEMPLOYEE_0 = opr;
 			return result;
@@ -29204,7 +29991,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			behaviac.Agent pAgent_opr_p0 = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
 			behaviac.Agent pAgent_opr = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
-			List<TNS.ST.PER.WRK.kEmployee> opr = (List<TNS.ST.PER.WRK.kEmployee>)((ParTestRegNameAgent)pAgent_opr).Func_kEmployeeListIR(((ParTestRegNameAgent)pAgent_opr_p0).TV_LIST_KEMPLOYEE_0);
+			List<TNS.ST.PER.WRK.kEmployee> opr = ((ParTestRegNameAgent)pAgent_opr).Func_kEmployeeListIR(((ParTestRegNameAgent)pAgent_opr_p0).TV_LIST_KEMPLOYEE_0);
 			behaviac.Agent pAgent_opl = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
 			((ParTestRegNameAgent)pAgent_opl).TV_LIST_KEMPLOYEE_0 = opr;
 			return result;
@@ -29222,7 +30009,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			behaviac.Agent pAgent_opr_p0 = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
 			behaviac.Agent pAgent_opr = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
-			sbyte opr = (sbyte)((ParTestRegNameAgent)pAgent_opr).Func_SByteIR(((ParTestRegNameAgent)pAgent_opr_p0).TV_SBYTE_0);
+			sbyte opr = ((ParTestRegNameAgent)pAgent_opr).Func_SByteIR(((ParTestRegNameAgent)pAgent_opr_p0).TV_SBYTE_0);
 			behaviac.Agent pAgent_opl = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
 			((ParTestRegNameAgent)pAgent_opl).TV_SBYTE_0 = opr;
 			return result;
@@ -29240,7 +30027,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			behaviac.Agent pAgent_opr_p0 = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
 			behaviac.Agent pAgent_opr = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
-			string opr = (string)((ParTestRegNameAgent)pAgent_opr).Func_StringIR(((ParTestRegNameAgent)pAgent_opr_p0).TV_STR_0);
+			string opr = ((ParTestRegNameAgent)pAgent_opr).Func_StringIR(((ParTestRegNameAgent)pAgent_opr_p0).TV_STR_0);
 			behaviac.Agent pAgent_opl = behaviac.Utils.GetParentAgent(pAgent, "ParTestRegNameAgent");
 			((ParTestRegNameAgent)pAgent_opl).TV_STR_0 = opr;
 			return result;
@@ -29384,7 +30171,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			char opr = (char)ParTestAgentBase.Func_CharSMF(((ParTestAgentBase)pAgent).TV_CHAR_0);
+			char opr = ParTestAgentBase.Func_CharSMF(((ParTestAgentBase)pAgent).TV_CHAR_0);
 			((ParTestAgentBase)pAgent).TV_CHAR_0 = opr;
 			return result;
 		}
@@ -29399,7 +30186,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			byte opr = (byte)ParTestAgentBase.Func_ByteSMF(((ParTestAgentBase)pAgent).TV_BYTE_0);
+			byte opr = ParTestAgentBase.Func_ByteSMF(((ParTestAgentBase)pAgent).TV_BYTE_0);
 			((ParTestAgentBase)pAgent).TV_BYTE_0 = opr;
 			return result;
 		}
@@ -29414,7 +30201,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			sbyte opr = (sbyte)ParTestAgentBase.Func_SByteSMF(((ParTestAgentBase)pAgent).TV_SBYTE_0);
+			sbyte opr = ParTestAgentBase.Func_SByteSMF(((ParTestAgentBase)pAgent).TV_SBYTE_0);
 			((ParTestAgentBase)pAgent).TV_SBYTE_0 = opr;
 			return result;
 		}
@@ -29429,7 +30216,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			List<char> opr = (List<char>)ParTestAgentBase.Func_CharListSMF(((ParTestAgentBase)pAgent).TV_LIST_CHAR_0);
+			List<char> opr = ParTestAgentBase.Func_CharListSMF(((ParTestAgentBase)pAgent).TV_LIST_CHAR_0);
 			((ParTestAgentBase)pAgent).TV_LIST_CHAR_0 = opr;
 			return result;
 		}
@@ -29444,7 +30231,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			List<sbyte> opr = (List<sbyte>)ParTestAgentBase.Func_SByteListSMF(((ParTestAgentBase)pAgent).TV_LIST_SBYTE_0);
+			List<sbyte> opr = ParTestAgentBase.Func_SByteListSMF(((ParTestAgentBase)pAgent).TV_LIST_SBYTE_0);
 			((ParTestAgentBase)pAgent).TV_LIST_SBYTE_0 = opr;
 			return result;
 		}
@@ -29459,7 +30246,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			TNS.ST.PER.WRK.kEmployee opr = (TNS.ST.PER.WRK.kEmployee)ParTestAgent.Func_kEmployeeSMF(((ParTestAgent)pAgent).TV_KEMPLOYEE_0);
+			TNS.ST.PER.WRK.kEmployee opr = ParTestAgent.Func_kEmployeeSMF(((ParTestAgent)pAgent).TV_KEMPLOYEE_0);
 			((ParTestAgent)pAgent).TV_KEMPLOYEE_0 = opr;
 			return result;
 		}
@@ -29474,7 +30261,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			List<TNS.ST.PER.WRK.kEmployee> opr = (List<TNS.ST.PER.WRK.kEmployee>)ParTestAgent.Func_kEmployeeListSMF(((ParTestAgent)pAgent).TV_LIST_KEMPLOYEE_0);
+			List<TNS.ST.PER.WRK.kEmployee> opr = ParTestAgent.Func_kEmployeeListSMF(((ParTestAgent)pAgent).TV_LIST_KEMPLOYEE_0);
 			((ParTestAgent)pAgent).TV_LIST_KEMPLOYEE_0 = opr;
 			return result;
 		}
@@ -29490,7 +30277,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			ulong opr = (ulong)EmployeeParTestAgent.Func_ULongSMF(opr_p0);
+			ulong opr = EmployeeParTestAgent.Func_ULongSMF(opr_p0);
 			((EmployeeParTestAgent)pAgent).TV_ULONG_0 = opr;
 			return result;
 		}
@@ -29506,7 +30293,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			string opr = (string)EmployeeParTestAgent.Func_StringSMF(((EmployeeParTestAgent)pAgent).TV_STR_0);
+			string opr = EmployeeParTestAgent.Func_StringSMF(((EmployeeParTestAgent)pAgent).TV_STR_0);
 			((EmployeeParTestAgent)pAgent).TV_STR_0 = opr;
 			return result;
 		}
@@ -29521,7 +30308,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			List<string> opr = (List<string>)EmployeeParTestAgent.Func_StringListSMF(((EmployeeParTestAgent)pAgent).TV_LIST_STR_0);
+			List<string> opr = EmployeeParTestAgent.Func_StringListSMF(((EmployeeParTestAgent)pAgent).TV_LIST_STR_0);
 			((EmployeeParTestAgent)pAgent).TV_LIST_STR_0 = opr;
 			return result;
 		}
@@ -29536,7 +30323,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			behaviac.Agent opr = (behaviac.Agent)EmployeeParTestAgent.Func_AgentSMF(((EmployeeParTestAgent)pAgent).TV_AGENT_0);
+			behaviac.Agent opr = EmployeeParTestAgent.Func_AgentSMF(((EmployeeParTestAgent)pAgent).TV_AGENT_0);
 			((EmployeeParTestAgent)pAgent).TV_AGENT_0 = opr;
 			return result;
 		}
@@ -29551,7 +30338,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			List<behaviac.Agent> opr = (List<behaviac.Agent>)EmployeeParTestAgent.Func_AgentListSMF(((EmployeeParTestAgent)pAgent).TV_LIST_AGENT_0);
+			List<behaviac.Agent> opr = EmployeeParTestAgent.Func_AgentListSMF(((EmployeeParTestAgent)pAgent).TV_LIST_AGENT_0);
 			((EmployeeParTestAgent)pAgent).TV_LIST_AGENT_0 = opr;
 			return result;
 		}
@@ -29744,7 +30531,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			TNS.NE.NAT.eColor opr = (TNS.NE.NAT.eColor)((ParTestAgentBase)pAgent).Func_eColorIR(ParTestAgentBase.STV_ECOLOR_0);
+			TNS.NE.NAT.eColor opr = ((ParTestAgentBase)pAgent).Func_eColorIR(ParTestAgentBase.STV_ECOLOR_0);
 			ParTestAgentBase.STV_ECOLOR_0 = opr;
 			return result;
 		}
@@ -29759,7 +30546,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			bool opr = (bool)((ParTestAgentBase)pAgent).Func_BooleanIR(ParTestAgentBase.STV_BOOL_0);
+			bool opr = ((ParTestAgentBase)pAgent).Func_BooleanIR(ParTestAgentBase.STV_BOOL_0);
 			ParTestAgentBase.STV_BOOL_0 = opr;
 			return result;
 		}
@@ -29774,7 +30561,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			char opr = (char)((ParTestAgentBase)pAgent).Func_CharIR(ParTestAgentBase.STV_CHAR_0);
+			char opr = ((ParTestAgentBase)pAgent).Func_CharIR(ParTestAgentBase.STV_CHAR_0);
 			ParTestAgentBase.STV_CHAR_0 = opr;
 			return result;
 		}
@@ -29789,7 +30576,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			List<TNS.NE.NAT.eColor> opr = (List<TNS.NE.NAT.eColor>)((ParTestAgentBase)pAgent).Func_eColorListIR(ParTestAgentBase.STV_LIST_ECOLOR_0);
+			List<TNS.NE.NAT.eColor> opr = ((ParTestAgentBase)pAgent).Func_eColorListIR(ParTestAgentBase.STV_LIST_ECOLOR_0);
 			ParTestAgentBase.STV_LIST_ECOLOR_0 = opr;
 			return result;
 		}
@@ -29804,7 +30591,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			List<bool> opr = (List<bool>)((ParTestAgentBase)pAgent).Func_BooleanListIR(ParTestAgentBase.STV_LIST_BOOL_0);
+			List<bool> opr = ((ParTestAgentBase)pAgent).Func_BooleanListIR(ParTestAgentBase.STV_LIST_BOOL_0);
 			ParTestAgentBase.STV_LIST_BOOL_0 = opr;
 			return result;
 		}
@@ -29819,7 +30606,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			List<char> opr = (List<char>)((ParTestAgentBase)pAgent).Func_CharListIR(ParTestAgentBase.STV_LIST_CHAR_0);
+			List<char> opr = ((ParTestAgentBase)pAgent).Func_CharListIR(ParTestAgentBase.STV_LIST_CHAR_0);
 			ParTestAgentBase.STV_LIST_CHAR_0 = opr;
 			return result;
 		}
@@ -29834,7 +30621,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			List<sbyte> opr = (List<sbyte>)((ParTestAgentBase)pAgent).Func_SByteListIR(ParTestAgentBase.STV_LIST_SBYTE_0);
+			List<sbyte> opr = ((ParTestAgentBase)pAgent).Func_SByteListIR(ParTestAgentBase.STV_LIST_SBYTE_0);
 			ParTestAgentBase.STV_LIST_SBYTE_0 = opr;
 			return result;
 		}
@@ -29849,7 +30636,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			int opr = (int)((ParTestAgent)pAgent).Func_IntIR(ParTestAgent.STV_INT_0);
+			int opr = ((ParTestAgent)pAgent).Func_IntIR(ParTestAgent.STV_INT_0);
 			ParTestAgent.STV_INT_0 = opr;
 			return result;
 		}
@@ -29864,7 +30651,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			TNS.ST.PER.WRK.kEmployee opr = (TNS.ST.PER.WRK.kEmployee)((ParTestAgent)pAgent).Func_kEmployeeIR(ParTestAgent.STV_KEMPLOYEE_0);
+			TNS.ST.PER.WRK.kEmployee opr = ((ParTestAgent)pAgent).Func_kEmployeeIR(ParTestAgent.STV_KEMPLOYEE_0);
 			ParTestAgent.STV_KEMPLOYEE_0 = opr;
 			return result;
 		}
@@ -29879,7 +30666,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			List<int> opr = (List<int>)((ParTestAgent)pAgent).Func_IntListIR(ParTestAgent.STV_LIST_INT_0);
+			List<int> opr = ((ParTestAgent)pAgent).Func_IntListIR(ParTestAgent.STV_LIST_INT_0);
 			ParTestAgent.STV_LIST_INT_0 = opr;
 			return result;
 		}
@@ -29894,7 +30681,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			List<TNS.ST.PER.WRK.kEmployee> opr = (List<TNS.ST.PER.WRK.kEmployee>)((ParTestAgent)pAgent).Func_kEmployeeListIR(ParTestAgent.STV_LIST_KEMPLOYEE_0);
+			List<TNS.ST.PER.WRK.kEmployee> opr = ((ParTestAgent)pAgent).Func_kEmployeeListIR(ParTestAgent.STV_LIST_KEMPLOYEE_0);
 			ParTestAgent.STV_LIST_KEMPLOYEE_0 = opr;
 			return result;
 		}
@@ -29909,7 +30696,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			float opr = (float)((EmployeeParTestAgent)pAgent).Func_SingleIR(EmployeeParTestAgent.STV_F_0);
+			float opr = ((EmployeeParTestAgent)pAgent).Func_SingleIR(EmployeeParTestAgent.STV_F_0);
 			EmployeeParTestAgent.STV_F_0 = opr;
 			return result;
 		}
@@ -29924,7 +30711,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			string opr = (string)((EmployeeParTestAgent)pAgent).Func_StringIR(EmployeeParTestAgent.STV_STR_0);
+			string opr = ((EmployeeParTestAgent)pAgent).Func_StringIR(EmployeeParTestAgent.STV_STR_0);
 			EmployeeParTestAgent.STV_STR_0 = opr;
 			return result;
 		}
@@ -29939,7 +30726,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			behaviac.Agent opr = (behaviac.Agent)((EmployeeParTestAgent)pAgent).Func_AgentIR(EmployeeParTestAgent.STV_AGENT_0);
+			behaviac.Agent opr = ((EmployeeParTestAgent)pAgent).Func_AgentIR(EmployeeParTestAgent.STV_AGENT_0);
 			EmployeeParTestAgent.STV_AGENT_0 = opr;
 			return result;
 		}
@@ -29954,7 +30741,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			List<float> opr = (List<float>)((EmployeeParTestAgent)pAgent).Func_SingleListIR(EmployeeParTestAgent.STV_LIST_F_0);
+			List<float> opr = ((EmployeeParTestAgent)pAgent).Func_SingleListIR(EmployeeParTestAgent.STV_LIST_F_0);
 			EmployeeParTestAgent.STV_LIST_F_0 = opr;
 			return result;
 		}
@@ -29969,7 +30756,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			List<string> opr = (List<string>)((EmployeeParTestAgent)pAgent).Func_StringListIR(EmployeeParTestAgent.STV_LIST_STR_0);
+			List<string> opr = ((EmployeeParTestAgent)pAgent).Func_StringListIR(EmployeeParTestAgent.STV_LIST_STR_0);
 			EmployeeParTestAgent.STV_LIST_STR_0 = opr;
 			return result;
 		}
@@ -29984,7 +30771,7 @@ namespace behaviac
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
 			EBTStatus result = EBTStatus.BT_SUCCESS;
-			List<behaviac.Agent> opr = (List<behaviac.Agent>)((EmployeeParTestAgent)pAgent).Func_AgentListIR(EmployeeParTestAgent.STV_LIST_AGENT_0);
+			List<behaviac.Agent> opr = ((EmployeeParTestAgent)pAgent).Func_AgentListIR(EmployeeParTestAgent.STV_LIST_AGENT_0);
 			EmployeeParTestAgent.STV_LIST_AGENT_0 = opr;
 			return result;
 		}
@@ -30834,7 +31621,7 @@ namespace behaviac
 			EBTStatus result = EBTStatus.BT_SUCCESS;
 			Debug.Check(behaviac.Utils.MakeVariableId("l_ListInts") == 96329828u);
 			IList opr_p0 = pAgent.GetVariable<IList>(96329828u);
-			int opr = (int)behaviac.Agent.VectorLength(opr_p0);
+			int opr = behaviac.Agent.VectorLength(opr_p0);
 			Debug.Check(behaviac.Utils.MakeVariableId("c_Count") == 1209342235u);
 			pAgent.SetVariable<int>("c_Count", 1209342235u, opr);
 			return result;

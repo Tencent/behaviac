@@ -2126,12 +2126,12 @@ namespace Behaviac.Design
 
         public void OpenOverViewURL()
         {
-            OpenURL("http://www.behaviac.com/language/zh/3-6-overview/");
+            OpenURL("http://www.behaviac.com/3-6-overview/");
         }
 
         public void OpenTutorialsURL()
         {
-            OpenURL("http://www.behaviac.com/language/zh/category/%E6%96%87%E6%A1%A3/%E6%95%99%E7%A8%8B/");
+            OpenURL("http://www.behaviac.com/category/%E6%96%87%E6%A1%A3/%E6%95%99%E7%A8%8B/");
         }
 
         private void overviewMenuItem_Click(object sender, EventArgs e)
@@ -2161,7 +2161,7 @@ namespace Behaviac.Design
             try
             {
                 //behaviorTreeList.CheckVersionSync();
-                OpenURL("http://www.behaviac.com/language/zh/behaviac%E7%89%88%E6%9C%AC%E4%B8%8B%E8%BD%BD/");
+                OpenURL("http://www.behaviac.com/behaviac%E7%89%88%E6%9C%AC%E4%B8%8B%E8%BD%BD/");
 
                 Utilities.ReportOpenDoc();
             }

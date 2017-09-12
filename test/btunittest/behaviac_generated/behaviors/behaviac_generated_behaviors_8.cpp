@@ -6,220 +6,6 @@
 
 namespace behaviac
 {
-	// Source file: node_test/selector_stochastic_ut_0
-
-	class SelectorStochastic_bt_node_test_selector_stochastic_ut_0_node0 : public SelectorStochastic
-	{
-	public:
-		BEHAVIAC_DECLARE_DYNAMIC_TYPE(SelectorStochastic_bt_node_test_selector_stochastic_ut_0_node0, SelectorStochastic);
-		SelectorStochastic_bt_node_test_selector_stochastic_ut_0_node0()
-		{
-		}
-	public:
-		void Initialize(const char* method)
-		{
-			this->m_method = AgentMeta::ParseMethod(method);
-		}
-	};
-
-	class Action_bt_node_test_selector_stochastic_ut_0_node1 : public Action
-	{
-	public:
-		BEHAVIAC_DECLARE_DYNAMIC_TYPE(Action_bt_node_test_selector_stochastic_ut_0_node1, Action);
-		Action_bt_node_test_selector_stochastic_ut_0_node1()
-		{
-			method_p0 = 0;
-		}
-	protected:
-		virtual EBTStatus update_impl(Agent* pAgent, EBTStatus childStatus)
-		{
-			BEHAVIAC_UNUSED_VAR(pAgent);
-			BEHAVIAC_UNUSED_VAR(childStatus);
-			((AgentNodeTest*)pAgent)->_Execute_Method_<METHOD_TYPE_AgentNodeTest_setTestVar_0, void, int >(method_p0);
-			return BT_SUCCESS;
-		}
-		int method_p0;
-	};
-
-	class Action_bt_node_test_selector_stochastic_ut_0_node2 : public Action
-	{
-	public:
-		BEHAVIAC_DECLARE_DYNAMIC_TYPE(Action_bt_node_test_selector_stochastic_ut_0_node2, Action);
-		Action_bt_node_test_selector_stochastic_ut_0_node2()
-		{
-			method_p0 = 1;
-		}
-	protected:
-		virtual EBTStatus update_impl(Agent* pAgent, EBTStatus childStatus)
-		{
-			BEHAVIAC_UNUSED_VAR(pAgent);
-			BEHAVIAC_UNUSED_VAR(childStatus);
-			((AgentNodeTest*)pAgent)->_Execute_Method_<METHOD_TYPE_AgentNodeTest_setTestVar_0, void, int >(method_p0);
-			return BT_SUCCESS;
-		}
-		int method_p0;
-	};
-
-	class Action_bt_node_test_selector_stochastic_ut_0_node3 : public Action
-	{
-	public:
-		BEHAVIAC_DECLARE_DYNAMIC_TYPE(Action_bt_node_test_selector_stochastic_ut_0_node3, Action);
-		Action_bt_node_test_selector_stochastic_ut_0_node3()
-		{
-			method_p0 = 2;
-		}
-	protected:
-		virtual EBTStatus update_impl(Agent* pAgent, EBTStatus childStatus)
-		{
-			BEHAVIAC_UNUSED_VAR(pAgent);
-			BEHAVIAC_UNUSED_VAR(childStatus);
-			((AgentNodeTest*)pAgent)->_Execute_Method_<METHOD_TYPE_AgentNodeTest_setTestVar_0, void, int >(method_p0);
-			return BT_SUCCESS;
-		}
-		int method_p0;
-	};
-
-		bool bt_node_test_selector_stochastic_ut_0::Create(BehaviorTree* pBT)
-		{
-			pBT->SetClassNameString("BehaviorTree");
-			pBT->SetId((uint16_t)-1);
-			pBT->SetName("node_test/selector_stochastic_ut_0");
-			pBT->SetIsFSM(false);
-#if !BEHAVIAC_RELEASE
-			pBT->SetAgentType("AgentNodeTest");
-#endif
-			// children
-			{
-				SelectorStochastic_bt_node_test_selector_stochastic_ut_0_node0* node0 = BEHAVIAC_NEW SelectorStochastic_bt_node_test_selector_stochastic_ut_0_node0;
-				node0->SetClassNameString("SelectorStochastic");
-				node0->SetId(0);
-#if !BEHAVIAC_RELEASE
-				node0->SetAgentType("AgentNodeTest");
-#endif
-				pBT->AddChild(node0);
-				{
-					Action_bt_node_test_selector_stochastic_ut_0_node1* node1 = BEHAVIAC_NEW Action_bt_node_test_selector_stochastic_ut_0_node1;
-					node1->SetClassNameString("Action");
-					node1->SetId(1);
-#if !BEHAVIAC_RELEASE
-					node1->SetAgentType("AgentNodeTest");
-#endif
-					node0->AddChild(node1);
-					node0->SetHasEvents(node0->HasEvents() | node1->HasEvents());
-				}
-				{
-					Action_bt_node_test_selector_stochastic_ut_0_node2* node2 = BEHAVIAC_NEW Action_bt_node_test_selector_stochastic_ut_0_node2;
-					node2->SetClassNameString("Action");
-					node2->SetId(2);
-#if !BEHAVIAC_RELEASE
-					node2->SetAgentType("AgentNodeTest");
-#endif
-					node0->AddChild(node2);
-					node0->SetHasEvents(node0->HasEvents() | node2->HasEvents());
-				}
-				{
-					Action_bt_node_test_selector_stochastic_ut_0_node3* node3 = BEHAVIAC_NEW Action_bt_node_test_selector_stochastic_ut_0_node3;
-					node3->SetClassNameString("Action");
-					node3->SetId(3);
-#if !BEHAVIAC_RELEASE
-					node3->SetAgentType("AgentNodeTest");
-#endif
-					node0->AddChild(node3);
-					node0->SetHasEvents(node0->HasEvents() | node3->HasEvents());
-				}
-				pBT->SetHasEvents(pBT->HasEvents() | node0->HasEvents());
-			}
-			return true;
-		}
-
-	// Source file: node_test/selector_stochastic_ut_1
-
-	class SelectorStochastic_bt_node_test_selector_stochastic_ut_1_node0 : public SelectorStochastic
-	{
-	public:
-		BEHAVIAC_DECLARE_DYNAMIC_TYPE(SelectorStochastic_bt_node_test_selector_stochastic_ut_1_node0, SelectorStochastic);
-		SelectorStochastic_bt_node_test_selector_stochastic_ut_1_node0()
-		{
-		}
-	public:
-		void Initialize(const char* method)
-		{
-			this->m_method = AgentMeta::ParseMethod(method);
-		}
-	};
-
-	class Action_bt_node_test_selector_stochastic_ut_1_node1 : public Action
-	{
-	public:
-		BEHAVIAC_DECLARE_DYNAMIC_TYPE(Action_bt_node_test_selector_stochastic_ut_1_node1, Action);
-		Action_bt_node_test_selector_stochastic_ut_1_node1()
-		{
-			method_p0 = 0;
-		}
-	protected:
-		virtual EBTStatus update_impl(Agent* pAgent, EBTStatus childStatus)
-		{
-			BEHAVIAC_UNUSED_VAR(pAgent);
-			BEHAVIAC_UNUSED_VAR(childStatus);
-			((AgentNodeTest*)pAgent)->_Execute_Method_<METHOD_TYPE_AgentNodeTest_setTestVar_0, void, int >(method_p0);
-			return BT_SUCCESS;
-		}
-		int method_p0;
-	};
-
-		bool bt_node_test_selector_stochastic_ut_1::Create(BehaviorTree* pBT)
-		{
-			pBT->SetClassNameString("BehaviorTree");
-			pBT->SetId((uint16_t)-1);
-			pBT->SetName("node_test/selector_stochastic_ut_1");
-			pBT->SetIsFSM(false);
-#if !BEHAVIAC_RELEASE
-			pBT->SetAgentType("AgentNodeTest");
-#endif
-			// children
-			{
-				SelectorStochastic_bt_node_test_selector_stochastic_ut_1_node0* node0 = BEHAVIAC_NEW SelectorStochastic_bt_node_test_selector_stochastic_ut_1_node0;
-				node0->SetClassNameString("SelectorStochastic");
-				node0->SetId(0);
-#if !BEHAVIAC_RELEASE
-				node0->SetAgentType("AgentNodeTest");
-#endif
-				pBT->AddChild(node0);
-				{
-					Action_bt_node_test_selector_stochastic_ut_1_node1* node1 = BEHAVIAC_NEW Action_bt_node_test_selector_stochastic_ut_1_node1;
-					node1->SetClassNameString("Action");
-					node1->SetId(1);
-#if !BEHAVIAC_RELEASE
-					node1->SetAgentType("AgentNodeTest");
-#endif
-					node0->AddChild(node1);
-					node0->SetHasEvents(node0->HasEvents() | node1->HasEvents());
-				}
-				{
-					True* node2 = BEHAVIAC_NEW True;
-					node2->SetClassNameString("True");
-					node2->SetId(2);
-#if !BEHAVIAC_RELEASE
-					node2->SetAgentType("AgentNodeTest");
-#endif
-					node0->AddChild(node2);
-					node0->SetHasEvents(node0->HasEvents() | node2->HasEvents());
-				}
-				{
-					True* node3 = BEHAVIAC_NEW True;
-					node3->SetClassNameString("True");
-					node3->SetId(3);
-#if !BEHAVIAC_RELEASE
-					node3->SetAgentType("AgentNodeTest");
-#endif
-					node0->AddChild(node3);
-					node0->SetHasEvents(node0->HasEvents() | node3->HasEvents());
-				}
-				pBT->SetHasEvents(pBT->HasEvents() | node0->HasEvents());
-			}
-			return true;
-		}
-
 	// Source file: node_test/selector_stochastic_ut_2
 
 	class SelectorStochastic_bt_node_test_selector_stochastic_ut_2_node4 : public SelectorStochastic
@@ -1732,6 +1518,342 @@ namespace behaviac
 				}
 				{
 					Action_bt_node_test_sequence_ut_0_node3* node3 = BEHAVIAC_NEW Action_bt_node_test_sequence_ut_0_node3;
+					node3->SetClassNameString("Action");
+					node3->SetId(3);
+#if !BEHAVIAC_RELEASE
+					node3->SetAgentType("AgentNodeTest");
+#endif
+					node0->AddChild(node3);
+					node0->SetHasEvents(node0->HasEvents() | node3->HasEvents());
+				}
+				pBT->SetHasEvents(pBT->HasEvents() | node0->HasEvents());
+			}
+			return true;
+		}
+
+	// Source file: node_test/sequence_ut_1
+
+	class Action_bt_node_test_sequence_ut_1_node1 : public Action
+	{
+	public:
+		BEHAVIAC_DECLARE_DYNAMIC_TYPE(Action_bt_node_test_sequence_ut_1_node1, Action);
+		Action_bt_node_test_sequence_ut_1_node1()
+		{
+			method_p0 = 0;
+		}
+	protected:
+		virtual EBTStatus update_impl(Agent* pAgent, EBTStatus childStatus)
+		{
+			BEHAVIAC_UNUSED_VAR(pAgent);
+			BEHAVIAC_UNUSED_VAR(childStatus);
+			((AgentNodeTest*)pAgent)->_Execute_Method_<METHOD_TYPE_AgentNodeTest_setTestVar_0, void, int >(method_p0);
+			return BT_SUCCESS;
+		}
+		int method_p0;
+	};
+
+	class Action_bt_node_test_sequence_ut_1_node2 : public Action
+	{
+	public:
+		BEHAVIAC_DECLARE_DYNAMIC_TYPE(Action_bt_node_test_sequence_ut_1_node2, Action);
+		Action_bt_node_test_sequence_ut_1_node2()
+		{
+			method_p0 = 1;
+		}
+	protected:
+		virtual EBTStatus update_impl(Agent* pAgent, EBTStatus childStatus)
+		{
+			BEHAVIAC_UNUSED_VAR(pAgent);
+			BEHAVIAC_UNUSED_VAR(childStatus);
+			((AgentNodeTest*)pAgent)->_Execute_Method_<METHOD_TYPE_AgentNodeTest_setTestVar_0, void, int >(method_p0);
+			return BT_FAILURE;
+		}
+		int method_p0;
+	};
+
+	class Action_bt_node_test_sequence_ut_1_node3 : public Action
+	{
+	public:
+		BEHAVIAC_DECLARE_DYNAMIC_TYPE(Action_bt_node_test_sequence_ut_1_node3, Action);
+		Action_bt_node_test_sequence_ut_1_node3()
+		{
+			method_p0 = 2;
+		}
+	protected:
+		virtual EBTStatus update_impl(Agent* pAgent, EBTStatus childStatus)
+		{
+			BEHAVIAC_UNUSED_VAR(pAgent);
+			BEHAVIAC_UNUSED_VAR(childStatus);
+			((AgentNodeTest*)pAgent)->_Execute_Method_<METHOD_TYPE_AgentNodeTest_setTestVar_0, void, int >(method_p0);
+			return BT_FAILURE;
+		}
+		int method_p0;
+	};
+
+		bool bt_node_test_sequence_ut_1::Create(BehaviorTree* pBT)
+		{
+			pBT->SetClassNameString("BehaviorTree");
+			pBT->SetId((uint16_t)-1);
+			pBT->SetName("node_test/sequence_ut_1");
+			pBT->SetIsFSM(false);
+#if !BEHAVIAC_RELEASE
+			pBT->SetAgentType("AgentNodeTest");
+#endif
+			// children
+			{
+				Sequence* node0 = BEHAVIAC_NEW Sequence;
+				node0->SetClassNameString("Sequence");
+				node0->SetId(0);
+#if !BEHAVIAC_RELEASE
+				node0->SetAgentType("AgentNodeTest");
+#endif
+				pBT->AddChild(node0);
+				{
+					Action_bt_node_test_sequence_ut_1_node1* node1 = BEHAVIAC_NEW Action_bt_node_test_sequence_ut_1_node1;
+					node1->SetClassNameString("Action");
+					node1->SetId(1);
+#if !BEHAVIAC_RELEASE
+					node1->SetAgentType("AgentNodeTest");
+#endif
+					node0->AddChild(node1);
+					node0->SetHasEvents(node0->HasEvents() | node1->HasEvents());
+				}
+				{
+					Action_bt_node_test_sequence_ut_1_node2* node2 = BEHAVIAC_NEW Action_bt_node_test_sequence_ut_1_node2;
+					node2->SetClassNameString("Action");
+					node2->SetId(2);
+#if !BEHAVIAC_RELEASE
+					node2->SetAgentType("AgentNodeTest");
+#endif
+					node0->AddChild(node2);
+					node0->SetHasEvents(node0->HasEvents() | node2->HasEvents());
+				}
+				{
+					Action_bt_node_test_sequence_ut_1_node3* node3 = BEHAVIAC_NEW Action_bt_node_test_sequence_ut_1_node3;
+					node3->SetClassNameString("Action");
+					node3->SetId(3);
+#if !BEHAVIAC_RELEASE
+					node3->SetAgentType("AgentNodeTest");
+#endif
+					node0->AddChild(node3);
+					node0->SetHasEvents(node0->HasEvents() | node3->HasEvents());
+				}
+				pBT->SetHasEvents(pBT->HasEvents() | node0->HasEvents());
+			}
+			return true;
+		}
+
+	// Source file: node_test/sequence_ut_2
+
+	class Action_bt_node_test_sequence_ut_2_node1 : public Action
+	{
+	public:
+		BEHAVIAC_DECLARE_DYNAMIC_TYPE(Action_bt_node_test_sequence_ut_2_node1, Action);
+		Action_bt_node_test_sequence_ut_2_node1()
+		{
+			method_p0 = 0;
+		}
+	protected:
+		virtual EBTStatus update_impl(Agent* pAgent, EBTStatus childStatus)
+		{
+			BEHAVIAC_UNUSED_VAR(pAgent);
+			BEHAVIAC_UNUSED_VAR(childStatus);
+			((AgentNodeTest*)pAgent)->_Execute_Method_<METHOD_TYPE_AgentNodeTest_setTestVar_0, void, int >(method_p0);
+			return BT_SUCCESS;
+		}
+		int method_p0;
+	};
+
+	class Action_bt_node_test_sequence_ut_2_node2 : public Action
+	{
+	public:
+		BEHAVIAC_DECLARE_DYNAMIC_TYPE(Action_bt_node_test_sequence_ut_2_node2, Action);
+		Action_bt_node_test_sequence_ut_2_node2()
+		{
+			method_p0 = 1;
+		}
+	protected:
+		virtual EBTStatus update_impl(Agent* pAgent, EBTStatus childStatus)
+		{
+			BEHAVIAC_UNUSED_VAR(pAgent);
+			BEHAVIAC_UNUSED_VAR(childStatus);
+			((AgentNodeTest*)pAgent)->_Execute_Method_<METHOD_TYPE_AgentNodeTest_setTestVar_0, void, int >(method_p0);
+			return BT_SUCCESS;
+		}
+		int method_p0;
+	};
+
+	class Action_bt_node_test_sequence_ut_2_node3 : public Action
+	{
+	public:
+		BEHAVIAC_DECLARE_DYNAMIC_TYPE(Action_bt_node_test_sequence_ut_2_node3, Action);
+		Action_bt_node_test_sequence_ut_2_node3()
+		{
+			method_p0 = 2;
+		}
+	protected:
+		virtual EBTStatus update_impl(Agent* pAgent, EBTStatus childStatus)
+		{
+			BEHAVIAC_UNUSED_VAR(pAgent);
+			BEHAVIAC_UNUSED_VAR(childStatus);
+			((AgentNodeTest*)pAgent)->_Execute_Method_<METHOD_TYPE_AgentNodeTest_setTestVar_0, void, int >(method_p0);
+			return BT_FAILURE;
+		}
+		int method_p0;
+	};
+
+		bool bt_node_test_sequence_ut_2::Create(BehaviorTree* pBT)
+		{
+			pBT->SetClassNameString("BehaviorTree");
+			pBT->SetId((uint16_t)-1);
+			pBT->SetName("node_test/sequence_ut_2");
+			pBT->SetIsFSM(false);
+#if !BEHAVIAC_RELEASE
+			pBT->SetAgentType("AgentNodeTest");
+#endif
+			// children
+			{
+				Sequence* node0 = BEHAVIAC_NEW Sequence;
+				node0->SetClassNameString("Sequence");
+				node0->SetId(0);
+#if !BEHAVIAC_RELEASE
+				node0->SetAgentType("AgentNodeTest");
+#endif
+				pBT->AddChild(node0);
+				{
+					Action_bt_node_test_sequence_ut_2_node1* node1 = BEHAVIAC_NEW Action_bt_node_test_sequence_ut_2_node1;
+					node1->SetClassNameString("Action");
+					node1->SetId(1);
+#if !BEHAVIAC_RELEASE
+					node1->SetAgentType("AgentNodeTest");
+#endif
+					node0->AddChild(node1);
+					node0->SetHasEvents(node0->HasEvents() | node1->HasEvents());
+				}
+				{
+					Action_bt_node_test_sequence_ut_2_node2* node2 = BEHAVIAC_NEW Action_bt_node_test_sequence_ut_2_node2;
+					node2->SetClassNameString("Action");
+					node2->SetId(2);
+#if !BEHAVIAC_RELEASE
+					node2->SetAgentType("AgentNodeTest");
+#endif
+					node0->AddChild(node2);
+					node0->SetHasEvents(node0->HasEvents() | node2->HasEvents());
+				}
+				{
+					Action_bt_node_test_sequence_ut_2_node3* node3 = BEHAVIAC_NEW Action_bt_node_test_sequence_ut_2_node3;
+					node3->SetClassNameString("Action");
+					node3->SetId(3);
+#if !BEHAVIAC_RELEASE
+					node3->SetAgentType("AgentNodeTest");
+#endif
+					node0->AddChild(node3);
+					node0->SetHasEvents(node0->HasEvents() | node3->HasEvents());
+				}
+				pBT->SetHasEvents(pBT->HasEvents() | node0->HasEvents());
+			}
+			return true;
+		}
+
+	// Source file: node_test/sequence_ut_3
+
+	class Action_bt_node_test_sequence_ut_3_node1 : public Action
+	{
+	public:
+		BEHAVIAC_DECLARE_DYNAMIC_TYPE(Action_bt_node_test_sequence_ut_3_node1, Action);
+		Action_bt_node_test_sequence_ut_3_node1()
+		{
+			method_p0 = 0;
+		}
+	protected:
+		virtual EBTStatus update_impl(Agent* pAgent, EBTStatus childStatus)
+		{
+			BEHAVIAC_UNUSED_VAR(pAgent);
+			BEHAVIAC_UNUSED_VAR(childStatus);
+			((AgentNodeTest*)pAgent)->_Execute_Method_<METHOD_TYPE_AgentNodeTest_setTestVar_0, void, int >(method_p0);
+			return BT_FAILURE;
+		}
+		int method_p0;
+	};
+
+	class Action_bt_node_test_sequence_ut_3_node2 : public Action
+	{
+	public:
+		BEHAVIAC_DECLARE_DYNAMIC_TYPE(Action_bt_node_test_sequence_ut_3_node2, Action);
+		Action_bt_node_test_sequence_ut_3_node2()
+		{
+			method_p0 = 1;
+		}
+	protected:
+		virtual EBTStatus update_impl(Agent* pAgent, EBTStatus childStatus)
+		{
+			BEHAVIAC_UNUSED_VAR(pAgent);
+			BEHAVIAC_UNUSED_VAR(childStatus);
+			((AgentNodeTest*)pAgent)->_Execute_Method_<METHOD_TYPE_AgentNodeTest_setTestVar_0, void, int >(method_p0);
+			return BT_SUCCESS;
+		}
+		int method_p0;
+	};
+
+	class Action_bt_node_test_sequence_ut_3_node3 : public Action
+	{
+	public:
+		BEHAVIAC_DECLARE_DYNAMIC_TYPE(Action_bt_node_test_sequence_ut_3_node3, Action);
+		Action_bt_node_test_sequence_ut_3_node3()
+		{
+			method_p0 = 2;
+		}
+	protected:
+		virtual EBTStatus update_impl(Agent* pAgent, EBTStatus childStatus)
+		{
+			BEHAVIAC_UNUSED_VAR(pAgent);
+			BEHAVIAC_UNUSED_VAR(childStatus);
+			((AgentNodeTest*)pAgent)->_Execute_Method_<METHOD_TYPE_AgentNodeTest_setTestVar_0, void, int >(method_p0);
+			return BT_FAILURE;
+		}
+		int method_p0;
+	};
+
+		bool bt_node_test_sequence_ut_3::Create(BehaviorTree* pBT)
+		{
+			pBT->SetClassNameString("BehaviorTree");
+			pBT->SetId((uint16_t)-1);
+			pBT->SetName("node_test/sequence_ut_3");
+			pBT->SetIsFSM(false);
+#if !BEHAVIAC_RELEASE
+			pBT->SetAgentType("AgentNodeTest");
+#endif
+			// children
+			{
+				Sequence* node0 = BEHAVIAC_NEW Sequence;
+				node0->SetClassNameString("Sequence");
+				node0->SetId(0);
+#if !BEHAVIAC_RELEASE
+				node0->SetAgentType("AgentNodeTest");
+#endif
+				pBT->AddChild(node0);
+				{
+					Action_bt_node_test_sequence_ut_3_node1* node1 = BEHAVIAC_NEW Action_bt_node_test_sequence_ut_3_node1;
+					node1->SetClassNameString("Action");
+					node1->SetId(1);
+#if !BEHAVIAC_RELEASE
+					node1->SetAgentType("AgentNodeTest");
+#endif
+					node0->AddChild(node1);
+					node0->SetHasEvents(node0->HasEvents() | node1->HasEvents());
+				}
+				{
+					Action_bt_node_test_sequence_ut_3_node2* node2 = BEHAVIAC_NEW Action_bt_node_test_sequence_ut_3_node2;
+					node2->SetClassNameString("Action");
+					node2->SetId(2);
+#if !BEHAVIAC_RELEASE
+					node2->SetAgentType("AgentNodeTest");
+#endif
+					node0->AddChild(node2);
+					node0->SetHasEvents(node0->HasEvents() | node2->HasEvents());
+				}
+				{
+					Action_bt_node_test_sequence_ut_3_node3* node3 = BEHAVIAC_NEW Action_bt_node_test_sequence_ut_3_node3;
 					node3->SetClassNameString("Action");
 					node3->SetId(3);
 #if !BEHAVIAC_RELEASE

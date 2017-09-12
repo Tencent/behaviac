@@ -225,7 +225,7 @@ namespace Behaviac.Design
                 {
                     try
                     {
-                        System.Diagnostics.Process.Start("http://www.behaviac.com/language/zh/updatenotes/#36x");
+                        System.Diagnostics.Process.Start("http://www.behaviac.com/updatenotes/#36x");
                     }
                     catch
                     {

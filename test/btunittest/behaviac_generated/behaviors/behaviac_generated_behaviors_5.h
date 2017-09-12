@@ -6,6 +6,12 @@
 
 namespace behaviac
 {
+	class bt_node_test_frames_ut_0
+	{
+	public:
+		static bool Create(BehaviorTree* pBT);
+	};
+
 	class bt_node_test_if_else_ut_0
 	{
 	public:

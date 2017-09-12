@@ -15,8 +15,10 @@
 #define _BEHAVIAC_BEHAVIORTREE_WAIT_H_
 
 #include "behaviac/common/base.h"
+#include "behaviac/common/member.h"
 #include "behaviac/behaviortree/behaviortree.h"
 #include "behaviac/behaviortree/behaviortree_task.h"
+#include "behaviac/agent/agent.h"
 
 namespace behaviac {
     /*! \addtogroup treeNodes Behavior Tree

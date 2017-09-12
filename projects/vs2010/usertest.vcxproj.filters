@@ -2,28 +2,28 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="test">
-      <UniqueIdentifier>{492AED53-C2A5-444A-B8E5-026A0EA5F974}</UniqueIdentifier>
+      <UniqueIdentifier>{441A9A22-90DC-D044-8326-838E3F3F603A}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\usertest">
-      <UniqueIdentifier>{82F2EC52-1AB3-7044-9FDF-D77AF115F1DE}</UniqueIdentifier>
+      <UniqueIdentifier>{45E76296-2EAA-834E-9339-AFF054504A79}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\usertest\behaviac">
-      <UniqueIdentifier>{FCE07BF8-BED9-A04C-92F2-FDB8F3AF5CAA}</UniqueIdentifier>
+      <UniqueIdentifier>{B44AC2EA-B741-2D42-864D-31A9C5422BA5}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\usertest\behaviac\exported">
-      <UniqueIdentifier>{10198B23-BDED-DC47-82DD-E33F777C99FE}</UniqueIdentifier>
+      <UniqueIdentifier>{F2344B37-0D2E-AB42-9A74-D73B52962305}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\usertest\behaviac\exported\behaviac_generated">
-      <UniqueIdentifier>{E1F93071-1EEA-3544-8B67-5C0820E36299}</UniqueIdentifier>
+      <UniqueIdentifier>{87DF8075-5E18-0A41-8175-22B0238651B8}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\usertest\behaviac\exported\behaviac_generated\behaviors">
-      <UniqueIdentifier>{CC99A850-8A58-754B-89AD-4428634BF1C7}</UniqueIdentifier>
+      <UniqueIdentifier>{BAEB8771-DBB5-7046-B10F-58AE1A0D725C}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\usertest\behaviac\exported\behaviac_generated\types">
-      <UniqueIdentifier>{E2BA088D-BF12-C84E-B0AC-751C5B7EF292}</UniqueIdentifier>
+      <UniqueIdentifier>{3AC1CA44-38DD-A445-82D2-24BF88425B73}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\usertest\behaviac\exported\behaviac_generated\types\internal">
-      <UniqueIdentifier>{32CB2E8D-C1BD-934B-BA35-81B3EFE6CC99}</UniqueIdentifier>
+      <UniqueIdentifier>{C0A1C40F-655F-3D49-BAEC-E638C7E27F14}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

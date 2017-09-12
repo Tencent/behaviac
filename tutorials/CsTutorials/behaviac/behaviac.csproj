@@ -60,6 +60,7 @@
     <Compile Include="runtime\BehaviorTree\Nodes\Actions\Action.cs" />
     <Compile Include="runtime\BehaviorTree\Nodes\Actions\Assignment.cs" />
     <Compile Include="runtime\BehaviorTree\Nodes\Actions\Compute.cs" />
+    <Compile Include="runtime\BehaviorTree\Nodes\Actions\End.cs" />
     <Compile Include="runtime\BehaviorTree\Nodes\Actions\Noop.cs" />
     <Compile Include="runtime\BehaviorTree\Nodes\Actions\Wait.cs" />
     <Compile Include="runtime\BehaviorTree\Nodes\Actions\Waitforsignal.cs" />

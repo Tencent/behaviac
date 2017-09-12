@@ -73,7 +73,7 @@ namespace Behaviac.Design.Attachments
         {
             get
             {
-                return "http://www.behaviac.com/language/zh/attachment/";
+                return "http://www.behaviac.com/attachment/";
             }
         }
 

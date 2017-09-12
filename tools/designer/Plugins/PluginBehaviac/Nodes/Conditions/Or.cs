@@ -36,7 +36,7 @@ namespace PluginBehaviac.Nodes
         {
             get
             {
-                return "http://www.behaviac.com/language/zh/or/";
+                return "http://www.behaviac.com/or/";
             }
         }
 

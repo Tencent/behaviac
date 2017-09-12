@@ -602,7 +602,7 @@ template<> inline behaviac::EBTStatus AgentNodeTest::_Execute_Method_<METHOD_TYP
 }
 
 struct METHOD_TYPE_AgentNodeTest_return_status { };
-template<> inline behaviac::EBTStatus AgentNodeTest::_Execute_Method_<METHOD_TYPE_AgentNodeTest_return_status>(TestNS::Float2& p0)
+template<> inline behaviac::EBTStatus AgentNodeTest::_Execute_Method_<METHOD_TYPE_AgentNodeTest_return_status>(const TestNS::Float2& p0)
 {
 	return this->AgentNodeTest::return_status(p0);
 }

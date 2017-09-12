@@ -90,6 +90,10 @@ namespace PluginBehaviac.DataExporters
             for (int i = 0; i < method.Params.Count; ++i)
             {
                 string nativeType = DataCppExporter.GetGeneratedNativeType(method.Params[i].NativeType);
+                if (method.Params[i].IsConst)
+                {
+                    nativeType = "const " + nativeType;
+                }
                 string basicNativeType = DataCppExporter.GetBasicGeneratedNativeType(nativeType);
                 string param = (string.IsNullOrEmpty(var) ? caller : var) + "_p" + i;
 

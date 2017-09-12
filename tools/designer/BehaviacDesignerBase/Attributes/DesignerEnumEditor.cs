@@ -197,21 +197,9 @@ namespace Behaviac.Design.Attributes
 
                 if (enumtype.IsEnum)
                 {
-                    Array list = Enum.GetValues(enumtype);
                     string enumName = DesignerEnum.GetDisplayName(variable.Value);
 
-                    foreach (object enumVal in list)
-                    {
-                        _allValues.Add(enumVal);
-
-                        if (DesignerEnum.GetDisplayName(enumVal) == enumName)
-                        {
-                            _values.Add(enumVal);
-                            comboBox.Items.Add(enumName);
-                        }
-                    }
-
-                    comboBox.Text = enumName;
+                    filterEnums(null, enumName, enumtype);
                 }
             }
 

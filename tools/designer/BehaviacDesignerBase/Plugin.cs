@@ -1814,6 +1814,8 @@ namespace Behaviac.Design
                 if (Plugin.NamesInNamespace.ContainsKey(typeName))
                 {
                     typeName = Plugin.NamesInNamespace[typeName];
+                    typeName = typeName.Replace("*","");
+                    typeName = typeName.Replace("&", "");
                 }
 
                 foreach (AgentType at in _agentTypes)

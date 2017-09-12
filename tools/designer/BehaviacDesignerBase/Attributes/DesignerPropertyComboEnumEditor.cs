@@ -44,7 +44,23 @@ namespace Behaviac.Design.Attributes
 
         public override void Clear()
         {
-            this.propertyEditor.Clear();
+            if (this.propertyEditor != null)
+            {
+                this.propertyEditor.Clear();
+            }
+        }
+
+        public override Type FilterType
+        {
+            set
+            {
+                this._filterType = value;
+
+                if (this.propertyEditor != null)
+                {
+                    this.propertyEditor.FilterType = this._filterType;
+                }
+            }
         }
 
         private bool _methodOnly = false;

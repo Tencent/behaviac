@@ -71,7 +71,7 @@ namespace Behaviac.Design.Nodes
         {
             get
             {
-                return "http://www.behaviac.com/language/zh/";
+                return "http://www.behaviac.com/";
             }
         }
 

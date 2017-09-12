@@ -58,7 +58,7 @@ namespace Behaviac.Design.Nodes
         {
             get
             {
-                return "http://www.behaviac.com/language/zh/selector/";
+                return "http://www.behaviac.com/selector/";
             }
         }
 

@@ -35,7 +35,7 @@ namespace PluginBehaviac.Nodes
         {
             get
             {
-                return "http://www.behaviac.com/language/zh/waitframes/";
+                return "http://www.behaviac.com/waitframes/";
             }
         }
 

@@ -34,7 +34,7 @@ namespace PluginBehaviac.Nodes
         {
             get
             {
-                return "http://www.behaviac.com/language/zh/assignment/";
+                return "http://www.behaviac.com/assignment/";
             }
         }
 

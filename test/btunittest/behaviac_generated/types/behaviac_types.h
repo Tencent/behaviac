@@ -13,6 +13,7 @@
 #include "behaviac/behaviortree/nodes/actions/action.h"
 #include "behaviac/behaviortree/nodes/actions/assignment.h"
 #include "behaviac/behaviortree/nodes/actions/compute.h"
+#include "behaviac/behaviortree/nodes/actions/end.h"
 #include "behaviac/behaviortree/nodes/actions/noop.h"
 #include "behaviac/behaviortree/nodes/actions/wait.h"
 #include "behaviac/behaviortree/nodes/actions/waitforsignal.h"

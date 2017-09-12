@@ -3218,6 +3218,50 @@ namespace Behaviac.Design
         [Behaviac.Design.EnumMemberDesc("behaviac::BT_RUNNING", "Running", "正在运行")]
         BT_RUNNING
     }
+
+    [Behaviac.Design.TypeHandler(typeof(EBTStatus))]
+    public class EBTStatusTypeHandler
+    {
+        public static object Create()
+        {
+            EBTStatus instance = (EBTStatus)DefaultValue("");
+            return instance;
+        }
+
+        public static bool Parse(object parent, string paramName, string parStr, Behaviac.Design.Plugin.SetValue setter)
+        {
+            EBTStatus result = (EBTStatus)Enum.Parse(typeof(EBTStatus), parStr, true);
+            setter(result);
+            return true;
+        }
+
+        public static DesignerProperty CreateDesignerProperty(string category, string name, Type type, float rangeMin, float rangeMax)
+        {
+            return new DesignerEnum(name, name, category, DesignerProperty.DisplayMode.Parameter, 0, DesignerProperty.DesignerFlags.NoFlags, "");
+        }
+
+        public static object DefaultValue(string defaultValue)
+        {
+            Array values = Enum.GetValues(typeof(EBTStatus));
+
+            foreach (object enumVal in values)
+            {
+                string enumValueName = Enum.GetName(typeof(EBTStatus), enumVal);
+
+                if (enumValueName == defaultValue)
+                {
+                    return enumVal;
+                }
+            }
+
+            return EBTStatus.BT_INVALID;
+        }
+
+        public static Type GetEditorType()
+        {
+            return typeof(DesignerEnumEditor);
+        }
+    }
 }//namespace Behaviac.Design
 
 namespace XMLPluginBehaviac

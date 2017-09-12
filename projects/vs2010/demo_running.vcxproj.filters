@@ -2,28 +2,28 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="test">
-      <UniqueIdentifier>{334D269A-BA57-7848-AED8-AAB3EA376A59}</UniqueIdentifier>
+      <UniqueIdentifier>{625E004A-CDF1-934B-846B-569C6D635067}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running">
-      <UniqueIdentifier>{688F69BB-3C7D-034E-AFE2-215BD90D88C9}</UniqueIdentifier>
+      <UniqueIdentifier>{F1372EFE-6A73-2A41-849E-D65AE423E669}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac">
-      <UniqueIdentifier>{EBF7DF40-6BD2-D443-BC3E-53646F37BA90}</UniqueIdentifier>
+      <UniqueIdentifier>{54E9C99B-2458-D944-A344-DD5CEC283E6C}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac\exported">
-      <UniqueIdentifier>{978F2727-D8A2-1445-8DA0-DD6329D945D8}</UniqueIdentifier>
+      <UniqueIdentifier>{A92B6CAA-A47D-8448-9C78-7042E9C2E78F}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac\exported\behaviac_generated">
-      <UniqueIdentifier>{AC9E93DD-8CE8-0249-B8B6-C5823F9C1A05}</UniqueIdentifier>
+      <UniqueIdentifier>{DFA004CF-A8E5-0D42-901F-F78DA9BC3E46}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac\exported\behaviac_generated\behaviors">
-      <UniqueIdentifier>{47097381-C8A3-8746-9E24-C77755EAF3DE}</UniqueIdentifier>
+      <UniqueIdentifier>{FF1B0409-A101-C944-81F5-E56E7D23E832}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac\exported\behaviac_generated\types">
-      <UniqueIdentifier>{A56F9D99-0B5F-8741-9F52-4020A0A372A4}</UniqueIdentifier>
+      <UniqueIdentifier>{9D54B0AE-69DE-C245-A524-01EF48953ED7}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\demo_running\behaviac\exported\behaviac_generated\types\internal">
-      <UniqueIdentifier>{C70EEA85-188E-FF47-901A-0D780317F08D}</UniqueIdentifier>
+      <UniqueIdentifier>{F7183919-D368-A540-B6A1-3976A96827A5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

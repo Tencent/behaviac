@@ -1207,7 +1207,7 @@ namespace Behaviac.Design.Properties {
         /// <summary>
         ///   Looks up a localized string similar to The workspace file will be updated and the meta file will not be used any longer.
         ///You should export all files with the latest designer.
-        ///更多详情请参考：http://www.behaviac.com/language/zh/updatenotes/#36x.
+        ///更多详情请参考：http://www.behaviac.com/updatenotes/#36x.
         /// </summary>
         internal static string MetaWarning {
             get {

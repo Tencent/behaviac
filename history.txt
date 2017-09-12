@@ -1,3 +1,8 @@
+2017-09-11  3.6.39
+    Add the End node.
+    Fix a bug for exporting the parameters of the method.
+    Fix a bug for exporting the structs.
+
 2017-08-17  3.6.38
     Improve the GC for the C#.
 

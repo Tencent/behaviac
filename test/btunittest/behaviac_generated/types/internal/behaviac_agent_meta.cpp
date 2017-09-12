@@ -259,7 +259,7 @@ namespace behaviac
 			_isMale = AgentMeta::TParseProperty<bool >(paramStrs[4].c_str());
 			_skinColor = AgentMeta::TParseProperty<TNS::NE::NAT::eColor >(paramStrs[5].c_str());
 			_car = AgentMeta::TParseProperty<TNS::ST::kCar >(paramStrs[6].c_str());
-			_boss = AgentMeta::TParseProperty<behaviac::Agent* >(paramStrs[7].c_str());
+			_boss = AgentMeta::TParseProperty<behaviac::Agent >(paramStrs[7].c_str());
 		}
 
 		~CInstanceConst_TNS_ST_PER_WRK_kEmployee()
@@ -1436,10 +1436,10 @@ namespace behaviac
 			BEHAVIAC_ASSERT(_param0 != NULL);
 
 			_param0->run(self);
-			TestNS::Float2& pValue_param0 = *(TestNS::Float2*)_param0->GetValue(self, behaviac::Meta::IsVector<TestNS::Float2 >::Result, behaviac::GetClassTypeNumberId<TestNS::Float2 >());
+			const TestNS::Float2& pValue_param0 = *(const TestNS::Float2*)_param0->GetValue(self, behaviac::Meta::IsVector<const TestNS::Float2 >::Result, behaviac::GetClassTypeNumberId<const TestNS::Float2 >());
 			self = Agent::GetParentAgent(self, _instance);
 
-			_returnValue->value = ((AgentNodeTest*)self)->_Execute_Method_<METHOD_TYPE_AgentNodeTest_return_status, behaviac::EBTStatus, TestNS::Float2& >(pValue_param0);
+			_returnValue->value = ((AgentNodeTest*)self)->_Execute_Method_<METHOD_TYPE_AgentNodeTest_return_status, behaviac::EBTStatus, const TestNS::Float2& >(pValue_param0);
 		}
 	};
 

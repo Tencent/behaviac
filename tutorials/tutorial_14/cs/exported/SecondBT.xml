@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: SecondBT.xml-->
+<behavior name="SecondBT" agenttype="SecondAgent" version="5">
+  <node class="Sequence" id="1">
+    <node class="Assignment" id="3">
+      <property CastRight="false" />
+      <property Opl="int Self.SecondAgent::p1" />
+      <property Opr="const int 2" />
+    </node>
+    <node class="Condition" id="2">
+      <property Operator="Equal" />
+      <property Opl="int Self.SecondAgent::p1" />
+      <property Opr="const int 2" />
+    </node>
+    <node class="Action" id="0">
+      <property Method="Self.SecondAgent::m1(&quot;Hello, Second Agent!&quot;)" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+  </node>
+</behavior>

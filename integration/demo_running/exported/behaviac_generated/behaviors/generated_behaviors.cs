@@ -34,7 +34,7 @@ namespace behaviac
 		}
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
-			bool opl = (bool)((CBTPlayer)pAgent).Condition();
+			bool opl = ((CBTPlayer)pAgent).Condition();
 			bool opr = true;
 			bool op = opl == opr;
 			return op ? EBTStatus.BT_SUCCESS : EBTStatus.BT_FAILURE;
@@ -50,7 +50,7 @@ namespace behaviac
 		}
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
-			behaviac.EBTStatus result = (behaviac.EBTStatus)((CBTPlayer)pAgent).Action1();
+			behaviac.EBTStatus result = ((CBTPlayer)pAgent).Action1();
 			return result;
 		}
 	}
@@ -64,7 +64,7 @@ namespace behaviac
 		}
 		protected override EBTStatus update_impl(behaviac.Agent pAgent, behaviac.EBTStatus childStatus)
 		{
-			behaviac.EBTStatus result = (behaviac.EBTStatus)((CBTPlayer)pAgent).Action3();
+			behaviac.EBTStatus result = ((CBTPlayer)pAgent).Action3();
 			return result;
 		}
 	}

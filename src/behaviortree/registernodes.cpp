@@ -17,6 +17,7 @@
 #include "behaviac/behaviortree/nodes/actions/assignment.h"
 #include "behaviac/behaviortree/nodes/actions/compute.h"
 #include "behaviac/behaviortree/nodes/actions/noop.h"
+#include "behaviac/behaviortree/nodes/actions/end.h"
 #include "behaviac/behaviortree/nodes/actions/wait.h"
 #include "behaviac/behaviortree/nodes/actions/waitframes.h"
 #include "behaviac/behaviortree/nodes/actions/waitforsignal.h"
@@ -78,6 +79,7 @@ namespace behaviac {
         BehaviorNode::Register<Assignment>();
         BehaviorNode::Register<Compute>();
         BehaviorNode::Register<Noop>();
+		BehaviorNode::Register<End>();
         BehaviorNode::Register<Wait>();
         BehaviorNode::Register<WaitFrames>();
         BehaviorNode::Register<WaitforSignal>();
@@ -140,6 +142,7 @@ namespace behaviac {
         BehaviorNode::UnRegister<Assignment>();
         BehaviorNode::UnRegister<Compute>();
         BehaviorNode::UnRegister<Noop>();
+		BehaviorNode::UnRegister<End>();
         BehaviorNode::UnRegister<Wait>();
         BehaviorNode::UnRegister<WaitFrames>();
         BehaviorNode::UnRegister<WaitforSignal>();

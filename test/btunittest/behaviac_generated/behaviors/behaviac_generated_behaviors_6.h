@@ -90,4 +90,10 @@ namespace behaviac
 		static bool Create(BehaviorTree* pBT);
 	};
 
+	class bt_node_test_selector_loop_ut_0
+	{
+	public:
+		static bool Create(BehaviorTree* pBT);
+	};
+
 }

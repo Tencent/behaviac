@@ -60,7 +60,7 @@ namespace Behaviac.Design.Nodes
         {
             get
             {
-                return "http://www.behaviac.com/language/zh/sequence/";
+                return "http://www.behaviac.com/sequence/";
             }
         }
 

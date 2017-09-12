@@ -22,7 +22,7 @@ namespace PluginBehaviac.Events
         {
             get
             {
-                return "http://www.behaviac.com/language/zh/fsm/";
+                return "http://www.behaviac.com/fsm/";
             }
         }
 

@@ -11,12 +11,7 @@
 // See the License for the specific language governing permissions and limitations under the License.
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "behaviac/common/base.h"
-#include "behaviac/behaviortree/nodes/actions/action.h"
 #include "behaviac/behaviortree/nodes/actions/wait.h"
-#include "behaviac/agent/agent.h"
-#include "behaviac/behaviortree/nodes/conditions/condition.h"
-#include "behaviac/common/meta.h"
 
 namespace behaviac {
     Wait::Wait() : m_time(0) {

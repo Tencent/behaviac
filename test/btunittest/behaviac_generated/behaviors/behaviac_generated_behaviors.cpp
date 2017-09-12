@@ -83,6 +83,12 @@ namespace behaviac
 			Workspace::GetInstance()->RegisterBehaviorTreeCreator("node_test/decoration_not_ut_2", bt_node_test_decoration_not_ut_2::Create);
 			Workspace::GetInstance()->RegisterBehaviorTreeCreator("node_test/decoration_successuntil_ut_0", bt_node_test_decoration_successuntil_ut_0::Create);
 			Workspace::GetInstance()->RegisterBehaviorTreeCreator("node_test/decoration_successuntil_ut_1", bt_node_test_decoration_successuntil_ut_1::Create);
+			Workspace::GetInstance()->RegisterBehaviorTreeCreator("node_test/end_ut_0", bt_node_test_end_ut_0::Create);
+			Workspace::GetInstance()->RegisterBehaviorTreeCreator("node_test/end_ut_1", bt_node_test_end_ut_1::Create);
+			Workspace::GetInstance()->RegisterBehaviorTreeCreator("node_test/end_ut_2", bt_node_test_end_ut_2::Create);
+			Workspace::GetInstance()->RegisterBehaviorTreeCreator("node_test/end_ut_3", bt_node_test_end_ut_3::Create);
+			Workspace::GetInstance()->RegisterBehaviorTreeCreator("node_test/end_ut_4", bt_node_test_end_ut_4::Create);
+			Workspace::GetInstance()->RegisterBehaviorTreeCreator("node_test/end_ut_5", bt_node_test_end_ut_5::Create);
 			Workspace::GetInstance()->RegisterBehaviorTreeCreator("node_test/enter_exit_action_ut_0", bt_node_test_enter_exit_action_ut_0::Create);
 			Workspace::GetInstance()->RegisterBehaviorTreeCreator("node_test/enter_exit_action_ut_1", bt_node_test_enter_exit_action_ut_1::Create);
 			Workspace::GetInstance()->RegisterBehaviorTreeCreator("node_test/enter_exit_action_ut_2", bt_node_test_enter_exit_action_ut_2::Create);

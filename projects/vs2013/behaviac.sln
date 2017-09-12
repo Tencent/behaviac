@@ -103,6 +103,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tutorial_13", "tutorial_13.
 		{332CEEDC-7568-D84C-B9C6-B710915836ED} = {332CEEDC-7568-D84C-B9C6-B710915836ED}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tutorial_14", "tutorial_14.vcxproj", "{791E0BEE-40E9-3A0C-9D1A-9E8993D534C9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{332CEEDC-7568-D84C-B9C6-B710915836ED} = {332CEEDC-7568-D84C-B9C6-B710915836ED}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		DebugStatic|Win32 = DebugStatic|Win32
@@ -279,6 +284,14 @@ Global
 		{5F434F31-A60F-6F4F-8FF2-645F2A8D1B90}.DebugDLL|Win32.Build.0 = DebugDLL|Win32
 		{5F434F31-A60F-6F4F-8FF2-645F2A8D1B90}.ReleaseDLL|Win32.ActiveCfg = ReleaseDLL|Win32
 		{5F434F31-A60F-6F4F-8FF2-645F2A8D1B90}.ReleaseDLL|Win32.Build.0 = ReleaseDLL|Win32
+		{791E0BEE-40E9-3A0C-9D1A-9E8993D534C9}.DebugStatic|Win32.ActiveCfg = DebugStatic|Win32
+		{791E0BEE-40E9-3A0C-9D1A-9E8993D534C9}.DebugStatic|Win32.Build.0 = DebugStatic|Win32
+		{791E0BEE-40E9-3A0C-9D1A-9E8993D534C9}.ReleaseStatic|Win32.ActiveCfg = ReleaseStatic|Win32
+		{791E0BEE-40E9-3A0C-9D1A-9E8993D534C9}.ReleaseStatic|Win32.Build.0 = ReleaseStatic|Win32
+		{791E0BEE-40E9-3A0C-9D1A-9E8993D534C9}.DebugDLL|Win32.ActiveCfg = DebugDLL|Win32
+		{791E0BEE-40E9-3A0C-9D1A-9E8993D534C9}.DebugDLL|Win32.Build.0 = DebugDLL|Win32
+		{791E0BEE-40E9-3A0C-9D1A-9E8993D534C9}.ReleaseDLL|Win32.ActiveCfg = ReleaseDLL|Win32
+		{791E0BEE-40E9-3A0C-9D1A-9E8993D534C9}.ReleaseDLL|Win32.Build.0 = ReleaseDLL|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

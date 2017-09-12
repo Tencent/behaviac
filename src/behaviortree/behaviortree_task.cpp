@@ -454,6 +454,19 @@ namespace behaviac {
         return tree;
     }
 
+	BehaviorTreeTask* BehaviorTask::GetRootTask() {
+		BehaviorTask* task = this;
+
+		while (task->m_parent) {
+			task = task->m_parent;
+		}
+
+		BEHAVIAC_ASSERT(BehaviorTreeTask::DynamicCast(task));
+		BehaviorTreeTask* tree = (BehaviorTreeTask*)task;
+
+		return tree;
+	}
+
 #if BEHAVIAC_ENABLE_PROFILING
     // Helper class for automatically beginning and ending a profiling block
     class AutoProfileBlockSend {
@@ -619,6 +632,22 @@ namespace behaviac {
 
         return true;
     }
+
+	bool end_handler(BehaviorTask* node, Agent* pAgent, void* user_data) {
+		BEHAVIAC_UNUSED_VAR(user_data);
+
+		if (node->m_status == BT_RUNNING || node->m_status == BT_INVALID) {
+			EBTStatus status = *(EBTStatus*)user_data;
+
+			node->onexit_action(pAgent, status);
+
+			node->m_status = status;
+
+			node->SetCurrentTask(0);
+		}
+
+		return true;
+	}
 
     bool abort_handler(BehaviorTask* node, Agent* pAgent, void* user_data) {
         BEHAVIAC_UNUSED_VAR(user_data);
@@ -1440,6 +1469,7 @@ namespace behaviac {
 
 		this->m_lastTreeTask = pAgent->m_excutingTreeTask;
         pAgent->m_excutingTreeTask = this;
+		//pAgent->m_excutingTreeTask->SetParent(this->m_lastTreeTask);
 
         BehaviorTree* tree = (BehaviorTree*)this->m_node;
 
@@ -1454,6 +1484,14 @@ namespace behaviac {
         return status;
     }
 
+	void BehaviorTreeTask::setEndStatus(EBTStatus status) {
+		this->m_endStatus = status;
+	}
+
+	void BehaviorTreeTask::end(Agent* pAgent, EBTStatus status) {
+		this->traverse(true, &end_handler, pAgent, &status);
+	}
+
     EBTStatus BehaviorTreeTask::update(Agent* pAgent, EBTStatus childStatus) {
         BEHAVIAC_ASSERT(this->m_node != 0);
         BEHAVIAC_ASSERT(this->m_root != 0);
@@ -1463,10 +1501,18 @@ namespace behaviac {
         }
 
         EBTStatus status = BT_INVALID;
+		this->m_endStatus = BT_INVALID;
 
         status = super::update(pAgent, childStatus);
 
         BEHAVIAC_ASSERT(status != BT_INVALID);
+
+		// When the End node takes effect, it always returns BT_RUNNING
+		// and m_endStatus should always be BT_SUCCESS or BT_FAILURE
+		if ((status == BT_RUNNING) && (this->m_endStatus != BT_INVALID)) {
+			this->end(pAgent, this->m_endStatus);
+			return this->m_endStatus;
+		}
 
         return status;
     }

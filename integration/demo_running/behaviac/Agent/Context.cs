@@ -244,11 +244,11 @@ namespace behaviac
             }
             else
             {
-                var e = ms_contexts.Values.GetEnumerator();
+                var e = ms_contexts.GetEnumerator();
 
                 while (e.MoveNext())
                 {
-                    Context pContext = e.Current;
+                    Context pContext = e.Current.Value;
 
                     if (pContext != null)
                     {
@@ -272,13 +272,14 @@ namespace behaviac
             for (int i = 0; i < this.Agents.Count; ++i)
             {
                 HeapItem_t pa = this.Agents[i];
-                var e = pa.agents.Values.GetEnumerator();
+                var e = pa.agents.GetEnumerator();
 
                 while (e.MoveNext())
                 {
-                    if (e.Current.IsActive())
+                    Agent pAgent = e.Current.Value;
+                    if (pAgent.IsActive())
                     {
-                        e.Current.btexec();
+                        pAgent.btexec();
 
                         // in case IsExecAgents was set to false by pA's bt
                         if (!Workspace.Instance.IsExecAgents)

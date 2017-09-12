@@ -827,4 +827,22 @@
   <data name="ResetChildrenDesc" xml:space="preserve">
     <value>重置正在运行的子节点，并从头开始执行分支子节点</value>
   </data>
+  <data name="EndStatus" xml:space="preserve">
+    <value>结束状态</value>
+  </data>
+  <data name="EndStatusDesc" xml:space="preserve">
+    <value>行为树执行到结束节点时，强制返回所配置的当前值</value>
+  </data>
+  <data name="End" xml:space="preserve">
+    <value>结束</value>
+  </data>
+  <data name="EndDesc" xml:space="preserve">
+    <value>结束</value>
+  </data>
+  <data name="EndOutside" xml:space="preserve">
+    <value>结束外层树</value>
+  </data>
+  <data name="EndOutsideDesc" xml:space="preserve">
+    <value>用于子树返回时，是否结束全部外层行为树</value>
+  </data>
 </root>

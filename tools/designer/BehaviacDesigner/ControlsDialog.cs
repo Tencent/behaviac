@@ -72,6 +72,7 @@ namespace Behaviac.Design
             _workspaces.Add("C++ Tutorial_11", "../../../tutorials/tutorial_11/workspace/tutorial_11_cpp.workspace.xml");
             _workspaces.Add("C++ Tutorial_12", "../../../tutorials/tutorial_12/workspace/tutorial_12_cpp.workspace.xml");
             _workspaces.Add("C++ Tutorial_13", "../../../tutorials/tutorial_13/workspace/tutorial_13_cpp.workspace.xml");
+            _workspaces.Add("C++ Tutorial_14", "../../../tutorials/tutorial_14/workspace/tutorial_14_cpp.workspace.xml");
 
             _workspaces.Add("C# Tutorial_1", "../../../tutorials/tutorial_1/workspace/tutorial_1_cs.workspace.xml");
             _workspaces.Add("C# Tutorial_1_1", "../../../tutorials/tutorial_1_1/workspace/tutorial_1_1_cs.workspace.xml");
@@ -87,6 +88,7 @@ namespace Behaviac.Design
             _workspaces.Add("C# Tutorial_10", "../../../tutorials/tutorial_10/workspace/tutorial_10_cs.workspace.xml");
             _workspaces.Add("C# Tutorial_12", "../../../tutorials/tutorial_12/workspace/tutorial_12_cs.workspace.xml");
             _workspaces.Add("C# Tutorial_13", "../../../tutorials/tutorial_13/workspace/tutorial_13_cs.workspace.xml");
+            _workspaces.Add("C# Tutorial_14", "../../../tutorials/tutorial_14/workspace/tutorial_14_cs.workspace.xml");
 
 #if DEBUG
             _workspaces.Add("Unity Unit Test", "../../../integration/unity/Assets/behaviac/workspace/behaviacunittest.workspace.xml");

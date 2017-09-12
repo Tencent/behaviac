@@ -106,14 +106,13 @@ namespace PluginBehaviac.NodeExporters
             if (action.Method != null && !isNullMethod(action.Method))
             {
                 string nativeReturnType = DataCsExporter.GetGeneratedNativeType(action.Method.NativeReturnType);
-                string typeConvertStr = (nativeReturnType == "void") ? string.Empty : "(" + nativeReturnType + ")";
                 string method = MethodCsExporter.GenerateCode(node, action.Method, stream, indent + "\t\t\t", string.Empty, string.Empty, "method");
 
                 if ("behaviac.EBTStatus" == nativeReturnType)
                 {
                     resultStatus = "result";
 
-                    stream.WriteLine("{0}\t\t\t{1} result = {2}{3};", indent, nativeReturnType, typeConvertStr, method);
+                    stream.WriteLine("{0}\t\t\t{1} result = {2};", indent, nativeReturnType, method);
                     MethodCsExporter.PostGenerateCode(action.Method, stream, indent + "\t\t\t", string.Empty, string.Empty, "method");
                 }
                 else
@@ -124,7 +123,7 @@ namespace PluginBehaviac.NodeExporters
                     }
                     else
                     {
-                        stream.WriteLine("{0}\t\t\t{1} result = {2}{3};", indent, nativeReturnType, typeConvertStr, method);
+                        stream.WriteLine("{0}\t\t\t{1} result = {2};", indent, nativeReturnType, method);
                     }
 
                     MethodCsExporter.PostGenerateCode(action.Method, stream, indent + "\t\t\t", string.Empty, string.Empty, "method");

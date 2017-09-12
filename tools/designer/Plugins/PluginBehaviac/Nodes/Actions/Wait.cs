@@ -56,7 +56,7 @@ namespace PluginBehaviac.Nodes
         {
             get
             {
-                return "http://www.behaviac.com/language/zh/wait/";
+                return "http://www.behaviac.com/wait/";
             }
         }
 

@@ -6,7 +6,7 @@ ifndef config
 endif
 export config
 
-PROJECTS := behaviac btunittest btremotetest demo_running usertest tutorial_1 tutorial_1_1 tutorial_1_2 tutorial_2 tutorial_3 tutorial_4 tutorial_5 tutorial_6 tutorial_7 tutorial_8 tutorial_9 tutorial_10 tutorial_11 tutorial_12 tutorial_13
+PROJECTS := behaviac btunittest btremotetest demo_running usertest tutorial_1 tutorial_1_1 tutorial_1_2 tutorial_2 tutorial_3 tutorial_4 tutorial_5 tutorial_6 tutorial_7 tutorial_8 tutorial_9 tutorial_10 tutorial_11 tutorial_12 tutorial_13 tutorial_14
 
 .PHONY: all clean help $(PROJECTS)
 
@@ -92,6 +92,10 @@ tutorial_13: behaviac
 	@echo "==== Building tutorial_13 ($(config)) ===="
 	@${MAKE} --no-print-directory -C . -f tutorial_13.make
 
+tutorial_14: behaviac
+	@echo "==== Building tutorial_14 ($(config)) ===="
+	@${MAKE} --no-print-directory -C . -f tutorial_14.make
+
 clean:
 	@${MAKE} --no-print-directory -C . -f behaviac.make clean
 	@${MAKE} --no-print-directory -C . -f btunittest.make clean
@@ -113,6 +117,7 @@ clean:
 	@${MAKE} --no-print-directory -C . -f tutorial_11.make clean
 	@${MAKE} --no-print-directory -C . -f tutorial_12.make clean
 	@${MAKE} --no-print-directory -C . -f tutorial_13.make clean
+	@${MAKE} --no-print-directory -C . -f tutorial_14.make clean
 
 help:
 	@echo "Usage: make [config=name] [target]"
@@ -144,5 +149,6 @@ help:
 	@echo "   tutorial_11"
 	@echo "   tutorial_12"
 	@echo "   tutorial_13"
+	@echo "   tutorial_14"
 	@echo ""
 	@echo "For more information, see http://industriousone.com/premake/quick-start"

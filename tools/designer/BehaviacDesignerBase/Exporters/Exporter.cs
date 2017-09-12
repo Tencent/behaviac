@@ -347,11 +347,19 @@ namespace Behaviac.Design.Exporters
                 this.codes.Add(code);
             }
 
-            public static void Write(StringWriter file, List<string> lines)
+            public static void Write(StringWriter file, List<string> lines, string methodName = null)
             {
                 foreach (string s in lines)
                 {
-                    file.WriteLine(s);
+                    string item_name;
+                    if (!string.IsNullOrEmpty(methodName) && StartsWith(item_begin, s, out item_name))
+                    {
+                        file.WriteLine("{0} {1}", item_begin, methodName);
+                    }
+                    else
+                    {
+                        file.WriteLine(s);
+                    }
                 }
             }
         }
@@ -546,7 +554,7 @@ namespace Behaviac.Design.Exporters
                             old_method = method;
                         }
 
-                        MethodContent.Write(file, old_method.codes);
+                        MethodContent.Write(file, old_method.codes, method.name);
                     }
 
                     UpdateFile(file, out_filename);

@@ -283,6 +283,7 @@ namespace PluginBehaviac.DataExporters
             }
 
             string retStr = string.Empty;
+            string nativeReturnType = DataCsExporter.GetGeneratedNativeType(method.NativeReturnType);
 
             if (method.IsPublic)
             {
@@ -300,14 +301,13 @@ namespace PluginBehaviac.DataExporters
             else
             {
                 retStr = string.Format("AgentMetaVisitor.ExecuteMethod({0}, \"{1}\", {2})", agentName, method.BasicName, paramsName);
+                string typeConvertStr = (nativeReturnType == "void") ? string.Empty : "(" + nativeReturnType + ")";
+                retStr = typeConvertStr + retStr;
             }
 
             if (!string.IsNullOrEmpty(var))
             {
-                string nativeReturnType = DataCsExporter.GetGeneratedNativeType(method.NativeReturnType);
-                string typeConvertStr = (nativeReturnType == "void") ? string.Empty : "(" + nativeReturnType + ")";
-
-                stream.WriteLine("{0}{1} {2} = {3}{4};", indent, nativeReturnType, var, typeConvertStr, retStr);
+                stream.WriteLine("{0}{1} {2} = {3};", indent, nativeReturnType, var, retStr);
             }
 
             return retStr;

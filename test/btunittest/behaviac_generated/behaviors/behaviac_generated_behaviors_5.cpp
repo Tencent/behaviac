@@ -6,6 +6,238 @@
 
 namespace behaviac
 {
+	// Source file: node_test/frames_ut_0
+
+	class DecoratorFrames_bt_node_test_frames_ut_0_node23 : public DecoratorFrames
+	{
+	public:
+		BEHAVIAC_DECLARE_DYNAMIC_TYPE(DecoratorFrames_bt_node_test_frames_ut_0_node23, DecoratorFrames);
+		DecoratorFrames_bt_node_test_frames_ut_0_node23()
+		{
+			m_bDecorateWhenChildEnds = false;
+		}
+	protected:
+		virtual int GetFrames(Agent* pAgent) const
+		{
+			BEHAVIAC_UNUSED_VAR(pAgent);
+			return 5;
+		}
+	};
+
+	class Action_bt_node_test_frames_ut_0_node16 : public Action
+	{
+	public:
+		BEHAVIAC_DECLARE_DYNAMIC_TYPE(Action_bt_node_test_frames_ut_0_node16, Action);
+		Action_bt_node_test_frames_ut_0_node16()
+		{
+		}
+	protected:
+		virtual EBTStatus update_impl(Agent* pAgent, EBTStatus childStatus)
+		{
+			BEHAVIAC_UNUSED_VAR(pAgent);
+			BEHAVIAC_UNUSED_VAR(childStatus);
+			((AgentNodeTest*)pAgent)->_Execute_Method_<METHOD_TYPE_AgentNodeTest_SelectTarget, void >();
+			return BT_SUCCESS;
+		}
+	};
+
+	class Assignment_bt_node_test_frames_ut_0_node21 : public Assignment
+	{
+	public:
+		BEHAVIAC_DECLARE_DYNAMIC_TYPE(Assignment_bt_node_test_frames_ut_0_node21, Assignment);
+		Assignment_bt_node_test_frames_ut_0_node21()
+		{
+		}
+	protected:
+		virtual EBTStatus update_impl(Agent* pAgent, EBTStatus childStatus)
+		{
+			BEHAVIAC_UNUSED_VAR(pAgent);
+			BEHAVIAC_UNUSED_VAR(childStatus);
+			EBTStatus result = BT_SUCCESS;
+			int opr = 0;
+			((AgentNodeTest*)pAgent)->_Get_Property_<PROPERTY_TYPE_AgentNodeTest_testVar_0, int >() = opr;
+			return result;
+		}
+	};
+
+	class Action_bt_node_test_frames_ut_0_node5 : public Action
+	{
+	public:
+		BEHAVIAC_DECLARE_DYNAMIC_TYPE(Action_bt_node_test_frames_ut_0_node5, Action);
+		Action_bt_node_test_frames_ut_0_node5()
+		{
+		}
+	protected:
+		virtual EBTStatus update_impl(Agent* pAgent, EBTStatus childStatus)
+		{
+			BEHAVIAC_UNUSED_VAR(pAgent);
+			BEHAVIAC_UNUSED_VAR(childStatus);
+			behaviac::EBTStatus result = ((AgentNodeTest*)pAgent)->_Execute_Method_<METHOD_TYPE_AgentNodeTest_Move, behaviac::EBTStatus >();
+			return result;
+		}
+	};
+
+	class Precondition_bt_node_test_frames_ut_0_attach7 : public Precondition
+	{
+	public:
+		BEHAVIAC_DECLARE_DYNAMIC_TYPE(Precondition_bt_node_test_frames_ut_0_attach7, Precondition);
+		Precondition_bt_node_test_frames_ut_0_attach7()
+		{
+			this->SetPhase(Precondition::E_UPDATE);
+			this->SetIsAnd(true);
+		}
+	protected:
+		virtual EBTStatus update_impl(Agent* pAgent, EBTStatus childStatus)
+		{
+			EBTStatus result = BT_SUCCESS;
+			int opr2 = 0;
+			((AgentNodeTest*)pAgent)->_Get_Property_<PROPERTY_TYPE_AgentNodeTest_testVar_0, int >() = opr2;
+			return result;
+		}
+	};
+
+	class Assignment_bt_node_test_frames_ut_0_node0 : public Assignment
+	{
+	public:
+		BEHAVIAC_DECLARE_DYNAMIC_TYPE(Assignment_bt_node_test_frames_ut_0_node0, Assignment);
+		Assignment_bt_node_test_frames_ut_0_node0()
+		{
+		}
+	protected:
+		virtual EBTStatus update_impl(Agent* pAgent, EBTStatus childStatus)
+		{
+			BEHAVIAC_UNUSED_VAR(pAgent);
+			BEHAVIAC_UNUSED_VAR(childStatus);
+			EBTStatus result = BT_SUCCESS;
+			int opr = 2;
+			((AgentNodeTest*)pAgent)->_Get_Property_<PROPERTY_TYPE_AgentNodeTest_testVar_0, int >() = opr;
+			return result;
+		}
+	};
+
+	class Assignment_bt_node_test_frames_ut_0_node2 : public Assignment
+	{
+	public:
+		BEHAVIAC_DECLARE_DYNAMIC_TYPE(Assignment_bt_node_test_frames_ut_0_node2, Assignment);
+		Assignment_bt_node_test_frames_ut_0_node2()
+		{
+		}
+	protected:
+		virtual EBTStatus update_impl(Agent* pAgent, EBTStatus childStatus)
+		{
+			BEHAVIAC_UNUSED_VAR(pAgent);
+			BEHAVIAC_UNUSED_VAR(childStatus);
+			EBTStatus result = BT_SUCCESS;
+			int opr = 3;
+			((AgentNodeTest*)pAgent)->_Get_Property_<PROPERTY_TYPE_AgentNodeTest_testVar_0, int >() = opr;
+			return result;
+		}
+	};
+
+		bool bt_node_test_frames_ut_0::Create(BehaviorTree* pBT)
+		{
+			pBT->SetClassNameString("BehaviorTree");
+			pBT->SetId((uint16_t)-1);
+			pBT->SetName("node_test/frames_ut_0");
+			pBT->SetIsFSM(false);
+#if !BEHAVIAC_RELEASE
+			pBT->SetAgentType("AgentNodeTest");
+#endif
+			// children
+			{
+				Sequence* node1 = BEHAVIAC_NEW Sequence;
+				node1->SetClassNameString("Sequence");
+				node1->SetId(1);
+#if !BEHAVIAC_RELEASE
+				node1->SetAgentType("AgentNodeTest");
+#endif
+				pBT->AddChild(node1);
+				{
+					DecoratorFrames_bt_node_test_frames_ut_0_node23* node23 = BEHAVIAC_NEW DecoratorFrames_bt_node_test_frames_ut_0_node23;
+					node23->SetClassNameString("DecoratorFrames");
+					node23->SetId(23);
+#if !BEHAVIAC_RELEASE
+					node23->SetAgentType("AgentNodeTest");
+#endif
+					node1->AddChild(node23);
+					{
+						Sequence* node15 = BEHAVIAC_NEW Sequence;
+						node15->SetClassNameString("Sequence");
+						node15->SetId(15);
+#if !BEHAVIAC_RELEASE
+						node15->SetAgentType("AgentNodeTest");
+#endif
+						node23->AddChild(node15);
+						{
+							Action_bt_node_test_frames_ut_0_node16* node16 = BEHAVIAC_NEW Action_bt_node_test_frames_ut_0_node16;
+							node16->SetClassNameString("Action");
+							node16->SetId(16);
+#if !BEHAVIAC_RELEASE
+							node16->SetAgentType("AgentNodeTest");
+#endif
+							node15->AddChild(node16);
+							node15->SetHasEvents(node15->HasEvents() | node16->HasEvents());
+						}
+						{
+							Assignment_bt_node_test_frames_ut_0_node21* node21 = BEHAVIAC_NEW Assignment_bt_node_test_frames_ut_0_node21;
+							node21->SetClassNameString("Assignment");
+							node21->SetId(21);
+#if !BEHAVIAC_RELEASE
+							node21->SetAgentType("AgentNodeTest");
+#endif
+							node15->AddChild(node21);
+							node15->SetHasEvents(node15->HasEvents() | node21->HasEvents());
+						}
+						{
+							Action_bt_node_test_frames_ut_0_node5* node5 = BEHAVIAC_NEW Action_bt_node_test_frames_ut_0_node5;
+							node5->SetClassNameString("Action");
+							node5->SetId(5);
+#if !BEHAVIAC_RELEASE
+							node5->SetAgentType("AgentNodeTest");
+#endif
+							// attachments
+							{
+								Precondition_bt_node_test_frames_ut_0_attach7* attach7 = BEHAVIAC_NEW Precondition_bt_node_test_frames_ut_0_attach7;
+								attach7->SetClassNameString("Precondition");
+								attach7->SetId(7);
+#if !BEHAVIAC_RELEASE
+								attach7->SetAgentType("AgentNodeTest");
+#endif
+								node5->Attach(attach7, true, false, false);
+								node5->SetHasEvents(node5->HasEvents() | (Event::DynamicCast(attach7) != 0));
+							}
+							node15->AddChild(node5);
+							node15->SetHasEvents(node15->HasEvents() | node5->HasEvents());
+						}
+						{
+							Assignment_bt_node_test_frames_ut_0_node0* node0 = BEHAVIAC_NEW Assignment_bt_node_test_frames_ut_0_node0;
+							node0->SetClassNameString("Assignment");
+							node0->SetId(0);
+#if !BEHAVIAC_RELEASE
+							node0->SetAgentType("AgentNodeTest");
+#endif
+							node15->AddChild(node0);
+							node15->SetHasEvents(node15->HasEvents() | node0->HasEvents());
+						}
+						node23->SetHasEvents(node23->HasEvents() | node15->HasEvents());
+					}
+					node1->SetHasEvents(node1->HasEvents() | node23->HasEvents());
+				}
+				{
+					Assignment_bt_node_test_frames_ut_0_node2* node2 = BEHAVIAC_NEW Assignment_bt_node_test_frames_ut_0_node2;
+					node2->SetClassNameString("Assignment");
+					node2->SetId(2);
+#if !BEHAVIAC_RELEASE
+					node2->SetAgentType("AgentNodeTest");
+#endif
+					node1->AddChild(node2);
+					node1->SetHasEvents(node1->HasEvents() | node2->HasEvents());
+				}
+				pBT->SetHasEvents(pBT->HasEvents() | node1->HasEvents());
+			}
+			return true;
+		}
+
 	// Source file: node_test/if_else_ut_0
 
 	class Action_bt_node_test_if_else_ut_0_node2 : public Action

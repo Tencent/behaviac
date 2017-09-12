@@ -36,13 +36,12 @@ namespace behaviac {
         virtual ~WaitFrames();
         virtual void load(int version, const char* agentType, const properties_t& properties);
 
-        virtual int GetFrames(Agent* pAgent) const;
-
     private:
         virtual BehaviorTask* createTask() const;
+		virtual int GetFrames(Agent* pAgent) const;
 
     protected:
-        IInstanceMember*		m_frames;
+        IInstanceMember* m_frames;
 
         friend class WaitFramesTask;
     };

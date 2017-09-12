@@ -115,7 +115,7 @@ namespace Behaviac.Design.Attributes
         }
 
         protected Type _filterType = null;
-        public Type FilterType
+        public virtual Type FilterType
         {
             get
             {

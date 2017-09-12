@@ -884,4 +884,22 @@ it only returns success or failure and never returns running.
   <data name="ResetChildrenDesc" xml:space="preserve">
     <value>Reset the running children</value>
   </data>
+  <data name="EndStatus" xml:space="preserve">
+    <value>End Status</value>
+  </data>
+  <data name="EndStatusDesc" xml:space="preserve">
+    <value>End Status</value>
+  </data>
+  <data name="End" xml:space="preserve">
+    <value>End</value>
+  </data>
+  <data name="EndDesc" xml:space="preserve">
+    <value>End</value>
+  </data>
+  <data name="EndOutside" xml:space="preserve">
+    <value>End Outside</value>
+  </data>
+  <data name="EndOutsideDesc" xml:space="preserve">
+    <value>End all outside trees</value>
+  </data>
 </root>

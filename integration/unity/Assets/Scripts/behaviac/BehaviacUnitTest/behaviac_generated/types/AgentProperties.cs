@@ -527,7 +527,7 @@ namespace behaviac
 				_value.isMale = ((CInstanceMember<bool>)_isMale).GetValue(self);
 				_value.skinColor = ((CInstanceMember<TNS.NE.NAT.eColor>)_skinColor).GetValue(self);
 				_value.car = ((CInstanceMember<TNS.ST.kCar>)_car).GetValue(self);
-				_value.boss = ((CInstanceMember<behaviac.Agent>)_boss).GetValue(self);
+				_value.boss = (behaviac.Agent)_boss.GetValueObject(self);
 			}
 		};
 

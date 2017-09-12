@@ -6,18 +6,6 @@
 
 namespace behaviac
 {
-	class bt_node_test_selector_stochastic_ut_0
-	{
-	public:
-		static bool Create(BehaviorTree* pBT);
-	};
-
-	class bt_node_test_selector_stochastic_ut_1
-	{
-	public:
-		static bool Create(BehaviorTree* pBT);
-	};
-
 	class bt_node_test_selector_stochastic_ut_2
 	{
 	public:
@@ -85,6 +73,24 @@ namespace behaviac
 	};
 
 	class bt_node_test_sequence_ut_0
+	{
+	public:
+		static bool Create(BehaviorTree* pBT);
+	};
+
+	class bt_node_test_sequence_ut_1
+	{
+	public:
+		static bool Create(BehaviorTree* pBT);
+	};
+
+	class bt_node_test_sequence_ut_2
+	{
+	public:
+		static bool Create(BehaviorTree* pBT);
+	};
+
+	class bt_node_test_sequence_ut_3
 	{
 	public:
 		static bool Create(BehaviorTree* pBT);

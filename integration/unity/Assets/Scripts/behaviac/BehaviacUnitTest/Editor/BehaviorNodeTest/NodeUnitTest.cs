@@ -910,7 +910,6 @@ namespace BehaviorNodeUnitTest
             Assert.AreEqual(behaviac.EBTStatus.BT_SUCCESS, status);
             Assert.AreEqual(1, testAgent.testVar_0);
         }
-
     }
 
     [TestFixture]
@@ -1031,6 +1030,78 @@ namespace BehaviorNodeUnitTest
 
             Assert.AreEqual(0, testAgent.testVar_0);
             Assert.AreEqual(0.0, testAgent.testVar_2);
+        }
+    }
+
+    [TestFixture]
+    [Category("EndNodesTests")]
+    internal class EndNodesTests : UnitTestBase_0
+    {
+        [Test]
+        [Category("test_end_0")]
+        public void test_end_0()
+        {
+            testAgent.btsetcurrent("node_test/end_ut_0");
+            testAgent.resetProperties();
+            behaviac.EBTStatus status = testAgent.btexec();
+            Assert.AreEqual(behaviac.EBTStatus.BT_SUCCESS, status);
+            Assert.AreEqual(1, testAgent.testVar_0);
+        }
+
+        [Test]
+        [Category("test_end_1")]
+        public void test_end_1()
+        {
+            testAgent.btsetcurrent("node_test/end_ut_1");
+            testAgent.resetProperties();
+            behaviac.EBTStatus status = testAgent.btexec();
+            Assert.AreEqual(behaviac.EBTStatus.BT_FAILURE, status);
+            Assert.AreEqual(1, testAgent.testVar_0);
+        }
+
+        [Test]
+        [Category("test_end_2")]
+        public void test_end_2()
+        {
+            testAgent.btsetcurrent("node_test/end_ut_2");
+            testAgent.resetProperties();
+            behaviac.EBTStatus status = testAgent.btexec();
+            Assert.AreEqual(behaviac.EBTStatus.BT_FAILURE, status);
+            Assert.AreEqual(1, testAgent.testVar_0);
+        }
+
+        [Test]
+        [Category("test_end_3")]
+        public void test_end_3()
+        {
+            testAgent.btsetcurrent("node_test/end_ut_3");
+            testAgent.resetProperties();
+            behaviac.EBTStatus status = testAgent.btexec();
+            Assert.AreEqual(behaviac.EBTStatus.BT_SUCCESS, status);
+            Assert.AreEqual(2, testAgent.testVar_1);
+        }
+
+        [Test]
+        [Category("test_end_4")]
+        public void test_end_4()
+        {
+            testAgent.btsetcurrent("node_test/end_ut_4");
+            testAgent.resetProperties();
+            behaviac.EBTStatus status = testAgent.btexec();
+            Assert.AreEqual(behaviac.EBTStatus.BT_FAILURE, status);
+            Assert.AreEqual(1, testAgent.testVar_1);
+        }
+
+        [Test]
+        [Category("test_end_5")]
+        public void test_end_5()
+        {
+            testAgent.btsetcurrent("node_test/end_ut_5");
+            testAgent.resetProperties();
+            behaviac.EBTStatus status = testAgent.btexec();
+            Assert.AreEqual(behaviac.EBTStatus.BT_FAILURE, status);
+            Assert.AreEqual(1, testAgent.testVar_0);
+            Assert.AreEqual(1, testAgent.testVar_1);
         }
     }
 }

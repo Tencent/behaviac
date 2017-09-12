@@ -92,6 +92,8 @@ namespace behaviac {
 
         EBTStatus GetStatus() const;
 
+		BehaviorTreeTask* GetRootTask();
+
         const BehaviorNode* GetNode() const;
 
         void SetParent(BranchTask* parent) {
@@ -154,6 +156,7 @@ namespace behaviac {
         BranchTask*		GetTopManageBranchTask();
 
         friend bool getRunningNodes_handler(BehaviorTask* task, Agent* pAgent, void* user_data);
+		friend bool end_handler(BehaviorTask* task, Agent* pAgent, void* user_data);
         friend bool abort_handler(BehaviorTask* task, Agent* pAgent, void* user_data);
         friend bool reset_handler(BehaviorTask* task, Agent* pAgent, void* user_data);
         friend bool checkevent_handler(BehaviorTask* task, Agent* pAgent, void* user_data);
@@ -369,6 +372,12 @@ namespace behaviac {
         const behaviac::string& GetName() const;
 
         void Clear();
+
+		void setEndStatus(EBTStatus status);
+
+	private:
+		void end(Agent* pAgent, EBTStatus status);
+
     protected:
         BEHAVIAC_DECLARE_MEMORY_OPERATORS(BehaviorTreeTask);
         BEHAVIAC_DECLARE_DYNAMIC_TYPE(BehaviorTreeTask, SingeChildTask);
@@ -397,7 +406,9 @@ namespace behaviac {
 
     private:
         bool load(const char* file);
-		BehaviorTreeTask* m_lastTreeTask;
+
+		BehaviorTreeTask*	m_lastTreeTask;
+		EBTStatus			m_endStatus;
     };
 } // namespace behaviac
 

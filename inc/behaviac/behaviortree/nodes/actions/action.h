@@ -50,7 +50,7 @@ namespace behaviac {
 
     protected:
         behaviac::IInstanceMember*		m_method;
-        EBTStatus			    m_resultOption;
+        EBTStatus						m_resultOption;
         behaviac::IInstanceMember*		m_resultFunctor;
 
         friend class ActionTask;

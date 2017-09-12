@@ -90,4 +90,10 @@ namespace behaviac
 		static bool Create(BehaviorTree* pBT);
 	};
 
+	class bt_node_test_PreconditionEffectorTest_PreconditionEffectorTest_2
+	{
+	public:
+		static bool Create(BehaviorTree* pBT);
+	};
+
 }

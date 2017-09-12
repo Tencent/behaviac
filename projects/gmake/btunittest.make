@@ -24,7 +24,7 @@ ifeq ($(config),debugstatic32)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/btunittest_debugstatic_win32_gmake.exe
   DEFINES   += -DWIN32 -D_DEBUG -DDEBUG -D_CONSOLE
-  INCLUDES  += -I../../inc -I../../inc -ID:/include -I../../test/btunittest
+  INCLUDES  += -I../../inc -I../../inc -I../include -I../../test/btunittest
   ALL_CPPFLAGS  += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
   ALL_CFLAGS    += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -g -Wall -Wextra -ffast-math -m32 -Wno-invalid-offsetof -Wno-array-bounds -Wno-unused-local-typedefs -Wno-maybe-uninitialized -finput-charset=UTF-8 -Wno-unused-parameter -Wno-unused-variable
   ALL_CXXFLAGS  += $(CXXFLAGS) $(ALL_CFLAGS) -fno-exceptions
@@ -46,7 +46,7 @@ ifeq ($(config),releasestatic32)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/btunittest_releasestatic_win32_gmake.exe
   DEFINES   += -DWIN32 -DNDEBUG -D_CONSOLE
-  INCLUDES  += -I../../inc -I../../inc -ID:/include -I../../test/btunittest
+  INCLUDES  += -I../../inc -I../../inc -I../include -I../../test/btunittest
   ALL_CPPFLAGS  += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
   ALL_CFLAGS    += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -O2 -Wall -Wextra -ffast-math -m32 /Ox /Oi /Ob1 /Ot -Wno-invalid-offsetof -Wno-array-bounds -Wno-unused-local-typedefs -Wno-maybe-uninitialized -finput-charset=UTF-8 -Wno-unused-parameter -Wno-unused-variable
   ALL_CXXFLAGS  += $(CXXFLAGS) $(ALL_CFLAGS) -fno-exceptions

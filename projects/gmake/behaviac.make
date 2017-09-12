@@ -80,6 +80,7 @@ OBJECTS := \
 	$(OBJDIR)/action.o \
 	$(OBJDIR)/assignment.o \
 	$(OBJDIR)/compute.o \
+	$(OBJDIR)/end.o \
 	$(OBJDIR)/noop.o \
 	$(OBJDIR)/wait.o \
 	$(OBJDIR)/waitforsignal.o \
@@ -291,6 +292,10 @@ $(OBJDIR)/assignment.o: ../../src/behaviortree/nodes/actions/assignment.cpp
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 
 $(OBJDIR)/compute.o: ../../src/behaviortree/nodes/actions/compute.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+
+$(OBJDIR)/end.o: ../../src/behaviortree/nodes/actions/end.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 

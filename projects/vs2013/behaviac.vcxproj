@@ -232,6 +232,7 @@
     <ClInclude Include="..\..\inc\behaviac\behaviortree\nodes\actions\action.h" />
     <ClInclude Include="..\..\inc\behaviac\behaviortree\nodes\actions\assignment.h" />
     <ClInclude Include="..\..\inc\behaviac\behaviortree\nodes\actions\compute.h" />
+    <ClInclude Include="..\..\inc\behaviac\behaviortree\nodes\actions\end.h" />
     <ClInclude Include="..\..\inc\behaviac\behaviortree\nodes\actions\noop.h" />
     <ClInclude Include="..\..\inc\behaviac\behaviortree\nodes\actions\wait.h" />
     <ClInclude Include="..\..\inc\behaviac\behaviortree\nodes\actions\waitforsignal.h" />
@@ -394,6 +395,8 @@
     <ClCompile Include="..\..\src\behaviortree\nodes\actions\assignment.cpp">
     </ClCompile>
     <ClCompile Include="..\..\src\behaviortree\nodes\actions\compute.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\src\behaviortree\nodes\actions\end.cpp">
     </ClCompile>
     <ClCompile Include="..\..\src\behaviortree\nodes\actions\noop.cpp">
     </ClCompile>

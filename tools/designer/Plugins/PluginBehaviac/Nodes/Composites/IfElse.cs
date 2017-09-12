@@ -39,7 +39,7 @@ namespace PluginBehaviac.Nodes
         {
             get
             {
-                return "http://www.behaviac.com/language/zh/ifelse/";
+                return "http://www.behaviac.com/ifelse/";
             }
         }
 

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: FirstBT.xml-->
+<behavior name="FirstBT" agenttype="FirstAgent" version="5">
+  <node class="Sequence" id="1">
+    <node class="Assignment" id="3">
+      <property CastRight="false" />
+      <property Opl="int Self.FirstAgent::p1" />
+      <property Opr="const int 2" />
+    </node>
+    <node class="Condition" id="2">
+      <property Operator="Equal" />
+      <property Opl="int Self.FirstAgent::p1" />
+      <property Opr="const int 2" />
+    </node>
+    <node class="End" id="4">
+      <property EndStatus="const behaviac::EBTStatus BT_SUCCESS" />
+    </node>
+    <node class="Action" id="0">
+      <property Method="Self.FirstAgent::m1(&quot;Hello, First Agent!&quot;)" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+  </node>
+</behavior>

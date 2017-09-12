@@ -6,6 +6,18 @@
 
 namespace behaviac
 {
+	class bt_node_test_enter_exit_action_ut_0
+	{
+	public:
+		static bool Create(BehaviorTree* pBT);
+	};
+
+	class bt_node_test_enter_exit_action_ut_1
+	{
+	public:
+		static bool Create(BehaviorTree* pBT);
+	};
+
 	class bt_node_test_enter_exit_action_ut_2
 	{
 	public:
@@ -79,12 +91,6 @@ namespace behaviac
 	};
 
 	class bt_node_test_event_ut_4
-	{
-	public:
-		static bool Create(BehaviorTree* pBT);
-	};
-
-	class bt_node_test_frames_ut_0
 	{
 	public:
 		static bool Create(BehaviorTree* pBT);

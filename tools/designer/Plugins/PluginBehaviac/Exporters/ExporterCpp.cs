@@ -368,6 +368,7 @@ namespace PluginBehaviac.Exporters
             file.WriteLine("#include \"behaviac/behaviortree/nodes/actions/action.h\"");
             file.WriteLine("#include \"behaviac/behaviortree/nodes/actions/assignment.h\"");
             file.WriteLine("#include \"behaviac/behaviortree/nodes/actions/compute.h\"");
+            file.WriteLine("#include \"behaviac/behaviortree/nodes/actions/end.h\"");
             file.WriteLine("#include \"behaviac/behaviortree/nodes/actions/noop.h\"");
             file.WriteLine("#include \"behaviac/behaviortree/nodes/actions/wait.h\"");
             file.WriteLine("#include \"behaviac/behaviortree/nodes/actions/waitforsignal.h\"");
@@ -617,9 +618,16 @@ namespace PluginBehaviac.Exporters
                         string propName = prop.Name.Replace("::", "_").Replace("[]", "");
                         string nativeType = DataCppExporter.GetBasicGeneratedNativeType(prop.NativeType);
 
-                        if (Plugin.IsRefType(prop.Type) && !nativeType.Contains("*"))
+                        if (Plugin.IsRefType(prop.Type))
                         {
-                            nativeType += "*";
+                            if (!nativeType.Contains("*"))
+                            {
+                                nativeType += "*";
+                            }
+                        }
+                        else if (nativeType != "char*" && !Plugin.IsArrayType(prop.Type))
+                        {
+                            nativeType = nativeType.Replace("*", "");
                         }
 
                         file.WriteLine("{0}struct PROPERTY_TYPE_{1} {{ }};", indent, propName);
@@ -668,6 +676,10 @@ namespace PluginBehaviac.Exporters
                             }
 
                             string basicNativeType = DataCppExporter.GetGeneratedNativeType(method.Params[i].NativeType);
+                            if (method.Params[i].IsConst)
+                            {
+                                basicNativeType = "const " + basicNativeType;
+                            }
                             paramStrDef += string.Format("{0} p{1}", basicNativeType, i);
                             paramStr += string.Format("p{0}", i);
                         }
@@ -1361,6 +1373,10 @@ namespace PluginBehaviac.Exporters
                                 }
 
                                 string paramType = DataCppExporter.GetGeneratedNativeType(param.NativeType);
+                                if (param.IsConst)
+                                {
+                                    paramType = "const " + paramType;
+                                }
                                 string tempParamType = paramType;
                                 string tempexecuteMethodParamType = tempParamType;
 
@@ -1518,6 +1534,15 @@ namespace PluginBehaviac.Exporters
                             {
                                 propType += "*";
                             }
+                        }
+                        else if (propType != "char*" && !Plugin.IsArrayType(prop.Type))
+                        {
+                            if (!prop.IsArrayElement)
+                            {
+                                propFullType = propFullType.Replace("*", "");
+                            }
+
+                            propType = propType.Replace("*", "");
                         }
 
                         if (prop.IsArrayElement)
@@ -2055,7 +2080,9 @@ namespace PluginBehaviac.Exporters
                                 allParams += ", ";
                             }
 
-                            allParams += DataCppExporter.GetGeneratedNativeType(param.NativeType) + " " + param.Name;
+                            string constStr = param.IsConst ? "const " : "";
+
+                            allParams += constStr + DataCppExporter.GetGeneratedNativeType(param.NativeType) + " " + param.Name;
                         }
 
                         file.WriteLine("{0}\t{1} {2}{3} {4}({5});", indent, publicStr, staticStr, DataCppExporter.GetGeneratedNativeType(method.ReturnType), method.BasicName, allParams);
@@ -2273,7 +2300,9 @@ namespace PluginBehaviac.Exporters
                                     allParams += ", ";
                                 }
 
-                                allParams += DataCppExporter.GetGeneratedNativeType(param.NativeType) + " " + param.Name;
+                                string constStr = param.IsConst ? "const " : "";
+
+                                allParams += constStr + DataCppExporter.GetGeneratedNativeType(param.NativeType) + " " + param.Name;
                             }
 
                             string returnValue = DataCppExporter.GetGeneratedDefaultValue(method.ReturnType, method.NativeReturnType);
@@ -2970,9 +2999,16 @@ namespace PluginBehaviac.Exporters
                 {
                     string propType = DataCppExporter.GetGeneratedNativeType(prop.NativeItemType);
 
-                    if (Plugin.IsRefType(prop.Type) && !propType.Contains("*"))
+                    if (Plugin.IsRefType(prop.Type))
                     {
-                        propType += "*";
+                        if (!propType.Contains("*"))
+                        {
+                            propType += "*";
+                        }
+                    }
+                    else if (propType != "char*" && !Plugin.IsArrayType(prop.Type))
+                    {
+                        propType = propType.Replace("*", "");
                     }
 
                     string propName = prop.Name.Replace("::", "_").Replace("[]", "");
@@ -3011,9 +3047,16 @@ namespace PluginBehaviac.Exporters
                         string propItemName = prop.BasicName;
                         string propName = prop.Name.Replace("::", "_").Replace("[]", "");
 
-                        if (Plugin.IsRefType(prop.Type) && !propType.Contains("*"))
+                        if (Plugin.IsRefType(prop.Type))
                         {
-                            propType += "*";
+                            if (!propType.Contains("*"))
+                            {
+                                propType += "*";
+                            }
+                        }
+                        else if (propType != "char*" && !Plugin.IsArrayType(prop.Type))
+                        {
+                            propType = propType.Replace("*", "");
                         }
 
                         if (prop.IsArrayElement)

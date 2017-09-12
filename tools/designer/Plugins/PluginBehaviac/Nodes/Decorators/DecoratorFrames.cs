@@ -33,7 +33,7 @@ namespace PluginBehaviac.Nodes
         {
             get
             {
-                return "http://www.behaviac.com/language/zh/decorator/#frames";
+                return "http://www.behaviac.com/decorator/#frames";
             }
         }
 

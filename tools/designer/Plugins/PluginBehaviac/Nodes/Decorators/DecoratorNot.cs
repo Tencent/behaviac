@@ -31,7 +31,7 @@ namespace PluginBehaviac.Nodes
         {
             get
             {
-                return "http://www.behaviac.com/language/zh/decorator/#not";
+                return "http://www.behaviac.com/decorator/#not";
             }
         }
 
