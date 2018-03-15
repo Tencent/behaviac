@@ -1483,7 +1483,7 @@ namespace behaviac
             {
                 if (s_tracerThread.IsAlive)
                 {
-                    while (IsConnected() && s_tracerThread.IsAlive)
+                    while (/*IsConnected() && */s_tracerThread.IsAlive)
                     {
                         System.Threading.Thread.Sleep(1);
                     }
