@@ -1481,23 +1481,23 @@ namespace behaviac
 
             if (s_tracerThread != null)
             {
-                if (s_tracerThread.IsAlive)
-                {
+                //if (s_tracerThread.IsAlive)
+                //{
                     while (/*IsConnected() && */s_tracerThread.IsAlive)
                     {
                         System.Threading.Thread.Sleep(1);
                     }
-                }
+                //}
 
                 lock (this)
                 {
                     m_packetBuffers = null;
                 }
 
-                if (s_tracerThread.IsAlive)
+                /*if (s_tracerThread.IsAlive)
                 {
                     s_tracerThread.Abort();
-                }
+                }*/
 
                 s_tracerThread = null;
             }
