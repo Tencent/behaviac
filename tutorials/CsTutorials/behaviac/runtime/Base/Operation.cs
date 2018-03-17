@@ -1035,10 +1035,13 @@ namespace behaviac
 
         public static void Cleanup()
         {
-            ms_valueComparers.Clear();
+            if (ms_valueComparers != null)
+            {
+                ms_valueComparers.Clear();
 
-            //ms_valueComparers.UnRegister();
-            ms_valueComparers = null;
+                //ms_valueComparers.UnRegister();
+                ms_valueComparers = null;
+            }
         }
 
         public static void RegisterType<T, TCOMPARER>() where TCOMPARER : ICompareValue, new()
@@ -1445,8 +1448,11 @@ namespace behaviac
 
         public static void Cleanup()
         {
-            ms_valueComputers.Clear();
-            ms_valueComputers = null;
+            if (ms_valueComputers != null)
+            {
+                ms_valueComputers.Clear();
+                ms_valueComputers = null;
+            }
         }
 
         public static IComputeValue<T> Get<T>()
