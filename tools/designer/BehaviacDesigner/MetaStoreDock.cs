@@ -274,7 +274,16 @@ namespace Behaviac.Design
                 {
                     // refresh the meta
                     Debug.Check(Workspace.Current != null);
-                    MainWindow.Instance.SetWorkspace(Workspace.Current.FileName, false, true);
+                    if (MainWindow.Instance.SetWorkspace(Workspace.Current.FileName, false, true))
+                    {
+                        /* 
+                        'SetWorkspace' method will reload the meta file and recreate all the 'AgentType' objects(Plugin.AgentTypes),
+                        however, the '_customizedAgent' property in class 'MetaTypePanel' is still referring to the old one.
+                        So call the 'Initialize' method to refresh this reference. And maybe we can consider not recreating objects
+                        but updating properties.
+                        */
+                        this.metaTypePanel.Initialize(this.getSelectedType());
+                    }
                 }
                 else
                 {
