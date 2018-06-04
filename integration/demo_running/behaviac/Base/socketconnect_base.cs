@@ -22,6 +22,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Net.Sockets;
 using System.Runtime.InteropServices;
+using System.Threading;
 
 namespace behaviac
 {
@@ -889,6 +890,7 @@ namespace behaviac
 
         private void CreateAndStartThread()
         {
+            s_tracerThreadCTS = new CancellationTokenSource();
             s_tracerThread = new System.Threading.Thread(MemTracer_ThreadFunc);
             s_tracerThread.Start();
         }
@@ -1080,7 +1082,9 @@ namespace behaviac
         private void ThreadFunc()
         {
             Log("behaviac: Socket Thread Starting\n");
-
+            
+            CancellationToken token = s_tracerThreadCTS.Token;
+            
             try
             {
                 this.ReserveThreadPacketBuffer();
@@ -1092,23 +1096,26 @@ namespace behaviac
 
                 try
                 {
-                    serverSocket = SocketBase.Create(blockingSocket);
-
-                    if (serverSocket == null)
+                    if (!token.IsCancellationRequested)
                     {
-                        Log("behaviac: Couldn't create server socket.\n");
-                        return;
-                    }
+                        serverSocket = SocketBase.Create(blockingSocket);
 
-                    string bufferTemp = string.Format("behaviac: Listening at port {0}...\n", m_port);
-                    Log(bufferTemp);
+                        if (serverSocket == null)
+                        {
+                            Log("behaviac: Couldn't create server socket.\n");
+                            return;
+                        }
 
-                    // max connections: 1, don't allow multiple clients?
-                    if (!SocketBase.Listen(serverSocket, m_port, 1))
-                    {
-                        Log("behaviac: Couldn't configure server socket.\n");
-                        SocketBase.Close(ref serverSocket);
-                        return;
+                        string bufferTemp = string.Format("behaviac: Listening at port {0}...\n", m_port);
+                        Log(bufferTemp);
+
+                        // max connections: 1, don't allow multiple clients?
+                        if (!SocketBase.Listen(serverSocket, m_port, 1))
+                        {
+                            Log("behaviac: Couldn't configure server socket.\n");
+                            SocketBase.Close(ref serverSocket);
+                            return;
+                        }
                     }
                 }
                 catch (Exception ex)
@@ -1116,12 +1123,12 @@ namespace behaviac
                     Debug.LogError(ex.Message);
                 }
 
-                while (m_terminating.Get() == 0)
+                while (m_terminating.Get() == 0 && !token.IsCancellationRequested)
                 {
                     //wait for connecting
                     while (m_terminating.Get() == 0)
                     {
-                        if (SocketBase.TestConnection(serverSocket))
+                        if (SocketBase.TestConnection(serverSocket) || token.IsCancellationRequested)
                         {
                             break;
                         }
@@ -1133,6 +1140,11 @@ namespace behaviac
                     {
                         Log("behaviac: accepting...\n");
 
+                        if (token.IsCancellationRequested)
+                        {
+                            break;
+                        }
+                        
                         try
                         {
                             m_writeSocket = SocketBase.Accept(serverSocket, SocketConnection.kSocketBufferSize);
@@ -1147,6 +1159,11 @@ namespace behaviac
                         catch (Exception ex)
                         {
                             Debug.LogError(ex.Message);
+                        }
+
+                        if (token.IsCancellationRequested)
+                        {
+                            break;
                         }
 
                         try
@@ -1167,10 +1184,15 @@ namespace behaviac
                         {
                             Debug.LogError(ex.Message);
                         }
+                        
+                        if (token.IsCancellationRequested)
+                        {
+                            break;
+                        }
 
                         try
                         {
-                            while (m_terminating.Get() == 0 && this.m_writeSocket != null)
+                            while (m_terminating.Get() == 0 && this.m_writeSocket != null && !token.IsCancellationRequested)
                             {
                                 System.Threading.Thread.Sleep(1);
 
@@ -1178,7 +1200,7 @@ namespace behaviac
                                 this.ReceivePackets("");
                             }
 
-                            if (this.m_writeSocket != null && this.m_writeSocket.Connected)
+                            if (this.m_writeSocket != null && this.m_writeSocket.Connected && !token.IsCancellationRequested)
                             {
                                 // One last time, to send any outstanding packets out there.
                                 this.SendAllPackets();
@@ -1406,6 +1428,7 @@ namespace behaviac
             public int init;
         };
 
+        CancellationTokenSource s_tracerThreadCTS;
         private System.Threading.Thread s_tracerThread;
         protected string ms_texts;
         protected volatile bool m_bHandleMessage;
@@ -1496,7 +1519,9 @@ namespace behaviac
 
                 if (s_tracerThread.IsAlive)
                 {
-                    s_tracerThread.Abort();
+                    s_tracerThreadCTS.Cancel(true);
+                    s_tracerThreadCTS.Dispose();
+                    s_tracerThreadCTS = null;
                 }
 
                 s_tracerThread = null;
