@@ -153,6 +153,28 @@ namespace behaviac {
             BEHAVIAC_DELETE this->m_customCondition;
             this->m_customCondition = 0;
         }
+
+        for (size_t i = 0; i < m_preconditions.size(); ++i) {
+            if (m_preconditions[i]) {
+                BEHAVIAC_DELETE m_preconditions[i];
+                m_preconditions[i] = NULL;
+            }
+        }
+
+        for (size_t i = 0; i < m_effectors.size(); ++i) {
+            if (m_effectors[i]) {
+                BEHAVIAC_DELETE m_effectors[i];
+                m_effectors[i] = NULL;
+            }
+        }
+
+        for (size_t i = 0; i < m_events.size(); ++i) {
+            if (m_events[i]) {
+                BEHAVIAC_DELETE m_events[i];
+                m_events[i] = NULL;
+            }
+        }
+
     }
 
     BehaviorTask* BehaviorNode::CreateAndInitTask() const {
