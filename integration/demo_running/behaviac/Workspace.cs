@@ -413,6 +413,7 @@ namespace behaviac
         }
 
         private double m_doubleValueSinceStartup = -1.0;
+        private DateTime m_dateTimeStartup = DateTime.Now;
 
         // Deprecated property, use DoubleValueSinceStartup insteadly.
         public virtual double TimeSinceStartup
@@ -1357,6 +1358,12 @@ namespace behaviac
 
         public void Update()
         {
+#if BEHAVIAC_NOT_USE_UNITY
+            var span = DateTime.Now - m_dateTimeStartup;
+            m_doubleValueSinceStartup = span.TotalMilliseconds;
+            m_intValueSinceStartup = (long)span.TotalMilliseconds;
+#endif
+            
             this.DebugUpdate();
 
             if (this.m_bExecAgents)
