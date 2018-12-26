@@ -98,6 +98,7 @@ namespace behaviac {
         Logs_t				m_logs;
         const char*			m_logFilePath;
         static LogManager*	ms_instance;
+		class behaviac::Mutex m_mutex;
     };
 }//namespace behaviac
 
