@@ -651,6 +651,11 @@ namespace behaviac {
         void set(bool v) {
             behaviac::THREAD_ID_TYPE threadId = behaviac::GetTID();
             bool* value = m_threadInt.find((long)threadId);
+            if (!value)
+            {
+                m_threadInt.add((long)threadId, v);
+                return;
+            }
             BEHAVIAC_ASSERT(value);
             *value = v;
         }
