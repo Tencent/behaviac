@@ -117,8 +117,7 @@ namespace behaviac {
             //printf(buffer.c_str());
 
             if (fp) {
-                behaviac::Mutex cs;
-                behaviac::ScopedLock lock(cs);
+                behaviac::ScopedLock lock(mutex_);
 
                 fwrite(buffer, 1, strlen(buffer), fp);
 
