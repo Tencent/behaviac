@@ -36,17 +36,26 @@ namespace behaviac {
 	//typedef basic_string_t<char, std::char_traits<char>, std::allocator<char> > string;
 	//typedef basic_string_t<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > wstring;
 #endif//BEHAVIAC_USE_CUSTOMSTRING
+    inline char tolower_char(const char& ch)
+    {
+        return static_cast<char>(::tolower(ch));
+    }
+
+    inline char toupper_char(const char& ch)
+    {
+        return static_cast<char>(::toupper(ch));
+    }
 
     inline behaviac::string make_lower(const behaviac::string& src) {
         behaviac::string dst = src;
-        std::transform(dst.begin(), dst.end(), dst.begin(), ::tolower);
+        std::transform(dst.begin(), dst.end(), dst.begin(), tolower_char);
 
         return dst;
     }
 
     inline behaviac::string make_upper(const behaviac::string& src) {
         behaviac::string dst = src;
-        std::transform(dst.begin(), dst.end(), dst.begin(), ::toupper);
+        std::transform(dst.begin(), dst.end(), dst.begin(), toupper_char);
 
         return dst;
     }

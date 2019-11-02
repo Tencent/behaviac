@@ -1,0 +1,4 @@
+bin/**
+build/cmake_binary/**
+lib/**
+

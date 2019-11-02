@@ -25,6 +25,13 @@ REM cmake -G "Visual Studio 14 2015" -DBEHAVIAC_VERSION_MODE=ForeUseRelease --bu
 REM cmake -G "Visual Studio 14 2015" --build ../../..
 REM cd ..
 
+REM echo ---------------------------------------------------------------------------------
+REM mkdir vs2017
+REM cd vs2017
+REM REM cmake -G "Visual Studio 15 2017 Win64" --build ../../..
+REM REM cmake -G "Visual Studio 15 2017" -DBEHAVIAC_VERSION_MODE=ForeUseRelease --build ../../..
+REM cmake -G "Visual Studio 15 2017" --build ../../..
+REM cd ..
 
 where make
 IF %ERRORLEVEL% NEQ 0 GOTO l_no_make
