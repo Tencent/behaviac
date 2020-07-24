@@ -4253,7 +4253,7 @@ namespace behaviac
         IInstanceMember _p3;
         IInstanceMember _p4;
 
-        public CAgentMethodVoid(FunctionPointer f, IInstanceMember p1, IInstanceMember p2, IInstanceMember p3, IInstanceMember p4)
+        public CAgentMethodVoid(FunctionPointer f )
         {
             _fp = f;
         }
@@ -5696,7 +5696,7 @@ namespace behaviac
         IInstanceMember _p3;
         IInstanceMember _p4;
 
-        public CAgentStaticMethodVoid(FunctionPointer f, IInstanceMember p1, IInstanceMember p2, IInstanceMember p3, IInstanceMember p4)
+        public CAgentStaticMethodVoid(FunctionPointer f )
         {
             _fp = f;
         }
