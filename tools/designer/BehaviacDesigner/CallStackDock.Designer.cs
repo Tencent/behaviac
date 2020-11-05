@@ -97,6 +97,7 @@ namespace Behaviac.Design
             this.callstackListBox.Name = "callstackListBox";
             this.callstackListBox.SelectedIndexChanged += new System.EventHandler(this.logListBox_SelectedIndexChanged);
             this.callstackListBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.logListBox_KeyDown);
+            this.callstackListBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.logListBox_MouseDoubleClick);
             //
             // CallStackDock
             //

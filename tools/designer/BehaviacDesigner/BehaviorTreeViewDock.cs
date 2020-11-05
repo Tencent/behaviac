@@ -38,6 +38,8 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.IO;
+using Behaviac.Design.Nodes;
 
 namespace Behaviac.Design
 {
@@ -159,6 +161,23 @@ namespace Behaviac.Design
             }
 
             return null;
+        }
+
+        internal static BehaviorTreeViewDock GetBehaviorTreeViewDockByName(string behaviorFilename)
+        {
+            if (!Path.IsPathRooted(behaviorFilename))
+            {
+                behaviorFilename = FileManagers.FileManager.GetFullPath(behaviorFilename);
+            }
+
+            BehaviorTreeViewDock dock = null;
+            BehaviorNode behaviornode = BehaviorManager.Instance.GetBehavior(behaviorFilename);
+            if (behaviornode != null)
+            {
+                dock = GetBehaviorTreeViewDock(behaviornode);
+            }
+
+            return dock;
         }
 
         internal static BehaviorTreeView GetBehaviorTreeView(Nodes.BehaviorNode node)

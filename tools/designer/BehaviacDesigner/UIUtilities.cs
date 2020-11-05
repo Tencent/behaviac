@@ -28,7 +28,7 @@ namespace Behaviac.Design
         /// Show the behavior tree view.
         /// </summary>
         /// <param name="behaviorFilename">The behavior filename in the workspace folder.</param>
-        public static BehaviorNode ShowBehavior(string behaviorFilename)
+        public static BehaviorNode ShowBehavior(string behaviorFilename, bool forceshowFlag = true)
         {
             if (string.IsNullOrEmpty(behaviorFilename))
             {
@@ -81,16 +81,19 @@ namespace Behaviac.Design
 
                 if (behaviorTreeList != null)
                 {
-                    behaviorTreeList.ShowNode(behavior as Node);
+                    if (forceshowFlag)
+                    {
+                        behaviorTreeList.ShowNode(behavior as Node);
+                    }
                 }
             }
 
             return behavior;
         }
 
-        public static BehaviorTreeView ShowBehaviorTree(string behaviorFilename)
+        public static BehaviorTreeView ShowBehaviorTree(string behaviorFilename, bool forceshowFlag = true)
         {
-            BehaviorNode behavior = ShowBehavior(behaviorFilename);
+            BehaviorNode behavior = ShowBehavior(behaviorFilename, forceshowFlag);
             return BehaviorTreeViewDock.GetBehaviorTreeView(behavior);
         }
 
@@ -105,7 +108,7 @@ namespace Behaviac.Design
 
             if (!string.IsNullOrEmpty(behaviorFilename))
             {
-                BehaviorTreeView behaviorTreeView = ShowBehaviorTree(behaviorFilename);
+                BehaviorTreeView behaviorTreeView = ShowBehaviorTree(behaviorFilename, false);
 
                 if (behaviorTreeView != null)
                 {
@@ -114,8 +117,14 @@ namespace Behaviac.Design
                         profileInfos = null;
                     }
 
-                    behaviorTreeView.SetHighlights(highlightedTransitionIds, highlightNodeIds, updatedNodeIds, highlightBreakPoint, profileInfos);
-                    //behaviorTreeView.Focus();
+                    // check if there is a tab for the behaviour, add by j2 server start
+                    BehaviorTreeViewDock dock = BehaviorTreeViewDock.GetBehaviorTreeViewDockByName(behaviorFilename);
+                    if (dock != null && dock == BehaviorTreeViewDock.LastFocused)
+                    {
+                        behaviorTreeView.SetHighlights(highlightedTransitionIds, highlightNodeIds, updatedNodeIds, highlightBreakPoint, profileInfos);
+                    }
+
+                    // behaviorTreeView.SetHighlights(highlightedTransitionIds, highlightNodeIds, updatedNodeIds, highlightBreakPoint, profileInfos);
 
                     return behaviorTreeView.RootNode;
                 }
