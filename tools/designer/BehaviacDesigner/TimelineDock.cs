@@ -281,7 +281,7 @@ namespace Behaviac.Design
 
             if (agentFullname == Plugin.DebugAgentInstance)
             {
-                behavior = UIUtilities.ShowBehavior(behaviorFilename);
+                behavior = UIUtilities.ShowBehavior(behaviorFilename, false);
             }
 
             List<AgentDataPool.ValueMark> values = AgentDataPool.GetValidValues(agentType, agentFullname, frame);
