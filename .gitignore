@@ -1,0 +1,8 @@
+# Generated files
+build/cmake_binary/**
+lib/**
+**/bin/
+**/obj/
+**/out/**
+!**/out/config.xml
+*.suo
