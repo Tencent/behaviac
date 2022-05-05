@@ -163,7 +163,14 @@ namespace behaviac {
                 }
             }
         }
-
+	
+        for (behaviac::map<uint32_t, IValue*>::iterator it = _members.begin(); it != _members.end(); ++it)
+        {
+            if (it->second)
+            {
+                BEHAVIAC_DELETE(it->second);
+            }
+        }
 #endif
 
         for (BehaviorTreeTasks_t::iterator it = this->m_behaviorTreeTasks.begin(); it != m_behaviorTreeTasks.end(); ++it) {
@@ -176,6 +183,7 @@ namespace behaviac {
 
         if (this->m_variables != NULL) {
             this->m_variables->Clear(true);
+	    BEHAVIAC_DELETE(this->m_variables);
         }
     }
 
