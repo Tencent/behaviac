@@ -55,6 +55,8 @@ namespace behaviac {
                 if (loc) {
                     mbstowcs(buffer, str.c_str(), dwNum);
                     ret = true;
+                } else {
+                  buffer[0] = 0;
                 }
 
                 //restore
@@ -111,6 +113,8 @@ namespace behaviac {
                 if (loc) {
                     wcstombs(buffer, wstr.c_str(), dwNum);
                     ret = true;
+                } else {
+                  buffer[0] = 0;
                 }
 
                 //restore
