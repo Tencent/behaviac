@@ -22,6 +22,8 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Management;
 using System.Threading;
 using System.Net.NetworkInformation;
+using System.Net.Sockets;
+using System.Security.Cryptography;
 
 using Behaviac.Design.Properties;
 
@@ -213,6 +215,7 @@ namespace Behaviac.Design
 
         private static string _gatwway = "";
         private static IPStatus _netWorkStatus = IPStatus.Unknown;
+        private static UdpClient _udpClient = null;
         private static bool CheckNetWork()
         {
             try
@@ -277,11 +280,49 @@ namespace Behaviac.Design
                 qosData += strList;
                 qosData += "]}}}]}}}";
 
-                using(var client = new WebClient())
+                using (var client = new WebClient())
                 {
                     Uri uri = new Uri(qosData);
                     client.OpenReadAsync(uri);
                 }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
+
+            return true;
+        }
+
+        private static string _userInfo = "";
+        private static bool ReportToGStatistic(OperationData operation)
+        {
+            try
+            {
+                if (_udpClient == null)
+                {
+                    _udpClient = new UdpClient();
+                    _udpClient.Connect("101.226.141.148", 8080);
+                    Thread.Sleep(2000);
+                }
+
+                string qosDataStr = string.Format("cmd=0&tag=gcloud.behavic.times&event={0}&OperationNum={1}", operation.Type.ToString(), operation.Count);
+
+                if (string.IsNullOrEmpty(_userInfo))
+                {
+                    HashAlgorithm algorithm = MD5.Create();
+                    String EncryptedUserName = BitConverter.ToString(algorithm.ComputeHash(Encoding.UTF8.GetBytes(Dns.GetHostName() + GetLocalMac())));
+
+                    _userInfo = string.Format("&IP={0}&user_name={1}&version={2}",
+                                         GetLocalIP(),
+                                         EncryptedUserName,
+                                         System.Reflection.Assembly.GetEntryAssembly().GetName().Version);
+                }
+                qosDataStr += _userInfo;
+
+                byte[] qosData = Encoding.UTF8.GetBytes(qosDataStr);
+                _udpClient.Send(qosData, qosData.Length);
             }
             catch (Exception e)
             {
@@ -425,13 +466,19 @@ namespace Behaviac.Design
             {
                 foreach (OperationData operation in _allOperations)
                 {
-                    int intNum = 8;
-                    string intList = string.Format("0,0,0,0,0,0,{0},{1}", (int)operation.Type, operation.Count);
+                    //int intNum = 8;
+                    //string intList = string.Format("0,0,0,0,0,0,{0},{1}", (int)operation.Type, operation.Count);
 
-                    int strNum = 8;
-                    string strList = getHeaderString();
+                    //int strNum = 8;
+                    //string strList = getHeaderString();
 
-                    if (!ReportToTQOS(intNum, intList, strNum, strList))
+                    //if (!ReportToTQOS(intNum, intList, strNum, strList))
+                    //{
+                    //    sendSuccess = false;
+                    //    break;
+                    //}
+					
+                    if (!ReportToGStatistic(operation))
                     {
                         sendSuccess = false;
                         break;
