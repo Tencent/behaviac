@@ -1152,6 +1152,11 @@ namespace behaviac {
     }
 
     void CompositeTask::traverse(bool childFirst, NodeHandler_t handler, Agent* pAgent, void* user_data) {
+        if (m_status == BT_INVALID)
+        {
+            return;
+        }
+    	
         if (childFirst) {
             for (BehaviorTasks_t::iterator it = this->m_children.begin();
                  it != this->m_children.end(); ++it) {
@@ -1187,7 +1192,12 @@ namespace behaviac {
     }
 
     void SingeChildTask::traverse(bool childFirst, NodeHandler_t handler, Agent* pAgent, void* user_data) {
-        if (childFirst) {
+        if (m_status == BT_INVALID)
+        {
+            return;
+        }
+    	
+    	if (childFirst) {
             if (this->m_root) {
                 this->m_root->traverse(childFirst, handler, pAgent, user_data);
             }

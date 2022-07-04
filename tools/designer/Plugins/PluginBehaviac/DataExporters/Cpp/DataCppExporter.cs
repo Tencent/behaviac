@@ -204,6 +204,10 @@ namespace PluginBehaviac.DataExporters
                 {
                     value = "NULL";
                 }
+                else if(typename.Equals("BTVector3f"))
+                {
+                    value = "{0, 0, 0}";
+                }
                 else
                 {
                     value = null;

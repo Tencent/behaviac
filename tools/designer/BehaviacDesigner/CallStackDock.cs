@@ -24,6 +24,7 @@ using Behaviac.Design.Data;
 using Behaviac.Design.Nodes;
 using Behaviac.Design.Properties;
 
+
 namespace Behaviac.Design
 {
     internal partial class CallStackDock : WeifenLuo.WinFormsUI.Docking.DockContent
@@ -122,14 +123,18 @@ namespace Behaviac.Design
                 }
             }
 
+            /*
             if (callstackListBox.Items.Count > 0)
             {
                 //callstackListBox.SelectedIndex = -1;
+                
                 callstackListBox.SelectedIndex = 0;
 
+                 
                 string currentBt = (string)callstackListBox.Items[0];
                 UIUtilities.ShowBehaviorTree(currentBt);
             }
+            */
         }
 
         private void copyMenuItem_Click(object sender, EventArgs e)
@@ -184,5 +189,24 @@ namespace Behaviac.Design
                 callstackListBox.EndUpdate();
             }
         }
+
+        private void logListBox_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (callstackListBox.SelectedItem != null)
+            {
+                String behaviorFilename = callstackListBox.SelectedItem.ToString();
+                BehaviorTreeView behaviorTreeView = UIUtilities.ShowBehaviorTree(behaviorFilename, true);
+                if (behaviorTreeView != null)
+                {
+                    BehaviorTreeViewDock dock = BehaviorTreeViewDock.GetBehaviorTreeViewDockByName(behaviorFilename);
+                    if (dock != null)
+                    {
+                        dock.Focus();
+                        dock.MakeFocused();
+                    }
+                }
+            }
+        }
     }
 }
+

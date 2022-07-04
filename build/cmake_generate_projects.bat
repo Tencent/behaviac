@@ -9,14 +9,6 @@ IF %ERRORLEVEL% NEQ 0 GOTO l_cmake_error
 mkdir cmake_binary
 cd cmake_binary
 
-echo ---------------------------------------------------------------------------------
-mkdir vs2013
-cd vs2013
-REM cmake -G "Visual Studio 12 2013 Win64" --build ../../..
-REM cmake -G "Visual Studio 12 2013" -DBEHAVIAC_VERSION_MODE=ForeUseRelease --build ../../..
-cmake -G "Visual Studio 12 2013" --build ../../..
-cd ..
-
 REM echo ---------------------------------------------------------------------------------
 REM mkdir vs2015
 REM cd vs2015
@@ -25,6 +17,21 @@ REM cmake -G "Visual Studio 14 2015" -DBEHAVIAC_VERSION_MODE=ForeUseRelease --bu
 REM cmake -G "Visual Studio 14 2015" --build ../../..
 REM cd ..
 
+REM echo ---------------------------------------------------------------------------------
+REM mkdir vs2017
+REM cd vs2017
+REM cmake -G "Visual Studio 15 2017 Win64" --build ../../..
+REM cmake -G "Visual Studio 15 2017" -DBEHAVIAC_VERSION_MODE=ForeUseRelease --build ../../..
+REM cmake -G "Visual Studio 15 2017" --build ../../..
+REM cd ..
+
+echo ---------------------------------------------------------------------------------
+mkdir vs2019
+cd vs2019
+cmake -G "Visual Studio 16 2019" -A x64 --build ../../..
+REM cmake -G "Visual Studio 16 2019" -DBEHAVIAC_VERSION_MODE=ForeUseRelease --build ../../..
+REM cmake -G "Visual Studio 16 2019" --build ../../..
+cd ..
 
 where make
 IF %ERRORLEVEL% NEQ 0 GOTO l_no_make

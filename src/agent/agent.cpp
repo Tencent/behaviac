@@ -1166,11 +1166,11 @@ namespace behaviac {
     Agent* Agent::GetParentAgent(const Agent* pAgent, const char* instanceName) {
         Agent* pParent = const_cast<Agent*>(pAgent);
 
-        if (!StringUtils::IsNullOrEmpty(instanceName) && !StringUtils::Compare(instanceName, "Self")) {
+        if (!StringUtils::IsNullOrEmpty(instanceName) && !StringUtils::StringEqual(instanceName, "Self")) {
             pParent = Agent::GetInstance(instanceName, (pParent != NULL) ? pParent->GetContextId() : 0);
 
             //if (pAgent != NULL && pParent == NULL && !Utils.IsStaticClass(instanceName))
-            if (pAgent != NULL && pParent == NULL /*&& !Utils.IsStaticClass(instanceName)*/) { //TODO how to handle Statice Class
+            if (pAgent != NULL && pParent == NULL) { //TODO how to handle Statice Class
                 pParent = (Agent*)pAgent->GetVariable<Agent*>(instanceName);
                 BEHAVIAC_ASSERT(pParent != NULL);
             }

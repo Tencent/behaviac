@@ -1129,8 +1129,11 @@ namespace Behaviac.Design
 
                 if (dock != null)
                 {
-                    dock.Focus();
-                    dock.MakeFocused();
+                    if (Plugin.EditMode == EditModes.Design)
+                    {
+                        dock.Focus();
+                        dock.MakeFocused();
+                    }
                 }
             }
             catch (Exception ex)
