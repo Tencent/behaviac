@@ -573,6 +573,13 @@ namespace behaviac {
     BehaviorTree::~BehaviorTree() {
         //this->m_descriptorRefs.clear();
         if (this->m_localProps.size() > 0) {
+            BehaviorTree* bt_ = this;
+
+            for (BehaviorTree::Properties_t::iterator it = bt_->m_localProps.begin(); it != bt_->m_localProps.end(); ++it) {
+                IProperty* property_ = it->second;
+
+                BEHAVIAC_DELETE(property_);
+            }
             this->m_localProps.clear();
         }
     }
