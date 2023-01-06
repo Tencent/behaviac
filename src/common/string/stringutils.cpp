@@ -52,8 +52,9 @@ namespace behaviac {
 
                 char* loc = setlocale(LC_ALL, locale);
 
+                // if loc==null, use default charset
+                mbstowcs(buffer, str.c_str(), dwNum);
                 if (loc) {
-                    mbstowcs(buffer, str.c_str(), dwNum);
                     ret = true;
                 }
 
@@ -108,8 +109,9 @@ namespace behaviac {
 
                 char* loc = setlocale(LC_ALL, locale);
 
+                // if loc==null, use default charset
+                wcstombs(buffer, wstr.c_str(), dwNum);
                 if (loc) {
-                    wcstombs(buffer, wstr.c_str(), dwNum);
                     ret = true;
                 }
 
