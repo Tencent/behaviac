@@ -337,6 +337,8 @@ namespace behaviac {
         virtual EBTStatus update_current(Agent* pAgent, EBTStatus childStatus);
         virtual EBTStatus update(Agent* pAgent, EBTStatus childStatus);
 
+        virtual bool onevent(Agent* pAgent, const char* eventName, behaviac::map<uint32_t, IInstantiatedVariable*>* eventParams);
+
         /**
         called when the child's exec returns success or failure.
         please note, it is not called if the child's exec returns running

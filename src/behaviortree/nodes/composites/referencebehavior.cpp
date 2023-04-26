@@ -231,15 +231,16 @@ namespace behaviac {
     }
 
     bool ReferencedBehaviorTask::onevent(Agent* pAgent, const char* eventName, behaviac::map<uint32_t, IInstantiatedVariable*>* eventParams) {
+		bool bGoOn = true;
         if (this->m_status == BT_RUNNING && this->m_node->HasEvents()) {
             BEHAVIAC_ASSERT(this->m_subTree);
-
-            if (!this->m_subTree->onevent(pAgent, eventName, eventParams)) {
-                return false;
+			bGoOn = this->m_subTree->onevent(pAgent, eventName, eventParams);
+            if (bGoOn) {
+				bGoOn = super::onevent(pAgent, eventName, eventParams);
             }
         }
 
-        return true;
+        return bGoOn;
     }
 
     bool ReferencedBehaviorTask::onenter(Agent* pAgent) {
