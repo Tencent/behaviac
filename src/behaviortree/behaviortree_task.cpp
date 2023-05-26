@@ -1324,6 +1324,8 @@ namespace behaviac {
 			if (bGoOn) {
 				bGoOn = super::onevent(pAgent, eventName, eventParams);
 			}
+
+			return bGoOn;
 		}
 
 		return true;
@@ -1630,6 +1632,8 @@ namespace behaviac {
             if (bGoOn) {
                 bGoOn = super::onevent(pAgent, eventName, eventParams);
             }
+
+			return bGoOn;
         }
 
         return bGoOn;
