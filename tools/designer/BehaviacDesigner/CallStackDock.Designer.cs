@@ -114,6 +114,7 @@ namespace Behaviac.Design
 
         #endregion
 
+        private string preAgengName = "";
         private System.Windows.Forms.ListBox callstackListBox;
         private System.Windows.Forms.ContextMenuStrip contextMenu;
         private System.Windows.Forms.ToolStripMenuItem copyMenuItem;

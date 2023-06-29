@@ -97,6 +97,9 @@ namespace Behaviac.Design
 
             this.TabText = Resources.Callstack;
             FrameStatePool.UpdateStack += UpdateStackCb;
+            Plugin.DebugAgentHandler += OnInstanceChange;
+
+            OnInstanceChange(Plugin.DebugAgentInstance);
         }
 
         protected override void OnClosed(EventArgs e)
@@ -104,7 +107,39 @@ namespace Behaviac.Design
             _dock = null;
 
             FrameStatePool.UpdateStack -= UpdateStackCb;
+            Plugin.DebugAgentHandler -= OnInstanceChange;
             base.OnClosed(e);
+        }
+
+        private void OnInstanceChange(string agentFullName)
+        {
+            if(preAgengName == agentFullName)
+            {
+                return;
+            }
+            preAgengName = agentFullName;
+
+            callstackListBox.Items.Clear();
+            List<string> bt = FrameStatePool.GetBtStack(agentFullName);
+            foreach (string name in bt)
+            {
+                callstackListBox.Items.Insert(0, name);
+            }
+
+            if(callstackListBox.Items.Count > 0)
+            {
+                string currentBt = (string)callstackListBox.Items[0];
+                BehaviorTreeView behaviorTreeView = UIUtilities.ShowBehaviorTree(currentBt);
+                if (behaviorTreeView != null)
+                {
+                    BehaviorTreeViewDock dock = BehaviorTreeViewDock.GetBehaviorTreeViewDockByName(currentBt);
+                    if (dock != null)
+                    {
+                        dock.Focus();
+                        dock.MakeFocused();
+                    }
+                }
+            }
         }
 
         private void UpdateStackCb(string tree, bool bAdd)
