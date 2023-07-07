@@ -569,6 +569,28 @@ namespace Behaviac.Design.Data
         }
 
         private static Dictionary<string, List<string>> _btStack = new Dictionary<string, List<string>>();
+        private static Dictionary<string, string> _btStackLastPop = new Dictionary<string, string>();
+
+        private static void ClearLastPop(string agentFullName)
+        {
+            if(_btStackLastPop.ContainsKey(agentFullName))
+            {
+                _btStackLastPop.Remove(agentFullName);
+            }
+        }
+        private static void SetLastPop(string agentFullName, string name)
+        {
+            _btStackLastPop[agentFullName] = name;
+        }
+        private static string GetLastPop(string agentFullName)
+        {
+            if (_btStackLastPop.ContainsKey(agentFullName))
+            {
+                return _btStackLastPop[agentFullName];
+            }
+            return "";
+        }
+
         public static void SetJumpInfo(string agentFullName, string jumpTree, bool bCheck)
         {
             List<string> stack = null;
@@ -598,10 +620,20 @@ namespace Behaviac.Design.Data
             }
             else
             {
+                // 一般来说tick数据不会用于维护堆栈信息. 但是由于客户端重启或者服务器agent先创建等原因, 客户端并没有完整的agent历史数据, 所以无法获得客户端启动之前的堆栈
+                // 只能通过tick来获知当前的frame. 后续再根据jump/return来维护这个堆栈
                 //only add if there is no any item. this is when for 'tick' message
                 if (stack.Count == 0)
                 {
                     bAdd = true;
+                } 
+                else if (stack[stack.Count -1] != jumpTree)
+                {
+                    string last_pop = GetLastPop(agentFullName); // 目前return之后, 会再次tick一下, 即last_pop == jumpTree, 此时不要添加
+                    if (last_pop != jumpTree)
+                    {
+                        bAdd = true;
+                    }
                 }
             }
 
@@ -609,6 +641,7 @@ namespace Behaviac.Design.Data
             {
                 //push at the end
                 stack.Add(jumpTree);
+                ClearLastPop(agentFullName);
 
                 //don't update ui when anlalyzing log
                 if (Plugin.EditMode != EditModes.Analyze)
@@ -648,6 +681,7 @@ namespace Behaviac.Design.Data
                 if (stack.Count > 0 && stack[stack.Count - 1] == returnFromTree)
                 {
                     //pop last one
+                    SetLastPop(agentFullName, stack[stack.Count - 1]);
                     stack.RemoveAt(stack.Count - 1);
 
                     //don't update ui when anlalyzing log
@@ -686,6 +720,15 @@ namespace Behaviac.Design.Data
             }
 
             return null;
+        }
+
+        public static List<string> GetBtStack(string agentFullName)
+        {
+            if (_btStack.ContainsKey(agentFullName))
+            {
+                return _btStack[agentFullName];
+            }
+            return new List<string>();
         }
 
         public static void EnterNode(string agentFullName, int frame, string behaviorFilename, string nodeId, string actionResult, int hitCount)
