@@ -1297,6 +1297,39 @@ namespace behaviac {
 
     DecoratorTask::DecoratorTask() : SingeChildTask(), m_bDecorateWhenChildEnds(false) {
     }
+	bool DecoratorTask::onevent(Agent* pAgent, const char* eventName, behaviac::map<uint32_t, SPIInstantiatedVariable>* eventParams)
+	{
+		// 当IsManagingChildrenAsSubTrees == true, 所以要重写这个函数. 分析如下:
+		// 设定 根节点A的(递归)child 为 this(DecoratorTask), this的(递归)child 为B
+		// 1. 先分析此时currentBT的情况:
+		//  因为 B::GetTopManageBranchTask 不会跳过DecoratorTask, 所以返回this->m_root
+		//  ==> this->m_root->m_currentBT = B,
+		//  而 this::GetTopManageBranchTask 返回值为 A 所以 A->m_currentBT = this
+		// 2. 当A::onevent时, 由于currentBT=this, 调用this::onevent
+		//  this没有m_currentBT, 所以无法调用this的child相关event
+		//  因此需要手动调用this->m_root::onevent, 以触发B::onevent
+		//  B::onevent会以此调用B::onevent, B::parent::onevent, B::parent::parent::onevent, 直到this(不包含this)
+		//  调用完B::onevent之后, 需要再次调用this::super::onevent, 即触发this节点本身的event
+		// 分析完毕
+		// 反过来, 如果IsManagingChildrenAsSubTrees == false, 则不会出现currentBT断档的现象, A->currentBT会直接等于B
+		// 此时就不需要重写这个函数了, 但是写了也不会有错
+		// BEHAVIAC_ASSERT(this->m_node and this->m_node->IsManagingChildrenAsSubTrees());
+		if (this->m_node->HasEvents()) {
+			bool bGoOn = true;
+
+			if (this->m_root) {
+				bGoOn = this->m_root->onevent(pAgent, eventName, eventParams);
+			}
+
+			if (bGoOn) {
+				bGoOn = super::onevent(pAgent, eventName, eventParams);
+			}
+
+			return bGoOn;
+		}
+
+		return true;
+	}
 
     void DecoratorTask::Init(const BehaviorNode* node) {
         super::Init(node);
@@ -1599,6 +1632,8 @@ namespace behaviac {
             if (bGoOn) {
                 bGoOn = super::onevent(pAgent, eventName, eventParams);
             }
+
+			return bGoOn;
         }
 
         return bGoOn;
