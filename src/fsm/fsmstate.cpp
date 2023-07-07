@@ -11,6 +11,14 @@ namespace behaviac {
 
     State::~State() {
         BEHAVIAC_DELETE(m_method);
+        {
+            for(std::size_t i = 0; i < m_transitions.size(); ++ i) {
+                Transition *&v = m_transitions[i];
+                BEHAVIAC_DELETE v;
+                v = nullptr;
+            }
+            m_transitions.clear();
+        }
     }
 
     void State::load(int version, const char* agentType, const properties_t& properties) {
@@ -41,7 +49,7 @@ namespace behaviac {
             BEHAVIAC_ASSERT(pTransition != 0);
             this->m_transitions.push_back(pTransition);
 
-            //time£º2015-07-24 15:49:05
+            //timeï¿½ï¿½2015-07-24 15:49:05
             return;
         }
 

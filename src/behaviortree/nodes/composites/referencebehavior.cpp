@@ -32,6 +32,14 @@ namespace behaviac {
     ReferencedBehavior::~ReferencedBehavior() {
         BEHAVIAC_DELETE(m_referencedBehaviorPath);
         BEHAVIAC_DELETE(m_taskMethod);
+		if(this->m_transitions) {
+			for(std::size_t i = 0; i < m_transitions->size(); ++ i) {
+				Transition *&v = (*m_transitions)[i];
+				BEHAVIAC_DELETE v;
+				v = nullptr;
+			}
+			m_transitions->clear();
+		}
         BEHAVIAC_DELETE this->m_transitions;
     }
 
